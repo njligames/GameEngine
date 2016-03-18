@@ -1,0 +1,23 @@
+
+topath="$1"
+frompath="$2"
+binpath="$3"
+
+rm -rf $topath/*
+
+for i in $(find $frompath -type d -not -path "*audacity*" -not -path "*hydrogen*")
+do
+    if [ "${i##$frompath}" != "" ]
+    then
+        mkdir $topath/${i##$frompath/}
+    fi
+done
+
+WAV=wav
+OGG=ogg
+
+for i in $(find $frompath -type f -name "*.wav" -not -path "*/audacity/*" -not -path "*/hydrogen/*" -not -path "*/_*" )
+do
+    TO=$topath/${i##$frompath/}
+    $binpath/sox $i ${TO%.$WAV}.$OGG
+done

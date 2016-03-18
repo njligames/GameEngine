@@ -6,6 +6,7 @@
 # define __MACOSX__
 #endif
 
-#ifndef USE_OPENAL
-# define USE_OPENAL
-#endif
+#define USE_FMOD
+//#ifndef USE_OPENAL
+//# define USE_OPENAL
+//#endif
