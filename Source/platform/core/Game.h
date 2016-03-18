@@ -8,6 +8,7 @@ public:
     static bool isANDROID();
     static bool isEMSCRIPTEN();
     static bool isMACOSX();
+    static bool isTVOS();
 
     static bool create(const char* deviceName);
     static bool create(int x, int y, int width, int height, int orientation, const char* deviceName, bool initLua = true);

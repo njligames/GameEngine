@@ -28,6 +28,10 @@
 		C18B8FD21C9BBFC2003628FE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B8FD01C9BBFC2003628FE /* AudioToolbox.framework */; };
 		C18B8FD31C9BBFC2003628FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B8FD11C9BBFC2003628FE /* AVFoundation.framework */; };
 		C18B8FD51C9BC06F003628FE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B8FD41C9BC06F003628FE /* GLKit.framework */; };
+		C18B9A281C9C5455003628FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B9A271C9C5455003628FE /* main.cpp */; };
+		C18B9A351C9C5526003628FE /* libNJLIGameEngine_macOSx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B9A321C9C54FE003628FE /* libNJLIGameEngine_macOSx.a */; };
+		C18B9A371C9C66B7003628FE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B9A361C9C66B7003628FE /* OpenGL.framework */; };
+		C18B9A391C9C66BC003628FE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B9A381C9C66BC003628FE /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +77,33 @@
 			remoteGlobalIDString = C18B84BA1C9BAC5A003628FE;
 			remoteInfo = NJLIGameEngine_tvOS;
 		};
+		C18B9A311C9C54FE003628FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18B9A2D1C9C54FE003628FE /* NJLIGameEngine_macOSx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C18B8FDF1C9BC21B003628FE;
+			remoteInfo = NJLIGameEngine_macOSx;
+		};
+		C18B9A331C9C551F003628FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18B9A2D1C9C54FE003628FE /* NJLIGameEngine_macOSx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C18B8FDE1C9BC21B003628FE;
+			remoteInfo = NJLIGameEngine_macOSx;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C18B9A231C9C5455003628FE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C18B846C1C9B96E1003628FE /* NJLIGameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJLIGameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +139,11 @@
 		C18B8FD01C9BBFC2003628FE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		C18B8FD11C9BBFC2003628FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		C18B8FD41C9BC06F003628FE /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.1.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		C18B9A251C9C5455003628FE /* macOSx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = macOSx; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18B9A271C9C5455003628FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C18B9A2D1C9C54FE003628FE /* NJLIGameEngine_macOSx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NJLIGameEngine_macOSx.xcodeproj; path = ../../NJLIGameEngine_macOSx/NJLIGameEngine_macOSx.xcodeproj; sourceTree = "<group>"; };
+		C18B9A361C9C66B7003628FE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		C18B9A381C9C66BC003628FE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +182,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C18B9A221C9C5455003628FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18B9A391C9C66BC003628FE /* GLUT.framework in Frameworks */,
+				C18B9A371C9C66B7003628FE /* OpenGL.framework in Frameworks */,
+				C18B9A351C9C5526003628FE /* libNJLIGameEngine_macOSx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -157,6 +202,7 @@
 				C18B848C1C9B96E1003628FE /* IOSTests */,
 				C18B8F8B1C9BBB36003628FE /* tvOS */,
 				C18B8FA91C9BBB36003628FE /* tvOSTests */,
+				C18B9A261C9C5455003628FE /* macOSx */,
 				C18B846D1C9B96E1003628FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,6 +214,7 @@
 				C18B84891C9B96E1003628FE /* NJLIGameEngineTests.xctest */,
 				C18B8F8A1C9BBB35003628FE /* tvOS.app */,
 				C18B8FA61C9BBB36003628FE /* tvOSTests.xctest */,
+				C18B9A251C9C5455003628FE /* macOSx */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +310,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C18B9A261C9C5455003628FE /* macOSx */ = {
+			isa = PBXGroup;
+			children = (
+				C18B9A2C1C9C54E8003628FE /* Supporting Files */,
+				C18B9A271C9C5455003628FE /* main.cpp */,
+			);
+			path = macOSx;
+			sourceTree = "<group>";
+		};
+		C18B9A2C1C9C54E8003628FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C18B9A381C9C66BC003628FE /* GLUT.framework */,
+				C18B9A361C9C66B7003628FE /* OpenGL.framework */,
+				C18B9A2D1C9C54FE003628FE /* NJLIGameEngine_macOSx.xcodeproj */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C18B9A2E1C9C54FE003628FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C18B9A321C9C54FE003628FE /* libNJLIGameEngine_macOSx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +412,24 @@
 			productReference = C18B8FA61C9BBB36003628FE /* tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C18B9A241C9C5455003628FE /* macOSx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18B9A2B1C9C5455003628FE /* Build configuration list for PBXNativeTarget "macOSx" */;
+			buildPhases = (
+				C18B9A211C9C5455003628FE /* Sources */,
+				C18B9A221C9C5455003628FE /* Frameworks */,
+				C18B9A231C9C5455003628FE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C18B9A341C9C551F003628FE /* PBXTargetDependency */,
+			);
+			name = macOSx;
+			productName = macOSx;
+			productReference = C18B9A251C9C5455003628FE /* macOSx */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -361,6 +453,9 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = C18B8F891C9BBB35003628FE;
 					};
+					C18B9A241C9C5455003628FE = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = C18B84671C9B96E1003628FE /* Build configuration list for PBXProject "NJLIGameEngine" */;
@@ -380,6 +475,10 @@
 					ProjectRef = C18B849B1C9B976B003628FE /* NJLIGameEngine_iOS.xcodeproj */;
 				},
 				{
+					ProductGroup = C18B9A2E1C9C54FE003628FE /* Products */;
+					ProjectRef = C18B9A2D1C9C54FE003628FE /* NJLIGameEngine_macOSx.xcodeproj */;
+				},
+				{
 					ProductGroup = C18B8FB41C9BBC64003628FE /* Products */;
 					ProjectRef = C18B8FB31C9BBC64003628FE /* NJLIGameEngine_tvOS.xcodeproj */;
 				},
@@ -390,6 +489,7 @@
 				C18B84881C9B96E1003628FE /* NJLIGameEngineTests */,
 				C18B8F891C9BBB35003628FE /* tvOS */,
 				C18B8FA51C9BBB36003628FE /* tvOSTests */,
+				C18B9A241C9C5455003628FE /* macOSx */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +507,13 @@
 			fileType = archive.ar;
 			path = libNJLIGameEngine_tvOS.a;
 			remoteRef = C18B8FB71C9BBC64003628FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C18B9A321C9C54FE003628FE /* libNJLIGameEngine_macOSx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNJLIGameEngine_macOSx.a;
+			remoteRef = C18B9A311C9C54FE003628FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -485,6 +592,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C18B9A211C9C5455003628FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18B9A281C9C5455003628FE /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -507,6 +622,11 @@
 			isa = PBXTargetDependency;
 			name = NJLIGameEngine_tvOS;
 			targetProxy = C18B8FB91C9BBCA8003628FE /* PBXContainerItemProxy */;
+		};
+		C18B9A341C9C551F003628FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NJLIGameEngine_macOSx;
+			targetProxy = C18B9A331C9C551F003628FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -740,6 +860,27 @@
 			};
 			name = Release;
 		};
+		C18B9A291C9C5455003628FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C18B9A2A1C9C5455003628FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -787,6 +928,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C18B9A2B1C9C5455003628FE /* Build configuration list for PBXNativeTarget "macOSx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18B9A291C9C5455003628FE /* Debug */,
+				C18B9A2A1C9C5455003628FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
