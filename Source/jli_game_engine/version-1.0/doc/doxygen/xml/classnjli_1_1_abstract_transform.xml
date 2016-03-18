@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_abstract_transform" kind="class" prot="public" abstract="yes">
+    <compoundname>njli::AbstractTransform</compoundname>
+    <derivedcompoundref refid="classnjli_1_1_sound" prot="public" virt="non-virtual">njli::Sound</derivedcompoundref>
+    <includes refid="_abstract_transform_8h" local="no">AbstractTransform.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" prot="private" static="no" mutable="no">
+        <type>btTransform *</type>
+        <definition>btTransform* njli::AbstractTransform::m_WorldTransform</definition>
+        <argsstring></argsstring>
+        <name>m_WorldTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="172" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_abstract_transform_1ab86688491ad0a42d93ebf4242a12c17e" prot="private" static="no" mutable="no">
+        <type>btQuaternion *</type>
+        <definition>btQuaternion* njli::AbstractTransform::m_Orientation</definition>
+        <argsstring></argsstring>
+        <name>m_Orientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="173" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_abstract_transform_1a6c1eda10f9fa9bd340e3b1a560f3954a" prot="private" static="no" mutable="no">
+        <type>btTransform *</type>
+        <definition>btTransform* njli::AbstractTransform::m_Pivot</definition>
+        <argsstring></argsstring>
+        <name>m_Pivot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="174" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1ae81766ce7baa95743ad256dfab13a086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractTransform::AbstractTransform</definition>
+        <argsstring>()</argsstring>
+        <name>AbstractTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="27" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a8ea40aa6d85fc58ddec0962568921ddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractTransform::AbstractTransform</definition>
+        <argsstring>(const AbstractTransform &amp;copy)</argsstring>
+        <name>AbstractTransform</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_transform" kindref="compound">AbstractTransform</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="31" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1af9f17c8a7ac8a2aafaf7742c50fb5bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::AbstractTransform::~AbstractTransform</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="37" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1ae9d36f8d695542afbe19b9cf20426e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_abstract_transform" kindref="compound">AbstractTransform</ref> &amp;</type>
+        <definition>AbstractTransform &amp; njli::AbstractTransform::operator=</definition>
+        <argsstring>(const AbstractTransform &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_transform" kindref="compound">AbstractTransform</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="46" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a55d3af659fe71a8b6be70875a2557a57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btTransform &amp;</type>
+        <definition>btTransform &amp; njli::AbstractTransform::getTransform</definition>
+        <argsstring>() const </argsstring>
+        <name>getTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The transformation is the combination of the node’s rotation, position, and scale properties. The default transformation is SCNMatrix4Identity.</para><para>When you set the value of this property, the node’s rotation, orientation, eulerAngles, position, and scale properties automatically change to match the new transform, and vice versa. JLIEngine can perform this conversion only if the transform you provide is a combination of rotation, translation, and scale operations. If you set the value of this property to a skew transformation or to a nonaffine transformation, the values of these properties become undefined. Setting a new value for any of these properties causes JLIEngine to compute a new transformation, discarding any skew or nonaffine operations in the original transformation.</para><para><simplesect kind="return"><para>The Transform for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="55" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a2c2a2edb25e1d978ffe2d3979a2012b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setTransform</definition>
+        <argsstring>(const btTransform &amp;transform)</argsstring>
+        <name>setTransform</name>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#transform description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="61" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1af834762b8dda517f47b5e9135160fa3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>btVector3 &amp;</type>
+        <definition>btVector3 &amp; njli::AbstractTransform::getOrigin</definition>
+        <argsstring>() const </argsstring>
+        <name>getOrigin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The node’s position locates it within the coordinate system of its parent, as modified by the node’s pivot property. The default position is the zero vector, indicating that the node is placed at the origin of the parent node’s coordinate system.</para><para><simplesect kind="return"><para>The Origin for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="68" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a84e65d2fc93ada77417e577ff0b1bd30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setOrigin</definition>
+        <argsstring>(const btVector3 &amp;origin)</argsstring>
+        <name>setOrigin</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#origin description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="74" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1abcdb1fff95e351b8a10fadc19f7e79c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setOrigin</definition>
+        <argsstring>(const btVector2 &amp;origin)</argsstring>
+        <name>setOrigin</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#origin description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="80" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a35cbde52ea7f047bf4738dbf90ab6967" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btQuaternion</type>
+        <definition>btQuaternion njli::AbstractTransform::getRotation</definition>
+        <argsstring>() const </argsstring>
+        <name>getRotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The four-component rotation vector specifies the direction of the rotation axis in the first three components and the angle of rotation (in radians) in the fourth. The default rotation is the zero vector, specifying no rotation. Rotation is applied relative to the node’s pivot property.</para><para>The rotation, eulerAngles, and orientation properties all affect the rotational aspect of its transform property. Any change to one of these properties is reflected in the others.</para><para><simplesect kind="return"><para>the Rotation for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="89" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a6a21cef934dc0d075fe1f70cceafe4cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setRotation</definition>
+        <argsstring>(const btQuaternion &amp;rotation)</argsstring>
+        <name>setRotation</name>
+        <param>
+          <type>const btQuaternion &amp;</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rotation description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="95" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a1cbc7b5d3fcccb60be0c15739b044178" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::AbstractTransform::getEulerAngles</definition>
+        <argsstring>() const </argsstring>
+        <name>getEulerAngles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Roll is the rotation about the node’s z-axis, yaw is the rotation about the node’s y-axis, and pitch is the rotation about the node’s x-axis. Rotation is applied relative to the node’s pivot property.</para><para><simplesect kind="return"><para>The Euler Angles for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="102" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="85" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1abd9b461c56bf979fd3853d482636eede" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setEulerAngles</definition>
+        <argsstring>(const btVector3 &amp;angles)</argsstring>
+        <name>setEulerAngles</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#angles description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="108" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a9443e0ab496e5e8fa6614fab2b67e1b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btQuaternion &amp;</type>
+        <definition>btQuaternion &amp; njli::AbstractTransform::getOrientation</definition>
+        <argsstring>() const </argsstring>
+        <name>getOrientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The rotation, eulerAngles, and orientation properties all affect the rotational aspect of its transform property. Any change to one of these properties is reflected in the others.</para><para><simplesect kind="return"><para>The Orientation for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="115" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a8668e1e13020412115e65b7e50176262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setOrientation</definition>
+        <argsstring>(const btQuaternion &amp;orientation)</argsstring>
+        <name>setOrientation</name>
+        <param>
+          <type>const btQuaternion &amp;</type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#orientation description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="121" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1ab294f0ef2bd997d2c01dfbef717a6b0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::AbstractTransform::getScale</definition>
+        <argsstring>() const </argsstring>
+        <name>getScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Each component of the scale vector multiplies the corresponding dimension of the node’s geometry. The default scale is 1.0 in all three dimensions. For example, applying a scale of (2.0, 0.5, 2.0) to a node containing a cube geometry reduces its height and increases its width and depth. Scaling is applied relative to the node’s pivot property.</para><para><simplesect kind="return"><para>The scale for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="128" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="110" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1afcb4d785570c651f7765519eebff88f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setScale</definition>
+        <argsstring>(const btVector3 &amp;scale)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#scale description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="134" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1aa478d3e18df29ba52a0ca5b9369e2d80" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setScale</definition>
+        <argsstring>(const f32 scale)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#scale description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="141" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1aff55af8cb19e941e1fe58c3e3acd2695" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btTransform &amp;</type>
+        <definition>btTransform &amp; njli::AbstractTransform::getPivot</definition>
+        <argsstring>() const </argsstring>
+        <name>getPivot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A node’s pivot is the transformation between its coordinate space and that used by its position, rotation, and scale properties. The default pivot is SCNMatrix4Identity, specifying that the node’s position locates the origin of its coordinate system, its rotation is about an axis through its center, and its scale is also relative to that center point.</para><para>Changing the pivot transform alters these behaviors in many useful ways. You can:</para><para>Offset the node’s contents relative to its position. For example, by setting the pivot to a translation transform you can position a node containing a sphere geometry relative to where the sphere would rest on a floor instead of relative to its center.</para><para>Move the node’s axis of rotation. For example, with a translation transform you can cause a node to revolve around a faraway point instead of rotating around its center, and with a rotation transform you can tilt the axis of rotation.</para><para>Adjust the center point and direction for scaling the node. For example, with a translation transform you can cause a node to grow or shrink relative to a corner instead of to its center.</para><para><simplesect kind="return"><para>The Pivot for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="156" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1ac58afc1596f3c95b941c03a0ca2a7d75" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractTransform::setPivot</definition>
+        <argsstring>(const btTransform &amp;pivot)</argsstring>
+        <name>setPivot</name>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>pivot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pivot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#pivot description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="162" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_transform_1a25e1a5d3daf3c0c5839915f33e37e51a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>btTransform</type>
+        <definition>virtual btTransform njli::AbstractTransform::getWorldTransform</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getWorldTransform</name>
+        <reimplementedby refid="classnjli_1_1_sound_1a4b7a8ece8e0e202333f2503439945412">getWorldTransform</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A world transform is the node’s coordinate space transformation relative to the scene’s coordinate space. This transformation is the concatenation of the node’s transform property with that of its parent node, the parent’s parent, and so on up to the rootNode object of the scene.</para><para><simplesect kind="return"><para>The <ref refid="classnjli_1_1_world" kindref="compound">World</ref> Transform for this instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="169" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2801">
+        <label>njli::AbstractTransform</label>
+        <link refid="classnjli_1_1_abstract_transform"/>
+      </node>
+      <node id="2802">
+        <label>njli::Sound</label>
+        <link refid="classnjli_1_1_sound"/>
+        <childnode refid="2801" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" line="22" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.h" bodystart="21" bodyend="175"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_transform_1ae81766ce7baa95743ad256dfab13a086" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>AbstractTransform</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a8ea40aa6d85fc58ddec0962568921ddc" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>AbstractTransform</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a1cbc7b5d3fcccb60be0c15739b044178" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>getEulerAngles</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a9443e0ab496e5e8fa6614fab2b67e1b8" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>getOrientation</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1af834762b8dda517f47b5e9135160fa3c" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>getOrigin</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1aff55af8cb19e941e1fe58c3e3acd2695" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>getPivot</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a35cbde52ea7f047bf4738dbf90ab6967" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>getRotation</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1ab294f0ef2bd997d2c01dfbef717a6b0d" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>getScale</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a55d3af659fe71a8b6be70875a2557a57" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>getTransform</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a25e1a5d3daf3c0c5839915f33e37e51a" prot="public" virt="pure-virtual"><scope>njli::AbstractTransform</scope><name>getWorldTransform</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1ab86688491ad0a42d93ebf4242a12c17e" prot="private" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>m_Orientation</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a6c1eda10f9fa9bd340e3b1a560f3954a" prot="private" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>m_Pivot</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" prot="private" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>m_WorldTransform</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1ae9d36f8d695542afbe19b9cf20426e3f" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1abd9b461c56bf979fd3853d482636eede" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setEulerAngles</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a8668e1e13020412115e65b7e50176262" prot="public" virt="non-virtual"><scope>njli::AbstractTransform</scope><name>setOrientation</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a84e65d2fc93ada77417e577ff0b1bd30" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setOrigin</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1abcdb1fff95e351b8a10fadc19f7e79c8" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setOrigin</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1ac58afc1596f3c95b941c03a0ca2a7d75" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setPivot</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a6a21cef934dc0d075fe1f70cceafe4cb" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setRotation</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1afcb4d785570c651f7765519eebff88f7" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setScale</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1aa478d3e18df29ba52a0ca5b9369e2d80" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setScale</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1a2c2a2edb25e1d978ffe2d3979a2012b1" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>setTransform</name></member>
+      <member refid="classnjli_1_1_abstract_transform_1af9f17c8a7ac8a2aafaf7742c50fb5bb5" prot="public" virt="virtual"><scope>njli::AbstractTransform</scope><name>~AbstractTransform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

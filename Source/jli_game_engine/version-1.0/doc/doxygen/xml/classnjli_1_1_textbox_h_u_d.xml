@@ -1,0 +1,783 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_textbox_h_u_d" kind="class" prot="public">
+    <compoundname>njli::TextboxHUD</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_factory_object" prot="public" virt="non-virtual">njli::AbstractFactoryObject</basecompoundref>
+    <basecompoundref refid="classnjli_1_1_abstract_frame_buffer_object" prot="public" virt="non-virtual">njli::AbstractFrameBufferObject</basecompoundref>
+    <includes refid="_textbox_h_u_d_8h" local="no">TextboxHUD.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_textbox_h_u_d_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="31" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a3fdbfd3f2db11b4a118fdc82a7bc1c82" prot="private" static="no" mutable="no">
+        <type>btVector2 *</type>
+        <definition>btVector2* njli::TextboxHUD::m_dimensions</definition>
+        <argsstring></argsstring>
+        <name>m_dimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="155" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a27b131699bb7dcf4fc947bd6b00bb7a1" prot="private" static="no" mutable="no">
+        <type>btVector2 *</type>
+        <definition>btVector2* njli::TextboxHUD::m_position</definition>
+        <argsstring></argsstring>
+        <name>m_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="156" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a380d4290dada0dc4d473607232c40583" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::TextboxHUD::m_gradientStartColor</definition>
+        <argsstring></argsstring>
+        <name>m_gradientStartColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="157" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a858485f108bca319bc515277ed761b36" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::TextboxHUD::m_gradientEndColor</definition>
+        <argsstring></argsstring>
+        <name>m_gradientEndColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="158" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a48c6372c4c026a947fab4171e35a4e0c" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::TextboxHUD::m_cornerRadius</definition>
+        <argsstring></argsstring>
+        <name>m_cornerRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="159" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1ab28ef6131914c9b7a70c546ab8f8f4e9" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::TextboxHUD::m_cornerFeather</definition>
+        <argsstring></argsstring>
+        <name>m_cornerFeather</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="160" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1aec80fd8dffdf0020e7c87cee649627ad" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::TextboxHUD::m_borderColor</definition>
+        <argsstring></argsstring>
+        <name>m_borderColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="161" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a01079b7367a5e9e86893c53ec5db32d1" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::TextboxHUD::m_fontSize</definition>
+        <argsstring></argsstring>
+        <name>m_fontSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="162" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a424e4e0af8b1edca7a9c25987e83ea1f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::TextboxHUD::m_fontFace</definition>
+        <argsstring></argsstring>
+        <name>m_fontFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="163" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a92f502e47b78d0ad705d2c38d657e2df" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::TextboxHUD::m_fontColor</definition>
+        <argsstring></argsstring>
+        <name>m_fontColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="164" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a1bbc7f330620b73ffb42494271a304d8" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::TextboxHUD::m_align</definition>
+        <argsstring></argsstring>
+        <name>m_align</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_textbox_h_u_d_1a60d9bc72cf0a7f5307dc3a65f6b15a6c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::TextboxHUD::m_text</definition>
+        <argsstring></argsstring>
+        <name>m_text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="166" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a9a0ce975431d7930d46a0406bf82bffb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::TextboxHUD::TextboxHUD</definition>
+        <argsstring>()</argsstring>
+        <name>TextboxHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="34" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="22" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a72ea32640b49facfc173d4bce0154059" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::TextboxHUD::TextboxHUD</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>TextboxHUD</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="35" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a2c12dbf9d897e48706af201df9e01cb2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::TextboxHUD::TextboxHUD</definition>
+        <argsstring>(const TextboxHUD &amp;)</argsstring>
+        <name>TextboxHUD</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="36" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a75cfd14dba59041431b7363277633168" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::TextboxHUD::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a7ac6e8aed20c166ebec3b8ac9437994f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::TextboxHUD::~TextboxHUD</definition>
+        <argsstring>()</argsstring>
+        <name>~TextboxHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="38" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="52" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1acd5608ecdc9c6311fc1af249b2dabfef" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> &amp;</type>
+        <definition>TextboxHUD &amp; njli::TextboxHUD::operator=</definition>
+        <argsstring>(const TextboxHUD &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="39" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a39c061025334f4fd3f730dae39f7aa98" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::TextboxHUD::renderFunction</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>renderFunction</name>
+        <reimplements refid="classnjli_1_1_abstract_frame_buffer_object_1aa75a537f5745e4be8f749892d195b43c">renderFunction</reimplements>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="40" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="72" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1ac3beb5646d97d427a0ad996bba178255" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::TextboxHUD::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="59" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a4e2d74acafe6d4a73d33d5b36af18262" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::TextboxHUD::serialize</definition>
+        <argsstring>(void *, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <defname>dataBuffer</defname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="65" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a17645de64a4f4e2fee9439c3ce7c59b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::TextboxHUD::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="72" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a7a3e8235e5dea77f7df71cad92c116bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::TextboxHUD::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="78" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a27882d0981b2e65f3a3eab173e27f034" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::TextboxHUD::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="84" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a5d99a2f0aed8cb304f3210cfa7a4b5e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> **</type>
+        <definition>TextboxHUD ** njli::TextboxHUD::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="93" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a734b11614cdead2f988e261d2e9af002" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::TextboxHUD::destroyArray</definition>
+        <argsstring>(TextboxHUD **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="99" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a3639e9c9d773531950ce368f39daad11" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> *</type>
+        <definition>TextboxHUD * njli::TextboxHUD::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="105" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1af37addb4399e851b53035a89a5e2dfb2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> *</type>
+        <definition>TextboxHUD * njli::TextboxHUD::create</definition>
+        <argsstring>(const TextboxHUDBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_textbox_h_u_d_builder" kindref="compound">TextboxHUDBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="113" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="178" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a66cab53215f4b759b00aa3571c2dc9ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> *</type>
+        <definition>TextboxHUD * njli::TextboxHUD::clone</definition>
+        <argsstring>(const TextboxHUD &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="121" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a5130c28f9b2d0aabc22da1cad6902210" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> *</type>
+        <definition>TextboxHUD * njli::TextboxHUD::copy</definition>
+        <argsstring>(const TextboxHUD &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="129" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1aeb7b3169b46bf0789de05c4a459659b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::TextboxHUD::destroy</definition>
+        <argsstring>(TextboxHUD *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="135" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="195" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1afab0dd5084b5b95e10b328d2be71c7ff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::TextboxHUD::load</definition>
+        <argsstring>(TextboxHUD &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="143" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="203" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_textbox_h_u_d_1a412a01554b1b65e80045bd35d94898c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::TextboxHUD::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="149" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp" bodystart="264" bodyend="267"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4203">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="4204" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4205">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="4206">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="4204">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4205" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4202">
+        <label>njli::TextboxHUD</label>
+        <link refid="classnjli_1_1_textbox_h_u_d"/>
+        <childnode refid="4203" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4206" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4208">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="4209" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4210">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="4210" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="4211">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="4209">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4210" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4207">
+        <label>njli::TextboxHUD</label>
+        <link refid="classnjli_1_1_textbox_h_u_d"/>
+        <childnode refid="4208" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4211" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" line="30" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUD.h" bodystart="27" bodyend="167"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1ac8d66ca8d605b2c45873fc4020c579ee" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>AbstractFrameBufferObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a75cfd14dba59041431b7363277633168" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1ac3beb5646d97d427a0ad996bba178255" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a66cab53215f4b759b00aa3571c2dc9ce" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::TextboxHUD</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a5130c28f9b2d0aabc22da1cad6902210" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a3639e9c9d773531950ce368f39daad11" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>create</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1af37addb4399e851b53035a89a5e2dfb2" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::TextboxHUD</scope><name>create</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a5d99a2f0aed8cb304f3210cfa7a4b5e0" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1aeb7b3169b46bf0789de05c4a459659b0" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::TextboxHUD</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a734b11614cdead2f988e261d2e9af002" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1aded6f9fc4da10af752cf90a97aaa751d" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getAspectRatio</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a17645de64a4f4e2fee9439c3ce7c59b6" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a95ae9779550ed7496011f859ec3d4766" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getHeight</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a6a954c3ede9278ae901b68bbeccc86a5" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getTextureID</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a7a3e8235e5dea77f7df71cad92c116bb" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1aa4ab66fbdcb04f1834d1dc05b4c7a10c" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>getWidth</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a5d7b8b3bc421084f282343e506a6d289" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>hide</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a25ec8745d2c47f961fde39c6dc4e83aa" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>isHidden</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a85e419449efe44466d81f9502fca2c3e" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>isLoadedGPU</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1afab0dd5084b5b95e10b328d2be71c7ff" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>load</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a9fa4ab667a74a7a23b18ae3418e56f7d" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>loadGPU</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a1bbc7f330620b73ffb42494271a304d8" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_align</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1aec80fd8dffdf0020e7c87cee649627ad" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_borderColor</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1ab28ef6131914c9b7a70c546ab8f8f4e9" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_cornerFeather</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a48c6372c4c026a947fab4171e35a4e0c" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_cornerRadius</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a3fdbfd3f2db11b4a118fdc82a7bc1c82" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_dimensions</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a92f502e47b78d0ad705d2c38d657e2df" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_fontColor</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a424e4e0af8b1edca7a9c25987e83ea1f" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_fontFace</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a01079b7367a5e9e86893c53ec5db32d1" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_fontSize</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a858485f108bca319bc515277ed761b36" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_gradientEndColor</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a380d4290dada0dc4d473607232c40583" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_gradientStartColor</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a27b131699bb7dcf4fc947bd6b00bb7a1" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_position</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a60d9bc72cf0a7f5307dc3a65f6b15a6c" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>m_text</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a27882d0981b2e65f3a3eab173e27f034" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1acd5608ecdc9c6311fc1af249b2dabfef" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1ababe9973dc3593e158adf12033f66b71" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>render</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a39c061025334f4fd3f730dae39f7aa98" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>renderFunction</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a4e2d74acafe6d4a73d33d5b36af18262" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a73ffd499fceaacd59b518a541ed2133e" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>show</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a9a0ce975431d7930d46a0406bf82bffb" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>TextboxHUD</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a72ea32640b49facfc173d4bce0154059" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>TextboxHUD</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a2c12dbf9d897e48706af201df9e01cb2" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>TextboxHUD</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a412a01554b1b65e80045bd35d94898c2" prot="public" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>type</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a66d234282238e25ef245d64d087be8d8" prot="protected" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>unLoadGPU</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::TextboxHUD</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a52386b04787e7e8b9ca5eab11ef744b4" prot="public" virt="virtual"><scope>njli::TextboxHUD</scope><name>~AbstractFrameBufferObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_textbox_h_u_d_1a7ac6e8aed20c166ebec3b8ac9437994f" prot="protected" virt="virtual"><scope>njli::TextboxHUD</scope><name>~TextboxHUD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

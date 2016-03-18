@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_particle_emitter_8h" kind="file">
+    <compoundname>ParticleEmitter.h</compoundname>
+    <includes refid="_abstract_builder_8h" local="yes">AbstractBuilder.h</includes>
+    <includes refid="_abstract_factory_object_8h" local="yes">AbstractFactoryObject.h</includes>
+    <includes refid="_log_8h" local="yes">Log.h</includes>
+    <includes local="yes">lua.hpp</includes>
+    <includedby refid="_j_l_i_engine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</includedby>
+    <includedby refid="_node_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</includedby>
+    <includedby refid="_particle_emitter_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.cpp</includedby>
+    <includedby refid="_scene_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</includedby>
+    <includedby refid="_world_factory_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</includedby>
+    <includedby refid="_world_lua_virtual_machine_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</includedby>
+    <includedby refid="_world_resource_loader_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp</includedby>
+    <incdepgraph>
+      <node id="25697">
+        <label>lua.hpp</label>
+      </node>
+      <node id="25689">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="25690" relation="include">
+        </childnode>
+      </node>
+      <node id="25694">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="25688" relation="include">
+        </childnode>
+        <childnode refid="25695" relation="include">
+        </childnode>
+        <childnode refid="25693" relation="include">
+        </childnode>
+      </node>
+      <node id="25688">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="25689" relation="include">
+        </childnode>
+        <childnode refid="25691" relation="include">
+        </childnode>
+        <childnode refid="25692" relation="include">
+        </childnode>
+      </node>
+      <node id="25691">
+        <label>stdlib.h</label>
+      </node>
+      <node id="25693">
+        <label>string</label>
+      </node>
+      <node id="25686">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="25684">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="25685" relation="include">
+        </childnode>
+        <childnode refid="25688" relation="include">
+        </childnode>
+        <childnode refid="25696" relation="include">
+        </childnode>
+        <childnode refid="25693" relation="include">
+        </childnode>
+      </node>
+      <node id="25696">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="25695">
+        <label>vector</label>
+      </node>
+      <node id="25687">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="25688" relation="include">
+        </childnode>
+        <childnode refid="25693" relation="include">
+        </childnode>
+        <childnode refid="25694" relation="include">
+        </childnode>
+      </node>
+      <node id="25683">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.h</label>
+        <link refid="ParticleEmitter.h"/>
+        <childnode refid="25684" relation="include">
+        </childnode>
+        <childnode refid="25685" relation="include">
+        </childnode>
+        <childnode refid="25689" relation="include">
+        </childnode>
+        <childnode refid="25697" relation="include">
+        </childnode>
+      </node>
+      <node id="25690">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="25692">
+        <label>stdio.h</label>
+      </node>
+      <node id="25685">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="25686" relation="include">
+        </childnode>
+        <childnode refid="25687" relation="include">
+        </childnode>
+        <childnode refid="25688" relation="include">
+        </childnode>
+        <childnode refid="25696" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="25702">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="25704">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</label>
+        <link refid="_world_lua_virtual_machine_8cpp"/>
+      </node>
+      <node id="25700">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</label>
+        <link refid="_node_8cpp"/>
+      </node>
+      <node id="25701">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.cpp</label>
+        <link refid="_particle_emitter_8cpp"/>
+      </node>
+      <node id="25698">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.h</label>
+        <link refid="ParticleEmitter.h"/>
+        <childnode refid="25699" relation="include">
+        </childnode>
+        <childnode refid="25700" relation="include">
+        </childnode>
+        <childnode refid="25701" relation="include">
+        </childnode>
+        <childnode refid="25702" relation="include">
+        </childnode>
+        <childnode refid="25703" relation="include">
+        </childnode>
+        <childnode refid="25704" relation="include">
+        </childnode>
+        <childnode refid="25705" relation="include">
+        </childnode>
+      </node>
+      <node id="25699">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</label>
+        <link refid="_j_l_i_engine_8h"/>
+      </node>
+      <node id="25705">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp</label>
+        <link refid="_world_resource_loader_8cpp"/>
+      </node>
+      <node id="25703">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</label>
+        <link refid="_world_factory_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classnjli_1_1_particle_emitter" prot="public">njli::ParticleEmitter</innerclass>
+    <innerclass refid="structnjli_1_1_particle_emitter_1_1_particle" prot="private">njli::ParticleEmitter::Particle</innerclass>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ParticleEmitter.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>9/24/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ParticleEmitter_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ParticleEmitter_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_builder_8h" kindref="compound">AbstractBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_factory_object_8h" kindref="compound">AbstractFactoryObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lua.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;AbstractTransform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector3;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector4;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btTransform;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ParticleEmitterBuilder;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Geometry;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PhysicsBody;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Particle;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classnjli_1_1_particle_emitter" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">class</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref><sp/>:<sp/>public<sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref><sp/></highlight><highlight class="comment">//,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>public<sp/>AbstractTransform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="classnjli_1_1_particle_emitter_1acb96ebb09abe8f2a37a915a842babfac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classnjli_1_1_particle_emitter_1a032858ae1fe02d2d1170981c2af2d67c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classnjli_1_1_particle_emitter_1a6db9d28bd448a131448276ee03de1e6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref>&amp;);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>&amp;);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>BT_DECLARE_ALIGNED_ALLOCATOR();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>&amp;);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" kindref="member">AbstractDecorator::setName</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" kindref="member">AbstractDecorator::getName</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" kindref="member">AbstractFactoryObject::create</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>using<sp/>AbstractFactoryObject::clone;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" kindref="member">AbstractFactoryObject::getPointer</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" kindref="member">AbstractFactoryObject::getPointerValue</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" kindref="member">AbstractFactoryObject::serializeObject</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>calculateSerializeBufferSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>getClassName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>**<sp/>createArray(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroyArray(<ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref><sp/>*<sp/>*array,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter_builder" kindref="compound">ParticleEmitterBuilder</ref>&amp;<sp/>builder);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>*<sp/>clone(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>*<sp/>copy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy(<ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref><sp/>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>load(<ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref><sp/>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*<sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stack_index);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>fill<sp/>in<sp/>specific<sp/>methods<sp/>for<sp/>ParticleEmitter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>stop();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>parseFileData(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>z<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup(<ref refid="classnjli_1_1_node" kindref="compound">Node</ref><sp/>*<sp/>particlesRootNode,<sp/><ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref><sp/>*<sp/>geometry,<sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>*<sp/>body<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isActive()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/>getParent();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/>getParent()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>btTransform<sp/>getWorldTransform()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3<sp/>getSourcePosition()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setScale(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>scale);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setScale(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>scale);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>getSourcePositionVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSourcePositionVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getAngle()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setAngle(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getAngleVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setAngleVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getSpeed()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSpeed(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getSpeedVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSpeedVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRadialAccel()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRadialAccel(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getTangentialAccel()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setTangentialAccel(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRadialAccelVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRadialAccelVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getTangentialAccelVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setTangentialAccelVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>getGravity()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setGravity(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getParticleLifespan()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setParticleLifespan(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getParticleLifespanVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setParticleLifespanVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>getStartColor()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setStartColor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>getStartColorVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setStartColorVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>getFinishColor()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setFinishColor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>getFinishColorVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setFinishColorVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getStartParticleSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setStartParticleSize(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getStartParticleSizeVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setStartParticleSizeVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getFinishParticleSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setFinishParticleSize(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getFinishParticleSizeVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setFinishParticleSizeVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>&amp;<sp/>getMaxParticles()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMaxParticles(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>s32<sp/>&amp;getParticleCount()const;</highlight></codeline>
+<codeline lineno="503"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>setParticleCount(const<sp/>s32<sp/>&amp;value);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>f32<sp/>&amp;getEmissionRate()const;</highlight></codeline>
+<codeline lineno="516"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>setEmissionRate(const<sp/>f32<sp/>&amp;value);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>f32<sp/>&amp;getEmitCounter()const;</highlight></codeline>
+<codeline lineno="529"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>setEmitCounter(const<sp/>f32<sp/>&amp;value);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>f32<sp/>&amp;getElapsedTime()const;</highlight></codeline>
+<codeline lineno="542"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>setElapsedTime(const<sp/>f32<sp/>&amp;value);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getDuration()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setDuration(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRotationStart()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRotationStart(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRotationStartVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRotationStartVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRotationEnd()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRotationEnd(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRotationEndVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRotationEndVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getMaxRadius()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMaxRadius(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getMaxRadiusVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMaxRadiusVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getMinRadius()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMinRadius(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getMinRadiusVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMinRadiusVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRotatePerSecond()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRotatePerSecond(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>getRotatePerSecondVariance()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRotatePerSecondVariance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>getTextureFilename()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>timeStep);</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>addParticle();</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRenderCategory(<ref refid="classnjli_1_1_node" kindref="compound">Node</ref><sp/>*<sp/>node);</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="695"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="696" refid="classnjli_1_1_particle_emitter_1ad5e5baf0ac026383a9867b3363cc2739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ad5e5baf0ac026383a9867b3363cc2739" kindref="member">emitterType</ref>;</highlight></codeline>
+<codeline lineno="697" refid="classnjli_1_1_particle_emitter_1a3bdafb8ef4016ae934405c9c4c8bcfd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="classnjli_1_1_particle_emitter_1a3bdafb8ef4016ae934405c9c4c8bcfd4" kindref="member">sourcePositionVariance</ref>;</highlight></codeline>
+<codeline lineno="698" refid="classnjli_1_1_particle_emitter_1ae9e09600c828636113e5d61eaa75b4c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ae9e09600c828636113e5d61eaa75b4c6" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="699" refid="classnjli_1_1_particle_emitter_1ad1bf01d3cca0b18cd035c128e63847f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ad1bf01d3cca0b18cd035c128e63847f0" kindref="member">speedVariance</ref>;</highlight></codeline>
+<codeline lineno="700" refid="classnjli_1_1_particle_emitter_1a6b1eecd9579c8c6c3cbe2385e184bbc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a6b1eecd9579c8c6c3cbe2385e184bbc5" kindref="member">particleLifespan</ref>;</highlight></codeline>
+<codeline lineno="701" refid="classnjli_1_1_particle_emitter_1aa727070cd45bb3c6f3452e54b131d48d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1aa727070cd45bb3c6f3452e54b131d48d" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="702" refid="classnjli_1_1_particle_emitter_1a9fd84a1995712fafed4a6620a34ce597" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a9fd84a1995712fafed4a6620a34ce597" kindref="member">angleVariance</ref>;</highlight></codeline>
+<codeline lineno="703" refid="classnjli_1_1_particle_emitter_1a0b93b2b2a3066c4796a3dd17a7003bde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="classnjli_1_1_particle_emitter_1a0b93b2b2a3066c4796a3dd17a7003bde" kindref="member">gravity</ref>;</highlight></codeline>
+<codeline lineno="704" refid="classnjli_1_1_particle_emitter_1a24cf0fb59a04493a9d2207eefa0e5fe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a24cf0fb59a04493a9d2207eefa0e5fe6" kindref="member">radialAcceleration</ref>;</highlight></codeline>
+<codeline lineno="705" refid="classnjli_1_1_particle_emitter_1a0f3d3256f2a7eb69dc3aa1733b17424b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a0f3d3256f2a7eb69dc3aa1733b17424b" kindref="member">tangentialAcceleration</ref>;</highlight></codeline>
+<codeline lineno="706" refid="classnjli_1_1_particle_emitter_1a632b7b08db08c63e8434d706a81785e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector4*<sp/><ref refid="classnjli_1_1_particle_emitter_1a632b7b08db08c63e8434d706a81785e4" kindref="member">startColor</ref>;</highlight></codeline>
+<codeline lineno="707" refid="classnjli_1_1_particle_emitter_1a4901804fbe7510c678d30ef646048323" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a4901804fbe7510c678d30ef646048323" kindref="member">particleLifespanVariance</ref>;</highlight></codeline>
+<codeline lineno="708" refid="classnjli_1_1_particle_emitter_1ad977f4d9241aa0b02b121707f84ae901" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ad977f4d9241aa0b02b121707f84ae901" kindref="member">radialAccelVariance</ref>;</highlight></codeline>
+<codeline lineno="709" refid="classnjli_1_1_particle_emitter_1a3f6f2c2e3c53acfc4f45aebd141d15f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a3f6f2c2e3c53acfc4f45aebd141d15f5" kindref="member">tangentialAccelVariance</ref>;</highlight></codeline>
+<codeline lineno="710" refid="classnjli_1_1_particle_emitter_1aa4824157a7f4f067d6e51a6a27201220" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector4*<sp/><ref refid="classnjli_1_1_particle_emitter_1aa4824157a7f4f067d6e51a6a27201220" kindref="member">startColorVariance</ref>;</highlight></codeline>
+<codeline lineno="711" refid="classnjli_1_1_particle_emitter_1ad404a98c9ababcc2f36fb91333009a3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector4*<sp/><ref refid="classnjli_1_1_particle_emitter_1ad404a98c9ababcc2f36fb91333009a3a" kindref="member">finishColor</ref>;</highlight></codeline>
+<codeline lineno="712" refid="classnjli_1_1_particle_emitter_1aa8a3157a500764aed98e3e7c56e4ff91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector4*<sp/><ref refid="classnjli_1_1_particle_emitter_1aa8a3157a500764aed98e3e7c56e4ff91" kindref="member">finishColorVariance</ref>;</highlight></codeline>
+<codeline lineno="713" refid="classnjli_1_1_particle_emitter_1ad9d09c7b1715a7a8734a5e8076f94708" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ad9d09c7b1715a7a8734a5e8076f94708" kindref="member">maxParticles</ref>;</highlight></codeline>
+<codeline lineno="714" refid="classnjli_1_1_particle_emitter_1a221276a57bb815272db890f20649b712" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a221276a57bb815272db890f20649b712" kindref="member">startParticleSize</ref>;</highlight></codeline>
+<codeline lineno="715" refid="classnjli_1_1_particle_emitter_1adc4727b444a16b394214ba40d6fa6f68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1adc4727b444a16b394214ba40d6fa6f68" kindref="member">finishParticleSize</ref>;</highlight></codeline>
+<codeline lineno="716" refid="classnjli_1_1_particle_emitter_1ab57ce49a97c200b47648915c0a60566e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ab57ce49a97c200b47648915c0a60566e" kindref="member">startParticleSizeVariance</ref>;</highlight></codeline>
+<codeline lineno="717" refid="classnjli_1_1_particle_emitter_1a8a115e1ca5818f5e7f0d0d242aa150fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a8a115e1ca5818f5e7f0d0d242aa150fc" kindref="member">finishParticleSizeVariance</ref>;</highlight></codeline>
+<codeline lineno="718" refid="classnjli_1_1_particle_emitter_1ad85a65088f6700a89b69e0fc6e8c73f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ad85a65088f6700a89b69e0fc6e8c73f2" kindref="member">duration</ref>;</highlight></codeline>
+<codeline lineno="719" refid="classnjli_1_1_particle_emitter_1af2a3ec3b978f8e4022362e8889add41d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1af2a3ec3b978f8e4022362e8889add41d" kindref="member">blendFuncSource</ref>,<sp/>blendFuncDestination;</highlight></codeline>
+<codeline lineno="720" refid="classnjli_1_1_particle_emitter_1a290eaaad894a181afc5220f95a5fb9ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a290eaaad894a181afc5220f95a5fb9ec" kindref="member">maxRadius</ref>;</highlight></codeline>
+<codeline lineno="721" refid="classnjli_1_1_particle_emitter_1a9e5c16d986e77e3521c907be5694c2a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a9e5c16d986e77e3521c907be5694c2a8" kindref="member">maxRadiusVariance</ref>;</highlight></codeline>
+<codeline lineno="722" refid="classnjli_1_1_particle_emitter_1ab69fe415021a783939e0cededa11ed07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ab69fe415021a783939e0cededa11ed07" kindref="member">minRadius</ref>;</highlight></codeline>
+<codeline lineno="723" refid="classnjli_1_1_particle_emitter_1af34f670d96a6ae168825832d43a95a77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1af34f670d96a6ae168825832d43a95a77" kindref="member">minRadiusVariance</ref>;</highlight></codeline>
+<codeline lineno="724" refid="classnjli_1_1_particle_emitter_1a55689668c018e913be10568e27f4eb61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a55689668c018e913be10568e27f4eb61" kindref="member">rotatePerSecond</ref>;</highlight></codeline>
+<codeline lineno="725" refid="classnjli_1_1_particle_emitter_1a0e267e333e22937f79569c99090760d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a0e267e333e22937f79569c99090760d1" kindref="member">rotationStart</ref>;</highlight></codeline>
+<codeline lineno="726" refid="classnjli_1_1_particle_emitter_1a781c4dda4a9d5898f721290de5b7f6ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a781c4dda4a9d5898f721290de5b7f6ea" kindref="member">rotationStartVariance</ref>;</highlight></codeline>
+<codeline lineno="727" refid="classnjli_1_1_particle_emitter_1ab79f0e60f1b15054432ce3ef93d1f000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ab79f0e60f1b15054432ce3ef93d1f000" kindref="member">rotationEnd</ref>;</highlight></codeline>
+<codeline lineno="728" refid="classnjli_1_1_particle_emitter_1a0b1e391fbe3b8a12379096e3055ac2da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a0b1e391fbe3b8a12379096e3055ac2da" kindref="member">rotationEndVariance</ref>;</highlight></codeline>
+<codeline lineno="729" refid="classnjli_1_1_particle_emitter_1a3dee0bb7b8e995da5aa84638dfa95f16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a3dee0bb7b8e995da5aa84638dfa95f16" kindref="member">rotatePerSecondVariance</ref>;</highlight></codeline>
+<codeline lineno="730" refid="classnjli_1_1_particle_emitter_1abcf96d8ca5dff9419dc52a4641e485e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classnjli_1_1_particle_emitter_1abcf96d8ca5dff9419dc52a4641e485e5" kindref="member">textureFilename</ref>;</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight></codeline>
+<codeline lineno="732" refid="classnjli_1_1_particle_emitter_1aa0e025068c468db0c7ab07aeeefc9339" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1aa0e025068c468db0c7ab07aeeefc9339" kindref="member">emissionRate</ref>;</highlight></codeline>
+<codeline lineno="733" refid="classnjli_1_1_particle_emitter_1ae3e31b529fa8649e94b6a88a5b869598" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ae3e31b529fa8649e94b6a88a5b869598" kindref="member">emitCounter</ref>;</highlight></codeline>
+<codeline lineno="734" refid="classnjli_1_1_particle_emitter_1ad183b3502dc1030b90a251ed6c1e68c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1ad183b3502dc1030b90a251ed6c1e68c9" kindref="member">particleCount</ref>;</highlight></codeline>
+<codeline lineno="735" refid="classnjli_1_1_particle_emitter_1a1ff6d5612c496bfbaadeb8ee443936c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a1ff6d5612c496bfbaadeb8ee443936c8" kindref="member">elapsedTime</ref>;</highlight></codeline>
+<codeline lineno="736" refid="classnjli_1_1_particle_emitter_1a905024b9c36077de686cdf193729821e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter_1a905024b9c36077de686cdf193729821e" kindref="member">active</ref>;</highlight></codeline>
+<codeline lineno="737" refid="classnjli_1_1_particle_emitter_1a85626d66e4f909bb841b80d0c5ba7a91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_particle_emitter_1a85626d66e4f909bb841b80d0c5ba7a91" kindref="member">particleIndex</ref>;</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight></codeline>
+<codeline lineno="739" refid="classnjli_1_1_particle_emitter_1a1e7b14808dedeb9a8729c7b841a7f8d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>**<sp/><ref refid="classnjli_1_1_particle_emitter_1a1e7b14808dedeb9a8729c7b841a7f8d9" kindref="member">m_Nodes</ref>;</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight></codeline>
+<codeline lineno="741" refid="structnjli_1_1_particle_emitter_1_1_particle" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnjli_1_1_particle_emitter_1_1_particle" kindref="compound">Particle</ref><sp/>{</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle" kindref="compound">Particle</ref>();</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~<ref refid="structnjli_1_1_particle_emitter_1_1_particle" kindref="compound">Particle</ref>();</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="745" refid="structnjli_1_1_particle_emitter_1_1_particle_1ade20643990ed017988bb56da41ac9b74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1ade20643990ed017988bb56da41ac9b74" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="746" refid="structnjli_1_1_particle_emitter_1_1_particle_1a7341ccc03a0fc0909657a8baafd75ae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a7341ccc03a0fc0909657a8baafd75ae8" kindref="member">direction</ref>;</highlight></codeline>
+<codeline lineno="747" refid="structnjli_1_1_particle_emitter_1_1_particle_1ac5f2a37aa0bd9f7773f1cb9d80775cf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1ac5f2a37aa0bd9f7773f1cb9d80775cf7" kindref="member">startPos</ref>;</highlight></codeline>
+<codeline lineno="748" refid="structnjli_1_1_particle_emitter_1_1_particle_1a8e83d0d110ba59784a450572edbe24e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector4*<sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a8e83d0d110ba59784a450572edbe24e8" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="749" refid="structnjli_1_1_particle_emitter_1_1_particle_1a015a874fc4ee8a2dd5280acd33f8aacf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector4*<sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a015a874fc4ee8a2dd5280acd33f8aacf" kindref="member">deltaColor</ref>;</highlight></codeline>
+<codeline lineno="750" refid="structnjli_1_1_particle_emitter_1_1_particle_1a89050138b57e930631d32587dcb00062" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a89050138b57e930631d32587dcb00062" kindref="member">rotation</ref>;</highlight></codeline>
+<codeline lineno="751" refid="structnjli_1_1_particle_emitter_1_1_particle_1afe5bb0f5b6aab6c4373c4f2ec27e329f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1afe5bb0f5b6aab6c4373c4f2ec27e329f" kindref="member">rotationDelta</ref>;</highlight></codeline>
+<codeline lineno="752" refid="structnjli_1_1_particle_emitter_1_1_particle_1aa79c47a3e1e8a52adfce87a78b69cd99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1aa79c47a3e1e8a52adfce87a78b69cd99" kindref="member">radialAcceleration</ref>;</highlight></codeline>
+<codeline lineno="753" refid="structnjli_1_1_particle_emitter_1_1_particle_1a73fa55041d6053507c905776f4ef8992" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a73fa55041d6053507c905776f4ef8992" kindref="member">tangentialAcceleration</ref>;</highlight></codeline>
+<codeline lineno="754" refid="structnjli_1_1_particle_emitter_1_1_particle_1a7e9ed4b209202e2cc5e9cb253bb95803" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a7e9ed4b209202e2cc5e9cb253bb95803" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="755" refid="structnjli_1_1_particle_emitter_1_1_particle_1a4bc83c34b133aeb2861b865ec096a0d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a4bc83c34b133aeb2861b865ec096a0d5" kindref="member">radiusDelta</ref>;</highlight></codeline>
+<codeline lineno="756" refid="structnjli_1_1_particle_emitter_1_1_particle_1acf3f091271c341e4dbbe65c51caa3e0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1acf3f091271c341e4dbbe65c51caa3e0c" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="757" refid="structnjli_1_1_particle_emitter_1_1_particle_1adad3c449c06bc60ac72721d008274228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1adad3c449c06bc60ac72721d008274228" kindref="member">degreesPerSecond</ref>;</highlight></codeline>
+<codeline lineno="758" refid="structnjli_1_1_particle_emitter_1_1_particle_1a3acb5624501e87e35969f30d01b83073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a3acb5624501e87e35969f30d01b83073" kindref="member">particleSize</ref>;</highlight></codeline>
+<codeline lineno="759" refid="structnjli_1_1_particle_emitter_1_1_particle_1a2220049218ea0743249374e7024d2205" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a2220049218ea0743249374e7024d2205" kindref="member">particleSizeDelta</ref>;</highlight></codeline>
+<codeline lineno="760" refid="structnjli_1_1_particle_emitter_1_1_particle_1aa099f2fa9eaa5aa5f63e4b8110bd34f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1aa099f2fa9eaa5aa5f63e4b8110bd34f7" kindref="member">timeToLive</ref>;</highlight></codeline>
+<codeline lineno="761" refid="structnjli_1_1_particle_emitter_1_1_particle_1a1d239187f6bfa8e36db1e387c79feb47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a1d239187f6bfa8e36db1e387c79feb47" kindref="member">node</ref>;</highlight></codeline>
+<codeline lineno="762" refid="structnjli_1_1_particle_emitter_1_1_particle_1a223d0b5f5ad07c8dede4f7f354ddd9c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle_1a223d0b5f5ad07c8dede4f7f354ddd9c2" kindref="member">used</ref>;</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="764" refid="classnjli_1_1_particle_emitter_1a46aac8923bcce6d1c12476f219578ec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle" kindref="compound">Particle</ref>*<sp/><ref refid="classnjli_1_1_particle_emitter_1a46aac8923bcce6d1c12476f219578ec0" kindref="member">m_ParticleArray</ref>;</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"></highlight></codeline>
+<codeline lineno="766" refid="classnjli_1_1_particle_emitter_1a5c7255dcebae161993253a14c1c4e097" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_particle_emitter_1a5c7255dcebae161993253a14c1c4e097" kindref="member">kParticleTypes</ref><sp/>{</highlight></codeline>
+<codeline lineno="767" refid="classnjli_1_1_particle_emitter_1a5c7255dcebae161993253a14c1c4e097a9f4b6e16f6f9761111705e45bf2f7ab0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_particle_emitter_1a5c7255dcebae161993253a14c1c4e097a9f4b6e16f6f9761111705e45bf2f7ab0" kindref="member">kParticleTypeGravity</ref>,</highlight></codeline>
+<codeline lineno="768" refid="classnjli_1_1_particle_emitter_1a5c7255dcebae161993253a14c1c4e097abd1df11f6454842ff49cb74f706f5306" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kParticleTypeRadial</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"></highlight></codeline>
+<codeline lineno="771" refid="classnjli_1_1_particle_emitter_1ab42b939953c9056096190d640bf393a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/><ref refid="classnjli_1_1_particle_emitter_1ab42b939953c9056096190d640bf393a6" kindref="member">m_particlesRootNode</ref>;</highlight></codeline>
+<codeline lineno="772" refid="classnjli_1_1_particle_emitter_1ac2d3c693bbd8ea55439070800b89b215" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref>*<sp/><ref refid="classnjli_1_1_particle_emitter_1ac2d3c693bbd8ea55439070800b89b215" kindref="member">m_geometry</ref>;</highlight></codeline>
+<codeline lineno="773" refid="classnjli_1_1_particle_emitter_1a5cde7769e5298dd82098e0bd83d89808" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>*<sp/><ref refid="classnjli_1_1_particle_emitter_1a5cde7769e5298dd82098e0bd83d89808" kindref="member">m_body</ref>;</highlight></codeline>
+<codeline lineno="774" refid="classnjli_1_1_particle_emitter_1aba30a6d103d4b2648e32923b15762537" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Particle*&gt;<sp/><ref refid="classnjli_1_1_particle_emitter_1aba30a6d103d4b2648e32923b15762537" kindref="member">m_ActiveParticles</ref>;</highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_particle_emitter_1_1_particle" kindref="compound">Particle</ref>*<sp/>findUnusedParticle();</highlight></codeline>
+<codeline lineno="776" refid="classnjli_1_1_particle_emitter_1aec08a338a0ff997d54a591dcf20e5db2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="classnjli_1_1_particle_emitter_1aec08a338a0ff997d54a591dcf20e5db2" kindref="member">m_Scale</ref>;</highlight></codeline>
+<codeline lineno="777"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="778"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ParticleEmitter_hpp<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.h"/>
+  </compounddef>
+</doxygen>

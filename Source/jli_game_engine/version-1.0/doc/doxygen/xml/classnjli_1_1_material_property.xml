@@ -1,0 +1,1827 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_material_property" kind="class" prot="public">
+    <compoundname>njli::MaterialProperty</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_factory_object" prot="public" virt="non-virtual">njli::AbstractFactoryObject</basecompoundref>
+    <includes refid="_material_property_8h" local="no">MaterialProperty.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855b" prot="private" static="no">
+        <name>njliLoadGPUType</name>
+        <enumvalue id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab2312f8edb2846647ff841d4a7813c89" prot="private">
+          <name>JLI_LOAD_GPU_TYPE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba19facd571e661394fd10c4adc26e2de6" prot="private">
+          <name>JLI_LOAD_GPU_TYPE_2D_EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba84cee2de1a9c1bff7902327c2871a4cf" prot="private">
+          <name>JLI_LOAD_GPU_TYPE_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba705566d6faa4dc00bf60956035329286" prot="private">
+          <name>JLI_LOAD_GPU_TYPE_CUBE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bac5507e15f557a30a23a193db80d35b57" prot="private">
+          <name>JLI_LOAD_GPU_TYPE_FBO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab57e4f81335fbb5b1af57ef0dde78a59" prot="private">
+          <name>JLI_LOAD_GPU_TYPE_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="371" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="371" bodyend="378"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_material_property_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="35" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_material_property_1aa1212b6e372a0f45d2c01f3cd203af77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Material</definition>
+        <argsstring></argsstring>
+        <name>Material</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="36" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a54b3b51f4b0d736d316b63777ccda316" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_textureID</definition>
+        <argsstring></argsstring>
+        <name>m_textureID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="341" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a13b42d54787929d981050557ac4748a8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenjli_1a980b62f11da3b7143a525012cb512bac" kindref="member">njliTextureMinificationValueType</ref></type>
+        <definition>njliTextureMinificationValueType njli::MaterialProperty::m_minVal</definition>
+        <argsstring></argsstring>
+        <name>m_minVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="342" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a99668eb548352e3b136eff0d78bdaf47" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenjli_1a9fe7a080d946c5be3afc71d834dc7902" kindref="member">njliTextureMagnificationValueType</ref></type>
+        <definition>njliTextureMagnificationValueType njli::MaterialProperty::m_magVal</definition>
+        <argsstring></argsstring>
+        <name>m_magVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="343" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a18842aef4fce7ec9871bcf206fc5d517" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref></type>
+        <definition>njliTextureWrapType njli::MaterialProperty::m_sWrap</definition>
+        <argsstring></argsstring>
+        <name>m_sWrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="344" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a1db9e13afa4a288eaf901c7e6726d36f" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref></type>
+        <definition>njliTextureWrapType njli::MaterialProperty::m_tWrap</definition>
+        <argsstring></argsstring>
+        <name>m_tWrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="345" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a6561cf1412426aa7a0b40590ad221169" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::MaterialProperty::m_textureType</definition>
+        <argsstring></argsstring>
+        <name>m_textureType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="346" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1aeab9a246acdf7a58f77381addbe25af3" prot="private" static="no" mutable="no">
+        <type>btTransform *</type>
+        <definition>btTransform* njli::MaterialProperty::m_TextureTransform</definition>
+        <argsstring></argsstring>
+        <name>m_TextureTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="347" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1acbc4746b18b182d07313eeab1fb0a62c" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+        <definition>u8 njli::MaterialProperty::m_TextureIndex</definition>
+        <argsstring></argsstring>
+        <name>m_TextureIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="348" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a8e0a5e6f9f07c09905cc9bdef219486b" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_Width</definition>
+        <argsstring></argsstring>
+        <name>m_Width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="349" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a51e2a105287561c4417234e5a804fa32" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_Height</definition>
+        <argsstring></argsstring>
+        <name>m_Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="350" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1aa65bd34c711ad4a992d9c0cca0408502" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_NumberOfComponents</definition>
+        <argsstring></argsstring>
+        <name>m_NumberOfComponents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="351" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a71f667dc1a2ab962ed1d014b223c6c2d" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_2DUniform</definition>
+        <argsstring></argsstring>
+        <name>m_2DUniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="353" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a48374b6e4a3ec749e21499e76633606e" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_CubeUniform</definition>
+        <argsstring></argsstring>
+        <name>m_CubeUniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="354" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a6ca2655337c3335aa3188e4b0a202d0e" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_is2DUniform</definition>
+        <argsstring></argsstring>
+        <name>m_is2DUniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="355" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a24142b6247dd361b43102f83d2d8e36c" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::m_isCubeUniform</definition>
+        <argsstring></argsstring>
+        <name>m_isCubeUniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="356" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a6d09f742e5c768571d6a240648cfc488" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref> *</type>
+        <definition>AbstractFrameBufferObject* njli::MaterialProperty::m_AbstractFrameBufferObject</definition>
+        <argsstring></argsstring>
+        <name>m_AbstractFrameBufferObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="357" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1adda1b2988da4117aefb2d54ff735c13c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::MaterialProperty::m_hasOpacity</definition>
+        <argsstring></argsstring>
+        <name>m_hasOpacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="358" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a3ad0ce3f3e483eff600e95737228c218" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855b" kindref="member">njliLoadGPUType</ref></type>
+        <definition>njliLoadGPUType njli::MaterialProperty::m_njliLoadGPUType</definition>
+        <argsstring></argsstring>
+        <name>m_njliLoadGPUType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="380" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1ad46878315683b289618fc02ade373381" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref> *</type>
+        <definition>AbstractFrameBufferObject* njli::MaterialProperty::m_loadGPU_fbo</definition>
+        <argsstring></argsstring>
+        <name>m_loadGPU_fbo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="381" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a1e9f5824628544430cbe914ca7e6b605" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_image" kindref="compound">Image</ref> **</type>
+        <definition>Image** njli::MaterialProperty::m_loadGPU_images</definition>
+        <argsstring></argsstring>
+        <name>m_loadGPU_images</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="382" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_material_property_1a3ce7f792c0a4ab622a118832075df57e" prot="private" static="yes" mutable="no">
+        <type>std::bitset&lt; 16 &gt;</type>
+        <definition>std::bitset&lt; 16 &gt; njli::MaterialProperty::s_TextureIDReferences</definition>
+        <argsstring></argsstring>
+        <name>s_TextureIDReferences</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="365" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a6811e536c0304699a61cfc1024f2ba8f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::MaterialProperty::MaterialProperty</definition>
+        <argsstring>()</argsstring>
+        <name>MaterialProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="39" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="33" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1adb5e4547cc2288c3a2eb3ff527550b7e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::MaterialProperty::MaterialProperty</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>MaterialProperty</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="40" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="69" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a7c76ca284edd6d7ac17b90ec0f0367f1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::MaterialProperty::MaterialProperty</definition>
+        <argsstring>(const MaterialProperty &amp;)</argsstring>
+        <name>MaterialProperty</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="41" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="105" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ae5c6b3221d3eba4205c5301d440c00ca" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::MaterialProperty::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a23a538a0be4b131939aecfa1aa1cb5e8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::MaterialProperty::~MaterialProperty</definition>
+        <argsstring>()</argsstring>
+        <name>~MaterialProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="43" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="141" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a4282b8d8bcefbadcc8cad8ab756d97d6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> &amp;</type>
+        <definition>MaterialProperty &amp; njli::MaterialProperty::operator=</definition>
+        <argsstring>(const MaterialProperty &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="44" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="149" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a51db57437c970cd9a39a98fabe761e87" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+        <definition>u8 njli::MaterialProperty::getTextureIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>getTextureIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="328" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="503" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a1ec8ff2f8e2d6289361d1fe9c8838807" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::setTextureIndex</definition>
+        <argsstring>(u8 index)</argsstring>
+        <name>setTextureIndex</name>
+        <param>
+          <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="329" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="508" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ad19dae9ce7b39bc337be6fcaedb3c9fb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::bind</definition>
+        <argsstring>(ShaderProgram *program, const char *propertyName)</argsstring>
+        <name>bind</name>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>propertyName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="331" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="516" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a0d2c0e7d42c783cfc92777fa73ae7abc" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::unBind</definition>
+        <argsstring>() const </argsstring>
+        <name>unBind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="332" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="548" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a9bf91c2260c96d60ee8ef7eaa491e8de" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadTexImage2DInternal</definition>
+        <argsstring>(const Image &amp;img, s32 target)</argsstring>
+        <name>loadTexImage2DInternal</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="334" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="558" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ad04b3469ee0c493240c55e1294c71727" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::reLoadTexImage2DInternal</definition>
+        <argsstring>(const Image &amp;img, s32 target, const btVector2 &amp;offset=btVector2(0, 0))</argsstring>
+        <name>reLoadTexImage2DInternal</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>offset</declname>
+          <defval>btVector2(0, 0)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="335" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="608" bodyend="658"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a51eb43000fd8dac0bd677effe207e5d4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadProperties</definition>
+        <argsstring>() const </argsstring>
+        <name>loadProperties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="336" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="660" bodyend="733"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a1463ef92f641fc8129409d96fe2ffcc2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="338" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="735" bodyend="765"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a5bbef4d51aa3d85be8b3172c96a091aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::MaterialProperty::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="60" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="158" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a955606826931d35be766179546ba3c1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::serialize</definition>
+        <argsstring>(void *dataBuffer, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 15:02:47</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#dataBuffer description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="70" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ac7cccf730fc5375b239061ab840e704c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::MaterialProperty::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="77" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="169" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a17108a2d62c3d64af7a67b4f0f5c077c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::MaterialProperty::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="83" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ad51c2495e5b58b0be78160d6996cb01f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::MaterialProperty::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="89" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a157d98033ee98116ba26de61c8e7cddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+        <definition>Material * njli::MaterialProperty::getParent</definition>
+        <argsstring>()</argsstring>
+        <name>getParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="161" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="298" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a8857c91bc56d1aab8b6e24df18c63c32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+        <definition>const Material * njli::MaterialProperty::getParent</definition>
+        <argsstring>() const </argsstring>
+        <name>getParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="167" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="303" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a252a4ebb78f314af5eeec14ebd794692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::setMinificationFilter</definition>
+        <argsstring>(njliTextureMinificationValueType val)</argsstring>
+        <name>setMinificationFilter</name>
+        <param>
+          <type><ref refid="namespacenjli_1a980b62f11da3b7143a525012cb512bac" kindref="member">njliTextureMinificationValueType</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="177" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="308" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1acbace4981a4f6b30d94355d5cbe6afbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1a980b62f11da3b7143a525012cb512bac" kindref="member">njliTextureMinificationValueType</ref></type>
+        <definition>njliTextureMinificationValueType njli::MaterialProperty::getMinificationFilter</definition>
+        <argsstring>() const </argsstring>
+        <name>getMinificationFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="183" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="314" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ac8519825cbf12f274d2cfea9d1afcc64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::setMagnificationFilter</definition>
+        <argsstring>(njliTextureMagnificationValueType val)</argsstring>
+        <name>setMagnificationFilter</name>
+        <param>
+          <type><ref refid="namespacenjli_1a9fe7a080d946c5be3afc71d834dc7902" kindref="member">njliTextureMagnificationValueType</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="190" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="319" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a78e137baaf12887fa2943a9104969e6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1a9fe7a080d946c5be3afc71d834dc7902" kindref="member">njliTextureMagnificationValueType</ref></type>
+        <definition>njliTextureMagnificationValueType njli::MaterialProperty::getMagnificationFilter</definition>
+        <argsstring>() const </argsstring>
+        <name>getMagnificationFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="196" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="325" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a373bb320a2411e19eb79b376bdace858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::setWrapS</definition>
+        <argsstring>(njliTextureWrapType val)</argsstring>
+        <name>setWrapS</name>
+        <param>
+          <type><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="203" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="330" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a7718122f14cba022510be2141efc247f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref></type>
+        <definition>njliTextureWrapType njli::MaterialProperty::getWrapS</definition>
+        <argsstring>() const </argsstring>
+        <name>getWrapS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="209" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="336" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a085c669a1f7e6df12a6e8bcabd70a176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::setWrapT</definition>
+        <argsstring>(njliTextureWrapType val)</argsstring>
+        <name>setWrapT</name>
+        <param>
+          <type><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="216" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="341" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a127c05447adf5cf456f587a6619a9821" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref></type>
+        <definition>njliTextureWrapType njli::MaterialProperty::getWrapT</definition>
+        <argsstring>() const </argsstring>
+        <name>getWrapT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="222" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="347" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ad96612e3ed0bd7e7ee02007e4a7e6449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU</definition>
+        <argsstring>()</argsstring>
+        <name>loadGPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="227" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="352" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ac710f73d560118360ab73f5bf87cf016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU</definition>
+        <argsstring>(const Image &amp;img)</argsstring>
+        <name>loadGPU</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#img description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="233" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="358" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1aff66a14be2c9117f8620cd2bab88f9b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU</definition>
+        <argsstring>(const Image &amp;negativeX, const Image &amp;negativeY, const Image &amp;negativeZ, const Image &amp;positiveX, const Image &amp;positiveY, const Image &amp;positiveZ)</argsstring>
+        <name>loadGPU</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>negativeX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>negativeY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>negativeZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>positiveX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>positiveY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>positiveZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>negativeX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#negativeX description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>negativeY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#negativeY description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>negativeZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#negativeZ description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#positiveX description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#positiveY description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#positiveZ description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="244" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="366" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a54a76d538f19e7b4bdd29b1106ca92e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU</definition>
+        <argsstring>(AbstractFrameBufferObject *fbo)</argsstring>
+        <name>loadGPU</name>
+        <param>
+          <type><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref> *</type>
+          <declname>fbo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fbo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#fbo description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="255" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="389" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a26086f9fabd9f206fc89ef9e4d1ab351" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::unLoadGPU</definition>
+        <argsstring>()</argsstring>
+        <name>unLoadGPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="260" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="397" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1adb0972e7a2a81e22c59252d609ed4134" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::reLoadGPU</definition>
+        <argsstring>(const Image &amp;img, const btVector2 &amp;offset=btVector2(0, 0))</argsstring>
+        <name>reLoadGPU</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>offset</declname>
+          <defval>btVector2(0, 0)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#img description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#0 description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="268" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="409" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1abb3e55b3f32ba67f6e52b3a1af5672be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::reLoadGPU</definition>
+        <argsstring>(const Image &amp;img, njliTextureCubeSides cubeSide, const btVector2 &amp;offset=btVector2(0, 0))</argsstring>
+        <name>reLoadGPU</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenjli_1a3287657f79ee806953cdf2a3e719a9dd" kindref="member">njliTextureCubeSides</ref></type>
+          <declname>cubeSide</declname>
+        </param>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>offset</declname>
+          <defval>btVector2(0, 0)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#img description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cubeSide</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#cubeSide description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#0 description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="277" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="432" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a8c9ed69e9d9965c8aaaa8e5a79ce1d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::setTextureTransform</definition>
+        <argsstring>(const btTransform &amp;transform)</argsstring>
+        <name>setTextureTransform</name>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#transform description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="284" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="468" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1aeded4dffbe587200cb9f39fc44a06d5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btTransform &amp;</type>
+        <definition>const btTransform &amp; njli::MaterialProperty::getTextureTransform</definition>
+        <argsstring>() const </argsstring>
+        <name>getTextureTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="290" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="473" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a94fe2511b5bb027e1ce6960b5e11f5e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::getWidth</definition>
+        <argsstring>() const </argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="297" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="478" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a007ed0ad3dec204e83a72fd2c2486b9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::getHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="303" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="483" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a5690a77eb052fe75e8779628f2d4e103" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::MaterialProperty::isTextureCube</definition>
+        <argsstring>() const </argsstring>
+        <name>isTextureCube</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="310" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="488" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a2f5002c6cd1ca1817c2e8dac21f715e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::MaterialProperty::isTexture2D</definition>
+        <argsstring>() const </argsstring>
+        <name>isTexture2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="316" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="493" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a7fd2c78c023f4cd26653f2ebbc6cf85e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::MaterialProperty::hasOpacity</definition>
+        <argsstring>() const </argsstring>
+        <name>hasOpacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="323" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="498" bodyend="501"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a5df96e7c7901cf451e96b49510abff2f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> **</type>
+        <definition>MaterialProperty ** njli::MaterialProperty::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="98" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a99beda4f01a76b2c84b09272461df7cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::destroyArray</definition>
+        <argsstring>(MaterialProperty **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="104" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a84015c9324b282be35bb8ee104b08cb0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+        <definition>MaterialProperty * njli::MaterialProperty::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="110" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a897d62623f37f7eed1938f5059cc6fe8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+        <definition>MaterialProperty * njli::MaterialProperty::create</definition>
+        <argsstring>(const MaterialPropertyBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_material_property_builder" kindref="compound">MaterialPropertyBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="118" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a1014419023f491d835e1976b21a6b66d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+        <definition>MaterialProperty * njli::MaterialProperty::clone</definition>
+        <argsstring>(const MaterialProperty &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="126" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a387962f3905d4c56e0cf058056f89e8e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+        <definition>MaterialProperty * njli::MaterialProperty::copy</definition>
+        <argsstring>(const MaterialProperty &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="134" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1add38523dac44032042b6f021683a830d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::destroy</definition>
+        <argsstring>(MaterialProperty *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="140" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="216" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1aed068bab92056dd450e6a8f00e30b84e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::load</definition>
+        <argsstring>(MaterialProperty &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="148" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="232" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a3c185a70184213ed0939ad6e0d0a1c9f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::MaterialProperty::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="154" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1ab7dda6520875a8b2cb3f255fb492a8e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::initReferences</definition>
+        <argsstring>()</argsstring>
+        <name>initReferences</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="325" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="773" bodyend="798"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a8a5e174e424f56e516f2798876e02802" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::addReference</definition>
+        <argsstring>(MaterialProperty *)</argsstring>
+        <name>addReference</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+          <defname>property</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="361" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="800" bodyend="820"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a8b5fbdee5b942699cce02edcad013faa" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::removeReference</definition>
+        <argsstring>(MaterialProperty *)</argsstring>
+        <name>removeReference</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+          <defname>property</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="362" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="822" bodyend="833"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a5dccabe38b97e49d590d21aea3ea4cca" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::MaterialProperty::hasReference</definition>
+        <argsstring>(MaterialProperty *)</argsstring>
+        <name>hasReference</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref> *</type>
+          <defname>property</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="363" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="835" bodyend="839"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a9952072ad753a049bf653dc55a7089b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU_Internal</definition>
+        <argsstring>()</argsstring>
+        <name>loadGPU_Internal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="384" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="845" bodyend="851"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a2279e0f7abdce078f62c121520cac369" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU_Internal</definition>
+        <argsstring>(const Image &amp;img)</argsstring>
+        <name>loadGPU_Internal</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="385" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="853" bodyend="878"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1aa9a78f32c94e7d5e822dd328eb954ec9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU_Internal</definition>
+        <argsstring>(const Image &amp;negativeX, const Image &amp;negativeY, const Image &amp;negativeZ, const Image &amp;positiveX, const Image &amp;positiveY, const Image &amp;positiveZ)</argsstring>
+        <name>loadGPU_Internal</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>negativeX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>negativeY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>negativeZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>positiveX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>positiveY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>positiveZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="386" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="880" bodyend="922"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_material_property_1a0e2f5b5c25f4b11f282905cd4492c5f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::MaterialProperty::loadGPU_Internal</definition>
+        <argsstring>(AbstractFrameBufferObject *fbo)</argsstring>
+        <name>loadGPU_Internal</name>
+        <param>
+          <type><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref> *</type>
+          <declname>fbo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="392" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp" bodystart="924" bodyend="935"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3151">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3152" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3153">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="3152">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3150">
+        <label>njli::MaterialProperty</label>
+        <link refid="classnjli_1_1_material_property"/>
+        <childnode refid="3151" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3155">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3157">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="3157" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3159">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="3158">
+        <label>njli::Image</label>
+        <link refid="classnjli_1_1_image"/>
+        <childnode refid="3155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3156">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3154">
+        <label>njli::MaterialProperty</label>
+        <link refid="classnjli_1_1_material_property"/>
+        <childnode refid="3155" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3158" relation="usage">
+          <edgelabel>m_loadGPU_images</edgelabel>
+        </childnode>
+        <childnode refid="3159" relation="usage">
+          <edgelabel>m_AbstractFrameBufferObject</edgelabel>
+          <edgelabel>m_loadGPU_fbo</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" line="34" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h" bodystart="32" bodyend="393"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_material_property_1a8a5e174e424f56e516f2798876e02802" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>addReference</name></member>
+      <member refid="classnjli_1_1_material_property_1ad19dae9ce7b39bc337be6fcaedb3c9fb" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>bind</name></member>
+      <member refid="classnjli_1_1_material_property_1ae5c6b3221d3eba4205c5301d440c00ca" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_material_property_1a5bbef4d51aa3d85be8b3172c96a091aa" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_material_property_1a1014419023f491d835e1976b21a6b66d" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::MaterialProperty</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_material_property_1a387962f3905d4c56e0cf058056f89e8e" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_material_property_1a84015c9324b282be35bb8ee104b08cb0" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>create</name></member>
+      <member refid="classnjli_1_1_material_property_1a897d62623f37f7eed1938f5059cc6fe8" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::MaterialProperty</scope><name>create</name></member>
+      <member refid="classnjli_1_1_material_property_1a5df96e7c7901cf451e96b49510abff2f" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_material_property_1add38523dac44032042b6f021683a830d" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::MaterialProperty</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_material_property_1a99beda4f01a76b2c84b09272461df7cf" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_material_property_1ac7cccf730fc5375b239061ab840e704c" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_material_property_1a007ed0ad3dec204e83a72fd2c2486b9f" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getHeight</name></member>
+      <member refid="classnjli_1_1_material_property_1a78e137baaf12887fa2943a9104969e6f" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getMagnificationFilter</name></member>
+      <member refid="classnjli_1_1_material_property_1acbace4981a4f6b30d94355d5cbe6afbd" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getMinificationFilter</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_material_property_1a157d98033ee98116ba26de61c8e7cddb" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_material_property_1a8857c91bc56d1aab8b6e24df18c63c32" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_material_property_1a51db57437c970cd9a39a98fabe761e87" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getTextureIndex</name></member>
+      <member refid="classnjli_1_1_material_property_1aeded4dffbe587200cb9f39fc44a06d5c" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getTextureTransform</name></member>
+      <member refid="classnjli_1_1_material_property_1a17108a2d62c3d64af7a67b4f0f5c077c" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_material_property_1a94fe2511b5bb027e1ce6960b5e11f5e9" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getWidth</name></member>
+      <member refid="classnjli_1_1_material_property_1a7718122f14cba022510be2141efc247f" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getWrapS</name></member>
+      <member refid="classnjli_1_1_material_property_1a127c05447adf5cf456f587a6619a9821" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>getWrapT</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_material_property_1a7fd2c78c023f4cd26653f2ebbc6cf85e" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>hasOpacity</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_material_property_1a5dccabe38b97e49d590d21aea3ea4cca" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>hasReference</name></member>
+      <member refid="classnjli_1_1_material_property_1ab7dda6520875a8b2cb3f255fb492a8e5" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>initReferences</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_material_property_1a2f5002c6cd1ca1817c2e8dac21f715e8" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>isTexture2D</name></member>
+      <member refid="classnjli_1_1_material_property_1a5690a77eb052fe75e8779628f2d4e103" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>isTextureCube</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba84cee2de1a9c1bff7902327c2871a4cf" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>JLI_LOAD_GPU_TYPE_2D</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba19facd571e661394fd10c4adc26e2de6" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>JLI_LOAD_GPU_TYPE_2D_EMPTY</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba705566d6faa4dc00bf60956035329286" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>JLI_LOAD_GPU_TYPE_CUBE</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bac5507e15f557a30a23a193db80d35b57" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>JLI_LOAD_GPU_TYPE_FBO</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab57e4f81335fbb5b1af57ef0dde78a59" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>JLI_LOAD_GPU_TYPE_MAX</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab2312f8edb2846647ff841d4a7813c89" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>JLI_LOAD_GPU_TYPE_NONE</name></member>
+      <member refid="classnjli_1_1_material_property_1aed068bab92056dd450e6a8f00e30b84e" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>load</name></member>
+      <member refid="classnjli_1_1_material_property_1ad96612e3ed0bd7e7ee02007e4a7e6449" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1ac710f73d560118360ab73f5bf87cf016" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1aff66a14be2c9117f8620cd2bab88f9b5" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1a54a76d538f19e7b4bdd29b1106ca92e1" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1a9952072ad753a049bf653dc55a7089b0" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU_Internal</name></member>
+      <member refid="classnjli_1_1_material_property_1a2279e0f7abdce078f62c121520cac369" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU_Internal</name></member>
+      <member refid="classnjli_1_1_material_property_1aa9a78f32c94e7d5e822dd328eb954ec9" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU_Internal</name></member>
+      <member refid="classnjli_1_1_material_property_1a0e2f5b5c25f4b11f282905cd4492c5f8" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadGPU_Internal</name></member>
+      <member refid="classnjli_1_1_material_property_1a51eb43000fd8dac0bd677effe207e5d4" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>loadProperties</name></member>
+      <member refid="classnjli_1_1_material_property_1a9bf91c2260c96d60ee8ef7eaa491e8de" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>loadTexImage2DInternal</name></member>
+      <member refid="classnjli_1_1_material_property_1a71f667dc1a2ab962ed1d014b223c6c2d" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_2DUniform</name></member>
+      <member refid="classnjli_1_1_material_property_1a6d09f742e5c768571d6a240648cfc488" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_AbstractFrameBufferObject</name></member>
+      <member refid="classnjli_1_1_material_property_1a48374b6e4a3ec749e21499e76633606e" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_CubeUniform</name></member>
+      <member refid="classnjli_1_1_material_property_1adda1b2988da4117aefb2d54ff735c13c" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_hasOpacity</name></member>
+      <member refid="classnjli_1_1_material_property_1a51e2a105287561c4417234e5a804fa32" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_Height</name></member>
+      <member refid="classnjli_1_1_material_property_1a6ca2655337c3335aa3188e4b0a202d0e" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_is2DUniform</name></member>
+      <member refid="classnjli_1_1_material_property_1a24142b6247dd361b43102f83d2d8e36c" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_isCubeUniform</name></member>
+      <member refid="classnjli_1_1_material_property_1ad46878315683b289618fc02ade373381" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_loadGPU_fbo</name></member>
+      <member refid="classnjli_1_1_material_property_1a1e9f5824628544430cbe914ca7e6b605" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_loadGPU_images</name></member>
+      <member refid="classnjli_1_1_material_property_1a99668eb548352e3b136eff0d78bdaf47" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_magVal</name></member>
+      <member refid="classnjli_1_1_material_property_1a13b42d54787929d981050557ac4748a8" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_minVal</name></member>
+      <member refid="classnjli_1_1_material_property_1a3ad0ce3f3e483eff600e95737228c218" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_njliLoadGPUType</name></member>
+      <member refid="classnjli_1_1_material_property_1aa65bd34c711ad4a992d9c0cca0408502" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_NumberOfComponents</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_material_property_1a18842aef4fce7ec9871bcf206fc5d517" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_sWrap</name></member>
+      <member refid="classnjli_1_1_material_property_1a54b3b51f4b0d736d316b63777ccda316" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_textureID</name></member>
+      <member refid="classnjli_1_1_material_property_1acbc4746b18b182d07313eeab1fb0a62c" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_TextureIndex</name></member>
+      <member refid="classnjli_1_1_material_property_1aeab9a246acdf7a58f77381addbe25af3" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_TextureTransform</name></member>
+      <member refid="classnjli_1_1_material_property_1a6561cf1412426aa7a0b40590ad221169" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_textureType</name></member>
+      <member refid="classnjli_1_1_material_property_1a1db9e13afa4a288eaf901c7e6726d36f" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_tWrap</name></member>
+      <member refid="classnjli_1_1_material_property_1a8e0a5e6f9f07c09905cc9bdef219486b" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>m_Width</name></member>
+      <member refid="classnjli_1_1_material_property_1aa1212b6e372a0f45d2c01f3cd203af77" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>Material</name></member>
+      <member refid="classnjli_1_1_material_property_1a6811e536c0304699a61cfc1024f2ba8f" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>MaterialProperty</name></member>
+      <member refid="classnjli_1_1_material_property_1adb5e4547cc2288c3a2eb3ff527550b7e" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>MaterialProperty</name></member>
+      <member refid="classnjli_1_1_material_property_1a7c76ca284edd6d7ac17b90ec0f0367f1" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>MaterialProperty</name></member>
+      <member refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855b" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>njliLoadGPUType</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_material_property_1ad51c2495e5b58b0be78160d6996cb01f" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_material_property_1a4282b8d8bcefbadcc8cad8ab756d97d6" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_material_property_1adb0972e7a2a81e22c59252d609ed4134" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>reLoadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1abb3e55b3f32ba67f6e52b3a1af5672be" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>reLoadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1ad04b3469ee0c493240c55e1294c71727" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>reLoadTexImage2DInternal</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_material_property_1a8b5fbdee5b942699cce02edcad013faa" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>removeReference</name></member>
+      <member refid="classnjli_1_1_material_property_1a1463ef92f641fc8129409d96fe2ffcc2" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>render</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_material_property_1a3ce7f792c0a4ab622a118832075df57e" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>s_TextureIDReferences</name></member>
+      <member refid="classnjli_1_1_material_property_1a955606826931d35be766179546ba3c1d" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_material_property_1ac8519825cbf12f274d2cfea9d1afcc64" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setMagnificationFilter</name></member>
+      <member refid="classnjli_1_1_material_property_1a252a4ebb78f314af5eeec14ebd794692" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setMinificationFilter</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_material_property_1a1ec8ff2f8e2d6289361d1fe9c8838807" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setTextureIndex</name></member>
+      <member refid="classnjli_1_1_material_property_1a8c9ed69e9d9965c8aaaa8e5a79ce1d3f" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setTextureTransform</name></member>
+      <member refid="classnjli_1_1_material_property_1a373bb320a2411e19eb79b376bdace858" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setWrapS</name></member>
+      <member refid="classnjli_1_1_material_property_1a085c669a1f7e6df12a6e8bcabd70a176" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>setWrapT</name></member>
+      <member refid="classnjli_1_1_material_property_1a3c185a70184213ed0939ad6e0d0a1c9f" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>type</name></member>
+      <member refid="classnjli_1_1_material_property_1a0d2c0e7d42c783cfc92777fa73ae7abc" prot="protected" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>unBind</name></member>
+      <member refid="classnjli_1_1_material_property_1a26086f9fabd9f206fc89ef9e4d1ab351" prot="public" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>unLoadGPU</name></member>
+      <member refid="classnjli_1_1_material_property_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::MaterialProperty</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::MaterialProperty</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_material_property_1a23a538a0be4b131939aecfa1aa1cb5e8" prot="protected" virt="virtual"><scope>njli::MaterialProperty</scope><name>~MaterialProperty</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1751 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_camera" kind="class" prot="public">
+    <compoundname>njli::Camera</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_factory_object" prot="public" virt="non-virtual">njli::AbstractFactoryObject</basecompoundref>
+    <includes refid="_camera_8h" local="no">Camera.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_camera_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="38" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1abd7959b8cbcd7c25bc6c0c8b1ea26ce6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class PhysicsWorld</definition>
+        <argsstring></argsstring>
+        <name>PhysicsWorld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="39" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1af60c965608a88762c5d3b48490472319" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct OcclusionBuffer</definition>
+        <argsstring></argsstring>
+        <name>OcclusionBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="40" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1aae6efa51fde36cf2c0759009ba7b19c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class SceneRenderer</definition>
+        <argsstring></argsstring>
+        <name>SceneRenderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="41" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1a6db9d28bd448a131448276ee03de1e6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Node</definition>
+        <argsstring></argsstring>
+        <name>Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="42" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Scene</definition>
+        <argsstring></argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="43" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1a82b374d797a09668286ac5cf26f539f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class ParticleEmitter</definition>
+        <argsstring></argsstring>
+        <name>ParticleEmitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="44" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class World</definition>
+        <argsstring></argsstring>
+        <name>World</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="45" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1a9aca7b7350e6ffa0e2d6320834ad1857" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Geometry</definition>
+        <argsstring></argsstring>
+        <name>Geometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="46" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_camera_1a59cdb6fe5b378389e35b8b2a2f4e990e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldState</definition>
+        <argsstring></argsstring>
+        <name>WorldState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="47" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a648b79887b9acf3fb12dd7006a68cb85" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::Camera::m_Near</definition>
+        <argsstring></argsstring>
+        <name>m_Near</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="372" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a34d45ec43ca2eec498138e80685d8ffc" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::Camera::m_Far</definition>
+        <argsstring></argsstring>
+        <name>m_Far</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="373" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1aab4d792e3aeaf5cf1072d0a75d4d4f58" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::Camera::m_Fov</definition>
+        <argsstring></argsstring>
+        <name>m_Fov</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="374" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a140d99f05bf37657affe3006d7c2f00a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::Camera::m_Orthographic</definition>
+        <argsstring></argsstring>
+        <name>m_Orthographic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="375" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a7fb57199725228cab2ac28462cfb7967" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+        <definition>njliBitCategories njli::Camera::m_RenderCategory</definition>
+        <argsstring></argsstring>
+        <name>m_RenderCategory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="376" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a6cd9448c2d481d6b5550bad78201be2a" prot="private" static="no" mutable="no">
+        <type><ref refid="structnjli_1_1_occlusion_buffer" kindref="compound">OcclusionBuffer</ref> *</type>
+        <definition>OcclusionBuffer* njli::Camera::m_OcclusionBuffer</definition>
+        <argsstring></argsstring>
+        <name>m_OcclusionBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="378" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1aa5b56fb8e1f66bcc1e97cc06708d438e" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_scene_renderer" kindref="compound">SceneRenderer</ref> *</type>
+        <definition>SceneRenderer* njli::Camera::m_SceneRenderer</definition>
+        <argsstring></argsstring>
+        <name>m_SceneRenderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="379" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a8b02bb72aff457b5d68970d266348131" prot="private" static="no" mutable="no">
+        <type>btTransform *</type>
+        <definition>btTransform* njli::Camera::m_projectionMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_projectionMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="381" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a513f74848a02e22d38fa2f4b83306363" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> *</type>
+        <definition>f32* njli::Camera::m_ProjectionMatrixArray</definition>
+        <argsstring></argsstring>
+        <name>m_ProjectionMatrixArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="382" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1ac14bac7824b812adeb752894023376fe" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> *</type>
+        <definition>f32* njli::Camera::m_ModelViewMatrixArray</definition>
+        <argsstring></argsstring>
+        <name>m_ModelViewMatrixArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="383" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a0ac4d128631b54a0a5ab1d023c565b73" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref> *</type>
+        <definition>s32* njli::Camera::m_ViewPort</definition>
+        <argsstring></argsstring>
+        <name>m_ViewPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="385" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a0cf1d4419f8b9414ba59ce9229ca1037" prot="private" static="no" mutable="no">
+        <type>btScalar *</type>
+        <definition>btScalar* njli::Camera::m_ModelMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_ModelMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="386" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_camera_1a7d25685257aaa004c1aa1aed8376fe49" prot="private" static="no" mutable="no">
+        <type>btScalar *</type>
+        <definition>btScalar* njli::Camera::m_ProjectionMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_ProjectionMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="387" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_camera_1a6b242e7ea1b008c3073fea985ac01bc7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Camera::Camera</definition>
+        <argsstring>()</argsstring>
+        <name>Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="50" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1078" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a82db3cd7c219d8f76d06278f410a8c1d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Camera::Camera</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>Camera</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="51" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1099" bodyend="1118"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a865e8f65462a466b6e2e8c8c98e2d34b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Camera::Camera</definition>
+        <argsstring>(const Camera &amp;)</argsstring>
+        <name>Camera</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="52" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1120" bodyend="1138"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a83f596c774d17aefbe44d3506d42da5d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Camera::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a557fb5ac847a6ce53dda04c42a294dbd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::Camera::~Camera</definition>
+        <argsstring>()</argsstring>
+        <name>~Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="54" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1140" bodyend="1151"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a3c7d3d8e855949637ffdec8fb16c8046" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+        <definition>Camera &amp; njli::Camera::operator=</definition>
+        <argsstring>(const Camera &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="55" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1153" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a9919eed4f61256bb04551ac64d6aadcf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::cull</definition>
+        <argsstring>(btDbvtBroadphase *pbp)</argsstring>
+        <name>cull</name>
+        <param>
+          <type>btDbvtBroadphase *</type>
+          <declname>pbp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="353" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1590" bodyend="1593"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a5156491ab0e052e8480dbe61536dc080" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btTransform &amp;</type>
+        <definition>const btTransform &amp; njli::Camera::getProjection</definition>
+        <argsstring>() const </argsstring>
+        <name>getProjection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="355" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1650" bodyend="1653"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a7eecc6fef858393d3f4fe90565e03fb5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> *</type>
+        <definition>const f32 * njli::Camera::getProjectionMatrixArray</definition>
+        <argsstring>()</argsstring>
+        <name>getProjectionMatrixArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="356" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1655" bodyend="1660"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1adb4eab206f9f7b5d60bbf15eabc3b02a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> *</type>
+        <definition>const f32 * njli::Camera::getModelViewMatrixArray</definition>
+        <argsstring>()</argsstring>
+        <name>getModelViewMatrixArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="357" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1663" bodyend="1671"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a99666c1b08c246db791a6424a90e0e95" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::getViewBounds</definition>
+        <argsstring>(f32 &amp;left, f32 &amp;right, f32 &amp;bottom, f32 &amp;top, f32 &amp;farLeft, f32 &amp;farRight, f32 &amp;farBottom, f32 &amp;farTop) const </argsstring>
+        <name>getViewBounds</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>bottom</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>farLeft</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>farRight</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>farBottom</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref> &amp;</type>
+          <declname>farTop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="359" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1673" bodyend="1703"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a5bc41e60801df99e6c88e392a9349646" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getTopLeftVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getTopLeftVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="361" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1705" bodyend="1720"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a668e811dd261da460f127d1db6656f76" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getTopRightVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getTopRightVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="362" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1722" bodyend="1737"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a5ee176a0385150ca050949b6c9102dcf" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getBottomLeftVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getBottomLeftVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="363" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1739" bodyend="1754"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a682a617eb1240589fe902d60cd9847dd" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getBottomRightVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getBottomRightVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="364" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1756" bodyend="1770"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a4ce0a661f8a18d87af3453d8159793ed" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::render</definition>
+        <argsstring>(const btDbvtNode *root1, const btDbvtNode *root2, const btVector3 &amp;sortaxis, const btVector3 *eye=NULL)</argsstring>
+        <name>render</name>
+        <param>
+          <type>const btDbvtNode *</type>
+          <declname>root1</declname>
+        </param>
+        <param>
+          <type>const btDbvtNode *</type>
+          <declname>root2</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>sortaxis</declname>
+        </param>
+        <param>
+          <type>const btVector3 *</type>
+          <declname>eye</declname>
+          <defval><ref refid="_util_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="366" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1772" bodyend="1822"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_camera_1a797f44ec1c40d785e9aac03022f5d47c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::Camera::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="71" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1167" bodyend="1171"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a5d966c55a274d041a4a60ca75d144842" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::serialize</definition>
+        <argsstring>(void *dataBuffer, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 15:02:17</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#dataBuffer description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="81" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1173" bodyend="1176"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a98ee63625f2f357a131934e7d71140ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::Camera::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="88" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1178" bodyend="1181"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a8831b8b9c3c097394f1cffc2913b55be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::Camera::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="94" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1183" bodyend="1186"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a83dbb91dfe5745ad209918e803569ea6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::Camera::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="100" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1188" bodyend="1191"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1aecd11caf4880997cdaecef6c47d69c48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::setZNear</definition>
+        <argsstring>(const f32 val)</argsstring>
+        <name>setZNear</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="173" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1300" bodyend="1316"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1aa7710ca6017223ef747d168b05819a2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::Camera::getZNear</definition>
+        <argsstring>() const </argsstring>
+        <name>getZNear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="179" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1318" bodyend="1321"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a078a786623bfed82e5c42af635ff7c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::setZFar</definition>
+        <argsstring>(const f32 val)</argsstring>
+        <name>setZFar</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="186" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1323" bodyend="1339"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a11ace403a0f59a4e45b4b7b021de6d59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::Camera::getZFar</definition>
+        <argsstring>() const </argsstring>
+        <name>getZFar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="192" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1341" bodyend="1344"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a249c6432aa9c8809a92012a272ec6d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::setFov</definition>
+        <argsstring>(const f32 val)</argsstring>
+        <name>setFov</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#val description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="199" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1346" bodyend="1362"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a1a40d5c51ae0c04a71f96b12ee6757c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::Camera::getFov</definition>
+        <argsstring>() const </argsstring>
+        <name>getFov</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="205" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1364" bodyend="1367"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a0421efa372890d9e3a934911a4aeebf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::enableOrthographic</definition>
+        <argsstring>(const bool enable=true, const f32 near=1000.0f, const f32 far=-1000.0f)</argsstring>
+        <name>enableOrthographic</name>
+        <param>
+          <type>const bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>near</declname>
+          <defval>1000.0f</defval>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>far</declname>
+          <defval>-1000.0f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#enable description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="212" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1369" bodyend="1406"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1ac1b0bbc02a307ee40b231ea0b2e21286" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::Camera::isOrthographic</definition>
+        <argsstring>() const </argsstring>
+        <name>isOrthographic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="218" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1408" bodyend="1411"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1ab5aa8d0d534c0745146ed0d84f72fa18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::setRenderCategory</definition>
+        <argsstring>(const njliBitCategories category)</argsstring>
+        <name>setRenderCategory</name>
+        <param>
+          <type>const <ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#category description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="225" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1413" bodyend="1416"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a916b20e26fda2daa4e4878cc16e0859b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+        <definition>njliBitCategories njli::Camera::getRenderCategory</definition>
+        <argsstring>() const </argsstring>
+        <name>getRenderCategory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="231" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1418" bodyend="1421"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1afd4e08b967df5e00190f47ac6579adc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::addRenderCategory</definition>
+        <argsstring>(const njliBitCategories category)</argsstring>
+        <name>addRenderCategory</name>
+        <param>
+          <type>const <ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#category description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="237" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1423" bodyend="1426"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a122317f4e5f4fef2331c3bdbb094080d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::removeRenderCategory</definition>
+        <argsstring>(const njliBitCategories category)</argsstring>
+        <name>removeRenderCategory</name>
+        <param>
+          <type>const <ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#category description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="243" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1428" bodyend="1431"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a7870e48c1f18f0386a2dc7961a94b02e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::Camera::hasRenderCategory</definition>
+        <argsstring>(const njliBitCategories category)</argsstring>
+        <name>hasRenderCategory</name>
+        <param>
+          <type>const <ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#category description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="251" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1433" bodyend="1436"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1ae8575adfa033548c499b300b8635409a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::unProject</definition>
+        <argsstring>(const btVector2 &amp;windowPosition) const </argsstring>
+        <name>unProject</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>windowPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>windowPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#windowPosition description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="260" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1438" bodyend="1460"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a1f20db49fb97ac85f32fcd88e91569f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector2</type>
+        <definition>btVector2 njli::Camera::project</definition>
+        <argsstring>(const btVector3 &amp;objectPosition) const </argsstring>
+        <name>project</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>objectPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>objectPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#objectPosition description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="268" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1462" bodyend="1483"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1acebff379eca9f4d2d4427473a0f0c9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::getTouchRay</definition>
+        <argsstring>(const btVector2 &amp;windowPosition, btVector3 &amp;from, btVector3 &amp;to)</argsstring>
+        <name>getTouchRay</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>windowPosition</declname>
+        </param>
+        <param>
+          <type>btVector3 &amp;</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>btVector3 &amp;</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>windowPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#windowPosition description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#from description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#to description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="276" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1485" bodyend="1531"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a4ddf4113a0856877fcdfbd16a56c9ad5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getForwardVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getForwardVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="283" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1533" bodyend="1540"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1ac3bfd6a110124b6103423de352d729da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getUpVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getUpVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="289" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1542" bodyend="1549"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1acb6c13ca8fd8de0bd66e79262de9e2b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::Camera::getSideVector</definition>
+        <argsstring>() const </argsstring>
+        <name>getSideVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="295" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1551" bodyend="1554"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a452756c63a51e1f2499d0581a2405327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::lookAt</definition>
+        <argsstring>(const btVector3 &amp;pos, const btVector3 &amp;up=btVector3(0, 1.0f, 0))</argsstring>
+        <name>lookAt</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>up</declname>
+          <defval>btVector3(0, 1.0f, 0)</defval>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 02:02:03</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#pos description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>up</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#0 description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="305" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1556" bodyend="1571"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a4f9b25920947c5431686b660b56c81bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::Camera::rayTestClosest</definition>
+        <argsstring>(const btVector2 &amp;screenPosition, PhysicsRayContact &amp;rayContact, njliBitCategories collisionGroup=JLI_BIT_CATEGORY_DefaultFilter, njliBitCategories collisionMask=JLI_BIT_CATEGORY_AllFilter) const </argsstring>
+        <name>rayTestClosest</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>screenPosition</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref> &amp;</type>
+          <declname>rayContact</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>collisionGroup</declname>
+          <defval><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974a53b33337014e199f56e752574f36981e" kindref="member">JLI_BIT_CATEGORY_DefaultFilter</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>collisionMask</declname>
+          <defval><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974a0fba80cad161dda96de5cbda9091cdce" kindref="member">JLI_BIT_CATEGORY_AllFilter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screenPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#screenPosition description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rayContact</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rayContact description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collisionGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#collisionGroup description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collisionMask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#collisionMask description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="317" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1573" bodyend="1579"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a22a0544c2a70354e68d3d00c5fad2d06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::Camera::rayTestAll</definition>
+        <argsstring>(const btVector2 &amp;screenPosition, btAlignedObjectArray&lt; PhysicsRayContact * &gt; &amp;rayContacts, s32 &amp;numContacts, njliBitCategories collisionGroup=JLI_BIT_CATEGORY_DefaultFilter, njliBitCategories collisionMask=JLI_BIT_CATEGORY_AllFilter) const </argsstring>
+        <name>rayTestAll</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>screenPosition</declname>
+        </param>
+        <param>
+          <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref> * &gt; &amp;</type>
+          <declname>rayContacts</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref> &amp;</type>
+          <declname>numContacts</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>collisionGroup</declname>
+          <defval><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974a53b33337014e199f56e752574f36981e" kindref="member">JLI_BIT_CATEGORY_DefaultFilter</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref></type>
+          <declname>collisionMask</declname>
+          <defval><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974a0fba80cad161dda96de5cbda9091cdce" kindref="member">JLI_BIT_CATEGORY_AllFilter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screenPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#screenPosition description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rayContacts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rayContacts description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numContacts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#numContacts description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collisionGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#collisionGroup description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collisionMask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#collisionMask description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="333" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1581" bodyend="1588"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a40e0bd1df15a53e2278f6b856298a224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+        <definition>Node * njli::Camera::getParent</definition>
+        <argsstring>()</argsstring>
+        <name>getParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="344" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1595" bodyend="1598"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1ae492da69f9f3e3a403798f02975ce284" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+        <definition>const Node * njli::Camera::getParent</definition>
+        <argsstring>() const </argsstring>
+        <name>getParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="350" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1600" bodyend="1603"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_camera_1a1945f0843dd2d0050b17c7b58b0515e8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> **</type>
+        <definition>Camera ** njli::Camera::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="109" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1193" bodyend="1196"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1aa328de0356a58f32291f722bb4536bba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::destroyArray</definition>
+        <argsstring>(Camera **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="115" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1198" bodyend="1201"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1af159afe66f189f378d5ade9e09163d27" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera * njli::Camera::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="121" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1203" bodyend="1206"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a84b42c1ede5b42f4c54efeb0a8ee2d24" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera * njli::Camera::create</definition>
+        <argsstring>(const CameraBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_camera_builder" kindref="compound">CameraBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="129" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1208" bodyend="1213"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a5db9a750b9a65d400c7738786beba0cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera * njli::Camera::clone</definition>
+        <argsstring>(const Camera &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="137" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1215" bodyend="1218"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1ace71223d6bb162cbdf3d42891d1c6d0c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera * njli::Camera::copy</definition>
+        <argsstring>(const Camera &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="145" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1220" bodyend="1223"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1af8442fe00330b2f6df5b731b15f1bc19" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::destroy</definition>
+        <argsstring>(Camera *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="151" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1225" bodyend="1231"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a00b2830532ea38244178bae6c15870ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Camera::load</definition>
+        <argsstring>(Camera &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="159" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1233" bodyend="1292"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_camera_1a6179ed17de968bb1da17d307cc77672d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::Camera::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1294" bodyend="1297"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2849">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="2850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2851">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="2850">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="2851" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2848">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="2849" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2853">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="2854" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2855">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="2855" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="2858">
+        <label>btDbvt::ICollide</label>
+      </node>
+      <node id="2854">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="2855" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2856">
+        <label>njli::OcclusionBuffer</label>
+        <link refid="structnjli_1_1_occlusion_buffer"/>
+        <childnode refid="2852" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="2857">
+        <label>njli::SceneRenderer</label>
+        <link refid="classnjli_1_1_scene_renderer"/>
+        <childnode refid="2858" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2856" relation="usage">
+          <edgelabel>m_ocb</edgelabel>
+        </childnode>
+        <childnode refid="2852" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="2852">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="2853" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2856" relation="usage">
+          <edgelabel>m_OcclusionBuffer</edgelabel>
+        </childnode>
+        <childnode refid="2857" relation="usage">
+          <edgelabel>m_SceneRenderer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" line="37" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.h" bodystart="35" bodyend="388"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_camera_1afd4e08b967df5e00190f47ac6579adc6" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>addRenderCategory</name></member>
+      <member refid="classnjli_1_1_camera_1a83f596c774d17aefbe44d3506d42da5d" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_camera_1a797f44ec1c40d785e9aac03022f5d47c" prot="public" virt="virtual"><scope>njli::Camera</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_camera_1a6b242e7ea1b008c3073fea985ac01bc7" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>Camera</name></member>
+      <member refid="classnjli_1_1_camera_1a82db3cd7c219d8f76d06278f410a8c1d" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>Camera</name></member>
+      <member refid="classnjli_1_1_camera_1a865e8f65462a466b6e2e8c8c98e2d34b" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>Camera</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::Camera</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_camera_1a5db9a750b9a65d400c7738786beba0cb" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::Camera</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_camera_1ace71223d6bb162cbdf3d42891d1c6d0c" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_camera_1af159afe66f189f378d5ade9e09163d27" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>create</name></member>
+      <member refid="classnjli_1_1_camera_1a84b42c1ede5b42f4c54efeb0a8ee2d24" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::Camera</scope><name>create</name></member>
+      <member refid="classnjli_1_1_camera_1a1945f0843dd2d0050b17c7b58b0515e8" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_camera_1a9919eed4f61256bb04551ac64d6aadcf" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>cull</name></member>
+      <member refid="classnjli_1_1_camera_1af8442fe00330b2f6df5b731b15f1bc19" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::Camera</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_camera_1aa328de0356a58f32291f722bb4536bba" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::Camera</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_camera_1a0421efa372890d9e3a934911a4aeebf1" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>enableOrthographic</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_camera_1a9aca7b7350e6ffa0e2d6320834ad1857" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>Geometry</name></member>
+      <member refid="classnjli_1_1_camera_1a5ee176a0385150ca050949b6c9102dcf" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getBottomLeftVector</name></member>
+      <member refid="classnjli_1_1_camera_1a682a617eb1240589fe902d60cd9847dd" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getBottomRightVector</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_camera_1a98ee63625f2f357a131934e7d71140ce" prot="public" virt="virtual"><scope>njli::Camera</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_camera_1a4ddf4113a0856877fcdfbd16a56c9ad5" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getForwardVector</name></member>
+      <member refid="classnjli_1_1_camera_1a1a40d5c51ae0c04a71f96b12ee6757c8" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getFov</name></member>
+      <member refid="classnjli_1_1_camera_1adb4eab206f9f7b5d60bbf15eabc3b02a" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getModelViewMatrixArray</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_camera_1a40e0bd1df15a53e2278f6b856298a224" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_camera_1ae492da69f9f3e3a403798f02975ce284" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_camera_1a5156491ab0e052e8480dbe61536dc080" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getProjection</name></member>
+      <member refid="classnjli_1_1_camera_1a7eecc6fef858393d3f4fe90565e03fb5" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getProjectionMatrixArray</name></member>
+      <member refid="classnjli_1_1_camera_1a916b20e26fda2daa4e4878cc16e0859b" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getRenderCategory</name></member>
+      <member refid="classnjli_1_1_camera_1acb6c13ca8fd8de0bd66e79262de9e2b4" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getSideVector</name></member>
+      <member refid="classnjli_1_1_camera_1a5bc41e60801df99e6c88e392a9349646" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getTopLeftVector</name></member>
+      <member refid="classnjli_1_1_camera_1a668e811dd261da460f127d1db6656f76" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getTopRightVector</name></member>
+      <member refid="classnjli_1_1_camera_1acebff379eca9f4d2d4427473a0f0c9fa" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getTouchRay</name></member>
+      <member refid="classnjli_1_1_camera_1a8831b8b9c3c097394f1cffc2913b55be" prot="public" virt="virtual"><scope>njli::Camera</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_camera_1ac3bfd6a110124b6103423de352d729da" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getUpVector</name></member>
+      <member refid="classnjli_1_1_camera_1a99666c1b08c246db791a6424a90e0e95" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>getViewBounds</name></member>
+      <member refid="classnjli_1_1_camera_1a11ace403a0f59a4e45b4b7b021de6d59" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getZFar</name></member>
+      <member refid="classnjli_1_1_camera_1aa7710ca6017223ef747d168b05819a2c" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>getZNear</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_camera_1a7870e48c1f18f0386a2dc7961a94b02e" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>hasRenderCategory</name></member>
+      <member refid="classnjli_1_1_camera_1ac1b0bbc02a307ee40b231ea0b2e21286" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>isOrthographic</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_camera_1a00b2830532ea38244178bae6c15870ad" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>load</name></member>
+      <member refid="classnjli_1_1_camera_1a452756c63a51e1f2499d0581a2405327" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>lookAt</name></member>
+      <member refid="classnjli_1_1_camera_1a34d45ec43ca2eec498138e80685d8ffc" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_Far</name></member>
+      <member refid="classnjli_1_1_camera_1aab4d792e3aeaf5cf1072d0a75d4d4f58" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_Fov</name></member>
+      <member refid="classnjli_1_1_camera_1a0cf1d4419f8b9414ba59ce9229ca1037" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_ModelMatrix</name></member>
+      <member refid="classnjli_1_1_camera_1ac14bac7824b812adeb752894023376fe" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_ModelViewMatrixArray</name></member>
+      <member refid="classnjli_1_1_camera_1a648b79887b9acf3fb12dd7006a68cb85" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_Near</name></member>
+      <member refid="classnjli_1_1_camera_1a6cd9448c2d481d6b5550bad78201be2a" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_OcclusionBuffer</name></member>
+      <member refid="classnjli_1_1_camera_1a140d99f05bf37657affe3006d7c2f00a" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_Orthographic</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_camera_1a8b02bb72aff457b5d68970d266348131" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_projectionMatrix</name></member>
+      <member refid="classnjli_1_1_camera_1a7d25685257aaa004c1aa1aed8376fe49" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_ProjectionMatrix</name></member>
+      <member refid="classnjli_1_1_camera_1a513f74848a02e22d38fa2f4b83306363" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_ProjectionMatrixArray</name></member>
+      <member refid="classnjli_1_1_camera_1a7fb57199725228cab2ac28462cfb7967" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_RenderCategory</name></member>
+      <member refid="classnjli_1_1_camera_1aa5b56fb8e1f66bcc1e97cc06708d438e" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_SceneRenderer</name></member>
+      <member refid="classnjli_1_1_camera_1a0ac4d128631b54a0a5ab1d023c565b73" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>m_ViewPort</name></member>
+      <member refid="classnjli_1_1_camera_1a6db9d28bd448a131448276ee03de1e6d" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>Node</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_camera_1af60c965608a88762c5d3b48490472319" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>OcclusionBuffer</name></member>
+      <member refid="classnjli_1_1_camera_1a83dbb91dfe5745ad209918e803569ea6" prot="public" virt="virtual"><scope>njli::Camera</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_camera_1a3c7d3d8e855949637ffdec8fb16c8046" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_camera_1a82b374d797a09668286ac5cf26f539f3" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>ParticleEmitter</name></member>
+      <member refid="classnjli_1_1_camera_1abd7959b8cbcd7c25bc6c0c8b1ea26ce6" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>PhysicsWorld</name></member>
+      <member refid="classnjli_1_1_camera_1a1f20db49fb97ac85f32fcd88e91569f5" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>project</name></member>
+      <member refid="classnjli_1_1_camera_1a22a0544c2a70354e68d3d00c5fad2d06" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>rayTestAll</name></member>
+      <member refid="classnjli_1_1_camera_1a4f9b25920947c5431686b660b56c81bb" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>rayTestClosest</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_camera_1a122317f4e5f4fef2331c3bdbb094080d" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>removeRenderCategory</name></member>
+      <member refid="classnjli_1_1_camera_1a4ce0a661f8a18d87af3453d8159793ed" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>render</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::Camera</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_camera_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>Scene</name></member>
+      <member refid="classnjli_1_1_camera_1aae6efa51fde36cf2c0759009ba7b19c0" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>SceneRenderer</name></member>
+      <member refid="classnjli_1_1_camera_1a5d966c55a274d041a4a60ca75d144842" prot="public" virt="virtual"><scope>njli::Camera</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::Camera</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_camera_1a249c6432aa9c8809a92012a272ec6d28" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>setFov</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::Camera</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_camera_1ab5aa8d0d534c0745146ed0d84f72fa18" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>setRenderCategory</name></member>
+      <member refid="classnjli_1_1_camera_1a078a786623bfed82e5c42af635ff7c50" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>setZFar</name></member>
+      <member refid="classnjli_1_1_camera_1aecd11caf4880997cdaecef6c47d69c48" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>setZNear</name></member>
+      <member refid="classnjli_1_1_camera_1a6179ed17de968bb1da17d307cc77672d" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>type</name></member>
+      <member refid="classnjli_1_1_camera_1ae8575adfa033548c499b300b8635409a" prot="public" virt="non-virtual"><scope>njli::Camera</scope><name>unProject</name></member>
+      <member refid="classnjli_1_1_camera_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>World</name></member>
+      <member refid="classnjli_1_1_camera_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_camera_1a59cdb6fe5b378389e35b8b2a2f4e990e" prot="private" virt="non-virtual"><scope>njli::Camera</scope><name>WorldState</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::Camera</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::Camera</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::Camera</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_camera_1a557fb5ac847a6ce53dda04c42a294dbd" prot="protected" virt="virtual"><scope>njli::Camera</scope><name>~Camera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

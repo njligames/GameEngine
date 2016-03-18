@@ -1,0 +1,1087 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_checkbox_h_u_d_8cpp" kind="file">
+    <compoundname>CheckboxHUD.cpp</compoundname>
+    <includes refid="_checkbox_h_u_d_8h" local="yes">CheckboxHUD.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includes refid="_world_8h" local="yes">World.h</includes>
+    <includes refid="_checkbox_h_u_d_builder_8h" local="yes">CheckboxHUDBuilder.h</includes>
+    <includes local="yes">GLPlatform.h</includes>
+    <includes refid="_world_h_u_d_8h" local="yes">WorldHUD.h</includes>
+    <includes refid="_log_8h" local="yes">Log.h</includes>
+    <includes local="yes">btPrint.h</includes>
+    <incdepgraph>
+      <node id="31511">
+        <label>btIDebugDraw.h</label>
+      </node>
+      <node id="31477">
+        <label>lua.hpp</label>
+      </node>
+      <node id="31486">
+        <label>WorldLuaVirtualMachine.h</label>
+        <link refid="_world_lua_virtual_machine_8h"/>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+        <childnode refid="31487" relation="include">
+        </childnode>
+        <childnode refid="31489" relation="include">
+        </childnode>
+        <childnode refid="31492" relation="include">
+        </childnode>
+        <childnode refid="31494" relation="include">
+        </childnode>
+        <childnode refid="31495" relation="include">
+        </childnode>
+        <childnode refid="31496" relation="include">
+        </childnode>
+        <childnode refid="31497" relation="include">
+        </childnode>
+        <childnode refid="31498" relation="include">
+        </childnode>
+        <childnode refid="31465" relation="include">
+        </childnode>
+      </node>
+      <node id="31503">
+        <label>Camera.h</label>
+        <link refid="_camera_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31504" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+      </node>
+      <node id="31468">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="31469" relation="include">
+        </childnode>
+      </node>
+      <node id="31518">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="31473">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31485">
+        <label>queue</label>
+      </node>
+      <node id="31505">
+        <label>WorldClock.h</label>
+        <link refid="_world_clock_8h"/>
+        <childnode refid="31506" relation="include">
+        </childnode>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31507" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31491">
+        <label>btVector2.h</label>
+      </node>
+      <node id="31467">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="31468" relation="include">
+        </childnode>
+        <childnode refid="31470" relation="include">
+        </childnode>
+        <childnode refid="31471" relation="include">
+        </childnode>
+      </node>
+      <node id="31499">
+        <label>WorldSQLite.h</label>
+        <link refid="_world_s_q_lite_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31500" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31487">
+        <label>AbstractState.h</label>
+        <link refid="_abstract_state_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31488" relation="include">
+        </childnode>
+        <childnode refid="31470" relation="include">
+        </childnode>
+      </node>
+      <node id="31470">
+        <label>stdlib.h</label>
+      </node>
+      <node id="31490">
+        <label>DeviceInputTime.h</label>
+        <link refid="_device_input_time_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+      </node>
+      <node id="31522">
+        <label>btQuickprof.h</label>
+      </node>
+      <node id="31513">
+        <label>File.h</label>
+        <link refid="_file_8h"/>
+        <childnode refid="31469" relation="include">
+        </childnode>
+        <childnode refid="31471" relation="include">
+        </childnode>
+        <childnode refid="31470" relation="include">
+        </childnode>
+      </node>
+      <node id="31512">
+        <label>WorldHUD.h</label>
+        <link refid="_world_h_u_d_8h"/>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31513" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31514" relation="include">
+        </childnode>
+        <childnode refid="31476" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31465" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+      </node>
+      <node id="31509">
+        <label>Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+        <childnode refid="31510" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31491" relation="include">
+        </childnode>
+        <childnode refid="31504" relation="include">
+        </childnode>
+      </node>
+      <node id="31523">
+        <label>CheckboxHUDBuilder.h</label>
+        <link refid="_checkbox_h_u_d_builder_8h"/>
+        <childnode refid="31465" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31475" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+      </node>
+      <node id="31506">
+        <label>AbstractClock.h</label>
+        <link refid="_abstract_clock_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31472">
+        <label>string</label>
+      </node>
+      <node id="31494">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31465" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+      </node>
+      <node id="31489">
+        <label>DeviceTouch.h</label>
+        <link refid="_device_touch_8h"/>
+        <childnode refid="31490" relation="include">
+        </childnode>
+        <childnode refid="31491" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31484">
+        <label>map</label>
+      </node>
+      <node id="31492">
+        <label>Node.h</label>
+        <link refid="_node_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31493" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31491" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31519">
+        <label>WorldState.h</label>
+        <link refid="_world_state_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31487" relation="include">
+        </childnode>
+        <childnode refid="31489" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+      </node>
+      <node id="31504">
+        <label>btVector3.h</label>
+      </node>
+      <node id="31465">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="31498">
+        <label>PhysicsRayContact.h</label>
+        <link refid="_physics_ray_contact_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+      </node>
+      <node id="31500">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="31463">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31475" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31461">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp</label>
+        <link refid="CheckboxHUD.cpp"/>
+        <childnode refid="31462" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31480" relation="include">
+        </childnode>
+        <childnode refid="31523" relation="include">
+        </childnode>
+        <childnode refid="31502" relation="include">
+        </childnode>
+        <childnode refid="31512" relation="include">
+        </childnode>
+        <childnode refid="31468" relation="include">
+        </childnode>
+        <childnode refid="31524" relation="include">
+        </childnode>
+      </node>
+      <node id="31524">
+        <label>btPrint.h</label>
+      </node>
+      <node id="31475">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="31479">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="31508">
+        <label>WorldDebugDrawer.h</label>
+        <link refid="_world_debug_drawer_8h"/>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31509" relation="include">
+        </childnode>
+        <childnode refid="31511" relation="include">
+        </childnode>
+      </node>
+      <node id="31507">
+        <label>btClock.h</label>
+      </node>
+      <node id="31517">
+        <label>WorldSocket.h</label>
+        <link refid="_world_socket_8h"/>
+        <childnode refid="31518" relation="include">
+        </childnode>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31485" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31513" relation="include">
+        </childnode>
+      </node>
+      <node id="31502">
+        <label>GLPlatform.h</label>
+      </node>
+      <node id="31482">
+        <label>WorldFactory.h</label>
+        <link refid="_world_factory_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31465" relation="include">
+        </childnode>
+        <childnode refid="31483" relation="include">
+        </childnode>
+        <childnode refid="31475" relation="include">
+        </childnode>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31484" relation="include">
+        </childnode>
+        <childnode refid="31485" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+      </node>
+      <node id="31496">
+        <label>btManifoldPoint.h</label>
+      </node>
+      <node id="31462">
+        <label>CheckboxHUD.h</label>
+        <link refid="_checkbox_h_u_d_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31476" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+      </node>
+      <node id="31488">
+        <label>btScalar.h</label>
+      </node>
+      <node id="31510">
+        <label>bitset</label>
+      </node>
+      <node id="31493">
+        <label>AbstractActionable.h</label>
+        <link refid="_abstract_actionable_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31485" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+      </node>
+      <node id="31483">
+        <label>btHashMap.h</label>
+      </node>
+      <node id="31474">
+        <label>vector</label>
+      </node>
+      <node id="31515">
+        <label>WorldInput.h</label>
+        <link refid="_world_input_8h"/>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31495">
+        <label>btDispatcher.h</label>
+      </node>
+      <node id="31466">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+        <childnode refid="31473" relation="include">
+        </childnode>
+      </node>
+      <node id="31478">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31479" relation="include">
+        </childnode>
+      </node>
+      <node id="31476">
+        <label>AbstractFrameBufferObject.h</label>
+        <link refid="_abstract_frame_buffer_object_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+      </node>
+      <node id="31520">
+        <label>WorldStateMachine.h</label>
+        <link refid="_world_state_machine_8h"/>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31521" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+      </node>
+      <node id="31481">
+        <label>cstddef</label>
+      </node>
+      <node id="31480">
+        <label>World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31481" relation="include">
+        </childnode>
+        <childnode refid="31482" relation="include">
+        </childnode>
+        <childnode refid="31486" relation="include">
+        </childnode>
+        <childnode refid="31499" relation="include">
+        </childnode>
+        <childnode refid="31501" relation="include">
+        </childnode>
+        <childnode refid="31503" relation="include">
+        </childnode>
+        <childnode refid="31505" relation="include">
+        </childnode>
+        <childnode refid="31508" relation="include">
+        </childnode>
+        <childnode refid="31512" relation="include">
+        </childnode>
+        <childnode refid="31515" relation="include">
+        </childnode>
+        <childnode refid="31516" relation="include">
+        </childnode>
+        <childnode refid="31517" relation="include">
+        </childnode>
+        <childnode refid="31519" relation="include">
+        </childnode>
+        <childnode refid="31520" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31501">
+        <label>WorldSound.h</label>
+        <link refid="_world_sound_8h"/>
+        <childnode refid="31502" relation="include">
+        </childnode>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31472" relation="include">
+        </childnode>
+      </node>
+      <node id="31469">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="31514">
+        <label>nanovg.h</label>
+      </node>
+      <node id="31497">
+        <label>Action.h</label>
+        <link refid="_action_8h"/>
+        <childnode refid="31493" relation="include">
+        </childnode>
+        <childnode refid="31463" relation="include">
+        </childnode>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31465" relation="include">
+        </childnode>
+        <childnode refid="31477" relation="include">
+        </childnode>
+        <childnode refid="31485" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+      </node>
+      <node id="31516">
+        <label>WorldResourceLoader.h</label>
+        <link refid="_world_resource_loader_8h"/>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31478" relation="include">
+        </childnode>
+        <childnode refid="31483" relation="include">
+        </childnode>
+        <childnode refid="31474" relation="include">
+        </childnode>
+      </node>
+      <node id="31471">
+        <label>stdio.h</label>
+      </node>
+      <node id="31464">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="31465" relation="include">
+        </childnode>
+        <childnode refid="31466" relation="include">
+        </childnode>
+        <childnode refid="31467" relation="include">
+        </childnode>
+        <childnode refid="31475" relation="include">
+        </childnode>
+      </node>
+      <node id="31521">
+        <label>AbstractStateMachine.h</label>
+        <link refid="_abstract_state_machine_8h"/>
+        <childnode refid="31464" relation="include">
+        </childnode>
+        <childnode refid="31487" relation="include">
+        </childnode>
+        <childnode refid="31522" relation="include">
+        </childnode>
+        <childnode refid="31485" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_checkbox_h_u_d_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" prot="public" static="no">
+        <name>TAG</name>
+        <initializer>&quot;CheckboxHUD.cpp&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" line="16" column="16" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_checkbox_h_u_d_8cpp_1ad3fefbb27b357bae466abf4506c95387" prot="public" static="no">
+        <name>ICON_CHECK</name>
+        <initializer>0x2713</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" line="18" column="9" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" prot="public" static="no">
+        <name>SCALE</name>
+        <initializer>(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" line="19" column="9" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_checkbox_h_u_d_8cpp_1a4d0768c0d97829b5c252f9643bdc19f5" prot="public" static="no">
+        <name>FORMATSTRING</name>
+        <initializer>&quot;{\&quot;njli::CheckboxHUD\&quot;:[]}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" line="21" column="9" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CheckboxHUD.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>2/13/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_checkbox_h_u_d_8h" kindref="compound">CheckboxHUD.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_8h" kindref="compound">World.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_checkbox_h_u_d_builder_8h" kindref="compound">CheckboxHUDBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GLPlatform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_h_u_d_8h" kindref="compound">WorldHUD.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAG<sp/>&quot;CheckboxHUD.cpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ICON_CHECK<sp/>0x2713</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCALE<sp/>(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORMATSTRING<sp/>&quot;{\&quot;njli::CheckboxHUD\&quot;:[]}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btPrint.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD::CheckboxHUD</ref>():</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>m_dimensions(new<sp/>btVector2(140*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>,<sp/>28*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>)),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>m_position(new<sp/>btVector2(0,0)),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fontSize(18*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fontFace(</highlight><highlight class="stringliteral">&quot;sans&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fillColor(new<sp/>btVector4(1.0,1.0,1.0,<sp/>160.0/255.0)),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>m_align(<ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3aabca0f32318ac2d51572301aec394e197" kindref="member">JLI_HUD_ALIGN_LEFT</ref><sp/>|<sp/><ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3aa7d73746235b128ed755b9dfcfac6a656" kindref="member">JLI_HUD_ALIGN_MIDDLE</ref>),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>m_cornerRadius(3*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>m_feather(3*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>m_gradientStartColor(new<sp/>btVector4(0.0f,<sp/>0.0f,<sp/>0.0f,<sp/>32.0f/255.0f)),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>m_gradientEndColor(new<sp/>btVector4(0.0f,<sp/>0.0f,<sp/>0.0f,<sp/>92.0f/255.0f)),</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>m_iconFontSize(40*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>),</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>m_iconFontFace(</highlight><highlight class="stringliteral">&quot;icons&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>m_iconFillColor(new<sp/>btVector4(1.0f,<sp/>1.0f,<sp/>1.0f,<sp/>128.0f/255.0f)),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>m_iconText(<ref refid="namespacenjli" kindref="compound">njli</ref>::World::getInstance()-&gt;getWorldHUD()-&gt;cpToUTF8(<ref refid="_checkbox_h_u_d_8cpp_1ad3fefbb27b357bae466abf4506c95387" kindref="member">ICON_CHECK</ref>)),</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>m_text(</highlight><highlight class="stringliteral">&quot;CHECKBOX&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>m_checkboxDimension(new<sp/>btVector2(18*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>,<sp/>18*<ref refid="_checkbox_h_u_d_8cpp_1a0cbea62f1ce2043dd08108e65ed8de1d" kindref="member">SCALE</ref>)),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isChecked(true)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD::CheckboxHUD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AbstractBuilder<sp/>&amp;builder):</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD::CheckboxHUD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CheckboxHUD<sp/>&amp;copy):</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a455334383e0cadeeaa1c09752064ec67" kindref="member">CheckboxHUD::~CheckboxHUD</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" kindref="member">m_iconFillColor</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" kindref="member">m_iconFillColor</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" kindref="member">m_gradientEndColor</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" kindref="member">m_gradientEndColor</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a1f692a5cf90de60c6a1d3747b1f3710d" kindref="member">m_gradientStartColor</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1a1f692a5cf90de60c6a1d3747b1f3710d" kindref="member">m_gradientStartColor</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" kindref="member">m_fillColor</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" kindref="member">m_fillColor</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" kindref="member">m_position</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" kindref="member">m_position</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" kindref="member">m_dimensions</ref>;<ref refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" kindref="member">m_dimensions</ref>=<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1a440d2c1e0ca2850ffc333ae8f4df24ba" kindref="member">CheckboxHUD::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CheckboxHUD<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ac373a05200f80a5a5c927f8ab7199d6f" kindref="member">CheckboxHUD::renderFunction</ref>(Camera<sp/>*camera)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nvgBeginFrame(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;getWorldHUD()-&gt;getContext(),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa4ab66fbdcb04f1834d1dc05b4c7a10c" kindref="member">getWidth</ref>(),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a95ae9779550ed7496011f859ec3d4766" kindref="member">getHeight</ref>(),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aded6f9fc4da10af752cf90a97aaa751d" kindref="member">getAspectRatio</ref>());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1af390e9477ed759618405db2d94aa4b27" kindref="member">WorldHUD</ref><sp/>*hud<sp/>=<sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">njli::World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a40adfae9fbe51bb80879166d3f91acbf" kindref="member">getWorldHUD</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>w<sp/>=<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" kindref="member">m_dimensions</ref>-&gt;x();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>h<sp/>=<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" kindref="member">m_dimensions</ref>-&gt;y();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>tw<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>iw<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x<sp/>=<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" kindref="member">m_position</ref>-&gt;x();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y<sp/>=<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a95ae9779550ed7496011f859ec3d4766" kindref="member">getHeight</ref>()<sp/>-<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" kindref="member">m_position</ref>-&gt;y()<sp/>-<sp/>h;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fontSize(<ref refid="classnjli_1_1_checkbox_h_u_d_1a0e1d4b8f2b740d9d6189da68959b34d5" kindref="member">m_fontSize</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fontFace(<ref refid="classnjli_1_1_checkbox_h_u_d_1ae30d4899d8b3bb39b583005d30e94d80" kindref="member">m_fontFace</ref>.c_str());</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fillColor(*<ref refid="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" kindref="member">m_fillColor</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;textAlign((<ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref>)<ref refid="classnjli_1_1_checkbox_h_u_d_1a57ec6ee10cf894de31c8f5d3c1987cbf" kindref="member">m_align</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;text(x+<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;x()<sp/>+<sp/>10,<sp/>y+h*0.5,<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a5746b7e4e3127374c6761d077e061661" kindref="member">m_text</ref>.c_str());</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JLIPaint<sp/>bg<sp/>=<sp/>hud-&gt;boxGradient(x+1,<sp/>y+(h*0.5)-(<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;y()*0.5f)+1,<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;x(),<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;y(),<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a4a42a1e6ec369fe33ea9a7d6b546048a" kindref="member">m_cornerRadius</ref>,<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a06f4f2ae5cbff9350537724e8b2f5f5f" kindref="member">m_feather</ref>,<sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a1f692a5cf90de60c6a1d3747b1f3710d" kindref="member">m_gradientStartColor</ref>,<sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" kindref="member">m_gradientEndColor</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;beginPath();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;roundedRect(x+1,<sp/>y+(h*0.5)-(<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;y()*0.5f),<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;x(),<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;y(),<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a4a42a1e6ec369fe33ea9a7d6b546048a" kindref="member">m_cornerRadius</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fillPaint(bg);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fill();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fontSize(<ref refid="classnjli_1_1_checkbox_h_u_d_1ac904923a373f4c67ab94dbf407459245" kindref="member">m_iconFontSize</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fontFace(<ref refid="classnjli_1_1_checkbox_h_u_d_1ae3f331029c085859eb0e47c66d16ae56" kindref="member">m_iconFontFace</ref>.c_str());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;fillColor(*<ref refid="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" kindref="member">m_iconFillColor</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_checkbox_h_u_d_1a412e277cbdbd39ce605d81342ef11f91" kindref="member">m_isChecked</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;textAlign((<ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref>)m_align);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hud-&gt;text(x+(<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>-&gt;x()*0.3f),<sp/>y+(h*0.4f),<sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aafd86237ddcbc55e4797d478b906bc2f" kindref="member">m_iconText</ref>.c_str());</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nvgEndFrame(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;getWorldHUD()-&gt;getContext());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a3d9608fee3e29cb75255d4c8a52f6402" kindref="member">CheckboxHUD::calculateSerializeBufferSize</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="128"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>calculateSerializeBufferSize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2f4a7c62936fb7e91274081cb04c1d11" kindref="member">CheckboxHUD::serialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*<sp/>serializer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="134"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>serialize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a9ad7d50062d24943d128c0a94ad4e86e" kindref="member">CheckboxHUD::getClassName</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="139"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CheckboxHUD&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ab4c0e987d977bc8560a9af11a0e68f59" kindref="member">CheckboxHUD::getType</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="144"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a6d56d4fbaf89fcf3e3d32839df05b444aeea430e40ffbf6287e6f45b92283f5c6" kindref="member">JLI_OBJECT_TYPE_CheckboxHUD</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD::operator<sp/>std::string()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="149"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_json_j_l_i_1aac51324ec88a76dee9559a4282e01c9a" kindref="member">njli::JsonJLI::parse</ref>(string_format(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="_checkbox_h_u_d_8cpp_1a4d0768c0d97829b5c252f9643bdc19f5" kindref="member">FORMATSTRING</ref>).c_str());</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD<sp/>**<ref refid="classnjli_1_1_checkbox_h_u_d_1a22d51a25e265add58686c00c030cadc8" kindref="member">CheckboxHUD::createArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD</ref>**)<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a6c379949bd79510d934515f9a0aa4008" kindref="member">createArray</ref>(<ref refid="classnjli_1_1_checkbox_h_u_d_1a84526a179ce84ac76f694927cddff8f1" kindref="member">CheckboxHUD::type</ref>(),<sp/>size);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a1ca38e5db835fc353407f8c5bfae4039" kindref="member">CheckboxHUD::destroyArray</ref>(CheckboxHUD<sp/>**array,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a40a00fcf24618fa8e4c037efe19119d9" kindref="member">destroyArray</ref>((<ref refid="classnjli_1_1_abstract_factory_object_1a4f7ae7bf09c7c9426e7d6023f7fd8dec" kindref="member">AbstractFactoryObject</ref>**)array,<sp/>size);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD<sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a73657218e0fe45f9f0fe4d6877f12fbf" kindref="member">CheckboxHUD::create</ref>()</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(<ref refid="classnjli_1_1_checkbox_h_u_d_1a84526a179ce84ac76f694927cddff8f1" kindref="member">CheckboxHUD::type</ref>()));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD<sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a73657218e0fe45f9f0fe4d6877f12fbf" kindref="member">CheckboxHUD::create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CheckboxHUDBuilder<sp/>&amp;builder)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AbstractBuilder<sp/>*b<sp/>=<sp/>(AbstractBuilder<sp/>*)&amp;builder;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(*b));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD<sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1ad900735c5021aa4557d049e3c4ff7f91" kindref="member">CheckboxHUD::clone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CheckboxHUD<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ad45e7eac9f28b683a29fc3e397549d84" kindref="member">clone</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckboxHUD<sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1afc718237c1b7e03f45567a56f267da39" kindref="member">CheckboxHUD::copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CheckboxHUD<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" kindref="member">CheckboxHUD</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ad45e7eac9f28b683a29fc3e397549d84" kindref="member">clone</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" kindref="member">CheckboxHUD::destroy</ref>(CheckboxHUD<sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ace215cda602d0bc17315d755036fb497" kindref="member">destroy</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a0a834ee3236f5dae14f7ab32c69708eb" kindref="member">CheckboxHUD::load</ref>(CheckboxHUD<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Push<sp/>another<sp/>reference<sp/>to<sp/>the<sp/>table<sp/>on<sp/>top<sp/>of<sp/>the<sp/>stack<sp/>(so<sp/>we<sp/>know</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>where<sp/>it<sp/>is,<sp/>and<sp/>this<sp/>function<sp/>can<sp/>work<sp/>for<sp/>negative,<sp/>positive<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pseudo<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushvalue(L,<sp/>index);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushnil(L);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>nil;<sp/>-2<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(lua_next(L,<sp/>-2))</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>value;<sp/>-2<sp/>=&gt;<sp/>key;<sp/>-3<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>key<sp/>so<sp/>that<sp/>lua_tostring<sp/>does<sp/>not<sp/>modify<sp/>the<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushvalue(L,<sp/>-2);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>key;<sp/>-2<sp/>=&gt;<sp/>value;<sp/>-3<sp/>=&gt;<sp/>key;<sp/>-4<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key<sp/>=<sp/>lua_tostring(L,<sp/>-1);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value<sp/>=<sp/>lua_tostring(L,<sp/>-2);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_istable(L,<sp/>-2))</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a0a834ee3236f5dae14f7ab32c69708eb" kindref="member">CheckboxHUD::load</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>L,<sp/>-2);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isnumber(L,<sp/>index))</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number<sp/>=<sp/>lua_tonumber(L,<sp/>index);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>number);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isstring(L,<sp/>index))</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*v<sp/>=<sp/>lua_tostring(L,<sp/>index);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>v);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isboolean(L,<sp/>index))</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>lua_toboolean(L,<sp/>index);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>v);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isuserdata(L,<sp/>index))</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swig_lua_userdata<sp/>*usr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swig_type_info<sp/>*type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(lua_isuserdata(L,index));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usr=(swig_lua_userdata*)lua_touserdata(L,index);<sp/><sp/>/*<sp/>get<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>usr-&gt;type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>njli::AbstractFactoryObject<sp/>*object<sp/>=<sp/>static_cast&lt;njli::AbstractFactoryObject*&gt;(usr-&gt;ptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%s<sp/>=&gt;<sp/>%d:%s\n&quot;,<sp/>key,<sp/>object-&gt;getType(),<sp/>object-&gt;getClassName());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pop<sp/>value<sp/>+<sp/>copy<sp/>of<sp/>key,<sp/>leaving<sp/>original<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pop(L,<sp/>2);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>key;<sp/>-2<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>table<sp/>(when<sp/>lua_next<sp/>returns<sp/>0<sp/>it<sp/>pops<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>does<sp/>not<sp/>push<sp/>anything.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pop<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pop(L,<sp/>1);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stack<sp/>is<sp/>now<sp/>the<sp/>same<sp/>as<sp/>it<sp/>was<sp/>on<sp/>entry<sp/>to<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a84526a179ce84ac76f694927cddff8f1" kindref="member">CheckboxHUD::type</ref>()</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a6d56d4fbaf89fcf3e3d32839df05b444aeea430e40ffbf6287e6f45b92283f5c6" kindref="member">JLI_OBJECT_TYPE_CheckboxHUD</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a1f5298769d6467f4333a6fa208131ccd" kindref="member">CheckboxHUD::setDimensions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;dim)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" kindref="member">m_dimensions</ref><sp/>=<sp/>dim;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aaa1068b0211ba419f36dfb3b10e726b3" kindref="member">CheckboxHUD::setPosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;pos)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" kindref="member">m_position</ref><sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a4063a85d6fb9bc70311171465efa7025" kindref="member">CheckboxHUD::setFontSize</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>fontSize)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a0e1d4b8f2b740d9d6189da68959b34d5" kindref="member">m_fontSize</ref><sp/>=<sp/>fontSize;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ae4b99948d4cc44e2ddd6f1b8b2e6cbf0" kindref="member">CheckboxHUD::setFontFace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fontFace)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ae30d4899d8b3bb39b583005d30e94d80" kindref="member">m_fontFace</ref><sp/>=<sp/>fontFace;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a34ff2d255d4c683052a099f8207988ba" kindref="member">CheckboxHUD::setFontColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;color)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" kindref="member">m_fillColor</ref><sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a186750a8e24a00f9473bb14c47248810" kindref="member">CheckboxHUD::setText</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a5746b7e4e3127374c6761d077e061661" kindref="member">m_text</ref><sp/>=<sp/>text;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ad910eaefd683c7809d908aa43aba1770" kindref="member">CheckboxHUD::setFontAlign</ref>(<ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref><sp/>align)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_align<sp/>=<sp/>align;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ae3f929ce57043944b8193b5e82396fd5" kindref="member">CheckboxHUD::setCheckboxRadius</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a4a42a1e6ec369fe33ea9a7d6b546048a" kindref="member">m_cornerRadius</ref><sp/>=<sp/>radius;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a185341fbfa8e4a4f6c011f6b6a90216f" kindref="member">CheckboxHUD::setCheckboxFeather</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>feather)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_feather<sp/>=<sp/>feather;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ac96f62891f59b1f56285b1aeb8dcefb0" kindref="member">CheckboxHUD::setCheckboxGradientStartColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;start)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*m_gradientStartColor<sp/>=<sp/>start;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a2731b7eaefa483f90e8fe96ec4951fae" kindref="member">CheckboxHUD::setCheckboxGradientEndColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;end)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" kindref="member">m_gradientEndColor</ref><sp/>=<sp/>end;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a57260414f1a25ced9c1da85f67641c24" kindref="member">CheckboxHUD::setCheckboxDimensions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;dim)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref><sp/>=<sp/>dim;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a4b88a46f30ab4675d3f9d2e14ca59a6f" kindref="member">CheckboxHUD::setFontSizeIcon</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ac904923a373f4c67ab94dbf407459245" kindref="member">m_iconFontSize</ref><sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a9f5a683fa1eadb2844f1d7735e01f389" kindref="member">CheckboxHUD::setFontFaceIcon</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fontFace)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ae3f331029c085859eb0e47c66d16ae56" kindref="member">m_iconFontFace</ref><sp/>=<sp/>fontFace;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ab23a6ab181e6698b8653c0c8f45a5b78" kindref="member">CheckboxHUD::setFontColorIcon</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;color)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" kindref="member">m_iconFillColor</ref><sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ab1fe6f159b1937786b4c070c682220f9" kindref="member">CheckboxHUD::setTextIcon</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text)</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aafd86237ddcbc55e4797d478b906bc2f" kindref="member">m_iconText</ref><sp/>=<sp/>text;<sp/></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1abc3c9bdb220e6f12ae6f604282df350e" kindref="member">CheckboxHUD::getDimensions</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="341"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" kindref="member">m_dimensions</ref>;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1a39b4d8b338311780efcba1e3bb40a4ad" kindref="member">CheckboxHUD::getPosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;pos)</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="346"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" kindref="member">m_position</ref>;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a7abe03703e44a6ca75911701fdfb6e26" kindref="member">CheckboxHUD::getFontSize</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="351"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a0e1d4b8f2b740d9d6189da68959b34d5" kindref="member">m_fontSize</ref>;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1abcb50a74e3ede0d25b64ccea5375c9f2" kindref="member">CheckboxHUD::getFontFace</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="356"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ae30d4899d8b3bb39b583005d30e94d80" kindref="member">m_fontFace</ref>.c_str();</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1a2d74cfbdfa01b6eeda63c2ef389ade35" kindref="member">CheckboxHUD::getFontColor</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="361"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" kindref="member">m_fillColor</ref>;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1abc9efbd27a9d8e49b8c132e8b514e0c5" kindref="member">CheckboxHUD::getText</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="366"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a5746b7e4e3127374c6761d077e061661" kindref="member">m_text</ref>.c_str();</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aa77626cb568dfb747237f83d72d064c0" kindref="member">CheckboxHUD::getFontAlign</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="371"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref>)<ref refid="classnjli_1_1_checkbox_h_u_d_1a57ec6ee10cf894de31c8f5d3c1987cbf" kindref="member">m_align</ref>;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ab6dd29f576851759e287cd59d48fbd3b" kindref="member">CheckboxHUD::getCheckboxRadius</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="376"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a4a42a1e6ec369fe33ea9a7d6b546048a" kindref="member">m_cornerRadius</ref>;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ad017164469dffafec422d009c4009603" kindref="member">CheckboxHUD::getCheckboxFeather</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="381"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a06f4f2ae5cbff9350537724e8b2f5f5f" kindref="member">m_feather</ref>;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1a1025ff961e313a9b297d5f439fd82f3d" kindref="member">CheckboxHUD::getCheckboxGradientStartColor</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="386"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a1f692a5cf90de60c6a1d3747b1f3710d" kindref="member">m_gradientStartColor</ref>;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1ab3028cbd3a0a2ffba9c0760b0435bce5" kindref="member">CheckboxHUD::getCheckboxGradientEndColor</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="391"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" kindref="member">m_gradientEndColor</ref>;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1aa9f2a6a721d87fa6c25fe992deb994e1" kindref="member">CheckboxHUD::getCheckboxDimensions</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="396"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" kindref="member">m_checkboxDimension</ref>;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ad4f28446a0c7b8aa868cbad40fbf6dff" kindref="member">CheckboxHUD::getFontSizeIcon</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="401"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ac904923a373f4c67ab94dbf407459245" kindref="member">m_iconFontSize</ref>;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a8e37efd669ed288c04230cacf87045df" kindref="member">CheckboxHUD::getFontFaceIcon</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="406"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ae3f331029c085859eb0e47c66d16ae56" kindref="member">m_iconFontFace</ref>.c_str();</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4<sp/>&amp;<ref refid="classnjli_1_1_checkbox_h_u_d_1aa7d1790f3d62e9897f7cf6413bff30a2" kindref="member">CheckboxHUD::getFontColorIcon</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="411"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" kindref="member">m_iconFillColor</ref>;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_checkbox_h_u_d_1a38a066fe72f94f0bcab5d93cadba8308" kindref="member">CheckboxHUD::getTextIcon</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="416"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1aafd86237ddcbc55e4797d478b906bc2f" kindref="member">m_iconText</ref>.c_str();</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ad543bafb52bd55a7143af7a9312d663a" kindref="member">CheckboxHUD::check</ref>()</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a412e277cbdbd39ce605d81342ef11f91" kindref="member">m_isChecked</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a6e4733ecf2b4e5e44cd8206af9bdc671" kindref="member">CheckboxHUD::unCheck</ref>()</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a412e277cbdbd39ce605d81342ef11f91" kindref="member">m_isChecked</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1ade4afc4e3a0b8feb1574afb1d8c05451" kindref="member">CheckboxHUD::isChecked</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="431"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_checkbox_h_u_d_1a412e277cbdbd39ce605d81342ef11f91" kindref="member">m_isChecked</ref>;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="435"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp"/>
+  </compounddef>
+</doxygen>

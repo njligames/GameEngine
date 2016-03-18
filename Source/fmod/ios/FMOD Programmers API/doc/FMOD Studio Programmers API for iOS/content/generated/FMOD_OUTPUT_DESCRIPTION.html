@@ -1,0 +1,88 @@
+<LINK REL="stylesheet" HREF="../static/styles.css">
+<HTML>
+<HEAD>
+<TITLE>FMOD_OUTPUT_DESCRIPTION</TITLE>
+</HEAD>
+<BODY TOPMARGIN="0" class="api_reference">
+<p class="header">Firelight Technologies FMOD Studio API</p>
+<H1>FMOD_OUTPUT_DESCRIPTION</H1>
+<P>
+<p>When creating an output, declare one of these and provide the relevant callbacks and name for FMOD to use when it creates and uses an output of this type.</p>
+</P>
+<h3>Structure</h3>
+<PRE class=syntax><CODE>typedef struct {
+  unsigned int <I>apiversion</I>;
+  const char *<I>name</I>;
+  unsigned int <I>version</I>;
+  int <I>polling</I>;
+  FMOD_OUTPUT_GETNUMDRIVERS_CALLBACK <I>getnumdrivers</I>;
+  FMOD_OUTPUT_GETDRIVERINFO_CALLBACK <I>getdriverinfo</I>;
+  FMOD_OUTPUT_INIT_CALLBACK <I>init</I>;
+  FMOD_OUTPUT_START_CALLBACK <I>start</I>;
+  FMOD_OUTPUT_STOP_CALLBACK <I>stop</I>;
+  FMOD_OUTPUT_CLOSE_CALLBACK <I>close</I>;
+  FMOD_OUTPUT_UPDATE_CALLBACK <I>update</I>;
+  FMOD_OUTPUT_GETHANDLE_CALLBACK <I>gethandle</I>;
+  FMOD_OUTPUT_GETPOSITION_CALLBACK <I>getposition</I>;
+  FMOD_OUTPUT_LOCK_CALLBACK <I>lock</I>;
+  FMOD_OUTPUT_UNLOCK_CALLBACK <I>unlock</I>;
+  FMOD_OUTPUT_MIXER_CALLBACK <I>mixer</I>;
+  FMOD_OUTPUT_OBJECT3DGETINFO_CALLBACK <I>object3dgetinfo</I>;
+  FMOD_OUTPUT_OBJECT3DALLOC_CALLBACK <I>object3dalloc</I>;
+  FMOD_OUTPUT_OBJECT3DFREE_CALLBACK <I>object3dfree</I>;
+  FMOD_OUTPUT_OBJECT3DUPDATE_CALLBACK <I>object3dupdate</I>;
+} FMOD_OUTPUT_DESCRIPTION;
+</CODE></PRE>
+<h2>Members</h2>
+<P class=dt><I>apiversion</I></P>
+<P class=indent>[w] The output plugin API version this plugin is built for. Set to this to FMOD_OUTPUT_PLUGIN_VERSION defined above. </P>
+<P class=dt><I>name</I></P>
+<P class=indent>[w] Name of the output plugin. </P>
+<P class=dt><I>version</I></P>
+<P class=indent>[w] Version of the output plugin. </P>
+<P class=dt><I>polling</I></P>
+<P class=indent>[w] If FMOD should regularly call 'getposition' to determine when to automatically buffer and mix ('lock' and 'unlock') set to TRUE (non zero), for manual control call <A HREF="FMOD_OUTPUT_READFROMMIXER.html">FMOD_OUTPUT_READFROMMIXER</A> yourself. </P>
+<P class=dt><I>getnumdrivers</I></P>
+<P class=indent>[w] Number of attached sound devices. Called from <A HREF="FMOD_System_GetNumDrivers.html">System::getNumDrivers</A>. </P>
+<P class=dt><I>getdriverinfo</I></P>
+<P class=indent>[w] Information about a particular sound device. Called from <A HREF="FMOD_System_GetDriverInfo.html">System::getDriverInfo</A>. </P>
+<P class=dt><I>init</I></P>
+<P class=indent>[w] Allocate resources and provide information about hardware capabilities. Called from <A HREF="FMOD_System_Init.html">System::init</A>. </P>
+<P class=dt><I>start</I></P>
+<P class=indent>[w] Initialization is complete, mixing is about to begin. Called from <A HREF="FMOD_System_Init.html">System::init</A>. </P>
+<P class=dt><I>stop</I></P>
+<P class=indent>[w] Mixing has finished, stop accepting audio data. Called from <A HREF="FMOD_System_Close.html">System::close</A>. </P>
+<P class=dt><I>close</I></P>
+<P class=indent>[w] Clean up resources allocated during 'init'. Called from <A HREF="FMOD_System_Init.html">System::init</A> and <A HREF="FMOD_System_Close.html">System::close</A>. </P>
+<P class=dt><I>update</I></P>
+<P class=indent>[w] Update function that is called once a frame by the user. Called from <A HREF="FMOD_System_Update.html">System::update</A>. </P>
+<P class=dt><I>gethandle</I></P>
+<P class=indent>[w] Return a pointer to the internal device object used to share with other audio systems. Called from <A HREF="FMOD_System_GetOutputHandle.html">System::getOutputHandle</A>. </P>
+<P class=dt><I>getposition</I></P>
+<P class=indent>[w] ('polling' == TRUE) Provide the hardware playback position in the output ring buffer. Called before a mix. </P>
+<P class=dt><I>lock</I></P>
+<P class=indent>[w] ('polling' == TRUE) Provide a pointer that FMOD can write to for the next block of audio data. Called before a mix. </P>
+<P class=dt><I>unlock</I></P>
+<P class=indent>[w] ('polling' == TRUE) Optional callback to signify 'lock' has finished writing to the provided pointer. Called after a mix. </P>
+<P class=dt><I>mixer</I></P>
+<P class=indent>[w] ('polling' == FALSE) Mixer thread that will continually retrigger. Wait on a synchronization primitive until ready, then call <A HREF="FMOD_OUTPUT_READFROMMIXER.html">FMOD_OUTPUT_READFROMMIXER</A>, then leave the callback (will retrigger immediately if mixer is still running). Called continually after FMOD_OUTPUT_START_CALLBACK and before FMOD_OUTPUT_STOP_CALLBACK. </P>
+<P class=dt><I>object3dgetinfo</I></P>
+<P class=indent>[w] Provide information about the capabilities of the 3D object hardware. Called during a mix. </P>
+<P class=dt><I>object3dalloc</I></P>
+<P class=indent>[w] Reserve a hardware resources for a single 3D object. Called during a mix. </P>
+<P class=dt><I>object3dfree</I></P>
+<P class=indent>[w] Release a hardware resource previously acquired with FMOD_OUTPUT_OBJECT3DALLOC_CALLBACK. Called during a mix. </P>
+<P class=dt><I>object3dupdate</I></P>
+<P class=indent>[w] Called once for every acquired 3D object every mix to provide 3D information and buffered audio. Called during a mix. </P>
+<h2>Remarks</h2><P>
+<p>Members marked with [r] mean read only for the developer, read/write for the FMOD system.
+Members marked with [w] mean read/write for the developer, read only for the FMOD system.</p>
+</P>
+<h2>See Also</h2>
+<UL type=disc>
+<LI><A HREF="FMOD_OUTPUT_STATE.html">FMOD_OUTPUT_STATE</A></LI>
+</UL>
+<BR><BR><BR>
+<P align=center><font size=-2>Version 1.08.00 Built on Mar 4, 2016</font></P>
+<BR>
+</HTML>

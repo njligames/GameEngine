@@ -1,0 +1,1462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_physics_constraint_generic6_dof" kind="class" prot="public">
+    <compoundname>njli::PhysicsConstraintGeneric6Dof</compoundname>
+    <basecompoundref refid="classnjli_1_1_physics_constraint" prot="public" virt="non-virtual">njli::PhysicsConstraint</basecompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_constraint_generic6_dof_spring" prot="public" virt="non-virtual">njli::PhysicsConstraintGeneric6DofSpring</derivedcompoundref>
+    <includes refid="_physics_constraint_generic6_dof_8h" local="no">PhysicsConstraintGeneric6Dof.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_physics_constraint_generic6_dof_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="35" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_physics_constraint_generic6_dof_1a621259b5a4a7a54505a5c73e30772c69" prot="private" static="no" mutable="no">
+        <type>btGeneric6DofConstraint *</type>
+        <definition>btGeneric6DofConstraint* njli::PhysicsConstraintGeneric6Dof::m_btGeneric6DofConstraint</definition>
+        <argsstring></argsstring>
+        <name>m_btGeneric6DofConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="349" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a5c2718defc17ccb5f247cd5151cd8a82" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsConstraintGeneric6Dof::PhysicsConstraintGeneric6Dof</definition>
+        <argsstring>()</argsstring>
+        <name>PhysicsConstraintGeneric6Dof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="37" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a9cc10b347756198caf3d519bc4a73acd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsConstraintGeneric6Dof::PhysicsConstraintGeneric6Dof</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>PhysicsConstraintGeneric6Dof</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="38" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a7b9691c73edd82ba0d12d2e8d5c0a02f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsConstraintGeneric6Dof::PhysicsConstraintGeneric6Dof</definition>
+        <argsstring>(const PhysicsConstraintGeneric6Dof &amp;)</argsstring>
+        <name>PhysicsConstraintGeneric6Dof</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="39" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ae50cbc7db6e709453f0cefc167a12ced" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsConstraintGeneric6Dof::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1aac1093596db0e6f80bc4e055a3ea87b6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::PhysicsConstraintGeneric6Dof::~PhysicsConstraintGeneric6Dof</definition>
+        <argsstring>()</argsstring>
+        <name>~PhysicsConstraintGeneric6Dof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="41" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a80440d213cb2df256a7b0afed3278cd1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> &amp;</type>
+        <definition>PhysicsConstraintGeneric6Dof &amp; njli::PhysicsConstraintGeneric6Dof::operator=</definition>
+        <argsstring>(const PhysicsConstraintGeneric6Dof &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="42" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a80adbb02f8ee839af9f5a897982ac7b8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>btTypedConstraint *</type>
+        <definition>btTypedConstraint * njli::PhysicsConstraintGeneric6Dof::getConstraint</definition>
+        <argsstring>()</argsstring>
+        <name>getConstraint</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1a0a22d54c2c896af49fa57db9be76a5da">getConstraint</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a4275b8c7c3fc79ca628bf2b800a003c3">getConstraint</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="344" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="409" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1aef7026b4db8c6ed579e7366401a88233" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const btTypedConstraint *</type>
+        <definition>const btTypedConstraint * njli::PhysicsConstraintGeneric6Dof::getConstraint</definition>
+        <argsstring>() const </argsstring>
+        <name>getConstraint</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1af4cb8c0158a044f75fe61f89cc278338">getConstraint</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1ab1dbc79cde6f5ffa8dd12da01df4dc46">getConstraint</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="345" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="415" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a3773c6e71979f95c34b5d76f63d57e96" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::removeConstraint</definition>
+        <argsstring>()</argsstring>
+        <name>removeConstraint</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1af8acfcb3256012a036dc5ae78820f740">removeConstraint</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1ac6cbcb76a8f92321ae18df3b7de4e4a8">removeConstraint</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="347" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="421" bodyend="428"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac179bc02abd73c98a2cb71cc4e22fb32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::PhysicsConstraintGeneric6Dof::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1ada6aec1d946691aa037faa999f4eec65">calculateSerializeBufferSize</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a131a9d6cf090bbe38eb6b03b9590bb65">calculateSerializeBufferSize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="49" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a248dcb551972e6c96bffe5b29877ea1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::serialize</definition>
+        <argsstring>(void *dataBuffer, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1a316b7cdb68cae42d7bdef1e7468c9f04">serialize</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a92b6361d3b8560008e0f84f1f7ff390a">serialize</reimplementedby>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 15:02:41</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#dataBuffer description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="59" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac35c24706e25b05c5c9fb3be1e6b6d76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::PhysicsConstraintGeneric6Dof::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1ab07d63141dfecf44f356eca21ae64ad6">getClassName</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a7e714b2e49d4614bbeb5148de5121db9">getClassName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="66" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a0fb84802778d3f252a335b97d7eee329" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::PhysicsConstraintGeneric6Dof::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1a3d839a60794bcbdc6ef50d33bc9a7ec6">getType</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a1e10f31d8472a1137f0146f95efb643b">getType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="72" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ada9b7e6bcdecd676020141df02163aac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::PhysicsConstraintGeneric6Dof::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_physics_constraint_1acc4f24f5c91eaf997179925caab8a094">operator std::string</reimplements>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a5bc5bf70e7695adb20faa1c68b277d37">operator std::string</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="78" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a906e4dd9d37dfce908cbae90e58f3dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setNodes</definition>
+        <argsstring>(Node *nodeA, Node *nodeB, const btTransform &amp;frameInA=btTransform::getIdentity(), const btTransform &amp;frameInB=btTransform::getIdentity(), bool useLinearReferenceFrameA=true)</argsstring>
+        <name>setNodes</name>
+        <param>
+          <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+          <declname>nodeA</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+          <declname>nodeB</declname>
+        </param>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>frameInA</declname>
+          <defval>btTransform::getIdentity()</defval>
+        </param>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>frameInB</declname>
+          <defval>btTransform::getIdentity()</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useLinearReferenceFrameA</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#nodeA description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nodeB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#nodeB description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameInA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#frameInA description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameInB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#frameInB description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useLinearReferenceFrameA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#useLinearReferenceFrameA description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="157" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="196" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a52d5136abf9b7cac2d0ad0200745d30d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setNodes</definition>
+        <argsstring>(Node *nodeB, const btTransform &amp;frameInB=btTransform::getIdentity(), bool useLinearReferenceFrameB=true)</argsstring>
+        <name>setNodes</name>
+        <param>
+          <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+          <declname>nodeB</declname>
+        </param>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>frameInB</declname>
+          <defval>btTransform::getIdentity()</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useLinearReferenceFrameB</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#nodeB description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameInB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#frameInB description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useLinearReferenceFrameB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#useLinearReferenceFrameB description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a120abacab53cf4dcf4b97241dc8a59b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::calculateTransforms</definition>
+        <argsstring>()</argsstring>
+        <name>calculateTransforms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="170" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="247" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac07406023183e740c83fd2496d7925bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btTransform &amp;</type>
+        <definition>const btTransform &amp; njli::PhysicsConstraintGeneric6Dof::getCalculatedTransformA</definition>
+        <argsstring>() const </argsstring>
+        <name>getCalculatedTransformA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="176" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="253" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a1087b28580bb83bb78971fe51fb13e33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btTransform &amp;</type>
+        <definition>const btTransform &amp; njli::PhysicsConstraintGeneric6Dof::getCalculatedTransformB</definition>
+        <argsstring>() const </argsstring>
+        <name>getCalculatedTransformB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="182" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="259" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a7176773536b82ddcc72436723c511b10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btTransform &amp;</type>
+        <definition>const btTransform &amp; njli::PhysicsConstraintGeneric6Dof::getFrameOffsetA</definition>
+        <argsstring>() const </argsstring>
+        <name>getFrameOffsetA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="188" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="265" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a9c812e88a5cacb1bc25a8cfcff1ef2ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btTransform &amp;</type>
+        <definition>const btTransform &amp; njli::PhysicsConstraintGeneric6Dof::getFrameOffsetB</definition>
+        <argsstring>() const </argsstring>
+        <name>getFrameOffsetB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="194" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="271" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ae3db527792dfe26ef27a9e06f6d90215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>btTransform &amp;</type>
+        <definition>btTransform &amp; njli::PhysicsConstraintGeneric6Dof::getFrameOffsetA</definition>
+        <argsstring>()</argsstring>
+        <name>getFrameOffsetA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="200" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="277" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a1dc836713b773f511ab12f550c3e0d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>btTransform &amp;</type>
+        <definition>btTransform &amp; njli::PhysicsConstraintGeneric6Dof::getFrameOffsetB</definition>
+        <argsstring>()</argsstring>
+        <name>getFrameOffsetB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="206" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="283" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a4e623a380e57cc52b8b6c4a0752c1acd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>btVector3</type>
+        <definition>btVector3 njli::PhysicsConstraintGeneric6Dof::getAxis</definition>
+        <argsstring>(int axis_index) const </argsstring>
+        <name>getAxis</name>
+        <param>
+          <type>int</type>
+          <declname>axis_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis_index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="214" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="289" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac939bb21243ef0822d60cd8a12c8aec5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::PhysicsConstraintGeneric6Dof::getAngle</definition>
+        <argsstring>(int axis_index) const </argsstring>
+        <name>getAngle</name>
+        <param>
+          <type>int</type>
+          <declname>axis_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis_index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="222" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="295" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a586de3bb264061f744dcca3ae00352a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::PhysicsConstraintGeneric6Dof::getRelativePivotPosition</definition>
+        <argsstring>(int axis_index) const </argsstring>
+        <name>getRelativePivotPosition</name>
+        <param>
+          <type>int</type>
+          <declname>axis_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis_index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="230" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="301" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ad0fd838dfb528aa5d473236951452a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setFrames</definition>
+        <argsstring>(const btTransform &amp;frameA, const btTransform &amp;frameB)</argsstring>
+        <name>setFrames</name>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>frameA</declname>
+        </param>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>frameB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#frameA description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#frameB description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="237" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="307" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a510f7c50e1db34da7587e29be21cd95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::PhysicsConstraintGeneric6Dof::testAngularLimitMotor</definition>
+        <argsstring>(int axis_index)</argsstring>
+        <name>testAngularLimitMotor</name>
+        <param>
+          <type>int</type>
+          <declname>axis_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis_index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="245" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="313" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac2635d4d1f732dbaa0607a39c42c1fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setLinearLowerLimit</definition>
+        <argsstring>(const btVector3 &amp;linearLower)</argsstring>
+        <name>setLinearLowerLimit</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>linearLower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>linearLower</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#linearLower description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="251" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="319" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a985b84a9bf3dcdf319d5bf246785359f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::getLinearLowerLimit</definition>
+        <argsstring>(btVector3 &amp;linearLower)</argsstring>
+        <name>getLinearLowerLimit</name>
+        <param>
+          <type>btVector3 &amp;</type>
+          <declname>linearLower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>linearLower</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#linearLower description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="257" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="325" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a36ecbb880f9b8d1e47295a8cb4d38ac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setLinearUpperLimit</definition>
+        <argsstring>(const btVector3 &amp;linearUpper)</argsstring>
+        <name>setLinearUpperLimit</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>linearUpper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>linearUpper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#linearUpper description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="263" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="331" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ab5b34b9f7c16ab4d92c4c5d87836eb75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::getLinearUpperLimit</definition>
+        <argsstring>(btVector3 &amp;linearUpper)</argsstring>
+        <name>getLinearUpperLimit</name>
+        <param>
+          <type>btVector3 &amp;</type>
+          <declname>linearUpper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>linearUpper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#linearUpper description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="269" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="337" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ae30482945c39ae7b4fff65eb1e11c804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setAngularLowerLimit</definition>
+        <argsstring>(const btVector3 &amp;angularLower)</argsstring>
+        <name>setAngularLowerLimit</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>angularLower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angularLower</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#angularLower description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="275" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="343" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a8bcad5d1bb5a9a207b69197f2a9f3b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::getAngularLowerLimit</definition>
+        <argsstring>(btVector3 &amp;angularLower)</argsstring>
+        <name>getAngularLowerLimit</name>
+        <param>
+          <type>btVector3 &amp;</type>
+          <declname>angularLower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angularLower</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#angularLower description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="281" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="349" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a09328e27ff0e4f5bf3c5f4fc399b5176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setAngularUpperLimit</definition>
+        <argsstring>(const btVector3 &amp;angularUpper)</argsstring>
+        <name>setAngularUpperLimit</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>angularUpper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angularUpper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#angularUpper description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="287" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="355" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac2d82f1fc8c0e094c62eaac8c46fae8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::getAngularUpperLimit</definition>
+        <argsstring>(btVector3 &amp;angularUpper)</argsstring>
+        <name>getAngularUpperLimit</name>
+        <param>
+          <type>btVector3 &amp;</type>
+          <declname>angularUpper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angularUpper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#angularUpper description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="293" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="361" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac6a76e51f39374b052905e9e6f1a2022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>btRotationalLimitMotor *</type>
+        <definition>btRotationalLimitMotor * njli::PhysicsConstraintGeneric6Dof::getRotationalLimitMotor</definition>
+        <argsstring>(int index)</argsstring>
+        <name>getRotationalLimitMotor</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="301" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="367" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a555b6ae5c5235623a83f28e28c718235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>btTranslationalLimitMotor *</type>
+        <definition>btTranslationalLimitMotor * njli::PhysicsConstraintGeneric6Dof::getTranslationalLimitMotor</definition>
+        <argsstring>()</argsstring>
+        <name>getTranslationalLimitMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="307" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="373" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a8492ffdcfe56852bfc3cf940d955fed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setLimit</definition>
+        <argsstring>(int axis, f32 lo, f32 hi)</argsstring>
+        <name>setLimit</name>
+        <param>
+          <type>int</type>
+          <declname>axis</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#lo description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#hi description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="315" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="379" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a4b7ccf539945ec18862d03459cc7af4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::PhysicsConstraintGeneric6Dof::isLimited</definition>
+        <argsstring>(int limitIndex)</argsstring>
+        <name>isLimited</name>
+        <param>
+          <type>int</type>
+          <declname>limitIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>limitIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#limitIndex description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="323" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="385" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a5e88bda1b6f298611499a60e0a431587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::PhysicsConstraintGeneric6Dof::getUseFrameOffset</definition>
+        <argsstring>()</argsstring>
+        <name>getUseFrameOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="329" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="391" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a7f85647f957150c306f7086e6a36fc0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setUseFrameOffset</definition>
+        <argsstring>(bool frameOffsetOnOff)</argsstring>
+        <name>setUseFrameOffset</name>
+        <param>
+          <type>bool</type>
+          <declname>frameOffsetOnOff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameOffsetOnOff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#frameOffsetOnOff description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="335" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="397" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a476bea05db9265b4efacc503b6693615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::setAxis</definition>
+        <argsstring>(const btVector3 &amp;axis1, const btVector3 &amp;axis2)</argsstring>
+        <name>setAxis</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>axis1</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>axis2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>axis1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis1 description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axis2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#axis2 description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="342" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="403" bodyend="407"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a3b050c4ddab9b226623135ecb9dec512" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> **</type>
+        <definition>PhysicsConstraintGeneric6Dof ** njli::PhysicsConstraintGeneric6Dof::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="87" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1ac1f4221ed69f3f6df33348cf2123b927" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::destroyArray</definition>
+        <argsstring>(PhysicsConstraintGeneric6Dof **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="93" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1af660cdb3155d3a23b7e394b630820c4f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> *</type>
+        <definition>PhysicsConstraintGeneric6Dof * njli::PhysicsConstraintGeneric6Dof::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="99" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1aff7fc613100a3eb894ffe4902686fc34" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> *</type>
+        <definition>PhysicsConstraintGeneric6Dof * njli::PhysicsConstraintGeneric6Dof::create</definition>
+        <argsstring>(const PhysicsConstraintGeneric6DofBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_constraint_generic6_dof_builder" kindref="compound">PhysicsConstraintGeneric6DofBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="107" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="102" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a79f6a9c86e5f8b1bfa62d10408fdc1f8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> *</type>
+        <definition>PhysicsConstraintGeneric6Dof * njli::PhysicsConstraintGeneric6Dof::clone</definition>
+        <argsstring>(const PhysicsConstraintGeneric6Dof &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="115" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a8bd02fee540096217a59434f204b3791" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> *</type>
+        <definition>PhysicsConstraintGeneric6Dof * njli::PhysicsConstraintGeneric6Dof::copy</definition>
+        <argsstring>(const PhysicsConstraintGeneric6Dof &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="123" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a54b36cf8a877dccd1b831c4e70d3b213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::destroy</definition>
+        <argsstring>(PhysicsConstraintGeneric6Dof *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="129" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="119" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a9b8c9c2f9f8cd61378a30b4cf8dc4c73" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsConstraintGeneric6Dof::load</definition>
+        <argsstring>(PhysicsConstraintGeneric6Dof &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="137" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="127" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_constraint_generic6_dof_1a2c58e8af3812ea44ac47395f1b147461" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::PhysicsConstraintGeneric6Dof::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="143" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3480">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3479">
+        <label>njli::PhysicsConstraint</label>
+        <link refid="classnjli_1_1_physics_constraint"/>
+        <childnode refid="3480" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3482">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="3483">
+        <label>njli::PhysicsConstraintGeneric6DofSpring</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof_spring"/>
+        <childnode refid="3478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3481">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3482" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3478">
+        <label>njli::PhysicsConstraintGeneric6Dof</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof"/>
+        <childnode refid="3479" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3486">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3487" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3485">
+        <label>njli::PhysicsConstraint</label>
+        <link refid="classnjli_1_1_physics_constraint"/>
+        <childnode refid="3486" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3488">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="3488" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3487">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3488" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3484">
+        <label>njli::PhysicsConstraintGeneric6Dof</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof"/>
+        <childnode refid="3485" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" line="34" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.h" bodystart="32" bodyend="350"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ae50cbc7db6e709453f0cefc167a12ced" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac179bc02abd73c98a2cb71cc4e22fb32" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a120abacab53cf4dcf4b97241dc8a59b8" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>calculateTransforms</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a79f6a9c86e5f8b1bfa62d10408fdc1f8" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a92ecb32e55b3cc52255cc979fb55d6cf" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a8bd02fee540096217a59434f204b3791" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1aa25d19b09fe8f26d37f848960a9fc956" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1af660cdb3155d3a23b7e394b630820c4f" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>create</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1aff7fc613100a3eb894ffe4902686fc34" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>create</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a8bdd101885af51ecb547754ed753f410" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>create</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a3b050c4ddab9b226623135ecb9dec512" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a54b36cf8a877dccd1b831c4e70d3b213" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a34a3d2c60eb15fce3fa061a156b690a1" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac1f4221ed69f3f6df33348cf2123b927" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1af547da72997e38043381a8274bb468a4" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a2c3b06804d8447485c9170bca568b244" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>enableConstraint</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac939bb21243ef0822d60cd8a12c8aec5" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getAngle</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a8bcad5d1bb5a9a207b69197f2a9f3b17" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getAngularLowerLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac2d82f1fc8c0e094c62eaac8c46fae8e" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getAngularUpperLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a4e623a380e57cc52b8b6c4a0752c1acd" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getAxis</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a8f9fc48f6a7ec6e4b5bb54ad5928bf47" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getBreakingImpulseThreshold</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac07406023183e740c83fd2496d7925bf" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getCalculatedTransformA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a1087b28580bb83bb78971fe51fb13e33" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getCalculatedTransformB</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac35c24706e25b05c5c9fb3be1e6b6d76" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a80adbb02f8ee839af9f5a897982ac7b8" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getConstraint</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1aef7026b4db8c6ed579e7366401a88233" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getConstraint</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a7176773536b82ddcc72436723c511b10" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getFrameOffsetA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ae3db527792dfe26ef27a9e06f6d90215" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getFrameOffsetA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a9c812e88a5cacb1bc25a8cfcff1ef2ab" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getFrameOffsetB</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a1dc836713b773f511ab12f550c3e0d3e" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getFrameOffsetB</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a5a83a589d09ed631fb0217604f9fc7ae" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getJointAppliedForceA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1aa4f3e849094be99b88593b763ea169f8" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getJointAppliedForceB</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a39d68bc3075111ab61d9e6913b65dfdf" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getJointAppliedTorqueA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1acca4ff171fb7f5cfcb01b84b62ceb30a" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getJointAppliedTorqueB</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a985b84a9bf3dcdf319d5bf246785359f" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getLinearLowerLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ab5b34b9f7c16ab4d92c4c5d87836eb75" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getLinearUpperLimit</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a5323b343249efcc5d28f295c737318aa" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getNodeA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a2516245dec0894763e264f9e72209d45" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getNodeA</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a84ad4667ddcece00d901d074985bcf40" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getNodeB</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1ab1f831be4411d4370a2221e1cacd5b56" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getNodeB</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a586de3bb264061f744dcca3ae00352a2" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getRelativePivotPosition</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac6a76e51f39374b052905e9e6f1a2022" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getRotationalLimitMotor</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a555b6ae5c5235623a83f28e28c718235" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getTranslationalLimitMotor</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a0fb84802778d3f252a335b97d7eee329" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a5e88bda1b6f298611499a60e0a431587" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>getUseFrameOffset</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a033debe4579d456026cdd5e0619780a3" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>isConstraintEnabled</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a4b7ccf539945ec18862d03459cc7af4d" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>isLimited</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a9b8c9c2f9f8cd61378a30b4cf8dc4c73" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>load</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1ab3fda2521c8dc7c9316869e5d447343b" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>load</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a621259b5a4a7a54505a5c73e30772c69" prot="private" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>m_btGeneric6DofConstraint</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ada9b7e6bcdecd676020141df02163aac" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a80440d213cb2df256a7b0afed3278cd1" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a21cd7b90ca58637622b9256766fb4d2c" prot="protected" virt="non-virtual" ambiguityscope="njli::PhysicsConstraint::"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a7b3e8cf84cbb22fc6a9e238c56404a03" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>PhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a7b711432de531a357b0b49e446d224bf" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>PhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1ae70f2363020b35433e46fa34fba42752" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>PhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a5c2718defc17ccb5f247cd5151cd8a82" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>PhysicsConstraintGeneric6Dof</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a9cc10b347756198caf3d519bc4a73acd" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>PhysicsConstraintGeneric6Dof</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a7b9691c73edd82ba0d12d2e8d5c0a02f" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>PhysicsConstraintGeneric6Dof</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a3773c6e71979f95c34b5d76f63d57e96" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>removeConstraint</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a248dcb551972e6c96bffe5b29877ea1b" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ae30482945c39ae7b4fff65eb1e11c804" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setAngularLowerLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a09328e27ff0e4f5bf3c5f4fc399b5176" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setAngularUpperLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a476bea05db9265b4efacc503b6693615" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setAxis</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1aff159cbeea66d0f2598172e7cecf2269" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setBreakingImpulseThreshold</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ad0fd838dfb528aa5d473236951452a93" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setFrames</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a8492ffdcfe56852bfc3cf940d955fed5" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1ac2635d4d1f732dbaa0607a39c42c1fb2" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setLinearLowerLimit</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a36ecbb880f9b8d1e47295a8cb4d38ac2" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setLinearUpperLimit</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a906e4dd9d37dfce908cbae90e58f3dbf" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setNodes</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a52d5136abf9b7cac2d0ad0200745d30d" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setNodes</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a7f85647f957150c306f7086e6a36fc0b" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>setUseFrameOffset</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a510f7c50e1db34da7587e29be21cd95c" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>testAngularLimitMotor</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1a2c58e8af3812ea44ac47395f1b147461" prot="public" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>type</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_physics_constraint_1a50070b3d83851888aa3875eeb5bc4575" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>~PhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_constraint_generic6_dof_1aac1093596db0e6f80bc4e055a3ea87b6" prot="protected" virt="virtual"><scope>njli::PhysicsConstraintGeneric6Dof</scope><name>~PhysicsConstraintGeneric6Dof</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

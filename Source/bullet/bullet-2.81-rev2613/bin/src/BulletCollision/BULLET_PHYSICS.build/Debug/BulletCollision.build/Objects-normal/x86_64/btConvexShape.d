@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btConvexShape.cpp \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btConvexShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btCollisionShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btTransform.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btMatrix3x3.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btVector3.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btScalar.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btMinMax.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btAlignedAllocator.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btQuaternion.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btQuadWord.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btCollisionMargin.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btTriangleShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btBoxShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btConvexInternalShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btAabbUtil2.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btSphereShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btCylinderShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btCapsuleShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btConvexHullShape.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/LinearMath/btAlignedObjectArray.h \
+  /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/bullet/bullet-2.81-rev2613/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.h

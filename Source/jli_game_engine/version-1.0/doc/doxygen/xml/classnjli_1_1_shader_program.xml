@@ -1,0 +1,962 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_shader_program" kind="class" prot="public">
+    <compoundname>njli::ShaderProgram</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_factory_object" prot="public" virt="non-virtual">njli::AbstractFactoryObject</basecompoundref>
+    <includes refid="_shader_program_8h" local="no">ShaderProgram.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_shader_program_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="38" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_shader_program_1a9aca7b7350e6ffa0e2d6320834ad1857" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Geometry</definition>
+        <argsstring></argsstring>
+        <name>Geometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="39" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_shader_program_1ae7c7f3376b81514442fbc2a5fe2f5ec9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class MaterialProperty</definition>
+        <argsstring></argsstring>
+        <name>MaterialProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="40" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_shader_program_1a45ac2a28bfac766232066c1d8e70e993" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::ShaderProgram::program</definition>
+        <argsstring></argsstring>
+        <name>program</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="240" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_shader_program_1aba3909c715f4b21a0bd269cedbd312de" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::ShaderProgram::vertShader</definition>
+        <argsstring></argsstring>
+        <name>vertShader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="241" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_shader_program_1a8d458f03143bbe222e248f936a7f7ab2" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::ShaderProgram::fragShader</definition>
+        <argsstring></argsstring>
+        <name>fragShader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="242" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_shader_program_1a36b6891a72ec4e6f7ee89add79884282" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::ShaderProgram::m_VertexShaderSource</definition>
+        <argsstring></argsstring>
+        <name>m_VertexShaderSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="244" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_shader_program_1aa1e64cb2fabffbafbff9f7c707672643" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::ShaderProgram::m_FragmentShaderSource</definition>
+        <argsstring></argsstring>
+        <name>m_FragmentShaderSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="245" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a5def475147030f4b08273f0dc0d8d0eb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::ShaderProgram::ShaderProgram</definition>
+        <argsstring>()</argsstring>
+        <name>ShaderProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="43" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="202" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a46ab4a8c88ca20c55202c9a152a57838" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::ShaderProgram::ShaderProgram</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>ShaderProgram</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="44" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="211" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a45a93b1279f11a5323e28070ccc778a8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::ShaderProgram::ShaderProgram</definition>
+        <argsstring>(const ShaderProgram &amp;)</argsstring>
+        <name>ShaderProgram</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="45" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="220" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a091874e0063dade5799d8061f156fe3c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::ShaderProgram::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a1579c6785c5b66286e777362f413a158" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::ShaderProgram::~ShaderProgram</definition>
+        <argsstring>()</argsstring>
+        <name>~ShaderProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="47" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a5fcc9d59431056022b30003a6fe7a35d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> &amp;</type>
+        <definition>ShaderProgram &amp; njli::ShaderProgram::operator=</definition>
+        <argsstring>(const ShaderProgram &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="48" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="234" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1add1203b770ecde00cf3089433cdc372e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::ShaderProgram::link</definition>
+        <argsstring>()</argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="175" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="445" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a594c725a3e03f3c287f9a806a23a21cd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::bindAttribute</definition>
+        <argsstring>(const char *attributeName)</argsstring>
+        <name>bindAttribute</name>
+        <param>
+          <type>const char *</type>
+          <declname>attributeName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attributeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#attributeName description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="182" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="418" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1af67434e2936da60a69561582112713b3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::ShaderProgram::getAttributeIndex</definition>
+        <argsstring>(const char *attributeName) const </argsstring>
+        <name>getAttributeIndex</name>
+        <param>
+          <type>const char *</type>
+          <declname>attributeName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attributeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#attributeName description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="191" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="426" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a2c808051a6d588a8df5ac7d44e308777" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::ShaderProgram::getUniformIndex</definition>
+        <argsstring>(const char *uniformName) const </argsstring>
+        <name>getUniformIndex</name>
+        <param>
+          <type>const char *</type>
+          <declname>uniformName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uniformName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#uniformName description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="200" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="436" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a530365b7fb3ed11afd9b6351685c93e2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::ShaderProgram::vertexShaderLog</definition>
+        <argsstring>() const </argsstring>
+        <name>vertexShaderLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="207" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="552" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1ad14638ca355f579b1671ed181e556a4c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::ShaderProgram::fragmentShaderLog</definition>
+        <argsstring>() const </argsstring>
+        <name>fragmentShaderLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="213" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="557" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a1a8acd66f151141794f1318de54d78b7" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::ShaderProgram::programLog</definition>
+        <argsstring>() const </argsstring>
+        <name>programLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="219" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="562" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a3e6356c61c06c4cbb5b08351ef03d2a2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::use</definition>
+        <argsstring>()</argsstring>
+        <name>use</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="224" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="540" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a5a6c623a0321cfc305b6edc6e514b049" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::ShaderProgram::compile</definition>
+        <argsstring>(const char *fileContent, njliShaderType type)</argsstring>
+        <name>compile</name>
+        <param>
+          <type>const char *</type>
+          <declname>fileContent</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenjli_1a8f2b6cfac9213576c34bcf711ac39fbd" kindref="member">njliShaderType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileContent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#fileContent description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;<ref refid="classnjli_1_1_shader_program_1aab5b5efee2af7a878bad1213aaaf1c7c" kindref="member">type</ref> description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="234" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="375" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a47e7e27178632533e9d8c805f5482812" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::ShaderProgram::compileShader</definition>
+        <argsstring>(s32 *shader, const u32 type, const char *source)</argsstring>
+        <name>compileShader</name>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="236" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="582" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a9b90e76dd8926135490c139995e0c616" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::ShaderProgram::logForOpenGLObject</definition>
+        <argsstring>(u32 object, GLInfoFunction infoFunc, GLLogFunction logFunc) const </argsstring>
+        <name>logForOpenGLObject</name>
+        <param>
+          <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type><ref refid="_shader_program_8h_1a50070b167d585b9e4ba6faa4e3063cc7" kindref="member">GLInfoFunction</ref></type>
+          <declname>infoFunc</declname>
+        </param>
+        <param>
+          <type><ref refid="_shader_program_8h_1a946b6792efe50de240df436a3d028764" kindref="member">GLLogFunction</ref></type>
+          <declname>logFunc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="237" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="590" bodyend="603"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1aae83e8f50688f4e6d995131577c6f877" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::ShaderProgram::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="64" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="243" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a7a620016678fc921ebf0100bb4b4108d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::serialize</definition>
+        <argsstring>(void *, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <defname>dataBuffer</defname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="70" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a16da8751fb35c0c0e5265f61abf097b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::ShaderProgram::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="77" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="254" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a07e2fc86c8dacc1358adae792da5a40e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::ShaderProgram::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="83" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1ace784d5c35e4b2fdcde1cb1a6859d962" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::ShaderProgram::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="89" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="264" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a302cf231b252535230e1eaa794c0dc3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::saveSource</definition>
+        <argsstring>(const std::string &amp;vertexShaderSource, const std::string &amp;fragmentShaderSource)</argsstring>
+        <name>saveSource</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>vertexShaderSource</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fragmentShaderSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="159" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="529" bodyend="533"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1acc34ddd8319df957d7a7278de58cddca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::ShaderProgram::isLinked</definition>
+        <argsstring>() const </argsstring>
+        <name>isLinked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="162" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="535" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1af93d37d88d0d56ae1dfe0a902ec7391e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::unLoadGPU</definition>
+        <argsstring>()</argsstring>
+        <name>unLoadGPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="167" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="567" bodyend="580"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a917fe9cc181856f037ba3c6f301cbb83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> **</type>
+        <definition>ShaderProgram ** njli::ShaderProgram::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="98" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1afebda50ee83d9c3edc51cfe05074cfe1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::destroyArray</definition>
+        <argsstring>(ShaderProgram **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="104" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1ab83c3e9c3980d1634defdc1893348051" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+        <definition>ShaderProgram * njli::ShaderProgram::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="110" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1aab8cdffc694676583c5fd6d6c1fddd71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+        <definition>ShaderProgram * njli::ShaderProgram::create</definition>
+        <argsstring>(const ShaderProgramBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_shader_program_builder" kindref="compound">ShaderProgramBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="118" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="284" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a523770f983514aa561c96fb1d4d41db0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+        <definition>ShaderProgram * njli::ShaderProgram::clone</definition>
+        <argsstring>(const ShaderProgram &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="126" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a0e87d0f5882c1344bac847d736982737" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+        <definition>ShaderProgram * njli::ShaderProgram::copy</definition>
+        <argsstring>(const ShaderProgram &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="134" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="296" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1ab2e2d69e0645c9b857f75207f9a39697" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::destroy</definition>
+        <argsstring>(ShaderProgram *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="140" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="301" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1a63b4edd585a0b9ef51c2578548421bf8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::ShaderProgram::load</definition>
+        <argsstring>(ShaderProgram &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="148" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="309" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_shader_program_1aab5b5efee2af7a878bad1213aaaf1c7c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::ShaderProgram::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="154" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4055">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="4056" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4057">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="4056">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4057" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4054">
+        <label>njli::ShaderProgram</label>
+        <link refid="classnjli_1_1_shader_program"/>
+        <childnode refid="4055" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4059">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="4060" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4061">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="4060">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4058">
+        <label>njli::ShaderProgram</label>
+        <link refid="classnjli_1_1_shader_program"/>
+        <childnode refid="4059" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" line="37" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgram.h" bodystart="35" bodyend="246"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_shader_program_1a594c725a3e03f3c287f9a806a23a21cd" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>bindAttribute</name></member>
+      <member refid="classnjli_1_1_shader_program_1a091874e0063dade5799d8061f156fe3c" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_shader_program_1aae83e8f50688f4e6d995131577c6f877" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::ShaderProgram</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_shader_program_1a523770f983514aa561c96fb1d4d41db0" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::ShaderProgram</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_shader_program_1a5a6c623a0321cfc305b6edc6e514b049" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>compile</name></member>
+      <member refid="classnjli_1_1_shader_program_1a47e7e27178632533e9d8c805f5482812" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>compileShader</name></member>
+      <member refid="classnjli_1_1_shader_program_1a0e87d0f5882c1344bac847d736982737" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_shader_program_1ab83c3e9c3980d1634defdc1893348051" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>create</name></member>
+      <member refid="classnjli_1_1_shader_program_1aab8cdffc694676583c5fd6d6c1fddd71" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::ShaderProgram</scope><name>create</name></member>
+      <member refid="classnjli_1_1_shader_program_1a917fe9cc181856f037ba3c6f301cbb83" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_shader_program_1ab2e2d69e0645c9b857f75207f9a39697" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::ShaderProgram</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_shader_program_1afebda50ee83d9c3edc51cfe05074cfe1" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::ShaderProgram</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_shader_program_1ad14638ca355f579b1671ed181e556a4c" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>fragmentShaderLog</name></member>
+      <member refid="classnjli_1_1_shader_program_1a8d458f03143bbe222e248f936a7f7ab2" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>fragShader</name></member>
+      <member refid="classnjli_1_1_shader_program_1a9aca7b7350e6ffa0e2d6320834ad1857" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>Geometry</name></member>
+      <member refid="classnjli_1_1_shader_program_1af67434e2936da60a69561582112713b3" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getAttributeIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_shader_program_1a16da8751fb35c0c0e5265f61abf097b1" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_shader_program_1a07e2fc86c8dacc1358adae792da5a40e" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_shader_program_1a2c808051a6d588a8df5ac7d44e308777" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>getUniformIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_shader_program_1acc34ddd8319df957d7a7278de58cddca" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>isLinked</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_shader_program_1add1203b770ecde00cf3089433cdc372e" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>link</name></member>
+      <member refid="classnjli_1_1_shader_program_1a63b4edd585a0b9ef51c2578548421bf8" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>load</name></member>
+      <member refid="classnjli_1_1_shader_program_1a9b90e76dd8926135490c139995e0c616" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>logForOpenGLObject</name></member>
+      <member refid="classnjli_1_1_shader_program_1aa1e64cb2fabffbafbff9f7c707672643" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>m_FragmentShaderSource</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_shader_program_1a36b6891a72ec4e6f7ee89add79884282" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>m_VertexShaderSource</name></member>
+      <member refid="classnjli_1_1_shader_program_1ae7c7f3376b81514442fbc2a5fe2f5ec9" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>MaterialProperty</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_shader_program_1ace784d5c35e4b2fdcde1cb1a6859d962" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_shader_program_1a5fcc9d59431056022b30003a6fe7a35d" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_shader_program_1a45ac2a28bfac766232066c1d8e70e993" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>program</name></member>
+      <member refid="classnjli_1_1_shader_program_1a1a8acd66f151141794f1318de54d78b7" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>programLog</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_shader_program_1a302cf231b252535230e1eaa794c0dc3e" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>saveSource</name></member>
+      <member refid="classnjli_1_1_shader_program_1a7a620016678fc921ebf0100bb4b4108d" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::ShaderProgram</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_shader_program_1a5def475147030f4b08273f0dc0d8d0eb" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>ShaderProgram</name></member>
+      <member refid="classnjli_1_1_shader_program_1a46ab4a8c88ca20c55202c9a152a57838" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>ShaderProgram</name></member>
+      <member refid="classnjli_1_1_shader_program_1a45a93b1279f11a5323e28070ccc778a8" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>ShaderProgram</name></member>
+      <member refid="classnjli_1_1_shader_program_1aab5b5efee2af7a878bad1213aaaf1c7c" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>type</name></member>
+      <member refid="classnjli_1_1_shader_program_1af93d37d88d0d56ae1dfe0a902ec7391e" prot="public" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>unLoadGPU</name></member>
+      <member refid="classnjli_1_1_shader_program_1a3e6356c61c06c4cbb5b08351ef03d2a2" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>use</name></member>
+      <member refid="classnjli_1_1_shader_program_1a530365b7fb3ed11afd9b6351685c93e2" prot="protected" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>vertexShaderLog</name></member>
+      <member refid="classnjli_1_1_shader_program_1aba3909c715f4b21a0bd269cedbd312de" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>vertShader</name></member>
+      <member refid="classnjli_1_1_shader_program_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::ShaderProgram</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::ShaderProgram</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::ShaderProgram</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::ShaderProgram</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_shader_program_1a1579c6785c5b66286e777362f413a158" prot="protected" virt="virtual"><scope>njli::ShaderProgram</scope><name>~ShaderProgram</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

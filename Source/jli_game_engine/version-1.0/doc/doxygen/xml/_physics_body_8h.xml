@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_physics_body_8h" kind="file">
+    <compoundname>PhysicsBody.h</compoundname>
+    <includes refid="_abstract_builder_8h" local="yes">AbstractBuilder.h</includes>
+    <includes refid="_abstract_factory_object_8h" local="yes">AbstractFactoryObject.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includes local="yes">btTransform.h</includes>
+    <includes local="yes">lua.hpp</includes>
+    <includedby refid="_j_l_i_engine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</includedby>
+    <includedby refid="_physics_body_ghost_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhost.h</includedby>
+    <includedby refid="_physics_body_rigid_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigid.h</includedby>
+    <includedby refid="_physics_body_soft_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h</includedby>
+    <includedby refid="_node_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</includedby>
+    <includedby refid="_physics_body_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.cpp</includedby>
+    <includedby refid="_physics_constraint_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraint.cpp</includedby>
+    <includedby refid="_physics_constraint_cone_twist_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwist.cpp</includedby>
+    <includedby refid="_physics_constraint_fixed_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixed.cpp</includedby>
+    <includedby refid="_physics_constraint_generic6_dof_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp</includedby>
+    <includedby refid="_physics_constraint_generic6_dof_spring_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpring.cpp</includedby>
+    <includedby refid="_physics_constraint_hinge_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHinge.cpp</includedby>
+    <includedby refid="_physics_constraint_point_to_point_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPoint.cpp</includedby>
+    <includedby refid="_physics_constraint_slider_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSlider.cpp</includedby>
+    <includedby refid="_physics_shape_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShape.cpp</includedby>
+    <includedby refid="_physics_shape_box_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox.cpp</includedby>
+    <includedby refid="_physics_shape_box2_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2D.cpp</includedby>
+    <includedby refid="_physics_world_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorld.cpp</includedby>
+    <includedby refid="_scene_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</includedby>
+    <includedby refid="_world_factory_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</includedby>
+    <includedby refid="_world_lua_virtual_machine_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</includedby>
+    <incdepgraph>
+      <node id="25880">
+        <label>lua.hpp</label>
+      </node>
+      <node id="25869">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="25870" relation="include">
+        </childnode>
+      </node>
+      <node id="25874">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="25868" relation="include">
+        </childnode>
+        <childnode refid="25875" relation="include">
+        </childnode>
+        <childnode refid="25873" relation="include">
+        </childnode>
+      </node>
+      <node id="25863">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.h</label>
+        <link refid="PhysicsBody.h"/>
+        <childnode refid="25864" relation="include">
+        </childnode>
+        <childnode refid="25865" relation="include">
+        </childnode>
+        <childnode refid="25877" relation="include">
+        </childnode>
+        <childnode refid="25879" relation="include">
+        </childnode>
+        <childnode refid="25880" relation="include">
+        </childnode>
+      </node>
+      <node id="25868">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="25869" relation="include">
+        </childnode>
+        <childnode refid="25871" relation="include">
+        </childnode>
+        <childnode refid="25872" relation="include">
+        </childnode>
+      </node>
+      <node id="25871">
+        <label>stdlib.h</label>
+      </node>
+      <node id="25873">
+        <label>string</label>
+      </node>
+      <node id="25866">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="25864">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="25865" relation="include">
+        </childnode>
+        <childnode refid="25868" relation="include">
+        </childnode>
+        <childnode refid="25876" relation="include">
+        </childnode>
+        <childnode refid="25873" relation="include">
+        </childnode>
+      </node>
+      <node id="25876">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="25878">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="25875">
+        <label>vector</label>
+      </node>
+      <node id="25867">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="25868" relation="include">
+        </childnode>
+        <childnode refid="25873" relation="include">
+        </childnode>
+        <childnode refid="25874" relation="include">
+        </childnode>
+      </node>
+      <node id="25877">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="25868" relation="include">
+        </childnode>
+        <childnode refid="25878" relation="include">
+        </childnode>
+      </node>
+      <node id="25879">
+        <label>btTransform.h</label>
+      </node>
+      <node id="25870">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="25872">
+        <label>stdio.h</label>
+      </node>
+      <node id="25865">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="25866" relation="include">
+        </childnode>
+        <childnode refid="25867" relation="include">
+        </childnode>
+        <childnode refid="25868" relation="include">
+        </childnode>
+        <childnode refid="25876" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="25905">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="25900">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPoint.cpp</label>
+        <link refid="_physics_constraint_point_to_point_8cpp"/>
+      </node>
+      <node id="25881">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.h</label>
+        <link refid="PhysicsBody.h"/>
+        <childnode refid="25882" relation="include">
+        </childnode>
+        <childnode refid="25883" relation="include">
+        </childnode>
+        <childnode refid="25887" relation="include">
+        </childnode>
+        <childnode refid="25890" relation="include">
+        </childnode>
+        <childnode refid="25892" relation="include">
+        </childnode>
+        <childnode refid="25893" relation="include">
+        </childnode>
+        <childnode refid="25894" relation="include">
+        </childnode>
+        <childnode refid="25895" relation="include">
+        </childnode>
+        <childnode refid="25896" relation="include">
+        </childnode>
+        <childnode refid="25897" relation="include">
+        </childnode>
+        <childnode refid="25898" relation="include">
+        </childnode>
+        <childnode refid="25899" relation="include">
+        </childnode>
+        <childnode refid="25900" relation="include">
+        </childnode>
+        <childnode refid="25901" relation="include">
+        </childnode>
+        <childnode refid="25902" relation="include">
+        </childnode>
+        <childnode refid="25903" relation="include">
+        </childnode>
+        <childnode refid="25904" relation="include">
+        </childnode>
+        <childnode refid="25889" relation="include">
+        </childnode>
+        <childnode refid="25905" relation="include">
+        </childnode>
+        <childnode refid="25885" relation="include">
+        </childnode>
+        <childnode refid="25886" relation="include">
+        </childnode>
+      </node>
+      <node id="25887">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigid.h</label>
+        <link refid="_physics_body_rigid_8h"/>
+        <childnode refid="25882" relation="include">
+        </childnode>
+        <childnode refid="25888" relation="include">
+        </childnode>
+        <childnode refid="25889" relation="include">
+        </childnode>
+        <childnode refid="25885" relation="include">
+        </childnode>
+        <childnode refid="25886" relation="include">
+        </childnode>
+      </node>
+      <node id="25890">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h</label>
+        <link refid="_physics_body_soft_8h"/>
+        <childnode refid="25882" relation="include">
+        </childnode>
+        <childnode refid="25891" relation="include">
+        </childnode>
+        <childnode refid="25885" relation="include">
+        </childnode>
+        <childnode refid="25886" relation="include">
+        </childnode>
+      </node>
+      <node id="25886">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</label>
+        <link refid="_world_lua_virtual_machine_8cpp"/>
+      </node>
+      <node id="25888">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigid.cpp</label>
+        <link refid="_physics_body_rigid_8cpp"/>
+      </node>
+      <node id="25893">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.cpp</label>
+        <link refid="_physics_body_8cpp"/>
+      </node>
+      <node id="25902">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShape.cpp</label>
+        <link refid="_physics_shape_8cpp"/>
+      </node>
+      <node id="25898">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpring.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_8cpp"/>
+      </node>
+      <node id="25892">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</label>
+        <link refid="_node_8cpp"/>
+      </node>
+      <node id="25903">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox.cpp</label>
+        <link refid="_physics_shape_box_8cpp"/>
+      </node>
+      <node id="25897">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_8cpp"/>
+      </node>
+      <node id="25884">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhost.cpp</label>
+        <link refid="_physics_body_ghost_8cpp"/>
+      </node>
+      <node id="25904">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2D.cpp</label>
+        <link refid="_physics_shape_box2_d_8cpp"/>
+      </node>
+      <node id="25896">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixed.cpp</label>
+        <link refid="_physics_constraint_fixed_8cpp"/>
+      </node>
+      <node id="25883">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhost.h</label>
+        <link refid="_physics_body_ghost_8h"/>
+        <childnode refid="25882" relation="include">
+        </childnode>
+        <childnode refid="25884" relation="include">
+        </childnode>
+        <childnode refid="25885" relation="include">
+        </childnode>
+        <childnode refid="25886" relation="include">
+        </childnode>
+      </node>
+      <node id="25882">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</label>
+        <link refid="_j_l_i_engine_8h"/>
+      </node>
+      <node id="25891">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp</label>
+        <link refid="_physics_body_soft_8cpp"/>
+      </node>
+      <node id="25899">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHinge.cpp</label>
+        <link refid="_physics_constraint_hinge_8cpp"/>
+      </node>
+      <node id="25894">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraint.cpp</label>
+        <link refid="_physics_constraint_8cpp"/>
+      </node>
+      <node id="25895">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwist.cpp</label>
+        <link refid="_physics_constraint_cone_twist_8cpp"/>
+      </node>
+      <node id="25889">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorld.cpp</label>
+        <link refid="_physics_world_8cpp"/>
+      </node>
+      <node id="25901">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSlider.cpp</label>
+        <link refid="_physics_constraint_slider_8cpp"/>
+      </node>
+      <node id="25885">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</label>
+        <link refid="_world_factory_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classnjli_1_1_physics_body" prot="public">njli::PhysicsBody</innerclass>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>PhysicsBody.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>11/22/14.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__JLIGameEngineTest__AbstractPhysicsBody__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__JLIGameEngineTest__AbstractPhysicsBody__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_builder_8h" kindref="compound">AbstractBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_factory_object_8h" kindref="compound">AbstractFactoryObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btTransform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lua.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btManifoldPoint;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">btDispatcherInfo;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btCollisionObject;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector3;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btTransform;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PhysicsWorld;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PhysicsShape;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PhysicsConstraint;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classnjli_1_1_physics_body" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">class</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref><sp/>:<sp/>public<sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36" refid="classnjli_1_1_physics_body_1acb96ebb09abe8f2a37a915a842babfac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classnjli_1_1_physics_body_1abd7959b8cbcd7c25bc6c0c8b1ea26ce6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classnjli_1_1_physics_body_1a6db9d28bd448a131448276ee03de1e6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classnjli_1_1_physics_body_1ae9fdb8cf9943dbfd76910301cb0ac1bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_box2_d" kindref="compound">PhysicsShapeBox2D</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classnjli_1_1_physics_body_1aa594c185e502e1b87c998e01dd17a50f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_box" kindref="compound">PhysicsShapeBox</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classnjli_1_1_physics_body_1a06afcd7f1b1822af8e15e045e77eed2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_point_to_point" kindref="compound">PhysicsConstraintPointToPoint</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classnjli_1_1_physics_body_1a0117dac2d3ca1ac4ebe089ac8c258560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_hinge" kindref="compound">PhysicsConstraintHinge</ref>;</highlight></codeline>
+<codeline lineno="43" refid="classnjli_1_1_physics_body_1a2ccf10571ac5c97189a4c7d1fe3831ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_cone_twist" kindref="compound">PhysicsConstraintConeTwist</ref>;</highlight></codeline>
+<codeline lineno="44" refid="classnjli_1_1_physics_body_1a684f5ece6d7d44c2b9f689e76458a8fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_fixed" kindref="compound">PhysicsConstraintFixed</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classnjli_1_1_physics_body_1a1d2185bf07a23cc48cd8f9d4271f3e39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classnjli_1_1_physics_body_1af32c447e4cf588410ecc1a6106157f9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_generic6_dof_spring" kindref="compound">PhysicsConstraintGeneric6DofSpring</ref>;</highlight></codeline>
+<codeline lineno="47" refid="classnjli_1_1_physics_body_1a6b9fa11eb22d1cb30e2d4fc2247e9afa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_slider" kindref="compound">PhysicsConstraintSlider</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classnjli_1_1_physics_body_1aa59c958a66870f0d251ec0dd477d2eff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" kindref="member">AbstractDecorator::setName</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" kindref="member">AbstractDecorator::getName</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" kindref="member">AbstractFactoryObject::create</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>using<sp/>AbstractFactoryObject::clone;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" kindref="member">AbstractFactoryObject::getPointer</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" kindref="member">AbstractFactoryObject::getPointerValue</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" kindref="member">AbstractFactoryObject::serializeObject</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref>&amp;);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>&amp;);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>BT_DECLARE_ALIGNED_ALLOCATOR();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>&amp;);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>calculateSerializeBufferSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>getClassName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>(<ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy(<ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref><sp/>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>load(<ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref><sp/>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*<sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stack_index);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>fill<sp/>in<sp/>specific<sp/>methods<sp/>for<sp/>PhysicsBody</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleCollide(<ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref><sp/>*<sp/>body,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btManifoldPoint&amp;<sp/>pt);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleCollisionNear(<ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref><sp/>*<sp/>body,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btDispatcherInfo&amp;<sp/>dispatchInfo);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addPhysicsShape(<ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref><sp/>*<sp/>shape);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>removePhysicsShape();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref>*<sp/>getPhysicsShape();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref>*<sp/>getPhysicsShape()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWorldTransform(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btTransform&amp;<sp/>transform)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>btTransform<sp/>getWorldTransform()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setFriction(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>friction);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>getFriction()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setAngularFriction(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>friction);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>getAngularFriction()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRestitution(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>restitution);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>getRestitution()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPhysicsType(<ref refid="namespacenjli_1a60ba626f4609f81870c92d042c6bc83d" kindref="member">njliPhysicsType</ref><sp/>type);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a60ba626f4609f81870c92d042c6bc83d" kindref="member">njliPhysicsType</ref><sp/>getPhysicsType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCollisionGroup(<ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref><sp/>categoryBitMask);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref><sp/>getCollisionGroup()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCollisionMask(<ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref><sp/>categoryBitMask);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref><sp/>getCollisionMask()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setStaticPhysics();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setKinematicPhysics();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setDynamicPhysics();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>enableContactResponse(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>enableHandleCollideCallback(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isStaticPhysics()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isKinematicPhysics()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDynamicPhysics()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isResting()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>enableResting(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>getVelocity()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>getAngularVelocity()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isInWorld()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btCollisionObject*<sp/>getCollisionObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>btCollisionObject*<sp/>getCollisionObject()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCollisionObject(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btCollisionObject&amp;<sp/>obj,<sp/><ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref>*<sp/>shape)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>addPhysicsBody(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btTransform&amp;<sp/>transform<sp/>=<sp/>btTransform::getIdentity())<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>removePhysicsBody()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>void<sp/>enablePropertyChange(bool<sp/>enable<sp/>=<sp/>true);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>bool<sp/>isPropertyChanged()const;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>addPhysicsConstraint(<ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref><sp/>*<sp/>constraint);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>removePhysicsConstraint(<ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref><sp/>*<sp/>constraint);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>removeAllPhysicsConstraints();</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getPhysicsConstraints(std::vector&lt;PhysicsConstraint*&gt;<sp/>&amp;<sp/>physicsConstraints)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getPhysicsConstraintIndex(<ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref><sp/>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref>*<sp/>getPhysicsConstraint(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>index);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref>*<sp/>getPhysicsConstraint(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasPhysicsConstraint()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/>getParent();</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/>getParent()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getCollisionFlags()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getActivationState()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="429" refid="classnjli_1_1_physics_body_1a1f9dcb4ea6c3105da907b84082929110" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;PhysicsConstraint*&gt;<sp/><ref refid="classnjli_1_1_physics_body_1a1f9dcb4ea6c3105da907b84082929110" kindref="member">m_PhysicsConstraintList</ref>;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PhysicsWorld<sp/>*m_PhysicsWorld;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432" refid="classnjli_1_1_physics_body_1a00c2b8d2e86534be769c4984956c00c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref>*<sp/><ref refid="classnjli_1_1_physics_body_1a00c2b8d2e86534be769c4984956c00c2" kindref="member">m_PhysicsShape</ref>;</highlight></codeline>
+<codeline lineno="433" refid="classnjli_1_1_physics_body_1aa474bfee45457dc90f521b1fcc47b4f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref><sp/><ref refid="classnjli_1_1_physics_body_1aa474bfee45457dc90f521b1fcc47b4f3" kindref="member">m_CategoryBitMask</ref>;</highlight></codeline>
+<codeline lineno="434" refid="classnjli_1_1_physics_body_1ad54b0614806637ab666fd9a779e55d51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1af7b302a2b48bb644f85c88080925c974" kindref="member">njliBitCategories</ref><sp/><ref refid="classnjli_1_1_physics_body_1ad54b0614806637ab666fd9a779e55d51" kindref="member">m_CollisionBitMask</ref>;</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436" refid="classnjli_1_1_physics_body_1ae0f4e419f8e05558232170246fe7ad83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_body_1ae0f4e419f8e05558232170246fe7ad83" kindref="member">m_RestingAllowed</ref>;</highlight></codeline>
+<codeline lineno="437" refid="classnjli_1_1_physics_body_1a313bb39a706c42bc97c86cff4bd0f309" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_body_1a313bb39a706c42bc97c86cff4bd0f309" kindref="member">m_IsResting</ref>;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>m_PropertyChanged;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440" refid="classnjli_1_1_physics_body_1aafbdd7a8a90737acd399b56961cbd16c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_physics_body_1aafbdd7a8a90737acd399b56961cbd16c" kindref="member">m_CollisionFlags</ref>;</highlight></codeline>
+<codeline lineno="441" refid="classnjli_1_1_physics_body_1a63352ab7615e4537f30479062ffb6a48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_physics_body_1a63352ab7615e4537f30479062ffb6a48" kindref="member">m_ActivationState</ref>;</highlight></codeline>
+<codeline lineno="442"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="443"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__JLIGameEngineTest__AbstractPhysicsBody__)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2, Using (Almost) the Same Code on iOS, Android, and Emscripten | Learn OpenGL ES</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://www.learnopengles.com/wordpress/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://www.learnopengles.com/wordpress/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Learn OpenGL ES &raquo; Feed" href="http://www.learnopengles.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Learn OpenGL ES &raquo; Comments Feed" href="http://www.learnopengles.com/comments/feed/" />
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-23646705-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Learn OpenGL ES &raquo; Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2, Using (Almost) the Same Code on iOS, Android, and Emscripten Comments Feed" href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/feed/" />
+<link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://www.learnopengles.com/wordpress/wp-content/themes/twentyfourteen/genericons/genericons.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-style-css'  href='http://www.learnopengles.com/wordpress/wp-content/themes/twentyfourteen-child/style.css?ver=3.9.1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://www.learnopengles.com/wordpress/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='http://www.learnopengles.com/wordpress/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.6' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.learnopengles.com/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.learnopengles.com/wordpress/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Calling OpenGL from C on the Web by Using Emscripten, Sharing Common Code with Android and iOS' href='http://www.learnopengles.com/calling-opengl-from-c-on-the-web-by-using-emscripten-sharing-common-code-with-android-and-ios/' />
+<link rel='next' title='Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2: Adding Support for iOS' href='http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/' />
+<meta name="generator" content="WordPress 3.9.1" />
+<link rel='shortlink' href='http://www.learnopengles.com/?p=1961' />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+var a2a_config = a2a_config || {};
+a2a_config.templates = {
+    twitter: "Reading: ${title} ${link} by @LearnOpenGLES"
+};
+//--></script>
+    <style>@media screen and (min-width: 783px){.primary-navigation{float: right;margin-left: 20px;}a { transition: all .5s ease; }}</style>
+    <style>.site {margin: 0 auto;max-width: 1260px;width: 100%;}.site-header{max-width: 1260px;}
+		@media screen and (min-width: 1110px) {.archive-header,.comments-area,.image-navigation,.page-header,.page-content,.post-navigation,.site-content .entry-header,
+	    .site-content .entry-content,.site-content .entry-summary,.site-content footer.entry-meta{padding-left: 55px;}}</style>
+    <style>
+	    .site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.site-content .entry-meta,.page-content 
+		{max-width: 874px;}.comments-area{max-width: 874px;}.post-navigation, .image-navigation{max-width: 874px;}</style>
+    <style>.hentry{max-width: 1260px;}
+	    img.size-full,img.size-large,.wp-post-image,.post-thumbnail img,.site-content .post-thumbnail img{max-height: 572px;}
+	</style>
+	
+    <style>
+		.slider .featured-content .hentry{max-height: 500px;}.slider .featured-content{max-width: 1600px;
+		margin: 0px auto;}.slider .featured-content .post-thumbnail img{max-width: 1600px;width: 100%;}
+		.slider .featured-content .post-thumbnail{background:none;}.slider .featured-content a.post-thumbnail:hover{background-color:transparent;}
+	</style>
+    <style>.featured-content{display:none; visibility: hidden;}</style>
+
+<script type="text/javascript" async defer src="http://www.learnopengles.com/wordpress/wp-content/plugins/wp-spamshield/js/jscripts.php"></script> 
+
+<!-- All in One SEO Pack 2.1.6 by Michael Torbert of Semper Fi Web Design[298,458] -->
+<meta name="description" content="In the last post in this series, we setup a system to render OpenGL to Android, iOS and the web via WebGL and emscripten. In this post, we'll expand on that" />
+
+<meta name="keywords" content="assert,asset manager,debugging,error handling,gdb,libpng,ndk" />
+
+<link rel="canonical" href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/" />
+<!-- /all in one seo pack -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="single single-post postid-1961 single-format-standard custom-background masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://www.learnopengles.com/" rel="home">Learn OpenGL ES</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<h1 class="menu-toggle">Primary Menu</h1>
+				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+				<div class="nav-menu"><ul><li class="page_item page-item-927"><a href="http://www.learnopengles.com/about/">About</a></li><li class="page_item page-item-27"><a href="http://www.learnopengles.com/privacy-policy/">Privacy Policy</a></li><li class="page_item page-item-720"><a href="http://www.learnopengles.com/terms-of-use/">Terms of Use</a></li><li class="page_item page-item-5"><a href="http://www.learnopengles.com/contact/">Contact</a></li></ul></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://www.learnopengles.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-1961" class="post-1961 post type-post status-publish format-standard hentry category-air-hockey-project category-android category-android-tutorials category-articles category-game-development category-native-development-c-cpp tag-assert tag-asset-manager tag-debugging tag-error-handling tag-gdb tag-libpng tag-ndk">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="http://www.learnopengles.com/category/air-hockey-project/" title="View all posts in Air Hockey Project" rel="category tag">Air Hockey Project</a>, <a href="http://www.learnopengles.com/category/android/" title="View all posts in Android" rel="category tag">Android</a>, <a href="http://www.learnopengles.com/category/android-tutorials/" title="View all posts in Android Tutorials" rel="category tag">Android Tutorials</a>, <a href="http://www.learnopengles.com/category/articles/" title="View all posts in Articles" rel="category tag">Articles</a>, <a href="http://www.learnopengles.com/category/game-development/" title="View all posts in Game Development" rel="category tag">Game Development</a>, <a href="http://www.learnopengles.com/category/native-development-c-cpp/" title="View all posts in Native Development (C, C++)" rel="category tag">Native Development (C, C++)</a></span>
+		</div>
+		<h1 class="entry-title">Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2, Using (Almost) the Same Code on iOS, Android, and Emscripten</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/" rel="bookmark"><time class="entry-date" datetime="2013-07-23T18:41:58+00:00">July 23, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://www.learnopengles.com/author/oes_admin/" rel="author">Admin</a></span></span>			<span class="comments-link"><a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comments" title="Comment on Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2, Using (Almost) the Same Code on iOS, Android, and Emscripten">18 Comments</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<!-- POST_COUNT:   -->	<div class="entry-content">
+		<p>In the <a href="http://www.learnopengles.com/calling-opengl-from-c-on-the-web-by-using-emscripten-sharing-common-code-with-android-and-ios/" >last post</a> in this <a href="http://www.learnopengles.com/developing-a-simple-game-of-air-hockey-using-c-and-opengl-es-2-for-android-ios-and-the-web/" >series</a>, we setup a system to render OpenGL to Android, iOS and the web via WebGL and emscripten. In this post, we&#8217;ll expand on that work and add support for PNG loading, shaders, and VBOs.</p>
+<h3>TL;DR</h3>
+<p>We can put most of our common code into a core folder, and call into that core from a main loop in our platform-specific code. By taking advantage of open source libraries like libpng and zlib, most of our code can remain platform independent. In this post, we cover the new core code and the new Android platform-specific code.</p>
+<p>To check out the completed project for this part of the <a href="http://www.learnopengles.com/developing-a-simple-game-of-air-hockey-using-c-and-opengl-es-2-for-android-ios-and-the-web/" >series</a>, head over to GitHub and <a href="https://github.com/learnopengles/airhockey/tree/article-2-loading-png-file" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">download the files for &#8216;article-2-loading-png-file&#8217;</a>.</p>
+<h3>Prerequisites</h3>
+<p>Before we begin, you may want to check out the previous posts in this <a href="http://www.learnopengles.com/developing-a-simple-game-of-air-hockey-using-c-and-opengl-es-2-for-android-ios-and-the-web/" >series</a> so that you can get the right tools installed and configured on your local development machine:</p>
+<ul>
+<li><a href="http://www.learnopengles.com/calling-opengl-from-android-using-the-ndk/" >OpenGL from C on Android by using the NDK</a></li>
+<li><a title="Calling OpenGL from C on iOS, Sharing Common Code with Android" href="http://www.learnopengles.com/calling-opengl-from-c-on-ios-sharing-common-code-with-android/"  rel="bookmark">Calling OpenGL from C on iOS, Sharing Common Code with Android</a></li>
+<li><a href="http://www.learnopengles.com/calling-opengl-from-c-on-the-web-by-using-emscripten-sharing-common-code-with-android-and-ios/" >Calling OpenGL from C on the Web by Using Emscripten, Sharing Common Code with Android and iOS</a></li>
+</ul>
+<p>You can setup a local git repository with all of the code by cloning &#8216;article-1-clearing-the-screen&#8217; or by downloading it as a ZIP from GitHub: <a href="https://github.com/learnopengles/airhockey/tree/article-1-clearing-the-screen" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">https://github.com/learnopengles/airhockey/tree/article-1-clearing-the-screen</a>.</p>
+<p>For a &#8220;friendlier&#8221; introduction to OpenGL ES 2 using Java as the development language of choice, you can also check out <a href="http://www.learnopengles.com/android-lesson-one-getting-started/" >Android Lesson One: Getting Started</a> or <a href="http://pragprog.com/book/kbogla/opengl-es-2-for-android" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://pragprog.com']);">OpenGL ES 2 for Android: A Quick-Start Guide</a>.</p>
+<h3>Updating the platform-independent code</h3>
+<p>In this section, we&#8217;ll cover all of the new changes to the platform-independent core code that we&#8217;ll be making to support the new features. The first thing that we&#8217;ll do is move things around, so that they follow this new structure:</p>
+<p><em>/src/common</em> =&gt; rename to <em>/src/core</em></p>
+<p><em>/src/android</em> =&gt; rename to <em>/src/platform/android</em></p>
+<p><em>/src/ios</em> =&gt; rename to <em>/src/platform/ios</em></p>
+<p><em>/src/emscripten</em> =&gt; rename to <em>/src/platform/emscripten</em></p>
+<p>We&#8217;ll also rename <em>glwrapper.h</em> to <em>platform_gl.h</em> for all platforms. This will help to keep our source code more organized as we add more features and source files. </p>
+<p>To start off, let&#8217;s cover all of the source files that go into <em>/src/core</em>.</p>
+<h4>Loading vertex buffer objects</h4>
+<p>Let&#8217;s begin with <em>buffer.h</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_gl.h&quot;
+
+#define BUFFER_OFFSET(i) ((void*)(i))
+
+GLuint create_vbo(const GLsizeiptr size, const GLvoid* data, const GLenum usage);</pre>
+<p>We&#8217;ll use <code>create_vbo</code> to upload data into a vertex buffer object. <code>BUFFER_OFFSET()</code> is a helper macro that we&#8217;ll use to pass the right offsets to <code>glVertexAttribPointer()</code>.</p>
+<p>Let&#8217;s follow up with the implementation in <em>buffer.c</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;buffer.h&quot;
+#include &quot;platform_gl.h&quot;
+#include &lt;assert.h&gt;
+#include &lt;stdlib.h&gt;
+
+GLuint create_vbo(const GLsizeiptr size, const GLvoid* data, const GLenum usage) {
+	assert(data != NULL);
+	GLuint vbo_object;
+	glGenBuffers(1, &amp;vbo_object);
+	assert(vbo_object != 0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, vbo_object);
+	glBufferData(GL_ARRAY_BUFFER, size, data, usage);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+	return vbo_object;
+}</pre>
+<p>First, we generate a new OpenGL vertex buffer object, and then we bind to it and upload the data from <code>data</code> into the VBO. We also assert that the data is not null and that we successfully created a new vertex buffer object. Why do we assert instead of returning an error code? There are a couple of reasons for that:</p>
+<ol>
+<li>In the context of a game, there isn&#8217;t really a reasonable course of action that we can take in the event that creating a new VBO fails. Something is going to fail to display properly, so our game experience isn&#8217;t going to be as intended. We would also never expect this to fail, unless we&#8217;re abusing the platform and trying to do too much for the target hardware.</li>
+<li>Returning an error means that we now have to expand our code by handling the error and checking for the error at the other end, perhaps cascading that across several function calls. This adds a lot of maintenance burden with little gain.</li>
+</ol>
+<p>I have been greatly influenced by this excellent series over at the Bitsquid blog:</p>
+<ul>
+<li><a href="http://bitsquid.blogspot.ca/2012/01/sensible-error-handling-part-1.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bitsquid.blogspot.ca']);">Sensible Error Handling: Part 1</a></li>
+<li><a href="http://bitsquid.blogspot.ca/2012/02/sensible-error-handling-part-2.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bitsquid.blogspot.ca']);">Sensible Error Handling: Part 2</a></li>
+<li><a href="http://bitsquid.blogspot.ca/2012/02/sensible-error-handling-part-3.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bitsquid.blogspot.ca']);">Sensible Error Handling: Part 3</a></li>
+</ul>
+<p><code>assert()</code> is only compiled into the program in debug mode by default, so in release mode, the application will just continue to run and might end up crashing on bad data. To avoid this, when going into production, you may want to create a special <code>assert()</code> that works in release mode and does a little bit more, perhaps showing a dialog box to the user before crashing and writing out a log to a file, so that it can be sent off to the developers.</p>
+<h4>Loading and compiling shaders:</h4>
+<p>Let&#8217;s add the following <em>shader.h</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_gl.h&quot;
+
+GLuint compile_shader(const GLenum type, const GLchar* source, const GLint length);
+GLuint link_program(const GLuint vertex_shader, const GLuint fragment_shader);
+GLuint build_program(
+	const GLchar * vertex_shader_source, const GLint vertex_shader_source_length,
+	const GLchar * fragment_shader_source, const GLint fragment_shader_source_length);
+
+/* Should be called just before using a program to draw, if validation is needed. */
+GLint validate_program(const GLuint program);</pre>
+<p>Here, we have methods to compile a shader and to link two shaders into an OpenGL shader program. We also have a helper method here for validating a program, if we want to do that for debugging reasons.</p>
+<p>Let&#8217;s begin the implementation for <em>shader.c</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;shader.h&quot;
+#include &quot;platform_gl.h&quot;
+#include &quot;platform_log.h&quot;
+#include &lt;assert.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+#define TAG &quot;shaders&quot;
+
+static void log_v_fixed_length(const GLchar* source, const GLint length) {
+	if (LOGGING_ON) {
+		char log_buffer[length + 1];
+		memcpy(log_buffer, source, length);
+		log_buffer[length] = '&#92;&#48;';
+
+		DEBUG_LOG_WRITE_V(TAG, log_buffer);
+	}
+}
+
+static void log_shader_info_log(GLuint shader_object_id) {
+	if (LOGGING_ON) {
+		GLint log_length;
+		glGetShaderiv(shader_object_id, GL_INFO_LOG_LENGTH, &amp;log_length);
+		GLchar log_buffer[log_length];
+		glGetShaderInfoLog(shader_object_id, log_length, NULL, log_buffer);
+
+		DEBUG_LOG_WRITE_V(TAG, log_buffer);
+	}
+}
+
+static void log_program_info_log(GLuint program_object_id) {
+	if (LOGGING_ON) {
+		GLint log_length;
+		glGetProgramiv(program_object_id, GL_INFO_LOG_LENGTH, &amp;log_length);
+		GLchar log_buffer[log_length];
+		glGetProgramInfoLog(program_object_id, log_length, NULL, log_buffer);
+
+		DEBUG_LOG_WRITE_V(TAG, log_buffer);
+	}
+}</pre>
+<p>We&#8217;ve added some helper functions to help us log the shader and program info logs when logging is enabled. We&#8217;ll define <code>LOGGING_ON</code> and the other logging functions in other include files, soon. Let&#8217;s continue:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">GLuint compile_shader(const GLenum type, const GLchar* source, const GLint length) {
+	assert(source != NULL);
+	GLuint shader_object_id = glCreateShader(type);
+	GLint compile_status;
+
+	assert(shader_object_id != 0);
+
+	glShaderSource(shader_object_id, 1, (const GLchar **)&amp;source, &amp;length);
+	glCompileShader(shader_object_id);
+	glGetShaderiv(shader_object_id, GL_COMPILE_STATUS, &amp;compile_status);
+
+	if (LOGGING_ON) {
+		DEBUG_LOG_WRITE_D(TAG, &quot;Results of compiling shader source:&quot;);
+		log_v_fixed_length(source, length);
+		log_shader_info_log(shader_object_id);
+	}
+
+	assert(compile_status != 0);
+
+	return shader_object_id;
+}</pre>
+<p>We create a new shader object, pass in the source, compile it, and if everything was successful, we then return the shader ID. Now we need a method for linking two shaders together into an OpenGL program:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">GLuint link_program(const GLuint vertex_shader, const GLuint fragment_shader) {
+	GLuint program_object_id = glCreateProgram();
+	GLint link_status;
+
+	assert(program_object_id != 0);
+
+	glAttachShader(program_object_id, vertex_shader);
+	glAttachShader(program_object_id, fragment_shader);
+	glLinkProgram(program_object_id);
+	glGetProgramiv(program_object_id, GL_LINK_STATUS, &amp;link_status);
+
+	if (LOGGING_ON) {
+		DEBUG_LOG_WRITE_D(TAG, &quot;Results of linking program:&quot;);
+		log_program_info_log(program_object_id);
+	}
+
+	assert(link_status != 0);
+
+	return program_object_id;
+}</pre>
+<p>To link the program, we pass in two OpenGL shader objects, one for the vertex shader and one for the fragment shader, and then we link them together. If all was successful, then we return the program object ID.</p>
+<p>Let&#8217;s complete <em>shader.c</em> by adding two helper methods:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">GLuint build_program(
+	const GLchar * vertex_shader_source, const GLint vertex_shader_source_length, 
+	const GLchar * fragment_shader_source, const GLint fragment_shader_source_length) {
+	assert(vertex_shader_source != NULL);
+	assert(fragment_shader_source != NULL);
+
+	GLuint vertex_shader = compile_shader(
+		GL_VERTEX_SHADER, vertex_shader_source, vertex_shader_source_length);
+	GLuint fragment_shader = compile_shader(
+		GL_FRAGMENT_SHADER, fragment_shader_source, fragment_shader_source_length);
+	return link_program(vertex_shader, fragment_shader);
+}</pre>
+<p>This helper method method takes in the source for a vertex shader and a fragment shader, and returns the linked program object. Let&#8217;s add the second helper method:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">GLint validate_program(const GLuint program) {
+	if (LOGGING_ON) {
+		int validate_status;
+
+		glValidateProgram(program);
+		glGetProgramiv(program, GL_VALIDATE_STATUS, &amp;validate_status);
+		DEBUG_LOG_PRINT_D(TAG, &quot;Results of validating program: %d&quot;, validate_status);
+		log_program_info_log(program);
+		return validate_status;
+	}
+
+	return 0;
+}</pre>
+<p>We can use <code>validate_program()</code> for debugging purposes, if we want some extra info about a program during a specific moment in our rendering code.</p>
+<h4>Loading in textures</h4>
+<p>Now we need some code to load in raw data into a texture. Let&#8217;s add the following into a new file called <em>texture.h</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_gl.h&quot;
+
+GLuint load_texture(
+	const GLsizei width, const GLsizei height,
+	const GLenum type, const GLvoid* pixels);</pre>
+<p>Let&#8217;s follow that up with the implementation in <em>texture.c</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;texture.h&quot;
+#include &quot;platform_gl.h&quot;
+#include &lt;assert.h&gt;
+
+GLuint load_texture(
+	const GLsizei width, const GLsizei height,
+	const GLenum type, const GLvoid* pixels) {
+	GLuint texture_object_id;
+	glGenTextures(1, &amp;texture_object_id);
+	assert(texture_object_id != 0);
+
+	glBindTexture(GL_TEXTURE_2D, texture_object_id);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexImage2D(
+		GL_TEXTURE_2D, 0, type, width, height, 0, type, GL_UNSIGNED_BYTE, pixels);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+	return texture_object_id;
+}</pre>
+<p>This is pretty straightforward and not currently customized for special cases: it just loads in the raw data in <code>pixels</code> into the texture, assuming that each component is 8-bit. It then sets up the texture for trilinear mipmapping.</p>
+<h4>Loading in PNG files</h4>
+<p>For this post, we&#8217;ll package our texture asset as a PNG file, and use libpng to decode the file into raw data. For that we&#8217;ll need to add some wrapper code around libpng so that we can decode a PNG file into raw data suitable for upload into an OpenGL texture.</p>
+<p>Let&#8217;s create a new file called <em>image.h</em>, with the following contents:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_gl.h&quot;
+
+typedef struct {
+	const int width;
+	const int height;
+	const int size;
+	const GLenum gl_color_format;
+	const void* data;
+} RawImageData;
+
+/* Returns the decoded image data, or aborts if there's an error during decoding. */
+RawImageData get_raw_image_data_from_png(const void* png_data, const int png_data_size);
+void release_raw_image_data(const RawImageData* data);</pre>
+<p>We&#8217;ll use <code>get_raw_image_data_from_png()</code> to read in the PNG data from <code>png_data</code> and return the raw data in a struct. When we no longer need to keep that raw data around, we can call <code>release_raw_image_data()</code> to release the associated resources.</p>
+<p>Let&#8217;s start writing the implementation in <em>image.c</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;image.h&quot;
+#include &quot;platform_log.h&quot;
+#include &lt;assert.h&gt;
+#include &lt;png.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct {
+	const png_byte* data;
+	const png_size_t size;
+} DataHandle;
+
+typedef struct {
+	const DataHandle data;
+	png_size_t offset;
+} ReadDataHandle;
+
+typedef struct {
+	const png_uint_32 width;
+	const png_uint_32 height;
+	const int color_type;
+} PngInfo;</pre>
+<p>We&#8217;ve started off with the includes and a few structs that we&#8217;ll be using locally. Let&#8217;s continue with a few function prototypes:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">static void read_png_data_callback(
+	png_structp png_ptr, png_byte* png_data, png_size_t read_length);
+static PngInfo read_and_update_info(const png_structp png_ptr, const png_infop info_ptr);
+static DataHandle read_entire_png_image(
+	const png_structp png_ptr, const png_infop info_ptr, const png_uint_32 height);
+static GLenum get_gl_color_format(const int png_color_format);</pre>
+<p>We&#8217;ll be using these as local helper functions. Now we can add the implementation for <code>get_raw_image_data_from_png()</code>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">RawImageData get_raw_image_data_from_png(const void* png_data, const int png_data_size) {
+	assert(png_data != NULL &amp;&amp; png_data_size &gt; 8);
+	assert(png_check_sig((void*)png_data, 8));
+
+	png_structp png_ptr = png_create_read_struct(
+		PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
+	assert(png_ptr != NULL);
+	png_infop info_ptr = png_create_info_struct(png_ptr);
+	assert(info_ptr != NULL);
+
+	ReadDataHandle png_data_handle = (ReadDataHandle) {{png_data, png_data_size}, 0};
+	png_set_read_fn(png_ptr, &amp;png_data_handle, read_png_data_callback);
+
+	if (setjmp(png_jmpbuf(png_ptr))) {
+		CRASH(&quot;Error reading PNG file!&quot;);
+	}
+
+	const PngInfo png_info = read_and_update_info(png_ptr, info_ptr);
+	const DataHandle raw_image = read_entire_png_image(
+		png_ptr, info_ptr, png_info.height);
+
+	png_read_end(png_ptr, info_ptr);
+	png_destroy_read_struct(&amp;png_ptr, &amp;info_ptr, NULL);
+
+	return (RawImageData) {
+		png_info.width,
+		png_info.height,
+		raw_image.size,
+		get_gl_color_format(png_info.color_type),
+		raw_image.data};
+}</pre>
+<p>There&#8217;s a lot going on here, so let&#8217;s explain each part in turn:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	assert(png_data != NULL &amp;&amp; png_data_size &gt; 8);
+	assert(png_check_sig((void*)png_data, 8));</pre>
+<p>This checks that the PNG data is present and has a valid header.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	png_structp png_ptr = png_create_read_struct(
+		PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
+	assert(png_ptr != NULL);
+	png_infop info_ptr = png_create_info_struct(png_ptr);
+	assert(info_ptr != NULL);</pre>
+<p>This initializes the PNG structures that we&#8217;ll use to read in the rest of the data.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	ReadDataHandle png_data_handle = (ReadDataHandle) {{png_data, png_data_size}, 0};
+	png_set_read_fn(png_ptr, &amp;png_data_handle, read_png_data_callback);</pre>
+<p>As the PNG data is parsed, libpng will call <code>read_png_data_callback()</code> for each part of the PNG file. Since we&#8217;re reading in the PNG file from memory, we&#8217;ll use <code>ReadDataHandle</code> to wrap this memory buffer so that we can read from it as if it were a file.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	if (setjmp(png_jmpbuf(png_ptr))) {
+		CRASH(&quot;Error reading PNG file!&quot;);
+	}</pre>
+<p>This is how libpng does its error handling. If something goes wrong, then <code>setjmp</code> will return true and we&#8217;ll enter the body of the if statement. We want to handle this like an assert, so we just crash the program. We&#8217;ll define the <code>CRASH</code> macro later on.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	const PngInfo png_info = read_and_update_info(png_ptr, info_ptr);</pre>
+<p>We&#8217;ll use one of our helper functions here to parse the PNG information, such as the color format, and convert the PNG into a format that we want.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	const DataHandle raw_image = read_entire_png_image(
+		png_ptr, info_ptr, png_info.height);</pre>
+<p>We&#8217;ll use another helper function here to read in and decode the PNG image data.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">	png_read_end(png_ptr, info_ptr);
+	png_destroy_read_struct(&amp;png_ptr, &amp;info_ptr, NULL);
+
+	return (RawImageData) {
+		png_info.width,
+		png_info.height,
+		raw_image.size,
+		get_gl_color_format(png_info.color_type),
+		raw_image.data};</pre>
+<p>Once reading is complete, we clean up the PNG structures and then we return the data inside of a <code>RawImageData</code> struct.</p>
+<p>Let&#8217;s define our helper methods now:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">static void read_png_data_callback(
+	png_structp png_ptr, png_byte* raw_data, png_size_t read_length) {
+	ReadDataHandle* handle = png_get_io_ptr(png_ptr);
+	const png_byte* png_src = handle-&gt;data.data + handle-&gt;offset;
+
+	memcpy(raw_data, png_src, read_length);
+	handle-&gt;offset += read_length;
+}</pre>
+<p><code>read_png_data_callback()</code> will be called by libpng to read from the memory buffer. To read from the right place in the memory buffer, we store an offset and we increase that offset every time that <code>read_png_data_callback()</code> is called.</p>
+<pre class="brush: cpp; title: ; notranslate" title="">static PngInfo read_and_update_info(const png_structp png_ptr, const png_infop info_ptr)
+{
+	png_uint_32 width, height;
+	int bit_depth, color_type;
+
+	png_read_info(png_ptr, info_ptr);
+	png_get_IHDR(
+		png_ptr, info_ptr, &amp;width, &amp;height, &amp;bit_depth, &amp;color_type, NULL, NULL, NULL);
+
+	// Convert transparency to full alpha
+	if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS))
+		png_set_tRNS_to_alpha(png_ptr);
+
+	// Convert grayscale, if needed.
+	if (color_type == PNG_COLOR_TYPE_GRAY &amp;&amp; bit_depth &lt; 8)
+		png_set_expand_gray_1_2_4_to_8(png_ptr);
+
+	// Convert paletted images, if needed.
+	if (color_type == PNG_COLOR_TYPE_PALETTE)
+		png_set_palette_to_rgb(png_ptr);
+
+	// Add alpha channel, if there is none.
+	// Rationale: GL_RGBA is faster than GL_RGB on many GPUs)
+	if (color_type == PNG_COLOR_TYPE_PALETTE || color_type == PNG_COLOR_TYPE_RGB)
+	   png_set_add_alpha(png_ptr, 0xFF, PNG_FILLER_AFTER);
+
+	// Ensure 8-bit packing
+	if (bit_depth &lt; 8)
+	   png_set_packing(png_ptr);
+	else if (bit_depth == 16)
+		png_set_scale_16(png_ptr);
+
+	png_read_update_info(png_ptr, info_ptr);
+
+	// Read the new color type after updates have been made.
+	color_type = png_get_color_type(png_ptr, info_ptr);
+
+	return (PngInfo) {width, height, color_type};
+}</pre>
+<p>This helper function reads in the PNG data, and then it asks libpng to perform several transformations based on the PNG type:</p>
+<ul>
+<li><span style="line-height: 13px;">Transparency information is converted into a full alpha channel.</span></li>
+<li>Grayscale images are converted to 8-bit.</li>
+<li>Paletted images are converted to full RGB.</li>
+<li>RGB images get an alpha channel added, if none is present.</li>
+<li>Color channels are converted to 8-bit, if less than 8-bit or 16-bit.</li>
+</ul>
+<p>The PNG is then updated with the new transformations and the new color type is stored into <code>color_type</code>.</p>
+<p>For the next step, we&#8217;ll add a helper function to decode the PNG image data into raw image data:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">static DataHandle read_entire_png_image(
+	const png_structp png_ptr, 
+	const png_infop info_ptr, 
+	const png_uint_32 height) 
+{
+	const png_size_t row_size = png_get_rowbytes(png_ptr, info_ptr);
+	const int data_length = row_size * height;
+	assert(row_size &gt; 0);
+
+	png_byte* raw_image = malloc(data_length);
+	assert(raw_image != NULL);
+
+	png_byte* row_ptrs[height];
+
+	png_uint_32 i;
+	for (i = 0; i &lt; height; i++) {
+		row_ptrs[i] = raw_image + i * row_size;
+	}
+
+	png_read_image(png_ptr, &amp;row_ptrs[0]);
+
+	return (DataHandle) {raw_image, data_length};
+}</pre>
+<p>First, we allocate a block of memory large enough to hold the decoded image data. Since libpng wants to decode things line by line, we also need to setup an array on the stack that contains a set of pointers into this image data, one pointer for each line. We can then call <code>png_read_image()</code> to decode all of the PNG data and then we return that as a <code>DataHandle</code>.</p>
+<p>Let&#8217;s add the last helper method:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">static GLenum get_gl_color_format(const int png_color_format) {
+	assert(png_color_format == PNG_COLOR_TYPE_GRAY
+	    || png_color_format == PNG_COLOR_TYPE_RGB_ALPHA
+	    || png_color_format == PNG_COLOR_TYPE_GRAY_ALPHA);
+
+	switch (png_color_format) {
+		case PNG_COLOR_TYPE_GRAY:
+			return GL_LUMINANCE;
+		case PNG_COLOR_TYPE_RGB_ALPHA:
+			return GL_RGBA;
+		case PNG_COLOR_TYPE_GRAY_ALPHA:
+			return GL_LUMINANCE_ALPHA;
+	}
+
+	return 0;
+}</pre>
+<p>This function will read in the PNG color format and return the matching OpenGL color format. We expect that after the transformations that we did, the PNG color format will be either <code>PNG_COLOR_TYPE_GRAY</code>, <code>PNG_COLOR_TYPE_GRAY_ALPHA</code>, or <code>PNG_COLOR_TYPE_RGB_ALPHA</code>, so we assert against those types.</p>
+<p>To wrap up our image loading code, we just need to add the release method:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">void release_raw_image_data(const RawImageData* data) {
+	assert(data != NULL);
+	free((void*)data-&gt;data);
+}</pre>
+<p>We&#8217;ll call this when we&#8217;re done with the raw data and can return the associated memory to the heap.</p>
+<h3>The benefits of using libpng versus platform-specific code</h3>
+<p>At this point, you might be asking why we simply didn&#8217;t use what each platform offers us, such as <code>BitmapFactory.decode???</code> on Android, where <code>???</code> is one of the decode methods. Using platform specific code means that we would have to duplicate the code for each platform, so on Android we would wrap some code around <code>BitmapFactory</code>, and on the other platforms we would do something else. This might be a good idea if the platform-specific code was better at the job; however, in personal testing on the Nexus 7, using <code>BitmapFactory</code> actually seems to be a lot slower than just using libpng directly. </p>
+<p>Here were the timings I observed for loading a single PNG file from the <em>assets</em> folder and uploading it into an OpenGL texture:</p>
+<pre>
+iPhone 5, libpng:       ~28ms
+Nexus 7, libpng:        ~35ms
+Nexus 7, BitmapFactory: ~93ms
+</pre>
+<p>&nbsp;<br />
+To reduce possible sources of slowdown, I avoided JNI and had the Java code upload the data directly into a texture, and return the texture object ID to C. I also used <code>inScaled = false</code> and placed the image in the assets folder to avoid extra scaling; if someone has extra insight into this issue, I would definitely love to hear it! I can only surmise that there must be a lot of extra stuff going on behind the scenes, or that the overhead of doing this from Java using the Dalvik VM is just so great that it results in that much of a slowdown. The Nexus 7 is a powerful Android device, so these timings are going to be much worse on slower Android devices. Since libpng is faster than the platform-specific alternative, at least on Android, and since maintaining one set of code is easier than maintaining separate code for each platform, I&#8217;ve decided to just use libpng on all platforms for PNG image decoding.</p>
+<p>Just for fun, here are the emscripten numbers on a MacBook Air with a 1.7 GHz Intel Core i5 and 4GB 1333 Mhz DDR3 RAM, loading an uncompressed HTML with embedded resources from the local filesystem:</p>
+<p>Chrome 28, first time: ~318ms<br />
+Chrome 28, reload:      ~67ms<br />
+Firefox 22:             ~27ms</p>
+<p>Interestingly enough, the code ran faster when it was compiled <em>without</em> the closure compiler and LLVM LTO.</p>
+<h4>Wrapping up the rest of the changes to the core folder</h4>
+<p>Let&#8217;s wrap up the rest of the changes to the core folder by adding the following files:</p>
+<p><em>config.h</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#define LOGGING_ON 1</pre>
+<p>We&#8217;ll use this to control whether logging should be turned on or off.</p>
+<p><em>macros.h</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#define UNUSED(x) (void)(x)</pre>
+<p>This will help us suppress compiler warnings related to unused parameters, which is useful for JNI methods which get called by Java.</p>
+<p><em>asset_utils.h</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_gl.h&quot;
+
+GLuint load_png_asset_into_texture(const char* relative_path);
+GLuint build_program_from_assets(
+	const char* vertex_shader_path, const char* fragment_shader_path);</pre>
+<p>We&#8217;ll use these helper methods in <em>game.c</em> to make it easier to load in the texture and shaders.</p>
+<p><em>asset_utils.c</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;asset_utils.h&quot;
+#include &quot;image.h&quot;
+#include &quot;platform_asset_utils.h&quot;
+#include &quot;shader.h&quot;
+#include &quot;texture.h&quot;
+#include &lt;assert.h&gt;
+#include &lt;stdlib.h&gt;
+
+GLuint load_png_asset_into_texture(const char* relative_path) {
+	assert(relative_path != NULL);
+
+	const FileData png_file = get_asset_data(relative_path);
+	const RawImageData raw_image_data = 
+		get_raw_image_data_from_png(png_file.data, png_file.data_length);
+	const GLuint texture_object_id = load_texture(
+		raw_image_data.width, raw_image_data.height, 
+		raw_image_data.gl_color_format, raw_image_data.data);
+
+	release_raw_image_data(&amp;raw_image_data);
+	release_asset_data(&amp;png_file);
+
+	return texture_object_id;
+}
+
+GLuint build_program_from_assets(
+	const char* vertex_shader_path, const char* fragment_shader_path) {
+	assert(vertex_shader_path != NULL);
+	assert(fragment_shader_path != NULL);
+
+	const FileData vertex_shader_source = get_asset_data(vertex_shader_path);
+	const FileData fragment_shader_source = get_asset_data(fragment_shader_path);
+	const GLuint program_object_id = build_program(
+		vertex_shader_source.data, vertex_shader_source.data_length,
+		fragment_shader_source.data, fragment_shader_source.data_length);
+
+	release_asset_data(&amp;vertex_shader_source);
+	release_asset_data(&amp;fragment_shader_source);
+
+	return program_object_id;
+}</pre>
+<p>This is the implementation for <em>asset_utils.h</em>. We&#8217;ll use <code>load_png_asset_into_texture()</code> to load a PNG file from the assets folder into an OpenGL texture, and we&#8217;ll use <code>build_program_from_assets()</code> to load in two shaders from the assets folder and compile and link them into an OpenGL shader program.</p>
+<h4>Updating <em>game.c</em></h4>
+<p>We&#8217;ll need to update <em>game.c</em> to use all of the new code that we&#8217;ve added. Delete everything that&#8217;s there and replace it with the following start to our new code:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;game.h&quot;
+#include &quot;asset_utils.h&quot;
+#include &quot;buffer.h&quot;
+#include &quot;image.h&quot;
+#include &quot;platform_gl.h&quot;
+#include &quot;platform_asset_utils.h&quot;
+#include &quot;shader.h&quot;
+#include &quot;texture.h&quot;
+
+static GLuint texture;
+static GLuint buffer;
+static GLuint program;
+
+static GLint a_position_location;
+static GLint a_texture_coordinates_location;
+static GLint u_texture_unit_location;
+
+// position X, Y, texture S, T
+static const float rect[] = {-1.0f, -1.0f, 0.0f, 0.0f,
+		                     -1.0f,  1.0f, 0.0f, 1.0f,
+		                      1.0f, -1.0f, 1.0f, 0.0f,
+		                      1.0f,  1.0f, 1.0f, 1.0f};</pre>
+<p>We&#8217;ve added our includes, a few local variables to hold the OpenGL objects and shader attribute and uniform locations, and an array of floats which contains a set of positions and texture coordinates for a rectangle that will completely fill the screen. We&#8217;ll use that to draw our texture onto the screen.</p>
+<p>Let&#8217;s continue the code:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">void on_surface_created() {
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+}
+
+void on_surface_changed() {
+	texture = load_png_asset_into_texture(&quot;textures/air_hockey_surface.png&quot;);
+	buffer = create_vbo(sizeof(rect), rect, GL_STATIC_DRAW);
+	program = build_program_from_assets(&quot;shaders/shader.vsh&quot;, &quot;shaders/shader.fsh&quot;);
+
+	a_position_location = glGetAttribLocation(program, &quot;a_Position&quot;);
+	a_texture_coordinates_location = 
+		glGetAttribLocation(program, &quot;a_TextureCoordinates&quot;);
+	u_texture_unit_location = glGetUniformLocation(program, &quot;u_TextureUnit&quot;);
+}</pre>
+<p><code>glClearColor()</code> is just as we were doing it before. In <code>on_surface_changed()</code>, we load in a texture from <em>textures/air_hockey_surface.png</em>, we create a VBO from the data stored in <code>rect</code>, and then we build an OpenGL shader program from the shaders located at <em>shaders/shader.vsh</em> and <em>shaders/shader.fsh</em>. Once we have the program loaded, we use it to grab the attribute and uniform locations out of the shader.</p>
+<p>We haven&#8217;t yet defined the code to load in the actual assets from the file system, since a good part of that is platform-specific. When we do, we&#8217;ll take care to set things up so that these relative paths &#8220;just work&#8221;.</p>
+<p>Let&#8217;s complete <em>game.c</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">void on_draw_frame() {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	glUseProgram(program);
+
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, texture);
+	glUniform1i(u_texture_unit_location, 0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, buffer);
+	glVertexAttribPointer(a_position_location, 2, GL_FLOAT, GL_FALSE, 
+		4 * sizeof(GL_FLOAT), BUFFER_OFFSET(0));
+	glVertexAttribPointer(a_texture_coordinates_location, 2, GL_FLOAT, GL_FALSE, 
+		4 * sizeof(GL_FLOAT), BUFFER_OFFSET(2 * sizeof(GL_FLOAT)));
+	glEnableVertexAttribArray(a_position_location);
+	glEnableVertexAttribArray(a_texture_coordinates_location);
+	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+}</pre>
+<p>In the draw loop, we clear the screen, set the shader program, bind the texture and VBO, setup the attributes using <code>glVertexAttribPointer()</code>, and then draw to the screen with <code>glDrawArrays()</code>. If you&#8217;ve looked at the <a href="http://www.learnopengles.com/android-lesson-one-getting-started/" >Java tutorials</a> before, one thing you&#8217;ll notice is that it&#8217;s a bit easier to use <code>glVertexAttribPointer()</code> from C than it is from Java. For one, if we were using client-side arrays, we could just pass the array without worrying about any <code>ByteBuffer</code>s, and for two, we can use the <code>sizeof</code> operator to get the size of a datatype in bytes, so no need to hardcode that.</p>
+<p>This wraps up everything for the core folder, so in the next few steps, we&#8217;re going to add in the necessary platform wrappers to get this working on Android.</p>
+<h3>Adding the common platform code</h3>
+<p>These new files should go in <em>/airhockey/src/platform/common</em>:</p>
+<p><em>platform_file_utils.h</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#pragma once
+typedef struct {
+	const long data_length;
+	const void* data;
+	const void* file_handle;
+} FileData;
+
+FileData get_file_data(const char* path);
+void release_file_data(const FileData* file_data);</pre>
+<p>We&#8217;ll use this to read data from the file system on iOS and emscripten. We&#8217;ll also use <code>FileData</code> for our Android asset reading code. We won&#8217;t define the implementation of the functions for now since we won&#8217;t need them for Android.</p>
+<p><em>platform_asset_utils.h</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_file_utils.h&quot;
+
+FileData get_asset_data(const char* relative_path);
+void release_asset_data(const FileData* file_data);</pre>
+<p>We&#8217;ll use this to read in assets. For Android this will be specialized code since it will use the <code>AssetManager</code> class to read files straight from the APK file. </p>
+<p><em>platform_log.h</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_macros.h&quot;
+#include &quot;config.h&quot;
+
+void _debug_log_v(const char* tag, const char* text, ...) PRINTF_ATTRIBUTE(2, 3);
+void _debug_log_d(const char* tag, const char* text, ...) PRINTF_ATTRIBUTE(2, 3);
+void _debug_log_w(const char* tag, const char* text, ...) PRINTF_ATTRIBUTE(2, 3);
+void _debug_log_e(const char* tag, const char* text, ...) PRINTF_ATTRIBUTE(2, 3);
+
+#define DEBUG_LOG_PRINT_V(tag, fmt, ...) do { if (LOGGING_ON) _debug_log_v(tag, &quot;%s:%d:%s(): &quot; fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); } while (0)
+#define DEBUG_LOG_PRINT_D(tag, fmt, ...) do { if (LOGGING_ON) _debug_log_d(tag, &quot;%s:%d:%s(): &quot; fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); } while (0)
+#define DEBUG_LOG_PRINT_W(tag, fmt, ...) do { if (LOGGING_ON) _debug_log_w(tag, &quot;%s:%d:%s(): &quot; fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); } while (0)
+#define DEBUG_LOG_PRINT_E(tag, fmt, ...) do { if (LOGGING_ON) _debug_log_e(tag, &quot;%s:%d:%s(): &quot; fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); } while (0)
+
+#define DEBUG_LOG_WRITE_V(tag, text) DEBUG_LOG_PRINT_V(tag, &quot;%s&quot;, text)
+#define DEBUG_LOG_WRITE_D(tag, text) DEBUG_LOG_PRINT_D(tag, &quot;%s&quot;, text)
+#define DEBUG_LOG_WRITE_W(tag, text) DEBUG_LOG_PRINT_W(tag, &quot;%s&quot;, text)
+#define DEBUG_LOG_WRITE_E(tag, text) DEBUG_LOG_PRINT_E(tag, &quot;%s&quot;, text)
+
+#define CRASH(e) DEBUG_LOG_WRITE_E(&quot;Assert&quot;, #e); __builtin_trap()</pre>
+<p>This contains a bunch of macros to help us do logging from our core game code. <code>CRASH()</code> is a special macro that will log the message passed to it, then call <code>__builtin_trap()</code> to stop execution. We used this macro above when we were loading in the PNG file.</p>
+<p><em>platform_macros.h</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#if defined(__GNUC__)
+#define PRINTF_ATTRIBUTE(format_pos, arg_pos) __attribute__((format(printf, format_pos, arg_pos)))
+#else
+#define PRINTF_ATTRIBUTE(format_pos, arg_pos)
+#endif</pre>
+<p>This is a special macro that helps the compiler do format checking when checking the formats that we pass to our log functions.</p>
+<h3>Updating the Android code</h3>
+<p>For the Android target, we have a bit of cleanup to do first. Let&#8217;s open up the Android project in Eclipse, get rid of <em>GameLibJNIWrapper.java</em> and update <em>RendererWrapper.java</em> as follows:</p>
+<pre class="brush: java; title: ; notranslate" title="">package com.learnopengles.airhockey;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
+
+import android.content.Context;
+import android.opengl.GLSurfaceView.Renderer;
+
+import com.learnopengles.airhockey.platform.PlatformFileUtils;
+
+public class RendererWrapper implements Renderer {	
+	static {
+		System.loadLibrary(&quot;game&quot;);		
+	}
+	
+	private final Context context;	
+	
+	public RendererWrapper(Context context) {
+		this.context = context;
+	}
+	
+	@Override
+	public void onSurfaceCreated(GL10 gl, EGLConfig config) {		
+		PlatformFileUtils.init_asset_manager(context.getAssets());
+		on_surface_created();
+	}
+
+	@Override
+	public void onSurfaceChanged(GL10 gl, int width, int height) {
+		on_surface_changed(width, height);
+	}
+
+	@Override
+	public void onDrawFrame(GL10 gl) {
+		on_draw_frame();
+	}
+	
+	private static native void on_surface_created();
+
+	private static native void on_surface_changed(int width, int height);
+
+	private static native void on_draw_frame();
+}</pre>
+<p>We&#8217;ve moved the native methods into <code>RendererWrapper</code> itself. The new <code>RendererWrapper</code> wants a <code>Context</code> passed into its contructor, so give it one by updating the constructor call in <em>MainActivity.java</em> as follows:</p>
+<pre class="brush: java; title: ; notranslate" title="">glSurfaceView.setRenderer(new RendererWrapper(this));</pre>
+<p>For Android, we&#8217;ll be using the <code><a href="http://developer.android.com/reference/android/content/res/AssetManager.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://developer.android.com']);">AssetManager</a></code> to read in assets that are compiled directly into the APK file. We&#8217;ll need a way to pass a reference to the <code>AssetManager</code> to our C code, so let&#8217;s create a new class in a new package called <code>com.learnopengles.airhockey.platform</code> called <code>PlatformFileUtils</code>, and add the following code:</p>
+<pre class="brush: java; title: ; notranslate" title="">package com.learnopengles.airhockey.platform;
+
+import android.content.res.AssetManager;
+
+public class PlatformFileUtils {
+	public static native void init_asset_manager(AssetManager assetManager);	
+}</pre>
+<p>We are calling <code>init_asset_manager()</code> from <code>RendererWrapper.onSurfaceCreated()</code>, which you can see just a few lines above.</p>
+<h4>Updating the JNI code</h4>
+<p>We&#8217;ll also need to add platform-specific JNI code to the <em>jni</em> folder in the <em>android</em> folder. Let&#8217;s start off with <em>platform_asset_utils.c</em>:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_asset_utils.h&quot;
+#include &quot;macros.h&quot;
+#include &quot;platform_log.h&quot;
+#include &lt;android/asset_manager_jni.h&gt;
+#include &lt;assert.h&gt;
+
+static AAssetManager* asset_manager;
+
+JNIEXPORT void JNICALL Java_com_learnopengles_airhockey_platform_PlatformFileUtils_init_1asset_1manager(
+	JNIEnv * env, jclass jclazz, jobject java_asset_manager) {
+	UNUSED(jclazz);
+	asset_manager = AAssetManager_fromJava(env, java_asset_manager);
+}
+
+FileData get_asset_data(const char* relative_path) {
+	assert(relative_path != NULL);
+	AAsset* asset = 
+		AAssetManager_open(asset_manager, relative_path, AASSET_MODE_STREAMING);
+	assert(asset != NULL);
+
+	return (FileData) { AAsset_getLength(asset), AAsset_getBuffer(asset), asset };
+}
+
+void release_asset_data(const FileData* file_data) {
+	assert(file_data != NULL);
+	assert(file_data-&gt;file_handle != NULL);
+	AAsset_close((AAsset*)file_data-&gt;file_handle);
+}</pre>
+<p>We use <code>get_asset_data()</code> to wrap Android&#8217;s native asset manager and return the data to the calling code, and we release the data when <code>release_asset_data()</code> is called. The advantage of doing things like this is that the asset manager can choose to optimize data loading by mapping the file into memory, and we can return that mapped data directly to the caller.</p>
+<p>Let&#8217;s add the logging code:</p>
+<p><em>platform_log.c</em></p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;platform_log.h&quot;
+#include &lt;android/log.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define ANDROID_LOG_VPRINT(priority)	\
+va_list arg_ptr; \
+va_start(arg_ptr, fmt); \
+__android_log_vprint(priority, tag, fmt, arg_ptr); \
+va_end(arg_ptr);
+
+void _debug_log_v(const char *tag, const char *fmt, ...) {
+	ANDROID_LOG_VPRINT(ANDROID_LOG_VERBOSE);
+}
+
+void _debug_log_d(const char *tag, const char *fmt, ...) {
+	ANDROID_LOG_VPRINT(ANDROID_LOG_DEBUG);
+}
+
+void _debug_log_w(const char *tag, const char *fmt, ...) {
+	ANDROID_LOG_VPRINT(ANDROID_LOG_WARN);
+}
+
+void _debug_log_e(const char *tag, const char *fmt, ...) {
+	ANDROID_LOG_VPRINT(ANDROID_LOG_ERROR);
+}</pre>
+<p>This code wraps Android&#8217;s native logging facilities.</p>
+<p>Finally, let&#8217;s rename <em>jni.c</em> to <em>renderer_wrapper.c</em> and update it to the following:</p>
+<pre class="brush: cpp; title: ; notranslate" title="">#include &quot;game.h&quot;
+#include &quot;macros.h&quot;
+#include &lt;jni.h&gt;
+
+/* These functions are called from Java. */
+
+JNIEXPORT void JNICALL Java_com_learnopengles_airhockey_RendererWrapper_on_1surface_1created(
+	JNIEnv * env, jclass cls) {
+	UNUSED(env);
+	UNUSED(cls);
+	on_surface_created();
+}
+
+JNIEXPORT void JNICALL Java_com_learnopengles_airhockey_RendererWrapper_on_1surface_1changed(
+	JNIEnv * env, jclass cls, jint width, jint height) {
+	UNUSED(env);
+	UNUSED(cls);
+	on_surface_changed();
+}
+
+JNIEXPORT void JNICALL Java_com_learnopengles_airhockey_RendererWrapper_on_1draw_1frame(
+	JNIEnv* env, jclass cls) {
+	UNUSED(env);
+	UNUSED(cls);
+	on_draw_frame();
+}</pre>
+<p>Nothing has really changed here; we just use the <code>UNUSED()</code> macro (defined earlier in <em>macros.h</em> in the core folder) to suppress some unnecessary compiler warnings.</p>
+<h3>Updating the NDK build files</h3>
+<p>We&#8217;re almost ready to build &#038; test, just a few things left to be done. Download libpng 1.6.2 from <a href="http://www.libpng.org/pub/png/libpng.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.libpng.org']);">http://www.libpng.org/pub/png/libpng.html</a> and place it in <em>/src/3rdparty/libpng</em>. To configure libpng, copy <em>pnglibconf.h.prebuilt</em> from <em>libpng/scripts/</em> to <em>libpng/</em> and remove the <em>.prebuilt</em> extension.</p>
+<p>To compile libpng with the NDK, let&#8217;s add a build script called <em>Android.mk</em> to the <em>libpng</em> folder, as follows:</p>
+<pre class="brush: plain; title: ; notranslate" title="">
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := libpng
+LOCAL_SRC_FILES = png.c \
+				  pngerror.c \
+				  pngget.c \
+				  pngmem.c \
+				  pngpread.c \
+				  pngread.c \
+				  pngrio.c \
+				  pngrtran.c \
+				  pngrutil.c \
+				  pngset.c \
+				  pngtrans.c \
+				  pngwio.c \
+				  pngwrite.c \
+				  pngwtran.c \
+				  pngwutil.c
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
+LOCAL_EXPORT_LDLIBS := -lz
+
+include $(BUILD_STATIC_LIBRARY)
+</pre>
+<p>This build script will tell the NDK tools to build a static library called libpng that is linked against zlib, which is built into Android. It also sets up the right variables so that we can easily import this library into our own projects, and we won&#8217;t even have to do anything special because the right includes and libs are already exported.</p>
+<p>Let&#8217;s also update the <em>Android.mk</em> file in our <em>jni</em> folder:</p>
+<pre class="brush: plain; title: ; notranslate" title="">LOCAL_PATH := $(call my-dir)
+PROJECT_ROOT_PATH := $(LOCAL_PATH)/../../../
+CORE_RELATIVE_PATH := ../../../core/
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    := game
+LOCAL_CFLAGS    := -Wall -Wextra
+LOCAL_SRC_FILES := platform_asset_utils.c \
+                   platform_log.c \
+                   renderer_wrapper.c \
+                   $(CORE_RELATIVE_PATH)/asset_utils.c \
+                   $(CORE_RELATIVE_PATH)/buffer.c \
+                   $(CORE_RELATIVE_PATH)/game.c \
+                   $(CORE_RELATIVE_PATH)/image.c \
+                   $(CORE_RELATIVE_PATH)/shader.c \
+                   $(CORE_RELATIVE_PATH)/texture.c \
+                  
+LOCAL_C_INCLUDES := $(PROJECT_ROOT_PATH)/platform/common/
+LOCAL_C_INCLUDES += $(PROJECT_ROOT_PATH)/core/
+LOCAL_STATIC_LIBRARIES := libpng
+LOCAL_LDLIBS := -lGLESv2 -llog -landroid
+
+include $(BUILD_SHARED_LIBRARY)
+
+$(call import-add-path,$(PROJECT_ROOT_PATH)/3rdparty)
+$(call import-module,libpng)</pre>
+<p>Our new build script links in the new files that we&#8217;ve created in <em>core</em>, and it also imports libpng from the <em>3rdparty</em> folder and builds it as a static library that is then linked into our Android application.</p>
+<h3>Adding in the assets</h3>
+<p>The last step is to add in the assets into <em>/airhockey/assets</em>, which includes the textures and the shaders. To do this, download the assets from <a href="https://github.com/learnopengles/airhockey/tree/article-2-loading-png-file/assets" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">https://github.com/learnopengles/airhockey/tree/article-2-loading-png-file/assets</a> and place them in your <em>airhockey</em> folder. To have them automatically included in the APK, follow these steps:</p>
+<ol>
+<li>Delete the existing <em>assets</em> folder from the project.</li>
+<li>Right-click the project and select Properties. In the window that appears, select Resource-&gt;Linked Resources and click New….</li>
+<li>Enter &#8216;ASSETS_LOC&#8217; as the name, and &#8216;${PROJECT_LOC}/../../../assets&#8217; as the location. Once that&#8217;s done, click OK until the Properties window is closed.</li>
+<li>Right-click the project again and select New->Folder, enter &#8216;assets&#8217; as the name, select Advanced, select Link to alternate location (Linked Folder), select Variables…, select ASSETS_LOC, and select OK, then Finish.</li>
+</ol>
+<p>You should now have a new <em>assets</em> folder that is linked to the <em>assets</em> folder that we created in the <em>airhockey</em> root. More information can be found on Stack Overflow: <a href="http://stackoverflow.com/questions/6843181/how-to-link-assets-www-folder-in-eclipse-phonegap-android-project" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://stackoverflow.com']);">How to link assets/www folder in Eclipse / Phonegap / Android project?</a></p>
+<h3>Running the app</h3>
+<p>We should be able to check out the new code now. If you run the app on your Android emulator or device, it should look similar to the following image:</p>
+<p><a href="http://www.learnopengles.com/wordpress/wp-content/uploads/2013/07/texture-nexus-7.png" ><img src="http://www.learnopengles.com/wordpress/wp-content/uploads/2013/07/texture-nexus-7-187x300.png" alt="Texture on the Nexus 7" width="187" height="300" class="aligncenter size-medium wp-image-2031" /></a></p>
+<p>The texture looks a bit stretched/squashed, because we are currently asking OpenGL to fill the screen with that texture. With a basic framework in place, we can start adding some more detail in future lessons and start turning this into an actual game.</p>
+<h3>Debugging NDK code</h3>
+<p>While developing this project, I had to hook up a debugger as something was going bad in the PNG loading code, and I just wasn&#8217;t sure what. It turns out that I had confused a <code>png_bytep</code>* with a <code>png_byte</code>* &#8212; the &#8216;p&#8217; in the first one means that it&#8217;s already a pointer, so I didn&#8217;t have to put another star there. I had some issues using the debugging at first, so here are some tips that might help you out if you want to hook up the debugger:</p>
+<ol>
+<li><span style="line-height: 13px;">Your project absolutely cannot have any spaces in its path. Otherwise, the debugger will inexplicably fail to connect.</span></li>
+<li>The native code needs to be built with NDK_DEBUG=1; see &#8220;Debugging native applications&#8221; on this page: <a href="http://tools.android.com/recent/usingthendkplugin" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://tools.android.com']);">Using the NDK plugin</a>.</li>
+<li>Android will not wait for gdb to connect before executing the code. Add SystemClock.sleep(10000); to RendererWrapper&#8217;s onSurfaceCreated() method to add a sufficient delay to hit your breakpoints.</li>
+</ol>
+<p>Once that&#8217;s done, you can start debugging from Eclipse by right-clicking the project and selecting Debug As-&gt;Android Native Application.</p>
+<h3>Exploring further</h3>
+<p>The full source code for this lesson can be found at the <a href="https://github.com/learnopengles/airhockey/tree/article-2-loading-png-file" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">GitHub project</a>. For a &#8220;friendlier&#8221; introduction to OpenGL ES 2 that is focused on Java and Android, see <a href="http://www.learnopengles.com/android-lesson-one-getting-started/" >Android Lesson One: Getting Started</a> or <a href="http://pragprog.com/book/kbogla/opengl-es-2-for-android" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://pragprog.com']);">OpenGL ES 2 for Android: A Quick-Start Guide</a>.</p>
+<p>What could we do to further streamline the code? If we were using C++, we could take advantage of destructors to create, for example, a FileData that cleans itself up when it goes out of scope. I&#8217;d also like to make the structs private somehow, as their internals don&#8217;t really need to be exposed to clients. What else would you do?</p>
+<h3>Further reading</h3>
+<ul>
+<li><a href="http://www.mail-archive.com/fltk@easysw.com/msg01082.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.mail-archive.com']);">[fltk.general] Decoding png already in memory</a></li>
+<li><a href="http://blog.rarepebble.com/32/android-resources-from-cpp/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://blog.rarepebble.com']);">Accessing Android Resources from C++</a></li>
+<li><a href="http://mortoray.com/2012/08/21/android-ndk-cross-compile-setup-libpng-and-freetype/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://mortoray.com']);">Android NDK Cross-Compile Setup (libpng and freetype)</a></li>
+<li><a href="http://stackoverflow.com/questions/1644868/c-define-macro-for-debug-printing" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://stackoverflow.com']);">C #define macro for debug printing</a></li>
+<li><a href="https://github.com/cocos2d/cocos2d-x/tree/master" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">Cocos2d-x source code</a></li>
+<li><a href="http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://docs.oracle.com']);">Java Native Interface Specification</a></li>
+<li><a href="http://www.libpng.org/pub/png/libpng-manual.txt" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.libpng.org']);">libpng-manual.txt &#8211; A description on how to use and modify libpng</a></li>
+<li><a href="http://sbcgamesdev.blogspot.ca/2012/12/load-images-under-android-with-ndk-and.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://sbcgamesdev.blogspot.ca']);">Load images under Android with NDK and JNI</a></li>
+<li><a href="http://bitsquid.blogspot.ca/2012/01/sensible-error-handling-part-1.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bitsquid.blogspot.ca']);">Sensible Error Handling: Part 1</a></li>
+<li><a href="http://gamesfromwithin.com/the-always-evolving-coding-style" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gamesfromwithin.com']);">The Always-Evolving Coding Style</a></li>
+<li><a href="http://my.safaribooksonline.com/book/programming/android/9781849691529/rendering-graphics-with-opengl-es/ch06lvl1sec69" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://my.safaribooksonline.com']);">Time for action – loading a texture in OpenGL ES</a></li>
+<li><a href="http://tools.android.com/recent/usingthendkplugin" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://tools.android.com']);">Using the NDK plugin</a></li>
+</ul>
+<p>In the <a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/" >next</a> two posts, we&#8217;ll look at adding support for iOS and emscripten. Now that we&#8217;ve built up this base, it actually won&#8217;t take too much work!</p>
+
+<div style="padding: 15px 15px 0 15px; margin: 0 0 0 0; border: 1px solid #e6e6e6; background: #fafafa; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;">
+        <iframe border="0px" height="182px" seamless="true" scrolling="no" src="http://pragprog.com/products/buy_now_insert/kbogla" width="155px" style="float: left; margin: 0 15px 5px 0; padding: 0; border: none;">Buy Now</iframe>
+    <div>
+		<h4 style="display: inline;">About the book</h4>
+    	<div style="margin-top: 0.7em;"><p>Android is booming like never before, with millions of devices shipping every day. In <em><a href="http://pragprog.com/book/kbogla/opengl-es-2-for-android" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://pragprog.com']);">OpenGL ES 2 for Android: A Quick-Start Guide</a></em>, you’ll learn all about shaders and the OpenGL pipeline, and discover the power of OpenGL ES 2.0, which is much more feature-rich than its predecessor.</p><p>It’s never been a better time to learn how to create your own 3D games and live wallpapers. If you can program in Java and you have a creative vision that you’d like to share with the world, then this is the book for you.</div>
+	</div>
+</div><div class="addtoany_share_save_container addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_dd addtoany_share_save" href="http://www.addtoany.com/share_save" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.addtoany.com']);"><img src="http://www.learnopengles.com/wordpress/wp-content/plugins/add-to-any/share_save_256_24.png" width="256" height="24" alt="Share"/></a>
+<script type="text/javascript"><!--
+wpa2a.script_load();
+//--></script>
+</div></div>	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="http://www.learnopengles.com/tag/assert/" rel="tag">assert</a><a href="http://www.learnopengles.com/tag/asset-manager/" rel="tag">asset manager</a><a href="http://www.learnopengles.com/tag/debugging/" rel="tag">debugging</a><a href="http://www.learnopengles.com/tag/error-handling/" rel="tag">error handling</a><a href="http://www.learnopengles.com/tag/gdb/" rel="tag">GDB</a><a href="http://www.learnopengles.com/tag/libpng/" rel="tag">libpng</a><a href="http://www.learnopengles.com/tag/ndk/" rel="tag">NDK</a></span></footer></article><!-- #post-## -->	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="http://www.learnopengles.com/calling-opengl-from-c-on-the-web-by-using-emscripten-sharing-common-code-with-android-and-ios/" rel="prev"><span class="meta-nav">Previous Post</span>Calling OpenGL from C on the Web by Using Emscripten, Sharing Common Code with Android and iOS</a><a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/" rel="next"><span class="meta-nav">Next Post</span>Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2: Adding Support for iOS</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="comments" class="comments-area">
+
+	
+	<h2 class="comments-title">
+		18 thoughts on &ldquo;Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2, Using (Almost) the Same Code on iOS, Android, and Emscripten&rdquo;	</h2>
+
+	
+	<ol class="comment-list">
+				<li id="comment-1627" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.learnopengles.com/developing-a-simple-game-of-air-hockey-using-c-and-opengl-es-2-for-android-ios-and-the-web/"   rel='external nofollow' class='url'>Developing a Simple Game of Air Hockey Using C++ and OpenGL ES 2 for Android, iOS, and the Web | Learn OpenGL ES</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1628" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/"   rel='external nofollow' class='url'>Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2: Adding Support for iOS | Learn OpenGL ES</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1632" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.learnopengles.com/calling-opengl-from-c-on-the-web-by-using-emscripten-sharing-common-code-with-android-and-ios/"   rel='external nofollow' class='url'>Calling OpenGL from C on the Web by Using Emscripten, Sharing Common Code with Android and iOS | Learn OpenGL ES</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1634" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-emscripten/"   rel='external nofollow' class='url'>Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2: Adding Support for Emscripten | Learn OpenGL ES</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1748" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-1748" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/5dfe401083b8f03e0810961d840f1ebe?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://none." onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','']);"  rel='external nofollow' class='url'>BK</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1748">
+							<time datetime="2013-09-15T15:56:27+00:00">
+								September 15, 2013 at 3:56 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, I really appreciate your fantastic explanation of loading Texture through Open GL ES 2.0.<br />
+And really thank you to get code of your projects by GIT.</p>
+<p>But I have a beginner level-problem. That is, I don&#8217;t know how to make &#8216;png.h&#8217;</p>
+<p>I downloaded &#8216;libpng&#8217; and extract the list of files that is written in your example code/&#8230;./3rdParty/&#8230;/android.mk.</p>
+<p>Then I try to build &#8216;static library&#8217;, but I got nothing.</p>
+<p>Could you give me some hints or advice to let me do right way to get &#8216;png.h&#8217; which is used in your explanation.</p>
+<p>Really thank you for posting amazing tutorial and saving me, a beginner at Open GL ES 2.0</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1748#respond' onclick='return addComment.moveForm("div-comment-1748", "1748", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1750" class="comment byuser comment-author-oes_admin bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-1750" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1750">
+							<time datetime="2013-09-16T14:44:50+00:00">
+								September 16, 2013 at 2:44 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi BK,</p>
+<p>The &#8220;png.h&#8221; file will come with libpng, so there will be nothing to build. If you are getting errors about that file, it sounds like it might be an include path problem. You just need to do the following to include libpng in your NDK build:</p>
+<p>1) Copy pnglibconf.h.prebuilt from libpng/scripts/ to libpng/ and remove the .prebuilt extension.<br />
+2) Create a new file called &#8220;Android.mk&#8221; and place it in the libpng/ folder. That file should have the following contents:<br />
+LOCAL_PATH := $(call my-dir)</p>
+<p>include $(CLEAR_VARS)</p>
+<p>LOCAL_MODULE := libpng<br />
+LOCAL_SRC_FILES = png.c \<br />
+                  pngerror.c \<br />
+                  pngget.c \<br />
+                  pngmem.c \<br />
+                  pngpread.c \<br />
+                  pngread.c \<br />
+                  pngrio.c \<br />
+                  pngrtran.c \<br />
+                  pngrutil.c \<br />
+                  pngset.c \<br />
+                  pngtrans.c \<br />
+                  pngwio.c \<br />
+                  pngwrite.c \<br />
+                  pngwtran.c \<br />
+                  pngwutil.c<br />
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)<br />
+LOCAL_EXPORT_LDLIBS := -lz</p>
+<p>include $(BUILD_STATIC_LIBRARY)</p>
+<p>3) To actually call this static library from your build script, you need to add the following to your jni Android.mk:</p>
+<p>LOCAL_STATIC_LIBRARIES := libpng</p>
+<p>&#8230;</p>
+<p>And at the very end of the file: </p>
+<p>$(call import-add-path,$(PROJECT_ROOT_PATH)/3rdparty)<br />
+$(call import-module,libpng)</p>
+<p>Replace $(PROJECT_ROOT_PATH)/3rdparth with wherever you placed the libpng folder. If you want to use PROJECT_ROOT_PATH, you have to define it at the top of the file like this:</p>
+<p>PROJECT_ROOT_PATH := $(LOCAL_PATH)/../../../</p>
+<p>Adjusting that to match your path.</p>
+<p>I think the easiest way is to just clone everything from Github and build it like that, as that way you shouldn&#8217;t need to change anything. I just tried cloning the github repo for this lesson (<a href="https://github.com/learnopengles/airhockey.git" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://github.com']);" rel="nofollow">https://github.com/learnopengles/airhockey.git</a>), downloaded libpng 1.6.5 (<a href="http://www.libpng.org/pub/png/libpng.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.libpng.org']);" rel="nofollow">http://www.libpng.org/pub/png/libpng.html</a>) and I was able to compile the code with ndk-build run in the jni directory. What errors are you seeing?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1750#respond' onclick='return addComment.moveForm("div-comment-1750", "1750", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1751" class="comment byuser comment-author-oes_admin bypostauthor even depth-3">
+			<article id="div-comment-1751" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1751">
+							<time datetime="2013-09-16T14:47:54+00:00">
+								September 16, 2013 at 2:47 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>When you clone the project from github, you will already have a libpng folder in 3rdparty which contains the Android.mk file. When you download and unzip libpng from the Internet, just paste all the files directly in that libpng folder, and not in a subfolder. I&#8217;m thinking that might be the cause, too.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1751#respond' onclick='return addComment.moveForm("div-comment-1751", "1751", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1752" class="comment byuser comment-author-oes_admin bypostauthor odd alt depth-2">
+			<article id="div-comment-1752" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1752">
+							<time datetime="2013-09-16T14:49:32+00:00">
+								September 16, 2013 at 2:49 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>If you&#8217;re not looking to write the code in C, there&#8217;s also a much easier/friendlier approach that uses Java, here: <a href="http://www.learnopengles.com/android-lesson-four-introducing-basic-texturing/"  rel="nofollow">http://www.learnopengles.com/android-lesson-four-introducing-basic-texturing/</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1752#respond' onclick='return addComment.moveForm("div-comment-1752", "1752", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1753" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-1753" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/5dfe401083b8f03e0810961d840f1ebe?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn">BK</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1753">
+							<time datetime="2013-09-16T23:47:56+00:00">
+								September 16, 2013 at 11:47 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thank you so much about your help.  I downloaded your project then linking the folders that we needed. Then, it works. Thank you!!!!!!!!:)</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1753#respond' onclick='return addComment.moveForm("div-comment-1753", "1753", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1755" class="comment byuser comment-author-oes_admin bypostauthor odd alt depth-2">
+			<article id="div-comment-1755" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1755">
+							<time datetime="2013-09-17T15:32:33+00:00">
+								September 17, 2013 at 3:32 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Glad it worked! <img src="http://www.learnopengles.com/wordpress/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> </p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1755#respond' onclick='return addComment.moveForm("div-comment-1755", "1755", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1935" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-1935" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/0947d94cf3c0fc8b1781a00b39611185?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn">skadush</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1935">
+							<time datetime="2013-11-08T06:07:16+00:00">
+								November 8, 2013 at 6:07 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi,</p>
+<p>Me again..</p>
+<p>Got some question again.. In chapter 6.6 you have a variable like this<br />
+        m[0] = a/ aspect;<br />
+        m[1] = 0f;<br />
+        m[2] = 0f;<br />
+        m[3] = 0f;</p>
+<p>        m[4] = 0f;<br />
+        m[5] = a;<br />
+        m[6] = 0f;<br />
+        m[7] = 0f;</p>
+<p>        m[8] = 0f;<br />
+        m[9] = 0f;<br />
+        m[10] = -((f + n) / (f &#8211; n));<br />
+        m[11] = -1f;</p>
+<p>        m[12] = 0f;<br />
+        m[13] = 0f;<br />
+        m[14] = -((2f * f * n) / (f &#8211; n));<br />
+        m[15] = 0f;</p>
+<p>Although you explain whats the use of it. You havent explain why you put the computation on a certain m[i]. Like this one m[5]=a then majority of it is value of 0f.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1935#respond' onclick='return addComment.moveForm("div-comment-1935", "1935", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1937" class="comment byuser comment-author-oes_admin bypostauthor odd alt depth-2">
+			<article id="div-comment-1937" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1937">
+							<time datetime="2013-11-08T13:14:23+00:00">
+								November 8, 2013 at 1:14 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Skadush,</p>
+<p>I just wouldn&#8217;t worry about this too much. It&#8217;s like if you start learning how to repair a car, you don&#8217;t need to know the math behind the combustion of a certain air/fuel mixture; you just need to know that engines burn fuel in order to work. If you&#8217;re curious, there is a good derivation of the math available on this website: <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.songho.ca']);" rel="nofollow">http://www.songho.ca/opengl/gl_projectionmatrix.html</a>. This will explain the derivation of each part of the matrix in detail.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1937#respond' onclick='return addComment.moveForm("div-comment-1937", "1937", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1936" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-1936" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/0947d94cf3c0fc8b1781a00b39611185?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn">skadush</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1936">
+							<time datetime="2013-11-08T06:55:44+00:00">
+								November 8, 2013 at 6:55 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>No dont mind the question.. i cant delete it. BTW i realize that you have a math error on chapter 6.7 on matrix matrix multiplication.</p>
+<p>the answer should<br />
+8   5<br />
+20 16(not 13 because 4 X 1 = 4, and 12 + 4 = 16) <img src="http://www.learnopengles.com/wordpress/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" /> </p>
+<p>Is that correct or my calculation is wrong?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1936#respond' onclick='return addComment.moveForm("div-comment-1936", "1936", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1938" class="comment byuser comment-author-oes_admin bypostauthor odd alt depth-2">
+			<article id="div-comment-1938" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1938">
+							<time datetime="2013-11-08T13:21:23+00:00">
+								November 8, 2013 at 1:21 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I double-checked with WolframAlpha and {{8, 5}, {20, 13}} is indeed the correct result. For 13, you would be adding M(row, column) = M1(2, 1) * M2(1, 2) + M1(2, 2) * M2(2, 2) = 3*3 + 4*1 = 9 + 4 = 13.</p>
+<p>You can experiment with matrix multiplication here: <a href="http://www.wolframalpha.com/input/?i=matrix+multiplication+calculator" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.wolframalpha.com']);" rel="nofollow">http://www.wolframalpha.com/input/?i=matrix+multiplication+calculator</a><br />
+With some more info available here: <a href="http://mathworld.wolfram.com/MatrixMultiplication.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://mathworld.wolfram.com']);" rel="nofollow">http://mathworld.wolfram.com/MatrixMultiplication.html</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1938#respond' onclick='return addComment.moveForm("div-comment-1938", "1938", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1945" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.learnopengles.com/finishing-up-our-native-air-hockey-project-with-touch-events-and-basic-collision-detection/"   rel='external nofollow' class='url'>Finishing Up Our Native Air Hockey Project With Touch Events and Basic Collision Detection | Learn OpenGL ES</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1987" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-1987" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/478fb59950a56e444dc9e45196e0fcb3?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn">Linker Tinker</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1987">
+							<time datetime="2013-12-16T00:20:12+00:00">
+								December 16, 2013 at 12:20 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I receive this error message when running on the iPhone IOS simulator.</p>
+<p>Undefined symbols for architecture i386:<br />
+  &#8220;_png_create_info_struct&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+  &#8220;_png_create_read_struct&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+  &#8220;_png_destroy_read_struct&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+  &#8220;_png_get_IHDR&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_get_color_type&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_get_io_ptr&#8221;, referenced from:<br />
+      _read_png_data_callback in image.o<br />
+  &#8220;_png_get_rowbytes&#8221;, referenced from:<br />
+      _read_entire_png_image in image.o<br />
+  &#8220;_png_get_valid&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_read_end&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+  &#8220;_png_read_image&#8221;, referenced from:<br />
+      _read_entire_png_image in image.o<br />
+  &#8220;_png_read_info&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_read_update_info&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_set_add_alpha&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_set_expand_gray_1_2_4_to_8&#8243;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_set_longjmp_fn&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+  &#8220;_png_set_packing&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_set_palette_to_rgb&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_set_read_fn&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+  &#8220;_png_set_scale_16&#8243;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_set_tRNS_to_alpha&#8221;, referenced from:<br />
+      _read_and_update_info in image.o<br />
+  &#8220;_png_sig_cmp&#8221;, referenced from:<br />
+      _get_raw_image_data_from_png in image.o<br />
+ld: symbol(s) not found for architecture i386<br />
+clang: error: linker command failed with exit code 1 (use -v to see invocation)</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1987#respond' onclick='return addComment.moveForm("div-comment-1987", "1987", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1995" class="comment byuser comment-author-oes_admin bypostauthor even depth-2">
+			<article id="div-comment-1995" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/bf1e12a76e72dcbae8e6e0f8c2ea73ed?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://www.learnopengles.com"   rel='external nofollow' class='url'>Admin</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-1995">
+							<time datetime="2013-12-19T15:16:12+00:00">
+								December 19, 2013 at 3:16 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Linker Tinker, you&#8217;ll need to have the libpng files linked in your Xcode project. In the next post (<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/"  rel="nofollow">http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/</a>) please check out the section titled &#8220;Adding the libpng files&#8221; under &#8220;Updating the iOS code&#8221;.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=1995#respond' onclick='return addComment.moveForm("div-comment-1995", "1995", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-2037" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-2037" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1e38ac28c15c9e9685c3c5fc88129e94?s=34&amp;d=identicon&amp;r=G' class='avatar avatar-34 photo' height='34' width='34' />						<b class="fn"><a href="http://mepem.com/pemcode" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://mepem.com']);"  rel='external nofollow' class='url'>iam</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#comment-2037">
+							<time datetime="2014-01-15T04:32:23+00:00">
+								January 15, 2014 at 4:32 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I downloaded the project and compiled it (after adding the libpng files) but it does not run&#8230;.  </p>
+<p>01-14 22:24:09.382: A/libc(17902): Fatal signal 11 (SIGSEGV) at 0&#215;00000000 (code=1), thread 17915 (Thread-9486)</p>
+<p>I have other Android NDK OpenGL apps that work on my Nexus 7 but this one fails</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply">
+					<a class='comment-reply-link' href='/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/?replytocom=2037#respond' onclick='return addComment.moveForm("div-comment-2037", "2037", "respond", "1961")'>Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+	</ol><!-- .comment-list -->
+
+	
+	
+	
+						<span style="position:absolute;left:-100px;width:0;visibility:hidden;display:none;">
+		<a style="visibility:hidden;" href="http://www.learnopengles.com/wordpress?commentid=b107088c9d" rel="nofollow">Add Comment</a>
+		<a style="visibility:hidden;" href="http://www.learnopengles.com/wordpress?loginid=b107088c9d" rel="nofollow">Register</a>
+		</span>	<div style="visibility:hidden;display:none;">
+	<br/>
+	<br/>
+	<br/>
+	<form action="http://www.learnopengles.com/wordpress/wp-comments-post.php" method="post" id="commentform1" style="visibility:hidden;display:none;">
+	<p><input name="author" id="author" value="" size="22"  aria-required="true" type="text">
+	<label for="author"><small>Name (required)</small></label></p>
+
+	<p><input name="email" id="email" value="" size="22"  aria-required="true" type="text">
+	<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+	<p><input name="url" id="url" value="" size="22" type="text">
+	<label for="url"><small>Website</small></label></p>
+	<p><textarea name="comment" id="comment" cols="58" rows="10" ></textarea></p>
+
+	<p><!-- 
+	<input name="submit" id="submit" value="Submit Comment" type="submit"> 
+	-->
+	<input name="comment_post_ID" value="1961" id="comment_post_ID" type="hidden">
+	<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+	</p>
+
+	<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="bc1ae4585a" type="hidden"></p>
+	</form>
+	</div>
+				<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.learnopengles.com/wordpress/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='1961' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+							<script type='text/javascript'>
+	// <![CDATA[
+	ref2xJS = escape( document[ 'referrer' ] );
+	document.write("<input type='hidden' name='ref2xJS' value='"+ref2xJS+"'>");
+	// ]]>
+	</script>
+    <noscript><input type="hidden" name="JSONST" value="NS1"></noscript>
+
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+<noscript><p><strong>Currently you have JavaScript disabled. In order to post comments, please make sure JavaScript and Cookies are enabled, and reload the page.</strong> <a href="http://enable-javascript.com/" rel="nofollow external" >Click here for instructions</a> on how to enable JavaScript in your browser.</p></noscript>
+<input type="hidden" name="3a0cebcbd7c2692db567b3b7872d9dfc" value="f4c979e74d199db4651738cc2ce82ca3" />
+					</form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-23646705-1'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		
+</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Learn how to develop mobile graphics using OpenGL ES 2</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="nav_menu-4" class="widget widget_nav_menu"><h1 class="widget-title">Android Tutorials</h1><div class="menu-android-tutorials-container"><ul id="menu-android-tutorials" class="menu"><li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-122"><a href="http://www.learnopengles.com/android-lesson-one-getting-started/" >Lesson One: Getting Started</a></li>
+<li id="menu-item-294" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-294"><a href="http://www.learnopengles.com/android-lesson-two-ambient-and-diffuse-lighting/" >Lesson Two: Ambient and Diffuse Lighting</a></li>
+<li id="menu-item-340" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-340"><a href="http://www.learnopengles.com/android-lesson-three-moving-to-per-fragment-lighting/" >Lesson Three: Moving to Per-Fragment Lighting</a></li>
+<li id="menu-item-605" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-605"><a href="http://www.learnopengles.com/android-lesson-four-introducing-basic-texturing/" >Lesson Four: Introducing Basic Texturing</a></li>
+<li id="menu-item-688" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-688"><a href="http://www.learnopengles.com/android-lesson-five-an-introduction-to-blending/" >Lesson Five: An Introduction to Blending</a></li>
+<li id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-809"><a href="http://www.learnopengles.com/android-lesson-six-an-introduction-to-texture-filtering/" >Lesson Six: An Introduction to Texture Filtering</a></li>
+<li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-916"><a href="http://www.learnopengles.com/android-lesson-seven-an-introduction-to-vertex-buffer-objects-vbos/" >Lesson Seven: An Introduction to Vertex Buffer Objects</a></li>
+<li id="menu-item-1062" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1062"><a href="http://www.learnopengles.com/android-lesson-eight-an-introduction-to-index-buffer-objects-ibos/" >Lesson Eight: An Introduction to Index Buffer Objects</a></li>
+</ul></div></aside><aside id="nav_menu-8" class="widget widget_nav_menu"><h1 class="widget-title">WebGL Tutorials</h1><div class="menu-webgl-tutorials-container"><ul id="menu-webgl-tutorials" class="menu"><li id="menu-item-473" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-473"><a href="http://www.learnopengles.com/webgl-lesson-one-getting-started/" >Lesson One: Getting Started</a></li>
+</ul></div></aside><aside id="nav_menu-6" class="widget widget_nav_menu"><h1 class="widget-title">Articles</h1><div class="menu-articles-container"><ul id="menu-articles" class="menu"><li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-618"><a href="http://www.learnopengles.com/how-to-embed-webgl-into-a-wordpress-post/" >How to Embed Webgl into a WordPress Post</a></li>
+<li id="menu-item-808" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-808"><a href="http://www.learnopengles.com/listening-to-android-touch-events-and-acting-on-them/" >Listening to Android Touch Events, and Acting on Them</a></li>
+<li id="menu-item-859" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-859"><a href="http://www.learnopengles.com/rotating-an-object-with-touch-events/" >Rotating An Object With Touch Events</a></li>
+<li id="menu-item-1206" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1206"><a href="http://www.learnopengles.com/how-to-use-opengl-es-2-in-an-android-live-wallpaper/" >How to Use OpenGL ES 2 in an Android Live Wallpaper</a></li>
+<li id="menu-item-1260" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1260"><a href="http://www.learnopengles.com/understanding-opengls-matrices/" >Understanding OpenGL&#8217;s Matrices</a></li>
+</ul></div></aside><aside id="nav_menu-9" class="widget widget_nav_menu"><h1 class="widget-title">Air Hockey Project</h1><div class="menu-air-hockey-project-container"><ul id="menu-air-hockey-project" class="menu"><li id="menu-item-2252" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2252"><a href="http://www.learnopengles.com/developing-a-simple-game-of-air-hockey-using-c-and-opengl-es-2-for-android-ios-and-the-web/" >A Simple Game of Air Hockey Using C and OpenGL ES 2</a></li>
+<li id="menu-item-2249" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2249"><a href="http://www.learnopengles.com/calling-opengl-from-android-using-the-ndk/" >Calling OpenGL on Android via the NDK</a></li>
+<li id="menu-item-2250" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2250"><a href="http://www.learnopengles.com/calling-opengl-from-c-on-ios-sharing-common-code-with-android/" >Calling OpenGL on iOS, Sharing Common Code with Android</a></li>
+<li id="menu-item-2251" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2251"><a href="http://www.learnopengles.com/calling-opengl-from-c-on-the-web-by-using-emscripten-sharing-common-code-with-android-and-ios/" >Calling OpenGL on the web via Emscripten</a></li>
+<li id="menu-item-2254" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-2254"><a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/" >Displaying a PNG as a Texture on Android</a></li>
+<li id="menu-item-2256" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2256"><a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-ios/" >Displaying a PNG as a Texture on iOS</a></li>
+<li id="menu-item-2255" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2255"><a href="http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-adding-support-for-emscripten/" >Displaying a PNG as a Texture on Emscripten</a></li>
+<li id="menu-item-2257" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2257"><a href="http://www.learnopengles.com/adding-a-3d-perspective-and-object-rendering-to-our-air-hockey-project-in-native-c-code/" >Adding a 3d Perspective</a></li>
+<li id="menu-item-2253" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2253"><a href="http://www.learnopengles.com/finishing-up-our-native-air-hockey-project-with-touch-events-and-basic-collision-detection/" >Finishing Up With Touch Events and Basic Collision Detection</a></li>
+</ul></div></aside><aside id="text-9" class="widget widget_text"><h1 class="widget-title">Get the Book</h1>			<div class="textwidget"><div align="center"><iframe border="0px" height="182px" seamless="true" scrolling="no" src="http://pragprog.com/products/buy_now_insert/kbogla" width="155px">
+Buy Now
+</iframe></div></div>
+		</aside><aside id="text-7" class="widget widget_text"><h1 class="widget-title">Android Market App</h1>			<div class="textwidget"><div style="text-align:center;"><a href="https://market.android.com/details?id=com.learnopengles.android" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://market.android.com']);"  target="_blank"><img src="http://www.learnopengles.com/wordpress/wp-content/uploads/2011/05/market-qr-code.png" alt="QR code for link to the app on the Android Market." width="120" height="120"></a></div><br>
+<a href="https://market.android.com/details?id=com.learnopengles.android" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://market.android.com']);" target="_blank">Download the lessons and tutorials directly from the Android Market.</a></div>
+		</aside><aside id="text-8" class="widget widget_text"><h1 class="widget-title">Get the Source Code</h1>			<div class="textwidget">Source code is available at the <a href="https://github.com/learnopengles/Learn-OpenGLES-Tutorials" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://github.com']);"  target="_blank">GitHub repository</a>.</div>
+		</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+					<li>
+				<a href="http://www.learnopengles.com/opengl-roundup-april-29-2014-milestones/">OpenGL Roundup, April 29, 2014: Milestones</a>
+						</li>
+					<li>
+				<a href="http://www.learnopengles.com/opengl-roundup-april-10-2014-gdc-2014-report-libgdx-1-0-data-oriented-design-and-more/">OpenGL Roundup, April 10, 2014: GDC 2014 Report, libgdx 1.0, Data-Oriented Design and More&#8230;</a>
+						</li>
+					<li>
+				<a href="http://www.learnopengles.com/a-performance-comparison-between-java-and-c-on-the-nexus-5/">A performance comparison between Java and C on the Nexus 5</a>
+						</li>
+					<li>
+				<a href="http://www.learnopengles.com/how-powerful-is-your-nexus-7/">How Powerful Is Your Nexus 7?</a>
+						</li>
+					<li>
+				<a href="http://www.learnopengles.com/finishing-up-our-native-air-hockey-project-with-touch-events-and-basic-collision-detection/">Finishing Up Our Native Air Hockey Project With Touch Events and Basic Collision Detection</a>
+						</li>
+				</ul>
+		</aside><aside id="categories-3" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-172"><a href="http://www.learnopengles.com/category/air-hockey-project/" title="View all posts filed under Air Hockey Project">Air Hockey Project</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.learnopengles.com/category/android/" title="View all posts filed under Android">Android</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.learnopengles.com/category/android-tutorials/" title="View all posts filed under Android Tutorials">Android Tutorials</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.learnopengles.com/category/articles/" title="View all posts filed under Articles">Articles</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="http://www.learnopengles.com/category/game-development/" title="View all posts filed under Game Development">Game Development</a>
+</li>
+	<li class="cat-item cat-item-101"><a href="http://www.learnopengles.com/category/ios/" title="View all posts filed under iOS">iOS</a>
+</li>
+	<li class="cat-item cat-item-170"><a href="http://www.learnopengles.com/category/ios-tutorials/" title="View all posts filed under iOS Tutorials">iOS Tutorials</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.learnopengles.com/category/miscellaneous/" title="View all posts filed under Miscellaneous">Miscellaneous</a>
+</li>
+	<li class="cat-item cat-item-173"><a href="http://www.learnopengles.com/category/native-development-c-cpp/" title="View all posts filed under Native Development (C, C++)">Native Development (C, C++)</a>
+</li>
+	<li class="cat-item cat-item-76"><a href="http://www.learnopengles.com/category/roundups/" title="View all posts filed under Roundups">Roundups</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://www.learnopengles.com/category/webgl/" title="View all posts filed under WebGL">WebGL</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="http://www.learnopengles.com/category/webgl-tutorials/" title="View all posts filed under WebGL Tutorials">WebGL Tutorials</a>
+</li>
+		</ul>
+</aside><aside id="linkcat-3" class="widget widget_links"><h1 class="widget-title">Reference Sites</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://developer.android.com/index.html" title="Google&#8217;s reference site for developing on Android." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://developer.android.com']);">Android Developers</a></li>
+<li><a href="http://www.opengl.org/" title="The industry&#8217;s foundation for high performance graphics." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.opengl.org']);">OpenGL</a></li>
+<li><a href="http://www.khronos.org/" title="Open standards for media authoring and acceleration." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.khronos.org']);">The Khronos Group</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-5" class="widget widget_links"><h1 class="widget-title">Resources</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://android-developers.blogspot.com/" title="Google&#8217;s official developer&#8217;s blog, on everything Android." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://android-developers.blogspot.com']);">Android Developer&#039;s Blog</a></li>
+<li><a href="http://www.dataorienteddesign.com/dodmain/dodmain.html" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.dataorienteddesign.com']);">Data-Oriented Design</a></li>
+<li><a href="http://gameprogrammingpatterns.com/index.html" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://gameprogrammingpatterns.com']);">Game Programming Patterns</a></li>
+<li><a href="http://www.khronos.org/webgl/wiki/Main_Page" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.khronos.org']);">Khronos WebGL Public Wiki</a></li>
+<li><a href="https://wiki.mozilla.org/Platform/GFX/MobileGPUs" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','']);">Platform/GFX/MobileGPUs</a></li>
+
+	</ul>
+</aside>
+<aside id="linkcat-2" class="widget widget_links"><h1 class="widget-title">Tutorials and Information</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.euclideanspace.com/" title="Learning math and physics to build a 3D world." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.euclideanspace.com']);">Euclidean Space</a></li>
+<li><a href="http://www.falloutsoftware.com/" title="OpenGL, DirectX, DirectDraw and 3D game programming tutorials." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.falloutsoftware.com']);">FalloutSoftware.com</a></li>
+<li><a href="http://ghoshehsoft.wordpress.com/" title="OpenGL ES 2.0 topics for Android" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://ghoshehsoft.wordpress.com']);">Ghoshehsoft&#039;s Blog</a></li>
+<li><a href="http://glprogramming.com/" title="Communal website for the OpenGL Help Network." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://glprogramming.com']);">GLProgramming</a></li>
+<li><a href="http://mindprod.com/jgloss/jgloss.html" title="Canadian Mind Products Java &amp; Internet Glossary" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://mindprod.com']);">Java glossary</a></li>
+<li><a href="http://arcsynthesis.org/gltut/" title="A detailed online webbook on modern OpenGL programming, using shaders." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://arcsynthesis.org']);">Learning Modern 3D Graphics Programming</a></li>
+<li><a href="http://learningwebgl.com/blog/" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://learningwebgl.com']);">Learning WebGL</a></li>
+<li><a href="http://nehe.gamedev.net/" title="OpenGL tutorials, demos, games and more." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://nehe.gamedev.net']);">NeHe Productions</a></li>
+<li><a href="https://en.wikibooks.org/wiki/OpenGL_Programming" target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','']);">OpenGL Programming WikiBook</a></li>
+<li><a href="http://www.songho.ca/opengl/index.html" title="Fundamental OpenGL tutorials and notes." target="_blank" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.songho.ca']);">songho.ca OpenGL Tutorials</a></li>
+
+	</ul>
+</aside>
+	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:'Loading a PNG into Memory and Displaying It as a Texture with OpenGL ES 2, Using (Almost) the Same Code on iOS, Android, and Emscripten',url:'http://www.learnopengles.com/loading-a-png-into-memory-and-displaying-it-as-a-texture-with-opengl-es-2-using-almost-the-same-code-on-ios-android-and-emscripten/'}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9'></script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9'></script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9'></script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.learnopengles.com/wordpress/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.learnopengles.com/wordpress/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = 2;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-includes/js/comment-reply.min.js?ver=3.9.1'></script>
+<script type='text/javascript' src='http://www.learnopengles.com/wordpress/wp-content/themes/twentyfourteen/js/functions.js?ver=20131209'></script>
+</body>
+</html>
+<!-- Dynamic page generated in 4.756 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-06-05 18:14:22 -->
+
+<!-- Compression = gzip -->

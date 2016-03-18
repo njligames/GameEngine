@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_device_touch" kind="class" prot="public">
+    <compoundname>njli::DeviceTouch</compoundname>
+    <basecompoundref refid="classnjli_1_1_device_input_time" prot="public" virt="non-virtual">njli::DeviceInputTime</basecompoundref>
+    <includes refid="_device_touch_8h" local="no">DeviceTouch.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1a8f2f389056e9750d3cee41875987c4fa" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+        <definition>const u8 njli::DeviceTouch::MAX_TOUCHES</definition>
+        <argsstring></argsstring>
+        <name>MAX_TOUCHES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="130" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1aa459469f52287f2085402117c13512f8" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::DeviceTouch::m_xpos</definition>
+        <argsstring></argsstring>
+        <name>m_xpos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="135" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1aec3c40c2adb1ba1bf5a13bf366bd3b6d" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::DeviceTouch::m_ypos</definition>
+        <argsstring></argsstring>
+        <name>m_ypos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="136" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1aefd5c83cec6edc7dcb7edeec2144c470" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::DeviceTouch::m_prev_xpos</definition>
+        <argsstring></argsstring>
+        <name>m_prev_xpos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="137" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1adc6f1bce3fa81e81f1a01ca55b2b3db7" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::DeviceTouch::m_prev_ypos</definition>
+        <argsstring></argsstring>
+        <name>m_prev_ypos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="138" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1adf8b9a7a96b90d0639aca0b9982a95d7" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long njli::DeviceTouch::m_address</definition>
+        <argsstring></argsstring>
+        <name>m_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="139" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1af4506b66dcc8e44597244c9a6827bd0d" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long njli::DeviceTouch::m_tapCount</definition>
+        <argsstring></argsstring>
+        <name>m_tapCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="140" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1a8702a0eb417f912b2b8733b2f21a8060" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::DeviceTouch::m_touchIndex</definition>
+        <argsstring></argsstring>
+        <name>m_touchIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="141" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1ad36aeb2b221ff37cf29d6b5f837d0d93" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::DeviceTouch::m_touchTotal</definition>
+        <argsstring></argsstring>
+        <name>m_touchTotal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="142" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_touch_1ae07cde00eac9eb6e816f261bdb0df9d4" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::DeviceTouch::m_scale</definition>
+        <argsstring></argsstring>
+        <name>m_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="143" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1aa56351410e0c6fe7ced6fafd4cde27f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceTouch::DeviceTouch</definition>
+        <argsstring>()</argsstring>
+        <name>DeviceTouch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="20" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1aa34b346fb2574885542d03fe8170ecbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceTouch::DeviceTouch</definition>
+        <argsstring>(const DeviceTouch &amp;rhs)</argsstring>
+        <name>DeviceTouch</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="33" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="33" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1aafb174d178edb785547de79d2c561417" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> &amp;</type>
+        <definition>DeviceTouch&amp; njli::DeviceTouch::operator=</definition>
+        <argsstring>(const DeviceTouch &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="46" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="46" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1aa0c19c372c26f011e3b60f0fbc5e8c87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceTouch::DeviceTouch</definition>
+        <argsstring>(const void *touch, int n, int N)</argsstring>
+        <name>DeviceTouch</name>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>touch</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="63" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1adc6021981c650837f9ddb1486972a9a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual njli::DeviceTouch::~DeviceTouch</definition>
+        <argsstring>()</argsstring>
+        <name>~DeviceTouch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="68" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a4bdc7a1fe5514893275e7e703c84e1c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* njli::DeviceTouch::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_device_input_time_1ac8042b5700a5c1ba5901e1e552e535e8">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="70" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a4895380f45fe67b759b2cf8464ef9287" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>virtual s32 njli::DeviceTouch::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_device_input_time_1a69e4bb4be69f3ac53f4514a58fd61021">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="71" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1afd1b650b59f3a0cfbe7ce4cc46536e93" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceTouch::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="72" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="72" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a3558b0f54614b5b080477be55feca7c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>btVector2</type>
+        <definition>btVector2 njli::DeviceTouch::getPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="94" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="94" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a0f129f4e01fcdb7b49f1c0156856235e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>btVector2</type>
+        <definition>btVector2 njli::DeviceTouch::getPreviousPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>getPreviousPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="99" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1ac4200c9bad22b0bc5650ddf011ad78d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int njli::DeviceTouch::getAddress</definition>
+        <argsstring>() const </argsstring>
+        <name>getAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="104" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a7263b3def6149971e8e7951bf61a7ec3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int njli::DeviceTouch::getTapCount</definition>
+        <argsstring>() const </argsstring>
+        <name>getTapCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="105" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a00c39635c7010b000a20eb490df7949c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int njli::DeviceTouch::getTouchIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>getTouchIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="106" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1adace454fae4319e399766ef2a978c069" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int njli::DeviceTouch::getTouchTotal</definition>
+        <argsstring>() const </argsstring>
+        <name>getTouchTotal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="107" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1af37ae2aa3c4b1bb24a1f69e32a0cd659" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::DeviceTouch::set</definition>
+        <argsstring>(const void *touch, int n, int N)</argsstring>
+        <name>set</name>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>touch</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="109" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="109" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1aab179cccc7d0c895455113d0706ae3b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::DeviceTouch::set</definition>
+        <argsstring>(u32 x, u32 y, int n, int N, float scaleFactor)</argsstring>
+        <name>set</name>
+        <param>
+          <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scaleFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="116" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="116" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a8f54436e475cb32dc1c9ee64805fe64b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float njli::DeviceTouch::getScale</definition>
+        <argsstring>() const </argsstring>
+        <name>getScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="128" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="128" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_device_touch_1a2707fe5acb996fe22b1b20ceb6b1e063" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::DeviceTouch::convert</definition>
+        <argsstring>(DeviceTouch &amp;t, const void *touch)</argsstring>
+        <name>convert</name>
+        <param>
+          <type><ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>touch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="133" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2963">
+        <label>njli::DeviceInputTime</label>
+        <link refid="classnjli_1_1_device_input_time"/>
+      </node>
+      <node id="2962">
+        <label>njli::DeviceTouch</label>
+        <link refid="classnjli_1_1_device_touch"/>
+        <childnode refid="2963" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2965">
+        <label>njli::DeviceInputTime</label>
+        <link refid="classnjli_1_1_device_input_time"/>
+      </node>
+      <node id="2964">
+        <label>njli::DeviceTouch</label>
+        <link refid="classnjli_1_1_device_touch"/>
+        <childnode refid="2965" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" line="18" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceTouch.h" bodystart="18" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_device_touch_1a2707fe5acb996fe22b1b20ceb6b1e063" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>convert</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a2c5cc0a5ead654efbbce74d08f490fa5" prot="protected" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>DeviceInputTime</name></member>
+      <member refid="classnjli_1_1_device_input_time_1af34c8fdf7626c83b3a106984c6218332" prot="protected" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>DeviceInputTime</name></member>
+      <member refid="classnjli_1_1_device_touch_1aa56351410e0c6fe7ced6fafd4cde27f4" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>DeviceTouch</name></member>
+      <member refid="classnjli_1_1_device_touch_1aa34b346fb2574885542d03fe8170ecbc" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>DeviceTouch</name></member>
+      <member refid="classnjli_1_1_device_touch_1aa0c19c372c26f011e3b60f0fbc5e8c87" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>DeviceTouch</name></member>
+      <member refid="classnjli_1_1_device_touch_1ac4200c9bad22b0bc5650ddf011ad78d9" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getAddress</name></member>
+      <member refid="classnjli_1_1_device_touch_1a4bdc7a1fe5514893275e7e703c84e1c3" prot="public" virt="virtual"><scope>njli::DeviceTouch</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_device_touch_1a3558b0f54614b5b080477be55feca7c8" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getPosition</name></member>
+      <member refid="classnjli_1_1_device_touch_1a0f129f4e01fcdb7b49f1c0156856235e" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getPreviousPosition</name></member>
+      <member refid="classnjli_1_1_device_touch_1a8f54436e475cb32dc1c9ee64805fe64b" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getScale</name></member>
+      <member refid="classnjli_1_1_device_touch_1a7263b3def6149971e8e7951bf61a7ec3" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getTapCount</name></member>
+      <member refid="classnjli_1_1_device_input_time_1ae80f7d4b32223221339d3ef3a8669a55" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getTimeStampFrame</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a6e6f73d5932fcbb2d17a74c52ac4280a" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getTimeStampTick</name></member>
+      <member refid="classnjli_1_1_device_touch_1a00c39635c7010b000a20eb490df7949c" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getTouchIndex</name></member>
+      <member refid="classnjli_1_1_device_touch_1adace454fae4319e399766ef2a978c069" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>getTouchTotal</name></member>
+      <member refid="classnjli_1_1_device_touch_1a4895380f45fe67b759b2cf8464ef9287" prot="public" virt="virtual"><scope>njli::DeviceTouch</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_device_touch_1adf8b9a7a96b90d0639aca0b9982a95d7" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_address</name></member>
+      <member refid="classnjli_1_1_device_touch_1aefd5c83cec6edc7dcb7edeec2144c470" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_prev_xpos</name></member>
+      <member refid="classnjli_1_1_device_touch_1adc6f1bce3fa81e81f1a01ca55b2b3db7" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_prev_ypos</name></member>
+      <member refid="classnjli_1_1_device_touch_1ae07cde00eac9eb6e816f261bdb0df9d4" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_scale</name></member>
+      <member refid="classnjli_1_1_device_touch_1af4506b66dcc8e44597244c9a6827bd0d" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_tapCount</name></member>
+      <member refid="classnjli_1_1_device_touch_1a8702a0eb417f912b2b8733b2f21a8060" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_touchIndex</name></member>
+      <member refid="classnjli_1_1_device_touch_1ad36aeb2b221ff37cf29d6b5f837d0d93" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_touchTotal</name></member>
+      <member refid="classnjli_1_1_device_touch_1aa459469f52287f2085402117c13512f8" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_xpos</name></member>
+      <member refid="classnjli_1_1_device_touch_1aec3c40c2adb1ba1bf5a13bf366bd3b6d" prot="private" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>m_ypos</name></member>
+      <member refid="classnjli_1_1_device_touch_1a8f2f389056e9750d3cee41875987c4fa" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>MAX_TOUCHES</name></member>
+      <member refid="classnjli_1_1_device_touch_1afd1b650b59f3a0cfbe7ce4cc46536e93" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_device_touch_1aafb174d178edb785547de79d2c561417" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_device_input_time_1ab1ca58d01db67a7ca5eb57bbbe07d929" prot="protected" virt="non-virtual" ambiguityscope="njli::DeviceInputTime::"><scope>njli::DeviceTouch</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_device_touch_1af37ae2aa3c4b1bb24a1f69e32a0cd659" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>set</name></member>
+      <member refid="classnjli_1_1_device_touch_1aab179cccc7d0c895455113d0706ae3b3" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>set</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a03eca1e2b0725a5be925f6ec5cd33b7b" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>setTimeStampFrame</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a6a06c7800f1925631dafb54671b2abd7" prot="public" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>setTimeStampTick</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a2c421a428c0d4fdc1311d91b7001f9fc" prot="protected" virt="non-virtual"><scope>njli::DeviceTouch</scope><name>~DeviceInputTime</name></member>
+      <member refid="classnjli_1_1_device_touch_1adc6021981c650837f9ddb1486972a9a2" prot="public" virt="virtual"><scope>njli::DeviceTouch</scope><name>~DeviceTouch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_timer_8cpp" kind="file">
+    <compoundname>Timer.cpp</compoundname>
+    <includes refid="_timer_8h" local="yes">Timer.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includes refid="_world_8h" local="yes">World.h</includes>
+    <includes refid="_timer_builder_8h" local="yes">TimerBuilder.h</includes>
+    <includes local="yes">btPrint.h</includes>
+    <incdepgraph>
+      <node id="34165">
+        <label>btIDebugDraw.h</label>
+      </node>
+      <node id="34133">
+        <label>lua.hpp</label>
+      </node>
+      <node id="34142">
+        <label>WorldLuaVirtualMachine.h</label>
+        <link refid="_world_lua_virtual_machine_8h"/>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+        <childnode refid="34143" relation="include">
+        </childnode>
+        <childnode refid="34145" relation="include">
+        </childnode>
+        <childnode refid="34148" relation="include">
+        </childnode>
+        <childnode refid="34150" relation="include">
+        </childnode>
+        <childnode refid="34151" relation="include">
+        </childnode>
+        <childnode refid="34152" relation="include">
+        </childnode>
+        <childnode refid="34153" relation="include">
+        </childnode>
+        <childnode refid="34154" relation="include">
+        </childnode>
+        <childnode refid="34120" relation="include">
+        </childnode>
+      </node>
+      <node id="34159">
+        <label>Camera.h</label>
+        <link refid="_camera_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34160" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+      </node>
+      <node id="34117">
+        <label>Timer.h</label>
+        <link refid="_timer_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34131" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34132" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+      </node>
+      <node id="34123">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="34124" relation="include">
+        </childnode>
+      </node>
+      <node id="34173">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="34128">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34141">
+        <label>queue</label>
+      </node>
+      <node id="34161">
+        <label>WorldClock.h</label>
+        <link refid="_world_clock_8h"/>
+        <childnode refid="34131" relation="include">
+        </childnode>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34132" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34147">
+        <label>btVector2.h</label>
+      </node>
+      <node id="34122">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="34123" relation="include">
+        </childnode>
+        <childnode refid="34125" relation="include">
+        </childnode>
+        <childnode refid="34126" relation="include">
+        </childnode>
+      </node>
+      <node id="34155">
+        <label>WorldSQLite.h</label>
+        <link refid="_world_s_q_lite_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34156" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34143">
+        <label>AbstractState.h</label>
+        <link refid="_abstract_state_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34144" relation="include">
+        </childnode>
+        <childnode refid="34125" relation="include">
+        </childnode>
+      </node>
+      <node id="34125">
+        <label>stdlib.h</label>
+      </node>
+      <node id="34146">
+        <label>DeviceInputTime.h</label>
+        <link refid="_device_input_time_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+      </node>
+      <node id="34177">
+        <label>btQuickprof.h</label>
+      </node>
+      <node id="34167">
+        <label>File.h</label>
+        <link refid="_file_8h"/>
+        <childnode refid="34124" relation="include">
+        </childnode>
+        <childnode refid="34126" relation="include">
+        </childnode>
+        <childnode refid="34125" relation="include">
+        </childnode>
+      </node>
+      <node id="34166">
+        <label>WorldHUD.h</label>
+        <link refid="_world_h_u_d_8h"/>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34167" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34168" relation="include">
+        </childnode>
+        <childnode refid="34169" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34120" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+      </node>
+      <node id="34163">
+        <label>Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+        <childnode refid="34164" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34147" relation="include">
+        </childnode>
+        <childnode refid="34160" relation="include">
+        </childnode>
+      </node>
+      <node id="34131">
+        <label>AbstractClock.h</label>
+        <link refid="_abstract_clock_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34127">
+        <label>string</label>
+      </node>
+      <node id="34150">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34120" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+      </node>
+      <node id="34145">
+        <label>DeviceTouch.h</label>
+        <link refid="_device_touch_8h"/>
+        <childnode refid="34146" relation="include">
+        </childnode>
+        <childnode refid="34147" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34140">
+        <label>map</label>
+      </node>
+      <node id="34148">
+        <label>Node.h</label>
+        <link refid="_node_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34149" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34147" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34174">
+        <label>WorldState.h</label>
+        <link refid="_world_state_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34143" relation="include">
+        </childnode>
+        <childnode refid="34145" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+      </node>
+      <node id="34160">
+        <label>btVector3.h</label>
+      </node>
+      <node id="34120">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="34154">
+        <label>PhysicsRayContact.h</label>
+        <link refid="_physics_ray_contact_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+      </node>
+      <node id="34156">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="34118">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34130" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34179">
+        <label>btPrint.h</label>
+      </node>
+      <node id="34130">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="34135">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="34162">
+        <label>WorldDebugDrawer.h</label>
+        <link refid="_world_debug_drawer_8h"/>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34163" relation="include">
+        </childnode>
+        <childnode refid="34165" relation="include">
+        </childnode>
+      </node>
+      <node id="34132">
+        <label>btClock.h</label>
+      </node>
+      <node id="34172">
+        <label>WorldSocket.h</label>
+        <link refid="_world_socket_8h"/>
+        <childnode refid="34173" relation="include">
+        </childnode>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34141" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34167" relation="include">
+        </childnode>
+      </node>
+      <node id="34158">
+        <label>GLPlatform.h</label>
+      </node>
+      <node id="34138">
+        <label>WorldFactory.h</label>
+        <link refid="_world_factory_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34120" relation="include">
+        </childnode>
+        <childnode refid="34139" relation="include">
+        </childnode>
+        <childnode refid="34130" relation="include">
+        </childnode>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34140" relation="include">
+        </childnode>
+        <childnode refid="34141" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+      </node>
+      <node id="34152">
+        <label>btManifoldPoint.h</label>
+      </node>
+      <node id="34144">
+        <label>btScalar.h</label>
+      </node>
+      <node id="34178">
+        <label>TimerBuilder.h</label>
+        <link refid="_timer_builder_8h"/>
+        <childnode refid="34120" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34130" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+      </node>
+      <node id="34164">
+        <label>bitset</label>
+      </node>
+      <node id="34149">
+        <label>AbstractActionable.h</label>
+        <link refid="_abstract_actionable_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34141" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+      </node>
+      <node id="34139">
+        <label>btHashMap.h</label>
+      </node>
+      <node id="34129">
+        <label>vector</label>
+      </node>
+      <node id="34170">
+        <label>WorldInput.h</label>
+        <link refid="_world_input_8h"/>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34151">
+        <label>btDispatcher.h</label>
+      </node>
+      <node id="34121">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+        <childnode refid="34128" relation="include">
+        </childnode>
+      </node>
+      <node id="34134">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34135" relation="include">
+        </childnode>
+      </node>
+      <node id="34116">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp</label>
+        <link refid="Timer.cpp"/>
+        <childnode refid="34117" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34136" relation="include">
+        </childnode>
+        <childnode refid="34178" relation="include">
+        </childnode>
+        <childnode refid="34179" relation="include">
+        </childnode>
+      </node>
+      <node id="34169">
+        <label>AbstractFrameBufferObject.h</label>
+        <link refid="_abstract_frame_buffer_object_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+      </node>
+      <node id="34175">
+        <label>WorldStateMachine.h</label>
+        <link refid="_world_state_machine_8h"/>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34176" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+      </node>
+      <node id="34137">
+        <label>cstddef</label>
+      </node>
+      <node id="34136">
+        <label>World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34137" relation="include">
+        </childnode>
+        <childnode refid="34138" relation="include">
+        </childnode>
+        <childnode refid="34142" relation="include">
+        </childnode>
+        <childnode refid="34155" relation="include">
+        </childnode>
+        <childnode refid="34157" relation="include">
+        </childnode>
+        <childnode refid="34159" relation="include">
+        </childnode>
+        <childnode refid="34161" relation="include">
+        </childnode>
+        <childnode refid="34162" relation="include">
+        </childnode>
+        <childnode refid="34166" relation="include">
+        </childnode>
+        <childnode refid="34170" relation="include">
+        </childnode>
+        <childnode refid="34171" relation="include">
+        </childnode>
+        <childnode refid="34172" relation="include">
+        </childnode>
+        <childnode refid="34174" relation="include">
+        </childnode>
+        <childnode refid="34175" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34157">
+        <label>WorldSound.h</label>
+        <link refid="_world_sound_8h"/>
+        <childnode refid="34158" relation="include">
+        </childnode>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34127" relation="include">
+        </childnode>
+      </node>
+      <node id="34124">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="34168">
+        <label>nanovg.h</label>
+      </node>
+      <node id="34153">
+        <label>Action.h</label>
+        <link refid="_action_8h"/>
+        <childnode refid="34149" relation="include">
+        </childnode>
+        <childnode refid="34118" relation="include">
+        </childnode>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34120" relation="include">
+        </childnode>
+        <childnode refid="34133" relation="include">
+        </childnode>
+        <childnode refid="34141" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+      </node>
+      <node id="34171">
+        <label>WorldResourceLoader.h</label>
+        <link refid="_world_resource_loader_8h"/>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34134" relation="include">
+        </childnode>
+        <childnode refid="34139" relation="include">
+        </childnode>
+        <childnode refid="34129" relation="include">
+        </childnode>
+      </node>
+      <node id="34126">
+        <label>stdio.h</label>
+      </node>
+      <node id="34119">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="34120" relation="include">
+        </childnode>
+        <childnode refid="34121" relation="include">
+        </childnode>
+        <childnode refid="34122" relation="include">
+        </childnode>
+        <childnode refid="34130" relation="include">
+        </childnode>
+      </node>
+      <node id="34176">
+        <label>AbstractStateMachine.h</label>
+        <link refid="_abstract_state_machine_8h"/>
+        <childnode refid="34119" relation="include">
+        </childnode>
+        <childnode refid="34143" relation="include">
+        </childnode>
+        <childnode refid="34177" relation="include">
+        </childnode>
+        <childnode refid="34141" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_timer_8cpp_1a4d0768c0d97829b5c252f9643bdc19f5" prot="public" static="no">
+        <name>FORMATSTRING</name>
+        <initializer>&quot;{\&quot;njli::Timer\&quot;:[]}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp" line="13" column="13" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Timer.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>1/8/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_timer_8h" kindref="compound">Timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_8h" kindref="compound">World.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_timer_builder_8h" kindref="compound">TimerBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORMATSTRING<sp/>&quot;{\&quot;njli::Timer\&quot;:[]}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btPrint.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer::Timer</ref>():</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Clock(new<sp/>btClock()),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>m_CurrentTime(0),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>m_IsPaused(false)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer::Timer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AbstractBuilder<sp/>&amp;builder):</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Clock(new<sp/>btClock()),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>m_CurrentTime(0),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>m_IsPaused(false)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer::Timer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Timer<sp/>&amp;copy):</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this),</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Clock(new<sp/>btClock()),</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>m_CurrentTime(0),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>m_IsPaused(false)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a7c164533d7a0cf91f4df5094349751fb" kindref="member">Timer::~Timer</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a4ffbc32862501214a88aaa1bb74612a6" kindref="member">m_Clock</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/>&amp;<ref refid="classnjli_1_1_timer_1a5f26bfd9a36f08f50323eaaa8bc763f7" kindref="member">Timer::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Timer<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_timer_1ade61056a72278c046a2e62b7ac0ceeee" kindref="member">Timer::calculateSerializeBufferSize</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="59"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>calculateSerializeBufferSize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a6557e298455bd31c62f93b83fa9d67df" kindref="member">Timer::serialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*<sp/>serializer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>serialize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_timer_1ae5daa12bf38a2370e444a64e42e961b4" kindref="member">Timer::getClassName</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="70"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Timer&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_timer_1a67d681ce97affb6b0e357e46bbfc9f11" kindref="member">Timer::getType</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="75"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1af34fa692a4626b3be31757c5714ed01e" kindref="member">Timer::type</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer::operator<sp/>std::string()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="80"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_json_j_l_i_1aac51324ec88a76dee9559a4282e01c9a" kindref="member">njli::JsonJLI::parse</ref>(string_format(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="_timer_8cpp_1a4d0768c0d97829b5c252f9643bdc19f5" kindref="member">FORMATSTRING</ref>).c_str());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/>**<ref refid="classnjli_1_1_timer_1a9767427df2dec250e9a471fb4ce2910a" kindref="member">Timer::createArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer</ref>**)<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a6c379949bd79510d934515f9a0aa4008" kindref="member">createArray</ref>(<ref refid="classnjli_1_1_timer_1af34fa692a4626b3be31757c5714ed01e" kindref="member">Timer::type</ref>(),<sp/>size);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a4227537f96733c0011573cf0441e131e" kindref="member">Timer::destroyArray</ref>(Timer<sp/>**array,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a40a00fcf24618fa8e4c037efe19119d9" kindref="member">destroyArray</ref>((<ref refid="classnjli_1_1_abstract_factory_object_1a4f7ae7bf09c7c9426e7d6023f7fd8dec" kindref="member">AbstractFactoryObject</ref>**)array,<sp/>size);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/>*<ref refid="classnjli_1_1_timer_1a3177c700256a5d3aaed07acafa8daacd" kindref="member">Timer::create</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(<ref refid="classnjli_1_1_timer_1af34fa692a4626b3be31757c5714ed01e" kindref="member">Timer::type</ref>()));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/>*<ref refid="classnjli_1_1_timer_1a3177c700256a5d3aaed07acafa8daacd" kindref="member">Timer::create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TimerBuilder<sp/>&amp;builder)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AbstractBuilder<sp/>*b<sp/>=<sp/>(AbstractBuilder<sp/>*)&amp;builder;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(*b));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/>*<ref refid="classnjli_1_1_timer_1ae7222227dcda651a0c5c1174718c38ae" kindref="member">Timer::clone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Timer<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ad45e7eac9f28b683a29fc3e397549d84" kindref="member">clone</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>Timer<sp/>*<ref refid="classnjli_1_1_timer_1a48596d76d1b038a3064b57b0793d69ec" kindref="member">Timer::copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Timer<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_timer_1afcd00947fc6d6c3a3a956ed57b4cd18b" kindref="member">Timer</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ad45e7eac9f28b683a29fc3e397549d84" kindref="member">clone</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" kindref="member">Timer::destroy</ref>(Timer<sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ace215cda602d0bc17315d755036fb497" kindref="member">destroy</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1ab8d6b66ba61c8acd2c706faccd0313c8" kindref="member">Timer::load</ref>(Timer<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Push<sp/>another<sp/>reference<sp/>to<sp/>the<sp/>table<sp/>on<sp/>top<sp/>of<sp/>the<sp/>stack<sp/>(so<sp/>we<sp/>know</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>where<sp/>it<sp/>is,<sp/>and<sp/>this<sp/>function<sp/>can<sp/>work<sp/>for<sp/>negative,<sp/>positive<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pseudo<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushvalue(L,<sp/>index);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushnil(L);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>nil;<sp/>-2<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(lua_next(L,<sp/>-2))</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>value;<sp/>-2<sp/>=&gt;<sp/>key;<sp/>-3<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>key<sp/>so<sp/>that<sp/>lua_tostring<sp/>does<sp/>not<sp/>modify<sp/>the<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushvalue(L,<sp/>-2);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>key;<sp/>-2<sp/>=&gt;<sp/>value;<sp/>-3<sp/>=&gt;<sp/>key;<sp/>-4<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key<sp/>=<sp/>lua_tostring(L,<sp/>-1);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value<sp/>=<sp/>lua_tostring(L,<sp/>-2);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_istable(L,<sp/>-2))</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1ab8d6b66ba61c8acd2c706faccd0313c8" kindref="member">Timer::load</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>L,<sp/>-2);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isnumber(L,<sp/>index))</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number<sp/>=<sp/>lua_tonumber(L,<sp/>index);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>number);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isstring(L,<sp/>index))</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*v<sp/>=<sp/>lua_tostring(L,<sp/>index);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>v);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isboolean(L,<sp/>index))</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>lua_toboolean(L,<sp/>index);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>v);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isuserdata(L,<sp/>index))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swig_lua_userdata<sp/>*usr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swig_type_info<sp/>*type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(lua_isuserdata(L,index));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usr=(swig_lua_userdata*)lua_touserdata(L,index);<sp/><sp/>/*<sp/>get<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>usr-&gt;type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>njli::AbstractFactoryObject<sp/>*object<sp/>=<sp/>static_cast&lt;njli::AbstractFactoryObject*&gt;(usr-&gt;ptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%s<sp/>=&gt;<sp/>%d:%s\n&quot;,<sp/>key,<sp/>object-&gt;getType(),<sp/>object-&gt;getClassName());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pop<sp/>value<sp/>+<sp/>copy<sp/>of<sp/>key,<sp/>leaving<sp/>original<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pop(L,<sp/>2);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>key;<sp/>-2<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>table<sp/>(when<sp/>lua_next<sp/>returns<sp/>0<sp/>it<sp/>pops<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>does<sp/>not<sp/>push<sp/>anything.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pop<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pop(L,<sp/>1);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stack<sp/>is<sp/>now<sp/>the<sp/>same<sp/>as<sp/>it<sp/>was<sp/>on<sp/>entry<sp/>to<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_timer_1af34fa692a4626b3be31757c5714ed01e" kindref="member">Timer::type</ref>()</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a6d56d4fbaf89fcf3e3d32839df05b444ac1dc8091d10d7ba28a1ea747c687f16f" kindref="member">JLI_OBJECT_TYPE_Timer</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a42a5df69255b8c27be94944e85f82ce0" kindref="member">Timer::tick</ref>()</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current<sp/>=<sp/><ref refid="classnjli_1_1_timer_1a4ffbc32862501214a88aaa1bb74612a6" kindref="member">m_Clock</ref>-&gt;getTimeMilliseconds();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a4ffbc32862501214a88aaa1bb74612a6" kindref="member">m_Clock</ref>-&gt;reset();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="classnjli_1_1_timer_1a41a4f6b6f65df4beef065232a19b45d7" kindref="member">m_IsPaused</ref>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a1ae3795457187736970ee2af90ae3a11" kindref="member">m_CurrentTime</ref><sp/>-=<sp/>current;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a7b6b18b762f9037a0c45683f45961f5f" kindref="member">Timer::start</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>total)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a1ae3795457187736970ee2af90ae3a11" kindref="member">m_CurrentTime</ref><sp/>=<sp/>total;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1ab7f75a80b1152e200a086f09ce1817c4" kindref="member">enablePause</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1ab7f75a80b1152e200a086f09ce1817c4" kindref="member">Timer::enablePause</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classnjli_1_1_timer_1ad5179a68a00431049949b2eecccad057" kindref="member">isPaused</ref>()<sp/>&amp;&amp;<sp/>enable)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a42a5df69255b8c27be94944e85f82ce0" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a4ffbc32862501214a88aaa1bb74612a6" kindref="member">m_Clock</ref>-&gt;reset();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_timer_1a41a4f6b6f65df4beef065232a19b45d7" kindref="member">m_IsPaused</ref><sp/>=<sp/>enable;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1ad5179a68a00431049949b2eecccad057" kindref="member">Timer::isPaused</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="216"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a41a4f6b6f65df4beef065232a19b45d7" kindref="member">m_IsPaused</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1ae8f6b8041497766a6e1c75ad4553a08d" kindref="member">Timer::isFinished</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="221"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a1ae3795457187736970ee2af90ae3a11" kindref="member">m_CurrentTime</ref><sp/>&lt;=<sp/>0;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1aad84e59bdd39bbedef798ba99b41a5a2" kindref="member">Timer::getTimeMillisecondsLeft</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="226"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_timer_1a1ae3795457187736970ee2af90ae3a11" kindref="member">m_CurrentTime</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp"/>
+  </compounddef>
+</doxygen>

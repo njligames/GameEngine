@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_scene_renderer" kind="class" prot="public">
+    <compoundname>njli::SceneRenderer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ICollide</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classnjli_1_1_scene_renderer_1a3cc2885eef70f7d94df082b75067e1e6" prot="private" static="no">
+        <type>std::pair&lt; btScalar, <ref refid="classnjli_1_1_node" kindref="compound">Node</ref> * &gt;</type>
+        <definition>typedef std::pair&lt;btScalar, Node*&gt; njli::SceneRenderer::Pair</definition>
+        <argsstring></argsstring>
+        <name>Pair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="964" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="964" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnjli_1_1_scene_renderer_1a913b28f6d06b3bf2dcb64da484213ec0" prot="private" static="no">
+        <type>std::multimap&lt; btScalar, <ref refid="classnjli_1_1_node" kindref="compound">Node</ref> * &gt;</type>
+        <definition>typedef std::multimap&lt;btScalar, Node*&gt; njli::SceneRenderer::MultiMap</definition>
+        <argsstring></argsstring>
+        <name>MultiMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="965" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="965" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classnjli_1_1_scene_renderer_1a8fa1cb988d3940a76d62d602bce4a768" prot="private" static="no">
+        <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_node" kindref="compound">Node</ref> * &gt;</type>
+        <definition>typedef btAlignedObjectArray&lt;Node*&gt; njli::SceneRenderer::Array</definition>
+        <argsstring></argsstring>
+        <name>Array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="966" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="966" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_scene_renderer_1ac85fcf4508c9e328543863cedead2449" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::SceneRenderer::m_drawn</definition>
+        <argsstring></argsstring>
+        <name>m_drawn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="968" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="968" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_renderer_1a12b3746707e4959332deab775a118113" prot="private" static="no" mutable="no">
+        <type><ref refid="structnjli_1_1_occlusion_buffer" kindref="compound">OcclusionBuffer</ref> *</type>
+        <definition>OcclusionBuffer* njli::SceneRenderer::m_ocb</definition>
+        <argsstring></argsstring>
+        <name>m_ocb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="969" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="969" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_renderer_1a0eaa363c2c013273aed8f0faf9ea0840" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* njli::SceneRenderer::m_Camera</definition>
+        <argsstring></argsstring>
+        <name>m_Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="970" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="970" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_renderer_1aa88771d764f9102c43e85562f09adf40" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_scene_renderer_1a913b28f6d06b3bf2dcb64da484213ec0" kindref="member">MultiMap</ref></type>
+        <definition>MultiMap njli::SceneRenderer::m_TranslucentEntities</definition>
+        <argsstring></argsstring>
+        <name>m_TranslucentEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="972" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="972" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_renderer_1a2a4a72716946016b2e9c094771f53a27" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_scene_renderer_1a8fa1cb988d3940a76d62d602bce4a768" kindref="member">Array</ref></type>
+        <definition>Array njli::SceneRenderer::m_OpaqueEntities</definition>
+        <argsstring></argsstring>
+        <name>m_OpaqueEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="973" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="973" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a6f7d2efc77dd86d0dcc14f2dfb023c1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::SceneRenderer::SceneRenderer</definition>
+        <argsstring>()</argsstring>
+        <name>SceneRenderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="975" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a1e9152c846d52166693856f668e140f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::SceneRenderer::SceneRenderer</definition>
+        <argsstring>(const SceneRenderer &amp;copy)</argsstring>
+        <name>SceneRenderer</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene_renderer" kindref="compound">SceneRenderer</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="976" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a4417ab5f7d2b7d4e191c4d0b8e91d2ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene_renderer" kindref="compound">SceneRenderer</ref> &amp;</type>
+        <definition>SceneRenderer&amp; njli::SceneRenderer::operator=</definition>
+        <argsstring>(const SceneRenderer &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene_renderer" kindref="compound">SceneRenderer</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="977" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1aa8b7633200769a68f2c95a308aa62a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::SceneRenderer::SceneRenderer</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>SceneRenderer</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="979" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1005" bodyend="1011"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a870e1c2090f107daf600d5a409bda43d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::SceneRenderer::Descent</definition>
+        <argsstring>(const btDbvtNode *node)</argsstring>
+        <name>Descent</name>
+        <param>
+          <type>const btDbvtNode *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="981" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1012" bodyend="1017"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a98ffa15fc5ba2bc9ffb19a49edece5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::SceneRenderer::Process</definition>
+        <argsstring>(const btDbvtNode *node, btScalar depth)</argsstring>
+        <name>Process</name>
+        <param>
+          <type>const btDbvtNode *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>btScalar</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="982" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1018" bodyend="1021"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1ade1d97a0ddcd87e7136f2b39ebf22535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::SceneRenderer::Process</definition>
+        <argsstring>(const btDbvtNode *leaf)</argsstring>
+        <name>Process</name>
+        <param>
+          <type>const btDbvtNode *</type>
+          <declname>leaf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="983" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1022" bodyend="1050"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1af7485f1ca45d1a047db37cfc4eb5426a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>SIMD_FORCE_INLINE <ref refid="structnjli_1_1_occlusion_buffer" kindref="compound">OcclusionBuffer</ref> *</type>
+        <definition>virtual SIMD_FORCE_INLINE OcclusionBuffer* njli::SceneRenderer::getOcclusionBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>getOcclusionBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="985" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="985" bodyend="989"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a0300489b54152bdc585d337ce618ef9f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>SIMD_FORCE_INLINE const <ref refid="structnjli_1_1_occlusion_buffer" kindref="compound">OcclusionBuffer</ref> *</type>
+        <definition>virtual SIMD_FORCE_INLINE const OcclusionBuffer* njli::SceneRenderer::getOcclusionBuffer</definition>
+        <argsstring>() const </argsstring>
+        <name>getOcclusionBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="990" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="990" bodyend="994"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a50263bdce686044b935ceb5a84508ee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>SIMD_FORCE_INLINE <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>virtual SIMD_FORCE_INLINE void njli::SceneRenderer::setOcclusionBuffer</definition>
+        <argsstring>(OcclusionBuffer *ocb)</argsstring>
+        <name>setOcclusionBuffer</name>
+        <param>
+          <type><ref refid="structnjli_1_1_occlusion_buffer" kindref="compound">OcclusionBuffer</ref> *</type>
+          <declname>ocb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="995" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="995" bodyend="998"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a7044798bb2772803b2dd1d4b3dc2620b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::SceneRenderer::getNumObjectsDrawn</definition>
+        <argsstring>() const </argsstring>
+        <name>getNumObjectsDrawn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="1000" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1052" bodyend="1055"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_renderer_1a886d857d64f2514f751a306b14232948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::SceneRenderer::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="1002" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="1057" bodyend="1076"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4003">
+        <label>btDbvt::ICollide</label>
+      </node>
+      <node id="4002">
+        <label>njli::SceneRenderer</label>
+        <link refid="classnjli_1_1_scene_renderer"/>
+        <childnode refid="4003" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4008">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="4009" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4010">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="4010" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="4005">
+        <label>btDbvt::ICollide</label>
+      </node>
+      <node id="4009">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4006">
+        <label>njli::OcclusionBuffer</label>
+        <link refid="structnjli_1_1_occlusion_buffer"/>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="4004">
+        <label>njli::SceneRenderer</label>
+        <link refid="classnjli_1_1_scene_renderer"/>
+        <childnode refid="4005" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4006" relation="usage">
+          <edgelabel>m_ocb</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="4007">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="4008" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4006" relation="usage">
+          <edgelabel>m_OcclusionBuffer</edgelabel>
+        </childnode>
+        <childnode refid="4004" relation="usage">
+          <edgelabel>m_SceneRenderer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="963" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="962" bodyend="1003"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_scene_renderer_1a8fa1cb988d3940a76d62d602bce4a768" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>Array</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a870e1c2090f107daf600d5a409bda43d" prot="public" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>Descent</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a7044798bb2772803b2dd1d4b3dc2620b" prot="public" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>getNumObjectsDrawn</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1af7485f1ca45d1a047db37cfc4eb5426a" prot="public" virt="virtual"><scope>njli::SceneRenderer</scope><name>getOcclusionBuffer</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a0300489b54152bdc585d337ce618ef9f" prot="public" virt="virtual"><scope>njli::SceneRenderer</scope><name>getOcclusionBuffer</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a0eaa363c2c013273aed8f0faf9ea0840" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>m_Camera</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1ac85fcf4508c9e328543863cedead2449" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>m_drawn</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a12b3746707e4959332deab775a118113" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>m_ocb</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a2a4a72716946016b2e9c094771f53a27" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>m_OpaqueEntities</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1aa88771d764f9102c43e85562f09adf40" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>m_TranslucentEntities</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a913b28f6d06b3bf2dcb64da484213ec0" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>MultiMap</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a4417ab5f7d2b7d4e191c4d0b8e91d2ad" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a3cc2885eef70f7d94df082b75067e1e6" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>Pair</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a98ffa15fc5ba2bc9ffb19a49edece5d5" prot="public" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>Process</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1ade1d97a0ddcd87e7136f2b39ebf22535" prot="public" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>Process</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a886d857d64f2514f751a306b14232948" prot="public" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>render</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a6f7d2efc77dd86d0dcc14f2dfb023c1b" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>SceneRenderer</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a1e9152c846d52166693856f668e140f1" prot="private" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>SceneRenderer</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1aa8b7633200769a68f2c95a308aa62a8e" prot="public" virt="non-virtual"><scope>njli::SceneRenderer</scope><name>SceneRenderer</name></member>
+      <member refid="classnjli_1_1_scene_renderer_1a50263bdce686044b935ceb5a84508ee7" prot="public" virt="virtual"><scope>njli::SceneRenderer</scope><name>setOcclusionBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,773 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_slider_h_u_d_builder_8cpp" kind="file">
+    <compoundname>SliderHUDBuilder.cpp</compoundname>
+    <includes refid="_slider_h_u_d_builder_8h" local="yes">SliderHUDBuilder.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includes refid="_world_8h" local="yes">World.h</includes>
+    <includes refid="_log_8h" local="yes">Log.h</includes>
+    <includes local="yes">btPrint.h</includes>
+    <incdepgraph>
+      <node id="33259">
+        <label>btIDebugDraw.h</label>
+      </node>
+      <node id="33225">
+        <label>lua.hpp</label>
+      </node>
+      <node id="33234">
+        <label>WorldLuaVirtualMachine.h</label>
+        <link refid="_world_lua_virtual_machine_8h"/>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+        <childnode refid="33235" relation="include">
+        </childnode>
+        <childnode refid="33237" relation="include">
+        </childnode>
+        <childnode refid="33240" relation="include">
+        </childnode>
+        <childnode refid="33242" relation="include">
+        </childnode>
+        <childnode refid="33243" relation="include">
+        </childnode>
+        <childnode refid="33244" relation="include">
+        </childnode>
+        <childnode refid="33245" relation="include">
+        </childnode>
+        <childnode refid="33246" relation="include">
+        </childnode>
+        <childnode refid="33212" relation="include">
+        </childnode>
+      </node>
+      <node id="33251">
+        <label>Camera.h</label>
+        <link refid="_camera_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33252" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+      </node>
+      <node id="33214">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="33215" relation="include">
+        </childnode>
+      </node>
+      <node id="33267">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="33222">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33233">
+        <label>queue</label>
+      </node>
+      <node id="33253">
+        <label>WorldClock.h</label>
+        <link refid="_world_clock_8h"/>
+        <childnode refid="33254" relation="include">
+        </childnode>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33255" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33239">
+        <label>btVector2.h</label>
+      </node>
+      <node id="33213">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="33214" relation="include">
+        </childnode>
+        <childnode refid="33216" relation="include">
+        </childnode>
+        <childnode refid="33217" relation="include">
+        </childnode>
+      </node>
+      <node id="33247">
+        <label>WorldSQLite.h</label>
+        <link refid="_world_s_q_lite_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33248" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33235">
+        <label>AbstractState.h</label>
+        <link refid="_abstract_state_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33236" relation="include">
+        </childnode>
+        <childnode refid="33216" relation="include">
+        </childnode>
+      </node>
+      <node id="33216">
+        <label>stdlib.h</label>
+      </node>
+      <node id="33238">
+        <label>DeviceInputTime.h</label>
+        <link refid="_device_input_time_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+      </node>
+      <node id="33271">
+        <label>btQuickprof.h</label>
+      </node>
+      <node id="33261">
+        <label>File.h</label>
+        <link refid="_file_8h"/>
+        <childnode refid="33215" relation="include">
+        </childnode>
+        <childnode refid="33217" relation="include">
+        </childnode>
+        <childnode refid="33216" relation="include">
+        </childnode>
+      </node>
+      <node id="33260">
+        <label>WorldHUD.h</label>
+        <link refid="_world_h_u_d_8h"/>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33261" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33262" relation="include">
+        </childnode>
+        <childnode refid="33263" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33212" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+      </node>
+      <node id="33257">
+        <label>Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+        <childnode refid="33258" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33239" relation="include">
+        </childnode>
+        <childnode refid="33252" relation="include">
+        </childnode>
+      </node>
+      <node id="33254">
+        <label>AbstractClock.h</label>
+        <link refid="_abstract_clock_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33221">
+        <label>string</label>
+      </node>
+      <node id="33242">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33212" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+      </node>
+      <node id="33237">
+        <label>DeviceTouch.h</label>
+        <link refid="_device_touch_8h"/>
+        <childnode refid="33238" relation="include">
+        </childnode>
+        <childnode refid="33239" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33232">
+        <label>map</label>
+      </node>
+      <node id="33240">
+        <label>Node.h</label>
+        <link refid="_node_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33241" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33239" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33268">
+        <label>WorldState.h</label>
+        <link refid="_world_state_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33235" relation="include">
+        </childnode>
+        <childnode refid="33237" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+      </node>
+      <node id="33252">
+        <label>btVector3.h</label>
+      </node>
+      <node id="33212">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="33246">
+        <label>PhysicsRayContact.h</label>
+        <link refid="_physics_ray_contact_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+      </node>
+      <node id="33248">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="33218">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33224" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33272">
+        <label>btPrint.h</label>
+      </node>
+      <node id="33224">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="33227">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="33256">
+        <label>WorldDebugDrawer.h</label>
+        <link refid="_world_debug_drawer_8h"/>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33257" relation="include">
+        </childnode>
+        <childnode refid="33259" relation="include">
+        </childnode>
+      </node>
+      <node id="33255">
+        <label>btClock.h</label>
+      </node>
+      <node id="33266">
+        <label>WorldSocket.h</label>
+        <link refid="_world_socket_8h"/>
+        <childnode refid="33267" relation="include">
+        </childnode>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33233" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33261" relation="include">
+        </childnode>
+      </node>
+      <node id="33210">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp</label>
+        <link refid="SliderHUDBuilder.cpp"/>
+        <childnode refid="33211" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33228" relation="include">
+        </childnode>
+        <childnode refid="33214" relation="include">
+        </childnode>
+        <childnode refid="33272" relation="include">
+        </childnode>
+      </node>
+      <node id="33250">
+        <label>GLPlatform.h</label>
+      </node>
+      <node id="33211">
+        <label>SliderHUDBuilder.h</label>
+        <link refid="_slider_h_u_d_builder_8h"/>
+        <childnode refid="33212" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33224" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+      </node>
+      <node id="33230">
+        <label>WorldFactory.h</label>
+        <link refid="_world_factory_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33212" relation="include">
+        </childnode>
+        <childnode refid="33231" relation="include">
+        </childnode>
+        <childnode refid="33224" relation="include">
+        </childnode>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33232" relation="include">
+        </childnode>
+        <childnode refid="33233" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+      </node>
+      <node id="33244">
+        <label>btManifoldPoint.h</label>
+      </node>
+      <node id="33236">
+        <label>btScalar.h</label>
+      </node>
+      <node id="33258">
+        <label>bitset</label>
+      </node>
+      <node id="33241">
+        <label>AbstractActionable.h</label>
+        <link refid="_abstract_actionable_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33233" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+      </node>
+      <node id="33231">
+        <label>btHashMap.h</label>
+      </node>
+      <node id="33223">
+        <label>vector</label>
+      </node>
+      <node id="33264">
+        <label>WorldInput.h</label>
+        <link refid="_world_input_8h"/>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33243">
+        <label>btDispatcher.h</label>
+      </node>
+      <node id="33220">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+        <childnode refid="33222" relation="include">
+        </childnode>
+      </node>
+      <node id="33226">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33227" relation="include">
+        </childnode>
+      </node>
+      <node id="33263">
+        <label>AbstractFrameBufferObject.h</label>
+        <link refid="_abstract_frame_buffer_object_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+      </node>
+      <node id="33269">
+        <label>WorldStateMachine.h</label>
+        <link refid="_world_state_machine_8h"/>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33270" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+      </node>
+      <node id="33229">
+        <label>cstddef</label>
+      </node>
+      <node id="33228">
+        <label>World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33229" relation="include">
+        </childnode>
+        <childnode refid="33230" relation="include">
+        </childnode>
+        <childnode refid="33234" relation="include">
+        </childnode>
+        <childnode refid="33247" relation="include">
+        </childnode>
+        <childnode refid="33249" relation="include">
+        </childnode>
+        <childnode refid="33251" relation="include">
+        </childnode>
+        <childnode refid="33253" relation="include">
+        </childnode>
+        <childnode refid="33256" relation="include">
+        </childnode>
+        <childnode refid="33260" relation="include">
+        </childnode>
+        <childnode refid="33264" relation="include">
+        </childnode>
+        <childnode refid="33265" relation="include">
+        </childnode>
+        <childnode refid="33266" relation="include">
+        </childnode>
+        <childnode refid="33268" relation="include">
+        </childnode>
+        <childnode refid="33269" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33249">
+        <label>WorldSound.h</label>
+        <link refid="_world_sound_8h"/>
+        <childnode refid="33250" relation="include">
+        </childnode>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33221" relation="include">
+        </childnode>
+      </node>
+      <node id="33215">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="33262">
+        <label>nanovg.h</label>
+      </node>
+      <node id="33245">
+        <label>Action.h</label>
+        <link refid="_action_8h"/>
+        <childnode refid="33241" relation="include">
+        </childnode>
+        <childnode refid="33218" relation="include">
+        </childnode>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33212" relation="include">
+        </childnode>
+        <childnode refid="33225" relation="include">
+        </childnode>
+        <childnode refid="33233" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+      </node>
+      <node id="33265">
+        <label>WorldResourceLoader.h</label>
+        <link refid="_world_resource_loader_8h"/>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33226" relation="include">
+        </childnode>
+        <childnode refid="33231" relation="include">
+        </childnode>
+        <childnode refid="33223" relation="include">
+        </childnode>
+      </node>
+      <node id="33217">
+        <label>stdio.h</label>
+      </node>
+      <node id="33219">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="33212" relation="include">
+        </childnode>
+        <childnode refid="33220" relation="include">
+        </childnode>
+        <childnode refid="33213" relation="include">
+        </childnode>
+        <childnode refid="33224" relation="include">
+        </childnode>
+      </node>
+      <node id="33270">
+        <label>AbstractStateMachine.h</label>
+        <link refid="_abstract_state_machine_8h"/>
+        <childnode refid="33219" relation="include">
+        </childnode>
+        <childnode refid="33235" relation="include">
+        </childnode>
+        <childnode refid="33271" relation="include">
+        </childnode>
+        <childnode refid="33233" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_slider_h_u_d_builder_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" prot="public" static="no">
+        <name>TAG</name>
+        <initializer>&quot;SliderHUDBuilder.cpp&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp" line="15" column="13" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_slider_h_u_d_builder_8cpp_1a4d0768c0d97829b5c252f9643bdc19f5" prot="public" static="no">
+        <name>FORMATSTRING</name>
+        <initializer>&quot;{\&quot;njli::SliderHUDBuilder\&quot;:[]}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp" line="16" column="9" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>SliderHUDBuilder.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>2/13/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_slider_h_u_d_builder_8h" kindref="compound">SliderHUDBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_8h" kindref="compound">World.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAG<sp/>&quot;SliderHUDBuilder.cpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FORMATSTRING<sp/>&quot;{\&quot;njli::SliderHUDBuilder\&quot;:[]}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btPrint.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1af73a377428f6af72564355d163b4dc16" kindref="member">SliderHUDBuilder::SliderHUDBuilder</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1af73a377428f6af72564355d163b4dc16" kindref="member">SliderHUDBuilder::SliderHUDBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SliderHUDBuilder<sp/>&amp;copy)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a9eee74c1c95deef7050c6f804a56fcd1" kindref="member">SliderHUDBuilder::~SliderHUDBuilder</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>SliderHUDBuilder<sp/>&amp;<ref refid="classnjli_1_1_slider_h_u_d_builder_1a566743107cc161b227ba6b78971f03f5" kindref="member">SliderHUDBuilder::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SliderHUDBuilder<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a0061cf9535f7cc39935a3a2b6419abf8" kindref="member">SliderHUDBuilder::calculateSerializeBufferSize</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a252f102d80b0b214068e07b4b348dda4" kindref="member">SliderHUDBuilder::serialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*<sp/>serializer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="49"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a7b836aad94cee771998edfca54300465" kindref="member">SliderHUDBuilder::getObjectType</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="54"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a6d56d4fbaf89fcf3e3d32839df05b444af64e688481302082f6f47dbc35a3fe76" kindref="member">JLI_OBJECT_TYPE_SliderHUD</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_slider_h_u_d_builder_1a64b5ef5ea1fa6be7c89295b8bd6461d9" kindref="member">SliderHUDBuilder::getClassName</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="59"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;SliderHUDBuilder&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a013871974d7174b32fe363d04295b2cd" kindref="member">SliderHUDBuilder::getType</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="64"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1afd684e30c406ce48007ba34eb773b306" kindref="member">SliderHUDBuilder::type</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>SliderHUDBuilder::operator<sp/>std::string()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="69"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_json_j_l_i_1aac51324ec88a76dee9559a4282e01c9a" kindref="member">njli::JsonJLI::parse</ref>(string_format(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="_slider_h_u_d_builder_8cpp_1a4d0768c0d97829b5c252f9643bdc19f5" kindref="member">FORMATSTRING</ref>).c_str());</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>SliderHUDBuilder<sp/>**<ref refid="classnjli_1_1_slider_h_u_d_builder_1ac284be27bc0abc71c29fff04bb74af3c" kindref="member">SliderHUDBuilder::createArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classnjli_1_1_slider_h_u_d_builder_1af73a377428f6af72564355d163b4dc16" kindref="member">SliderHUDBuilder</ref>**)<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a6c379949bd79510d934515f9a0aa4008" kindref="member">createArray</ref>(<ref refid="classnjli_1_1_slider_h_u_d_builder_1afd684e30c406ce48007ba34eb773b306" kindref="member">SliderHUDBuilder::type</ref>(),<sp/>size);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1aa890f6a1f614fffd89aa991b807411e2" kindref="member">SliderHUDBuilder::destroyArray</ref>(SliderHUDBuilder<sp/>**array,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a40a00fcf24618fa8e4c037efe19119d9" kindref="member">destroyArray</ref>((<ref refid="classnjli_1_1_abstract_factory_object_1a4f7ae7bf09c7c9426e7d6023f7fd8dec" kindref="member">AbstractFactoryObject</ref>**)array,<sp/>size);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>SliderHUDBuilder<sp/>*<ref refid="classnjli_1_1_slider_h_u_d_builder_1a519507aafb3108f1126e8df5402b1210" kindref="member">SliderHUDBuilder::create</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_slider_h_u_d_builder_1af73a377428f6af72564355d163b4dc16" kindref="member">SliderHUDBuilder</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(<ref refid="classnjli_1_1_slider_h_u_d_builder_1afd684e30c406ce48007ba34eb773b306" kindref="member">SliderHUDBuilder::type</ref>()));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>SliderHUDBuilder<sp/>*<ref refid="classnjli_1_1_slider_h_u_d_builder_1a7209329582cee52192a66b688b93a888" kindref="member">SliderHUDBuilder::clone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SliderHUDBuilder<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classnjli_1_1_slider_h_u_d_builder_1af73a377428f6af72564355d163b4dc16" kindref="member">SliderHUDBuilder</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ad45e7eac9f28b683a29fc3e397549d84" kindref="member">clone</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" kindref="member">SliderHUDBuilder::destroy</ref>(SliderHUDBuilder<sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" kindref="member">getWorldFactory</ref>()-&gt;<ref refid="classnjli_1_1_world_factory_1ace215cda602d0bc17315d755036fb497" kindref="member">destroy</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a645ef2afad7412a9b684e504fdd4db32" kindref="member">SliderHUDBuilder::load</ref>(SliderHUDBuilder<sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Push<sp/>another<sp/>reference<sp/>to<sp/>the<sp/>table<sp/>on<sp/>top<sp/>of<sp/>the<sp/>stack<sp/>(so<sp/>we<sp/>know</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>where<sp/>it<sp/>is,<sp/>and<sp/>this<sp/>function<sp/>can<sp/>work<sp/>for<sp/>negative,<sp/>positive<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pseudo<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushvalue(L,<sp/>index);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushnil(L);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>nil;<sp/>-2<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(lua_next(L,<sp/>-2))</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>value;<sp/>-2<sp/>=&gt;<sp/>key;<sp/>-3<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>key<sp/>so<sp/>that<sp/>lua_tostring<sp/>does<sp/>not<sp/>modify<sp/>the<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pushvalue(L,<sp/>-2);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>key;<sp/>-2<sp/>=&gt;<sp/>value;<sp/>-3<sp/>=&gt;<sp/>key;<sp/>-4<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key<sp/>=<sp/>lua_tostring(L,<sp/>-1);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value<sp/>=<sp/>lua_tostring(L,<sp/>-2);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_istable(L,<sp/>-2))</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1a645ef2afad7412a9b684e504fdd4db32" kindref="member">SliderHUDBuilder::load</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>L,<sp/>-2);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isnumber(L,<sp/>index))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number<sp/>=<sp/>lua_tonumber(L,<sp/>index);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>number);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isstring(L,<sp/>index))</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*v<sp/>=<sp/>lua_tostring(L,<sp/>index);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>v);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isboolean(L,<sp/>index))</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>lua_toboolean(L,<sp/>index);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s<sp/>=&gt;<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>key,<sp/>v);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lua_isuserdata(L,<sp/>index))</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swig_lua_userdata<sp/>*usr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swig_type_info<sp/>*type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(lua_isuserdata(L,index));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usr=(swig_lua_userdata*)lua_touserdata(L,index);<sp/><sp/>/*<sp/>get<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>usr-&gt;type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>njli::AbstractFactoryObject<sp/>*object<sp/>=<sp/>static_cast&lt;njli::AbstractFactoryObject*&gt;(usr-&gt;ptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%s<sp/>=&gt;<sp/>%d:%s\n&quot;,<sp/>key,<sp/>object-&gt;getType(),<sp/>object-&gt;getClassName());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pop<sp/>value<sp/>+<sp/>copy<sp/>of<sp/>key,<sp/>leaving<sp/>original<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pop(L,<sp/>2);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>key;<sp/>-2<sp/>=&gt;<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stack<sp/>now<sp/>contains:<sp/>-1<sp/>=&gt;<sp/>table<sp/>(when<sp/>lua_next<sp/>returns<sp/>0<sp/>it<sp/>pops<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>does<sp/>not<sp/>push<sp/>anything.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pop<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lua_pop(L,<sp/>1);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stack<sp/>is<sp/>now<sp/>the<sp/>same<sp/>as<sp/>it<sp/>was<sp/>on<sp/>entry<sp/>to<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_slider_h_u_d_builder_1afd684e30c406ce48007ba34eb773b306" kindref="member">SliderHUDBuilder::type</ref>()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a6d56d4fbaf89fcf3e3d32839df05b444ace531648ee82cafd2a91ffcf493f9bc9" kindref="member">JLI_OBJECT_TYPE_SliderHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp"/>
+  </compounddef>
+</doxygen>

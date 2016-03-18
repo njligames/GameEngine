@@ -1,0 +1,1110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_world_resource_loader" kind="class" prot="public">
+    <compoundname>njli::WorldResourceLoader</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_object" prot="public" virt="non-virtual">njli::AbstractObject</basecompoundref>
+    <includes refid="_world_resource_loader_8h" local="no">WorldResourceLoader.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_world_resource_loader_1a5d6b29a75202aeeaef335faca9eb55e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Image</definition>
+        <argsstring></argsstring>
+        <name>Image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="64" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_world_resource_loader_1a452c1dff079e717879b22d69fdcb96ee" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; njli::WorldResourceLoader::m_HashKeys</definition>
+        <argsstring></argsstring>
+        <name>m_HashKeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="349" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_resource_loader_1a31760b72a6066eb6b8f99496126a5ba8" prot="private" static="no" mutable="no">
+        <type>btHashMap&lt; btHashString, <ref refid="structnjli_1_1_file_data" kindref="compound">FileData</ref> * &gt;</type>
+        <definition>btHashMap&lt;btHashString, FileData*&gt; njli::WorldResourceLoader::m_FileData</definition>
+        <argsstring></argsstring>
+        <name>m_FileData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="350" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a0bdde94c5d76a1bba1f91980a5e81582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::WorldResourceLoader::WorldResourceLoader</definition>
+        <argsstring>()</argsstring>
+        <name>WorldResourceLoader</name>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:19 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="75" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1ae17667b26bebb44a4daa4c82e767d399" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::WorldResourceLoader::~WorldResourceLoader</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldResourceLoader</name>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:24</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>getClassName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;<ref refid="classnjli_1_1_world_resource_loader_1a0864eec12bcb0ba99cbe19f07160dd70" kindref="member">getClassName</ref> description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="86" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a0864eec12bcb0ba99cbe19f07160dd70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::WorldResourceLoader::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1afdabb48c4bf763e297ffe810b433a863">getClassName</reimplements>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:30</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="95" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a93f8c1fb996b25ce682e6cb18bd46843" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::WorldResourceLoader::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1a08dcf202a47f0782813b8bc98c659e78">getType</reimplements>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:33</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="104" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1ab5c791db75efdce65ee49df538354cae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::WorldResourceLoader::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1afc07f4138bd3003910e7aa7fa0fe11ad">operator std::string</reimplements>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:39</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="113" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a533265d53baee29672057acc70f5eb83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *filePath, Image &amp;img)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_image" kindref="compound">Image</ref> &amp;</type>
+          <declname>img</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:43</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filePath description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#img description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="126" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="69" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1aeeb978f3bd043a6647584f223776525c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, ParticleEmitter *emitter)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref> *</type>
+          <declname>emitter</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:48</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>emitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#emitter description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="138" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="175" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1ac1a793a4a100afaf8a2a1e8c09809b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *vertexFile, const char *fragmentFile, ShaderProgram *shader)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>vertexFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fragmentFile</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:52</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertexFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#vertexFile description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fragmentFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#fragmentFile description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#shader description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="151" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="196" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1ae4ae9a2915ebddbabfd72cf927b0afee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Sound *sound)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_sound" kindref="compound">Sound</ref> *</type>
+          <declname>sound</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:57</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#sound description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="249" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a5e5f9156810ac9bad5e76a81868f29d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Light *light)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_light" kindref="compound">Light</ref> *</type>
+          <declname>light</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:01</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>light</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#light description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="177" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a9a65176315945a2201c160ca0df35edd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Geometry *geo)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref> *</type>
+          <declname>geo</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:05</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>geo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#geo description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="189" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1aace00d44c99e64510a75ac65a19178aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Font *font)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_font" kindref="compound">Font</ref> *</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:08</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#font description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="201" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a7bc64cf33159a03c3fa1775b6945fe70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Lua *lua)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>Lua *</type>
+          <declname>lua</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:12</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lua</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#lua description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="213" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a5841d6c7619db6821d2bad70dc34bd2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Xml *xml)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_xml" kindref="compound">Xml</ref> *</type>
+          <declname>xml</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:15</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xml</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#xml description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="225" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1af27a57867941d659a2b497656b3e6b42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, JsonJLI *json)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_json_j_l_i" kindref="compound">JsonJLI</ref> *</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:19</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>json</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#json description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="237" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="292" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a8ea241bd485254b9edf6d3a32b1532db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Material *material)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+          <declname>material</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:23</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>material</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#material description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="249" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="297" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a97c72c0dc49dc9be8ec668fbbfbcf9a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Skinner *skinner)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_skinner" kindref="compound">Skinner</ref> *</type>
+          <declname>skinner</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:27</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skinner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#skinner description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="261" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a46e21edb3dd2513f4fb06c2ccce908e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *file, Camera *camera)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:30</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#camera description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="273" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a59a0ff1b51de8148e733037d76bd2571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::load</definition>
+        <argsstring>(const char *filePath, const void **content, unsigned long *file_size)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> **</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type>unsigned long *</type>
+          <declname>file_size</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:35</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filePath description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#content description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file_size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="286" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="312" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1adb28886c8a310576ec780f558879e8fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::loadZip</definition>
+        <argsstring>(const char *filePath, const char *password=&quot;&quot;)</argsstring>
+        <name>loadZip</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 21:02:52</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filePath description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#&quot;&quot; description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="298" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="328" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a565f073cdac67831e15fa9020da10012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::unLoad</definition>
+        <argsstring>(const char *file)</argsstring>
+        <name>unLoad</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:51</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#file description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="309" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="426" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a86cdad587fb6ef372c4dcac741a5fa73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::unLoadAll</definition>
+        <argsstring>()</argsstring>
+        <name>unLoadAll</name>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:54</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="318" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="453" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1aa80c8682caefb186e92a075937562ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::loadDataFromFile</definition>
+        <argsstring>(const char *filePath, const void **buff, unsigned long *length)</argsstring>
+        <name>loadDataFromFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> **</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>unsigned long *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 18:02:57</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filePath description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#buff description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#length description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="331" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="579" bodyend="613"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a1a1d58baf3b8d4fa094d565a795265f7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::isLoaded</definition>
+        <argsstring>(const char *file)</argsstring>
+        <name>isLoaded</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="334" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a9816de12b7d86d6fdd368a72c516c8c4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1a3699b2e13e71094f00d7f0141e131106" kindref="member">njliFileType</ref></type>
+        <definition>njliFileType njli::WorldResourceLoader::getType</definition>
+        <argsstring>(const char *file) const </argsstring>
+        <name>getType</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="335" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a865424382353fba11d679944f414391e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldResourceLoader::remove</definition>
+        <argsstring>(const char *file)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="337" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="479" bodyend="487"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a7fb699a1eee1e0a65488350c7bb0c6a7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+        <definition>const void * njli::WorldResourceLoader::addFileData</definition>
+        <argsstring>(const char *filePath, const void *buffer, unsigned long size)</argsstring>
+        <name>addFileData</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="339" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="489" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a0563ad167a4c6552f0535ae191e6e2a0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structnjli_1_1_file_data" kindref="compound">FileData</ref> *</type>
+        <definition>FileData* njli::WorldResourceLoader::createFileData</definition>
+        <argsstring>(const char *filePath, const void *buffer, s32 size)</argsstring>
+        <name>createFileData</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="340" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1ac3a031dc592f5907a2e7579c4a98739f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::removeFileData</definition>
+        <argsstring>(const char *filePath)</argsstring>
+        <name>removeFileData</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="342" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="506" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1aeb9fa5adb09005e9a6fa38171bae3a96" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldResourceLoader::getFileData</definition>
+        <argsstring>(const char *filePath, const void **buffer=NULL, unsigned long *size=NULL) const </argsstring>
+        <name>getFileData</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> **</type>
+          <declname>buffer</declname>
+          <defval><ref refid="_util_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <param>
+          <type>unsigned long *</type>
+          <declname>size</declname>
+          <defval><ref refid="_util_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="343" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp" bodystart="522" bodyend="535"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1aca0a853c5159760d6d37cad0bbad7363" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::WorldResourceLoader::WorldResourceLoader</definition>
+        <argsstring>(const WorldResourceLoader &amp;)</argsstring>
+        <name>WorldResourceLoader</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_world_resource_loader" kindref="compound">WorldResourceLoader</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="346" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_resource_loader_1a1c317a6c19a9bbd4e578a1bc70784d51" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_resource_loader" kindref="compound">WorldResourceLoader</ref> &amp;</type>
+        <definition>WorldResourceLoader&amp; njli::WorldResourceLoader::operator=</definition>
+        <argsstring>(const WorldResourceLoader &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_world_resource_loader" kindref="compound">WorldResourceLoader</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="347" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;#Description#&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4371">
+        <label>njli::WorldResourceLoader</label>
+        <link refid="classnjli_1_1_world_resource_loader"/>
+        <childnode refid="4372" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4373">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="4372">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4373" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4374">
+        <label>njli::WorldResourceLoader</label>
+        <link refid="classnjli_1_1_world_resource_loader"/>
+        <childnode refid="4375" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4376">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="4376" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="4375">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4376" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" line="62" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h" bodystart="62" bodyend="351"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a7fb699a1eee1e0a65488350c7bb0c6a7" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>addFileData</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a0563ad167a4c6552f0535ae191e6e2a0" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>createFileData</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a0864eec12bcb0ba99cbe19f07160dd70" prot="public" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1aeb9fa5adb09005e9a6fa38171bae3a96" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getFileData</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a93f8c1fb996b25ce682e6cb18bd46843" prot="public" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a9816de12b7d86d6fdd368a72c516c8c4" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a5d6b29a75202aeeaef335faca9eb55e2" prot="private" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>Image</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a1a1d58baf3b8d4fa094d565a795265f7" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>isLoaded</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a533265d53baee29672057acc70f5eb83" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1aeeb978f3bd043a6647584f223776525c" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1ac1a793a4a100afaf8a2a1e8c09809b06" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1ae4ae9a2915ebddbabfd72cf927b0afee" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a5e5f9156810ac9bad5e76a81868f29d8" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a9a65176315945a2201c160ca0df35edd" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1aace00d44c99e64510a75ac65a19178aa" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a7bc64cf33159a03c3fa1775b6945fe70" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a5841d6c7619db6821d2bad70dc34bd2b" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1af27a57867941d659a2b497656b3e6b42" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a8ea241bd485254b9edf6d3a32b1532db" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a97c72c0dc49dc9be8ec668fbbfbcf9a0" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a46e21edb3dd2513f4fb06c2ccce908e5" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a59a0ff1b51de8148e733037d76bd2571" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>load</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1aa80c8682caefb186e92a075937562ebf" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>loadDataFromFile</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1adb28886c8a310576ec780f558879e8fa" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>loadZip</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a31760b72a6066eb6b8f99496126a5ba8" prot="private" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>m_FileData</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a452c1dff079e717879b22d69fdcb96ee" prot="private" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>m_HashKeys</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1ab5c791db75efdce65ee49df538354cae" prot="public" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a1c317a6c19a9bbd4e578a1bc70784d51" prot="private" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a865424382353fba11d679944f414391e" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>remove</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1ac3a031dc592f5907a2e7579c4a98739f" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>removeFileData</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a565f073cdac67831e15fa9020da10012" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>unLoad</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a86cdad587fb6ef372c4dcac741a5fa73" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>unLoadAll</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1a0bdde94c5d76a1bba1f91980a5e81582" prot="public" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>WorldResourceLoader</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1aca0a853c5159760d6d37cad0bbad7363" prot="private" virt="non-virtual"><scope>njli::WorldResourceLoader</scope><name>WorldResourceLoader</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_world_resource_loader_1ae17667b26bebb44a4daa4c82e767d399" prot="public" virt="virtual"><scope>njli::WorldResourceLoader</scope><name>~WorldResourceLoader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

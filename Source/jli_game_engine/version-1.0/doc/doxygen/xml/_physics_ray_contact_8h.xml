@@ -1,0 +1,1103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_physics_ray_contact_8h" kind="file">
+    <compoundname>PhysicsRayContact.h</compoundname>
+    <includes refid="_abstract_builder_8h" local="yes">AbstractBuilder.h</includes>
+    <includes refid="_abstract_factory_object_8h" local="yes">AbstractFactoryObject.h</includes>
+    <includes local="yes">lua.hpp</includes>
+    <includedby refid="_world_lua_virtual_machine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.h</includedby>
+    <includedby refid="_j_l_i_engine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</includedby>
+    <includedby refid="_physics_ray_contact_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.cpp</includedby>
+    <includedby refid="_physics_world_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorld.cpp</includedby>
+    <includedby refid="_scene_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</includedby>
+    <includedby refid="_world_factory_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</includedby>
+    <includedby refid="_world_lua_virtual_machine_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</includedby>
+    <includedby refid="_world_state_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldState.cpp</includedby>
+    <incdepgraph>
+      <node id="28497">
+        <label>lua.hpp</label>
+      </node>
+      <node id="28489">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="28490" relation="include">
+        </childnode>
+      </node>
+      <node id="28494">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="28488" relation="include">
+        </childnode>
+        <childnode refid="28495" relation="include">
+        </childnode>
+        <childnode refid="28493" relation="include">
+        </childnode>
+      </node>
+      <node id="28488">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="28489" relation="include">
+        </childnode>
+        <childnode refid="28491" relation="include">
+        </childnode>
+        <childnode refid="28492" relation="include">
+        </childnode>
+      </node>
+      <node id="28491">
+        <label>stdlib.h</label>
+      </node>
+      <node id="28493">
+        <label>string</label>
+      </node>
+      <node id="28486">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="28483">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.h</label>
+        <link refid="PhysicsRayContact.h"/>
+        <childnode refid="28484" relation="include">
+        </childnode>
+        <childnode refid="28485" relation="include">
+        </childnode>
+        <childnode refid="28497" relation="include">
+        </childnode>
+      </node>
+      <node id="28484">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="28485" relation="include">
+        </childnode>
+        <childnode refid="28488" relation="include">
+        </childnode>
+        <childnode refid="28496" relation="include">
+        </childnode>
+        <childnode refid="28493" relation="include">
+        </childnode>
+      </node>
+      <node id="28496">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="28495">
+        <label>vector</label>
+      </node>
+      <node id="28487">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="28488" relation="include">
+        </childnode>
+        <childnode refid="28493" relation="include">
+        </childnode>
+        <childnode refid="28494" relation="include">
+        </childnode>
+      </node>
+      <node id="28490">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="28492">
+        <label>stdio.h</label>
+      </node>
+      <node id="28485">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="28486" relation="include">
+        </childnode>
+        <childnode refid="28487" relation="include">
+        </childnode>
+        <childnode refid="28488" relation="include">
+        </childnode>
+        <childnode refid="28496" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="28564">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsContactBuilder.cpp</label>
+        <link refid="_physics_contact_builder_8cpp"/>
+      </node>
+      <node id="28599">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneBuilder.cpp</label>
+        <link refid="_scene_builder_8cpp"/>
+      </node>
+      <node id="28573">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBoxBuilder.cpp</label>
+        <link refid="_physics_shape_box_builder_8cpp"/>
+      </node>
+      <node id="28499">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.h</label>
+        <link refid="_world_lua_virtual_machine_8h"/>
+        <childnode refid="28500" relation="include">
+        </childnode>
+        <childnode refid="28501" relation="include">
+        </childnode>
+        <childnode refid="28519" relation="include">
+        </childnode>
+        <childnode refid="28621" relation="include">
+        </childnode>
+      </node>
+      <node id="28501">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp</label>
+        <link refid="_abstract_actionable_8cpp"/>
+      </node>
+      <node id="28552">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixedBuilder.cpp</label>
+        <link refid="_physics_constraint_fixed_builder_8cpp"/>
+      </node>
+      <node id="28578">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCone.cpp</label>
+        <link refid="_physics_shape_cone_8cpp"/>
+      </node>
+      <node id="28618">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TimerBuilder.cpp</label>
+        <link refid="_timer_builder_8cpp"/>
+      </node>
+      <node id="28522">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LabelHUDBuilder.cpp</label>
+        <link refid="_label_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="28614">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUDBuilder.cpp</label>
+        <link refid="_textbox_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="28598">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="28565">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsField.cpp</label>
+        <link refid="_physics_field_8cpp"/>
+      </node>
+      <node id="28559">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPoint.cpp</label>
+        <link refid="_physics_constraint_point_to_point_8cpp"/>
+      </node>
+      <node id="28579">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConeBuilder.cpp</label>
+        <link refid="_physics_shape_cone_builder_8cpp"/>
+      </node>
+      <node id="28612">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/StopWatch.cpp</label>
+        <link refid="_stop_watch_8cpp"/>
+      </node>
+      <node id="28509">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Clock.cpp</label>
+        <link refid="_clock_8cpp"/>
+      </node>
+      <node id="28588">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeMultiSphere.cpp</label>
+        <link refid="_physics_shape_multi_sphere_8cpp"/>
+      </node>
+      <node id="28517">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Image.cpp</label>
+        <link refid="_image_8cpp"/>
+      </node>
+      <node id="28605">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Skinner.cpp</label>
+        <link refid="_skinner_8cpp"/>
+      </node>
+      <node id="28600">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneState.cpp</label>
+        <link refid="_scene_state_8cpp"/>
+      </node>
+      <node id="28534">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateMachine.cpp</label>
+        <link refid="_node_state_machine_8cpp"/>
+      </node>
+      <node id="28507">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CameraBuilder.cpp</label>
+        <link refid="_camera_builder_8cpp"/>
+      </node>
+      <node id="28512">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CollisionResponseBuilder.cpp</label>
+        <link refid="_collision_response_builder_8cpp"/>
+      </node>
+      <node id="28625">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateMachine.cpp</label>
+        <link refid="_world_state_machine_8cpp"/>
+      </node>
+      <node id="28511">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CollisionResponse.cpp</label>
+        <link refid="_collision_response_8cpp"/>
+      </node>
+      <node id="28531">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeBuilder.cpp</label>
+        <link refid="_node_builder_8cpp"/>
+      </node>
+      <node id="28513">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CubeBuilder.cpp</label>
+        <link refid="_cube_builder_8cpp"/>
+      </node>
+      <node id="28621">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</label>
+        <link refid="_world_lua_virtual_machine_8cpp"/>
+      </node>
+      <node id="28640">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp</label>
+        <link refid="_textbox_h_u_d_8cpp"/>
+      </node>
+      <node id="28624">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateBuilder.cpp</label>
+        <link refid="_world_state_builder_8cpp"/>
+      </node>
+      <node id="28611">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SpriteFrameAtlasBuilder.cpp</label>
+        <link refid="_sprite_frame_atlas_builder_8cpp"/>
+      </node>
+      <node id="28634">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Geometry.cpp</label>
+        <link refid="_geometry_8cpp"/>
+      </node>
+      <node id="28535">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateMachineBuilder.cpp</label>
+        <link refid="_node_state_machine_builder_8cpp"/>
+      </node>
+      <node id="28528">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialBuilder.cpp</label>
+        <link refid="_material_builder_8cpp"/>
+      </node>
+      <node id="28541">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigid.cpp</label>
+        <link refid="_physics_body_rigid_8cpp"/>
+      </node>
+      <node id="28542">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigidBuilder.cpp</label>
+        <link refid="_physics_body_rigid_builder_8cpp"/>
+      </node>
+      <node id="28638">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/SliderHUD.cpp</label>
+        <link refid="_slider_h_u_d_8cpp"/>
+      </node>
+      <node id="28597">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PlaneBuilder.cpp</label>
+        <link refid="_plane_builder_8cpp"/>
+      </node>
+      <node id="28641">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/WorldHUD.cpp</label>
+        <link refid="_world_h_u_d_8cpp"/>
+      </node>
+      <node id="28538">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.cpp</label>
+        <link refid="_physics_body_8cpp"/>
+      </node>
+      <node id="28569">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShape.cpp</label>
+        <link refid="_physics_shape_8cpp"/>
+      </node>
+      <node id="28546">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsCloseContactBuilder.cpp</label>
+        <link refid="_physics_close_contact_builder_8cpp"/>
+      </node>
+      <node id="28576">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCapsule.cpp</label>
+        <link refid="_physics_shape_capsule_8cpp"/>
+      </node>
+      <node id="28567">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.cpp</label>
+        <link refid="_physics_ray_contact_8cpp"/>
+      </node>
+      <node id="28619">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp</label>
+        <link refid="_world_8cpp"/>
+      </node>
+      <node id="28613">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/StopWatchBuilder.cpp</label>
+        <link refid="_stop_watch_builder_8cpp"/>
+      </node>
+      <node id="28521">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JsonJLIBuilder.cpp</label>
+        <link refid="_json_j_l_i_builder_8cpp"/>
+      </node>
+      <node id="28544">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoftBuilder.cpp</label>
+        <link refid="_physics_body_soft_builder_8cpp"/>
+      </node>
+      <node id="28627">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Xml.cpp</label>
+        <link refid="_xml_8cpp"/>
+      </node>
+      <node id="28632">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Cube.cpp</label>
+        <link refid="_cube_8cpp"/>
+      </node>
+      <node id="28586">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeHeightfieldTerrain.cpp</label>
+        <link refid="_physics_shape_heightfield_terrain_8cpp"/>
+      </node>
+      <node id="28533">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateBuilder.cpp</label>
+        <link refid="_node_state_builder_8cpp"/>
+      </node>
+      <node id="28498">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.h</label>
+        <link refid="PhysicsRayContact.h"/>
+        <childnode refid="28499" relation="include">
+        </childnode>
+        <childnode refid="28519" relation="include">
+        </childnode>
+        <childnode refid="28567" relation="include">
+        </childnode>
+        <childnode refid="28594" relation="include">
+        </childnode>
+        <childnode refid="28598" relation="include">
+        </childnode>
+        <childnode refid="28620" relation="include">
+        </childnode>
+        <childnode refid="28621" relation="include">
+        </childnode>
+        <childnode refid="28623" relation="include">
+        </childnode>
+      </node>
+      <node id="28506">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp</label>
+        <link refid="_camera_8cpp"/>
+      </node>
+      <node id="28566">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsFieldBuilder.cpp</label>
+        <link refid="_physics_field_builder_8cpp"/>
+      </node>
+      <node id="28628">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/XmlBuilder.cpp</label>
+        <link refid="_xml_builder_8cpp"/>
+      </node>
+      <node id="28592">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeStaticPlane.cpp</label>
+        <link refid="_physics_shape_static_plane_8cpp"/>
+      </node>
+      <node id="28629">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractFrameBufferObject.cpp</label>
+        <link refid="_abstract_frame_buffer_object_8cpp"/>
+      </node>
+      <node id="28560">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPointBuilder.cpp</label>
+        <link refid="_physics_constraint_point_to_point_builder_8cpp"/>
+      </node>
+      <node id="28555">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpring.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_8cpp"/>
+      </node>
+      <node id="28601">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateBuilder.cpp</label>
+        <link refid="_scene_state_builder_8cpp"/>
+      </node>
+      <node id="28502">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp</label>
+        <link refid="_abstract_factory_object_8cpp"/>
+      </node>
+      <node id="28589">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeMultiSphereBuilder.cpp</label>
+        <link refid="_physics_shape_multi_sphere_builder_8cpp"/>
+      </node>
+      <node id="28631">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp</label>
+        <link refid="_checkbox_h_u_d_8cpp"/>
+      </node>
+      <node id="28609">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Sprite2DBuilder.cpp</label>
+        <link refid="_sprite2_d_builder_8cpp"/>
+      </node>
+      <node id="28593">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeStaticPlaneBuilder.cpp</label>
+        <link refid="_physics_shape_static_plane_builder_8cpp"/>
+      </node>
+      <node id="28626">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateMachineBuilder.cpp</label>
+        <link refid="_world_state_machine_builder_8cpp"/>
+      </node>
+      <node id="28639">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Sprite2D.cpp</label>
+        <link refid="_sprite2_d_8cpp"/>
+      </node>
+      <node id="28558">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHingeBuilder.cpp</label>
+        <link refid="_physics_constraint_hinge_builder_8cpp"/>
+      </node>
+      <node id="28525">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Light.cpp</label>
+        <link refid="_light_8cpp"/>
+      </node>
+      <node id="28556">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpringBuilder.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_builder_8cpp"/>
+      </node>
+      <node id="28602">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateMachine.cpp</label>
+        <link refid="_scene_state_machine_8cpp"/>
+      </node>
+      <node id="28603">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateMachineBuilder.cpp</label>
+        <link refid="_scene_state_machine_builder_8cpp"/>
+      </node>
+      <node id="28607">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp</label>
+        <link refid="_slider_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="28523">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LevelOfDetail.cpp</label>
+        <link refid="_level_of_detail_8cpp"/>
+      </node>
+      <node id="28582">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexTriangleMesh.cpp</label>
+        <link refid="_physics_shape_convex_triangle_mesh_8cpp"/>
+      </node>
+      <node id="28540">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhostBuilder.cpp</label>
+        <link refid="_physics_body_ghost_builder_8cpp"/>
+      </node>
+      <node id="28590">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeSphere.cpp</label>
+        <link refid="_physics_shape_sphere_8cpp"/>
+      </node>
+      <node id="28563">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsContact.cpp</label>
+        <link refid="_physics_contact_8cpp"/>
+      </node>
+      <node id="28530">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</label>
+        <link refid="_node_8cpp"/>
+      </node>
+      <node id="28570">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox.cpp</label>
+        <link refid="_physics_shape_box_8cpp"/>
+      </node>
+      <node id="28504">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ActionBuilder.cpp</label>
+        <link refid="_action_builder_8cpp"/>
+      </node>
+      <node id="28608">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SoundBuilder.cpp</label>
+        <link refid="_sound_builder_8cpp"/>
+      </node>
+      <node id="28553">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_8cpp"/>
+      </node>
+      <node id="28633">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/DropdownHUD.cpp</label>
+        <link refid="_dropdown_h_u_d_8cpp"/>
+      </node>
+      <node id="28574">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBvhTriangleMesh.cpp</label>
+        <link refid="_physics_shape_bvh_triangle_mesh_8cpp"/>
+      </node>
+      <node id="28568">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContactBuilder.cpp</label>
+        <link refid="_physics_ray_contact_builder_8cpp"/>
+      </node>
+      <node id="28595">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorldBuilder.cpp</label>
+        <link refid="_physics_world_builder_8cpp"/>
+      </node>
+      <node id="28539">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhost.cpp</label>
+        <link refid="_physics_body_ghost_8cpp"/>
+      </node>
+      <node id="28606">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SkinnerBuilder.cpp</label>
+        <link refid="_skinner_builder_8cpp"/>
+      </node>
+      <node id="28536">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.cpp</label>
+        <link refid="_particle_emitter_8cpp"/>
+      </node>
+      <node id="28584">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCylinder.cpp</label>
+        <link refid="_physics_shape_cylinder_8cpp"/>
+      </node>
+      <node id="28518">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ImageBuilder.cpp</label>
+        <link refid="_image_builder_8cpp"/>
+      </node>
+      <node id="28630">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ButtonHUD.cpp</label>
+        <link refid="_button_h_u_d_8cpp"/>
+      </node>
+      <node id="28636">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp</label>
+        <link refid="_material_property_8cpp"/>
+      </node>
+      <node id="28581">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexHullBuilder.cpp</label>
+        <link refid="_physics_shape_convex_hull_builder_8cpp"/>
+      </node>
+      <node id="28637">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp</label>
+        <link refid="_shader_program_8cpp"/>
+      </node>
+      <node id="28554">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofBuilder.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_builder_8cpp"/>
+      </node>
+      <node id="28571">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2D.cpp</label>
+        <link refid="_physics_shape_box2_d_8cpp"/>
+      </node>
+      <node id="28551">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixed.cpp</label>
+        <link refid="_physics_constraint_fixed_8cpp"/>
+      </node>
+      <node id="28537">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitterBuilder.cpp</label>
+        <link refid="_particle_emitter_builder_8cpp"/>
+      </node>
+      <node id="28617">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp</label>
+        <link refid="_timer_8cpp"/>
+      </node>
+      <node id="28508">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUDBuilder.cpp</label>
+        <link refid="_checkbox_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="28572">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2DBuilder.cpp</label>
+        <link refid="_physics_shape_box2_d_builder_8cpp"/>
+      </node>
+      <node id="28519">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</label>
+        <link refid="_j_l_i_engine_8h"/>
+      </node>
+      <node id="28520">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JsonJLI.cpp</label>
+        <link refid="_json_j_l_i_8cpp"/>
+      </node>
+      <node id="28622">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp</label>
+        <link refid="_world_resource_loader_8cpp"/>
+      </node>
+      <node id="28596">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Plane.cpp</label>
+        <link refid="_plane_8cpp"/>
+      </node>
+      <node id="28545">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsCloseContact.cpp</label>
+        <link refid="_physics_close_contact_8cpp"/>
+      </node>
+      <node id="28543">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp</label>
+        <link refid="_physics_body_soft_8cpp"/>
+      </node>
+      <node id="28635">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/LabelHUD.cpp</label>
+        <link refid="_label_h_u_d_8cpp"/>
+      </node>
+      <node id="28557">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHinge.cpp</label>
+        <link refid="_physics_constraint_hinge_8cpp"/>
+      </node>
+      <node id="28500">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="28501" relation="include">
+        </childnode>
+        <childnode refid="28502" relation="include">
+        </childnode>
+        <childnode refid="28503" relation="include">
+        </childnode>
+        <childnode refid="28504" relation="include">
+        </childnode>
+        <childnode refid="28505" relation="include">
+        </childnode>
+        <childnode refid="28506" relation="include">
+        </childnode>
+        <childnode refid="28507" relation="include">
+        </childnode>
+        <childnode refid="28508" relation="include">
+        </childnode>
+        <childnode refid="28509" relation="include">
+        </childnode>
+        <childnode refid="28510" relation="include">
+        </childnode>
+        <childnode refid="28511" relation="include">
+        </childnode>
+        <childnode refid="28512" relation="include">
+        </childnode>
+        <childnode refid="28513" relation="include">
+        </childnode>
+        <childnode refid="28514" relation="include">
+        </childnode>
+        <childnode refid="28515" relation="include">
+        </childnode>
+        <childnode refid="28516" relation="include">
+        </childnode>
+        <childnode refid="28517" relation="include">
+        </childnode>
+        <childnode refid="28518" relation="include">
+        </childnode>
+        <childnode refid="28519" relation="include">
+        </childnode>
+        <childnode refid="28520" relation="include">
+        </childnode>
+        <childnode refid="28521" relation="include">
+        </childnode>
+        <childnode refid="28522" relation="include">
+        </childnode>
+        <childnode refid="28523" relation="include">
+        </childnode>
+        <childnode refid="28524" relation="include">
+        </childnode>
+        <childnode refid="28525" relation="include">
+        </childnode>
+        <childnode refid="28526" relation="include">
+        </childnode>
+        <childnode refid="28527" relation="include">
+        </childnode>
+        <childnode refid="28528" relation="include">
+        </childnode>
+        <childnode refid="28529" relation="include">
+        </childnode>
+        <childnode refid="28530" relation="include">
+        </childnode>
+        <childnode refid="28531" relation="include">
+        </childnode>
+        <childnode refid="28532" relation="include">
+        </childnode>
+        <childnode refid="28533" relation="include">
+        </childnode>
+        <childnode refid="28534" relation="include">
+        </childnode>
+        <childnode refid="28535" relation="include">
+        </childnode>
+        <childnode refid="28536" relation="include">
+        </childnode>
+        <childnode refid="28537" relation="include">
+        </childnode>
+        <childnode refid="28538" relation="include">
+        </childnode>
+        <childnode refid="28539" relation="include">
+        </childnode>
+        <childnode refid="28540" relation="include">
+        </childnode>
+        <childnode refid="28541" relation="include">
+        </childnode>
+        <childnode refid="28542" relation="include">
+        </childnode>
+        <childnode refid="28543" relation="include">
+        </childnode>
+        <childnode refid="28544" relation="include">
+        </childnode>
+        <childnode refid="28545" relation="include">
+        </childnode>
+        <childnode refid="28546" relation="include">
+        </childnode>
+        <childnode refid="28547" relation="include">
+        </childnode>
+        <childnode refid="28548" relation="include">
+        </childnode>
+        <childnode refid="28549" relation="include">
+        </childnode>
+        <childnode refid="28550" relation="include">
+        </childnode>
+        <childnode refid="28551" relation="include">
+        </childnode>
+        <childnode refid="28552" relation="include">
+        </childnode>
+        <childnode refid="28553" relation="include">
+        </childnode>
+        <childnode refid="28554" relation="include">
+        </childnode>
+        <childnode refid="28555" relation="include">
+        </childnode>
+        <childnode refid="28556" relation="include">
+        </childnode>
+        <childnode refid="28557" relation="include">
+        </childnode>
+        <childnode refid="28558" relation="include">
+        </childnode>
+        <childnode refid="28559" relation="include">
+        </childnode>
+        <childnode refid="28560" relation="include">
+        </childnode>
+        <childnode refid="28561" relation="include">
+        </childnode>
+        <childnode refid="28562" relation="include">
+        </childnode>
+        <childnode refid="28563" relation="include">
+        </childnode>
+        <childnode refid="28564" relation="include">
+        </childnode>
+        <childnode refid="28565" relation="include">
+        </childnode>
+        <childnode refid="28566" relation="include">
+        </childnode>
+        <childnode refid="28567" relation="include">
+        </childnode>
+        <childnode refid="28568" relation="include">
+        </childnode>
+        <childnode refid="28569" relation="include">
+        </childnode>
+        <childnode refid="28570" relation="include">
+        </childnode>
+        <childnode refid="28571" relation="include">
+        </childnode>
+        <childnode refid="28572" relation="include">
+        </childnode>
+        <childnode refid="28573" relation="include">
+        </childnode>
+        <childnode refid="28574" relation="include">
+        </childnode>
+        <childnode refid="28575" relation="include">
+        </childnode>
+        <childnode refid="28576" relation="include">
+        </childnode>
+        <childnode refid="28577" relation="include">
+        </childnode>
+        <childnode refid="28578" relation="include">
+        </childnode>
+        <childnode refid="28579" relation="include">
+        </childnode>
+        <childnode refid="28580" relation="include">
+        </childnode>
+        <childnode refid="28581" relation="include">
+        </childnode>
+        <childnode refid="28582" relation="include">
+        </childnode>
+        <childnode refid="28583" relation="include">
+        </childnode>
+        <childnode refid="28584" relation="include">
+        </childnode>
+        <childnode refid="28585" relation="include">
+        </childnode>
+        <childnode refid="28586" relation="include">
+        </childnode>
+        <childnode refid="28587" relation="include">
+        </childnode>
+        <childnode refid="28588" relation="include">
+        </childnode>
+        <childnode refid="28589" relation="include">
+        </childnode>
+        <childnode refid="28590" relation="include">
+        </childnode>
+        <childnode refid="28591" relation="include">
+        </childnode>
+        <childnode refid="28592" relation="include">
+        </childnode>
+        <childnode refid="28593" relation="include">
+        </childnode>
+        <childnode refid="28594" relation="include">
+        </childnode>
+        <childnode refid="28595" relation="include">
+        </childnode>
+        <childnode refid="28596" relation="include">
+        </childnode>
+        <childnode refid="28597" relation="include">
+        </childnode>
+        <childnode refid="28598" relation="include">
+        </childnode>
+        <childnode refid="28599" relation="include">
+        </childnode>
+        <childnode refid="28600" relation="include">
+        </childnode>
+        <childnode refid="28601" relation="include">
+        </childnode>
+        <childnode refid="28602" relation="include">
+        </childnode>
+        <childnode refid="28603" relation="include">
+        </childnode>
+        <childnode refid="28604" relation="include">
+        </childnode>
+        <childnode refid="28605" relation="include">
+        </childnode>
+        <childnode refid="28606" relation="include">
+        </childnode>
+        <childnode refid="28607" relation="include">
+        </childnode>
+        <childnode refid="28608" relation="include">
+        </childnode>
+        <childnode refid="28609" relation="include">
+        </childnode>
+        <childnode refid="28610" relation="include">
+        </childnode>
+        <childnode refid="28611" relation="include">
+        </childnode>
+        <childnode refid="28612" relation="include">
+        </childnode>
+        <childnode refid="28613" relation="include">
+        </childnode>
+        <childnode refid="28614" relation="include">
+        </childnode>
+        <childnode refid="28615" relation="include">
+        </childnode>
+        <childnode refid="28616" relation="include">
+        </childnode>
+        <childnode refid="28617" relation="include">
+        </childnode>
+        <childnode refid="28618" relation="include">
+        </childnode>
+        <childnode refid="28619" relation="include">
+        </childnode>
+        <childnode refid="28620" relation="include">
+        </childnode>
+        <childnode refid="28621" relation="include">
+        </childnode>
+        <childnode refid="28622" relation="include">
+        </childnode>
+        <childnode refid="28623" relation="include">
+        </childnode>
+        <childnode refid="28624" relation="include">
+        </childnode>
+        <childnode refid="28625" relation="include">
+        </childnode>
+        <childnode refid="28626" relation="include">
+        </childnode>
+        <childnode refid="28627" relation="include">
+        </childnode>
+        <childnode refid="28628" relation="include">
+        </childnode>
+        <childnode refid="28629" relation="include">
+        </childnode>
+        <childnode refid="28630" relation="include">
+        </childnode>
+        <childnode refid="28631" relation="include">
+        </childnode>
+        <childnode refid="28632" relation="include">
+        </childnode>
+        <childnode refid="28633" relation="include">
+        </childnode>
+        <childnode refid="28634" relation="include">
+        </childnode>
+        <childnode refid="28635" relation="include">
+        </childnode>
+        <childnode refid="28636" relation="include">
+        </childnode>
+        <childnode refid="28637" relation="include">
+        </childnode>
+        <childnode refid="28638" relation="include">
+        </childnode>
+        <childnode refid="28639" relation="include">
+        </childnode>
+        <childnode refid="28640" relation="include">
+        </childnode>
+        <childnode refid="28641" relation="include">
+        </childnode>
+        <childnode refid="28642" relation="include">
+        </childnode>
+      </node>
+      <node id="28623">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldState.cpp</label>
+        <link refid="_world_state_8cpp"/>
+      </node>
+      <node id="28510">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ClockBuilder.cpp</label>
+        <link refid="_clock_builder_8cpp"/>
+      </node>
+      <node id="28591">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeSphereBuilder.cpp</label>
+        <link refid="_physics_shape_sphere_builder_8cpp"/>
+      </node>
+      <node id="28514">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/DropdownHUDBuilder.cpp</label>
+        <link refid="_dropdown_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="28526">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LightBuilder.cpp</label>
+        <link refid="_light_builder_8cpp"/>
+      </node>
+      <node id="28515">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Font.cpp</label>
+        <link refid="_font_8cpp"/>
+      </node>
+      <node id="28529">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialPropertyBuilder.cpp</label>
+        <link refid="_material_property_builder_8cpp"/>
+      </node>
+      <node id="28547">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraint.cpp</label>
+        <link refid="_physics_constraint_8cpp"/>
+      </node>
+      <node id="28583">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexTriangleMeshBuilder.cpp</label>
+        <link refid="_physics_shape_convex_triangle_mesh_builder_8cpp"/>
+      </node>
+      <node id="28642">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="28585">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCylinderBuilder.cpp</label>
+        <link refid="_physics_shape_cylinder_builder_8cpp"/>
+      </node>
+      <node id="28580">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexHull.cpp</label>
+        <link refid="_physics_shape_convex_hull_8cpp"/>
+      </node>
+      <node id="28532">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeState.cpp</label>
+        <link refid="_node_state_8cpp"/>
+      </node>
+      <node id="28549">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwist.cpp</label>
+        <link refid="_physics_constraint_cone_twist_8cpp"/>
+      </node>
+      <node id="28548">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintBuilder.cpp</label>
+        <link refid="_physics_constraint_builder_8cpp"/>
+      </node>
+      <node id="28575">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBvhTriangleMeshBuilder.cpp</label>
+        <link refid="_physics_shape_bvh_triangle_mesh_builder_8cpp"/>
+      </node>
+      <node id="28577">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCapsuleBuilder.cpp</label>
+        <link refid="_physics_shape_capsule_builder_8cpp"/>
+      </node>
+      <node id="28610">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SpriteFrameAtlas.cpp</label>
+        <link refid="_sprite_frame_atlas_8cpp"/>
+      </node>
+      <node id="28616">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ThreadBuilder.cpp</label>
+        <link refid="_thread_builder_8cpp"/>
+      </node>
+      <node id="28594">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorld.cpp</label>
+        <link refid="_physics_world_8cpp"/>
+      </node>
+      <node id="28550">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwistBuilder.cpp</label>
+        <link refid="_physics_constraint_cone_twist_builder_8cpp"/>
+      </node>
+      <node id="28561">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSlider.cpp</label>
+        <link refid="_physics_constraint_slider_8cpp"/>
+      </node>
+      <node id="28562">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSliderBuilder.cpp</label>
+        <link refid="_physics_constraint_slider_builder_8cpp"/>
+      </node>
+      <node id="28587">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeHeightfieldTerrainBuilder.cpp</label>
+        <link refid="_physics_shape_heightfield_terrain_builder_8cpp"/>
+      </node>
+      <node id="28524">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LevelOfDetailBuilder.cpp</label>
+        <link refid="_level_of_detail_builder_8cpp"/>
+      </node>
+      <node id="28615">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Thread.cpp</label>
+        <link refid="_thread_8cpp"/>
+      </node>
+      <node id="28503">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Action.cpp</label>
+        <link refid="_action_8cpp"/>
+      </node>
+      <node id="28620">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</label>
+        <link refid="_world_factory_8cpp"/>
+      </node>
+      <node id="28604">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgramBuilder.cpp</label>
+        <link refid="_shader_program_builder_8cpp"/>
+      </node>
+      <node id="28527">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Material.cpp</label>
+        <link refid="_material_8cpp"/>
+      </node>
+      <node id="28516">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/FontBuilder.cpp</label>
+        <link refid="_font_builder_8cpp"/>
+      </node>
+      <node id="28505">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ButtonHUDBuilder.cpp</label>
+        <link refid="_button_h_u_d_builder_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classnjli_1_1_physics_ray_contact" prot="public">njli::PhysicsRayContact</innerclass>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>PhysicsRayContact.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>1/8/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__JLIGameEngineTest__PhysicsRayContact__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__JLIGameEngineTest__PhysicsRayContact__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_builder_8h" kindref="compound">AbstractBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_factory_object_8h" kindref="compound">AbstractFactoryObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lua.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector3;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector2;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PhysicsRayContactBuilder;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classnjli_1_1_physics_ray_contact" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">class</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref><sp/>:<sp/>public<sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="classnjli_1_1_physics_ray_contact_1acb96ebb09abe8f2a37a915a842babfac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classnjli_1_1_physics_ray_contact_1abd7959b8cbcd7c25bc6c0c8b1ea26ce6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classnjli_1_1_physics_ray_contact_1a59cdb6fe5b378389e35b8b2a2f4e990e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_state" kindref="compound">WorldState</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref>&amp;);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>&amp;);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>BT_DECLARE_ALIGNED_ALLOCATOR();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>&amp;);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" kindref="member">AbstractDecorator::setName</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" kindref="member">AbstractDecorator::getName</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" kindref="member">AbstractFactoryObject::create</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>using<sp/>AbstractFactoryObject::clone;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" kindref="member">AbstractFactoryObject::getPointer</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" kindref="member">AbstractFactoryObject::getPointerValue</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" kindref="member">AbstractFactoryObject::serializeObject</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>calculateSerializeBufferSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>getClassName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>**<sp/>createArray(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroyArray(<ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref><sp/>*<sp/>*array,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact_builder" kindref="compound">PhysicsRayContactBuilder</ref>&amp;<sp/>builder);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>*<sp/>clone(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>*<sp/>copy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy(<ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref><sp/>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>load(<ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref><sp/>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*<sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stack_index);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>fill<sp/>in<sp/>specific<sp/>methods<sp/>for<sp/>PhysicsRayContact</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>getClosestHitFraction()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>getHitNormalWorld()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>getHitPointWorld()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/>getHitNode()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>getTouchPosition()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>screenPosition(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>pos);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>m_closestHitFraction,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>m_hitNormalWorld,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3&amp;<sp/>m_hitPointWorld,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/>m_node);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="193" refid="classnjli_1_1_physics_ray_contact_1ab45c460f290a435ea879528f4dd5b372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_physics_ray_contact_1ab45c460f290a435ea879528f4dd5b372" kindref="member">m_closestHitFraction</ref>;</highlight></codeline>
+<codeline lineno="194" refid="classnjli_1_1_physics_ray_contact_1a3cc7540d9aff7dad7860e6910aad7b41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="classnjli_1_1_physics_ray_contact_1a3cc7540d9aff7dad7860e6910aad7b41" kindref="member">m_hitNormalWorld</ref>;</highlight></codeline>
+<codeline lineno="195" refid="classnjli_1_1_physics_ray_contact_1a8bb6d7b4281cb7a5f36e28f87d1a2d77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3*<sp/><ref refid="classnjli_1_1_physics_ray_contact_1a8bb6d7b4281cb7a5f36e28f87d1a2d77" kindref="member">m_hitPointWorld</ref>;</highlight></codeline>
+<codeline lineno="196" refid="classnjli_1_1_physics_ray_contact_1ae315ed84ad9ab0f019a7a515f5a30f34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>*<sp/><ref refid="classnjli_1_1_physics_ray_contact_1ae315ed84ad9ab0f019a7a515f5a30f34" kindref="member">m_node</ref>;</highlight></codeline>
+<codeline lineno="197" refid="classnjli_1_1_physics_ray_contact_1ad676d79b15af074e79631759e42f59aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector2*<sp/><ref refid="classnjli_1_1_physics_ray_contact_1ad676d79b15af074e79631759e42f59aa" kindref="member">m_touchPosition</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__JLIGameEngineTest__PhysicsRayContact__)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.h"/>
+  </compounddef>
+</doxygen>

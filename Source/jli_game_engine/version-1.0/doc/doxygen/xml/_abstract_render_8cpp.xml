@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_abstract_render_8cpp" kind="file">
+    <compoundname>AbstractRender.cpp</compoundname>
+    <includes local="yes">GLPlatform.h</includes>
+    <includes refid="_abstract_render_8h" local="yes">AbstractRender.h</includes>
+    <includes refid="_log_8h" local="yes">Log.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="_util_8h" local="yes">Util.h</includes>
+    <incdepgraph>
+      <node id="31388">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="31389" relation="include">
+        </childnode>
+      </node>
+      <node id="31391">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="31388" relation="include">
+        </childnode>
+        <childnode refid="31392" relation="include">
+        </childnode>
+        <childnode refid="31393" relation="include">
+        </childnode>
+      </node>
+      <node id="31392">
+        <label>stdlib.h</label>
+      </node>
+      <node id="31387">
+        <label>AbstractRender.h</label>
+        <link refid="_abstract_render_8h"/>
+      </node>
+      <node id="31390">
+        <label>string</label>
+      </node>
+      <node id="31386">
+        <label>GLPlatform.h</label>
+      </node>
+      <node id="31385">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp</label>
+        <link refid="AbstractRender.cpp"/>
+        <childnode refid="31386" relation="include">
+        </childnode>
+        <childnode refid="31387" relation="include">
+        </childnode>
+        <childnode refid="31388" relation="include">
+        </childnode>
+        <childnode refid="31390" relation="include">
+        </childnode>
+        <childnode refid="31391" relation="include">
+        </childnode>
+      </node>
+      <node id="31389">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="31393">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_abstract_render_8cpp_1a0364aea0517343cf98d3b93db1218c7d" prot="public" static="no">
+        <name>JLIGameEngineTest_AbstractRender_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="10" column="9" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" prot="public" static="no">
+        <name>TAG</name>
+        <initializer>&quot;AbstractRender.cpp&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="12" column="9" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_abstract_render_8cpp_1a4b9c08bd0c7b356004b0cccc05da01cf" prot="public" static="yes" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 bgRed</definition>
+        <argsstring></argsstring>
+        <name>bgRed</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="19" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1ae73dddf8d67b90d8806429358389814a" prot="public" static="yes" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 bgGreen</definition>
+        <argsstring></argsstring>
+        <name>bgGreen</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="20" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1acffc44901d002095312c393713c6d260" prot="public" static="yes" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 bgBlue</definition>
+        <argsstring></argsstring>
+        <name>bgBlue</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="21" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1ad26c6d6de14dc0a3309ecdcdbb31c1f8" prot="public" static="yes" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 bgAlpha</definition>
+        <argsstring></argsstring>
+        <name>bgAlpha</name>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="22" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1afdbbcd23804eddcb38ff4e7e657e121d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int viewX</definition>
+        <argsstring></argsstring>
+        <name>viewX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="24" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1ac734d4cf17d96275a66845549e863cd9" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int viewY</definition>
+        <argsstring></argsstring>
+        <name>viewY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="25" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1a4557638536f96e0a599d359ccb36c30d" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int viewWidth</definition>
+        <argsstring></argsstring>
+        <name>viewWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="26" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_abstract_render_8cpp_1aa1df638c424f3846a61b41792d978802" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int viewHeight</definition>
+        <argsstring></argsstring>
+        <name>viewHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="27" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_abstract_render_8cpp_1a12791d9e49a2fd3306290a226864aba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void initGL</definition>
+        <argsstring>()</argsstring>
+        <name>initGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para>:returns: &lt;#return value description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="29" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="_abstract_render_8cpp_1a0e7927d50044aa5a11db1bbc76848ffe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void renderGL</definition>
+        <argsstring>()</argsstring>
+        <name>renderGL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="35" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="35" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="_abstract_render_8cpp_1a4661b118e43dbc7591bf560466979886" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void printGLInfo</definition>
+        <argsstring>()</argsstring>
+        <name>printGLInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="48" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="48" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="_abstract_render_8cpp_1ad2baa397c2c8e6ac43f648b961b4a4ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void setGLBackgroundColor</definition>
+        <argsstring>(float red, float green, float blue, float alpha)</argsstring>
+        <name>setGLBackgroundColor</name>
+        <param>
+          <type>float</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>blue</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>red</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#red description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>green</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#green description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#blue description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#alpha description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="90" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="_abstract_render_8cpp_1a00ae278b2285b2394deb312d4d2d215d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void setGLViewSize</definition>
+        <argsstring>(int x, int y, int width, int height)</argsstring>
+        <name>setGLViewSize</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#x description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#y description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#width description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#height description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" line="97" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>AbstractRender.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>5/10/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JLIGameEngineTest_AbstractRender_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JLIGameEngineTest_AbstractRender_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAG<sp/>&quot;AbstractRender.cpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GLPlatform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_render_8h" kindref="compound">AbstractRender.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_util_8h" kindref="compound">Util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="_abstract_render_8cpp_1a4b9c08bd0c7b356004b0cccc05da01cf" kindref="member">bgRed</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="_abstract_render_8cpp_1ae73dddf8d67b90d8806429358389814a" kindref="member">bgGreen</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="_abstract_render_8cpp_1acffc44901d002095312c393713c6d260" kindref="member">bgBlue</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="_abstract_render_8cpp_1ad26c6d6de14dc0a3309ecdcdbb31c1f8" kindref="member">bgAlpha</ref><sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1afdbbcd23804eddcb38ff4e7e657e121d" kindref="member">viewX</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1ac734d4cf17d96275a66845549e863cd9" kindref="member">viewY</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1a4557638536f96e0a599d359ccb36c30d" kindref="member">viewWidth</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1aa1df638c424f3846a61b41792d978802" kindref="member">viewHeight</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1a12791d9e49a2fd3306290a226864aba4" kindref="member">initGL</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnable(GL_BLEND);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>glDisable(GL_DEPTH_TEST);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1a0e7927d50044aa5a11db1bbc76848ffe" kindref="member">renderGL</ref>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>glViewport(<ref refid="_abstract_render_8cpp_1afdbbcd23804eddcb38ff4e7e657e121d" kindref="member">viewX</ref>,<sp/><ref refid="_abstract_render_8cpp_1ac734d4cf17d96275a66845549e863cd9" kindref="member">viewY</ref>,<sp/><ref refid="_abstract_render_8cpp_1a4557638536f96e0a599d359ccb36c30d" kindref="member">viewWidth</ref>,<sp/><ref refid="_abstract_render_8cpp_1aa1df638c424f3846a61b41792d978802" kindref="member">viewHeight</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>glClearColor(bgRed,<sp/>bgGreen,<sp/>bgBlue,<sp/>bgAlpha);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>glClearColor(0.52,<sp/>0.86,<sp/>0.99,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT|GL_STENCIL_BUFFER_BIT);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnable(GL_BLEND);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>glBlendFunc(GL_SRC_ALPHA,<sp/>GL_ONE_MINUS_SRC_ALPHA);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnable(GL_STENCIL_TEST);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnable(GL_DEPTH_TEST);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1a4661b118e43dbc7591bf560466979886" kindref="member">printGLInfo</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>begin<sp/>printGLInfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GL_VERSION&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>glGetString(GL_VERSION));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GL_VENDOR&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>glGetString(GL_VENDOR));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GL_RENDERER&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>glGetString(GL_RENDERER));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GL_EXTENSIONS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*the_extensions<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>glGetString(GL_EXTENSIONS);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*extensions<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[strlen(the_extensions)+1];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(extensions,<sp/>the_extensions);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*extension<sp/>=<sp/>strtok(extensions,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;\t%s&quot;</highlight><highlight class="normal">,<sp/>extension);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>!=<sp/>(extension<sp/>=<sp/>strtok(<ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;\t%s\n&quot;</highlight><highlight class="normal">,<sp/>extension);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>DEBUG_LOG_PRINT_V(TAG,<sp/>&quot;%s<sp/>=<sp/>%s&quot;,<sp/>&quot;GL_EXTENSIONS&quot;,<sp/>(const<sp/>char<sp/>*)<sp/>glGetString(GL_EXTENSIONS));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GL_SHADING_LANGUAGE_VERSION&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>glGetString(GL_SHADING_LANGUAGE_VERSION));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>param;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>glGetIntegerv(GL_MAX_TEXTURE_SIZE,<sp/>&amp;param);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>max<sp/>texture<sp/>size&quot;</highlight><highlight class="normal">,<sp/>param);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>glGetIntegerv(GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS,<sp/>&amp;param);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>count<sp/>texture<sp/>units<sp/>of<sp/>allowed<sp/>for<sp/>usage<sp/>in<sp/>vertex<sp/>shader&quot;</highlight><highlight class="normal">,<sp/>param);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>glGetIntegerv(GL_MAX_TEXTURE_IMAGE_UNITS,<sp/>&amp;param);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>count<sp/>texture<sp/>units<sp/>of<sp/>allowed<sp/>for<sp/>usage<sp/>in<sp/>fragmet<sp/>shader&quot;</highlight><highlight class="normal">,<sp/>param);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>glGetIntegerv(GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS,<sp/>&amp;param);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a20f686a106ec929a8c06764aecbf37cc" kindref="member">DEBUG_LOG_V</ref>(<ref refid="_abstract_render_8cpp_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>count<sp/>texture<sp/>units<sp/>of<sp/>allowed<sp/>for<sp/>usage<sp/>in<sp/>both<sp/>shaders&quot;</highlight><highlight class="normal">,<sp/>param);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>Actually<sp/>there<sp/>is<sp/>GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS,<sp/>and<sp/>GL_MAX_TEXTURE_IMAGE_UNITS<sp/>and<sp/>GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS<sp/>enums.<sp/>First<sp/>is<sp/>for<sp/>count<sp/>texture<sp/>units<sp/>of<sp/>allowed<sp/>for<sp/>usage<sp/>in<sp/>vertex<sp/>shader,<sp/>second<sp/>one<sp/>is<sp/>for<sp/>fragment<sp/>shader,<sp/>and<sp/>third<sp/>is<sp/>combined<sp/>for<sp/>both<sp/>shaders<sp/>combined.</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>end<sp/>printGLInfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1ad2baa397c2c8e6ac43f648b961b4a4ac" kindref="member">setGLBackgroundColor</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>red,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>green,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>blue,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>alpha)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1a4b9c08bd0c7b356004b0cccc05da01cf" kindref="member">bgRed</ref><sp/>=<sp/>red;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1ae73dddf8d67b90d8806429358389814a" kindref="member">bgGreen</ref><sp/>=<sp/>green;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1acffc44901d002095312c393713c6d260" kindref="member">bgBlue</ref><sp/>=<sp/>blue;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1ad26c6d6de14dc0a3309ecdcdbb31c1f8" kindref="member">bgAlpha</ref><sp/>=<sp/>alpha;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_abstract_render_8cpp_1a00ae278b2285b2394deb312d4d2d215d" kindref="member">setGLViewSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1afdbbcd23804eddcb38ff4e7e657e121d" kindref="member">viewX</ref><sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1ac734d4cf17d96275a66845549e863cd9" kindref="member">viewY</ref><sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1a4557638536f96e0a599d359ccb36c30d" kindref="member">viewWidth</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_abstract_render_8cpp_1aa1df638c424f3846a61b41792d978802" kindref="member">viewHeight</ref><sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractRender.cpp"/>
+  </compounddef>
+</doxygen>

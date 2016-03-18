@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>testmod docs</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>testmod</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/mod1.html">mod1</a></li>
+  <li><a href="../modules/mod1.html">mod1</a></li>
+  <li><a href="../modules/mylib.html">mylib</a></li>
+  <li><a href="../modules/mod1.html">mod1</a></li>
+  <li><strong>mod</strong></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/modtest.html">modtest</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>mod</code></h1>
+<p>Markdown-flavoured and very simple no-structure style.</p>
+<p>
+
+
+
+ Here the idea is to structure the document entirely with [Markdown]().
+
+
+
+ Using the default markdown processor can be a little irritating: you are
+
+ required to give a blank line before starting lists. The default stylesheet
+
+ is not quite right, either.
+
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#combine">combine (first, second)</a></td>
+	<td class="summary">Combine two strings _first_ and _second_ in interesting ways.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#combine_all">combine_all (...)</a></td>
+	<td class="summary">Combine a whole bunch of strings.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lpeg.Cc">lpeg.Cc ([, ...)</a></td>
+	<td class="summary">Creates a constant capture.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#split">split (s)</a></td>
+	<td class="summary">Split a string _str_.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#split_table">split_table (text)</a></td>
+	<td class="summary">Split a string _text_ into a table.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#constants">constants</a></td>
+	<td class="summary">A table of useful constants.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "combine"></a>
+    <strong>combine (first, second)</strong>
+    </dt>
+    <dd>
+    Combine two strings _first_ and _second_ in interesting ways.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">first</span>
+
+        </li>
+        <li><span class="parameter">second</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "combine_all"></a>
+    <strong>combine_all (...)</strong>
+    </dt>
+    <dd>
+    Combine a whole bunch of strings.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lpeg.Cc"></a>
+    <strong>lpeg.Cc ([, ...)</strong>
+    </dt>
+    <dd>
+    Creates a constant capture.  This pattern matches the empty string and
+
+ produces all given values as its captured values.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">[</span>
+
+        </li>
+        <li><span class="parameter">...</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "split"></a>
+    <strong>split (s)</strong>
+    </dt>
+    <dd>
+    Split a string _str_.  Returns the first part and the second part, so that
+
+ `combine(first,second)` is equal to _s_.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">s</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "split_table"></a>
+    <strong>split_table (text)</strong>
+    </dt>
+    <dd>
+    Split a string _text_ into a table.
+
+ Returns:
+
+
+
+ - `name` the name of the text
+
+ - `pairs` an array of pairs
+
+    - `key`
+
+    - `value`
+
+  - `length`
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "constants"></a>
+    <strong>constants</strong>
+    </dt>
+    <dd>
+    A table of useful constants.
+
+
+
+ - `alpha` first correction factor
+
+ - `beta` second correction factor
+
+
+
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2016-02-08 20:35:31 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,682 @@
+# Doxyfile 1.8.9.1
+
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = NJLIGameEngine
+PROJECT_NUMBER         = 
+PROJECT_BRIEF          = 
+PROJECT_LOGO           = logo.png
+OUTPUT_DIRECTORY       = doxygen
+CREATE_SUBDIRS         = NO
+ALLOW_UNICODE_NAMES    = NO
+OUTPUT_LANGUAGE        = English
+BRIEF_MEMBER_DESC      = YES
+REPEAT_BRIEF           = YES
+ABBREVIATE_BRIEF       = "The $name class" \
+                         "The $name widget" \
+                         "The $name file" \
+                         is \
+                         provides \
+                         specifies \
+                         contains \
+                         represents \
+                         a \
+                         an \
+                         the
+ALWAYS_DETAILED_SEC    = NO
+INLINE_INHERITED_MEMB  = NO
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = 
+STRIP_FROM_INC_PATH    = 
+SHORT_NAMES            = NO
+JAVADOC_AUTOBRIEF      = NO
+QT_AUTOBRIEF           = NO
+MULTILINE_CPP_IS_BRIEF = NO
+INHERIT_DOCS           = YES
+SEPARATE_MEMBER_PAGES  = NO
+TAB_SIZE               = 4
+ALIASES                = 
+TCL_SUBST              = 
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_FOR_FORTRAN   = NO
+OPTIMIZE_OUTPUT_VHDL   = NO
+EXTENSION_MAPPING      = 
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+BUILTIN_STL_SUPPORT    = NO
+CPP_CLI_SUPPORT        = NO
+SIP_SUPPORT            = NO
+IDL_PROPERTY_SUPPORT   = YES
+DISTRIBUTE_GROUP_DOC   = NO
+SUBGROUPING            = YES
+INLINE_GROUPED_CLASSES = NO
+INLINE_SIMPLE_STRUCTS  = NO
+TYPEDEF_HIDES_STRUCT   = NO
+LOOKUP_CACHE_SIZE      = 0
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_PACKAGE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_LOCAL_METHODS  = YES
+EXTRACT_ANON_NSPACES   = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+HIDE_FRIEND_COMPOUNDS  = NO
+HIDE_IN_BODY_DOCS      = NO
+INTERNAL_DOCS          = NO
+CASE_SENSE_NAMES       = NO
+HIDE_SCOPE_NAMES       = NO
+HIDE_COMPOUND_REFERENCE= NO
+SHOW_INCLUDE_FILES     = YES
+SHOW_GROUPED_MEMB_INC  = YES
+FORCE_LOCAL_INCLUDES   = NO
+INLINE_INFO            = YES
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = NO
+SORT_MEMBERS_CTORS_1ST = NO
+SORT_GROUP_NAMES       = NO
+SORT_BY_SCOPE_NAME     = NO
+STRICT_PROTO_MATCHING  = NO
+GENERATE_TODOLIST      = YES
+GENERATE_TESTLIST      = YES
+GENERATE_BUGLIST       = YES
+GENERATE_DEPRECATEDLIST= YES
+ENABLED_SECTIONS       = 
+MAX_INITIALIZER_LINES  = 30
+SHOW_USED_FILES        = YES
+SHOW_FILES             = YES
+SHOW_NAMESPACES        = YES
+FILE_VERSION_FILTER    = 
+LAYOUT_FILE            = 
+CITE_BIB_FILES         = 
+#---------------------------------------------------------------------------
+# Configuration options related to warning and progress messages
+#---------------------------------------------------------------------------
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = NO
+WARN_FORMAT            = "$file:$line: $text"
+WARN_LOGFILE           = 
+#---------------------------------------------------------------------------
+# Configuration options related to the input files
+#---------------------------------------------------------------------------
+INPUT                  = ../src/AbstractActionable.cpp \
+                         ../src/AbstractActionable.h \
+                         ../src/AbstractBuilder.cpp \
+                         ../src/AbstractBuilder.h \
+                         ../src/AbstractClock.h \
+                         ../src/AbstractDecorator.cpp \
+                         ../src/AbstractDecorator.h \
+                         ../src/AbstractFactoryObject.cpp \
+                         ../src/AbstractFactoryObject.h \
+                         ../src/AbstractFrameBufferObject.h \
+                         ../src/AbstractObject.h \
+                         ../src/AbstractRender.h \
+                         ../src/AbstractState.h \
+                         ../src/AbstractStateMachine.h \
+                         ../src/AbstractTransform.cpp \
+                         ../src/AbstractTransform.h \
+                         ../src/Action.cpp \
+                         ../src/Action.h \
+                         ../src/ActionBuilder.cpp \
+                         ../src/ActionBuilder.h \
+                         ../src/btClock.cpp \
+                         ../src/btClock.h \
+                         ../src/btVector2.h \
+                         ../src/ButtonHUD.h \
+                         ../src/ButtonHUDBuilder.cpp \
+                         ../src/ButtonHUDBuilder.h \
+                         ../src/Camera.cpp \
+                         ../src/Camera.h \
+                         ../src/CameraBuilder.cpp \
+                         ../src/CameraBuilder.h \
+                         ../src/CheckboxHUD.h \
+                         ../src/CheckboxHUDBuilder.cpp \
+                         ../src/CheckboxHUDBuilder.h \
+                         ../src/Clock.cpp \
+                         ../src/Clock.h \
+                         ../src/ClockBuilder.cpp \
+                         ../src/ClockBuilder.h \
+                         ../src/CollisionResponse.cpp \
+                         ../src/CollisionResponse.h \
+                         ../src/CollisionResponseBuilder.cpp \
+                         ../src/CollisionResponseBuilder.h \
+                         ../src/Cube.h \
+                         ../src/CubeBuilder.cpp \
+                         ../src/CubeBuilder.h \
+                         ../src/DropdownHUD.h \
+                         ../src/DropdownHUDBuilder.cpp \
+                         ../src/DropdownHUDBuilder.h \
+                         ../src/Font.cpp \
+                         ../src/Font.h \
+                         ../src/FontBuilder.cpp \
+                         ../src/FontBuilder.h \
+                         ../src/GameClock.cpp \
+                         ../src/GameClock.h \
+                         ../src/Geometry.h \
+                         ../src/Image.cpp \
+                         ../src/Image.h \
+                         ../src/ImageBuilder.cpp \
+                         ../src/ImageBuilder.h \
+                         ../src/JLIBuilders.h \
+                         ../src/JLIEngine.h \
+                         ../src/JLIFactoryTypes.cpp \
+                         ../src/JLIFactoryTypes.h \
+                         ../src/JLITransform.h \
+                         ../src/JsonJLI.cpp \
+                         ../src/JsonJLI.h \
+                         ../src/JsonJLIBuilder.cpp \
+                         ../src/JsonJLIBuilder.h \
+                         ../src/LabelHUD.h \
+                         ../src/LabelHUDBuilder.cpp \
+                         ../src/LabelHUDBuilder.h \
+                         ../src/LevelOfDetail.cpp \
+                         ../src/LevelOfDetail.h \
+                         ../src/LevelOfDetailBuilder.cpp \
+                         ../src/LevelOfDetailBuilder.h \
+                         ../src/Light.cpp \
+                         ../src/Light.h \
+                         ../src/LightBuilder.cpp \
+                         ../src/LightBuilder.h \
+                         ../src/Lua.cpp \
+                         ../src/Lua.h \
+                         ../src/LuaBuilder.cpp \
+                         ../src/LuaBuilder.h \
+                         ../src/Material.cpp \
+                         ../src/Material.h \
+                         ../src/MaterialBuilder.cpp \
+                         ../src/MaterialBuilder.h \
+                         ../src/MaterialProperty.h \
+                         ../src/MaterialPropertyBuilder.cpp \
+                         ../src/MaterialPropertyBuilder.h \
+                         ../src/Node.cpp \
+                         ../src/Node.h \
+                         ../src/NodeBuilder.cpp \
+                         ../src/NodeBuilder.h \
+                         ../src/NodeState.cpp \
+                         ../src/NodeState.h \
+                         ../src/NodeStateBuilder.cpp \
+                         ../src/NodeStateBuilder.h \
+                         ../src/NodeStateMachine.cpp \
+                         ../src/NodeStateMachine.h \
+                         ../src/NodeStateMachineBuilder.cpp \
+                         ../src/NodeStateMachineBuilder.h \
+                         ../src/ParticleEmitter.cpp \
+                         ../src/ParticleEmitter.h \
+                         ../src/ParticleEmitterBuilder.cpp \
+                         ../src/ParticleEmitterBuilder.h \
+                         ../src/PhysicsBody.cpp \
+                         ../src/PhysicsBody.h \
+                         ../src/PhysicsBodyGhost.cpp \
+                         ../src/PhysicsBodyGhost.h \
+                         ../src/PhysicsBodyGhostBuilder.cpp \
+                         ../src/PhysicsBodyGhostBuilder.h \
+                         ../src/PhysicsBodyRigid.cpp \
+                         ../src/PhysicsBodyRigid.h \
+                         ../src/PhysicsBodyRigidBuilder.cpp \
+                         ../src/PhysicsBodyRigidBuilder.h \
+                         ../src/PhysicsBodySoft.cpp \
+                         ../src/PhysicsBodySoft.h \
+                         ../src/PhysicsBodySoftBuilder.cpp \
+                         ../src/PhysicsBodySoftBuilder.h \
+                         ../src/PhysicsCloseContact.cpp \
+                         ../src/PhysicsCloseContact.h \
+                         ../src/PhysicsCloseContactBuilder.cpp \
+                         ../src/PhysicsCloseContactBuilder.h \
+                         ../src/PhysicsConstraint.cpp \
+                         ../src/PhysicsConstraint.h \
+                         ../src/PhysicsConstraintBuilder.cpp \
+                         ../src/PhysicsConstraintBuilder.h \
+                         ../src/PhysicsConstraintConeTwist.cpp \
+                         ../src/PhysicsConstraintConeTwist.h \
+                         ../src/PhysicsConstraintConeTwistBuilder.cpp \
+                         ../src/PhysicsConstraintConeTwistBuilder.h \
+                         ../src/PhysicsConstraintFixed.cpp \
+                         ../src/PhysicsConstraintFixed.h \
+                         ../src/PhysicsConstraintFixedBuilder.cpp \
+                         ../src/PhysicsConstraintFixedBuilder.h \
+                         ../src/PhysicsConstraintGeneric6Dof.cpp \
+                         ../src/PhysicsConstraintGeneric6Dof.h \
+                         ../src/PhysicsConstraintGeneric6DofBuilder.cpp \
+                         ../src/PhysicsConstraintGeneric6DofBuilder.h \
+                         ../src/PhysicsConstraintGeneric6DofSpring.cpp \
+                         ../src/PhysicsConstraintGeneric6DofSpring.h \
+                         ../src/PhysicsConstraintGeneric6DofSpringBuilder.cpp \
+                         ../src/PhysicsConstraintGeneric6DofSpringBuilder.h \
+                         ../src/PhysicsConstraintHinge.cpp \
+                         ../src/PhysicsConstraintHinge.h \
+                         ../src/PhysicsConstraintHingeBuilder.cpp \
+                         ../src/PhysicsConstraintHingeBuilder.h \
+                         ../src/PhysicsConstraintPointToPoint.cpp \
+                         ../src/PhysicsConstraintPointToPoint.h \
+                         ../src/PhysicsConstraintPointToPointBuilder.cpp \
+                         ../src/PhysicsConstraintPointToPointBuilder.h \
+                         ../src/PhysicsConstraintSlider.cpp \
+                         ../src/PhysicsConstraintSlider.h \
+                         ../src/PhysicsConstraintSliderBuilder.cpp \
+                         ../src/PhysicsConstraintSliderBuilder.h \
+                         ../src/PhysicsContact.cpp \
+                         ../src/PhysicsContact.h \
+                         ../src/PhysicsContactBuilder.cpp \
+                         ../src/PhysicsContactBuilder.h \
+                         ../src/PhysicsField.cpp \
+                         ../src/PhysicsField.h \
+                         ../src/PhysicsFieldBuilder.cpp \
+                         ../src/PhysicsFieldBuilder.h \
+                         ../src/PhysicsRayContact.cpp \
+                         ../src/PhysicsRayContact.h \
+                         ../src/PhysicsRayContactBuilder.cpp \
+                         ../src/PhysicsRayContactBuilder.h \
+                         ../src/PhysicsShape.cpp \
+                         ../src/PhysicsShape.h \
+                         ../src/PhysicsShapeBox.cpp \
+                         ../src/PhysicsShapeBox.h \
+                         ../src/PhysicsShapeBox2D.cpp \
+                         ../src/PhysicsShapeBox2D.h \
+                         ../src/PhysicsShapeBox2DBuilder.cpp \
+                         ../src/PhysicsShapeBox2DBuilder.h \
+                         ../src/PhysicsShapeBoxBuilder.cpp \
+                         ../src/PhysicsShapeBoxBuilder.h \
+                         ../src/PhysicsShapeBvhTriangleMesh.cpp \
+                         ../src/PhysicsShapeBvhTriangleMesh.h \
+                         ../src/PhysicsShapeBvhTriangleMeshBuilder.cpp \
+                         ../src/PhysicsShapeBvhTriangleMeshBuilder.h \
+                         ../src/PhysicsShapeCapsule.cpp \
+                         ../src/PhysicsShapeCapsule.h \
+                         ../src/PhysicsShapeCapsuleBuilder.cpp \
+                         ../src/PhysicsShapeCapsuleBuilder.h \
+                         ../src/PhysicsShapeCone.cpp \
+                         ../src/PhysicsShapeCone.h \
+                         ../src/PhysicsShapeConeBuilder.cpp \
+                         ../src/PhysicsShapeConeBuilder.h \
+                         ../src/PhysicsShapeConvexHull.cpp \
+                         ../src/PhysicsShapeConvexHull.h \
+                         ../src/PhysicsShapeConvexHullBuilder.cpp \
+                         ../src/PhysicsShapeConvexHullBuilder.h \
+                         ../src/PhysicsShapeConvexTriangleMesh.cpp \
+                         ../src/PhysicsShapeConvexTriangleMesh.h \
+                         ../src/PhysicsShapeConvexTriangleMeshBuilder.cpp \
+                         ../src/PhysicsShapeConvexTriangleMeshBuilder.h \
+                         ../src/PhysicsShapeCylinder.cpp \
+                         ../src/PhysicsShapeCylinder.h \
+                         ../src/PhysicsShapeCylinderBuilder.cpp \
+                         ../src/PhysicsShapeCylinderBuilder.h \
+                         ../src/PhysicsShapeHeightfieldTerrain.cpp \
+                         ../src/PhysicsShapeHeightfieldTerrain.h \
+                         ../src/PhysicsShapeHeightfieldTerrainBuilder.cpp \
+                         ../src/PhysicsShapeHeightfieldTerrainBuilder.h \
+                         ../src/PhysicsShapeMultiSphere.cpp \
+                         ../src/PhysicsShapeMultiSphere.h \
+                         ../src/PhysicsShapeMultiSphereBuilder.cpp \
+                         ../src/PhysicsShapeMultiSphereBuilder.h \
+                         ../src/PhysicsShapeSphere.cpp \
+                         ../src/PhysicsShapeSphere.h \
+                         ../src/PhysicsShapeSphereBuilder.cpp \
+                         ../src/PhysicsShapeSphereBuilder.h \
+                         ../src/PhysicsShapeStaticPlane.cpp \
+                         ../src/PhysicsShapeStaticPlane.h \
+                         ../src/PhysicsShapeStaticPlaneBuilder.cpp \
+                         ../src/PhysicsShapeStaticPlaneBuilder.h \
+                         ../src/PhysicsWorld.cpp \
+                         ../src/PhysicsWorld.h \
+                         ../src/PhysicsWorldBuilder.cpp \
+                         ../src/PhysicsWorldBuilder.h \
+                         ../src/Plane.cpp \
+                         ../src/Plane.h \
+                         ../src/PlaneBuilder.cpp \
+                         ../src/PlaneBuilder.h \
+                         ../src/Scene.cpp \
+                         ../src/Scene.h \
+                         ../src/SceneBuilder.cpp \
+                         ../src/SceneBuilder.h \
+                         ../src/SceneState.cpp \
+                         ../src/SceneState.h \
+                         ../src/SceneStateBuilder.cpp \
+                         ../src/SceneStateBuilder.h \
+                         ../src/SceneStateMachine.cpp \
+                         ../src/SceneStateMachine.h \
+                         ../src/SceneStateMachineBuilder.cpp \
+                         ../src/SceneStateMachineBuilder.h \
+                         ../src/ShaderProgram.h \
+                         ../src/ShaderProgramBuilder.cpp \
+                         ../src/ShaderProgramBuilder.h \
+                         ../src/Skinner.cpp \
+                         ../src/Skinner.h \
+                         ../src/SkinnerBuilder.cpp \
+                         ../src/SkinnerBuilder.h \
+                         ../src/SliderHUD.h \
+                         ../src/SliderHUDBuilder.cpp \
+                         ../src/SliderHUDBuilder.h \
+                         ../src/SoundBuilder.cpp \
+                         ../src/SoundBuilder.h \
+                         ../src/Sprite2D.h \
+                         ../src/Sprite2DBuilder.cpp \
+                         ../src/Sprite2DBuilder.h \
+                         ../src/SpriteFrameAtlas.cpp \
+                         ../src/SpriteFrameAtlas.h \
+                         ../src/SpriteFrameAtlasBuilder.cpp \
+                         ../src/SpriteFrameAtlasBuilder.h \
+                         ../src/StopWatch.cpp \
+                         ../src/StopWatch.h \
+                         ../src/StopWatchBuilder.cpp \
+                         ../src/StopWatchBuilder.h \
+                         ../src/TextboxHUD.h \
+                         ../src/TextboxHUDBuilder.cpp \
+                         ../src/TextboxHUDBuilder.h \
+                         ../src/Thread.cpp \
+                         ../src/Thread.h \
+                         ../src/ThreadBuilder.cpp \
+                         ../src/ThreadBuilder.h \
+                         ../src/Timer.cpp \
+                         ../src/Timer.h \
+                         ../src/TimerBuilder.cpp \
+                         ../src/TimerBuilder.h \
+                         ../src/World.cpp \
+                         ../src/World.h \
+                         ../src/WorldClock.cpp \
+                         ../src/WorldClock.h \
+                         ../src/WorldDebugDrawer.h \
+                         ../src/WorldFactory.cpp \
+                         ../src/WorldFactory.h \
+                         ../src/WorldHUD.h \
+                         ../src/WorldLuaVirtualMachine.cpp \
+                         ../src/WorldLuaVirtualMachine.h \
+                         ../src/WorldResourceLoader.cpp \
+                         ../src/WorldResourceLoader.h \
+                         ../src/WorldSocket.cpp \
+                         ../src/WorldSocket.h \
+                         ../src/WorldSQLite.cpp \
+                         ../src/WorldSQLite.h \
+                         ../src/WorldState.cpp \
+                         ../src/WorldState.h \
+                         ../src/WorldStateBuilder.cpp \
+                         ../src/WorldStateBuilder.h \
+                         ../src/WorldStateMachine.cpp \
+                         ../src/WorldStateMachine.h \
+                         ../src/WorldStateMachineBuilder.cpp \
+                         ../src/WorldStateMachineBuilder.h \
+                         ../src/Xml.cpp \
+                         ../src/Xml.h \
+                         ../src/XmlBuilder.cpp \
+                         ../src/XmlBuilder.h \
+                         ../src/render/OpenGLES20/AbstractFrameBufferObject.cpp \
+                         ../src/render/OpenGLES20/AbstractRender.cpp \
+                         ../src/render/OpenGLES20/ButtonHUD.cpp \
+                         ../src/render/OpenGLES20/CheckboxHUD.cpp \
+                         ../src/render/OpenGLES20/Cube.cpp \
+                         ../src/render/OpenGLES20/DropdownHUD.cpp \
+                         ../src/render/OpenGLES20/Geometry.cpp \
+                         ../src/render/OpenGLES20/LabelHUD.cpp \
+                         ../src/render/OpenGLES20/MaterialProperty.cpp \
+                         ../src/render/OpenGLES20/ShaderProgram.cpp \
+                         ../src/render/OpenGLES20/SliderHUD.cpp \
+                         ../src/render/OpenGLES20/Sprite2D.cpp \
+                         ../src/render/OpenGLES20/TextboxHUD.cpp \
+                         ../src/render/OpenGLES20/WorldDebugDrawer.cpp \
+                         ../src/render/OpenGLES20/WorldHUD.cpp
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.c \
+                         *.cc \
+                         *.cxx \
+                         *.cpp \
+                         *.c++ \
+                         *.java \
+                         *.ii \
+                         *.ixx \
+                         *.ipp \
+                         *.i++ \
+                         *.inl \
+                         *.idl \
+                         *.ddl \
+                         *.odl \
+                         *.h \
+                         *.hh \
+                         *.hxx \
+                         *.hpp \
+                         *.h++ \
+                         *.cs \
+                         *.d \
+                         *.php \
+                         *.php4 \
+                         *.php5 \
+                         *.phtml \
+                         *.inc \
+                         *.m \
+                         *.markdown \
+                         *.md \
+                         *.mm \
+                         *.dox \
+                         *.py \
+                         *.f90 \
+                         *.f \
+                         *.for \
+                         *.tcl \
+                         *.vhd \
+                         *.vhdl \
+                         *.ucf \
+                         *.qsf \
+                         *.as \
+                         *.js \
+                         *.cpp \
+                         *.*
+RECURSIVE              = YES
+EXCLUDE                = SwigLuaWrapper.h
+EXCLUDE_SYMLINKS       = NO
+EXCLUDE_PATTERNS       = 
+EXCLUDE_SYMBOLS        = 
+EXAMPLE_PATH           = 
+EXAMPLE_PATTERNS       = *
+EXAMPLE_RECURSIVE      = NO
+IMAGE_PATH             = 
+INPUT_FILTER           = 
+FILTER_PATTERNS        = 
+FILTER_SOURCE_FILES    = NO
+FILTER_SOURCE_PATTERNS = 
+USE_MDFILE_AS_MAINPAGE = 
+#---------------------------------------------------------------------------
+# Configuration options related to source browsing
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = NO
+INLINE_SOURCES         = NO
+STRIP_CODE_COMMENTS    = YES
+REFERENCED_BY_RELATION = NO
+REFERENCES_RELATION    = NO
+REFERENCES_LINK_SOURCE = YES
+SOURCE_TOOLTIPS        = YES
+USE_HTAGS              = NO
+VERBATIM_HEADERS       = YES
+CLANG_ASSISTED_PARSING = NO
+CLANG_OPTIONS          = 
+#---------------------------------------------------------------------------
+# Configuration options related to the alphabetical class index
+#---------------------------------------------------------------------------
+ALPHABETICAL_INDEX     = YES
+COLS_IN_ALPHA_INDEX    = 5
+IGNORE_PREFIX          = 
+#---------------------------------------------------------------------------
+# Configuration options related to the HTML output
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+HTML_HEADER            = 
+HTML_FOOTER            = 
+HTML_STYLESHEET        = 
+HTML_EXTRA_STYLESHEET  = 
+HTML_EXTRA_FILES       = 
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 100
+HTML_COLORSTYLE_GAMMA  = 80
+HTML_TIMESTAMP         = YES
+HTML_DYNAMIC_SECTIONS  = NO
+HTML_INDEX_NUM_ENTRIES = 100
+GENERATE_DOCSET        = YES
+DOCSET_FEEDNAME        = "Doxygen generated docs"
+DOCSET_BUNDLE_ID       = com.njligames.jligameengine
+DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
+DOCSET_PUBLISHER_NAME  = Publisher
+GENERATE_HTMLHELP      = NO
+CHM_FILE               = 
+HHC_LOCATION           = 
+GENERATE_CHI           = NO
+CHM_INDEX_ENCODING     = 
+BINARY_TOC             = NO
+TOC_EXPAND             = NO
+GENERATE_QHP           = NO
+QCH_FILE               = 
+QHP_NAMESPACE          = org.doxygen.Project
+QHP_VIRTUAL_FOLDER     = doc
+QHP_CUST_FILTER_NAME   = 
+QHP_CUST_FILTER_ATTRS  = 
+QHP_SECT_FILTER_ATTRS  = 
+QHG_LOCATION           = 
+GENERATE_ECLIPSEHELP   = NO
+ECLIPSE_DOC_ID         = org.doxygen.Project
+DISABLE_INDEX          = NO
+GENERATE_TREEVIEW      = YES
+ENUM_VALUES_PER_LINE   = 4
+TREEVIEW_WIDTH         = 250
+EXT_LINKS_IN_WINDOW    = NO
+FORMULA_FONTSIZE       = 10
+FORMULA_TRANSPARENT    = YES
+USE_MATHJAX            = NO
+MATHJAX_FORMAT         = HTML-CSS
+MATHJAX_RELPATH        = http://cdn.mathjax.org/mathjax/latest
+MATHJAX_EXTENSIONS     = 
+MATHJAX_CODEFILE       = 
+SEARCHENGINE           = YES
+SERVER_BASED_SEARCH    = NO
+EXTERNAL_SEARCH        = NO
+SEARCHENGINE_URL       = 
+SEARCHDATA_FILE        = searchdata.xml
+EXTERNAL_SEARCH_ID     = 
+EXTRA_SEARCH_MAPPINGS  = 
+#---------------------------------------------------------------------------
+# Configuration options related to the LaTeX output
+#---------------------------------------------------------------------------
+GENERATE_LATEX         = NO
+LATEX_OUTPUT           = latex
+LATEX_CMD_NAME         = latex
+MAKEINDEX_CMD_NAME     = makeindex
+COMPACT_LATEX          = NO
+PAPER_TYPE             = a4
+EXTRA_PACKAGES         = 
+LATEX_HEADER           = 
+LATEX_FOOTER           = 
+LATEX_EXTRA_STYLESHEET = 
+LATEX_EXTRA_FILES      = 
+PDF_HYPERLINKS         = NO
+USE_PDFLATEX           = YES
+LATEX_BATCHMODE        = NO
+LATEX_HIDE_INDICES     = NO
+LATEX_SOURCE_CODE      = NO
+LATEX_BIB_STYLE        = plain
+#---------------------------------------------------------------------------
+# Configuration options related to the RTF output
+#---------------------------------------------------------------------------
+GENERATE_RTF           = NO
+RTF_OUTPUT             = rtf
+COMPACT_RTF            = NO
+RTF_HYPERLINKS         = NO
+RTF_STYLESHEET_FILE    = 
+RTF_EXTENSIONS_FILE    = 
+RTF_SOURCE_CODE        = NO
+#---------------------------------------------------------------------------
+# Configuration options related to the man page output
+#---------------------------------------------------------------------------
+GENERATE_MAN           = NO
+MAN_OUTPUT             = man
+MAN_EXTENSION          = .3
+MAN_SUBDIR             = 
+MAN_LINKS              = NO
+#---------------------------------------------------------------------------
+# Configuration options related to the XML output
+#---------------------------------------------------------------------------
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = YES
+#---------------------------------------------------------------------------
+# Configuration options related to the DOCBOOK output
+#---------------------------------------------------------------------------
+GENERATE_DOCBOOK       = NO
+DOCBOOK_OUTPUT         = docbook
+DOCBOOK_PROGRAMLISTING = NO
+#---------------------------------------------------------------------------
+# Configuration options for the AutoGen Definitions output
+#---------------------------------------------------------------------------
+GENERATE_AUTOGEN_DEF   = NO
+#---------------------------------------------------------------------------
+# Configuration options related to the Perl module output
+#---------------------------------------------------------------------------
+GENERATE_PERLMOD       = NO
+PERLMOD_LATEX          = NO
+PERLMOD_PRETTY         = YES
+PERLMOD_MAKEVAR_PREFIX = 
+#---------------------------------------------------------------------------
+# Configuration options related to the preprocessor
+#---------------------------------------------------------------------------
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+SEARCH_INCLUDES        = YES
+INCLUDE_PATH           = 
+INCLUDE_FILE_PATTERNS  = 
+PREDEFINED             = ATTRIBUTE_ALIGNED16(type)=type
+EXPAND_AS_DEFINED      = 
+SKIP_FUNCTION_MACROS   = YES
+#---------------------------------------------------------------------------
+# Configuration options related to external references
+#---------------------------------------------------------------------------
+TAGFILES               = 
+GENERATE_TAGFILE       = 
+ALLEXTERNALS           = NO
+EXTERNAL_GROUPS        = YES
+EXTERNAL_PAGES         = YES
+PERL_PATH              = /usr/bin/perl
+#---------------------------------------------------------------------------
+# Configuration options related to the dot tool
+#---------------------------------------------------------------------------
+CLASS_DIAGRAMS         = YES
+MSCGEN_PATH            = 
+DIA_PATH               = 
+HIDE_UNDOC_RELATIONS   = YES
+HAVE_DOT               = YES
+DOT_NUM_THREADS        = 0
+DOT_FONTNAME           = Helvetica
+DOT_FONTSIZE           = 10
+DOT_FONTPATH           = 
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+GROUP_GRAPHS           = YES
+UML_LOOK               = NO
+UML_LIMIT_NUM_FIELDS   = 10
+TEMPLATE_RELATIONS     = NO
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
+DOT_IMAGE_FORMAT       = png
+INTERACTIVE_SVG        = NO
+DOT_PATH               = /usr/local/graphviz-2.14/bin
+DOTFILE_DIRS           = 
+MSCFILE_DIRS           = 
+DIAFILE_DIRS           = 
+PLANTUML_JAR_PATH      = 
+PLANTUML_INCLUDE_PATH  = 
+DOT_GRAPH_MAX_NODES    = 50
+MAX_DOT_GRAPH_DEPTH    = 0
+DOT_TRANSPARENT        = NO
+DOT_MULTI_TARGETS      = NO
+GENERATE_LEGEND        = YES
+DOT_CLEANUP            = YES

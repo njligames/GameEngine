@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_device_input_time" kind="class" prot="public" abstract="yes">
+    <compoundname>njli::DeviceInputTime</compoundname>
+    <derivedcompoundref refid="classnjli_1_1_device_touch" prot="public" virt="non-virtual">njli::DeviceTouch</derivedcompoundref>
+    <includes refid="_device_input_time_8h" local="no">DeviceInputTime.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_device_input_time_1a798d29d739522cad83bd37986ed15a20" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kindref="member">f64</ref></type>
+        <definition>f64 njli::DeviceInputTime::m_timestamp_frame</definition>
+        <argsstring></argsstring>
+        <name>m_timestamp_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="49" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_device_input_time_1a20e05f326dd3a3836a549cba6b536e85" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kindref="member">f64</ref></type>
+        <definition>f64 njli::DeviceInputTime::m_timestamp_soundtick</definition>
+        <argsstring></argsstring>
+        <name>m_timestamp_soundtick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="50" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1ac8042b5700a5c1ba5901e1e552e535e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* njli::DeviceInputTime::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplementedby refid="classnjli_1_1_device_touch_1a4bdc7a1fe5514893275e7e703c84e1c3">getClassName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="19" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1a69e4bb4be69f3ac53f4514a58fd61021" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>virtual s32 njli::DeviceInputTime::getType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getType</name>
+        <reimplementedby refid="classnjli_1_1_device_touch_1a4895380f45fe67b759b2cf8464ef9287">getType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1a03eca1e2b0725a5be925f6ec5cd33b7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::DeviceInputTime::setTimeStampFrame</definition>
+        <argsstring>(const f64 timeStamp)</argsstring>
+        <name>setTimeStampFrame</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kindref="member">f64</ref></type>
+          <declname>timeStamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="22" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1a6a06c7800f1925631dafb54671b2abd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::DeviceInputTime::setTimeStampTick</definition>
+        <argsstring>(const f64 timeStamp)</argsstring>
+        <name>setTimeStampTick</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kindref="member">f64</ref></type>
+          <declname>timeStamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="23" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1ae80f7d4b32223221339d3ef3a8669a55" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_util_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kindref="member">f64</ref></type>
+        <definition>f64 njli::DeviceInputTime::getTimeStampFrame</definition>
+        <argsstring>() const </argsstring>
+        <name>getTimeStampFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="24" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1a6e6f73d5932fcbb2d17a74c52ac4280a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_util_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kindref="member">f64</ref></type>
+        <definition>f64 njli::DeviceInputTime::getTimeStampTick</definition>
+        <argsstring>() const </argsstring>
+        <name>getTimeStampTick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="25" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1a2c5cc0a5ead654efbbce74d08f490fa5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceInputTime::DeviceInputTime</definition>
+        <argsstring>()</argsstring>
+        <name>DeviceInputTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="28" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1af34c8fdf7626c83b3a106984c6218332" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceInputTime::DeviceInputTime</definition>
+        <argsstring>(const DeviceInputTime &amp;rhs)</argsstring>
+        <name>DeviceInputTime</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_device_input_time" kindref="compound">DeviceInputTime</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="33" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1ab1ca58d01db67a7ca5eb57bbbe07d929" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_device_input_time" kindref="compound">DeviceInputTime</ref> &amp;</type>
+        <definition>DeviceInputTime&amp; njli::DeviceInputTime::operator=</definition>
+        <argsstring>(const DeviceInputTime &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_device_input_time" kindref="compound">DeviceInputTime</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="38" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_device_input_time_1a2c421a428c0d4fdc1311d91b7001f9fc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::DeviceInputTime::~DeviceInputTime</definition>
+        <argsstring>()</argsstring>
+        <name>~DeviceInputTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="46" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2959">
+        <label>njli::DeviceInputTime</label>
+        <link refid="classnjli_1_1_device_input_time"/>
+      </node>
+      <node id="2960">
+        <label>njli::DeviceTouch</label>
+        <link refid="classnjli_1_1_device_touch"/>
+        <childnode refid="2959" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" line="17" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/DeviceInputTime.h" bodystart="16" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_device_input_time_1a2c5cc0a5ead654efbbce74d08f490fa5" prot="protected" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>DeviceInputTime</name></member>
+      <member refid="classnjli_1_1_device_input_time_1af34c8fdf7626c83b3a106984c6218332" prot="protected" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>DeviceInputTime</name></member>
+      <member refid="classnjli_1_1_device_input_time_1ac8042b5700a5c1ba5901e1e552e535e8" prot="public" virt="virtual"><scope>njli::DeviceInputTime</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_device_input_time_1ae80f7d4b32223221339d3ef3a8669a55" prot="public" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>getTimeStampFrame</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a6e6f73d5932fcbb2d17a74c52ac4280a" prot="public" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>getTimeStampTick</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a69e4bb4be69f3ac53f4514a58fd61021" prot="public" virt="pure-virtual"><scope>njli::DeviceInputTime</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a798d29d739522cad83bd37986ed15a20" prot="private" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>m_timestamp_frame</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a20e05f326dd3a3836a549cba6b536e85" prot="private" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>m_timestamp_soundtick</name></member>
+      <member refid="classnjli_1_1_device_input_time_1ab1ca58d01db67a7ca5eb57bbbe07d929" prot="protected" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a03eca1e2b0725a5be925f6ec5cd33b7b" prot="public" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>setTimeStampFrame</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a6a06c7800f1925631dafb54671b2abd7" prot="public" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>setTimeStampTick</name></member>
+      <member refid="classnjli_1_1_device_input_time_1a2c421a428c0d4fdc1311d91b7001f9fc" prot="protected" virt="non-virtual"><scope>njli::DeviceInputTime</scope><name>~DeviceInputTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

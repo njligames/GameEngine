@@ -1,0 +1,1293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_world_h_u_d_8h" kind="file">
+    <compoundname>WorldHUD.h</compoundname>
+    <includes refid="_abstract_object_8h" local="yes">AbstractObject.h</includes>
+    <includes refid="_file_8h" local="yes">File.h</includes>
+    <includes refid="_util_8h" local="yes">Util.h</includes>
+    <includes local="yes">nanovg.h</includes>
+    <includes refid="_abstract_frame_buffer_object_8h" local="yes">AbstractFrameBufferObject.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includes local="yes">btAlignedObjectArray.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_world_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h</includedby>
+    <includedby refid="_j_l_i_engine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</includedby>
+    <includedby refid="_world_lua_virtual_machine_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</includedby>
+    <includedby refid="_abstract_frame_buffer_object_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractFrameBufferObject.cpp</includedby>
+    <includedby refid="_button_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ButtonHUD.cpp</includedby>
+    <includedby refid="_checkbox_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp</includedby>
+    <includedby refid="_dropdown_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/DropdownHUD.cpp</includedby>
+    <includedby refid="_label_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/LabelHUD.cpp</includedby>
+    <includedby refid="_slider_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/SliderHUD.cpp</includedby>
+    <includedby refid="_textbox_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp</includedby>
+    <includedby refid="_world_h_u_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/WorldHUD.cpp</includedby>
+    <incdepgraph>
+      <node id="35268">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="35269" relation="include">
+        </childnode>
+      </node>
+      <node id="35273">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="35267" relation="include">
+        </childnode>
+        <childnode refid="35274" relation="include">
+        </childnode>
+        <childnode refid="35272" relation="include">
+        </childnode>
+      </node>
+      <node id="35267">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="35268" relation="include">
+        </childnode>
+        <childnode refid="35270" relation="include">
+        </childnode>
+        <childnode refid="35271" relation="include">
+        </childnode>
+      </node>
+      <node id="35270">
+        <label>stdlib.h</label>
+      </node>
+      <node id="35275">
+        <label>File.h</label>
+        <link refid="_file_8h"/>
+        <childnode refid="35269" relation="include">
+        </childnode>
+        <childnode refid="35271" relation="include">
+        </childnode>
+        <childnode refid="35270" relation="include">
+        </childnode>
+      </node>
+      <node id="35265">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldHUD.h</label>
+        <link refid="WorldHUD.h"/>
+        <childnode refid="35266" relation="include">
+        </childnode>
+        <childnode refid="35275" relation="include">
+        </childnode>
+        <childnode refid="35267" relation="include">
+        </childnode>
+        <childnode refid="35276" relation="include">
+        </childnode>
+        <childnode refid="35277" relation="include">
+        </childnode>
+        <childnode refid="35278" relation="include">
+        </childnode>
+        <childnode refid="35280" relation="include">
+        </childnode>
+        <childnode refid="35274" relation="include">
+        </childnode>
+      </node>
+      <node id="35272">
+        <label>string</label>
+      </node>
+      <node id="35280">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="35279">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="35274">
+        <label>vector</label>
+      </node>
+      <node id="35266">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="35267" relation="include">
+        </childnode>
+        <childnode refid="35272" relation="include">
+        </childnode>
+        <childnode refid="35273" relation="include">
+        </childnode>
+      </node>
+      <node id="35278">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="35267" relation="include">
+        </childnode>
+        <childnode refid="35279" relation="include">
+        </childnode>
+      </node>
+      <node id="35277">
+        <label>AbstractFrameBufferObject.h</label>
+        <link refid="_abstract_frame_buffer_object_8h"/>
+        <childnode refid="35267" relation="include">
+        </childnode>
+      </node>
+      <node id="35269">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="35276">
+        <label>nanovg.h</label>
+      </node>
+      <node id="35271">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="35346">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsContactBuilder.cpp</label>
+        <link refid="_physics_contact_builder_8cpp"/>
+      </node>
+      <node id="35381">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneBuilder.cpp</label>
+        <link refid="_scene_builder_8cpp"/>
+      </node>
+      <node id="35355">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBoxBuilder.cpp</label>
+        <link refid="_physics_shape_box_builder_8cpp"/>
+      </node>
+      <node id="35283">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp</label>
+        <link refid="_abstract_actionable_8cpp"/>
+      </node>
+      <node id="35334">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixedBuilder.cpp</label>
+        <link refid="_physics_constraint_fixed_builder_8cpp"/>
+      </node>
+      <node id="35360">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCone.cpp</label>
+        <link refid="_physics_shape_cone_8cpp"/>
+      </node>
+      <node id="35400">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TimerBuilder.cpp</label>
+        <link refid="_timer_builder_8cpp"/>
+      </node>
+      <node id="35304">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LabelHUDBuilder.cpp</label>
+        <link refid="_label_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35396">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUDBuilder.cpp</label>
+        <link refid="_textbox_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35380">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="35347">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsField.cpp</label>
+        <link refid="_physics_field_8cpp"/>
+      </node>
+      <node id="35341">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPoint.cpp</label>
+        <link refid="_physics_constraint_point_to_point_8cpp"/>
+      </node>
+      <node id="35361">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConeBuilder.cpp</label>
+        <link refid="_physics_shape_cone_builder_8cpp"/>
+      </node>
+      <node id="35394">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/StopWatch.cpp</label>
+        <link refid="_stop_watch_8cpp"/>
+      </node>
+      <node id="35291">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Clock.cpp</label>
+        <link refid="_clock_8cpp"/>
+      </node>
+      <node id="35370">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeMultiSphere.cpp</label>
+        <link refid="_physics_shape_multi_sphere_8cpp"/>
+      </node>
+      <node id="35299">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Image.cpp</label>
+        <link refid="_image_8cpp"/>
+      </node>
+      <node id="35387">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Skinner.cpp</label>
+        <link refid="_skinner_8cpp"/>
+      </node>
+      <node id="35382">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneState.cpp</label>
+        <link refid="_scene_state_8cpp"/>
+      </node>
+      <node id="35316">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateMachine.cpp</label>
+        <link refid="_node_state_machine_8cpp"/>
+      </node>
+      <node id="35289">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CameraBuilder.cpp</label>
+        <link refid="_camera_builder_8cpp"/>
+      </node>
+      <node id="35294">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CollisionResponseBuilder.cpp</label>
+        <link refid="_collision_response_builder_8cpp"/>
+      </node>
+      <node id="35407">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateMachine.cpp</label>
+        <link refid="_world_state_machine_8cpp"/>
+      </node>
+      <node id="35293">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CollisionResponse.cpp</label>
+        <link refid="_collision_response_8cpp"/>
+      </node>
+      <node id="35313">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeBuilder.cpp</label>
+        <link refid="_node_builder_8cpp"/>
+      </node>
+      <node id="35281">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldHUD.h</label>
+        <link refid="WorldHUD.h"/>
+        <childnode refid="35282" relation="include">
+        </childnode>
+        <childnode refid="35301" relation="include">
+        </childnode>
+        <childnode refid="35403" relation="include">
+        </childnode>
+        <childnode refid="35411" relation="include">
+        </childnode>
+        <childnode refid="35412" relation="include">
+        </childnode>
+        <childnode refid="35413" relation="include">
+        </childnode>
+        <childnode refid="35415" relation="include">
+        </childnode>
+        <childnode refid="35417" relation="include">
+        </childnode>
+        <childnode refid="35420" relation="include">
+        </childnode>
+        <childnode refid="35422" relation="include">
+        </childnode>
+        <childnode refid="35423" relation="include">
+        </childnode>
+      </node>
+      <node id="35295">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CubeBuilder.cpp</label>
+        <link refid="_cube_builder_8cpp"/>
+      </node>
+      <node id="35403">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</label>
+        <link refid="_world_lua_virtual_machine_8cpp"/>
+      </node>
+      <node id="35422">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp</label>
+        <link refid="_textbox_h_u_d_8cpp"/>
+      </node>
+      <node id="35406">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateBuilder.cpp</label>
+        <link refid="_world_state_builder_8cpp"/>
+      </node>
+      <node id="35393">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SpriteFrameAtlasBuilder.cpp</label>
+        <link refid="_sprite_frame_atlas_builder_8cpp"/>
+      </node>
+      <node id="35416">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Geometry.cpp</label>
+        <link refid="_geometry_8cpp"/>
+      </node>
+      <node id="35317">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateMachineBuilder.cpp</label>
+        <link refid="_node_state_machine_builder_8cpp"/>
+      </node>
+      <node id="35310">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialBuilder.cpp</label>
+        <link refid="_material_builder_8cpp"/>
+      </node>
+      <node id="35323">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigid.cpp</label>
+        <link refid="_physics_body_rigid_8cpp"/>
+      </node>
+      <node id="35324">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigidBuilder.cpp</label>
+        <link refid="_physics_body_rigid_builder_8cpp"/>
+      </node>
+      <node id="35420">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/SliderHUD.cpp</label>
+        <link refid="_slider_h_u_d_8cpp"/>
+      </node>
+      <node id="35379">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PlaneBuilder.cpp</label>
+        <link refid="_plane_builder_8cpp"/>
+      </node>
+      <node id="35423">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/WorldHUD.cpp</label>
+        <link refid="_world_h_u_d_8cpp"/>
+      </node>
+      <node id="35320">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.cpp</label>
+        <link refid="_physics_body_8cpp"/>
+      </node>
+      <node id="35351">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShape.cpp</label>
+        <link refid="_physics_shape_8cpp"/>
+      </node>
+      <node id="35328">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsCloseContactBuilder.cpp</label>
+        <link refid="_physics_close_contact_builder_8cpp"/>
+      </node>
+      <node id="35358">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCapsule.cpp</label>
+        <link refid="_physics_shape_capsule_8cpp"/>
+      </node>
+      <node id="35349">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.cpp</label>
+        <link refid="_physics_ray_contact_8cpp"/>
+      </node>
+      <node id="35401">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp</label>
+        <link refid="_world_8cpp"/>
+      </node>
+      <node id="35395">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/StopWatchBuilder.cpp</label>
+        <link refid="_stop_watch_builder_8cpp"/>
+      </node>
+      <node id="35303">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JsonJLIBuilder.cpp</label>
+        <link refid="_json_j_l_i_builder_8cpp"/>
+      </node>
+      <node id="35326">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoftBuilder.cpp</label>
+        <link refid="_physics_body_soft_builder_8cpp"/>
+      </node>
+      <node id="35409">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Xml.cpp</label>
+        <link refid="_xml_8cpp"/>
+      </node>
+      <node id="35414">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Cube.cpp</label>
+        <link refid="_cube_8cpp"/>
+      </node>
+      <node id="35368">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeHeightfieldTerrain.cpp</label>
+        <link refid="_physics_shape_heightfield_terrain_8cpp"/>
+      </node>
+      <node id="35315">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateBuilder.cpp</label>
+        <link refid="_node_state_builder_8cpp"/>
+      </node>
+      <node id="35288">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp</label>
+        <link refid="_camera_8cpp"/>
+      </node>
+      <node id="35348">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsFieldBuilder.cpp</label>
+        <link refid="_physics_field_builder_8cpp"/>
+      </node>
+      <node id="35410">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/XmlBuilder.cpp</label>
+        <link refid="_xml_builder_8cpp"/>
+      </node>
+      <node id="35374">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeStaticPlane.cpp</label>
+        <link refid="_physics_shape_static_plane_8cpp"/>
+      </node>
+      <node id="35411">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractFrameBufferObject.cpp</label>
+        <link refid="_abstract_frame_buffer_object_8cpp"/>
+      </node>
+      <node id="35342">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPointBuilder.cpp</label>
+        <link refid="_physics_constraint_point_to_point_builder_8cpp"/>
+      </node>
+      <node id="35337">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpring.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_8cpp"/>
+      </node>
+      <node id="35383">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateBuilder.cpp</label>
+        <link refid="_scene_state_builder_8cpp"/>
+      </node>
+      <node id="35284">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp</label>
+        <link refid="_abstract_factory_object_8cpp"/>
+      </node>
+      <node id="35371">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeMultiSphereBuilder.cpp</label>
+        <link refid="_physics_shape_multi_sphere_builder_8cpp"/>
+      </node>
+      <node id="35413">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp</label>
+        <link refid="_checkbox_h_u_d_8cpp"/>
+      </node>
+      <node id="35391">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Sprite2DBuilder.cpp</label>
+        <link refid="_sprite2_d_builder_8cpp"/>
+      </node>
+      <node id="35375">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeStaticPlaneBuilder.cpp</label>
+        <link refid="_physics_shape_static_plane_builder_8cpp"/>
+      </node>
+      <node id="35408">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateMachineBuilder.cpp</label>
+        <link refid="_world_state_machine_builder_8cpp"/>
+      </node>
+      <node id="35421">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Sprite2D.cpp</label>
+        <link refid="_sprite2_d_8cpp"/>
+      </node>
+      <node id="35340">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHingeBuilder.cpp</label>
+        <link refid="_physics_constraint_hinge_builder_8cpp"/>
+      </node>
+      <node id="35307">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Light.cpp</label>
+        <link refid="_light_8cpp"/>
+      </node>
+      <node id="35338">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpringBuilder.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_builder_8cpp"/>
+      </node>
+      <node id="35384">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateMachine.cpp</label>
+        <link refid="_scene_state_machine_8cpp"/>
+      </node>
+      <node id="35385">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateMachineBuilder.cpp</label>
+        <link refid="_scene_state_machine_builder_8cpp"/>
+      </node>
+      <node id="35389">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp</label>
+        <link refid="_slider_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35305">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LevelOfDetail.cpp</label>
+        <link refid="_level_of_detail_8cpp"/>
+      </node>
+      <node id="35364">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexTriangleMesh.cpp</label>
+        <link refid="_physics_shape_convex_triangle_mesh_8cpp"/>
+      </node>
+      <node id="35322">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhostBuilder.cpp</label>
+        <link refid="_physics_body_ghost_builder_8cpp"/>
+      </node>
+      <node id="35372">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeSphere.cpp</label>
+        <link refid="_physics_shape_sphere_8cpp"/>
+      </node>
+      <node id="35345">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsContact.cpp</label>
+        <link refid="_physics_contact_8cpp"/>
+      </node>
+      <node id="35312">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</label>
+        <link refid="_node_8cpp"/>
+      </node>
+      <node id="35352">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox.cpp</label>
+        <link refid="_physics_shape_box_8cpp"/>
+      </node>
+      <node id="35286">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ActionBuilder.cpp</label>
+        <link refid="_action_builder_8cpp"/>
+      </node>
+      <node id="35390">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SoundBuilder.cpp</label>
+        <link refid="_sound_builder_8cpp"/>
+      </node>
+      <node id="35335">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_8cpp"/>
+      </node>
+      <node id="35415">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/DropdownHUD.cpp</label>
+        <link refid="_dropdown_h_u_d_8cpp"/>
+      </node>
+      <node id="35356">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBvhTriangleMesh.cpp</label>
+        <link refid="_physics_shape_bvh_triangle_mesh_8cpp"/>
+      </node>
+      <node id="35350">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContactBuilder.cpp</label>
+        <link refid="_physics_ray_contact_builder_8cpp"/>
+      </node>
+      <node id="35377">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorldBuilder.cpp</label>
+        <link refid="_physics_world_builder_8cpp"/>
+      </node>
+      <node id="35321">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhost.cpp</label>
+        <link refid="_physics_body_ghost_8cpp"/>
+      </node>
+      <node id="35388">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SkinnerBuilder.cpp</label>
+        <link refid="_skinner_builder_8cpp"/>
+      </node>
+      <node id="35318">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.cpp</label>
+        <link refid="_particle_emitter_8cpp"/>
+      </node>
+      <node id="35366">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCylinder.cpp</label>
+        <link refid="_physics_shape_cylinder_8cpp"/>
+      </node>
+      <node id="35300">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ImageBuilder.cpp</label>
+        <link refid="_image_builder_8cpp"/>
+      </node>
+      <node id="35412">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ButtonHUD.cpp</label>
+        <link refid="_button_h_u_d_8cpp"/>
+      </node>
+      <node id="35418">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp</label>
+        <link refid="_material_property_8cpp"/>
+      </node>
+      <node id="35363">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexHullBuilder.cpp</label>
+        <link refid="_physics_shape_convex_hull_builder_8cpp"/>
+      </node>
+      <node id="35419">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp</label>
+        <link refid="_shader_program_8cpp"/>
+      </node>
+      <node id="35336">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofBuilder.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_builder_8cpp"/>
+      </node>
+      <node id="35353">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2D.cpp</label>
+        <link refid="_physics_shape_box2_d_8cpp"/>
+      </node>
+      <node id="35333">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixed.cpp</label>
+        <link refid="_physics_constraint_fixed_8cpp"/>
+      </node>
+      <node id="35319">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitterBuilder.cpp</label>
+        <link refid="_particle_emitter_builder_8cpp"/>
+      </node>
+      <node id="35399">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp</label>
+        <link refid="_timer_8cpp"/>
+      </node>
+      <node id="35290">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUDBuilder.cpp</label>
+        <link refid="_checkbox_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35354">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2DBuilder.cpp</label>
+        <link refid="_physics_shape_box2_d_builder_8cpp"/>
+      </node>
+      <node id="35301">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</label>
+        <link refid="_j_l_i_engine_8h"/>
+      </node>
+      <node id="35302">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JsonJLI.cpp</label>
+        <link refid="_json_j_l_i_8cpp"/>
+      </node>
+      <node id="35404">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp</label>
+        <link refid="_world_resource_loader_8cpp"/>
+      </node>
+      <node id="35378">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Plane.cpp</label>
+        <link refid="_plane_8cpp"/>
+      </node>
+      <node id="35327">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsCloseContact.cpp</label>
+        <link refid="_physics_close_contact_8cpp"/>
+      </node>
+      <node id="35325">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp</label>
+        <link refid="_physics_body_soft_8cpp"/>
+      </node>
+      <node id="35417">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/LabelHUD.cpp</label>
+        <link refid="_label_h_u_d_8cpp"/>
+      </node>
+      <node id="35339">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHinge.cpp</label>
+        <link refid="_physics_constraint_hinge_8cpp"/>
+      </node>
+      <node id="35282">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="35283" relation="include">
+        </childnode>
+        <childnode refid="35284" relation="include">
+        </childnode>
+        <childnode refid="35285" relation="include">
+        </childnode>
+        <childnode refid="35286" relation="include">
+        </childnode>
+        <childnode refid="35287" relation="include">
+        </childnode>
+        <childnode refid="35288" relation="include">
+        </childnode>
+        <childnode refid="35289" relation="include">
+        </childnode>
+        <childnode refid="35290" relation="include">
+        </childnode>
+        <childnode refid="35291" relation="include">
+        </childnode>
+        <childnode refid="35292" relation="include">
+        </childnode>
+        <childnode refid="35293" relation="include">
+        </childnode>
+        <childnode refid="35294" relation="include">
+        </childnode>
+        <childnode refid="35295" relation="include">
+        </childnode>
+        <childnode refid="35296" relation="include">
+        </childnode>
+        <childnode refid="35297" relation="include">
+        </childnode>
+        <childnode refid="35298" relation="include">
+        </childnode>
+        <childnode refid="35299" relation="include">
+        </childnode>
+        <childnode refid="35300" relation="include">
+        </childnode>
+        <childnode refid="35301" relation="include">
+        </childnode>
+        <childnode refid="35302" relation="include">
+        </childnode>
+        <childnode refid="35303" relation="include">
+        </childnode>
+        <childnode refid="35304" relation="include">
+        </childnode>
+        <childnode refid="35305" relation="include">
+        </childnode>
+        <childnode refid="35306" relation="include">
+        </childnode>
+        <childnode refid="35307" relation="include">
+        </childnode>
+        <childnode refid="35308" relation="include">
+        </childnode>
+        <childnode refid="35309" relation="include">
+        </childnode>
+        <childnode refid="35310" relation="include">
+        </childnode>
+        <childnode refid="35311" relation="include">
+        </childnode>
+        <childnode refid="35312" relation="include">
+        </childnode>
+        <childnode refid="35313" relation="include">
+        </childnode>
+        <childnode refid="35314" relation="include">
+        </childnode>
+        <childnode refid="35315" relation="include">
+        </childnode>
+        <childnode refid="35316" relation="include">
+        </childnode>
+        <childnode refid="35317" relation="include">
+        </childnode>
+        <childnode refid="35318" relation="include">
+        </childnode>
+        <childnode refid="35319" relation="include">
+        </childnode>
+        <childnode refid="35320" relation="include">
+        </childnode>
+        <childnode refid="35321" relation="include">
+        </childnode>
+        <childnode refid="35322" relation="include">
+        </childnode>
+        <childnode refid="35323" relation="include">
+        </childnode>
+        <childnode refid="35324" relation="include">
+        </childnode>
+        <childnode refid="35325" relation="include">
+        </childnode>
+        <childnode refid="35326" relation="include">
+        </childnode>
+        <childnode refid="35327" relation="include">
+        </childnode>
+        <childnode refid="35328" relation="include">
+        </childnode>
+        <childnode refid="35329" relation="include">
+        </childnode>
+        <childnode refid="35330" relation="include">
+        </childnode>
+        <childnode refid="35331" relation="include">
+        </childnode>
+        <childnode refid="35332" relation="include">
+        </childnode>
+        <childnode refid="35333" relation="include">
+        </childnode>
+        <childnode refid="35334" relation="include">
+        </childnode>
+        <childnode refid="35335" relation="include">
+        </childnode>
+        <childnode refid="35336" relation="include">
+        </childnode>
+        <childnode refid="35337" relation="include">
+        </childnode>
+        <childnode refid="35338" relation="include">
+        </childnode>
+        <childnode refid="35339" relation="include">
+        </childnode>
+        <childnode refid="35340" relation="include">
+        </childnode>
+        <childnode refid="35341" relation="include">
+        </childnode>
+        <childnode refid="35342" relation="include">
+        </childnode>
+        <childnode refid="35343" relation="include">
+        </childnode>
+        <childnode refid="35344" relation="include">
+        </childnode>
+        <childnode refid="35345" relation="include">
+        </childnode>
+        <childnode refid="35346" relation="include">
+        </childnode>
+        <childnode refid="35347" relation="include">
+        </childnode>
+        <childnode refid="35348" relation="include">
+        </childnode>
+        <childnode refid="35349" relation="include">
+        </childnode>
+        <childnode refid="35350" relation="include">
+        </childnode>
+        <childnode refid="35351" relation="include">
+        </childnode>
+        <childnode refid="35352" relation="include">
+        </childnode>
+        <childnode refid="35353" relation="include">
+        </childnode>
+        <childnode refid="35354" relation="include">
+        </childnode>
+        <childnode refid="35355" relation="include">
+        </childnode>
+        <childnode refid="35356" relation="include">
+        </childnode>
+        <childnode refid="35357" relation="include">
+        </childnode>
+        <childnode refid="35358" relation="include">
+        </childnode>
+        <childnode refid="35359" relation="include">
+        </childnode>
+        <childnode refid="35360" relation="include">
+        </childnode>
+        <childnode refid="35361" relation="include">
+        </childnode>
+        <childnode refid="35362" relation="include">
+        </childnode>
+        <childnode refid="35363" relation="include">
+        </childnode>
+        <childnode refid="35364" relation="include">
+        </childnode>
+        <childnode refid="35365" relation="include">
+        </childnode>
+        <childnode refid="35366" relation="include">
+        </childnode>
+        <childnode refid="35367" relation="include">
+        </childnode>
+        <childnode refid="35368" relation="include">
+        </childnode>
+        <childnode refid="35369" relation="include">
+        </childnode>
+        <childnode refid="35370" relation="include">
+        </childnode>
+        <childnode refid="35371" relation="include">
+        </childnode>
+        <childnode refid="35372" relation="include">
+        </childnode>
+        <childnode refid="35373" relation="include">
+        </childnode>
+        <childnode refid="35374" relation="include">
+        </childnode>
+        <childnode refid="35375" relation="include">
+        </childnode>
+        <childnode refid="35376" relation="include">
+        </childnode>
+        <childnode refid="35377" relation="include">
+        </childnode>
+        <childnode refid="35378" relation="include">
+        </childnode>
+        <childnode refid="35379" relation="include">
+        </childnode>
+        <childnode refid="35380" relation="include">
+        </childnode>
+        <childnode refid="35381" relation="include">
+        </childnode>
+        <childnode refid="35382" relation="include">
+        </childnode>
+        <childnode refid="35383" relation="include">
+        </childnode>
+        <childnode refid="35384" relation="include">
+        </childnode>
+        <childnode refid="35385" relation="include">
+        </childnode>
+        <childnode refid="35386" relation="include">
+        </childnode>
+        <childnode refid="35387" relation="include">
+        </childnode>
+        <childnode refid="35388" relation="include">
+        </childnode>
+        <childnode refid="35389" relation="include">
+        </childnode>
+        <childnode refid="35390" relation="include">
+        </childnode>
+        <childnode refid="35391" relation="include">
+        </childnode>
+        <childnode refid="35392" relation="include">
+        </childnode>
+        <childnode refid="35393" relation="include">
+        </childnode>
+        <childnode refid="35394" relation="include">
+        </childnode>
+        <childnode refid="35395" relation="include">
+        </childnode>
+        <childnode refid="35396" relation="include">
+        </childnode>
+        <childnode refid="35397" relation="include">
+        </childnode>
+        <childnode refid="35398" relation="include">
+        </childnode>
+        <childnode refid="35399" relation="include">
+        </childnode>
+        <childnode refid="35400" relation="include">
+        </childnode>
+        <childnode refid="35401" relation="include">
+        </childnode>
+        <childnode refid="35402" relation="include">
+        </childnode>
+        <childnode refid="35403" relation="include">
+        </childnode>
+        <childnode refid="35404" relation="include">
+        </childnode>
+        <childnode refid="35405" relation="include">
+        </childnode>
+        <childnode refid="35406" relation="include">
+        </childnode>
+        <childnode refid="35407" relation="include">
+        </childnode>
+        <childnode refid="35408" relation="include">
+        </childnode>
+        <childnode refid="35409" relation="include">
+        </childnode>
+        <childnode refid="35410" relation="include">
+        </childnode>
+        <childnode refid="35411" relation="include">
+        </childnode>
+        <childnode refid="35412" relation="include">
+        </childnode>
+        <childnode refid="35413" relation="include">
+        </childnode>
+        <childnode refid="35414" relation="include">
+        </childnode>
+        <childnode refid="35415" relation="include">
+        </childnode>
+        <childnode refid="35416" relation="include">
+        </childnode>
+        <childnode refid="35417" relation="include">
+        </childnode>
+        <childnode refid="35418" relation="include">
+        </childnode>
+        <childnode refid="35419" relation="include">
+        </childnode>
+        <childnode refid="35420" relation="include">
+        </childnode>
+        <childnode refid="35421" relation="include">
+        </childnode>
+        <childnode refid="35422" relation="include">
+        </childnode>
+        <childnode refid="35423" relation="include">
+        </childnode>
+        <childnode refid="35424" relation="include">
+        </childnode>
+      </node>
+      <node id="35405">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldState.cpp</label>
+        <link refid="_world_state_8cpp"/>
+      </node>
+      <node id="35292">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ClockBuilder.cpp</label>
+        <link refid="_clock_builder_8cpp"/>
+      </node>
+      <node id="35373">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeSphereBuilder.cpp</label>
+        <link refid="_physics_shape_sphere_builder_8cpp"/>
+      </node>
+      <node id="35296">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/DropdownHUDBuilder.cpp</label>
+        <link refid="_dropdown_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35308">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LightBuilder.cpp</label>
+        <link refid="_light_builder_8cpp"/>
+      </node>
+      <node id="35297">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Font.cpp</label>
+        <link refid="_font_8cpp"/>
+      </node>
+      <node id="35311">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialPropertyBuilder.cpp</label>
+        <link refid="_material_property_builder_8cpp"/>
+      </node>
+      <node id="35329">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraint.cpp</label>
+        <link refid="_physics_constraint_8cpp"/>
+      </node>
+      <node id="35365">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexTriangleMeshBuilder.cpp</label>
+        <link refid="_physics_shape_convex_triangle_mesh_builder_8cpp"/>
+      </node>
+      <node id="35424">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="35367">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCylinderBuilder.cpp</label>
+        <link refid="_physics_shape_cylinder_builder_8cpp"/>
+      </node>
+      <node id="35362">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexHull.cpp</label>
+        <link refid="_physics_shape_convex_hull_8cpp"/>
+      </node>
+      <node id="35314">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeState.cpp</label>
+        <link refid="_node_state_8cpp"/>
+      </node>
+      <node id="35331">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwist.cpp</label>
+        <link refid="_physics_constraint_cone_twist_8cpp"/>
+      </node>
+      <node id="35330">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintBuilder.cpp</label>
+        <link refid="_physics_constraint_builder_8cpp"/>
+      </node>
+      <node id="35357">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBvhTriangleMeshBuilder.cpp</label>
+        <link refid="_physics_shape_bvh_triangle_mesh_builder_8cpp"/>
+      </node>
+      <node id="35359">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCapsuleBuilder.cpp</label>
+        <link refid="_physics_shape_capsule_builder_8cpp"/>
+      </node>
+      <node id="35392">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SpriteFrameAtlas.cpp</label>
+        <link refid="_sprite_frame_atlas_8cpp"/>
+      </node>
+      <node id="35398">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ThreadBuilder.cpp</label>
+        <link refid="_thread_builder_8cpp"/>
+      </node>
+      <node id="35376">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorld.cpp</label>
+        <link refid="_physics_world_8cpp"/>
+      </node>
+      <node id="35332">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwistBuilder.cpp</label>
+        <link refid="_physics_constraint_cone_twist_builder_8cpp"/>
+      </node>
+      <node id="35343">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSlider.cpp</label>
+        <link refid="_physics_constraint_slider_8cpp"/>
+      </node>
+      <node id="35344">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSliderBuilder.cpp</label>
+        <link refid="_physics_constraint_slider_builder_8cpp"/>
+      </node>
+      <node id="35369">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeHeightfieldTerrainBuilder.cpp</label>
+        <link refid="_physics_shape_heightfield_terrain_builder_8cpp"/>
+      </node>
+      <node id="35306">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LevelOfDetailBuilder.cpp</label>
+        <link refid="_level_of_detail_builder_8cpp"/>
+      </node>
+      <node id="35397">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Thread.cpp</label>
+        <link refid="_thread_8cpp"/>
+      </node>
+      <node id="35285">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Action.cpp</label>
+        <link refid="_action_8cpp"/>
+      </node>
+      <node id="35402">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</label>
+        <link refid="_world_factory_8cpp"/>
+      </node>
+      <node id="35386">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgramBuilder.cpp</label>
+        <link refid="_shader_program_builder_8cpp"/>
+      </node>
+      <node id="35309">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Material.cpp</label>
+        <link refid="_material_8cpp"/>
+      </node>
+      <node id="35298">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/FontBuilder.cpp</label>
+        <link refid="_font_builder_8cpp"/>
+      </node>
+      <node id="35287">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ButtonHUDBuilder.cpp</label>
+        <link refid="_button_h_u_d_builder_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structnjli_1_1_j_l_i_paint" prot="public">njli::JLIPaint</innerclass>
+    <innerclass refid="structnjli_1_1_j_l_i_glyph_position" prot="public">njli::JLIGlyphPosition</innerclass>
+    <innerclass refid="structnjli_1_1_j_l_i_text_row" prot="public">njli::JLITextRow</innerclass>
+    <innerclass refid="classnjli_1_1_world_h_u_d" prot="public">njli::WorldHUD</innerclass>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>WorldHUD.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>1/28/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__JLIGameEngineTest__WorldHUD__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__JLIGameEngineTest__WorldHUD__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_object_8h" kindref="compound">AbstractObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_file_8h" kindref="compound">File.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_util_8h" kindref="compound">Util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;nanovg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;nanovg_gl_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_frame_buffer_object_8h" kindref="compound">AbstractFrameBufferObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btAlignedObjectArray.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector2;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btVector4;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btMatrix3x3;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Image;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Rect;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structnjli_1_1_j_l_i_paint" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">struct</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37" refid="structnjli_1_1_j_l_i_paint_1ace4bc2627435f8b885026d397371bab0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>xform[6];</highlight></codeline>
+<codeline lineno="38" refid="structnjli_1_1_j_l_i_paint_1a83e7cb273d83a5cba38622cf389a6279" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>extent[2];</highlight></codeline>
+<codeline lineno="39" refid="structnjli_1_1_j_l_i_paint_1a7496627a07e930c0f224b7bdab820924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_j_l_i_paint_1a7496627a07e930c0f224b7bdab820924" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structnjli_1_1_j_l_i_paint_1a0ca1781af3e96711b8d93398942a83d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_j_l_i_paint_1a0ca1781af3e96711b8d93398942a83d1" kindref="member">feather</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structnjli_1_1_j_l_i_paint_1a1d498a43bc3248a1ac16e5b5b1627a6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector4<sp/><ref refid="structnjli_1_1_j_l_i_paint_1a1d498a43bc3248a1ac16e5b5b1627a6a" kindref="member">innerColor</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structnjli_1_1_j_l_i_paint_1a1503a9e8b210e51f305939d54eb57e3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector4<sp/><ref refid="structnjli_1_1_j_l_i_paint_1a1503a9e8b210e51f305939d54eb57e3f" kindref="member">outerColor</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structnjli_1_1_j_l_i_paint_1a3f6e3a4e448803312e7506cf45b31e3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="structnjli_1_1_j_l_i_paint_1a3f6e3a4e448803312e7506cf45b31e3f" kindref="member">image</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structnjli_1_1_j_l_i_glyph_position" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">struct</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>const<sp/>s8*<sp/>str;<sp/>//<sp/>Position<sp/>of<sp/>the<sp/>glyph<sp/>in<sp/>the<sp/>input<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>x-coordinate<sp/>of<sp/>the<sp/>logical<sp/>glyph<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>,<sp/>maxx;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>bounds<sp/>of<sp/>the<sp/>glyph<sp/>shape.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57" refid="structnjli_1_1_j_l_i_glyph_position_1ab5ffd6bb77fffd445c0d9f38ea8621e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1ab5ffd6bb77fffd445c0d9f38ea8621e5" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref><sp/>&lt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref><sp/>&lt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref><sp/>&lt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="58" refid="structnjli_1_1_j_l_i_glyph_position_1a9becd8eef286422eab003470608064be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1a9becd8eef286422eab003470608064be" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref><sp/>&gt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref><sp/>&gt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref><sp/>&gt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="59" refid="structnjli_1_1_j_l_i_glyph_position_1aa0679a354ebebacc7d31aabff0a4e05d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1aa0679a354ebebacc7d31aabff0a4e05d" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref><sp/>&lt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref><sp/>&lt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref><sp/>&lt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="60" refid="structnjli_1_1_j_l_i_glyph_position_1aa3fc3849f99bd39c429f75f9f2fd65ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1aa3fc3849f99bd39c429f75f9f2fd65ea" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref><sp/>&gt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref><sp/>&gt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref><sp/>&gt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="61" refid="structnjli_1_1_j_l_i_glyph_position_1a8c627839571ed060bd66b86b6fdf75e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1a8c627839571ed060bd66b86b6fdf75e0" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref><sp/>==<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref><sp/>==<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref><sp/>==<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="62" refid="structnjli_1_1_j_l_i_glyph_position_1aa324a7eb79043aebc5e1c41c8cffbd00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position_1aa324a7eb79043aebc5e1c41c8cffbd00" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref><sp/>!=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a6ed30622b40cf678e609e334d92696e9" kindref="member">x</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref><sp/>!=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1ae033f5c40cd80581c9b4ea0ef7a50212" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref><sp/>!=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_glyph_position_1a7186124c79d3019feb5b1ed6b0408302" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structnjli_1_1_j_l_i_text_row" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">struct</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>const<sp/>s8*<sp/>row_start;<sp/>//<sp/>Pointer<sp/>to<sp/>the<sp/>input<sp/>text<sp/>where<sp/>the<sp/>row<sp/>starts.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>const<sp/>s8*<sp/>row_end;<sp/>//<sp/>Pointer<sp/>to<sp/>the<sp/>input<sp/>text<sp/>where<sp/>the<sp/>row<sp/>ends<sp/>(one<sp/>past<sp/>the<sp/>last<sp/>character).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>const<sp/>s8*<sp/>next;<sp/>//<sp/>Pointer<sp/>to<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>next<sp/>row.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>;<sp/></highlight><highlight class="comment">//<sp/>Logical<sp/>width<sp/>of<sp/>the<sp/>row.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>,<sp/>maxx;<sp/></highlight><highlight class="comment">//<sp/>Actual<sp/>bounds<sp/>of<sp/>the<sp/>row.<sp/>Logical<sp/>with<sp/>and<sp/>bounds<sp/>can<sp/>differ<sp/>because<sp/>of<sp/>kerning<sp/>and<sp/>some<sp/>parts<sp/>over<sp/>extending.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78" refid="structnjli_1_1_j_l_i_text_row_1a8cebc5909fc78b73ff12cfcf8163fc42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1a8cebc5909fc78b73ff12cfcf8163fc42" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref><sp/>&lt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref><sp/>&lt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref><sp/>&lt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="79" refid="structnjli_1_1_j_l_i_text_row_1a7a98698f509414d766a1bca5fe3c804e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1a7a98698f509414d766a1bca5fe3c804e" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref><sp/>&gt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref><sp/>&gt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref><sp/>&gt;<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="80" refid="structnjli_1_1_j_l_i_text_row_1abfc18ec33fd074ea140c6679cb6d104e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1abfc18ec33fd074ea140c6679cb6d104e" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref><sp/>&lt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref><sp/>&lt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref><sp/>&lt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="81" refid="structnjli_1_1_j_l_i_text_row_1a93d67945dad8ea8ef959df9acefcc64e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1a93d67945dad8ea8ef959df9acefcc64e" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref><sp/>&gt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref><sp/>&gt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref><sp/>&gt;=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="82" refid="structnjli_1_1_j_l_i_text_row_1ae1ea2e269caff412bc9b4df25af04c45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1ae1ea2e269caff412bc9b4df25af04c45" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref><sp/>==<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref><sp/>==<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref><sp/>==<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="83" refid="structnjli_1_1_j_l_i_text_row_1a23fb4aef4a3336830ac13966d757cc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row_1a23fb4aef4a3336830ac13966d757cc33" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref><sp/>!=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a94b1a25f325ac2fd07b319026148c610" kindref="member">width</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref><sp/>!=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1ae14ecb70a2695a2d483416491b5c3f7c" kindref="member">minx</ref>)<sp/>&amp;&amp;<sp/>(lhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref><sp/>!=<sp/>rhs.<ref refid="structnjli_1_1_j_l_i_text_row_1a4721c180f0c8e5d637900c37e9bdb1d5" kindref="member">maxx</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classnjli_1_1_world_h_u_d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_object" kindref="compound">AbstractObject</ref><sp/>{</highlight></codeline>
+<codeline lineno="88" refid="classnjli_1_1_world_h_u_d_1a7b4bcdf992c21ae83363f25df05b1d25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world" kindref="compound">World</ref>;</highlight></codeline>
+<codeline lineno="89" refid="classnjli_1_1_world_h_u_d_1a19c07f330269ab1d6555234c92605d56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_button_h_u_d" kindref="compound">ButtonHUD</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classnjli_1_1_world_h_u_d_1a0aab48d603790a3ca2c4d7dd7ab9e519" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref>;</highlight></codeline>
+<codeline lineno="91" refid="classnjli_1_1_world_h_u_d_1aff628788b98fce5e2ba538f3d1548af4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_dropdown_h_u_d" kindref="compound">DropdownHUD</ref>;</highlight></codeline>
+<codeline lineno="92" refid="classnjli_1_1_world_h_u_d_1aa8844d2831cd99e31cc82dd81b171f11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_label_h_u_d" kindref="compound">LabelHUD</ref>;</highlight></codeline>
+<codeline lineno="93" refid="classnjli_1_1_world_h_u_d_1a601e2cab15ade2e7f8e72cd6b68c3b1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_slider_h_u_d" kindref="compound">SliderHUD</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classnjli_1_1_world_h_u_d_1a043f6c225e4e72e1152c60f8c442fdc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref>;</highlight></codeline>
+<codeline lineno="95" refid="classnjli_1_1_world_h_u_d_1a74840235021f469fe6da7ae7d24c95ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" kindref="member">AbstractDecorator::setName</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" kindref="member">AbstractDecorator::getName</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_h_u_d_1aaa03dd572c9d1a44922a1c200d4192fe" kindref="member">WorldHUD</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a08260929135e73020a3ac9299980e304" kindref="member">~WorldHUD</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/><ref refid="classnjli_1_1_world_h_u_d_1ac8fa72d0b152fd01cf67d5712cda5b84" kindref="member">getClassName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a5069b8e7fb1711adb3521c0d5999bebe" kindref="member">getType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>fill<sp/>in<sp/>specific<sp/>methods<sp/>for<sp/>WorldHUD</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/><ref refid="classnjli_1_1_world_h_u_d_1a22c6028db63fc60eb26aa124ed4c1ba5" kindref="member">cpToUTF8</ref>(<ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>cp);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1af8b0b4208789867fdbbf79702e3ea646" kindref="member">rgb</ref>(<ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>r,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>g,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>b);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a4baf5260d2b75e3242feca1897cb22e7" kindref="member">rgbf</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>r,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>g,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>b);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a0825c4ed0fb0884887c0c6f3f867ef4b" kindref="member">rgba</ref>(<ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>r,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>g,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>b,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>a);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a08960bf169c88bc311cdd986df9460ea" kindref="member">rgbaf</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>r,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>g,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>b,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a51c6cd746846eccc0d9fd10ccc8e1cf6" kindref="member">lerpRGBA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>c0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>c1,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>u);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a485a4c13aeb97bced3035ebbe1dc4b4d" kindref="member">transRGBA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>c0,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>a);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a7265b58317f140c7004cfdf8fd3515e5" kindref="member">transRGBAf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>c0,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1aa5373f4f14898b0468285d300a26a85e" kindref="member">hsl</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>h,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>s,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>l);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>btVector4<sp/><ref refid="classnjli_1_1_world_h_u_d_1a82093ddb2f8169e9a2e93164dbf756b6" kindref="member">hsla</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>h,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>s,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>l,<sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>a);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a17822e1112d4330b0a601e05c7fca44b" kindref="member">transformIdentity</ref>(btMatrix3x3&amp;<sp/>floats);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0c224859cf3d2b43b504f61cebcd69c4" kindref="member">transformTranslate</ref>(btMatrix3x3&amp;<sp/>floats,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>translatePos);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aa9e38b76a8f23b0b039aa54df1db8066" kindref="member">transformScale</ref>(btMatrix3x3&amp;<sp/>floats,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a7db32bf294c4d55958d43188457bd866" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0ab0e1255eedff4b9788f415c6242735" kindref="member">transformRotate</ref>(btMatrix3x3&amp;<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a77433d56a87619797889e1e226fa9550" kindref="member">transformSkewX</ref>(btMatrix3x3&amp;<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af74067b7fb1d503683096b4ee03606be" kindref="member">transformSkewY</ref>(btMatrix3x3&amp;<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ae437fe479930ace7164c9a5b9c0b1ddd" kindref="member">transformMultiply</ref>(btMatrix3x3&amp;<sp/>floats,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btMatrix3x3&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a64c6317ab91fdfc868a361756af72ecb" kindref="member">transformPremultiply</ref>(btMatrix3x3&amp;<sp/>floats,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btMatrix3x3&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a9d25eb594584db2b94f8aee17be33337" kindref="member">transformPoint</ref>(btMatrix3x3&amp;<sp/>dstx,<sp/>btMatrix3x3&amp;<sp/>dsty,<sp/>btMatrix3x3&amp;<sp/>xform,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>sourcePos);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a17822e1112d4330b0a601e05c7fca44b" kindref="member">transformIdentity</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0c224859cf3d2b43b504f61cebcd69c4" kindref="member">transformTranslate</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>tx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>ty);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aa9e38b76a8f23b0b039aa54df1db8066" kindref="member">transformScale</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>sx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>sy);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0ab0e1255eedff4b9788f415c6242735" kindref="member">transformRotate</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a77433d56a87619797889e1e226fa9550" kindref="member">transformSkewX</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af74067b7fb1d503683096b4ee03606be" kindref="member">transformSkewY</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>a);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ae437fe479930ace7164c9a5b9c0b1ddd" kindref="member">transformMultiply</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>src);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a64c6317ab91fdfc868a361756af72ecb" kindref="member">transformPremultiply</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>src);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a9d25eb594584db2b94f8aee17be33337" kindref="member">transformPoint</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>dstx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>dsty,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>xform,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>srcx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>srcy);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a2a7b1b23b403b96e76b370b91cc5aed1" kindref="member">degToRad</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>deg);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a954d9952b01f0b09b2c2af8e85063b82" kindref="member">radToDeg</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>rad);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a642375ec9d4204c4e30ecd1c514db7a7" kindref="member">save</ref>();</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a9eb79412a9e58ed635026ea42ce3b56e" kindref="member">restore</ref>();</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a53e9e3898ebb81ba221c710380b554c0" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aec50b89dcd5f2d5d43248e67419e7665" kindref="member">strokeColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>color);</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aa348c8907633ae02aff28a856f75cb45" kindref="member">strokePaint</ref>(<ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/>paint);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1acb11035d988c1f295e3923682a6bbced" kindref="member">fillColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>color);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aff3e8d583cecd7baaea183fe160b9853" kindref="member">fillPaint</ref>(<ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/>paint);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a7d25dd7849d6f12f614d1382fd00f0c0" kindref="member">miterLimit</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>limit);</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af219f2c63d6a6bdd85f6871e113be598" kindref="member">strokeWidth</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>size);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1abe7199ca318efbb7fdd54b914ab4e224" kindref="member">lineCap</ref>(<ref refid="namespacenjli_1ae73ef7aff697689e327df8c62325f30d" kindref="member">njliHUDLineCap</ref><sp/>cap);</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ad146f303482641516e66066115bcb19e" kindref="member">lineJoin</ref>(<ref refid="namespacenjli_1ae73ef7aff697689e327df8c62325f30d" kindref="member">njliHUDLineCap</ref><sp/>join);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a2b1d005bd81d9e0b42a404c48ceb7cf9" kindref="member">globalAlpha</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>alpha);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a7f21364c34dbacfbf206e440c4774dd1" kindref="member">resetTransform</ref>();</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a9e1891dc9cb350ab8c1a7a8e265694b8" kindref="member">transform</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btMatrix3x3&amp;<sp/>mtx);</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a8c859db03b1586bd440c30bade8a3bdd" kindref="member">translate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>pos);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aa54f2be918db534977909d80a5801158" kindref="member">rotate</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>angle);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ab0a05d76b5251719b228fed812d69ff7" kindref="member">skewX</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>angle);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ac354c68e141696172bd0b1fc07d89f28" kindref="member">skewY</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>angle);</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a7db32bf294c4d55958d43188457bd866" kindref="member">scale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a7db32bf294c4d55958d43188457bd866" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aaadec4b47522d9b7390d3e84ee8a5356" kindref="member">getTransform</ref>(btMatrix3x3&amp;<sp/>xform);</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a06961a0e927da93914ff9f3cb069e778" kindref="member">createImage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>filename,<sp/><ref refid="namespacenjli_1a3c5203f27f547353dd9e29345d747b14" kindref="member">njliHUDImageFlags</ref><sp/>imageFlags);</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1aab3c3c6a761de7f285b7a99f8a73dc04" kindref="member">createImageRGBA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>image,<sp/><ref refid="namespacenjli_1a3c5203f27f547353dd9e29345d747b14" kindref="member">njliHUDImageFlags</ref><sp/>imageFlags);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a4e1dcdcdbaf62f4b9fd0412cf5ee23da" kindref="member">updateImage</ref>(<ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>imageHandle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>image);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0ee16fbf9fd6ae61ca0a1a220d1eaa90" kindref="member">imageSize</ref>(<ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>imageHandle,<sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref>&amp;<sp/>w,<sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref>&amp;<sp/>h);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ade08fde0f318b4ffad0ce0345cd34396" kindref="member">deleteImage</ref>(<ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>imageHandle);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a1fca57ce05261de86c129c921b9c5223" kindref="member">linearGradient</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>startPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>endPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>startColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>endColor);</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a28cd9f803c36c1ed117941319f6de586" kindref="member">boxGradient</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>feather,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>startColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>endColor);</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1ade8b232c106dea30004091edd418ab20" kindref="member">radialGradient</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>center,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>innerRadius,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>outerRadius,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>startColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>endColor);</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a339bb4c0ca3e2a5fff0f7696644abaed" kindref="member">imagePattern</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>startPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>endPos,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>angle,<sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>imageHandle,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>alpha);</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a40f16dae5cfeec69081899c6e9e251f2" kindref="member">scissor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>);</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a36707f986c16c94edb030110e9958d1f" kindref="member">intersectScissor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a1510b2540e17040abc985f2b3485ea71" kindref="member">resetScissor</ref>();</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ab5d63556e0d0e28e4458bb146e751b64" kindref="member">beginPath</ref>();</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ae93e5164ed89c2404f759efba1282383" kindref="member">moveTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aba89dd5d668b6f7de9b943d13411961f" kindref="member">lineTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a579fd8f82fda136d3bb2f916bbf767b3" kindref="member">bezierTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>controlPoint1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>controlPoint2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>pos);</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a8cefd17fd4ee43b393810cf5b6f92c3a" kindref="member">quadTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>controlPoint,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>pos);</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a71d2a7e98e92f02d75f80947ca93157f" kindref="member">arcTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>pos1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>pos2,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius);</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a83640be06ba258db7a44297d561364e3" kindref="member">closePath</ref>();</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ab8e986fe57556113de8902cd91e58725" kindref="member">pathWinding</ref>(<ref refid="namespacenjli_1adfddace364f1f59d370037cf6f934456" kindref="member">njliHUDWinding</ref><sp/>dir);</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a09909494112f37d1ae3b3729e505769d" kindref="member">arc</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>center,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>fromAngle,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>toAngle,<sp/><ref refid="namespacenjli_1adfddace364f1f59d370037cf6f934456" kindref="member">njliHUDWinding</ref><sp/>dir);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>);</highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a30d1f93d6d2fe68ccf1bb1ce56e279c8" kindref="member">roundedRect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius);</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af1b141d1009fc9a9c8de94c4709edf65" kindref="member">ellipse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>center,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>radius);</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a3170986b281a79fc800322102ab17f51" kindref="member">circle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>center,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius);</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a14544b181d0c45c47843a562ed4b029a" kindref="member">fill</ref>();</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ae4774f72db77fef1dbf4c6b7adc2e357" kindref="member">stroke</ref>();</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a06b9f9f91b0a3429f728a9064dd5e2c7" kindref="member">createFont</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>filename);</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a5e016ba34d85a2bbdba535129d4fdc6a" kindref="member">findFont</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>name);</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ac51e71d915cdf53232247d7786fa883c" kindref="member">fontSize</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>size);</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ac2e332b4befffbab6b44e2ea61ad0911" kindref="member">fontBlur</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>blur);</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ae618850d43566bb0e3d28e18a1b36037" kindref="member">textLetterSpacing</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>spacing);</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a4aefcaeea459b42c7727d301db80ed4c" kindref="member">textLineHeight</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>lineHeight);</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a2e6124ce2225018131836b7eafd1d571" kindref="member">textAlign</ref>(<ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref><sp/>align);</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aa6e14180c1643291e14b129eee1a6be3" kindref="member">fontFaceId</ref>(<ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>fontHandle);</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a2e000d08f0aacae74231570760f0c7d9" kindref="member">fontFace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>font);</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0bab9dfc4848ec90b66fb3757c51f4b2" kindref="member">text</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a586a73295c4bf59ffe62642155b96a18" kindref="member">textBox</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>breakRowWidth,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a1e5d4bd2375c309bd3d0450ae2cd6781" kindref="member">textBounds</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position,<sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/>bounds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a5f0b515da70d4597cb5ee69b9ccd4783" kindref="member">textBoxBounds</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>breakRowWidth,<sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/>bounds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end);</highlight></codeline>
+<codeline lineno="799"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a2c3d54d2d74dcf511031a7dfbb0e05ec" kindref="member">textGlyphPositions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>position,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end,<sp/>btAlignedObjectArray&lt;JLIGlyphPosition&gt;&amp;<sp/>glyphPositions);</highlight></codeline>
+<codeline lineno="807"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a1c2fe58e99ad361f25745a1a7abfb1aa" kindref="member">textMetrics</ref>(btMatrix3x3&amp;<sp/>ascender,<sp/>btMatrix3x3&amp;<sp/>descender,<sp/>btMatrix3x3&amp;<sp/>lineh);</highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/><sp/><sp/>btAlignedObjectArray&lt;JLITextRow&gt;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a2e8e57f428a868263ac81d4d9eba921d" kindref="member">textBreakLines</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>breakRowWidth);</highlight></codeline>
+<codeline lineno="818"><highlight class="normal"></highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a9e1891dc9cb350ab8c1a7a8e265694b8" kindref="member">transform</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>scaleX,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1ac354c68e141696172bd0b1fc07d89f28" kindref="member">skewY</ref>,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1ab0a05d76b5251719b228fed812d69ff7" kindref="member">skewX</ref>,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>scaleY,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y);</highlight></codeline>
+<codeline lineno="836"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a8c859db03b1586bd440c30bade8a3bdd" kindref="member">translate</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y);</highlight></codeline>
+<codeline lineno="843"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a7db32bf294c4d55958d43188457bd866" kindref="member">scale</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>scalex,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>scaley);</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a1fca57ce05261de86c129c921b9c5223" kindref="member">linearGradient</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>startx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>starty,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>endx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>endy,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>startColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>endColor);</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a28cd9f803c36c1ed117941319f6de586" kindref="member">boxGradient</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>width,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>height,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>feather,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>startColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>endColor);</highlight></codeline>
+<codeline lineno="884"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1ade8b232c106dea30004091edd418ab20" kindref="member">radialGradient</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centerx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centery,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>innerRadius,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>outerRadius,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>startColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>endColor);</highlight></codeline>
+<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a339bb4c0ca3e2a5fff0f7696644abaed" kindref="member">imagePattern</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>startx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>starty,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>endx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>endy,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>angle,<sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>imageHandle,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>alpha);</highlight></codeline>
+<codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a40f16dae5cfeec69081899c6e9e251f2" kindref="member">scissor</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>width,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>height);</highlight></codeline>
+<codeline lineno="916"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a36707f986c16c94edb030110e9958d1f" kindref="member">intersectScissor</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>width,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>height);</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ae93e5164ed89c2404f759efba1282383" kindref="member">moveTo</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y);</highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aba89dd5d668b6f7de9b943d13411961f" kindref="member">lineTo</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y);</highlight></codeline>
+<codeline lineno="941"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a579fd8f82fda136d3bb2f916bbf767b3" kindref="member">bezierTo</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>controlPoint1x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>controlPoint1y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>controlPoint2x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>controlPoint2y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y);</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a8cefd17fd4ee43b393810cf5b6f92c3a" kindref="member">quadTo</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>controlPointx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>controlPointy,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y);</highlight></codeline>
+<codeline lineno="960"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a71d2a7e98e92f02d75f80947ca93157f" kindref="member">arcTo</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>pos1x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>pos1y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>pos2x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>pos2y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius);</highlight></codeline>
+<codeline lineno="971"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a09909494112f37d1ae3b3729e505769d" kindref="member">arc</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centerx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centery,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>fromAngle,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>toAngle,<sp/><ref refid="namespacenjli_1adfddace364f1f59d370037cf6f934456" kindref="member">njliHUDWinding</ref><sp/>dir);</highlight></codeline>
+<codeline lineno="980"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a4183aaaf55fabccdf9d1f9b7614f02a4" kindref="member">rect</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>width,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>height);</highlight></codeline>
+<codeline lineno="990"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a30d1f93d6d2fe68ccf1bb1ce56e279c8" kindref="member">roundedRect</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>width,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>height,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius);</highlight></codeline>
+<codeline lineno="999"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af1b141d1009fc9a9c8de94c4709edf65" kindref="member">ellipse</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centerx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centery,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radiusx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radiusy);</highlight></codeline>
+<codeline lineno="1007"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a3170986b281a79fc800322102ab17f51" kindref="member">circle</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centerx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>centery,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>radius);</highlight></codeline>
+<codeline lineno="1018"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a0bab9dfc4848ec90b66fb3757c51f4b2" kindref="member">text</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="1028"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a586a73295c4bf59ffe62642155b96a18" kindref="member">textBox</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>breakRowWidth,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="1040"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_world_h_u_d_1a1e5d4bd2375c309bd3d0450ae2cd6781" kindref="member">textBounds</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/>bounds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="1051"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a5f0b515da70d4597cb5ee69b9ccd4783" kindref="member">textBoxBounds</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>breakRowWidth,<sp/><ref refid="classnjli_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/>bounds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end<sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="1061"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a2c3d54d2d74dcf511031a7dfbb0e05ec" kindref="member">textGlyphPositions</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a2ff401e087cf786c38a6812723e94473" kindref="member">s8</ref>*<sp/>end,<sp/>btAlignedObjectArray&lt;JLIGlyphPosition&gt;&amp;<sp/>glyphPositions);</highlight></codeline>
+<codeline lineno="1062"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1068"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref>*<sp/><ref refid="classnjli_1_1_world_h_u_d_1acc6ee920231d8816cb730dfab94e8a09" kindref="member">getCamera</ref>();</highlight></codeline>
+<codeline lineno="1069"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1070"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1071"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1aec76fe94072600aa7cab39af5f93b7f0" kindref="member">btVector4ToNVGcolor</ref>(NVGcolor&amp;<sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector4&amp;<sp/>vColor);</highlight></codeline>
+<codeline lineno="1072"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ad16f84825e50b115305c69d2351b9ddc" kindref="member">NVGcolorTobtVector4</ref>(btVector4&amp;<sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NVGcolor&amp;<sp/>vColor);</highlight></codeline>
+<codeline lineno="1073"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1074"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a21f12e31d70e41afecaed2ea99210bb5" kindref="member">JLIPaintToNVGPaint</ref>(NVGpaint&amp;<sp/>nvgPaint,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref>&amp;<sp/>njliPaint);</highlight></codeline>
+<codeline lineno="1075"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a38095f1a99cc661b4975e7280f224860" kindref="member">NVGPaintToJLIPaint</ref>(<ref refid="structnjli_1_1_j_l_i_paint" kindref="compound">JLIPaint</ref>&amp;<sp/>njliPaint,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NVGpaint&amp;<sp/>nvgPaint);</highlight></codeline>
+<codeline lineno="1076"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1077"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ab0cf014cd37556e0e0c1d9dbc61b5b02" kindref="member">JLIGlyphPositionToNVGglyphPosition</ref>(NVGglyphPosition&amp;<sp/>nvgGlyphPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>njliGlyphPos);</highlight></codeline>
+<codeline lineno="1078"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a4cced553efc97436106b333c55632cd7" kindref="member">NVGglyphPositionToJLIGlyphPosition</ref>(<ref refid="structnjli_1_1_j_l_i_glyph_position" kindref="compound">JLIGlyphPosition</ref>&amp;<sp/>njliGlyphPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NVGglyphPosition&amp;<sp/>nvgGlyphPos);</highlight></codeline>
+<codeline lineno="1079"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1080"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a82f3294ca8ee5366d0102998adc845d3" kindref="member">JLITextRowToNVGtextRow</ref>(NVGtextRow&amp;<sp/>nvgTextRow,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>njliTextRow);</highlight></codeline>
+<codeline lineno="1081"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a3d9ac6e26058d7bb99f13b95ff594d3f" kindref="member">NVGtextRowToJLITextRow</ref>(<ref refid="structnjli_1_1_j_l_i_text_row" kindref="compound">JLITextRow</ref>&amp;<sp/>njliTextRow,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NVGtextRow&amp;<sp/>nvgTextRow);</highlight></codeline>
+<codeline lineno="1082"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1083"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af5fe3cbd33306a79e3a2b7c03fbc7405" kindref="member">NVGaffineTobtMatrix3x3</ref>(btMatrix3x3&amp;<sp/>mtx,<sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats);</highlight></codeline>
+<codeline lineno="1084"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1ab95646a05222c31f8b844447985a14e1" kindref="member">btMatrix3x3ToNVGaffine</ref>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/>floats,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btMatrix3x3&amp;<sp/>mtx);</highlight></codeline>
+<codeline lineno="1085"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1086"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a93c0a1a56854f78c78fc1f3bfb5d91e0" kindref="member">renderFBOs</ref>();</highlight></codeline>
+<codeline lineno="1087"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a71d1e7e224fd723fae0bb65cbdd235c9" kindref="member">render</ref>();</highlight></codeline>
+<codeline lineno="1088"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1089"><highlight class="normal"><sp/><sp/><sp/><sp/>NVGcontext*<sp/><ref refid="classnjli_1_1_world_h_u_d_1ad0adcae2a2a50bd3b44e9a8913fb9742" kindref="member">getContext</ref>();</highlight></codeline>
+<codeline lineno="1090"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1af9a191868f90ef56bcfabf2b9367264c" kindref="member">addFBO</ref>(<ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref>*<sp/>fbo);</highlight></codeline>
+<codeline lineno="1091"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d_1a4baeb3d5641693f60c61f5b982cb159b" kindref="member">removeFBO</ref>(<ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref>*<sp/>fbo);</highlight></codeline>
+<codeline lineno="1092"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_h_u_d_1aaa03dd572c9d1a44922a1c200d4192fe" kindref="member">WorldHUD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref>&amp;);</highlight></codeline>
+<codeline lineno="1095"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref>&amp;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a231ab1b0c3b57e374b906f55d4b5f5b7" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref>&amp;);</highlight></codeline>
+<codeline lineno="1096"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1097" refid="classnjli_1_1_world_h_u_d_1a08dbc205077c567128a8bc9c3d56fc3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>NVGcontext*<sp/><ref refid="classnjli_1_1_world_h_u_d_1a08dbc205077c567128a8bc9c3d56fc3b" kindref="member">m_NVGContext</ref>;</highlight></codeline>
+<codeline lineno="1098" refid="classnjli_1_1_world_h_u_d_1a35f13368cab9b866ea08ad9f0dc6cc13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>*<sp/><ref refid="classnjli_1_1_world_h_u_d_1a35f13368cab9b866ea08ad9f0dc6cc13" kindref="member">m_matrixBuffer</ref>;</highlight></codeline>
+<codeline lineno="1099"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1100" refid="classnjli_1_1_world_h_u_d_1a5c267043670cc05af3e1b391af18cc54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;s32&gt;<sp/><ref refid="classnjli_1_1_world_h_u_d_1a5c267043670cc05af3e1b391af18cc54" kindref="member">m_images</ref>;</highlight></codeline>
+<codeline lineno="1101" refid="classnjli_1_1_world_h_u_d_1ae18bda94c395047c80f499acaf6dd61e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AbstractFrameBufferObject*&gt;<sp/><ref refid="classnjli_1_1_world_h_u_d_1ae18bda94c395047c80f499acaf6dd61e" kindref="member">m_FBOvector</ref>;</highlight></codeline>
+<codeline lineno="1102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1103" refid="classnjli_1_1_world_h_u_d_1a6ea154c63235e96fbd240cdd9c49dbcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref>*<sp/><ref refid="classnjli_1_1_world_h_u_d_1a6ea154c63235e96fbd240cdd9c49dbcd" kindref="member">m_Camera</ref>;</highlight></codeline>
+<codeline lineno="1104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;NVGLUframebuffer*&gt;<sp/>m_NVGLUfb;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__JLIGameEngineTest__WorldHUD__)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldHUD.h"/>
+  </compounddef>
+</doxygen>
