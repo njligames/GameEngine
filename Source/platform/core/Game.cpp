@@ -25,6 +25,8 @@ bool NJLIGameEngine::isEMSCRIPTEN()
 
 bool NJLIGameEngine::isMACOSX() { return platformID() == PlatformID_MacOSx; }
 
+bool NJLIGameEngine::isTVOS(){ return platformID() == PlatformID_tvOS;}
+    
 bool NJLIGameEngine::create(const char* deviceName)
 {
     const char* android_private = "";
