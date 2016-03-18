@@ -1,0 +1,192 @@
+#!/bin/sh
+
+#SOURCE: https://github.com/danielpovlsen/ios-icons-launch-images-generator
+
+#PROJECT_PATH="../../ios/JLIGameEngineTest/JLIGameEngineTest"
+PROJECT_PATH="../../APPLE/IOS"
+# MAC_PROJECT_PATH="../../macosx/YappyBirds"
+# ANROID_PROJECT_PATH="../../android/app/src/main/res"
+
+
+pushd `dirname $0` > /dev/null
+SCRIPTPATH=`pwd -P`
+popd > /dev/null
+echo JAMES $SCRIPTPATH
+
+# iPhone
+# Spotlight - iOS 5,6
+# Settings - iOS 5-8
+# 29pt - 1x,2x,3x
+sips -Z 87 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon87.png
+sips -Z 58 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon58.png
+sips -Z 29 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon58.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon29.png
+
+# iPhone
+# Spotlight - iOS 7-8
+# 40pt 2x,3x
+sips -Z 120 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon120.png
+sips -Z 80 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon80.png
+
+# iPhone
+# App - iOS 5,6
+# 57pt 1x,2x
+sips -Z 114 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon114.png
+sips -Z 57 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon114.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon57.png
+
+# iPhone
+# App - iOS 7,8
+# 60pt 2x,3x
+sips -Z 180 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon180.png
+#sips -Z 120 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon120.png # duplicate
+
+
+# iPad
+# Settings iOS 5-8
+#sips -Z 58 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon58.png # duplicate
+#sips -Z 29 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon58.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon29.png # duplicate
+
+# iPad
+# Spotlight iOS 7,8
+# 40pt 1x,2x
+#sips -Z 80 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon80.png # duplicate
+sips -Z 40 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon80.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon40.png
+
+# iPad
+# Spotlight iOS 5,6
+# 50pt 1x,2x
+sips -Z 100 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon100.png
+sips -Z 50 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon100.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon50.png
+
+# iPad
+# App iOS 5,6
+# 72pt 1x,2x
+sips -Z 144 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon144.png
+sips -Z 72 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon144.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon72.png
+
+# iPad
+# App iOS 7,8
+# 76pt 1x,2x
+sips -Z 152 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon152.png
+sips -Z 76 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon152.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon76.png
+
+
+# CarPlay
+# App iOS 8
+# 120pt 1x
+#sips -Z 120 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon120.png # duplicate
+
+
+# Apple Watch
+# Notification Center
+# 38mm, 42mm
+sips -Z 48 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon48.png
+sips -Z 55 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon55.png
+
+# Apple Watch
+# Companion Settings
+# 29pt 2x,3x
+#sips -Z 58 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon58.png # duplicate
+#sips -Z 87 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon87.png # duplicate
+
+# Apple Watch
+# Home Screen (All)
+# Long Look (38mm)
+#sips -Z 80 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon80.png # duplicate
+
+# Apple Watch
+# Long Look (42mm)
+sips -Z 88 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon88.png
+
+# Apple Watch
+# Short Look
+# 38mm, 42mm
+sips -Z 172 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon172.png
+sips -Z 196 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon196.png
+
+
+# OS X
+# 512pt 1x,2x
+sips -Z 1024 $SCRIPTPATH/Icon-Input.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon1024.png
+sips -Z 512 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon1024.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512.png
+
+# OS X
+# 256pt 1x,2x
+#sips -Z 512 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon1024.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512.png # duplicate
+sips -Z 256 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256.png
+
+# OS X
+# 128pt 1x,2x
+#sips -Z 256 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256.png # duplicate
+sips -Z 128 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon128.png
+
+# OS X
+# 32pt 1x,2x
+sips -Z 64 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon128.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon64.png
+sips -Z 32 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon64.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32.png
+
+# OS X
+# 16pt 1x,2x
+#sips -Z 32 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon64.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32.png # duplicate
+sips -Z 16 $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32.png --out $PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon16.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# iPhone 3.5" @2x
+sips -Z 960 -c 640 960 -r 90 $SCRIPTPATH/Default-Input.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default640x960.png
+# iPhone 3.5" @1x
+sips -Z 480 $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default640x960.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default320x480.png
+# iPhone 4.0" @2x
+sips -Z 1136 -c 640 1136 -r 90 $SCRIPTPATH/Default-Input.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default640x1136.png
+
+# iPhone 5.5" @3x - landscape
+sips -Z 2208 -c 1242 2208 $SCRIPTPATH/Default-Input.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default2208x1242.png
+# iPhone 5.5" @3x - portrait
+sips -r 90 $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default2208x1242.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default1242x2208.png
+# iPhone 4.7" @2x
+sips -Z 1334 -c 750 1334 -r 90 $SCRIPTPATH/Default-Input.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default750x1334.png
+
+# iPad @2x - landscape
+sips -Z 2048 $SCRIPTPATH/Default-Input.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default2048x1536.png
+# iPad @2x - portrait
+sips -r 90 $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default2048x1536.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default1536x2048.png
+# iPad @1x - landscape
+sips -Z 1024 $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default2048x1536.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default1024x768.png
+# iPad @1x - portrait
+sips -r 90 $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default1024x768.png --out $PROJECT_PATH/Images.xcassets/LaunchImage.launchimage/Default768x1024.png
+
+
+# sips -Z 512 $SCRIPTPATH/Icon-Input.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512-1.png
+# sips -Z 256 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512-1.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256-1.png
+# sips -Z 128 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256-1.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon128-1.png
+# sips -Z 32 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon128-1.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32-1.png
+# sips -Z 16 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32-1.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon16-1.png
+
+
+
+# sips -Z 512 $SCRIPTPATH/Icon-Input.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512-2.png
+# sips -Z 256 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon512-2.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256-2.png
+# sips -Z 128 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon256-2.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon128-2.png
+# sips -Z 32 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon128-2.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32-2.png
+# sips -Z 16 $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon32-2.png --out $MAC_PROJECT_PATH/Images.xcassets/AppIcon.appiconset/Icon16-2.png
+
+
+
+
+
+
+
+# sips -Z 72 $SCRIPTPATH/Icon-Input.png --out $ANROID_PROJECT_PATH/mipmap-hdpi/ic_launcher.png
+# sips -Z 48 $SCRIPTPATH/Icon-Input.png --out $ANROID_PROJECT_PATH/mipmap-mdpi/ic_launcher.png
+# sips -Z 96 $SCRIPTPATH/Icon-Input.png --out $ANROID_PROJECT_PATH/mipmap-xhdpi/ic_launcher.png
+# sips -Z 144 $SCRIPTPATH/Icon-Input.png --out $ANROID_PROJECT_PATH/mipmap-xxhdpi/ic_launcher.png

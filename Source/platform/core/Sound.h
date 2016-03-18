@@ -114,9 +114,7 @@ private:
 #endif
 
 #ifndef __EMSCRIPTEN__
-#ifndef __MACOSX__
 
-#endif
 #endif
 };
 }

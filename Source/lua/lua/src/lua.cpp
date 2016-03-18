@@ -611,7 +611,7 @@ static int win = 0;
 static int elapsedUSecs = 1;
 static int enterCode = 0;
 
-std::clock_t lastTime = std::clock();
+clock_t lastTime = clock();
 
 static void display_njli()
 {
@@ -647,7 +647,7 @@ static void keyboard_njli(unsigned char k, int x, int y)
 
 static void idle_njli(void)
 {
-  std::clock_t currentTime = std::clock();
+  clock_t currentTime = clock();
   double timeStep = (currentTime - lastTime) / (double)(CLOCKS_PER_SEC);
   lastTime = currentTime;
 
