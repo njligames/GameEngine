@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_abstract_builder_8cpp" kind="file">
+    <compoundname>AbstractBuilder.cpp</compoundname>
+    <includes refid="_abstract_builder_8h" local="yes">AbstractBuilder.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <incdepgraph>
+      <node id="19724">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="19725" relation="include">
+        </childnode>
+      </node>
+      <node id="19729">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="19723" relation="include">
+        </childnode>
+        <childnode refid="19730" relation="include">
+        </childnode>
+        <childnode refid="19728" relation="include">
+        </childnode>
+      </node>
+      <node id="19723">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="19724" relation="include">
+        </childnode>
+        <childnode refid="19726" relation="include">
+        </childnode>
+        <childnode refid="19727" relation="include">
+        </childnode>
+      </node>
+      <node id="19726">
+        <label>stdlib.h</label>
+      </node>
+      <node id="19728">
+        <label>string</label>
+      </node>
+      <node id="19721">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="19719">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="19720" relation="include">
+        </childnode>
+        <childnode refid="19723" relation="include">
+        </childnode>
+        <childnode refid="19731" relation="include">
+        </childnode>
+        <childnode refid="19728" relation="include">
+        </childnode>
+      </node>
+      <node id="19731">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="19733">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="19730">
+        <label>vector</label>
+      </node>
+      <node id="19722">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="19723" relation="include">
+        </childnode>
+        <childnode refid="19728" relation="include">
+        </childnode>
+        <childnode refid="19729" relation="include">
+        </childnode>
+      </node>
+      <node id="19732">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="19723" relation="include">
+        </childnode>
+        <childnode refid="19733" relation="include">
+        </childnode>
+      </node>
+      <node id="19725">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="19727">
+        <label>stdio.h</label>
+      </node>
+      <node id="19720">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="19721" relation="include">
+        </childnode>
+        <childnode refid="19722" relation="include">
+        </childnode>
+        <childnode refid="19723" relation="include">
+        </childnode>
+        <childnode refid="19731" relation="include">
+        </childnode>
+      </node>
+      <node id="19718">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractBuilder.cpp</label>
+        <link refid="AbstractBuilder.cpp"/>
+        <childnode refid="19719" relation="include">
+        </childnode>
+        <childnode refid="19732" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>AbstractBuilder.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>11/21/14.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_builder_8h" kindref="compound">AbstractBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_builder_1a0cfdd77fe097b255a5ca29c70675ed0a" kindref="member">AbstractBuilder::AbstractBuilder</ref>():</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_builder_1a0cfdd77fe097b255a5ca29c70675ed0a" kindref="member">AbstractBuilder::AbstractBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AbstractBuilder<sp/>&amp;copy):</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractFactoryObject(this)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_builder_1aa231c6c9955ad68dabfa0ae0b385da24" kindref="member">AbstractBuilder::~AbstractBuilder</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractBuilder<sp/>&amp;<ref refid="classnjli_1_1_abstract_builder_1a88e349a8a99b1fad0c166c0ddbc06e39" kindref="member">AbstractBuilder::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AbstractBuilder<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractBuilder.cpp"/>
+  </compounddef>
+</doxygen>

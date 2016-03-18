@@ -1,0 +1,2297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_abstract_factory_object" kind="class" prot="public" abstract="yes">
+    <compoundname>njli::AbstractFactoryObject</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_object" prot="public" virt="non-virtual">njli::AbstractObject</basecompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state" prot="public" virt="non-virtual">njli::AbstractState&lt; Node &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state" prot="public" virt="non-virtual">njli::AbstractState&lt; OWNER_TYPE &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state" prot="public" virt="non-virtual">njli::AbstractState&lt; Scene &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state" prot="public" virt="non-virtual">njli::AbstractState&lt; void &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state_machine" prot="public" virt="non-virtual">njli::AbstractStateMachine&lt; Node &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state_machine" prot="public" virt="non-virtual">njli::AbstractStateMachine&lt; Scene &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state_machine" prot="public" virt="non-virtual">njli::AbstractStateMachine&lt; void &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_builder" prot="public" virt="non-virtual">njli::AbstractBuilder</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state" prot="public" virt="non-virtual">njli::AbstractState&lt; OBJECT_TYPE &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_abstract_state_machine" prot="public" virt="non-virtual">njli::AbstractStateMachine&lt; OWNER_TYPE &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_action" prot="public" virt="non-virtual">njli::Action</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_button_h_u_d" prot="public" virt="non-virtual">njli::ButtonHUD</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_camera" prot="public" virt="non-virtual">njli::Camera</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_checkbox_h_u_d" prot="public" virt="non-virtual">njli::CheckboxHUD</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_clock" prot="public" virt="non-virtual">njli::Clock</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_collision_response" prot="public" virt="non-virtual">njli::CollisionResponse</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_dropdown_h_u_d" prot="public" virt="non-virtual">njli::DropdownHUD</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_font" prot="public" virt="non-virtual">njli::Font</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_geometry" prot="public" virt="non-virtual">njli::Geometry</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_image" prot="public" virt="non-virtual">njli::Image</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_json_j_l_i" prot="public" virt="non-virtual">njli::JsonJLI</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_label_h_u_d" prot="public" virt="non-virtual">njli::LabelHUD</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_level_of_detail" prot="public" virt="non-virtual">njli::LevelOfDetail</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_light" prot="public" virt="non-virtual">njli::Light</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_material" prot="public" virt="non-virtual">njli::Material</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_material_property" prot="public" virt="non-virtual">njli::MaterialProperty</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_node" prot="public" virt="non-virtual">njli::Node</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_particle_emitter" prot="public" virt="non-virtual">njli::ParticleEmitter</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_body" prot="public" virt="non-virtual">njli::PhysicsBody</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_close_contact" prot="public" virt="non-virtual">njli::PhysicsCloseContact</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_constraint" prot="public" virt="non-virtual">njli::PhysicsConstraint</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_contact" prot="public" virt="non-virtual">njli::PhysicsContact</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_field" prot="public" virt="non-virtual">njli::PhysicsField</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_ray_contact" prot="public" virt="non-virtual">njli::PhysicsRayContact</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_shape" prot="public" virt="non-virtual">njli::PhysicsShape</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_physics_world" prot="public" virt="non-virtual">njli::PhysicsWorld</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_scene" prot="public" virt="non-virtual">njli::Scene</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_shader_program" prot="public" virt="non-virtual">njli::ShaderProgram</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_skinner" prot="public" virt="non-virtual">njli::Skinner</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_slider_h_u_d" prot="public" virt="non-virtual">njli::SliderHUD</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_sound" prot="public" virt="non-virtual">njli::Sound</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_sprite_frame_atlas" prot="public" virt="non-virtual">njli::SpriteFrameAtlas</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_stop_watch" prot="public" virt="non-virtual">njli::StopWatch</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_textbox_h_u_d" prot="public" virt="non-virtual">njli::TextboxHUD</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_thread" prot="public" virt="non-virtual">njli::Thread</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_timer" prot="public" virt="non-virtual">njli::Timer</derivedcompoundref>
+    <derivedcompoundref refid="classnjli_1_1_xml" prot="public" virt="non-virtual">njli::Xml</derivedcompoundref>
+    <includes refid="_abstract_factory_object_8h" local="no">AbstractFactoryObject.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_abstract_factory_object_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="24" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" static="no" mutable="no">
+        <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+        <definition>const void* njli::AbstractFactoryObject::m_pointer</definition>
+        <argsstring></argsstring>
+        <name>m_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="174" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" static="no" mutable="no">
+        <type><ref refid="_util_8h_1ad758b7a5c3f18ed79d2fcd23d9f16357" kindref="member">u64</ref></type>
+        <definition>u64 njli::AbstractFactoryObject::m_pointerVal</definition>
+        <argsstring></argsstring>
+        <name>m_pointerVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="175" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_abstract_factory_object_1ab9dc44cd376b9e701945c11927f52071" prot="private" static="no" mutable="no">
+        <type>union njli::AbstractFactoryObject::@0</type>
+        <definition>union njli::AbstractFactoryObject::@0 njli::AbstractFactoryObject::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_abstract_factory_object_1a4977cfd3030c6610ea54ec279b253f45" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::m_canDelete</definition>
+        <argsstring></argsstring>
+        <name>m_canDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="177" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_abstract_factory_object_1a7b32ea157388606e926495880208db97" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::m_isRenderObject</definition>
+        <argsstring></argsstring>
+        <name>m_isRenderObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="178" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractFactoryObject::AbstractFactoryObject</definition>
+        <argsstring>(const void *ptr)</argsstring>
+        <name>AbstractFactoryObject</name>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="30" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::AbstractFactoryObject::~AbstractFactoryObject</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractFactoryObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="32" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* njli::AbstractFactoryObject::getClassName</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1afdabb48c4bf763e297ffe810b433a863">getClassName</reimplements>
+        <reimplementedby refid="classnjli_1_1_world_debug_drawer_1afb0bf0de73c92a41b5cc1d69c5cb856a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_1a74463b456b24592b089084ab785bc59b">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_1a6828dc5009c1b3f81587a7cfcc0383e5">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_1a1c7e4e3983d113149d2388514a782d4d">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_1af9011a17098a6d29554556aa2a8be289">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_1a1379451d46cec99b1efa672a924be432">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_builder_1a8413be0617bf7733fbd4a6cff41054c6">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_builder_1a57ef8c9c0e26021ee55ddd56f935f68c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_builder_1a8fa9045fc1278eb982d7970a553e4859">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_1a1ac3ded76a85874bc17b985e586ff8f1">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_1a6f5260370dd815c241adeb39eafd6f65">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_1a88c3b2f939524a16cfc11080075811c8">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_1ae5daa12bf38a2370e444a64e42e961b4">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_1a399f07b81f494a0f290bf8030d54eb0a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_builder_1a5ca7bf189748df7319497d2191098196">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_1a81be8ce35c92e8378e07bb30bea0c95f">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_1a94af95b92dbdbca61dcfc2eaa216b627">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_1a21db5439c4b948924e91478efadb8b0a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_1a5fe3fadb21fbd275d76720d6d28e6aec">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_1ab2a1aedabdb0eb9062a9efcaa8a8a7ca">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_1aa59a429868c73f947d00f770572be587">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_builder_1a827bc448025bf0cc4d2bb45cf316fe57">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_builder_1a78ed9e232c9001b8afd5c7a3853d6cf0">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_builder_1ab2499dd53e9dc21856514068f5d78eb0">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_builder_1aa34fc2bb5b364bb627fc9bc74dd619ac">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_builder_1a9543039a507131337878936508df5f8a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_builder_1afeb76a47564760bf87feb828ae97acd9">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_builder_1a6c6b4b29a7442808cc6e59bfbf241c1a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_builder_1ad76ab0ecf3294de0a08e42c31478cb0d">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_builder_1aa87472d5907138c91e6526923528f610">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_builder_1a2bf66cae2afc45a3a92d090ec9435d30">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_1a5022dff108e66d6c07ff15046814f5ad">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_1ad4e2de07f7e800f4e1a0b2ec2c445fb7">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_1a94a7e90e0ac5e29698ee4572f2efca92">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_1a7d132ff905ae1491f098e546e2dbb1ea">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_1a2404ec153a1af05e0463bef9de5a6115">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_builder_1a7056fea19f38012df2644e0e4148c269">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_1ad1e368f6c6e20df60dcf232513377f06">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_builder_1a2c87f0d86bffb10752e34d640d2b5f47">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_1ae2ca3cebfa554b462659d47a59b3853c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_builder_1ac3aeb0683830a4f041c9901eded974cd">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_builder_1a10af7358654bb4a2193d71a71c21c5e9">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_builder_1a8bf72942590a590c2cc516c23ef6c806">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_builder_1a64b5ef5ea1fa6be7c89295b8bd6461d9">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_builder_1af77e4791f0208dc0fe383b22161b4136">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_builder_1af418a41636f3c04fc8ed416a1e421700">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_builder_1ac11bb1affad2bd244f81010294131719">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_1acdc3b12a7aa91e682a80567571fc74db">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_1ac17a1c82803a29e2834020fb607571d7">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_builder_1a8c31ec0db9711bfd63c753cbe94654dc">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_1ab7ff148a5839e7ceb4cef82a360b234c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_1a36b3e0c89d7fb88214abaaffe7432de8">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_1a943d5599412b285710a29d6750959338">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_1a5e3fbdab01224dcc5704d073a585a19e">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_builder_1a2ea97e5337d600315cbee723e6728f80">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_builder_1afe74500ed09d7cb603761a1629738e25">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_builder_1af1ca77d254348bccaa2e81b0a0ec6550">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_builder_1adf69b2d7de972506f1cdebd897c755cd">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_builder_1a7ea437cd3cde0531a41afc9f6471555a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_builder_1a13ff8b9c4a060a1afcf955b776ae3496">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_builder_1a7da675e6e3e02ed64f06fc3b10a02bfe">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_builder_1ae2f2b15362dc557edb19d2d3121aa967">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_builder_1ac6725010815a1f9e467fe2a6437e2b44">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_builder_1a2c06e5da29266e17d4a7cfe917d95639">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_builder_1a30191c9b9ed4fbfa561d15ee36283f53">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_builder_1afcb42ddd8899f7003e998e605948e8c8">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_builder_1a33ea4324b90a31366ac060a1ca92a41e">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_builder_1ad124a1d1f8951727bacbf35a39f00089">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_builder_1a9b6e54f88d03e4ba19fab733b6d3a417">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_builder_1ab0e64f8c4aff080e5ebae0b49d7abe66">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_1a2773fc93edd309f9a843b814d66186f1">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_builder_1a8b8c365e5ad09f2b7de9add84d963ef1">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_builder_1a6af921b7ca32edc55607f7a111484d24">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_builder_1aa2c18c0c2bb57551dd1c3575bfb8163a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder_1a0965c06798691e7c6366c89ef64dc80f">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_builder_1a46800d76e9bc84b176ce7163044edd6b">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_builder_1a80ee4c238496443370b3e47b75722930">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_builder_1a50c7e028cd2c5748fc3615484ebde735">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder_1acab9ba6b6c2aed5af277e387509ba799">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_1a6317bc6756539b533aa1712b81c75c68">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_builder_1a752a46fbe379152dc461f24f7562267b">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_1adec9631e81f6807383c115b17e05950d">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_1a07e3e967ea762a5e3df7d9470974d2ec">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_1a6307e23488ef043b39e314394d4cf3bc">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a7e714b2e49d4614bbeb5148de5121db9">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_1ac35c24706e25b05c5c9fb3be1e6b6d76">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_1ac48f362833ffe4b1c5d90209ce16b836">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_1a48081f261a7a5dafbcb31af48d31709c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_1a4d24889ff82592e4e8380bb88979abe1">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_builder_1a2746b3ec412580779fa870064c85b5c6">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_1a2433744be84d75c130c7e6a19259fe8f">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_builder_1ab8655e448fadc3294f40581bc102ccc2">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_1a844db049d032f0dab978e16b50ea2aaf">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_builder_1a9c84d8f88ac8e65fecf8ad63c1705450">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_builder_1a101b78818a43bf37e618ffb5d53e09c4">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_1afa7ed94fbd54738f8fb72e95cb8e8d85">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_1ad9e83f72b2e5a9a8660af01f5d41886d">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_builder_1a7b7154c3c5e946a102b277892e6cf3fa">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_builder_1a1dd2730132077d77ab627a441591b4f2">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_1a72cb98a55614a3e264b8e4a157b45c64">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_builder_1a94a7356c029e048e55ffdbcb1f4838de">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_builder_1ae7ee74b5241adaa1711ee1ff8e3069f4">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_builder_1a1fbdc83f13494c40ee52b892f0cf1ca8">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder_1ada1af7c1114fcdb462a31f8bb49f764a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_builder_1a6baacd12c74ea7835c403f435351f9b8">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_builder_1a70a3d3d09d6ea0fb8b76959fd9bc0262">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_builder_1acf8eff112fd449c9b9ad52f3337a7e96">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_builder_1ad9dbc38f3bc998019f5ef84110819b1c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_builder_1a13c55e17b54fbd3cb2c5dc109d987869">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_1a976e1d6b7854d6a66074d573422ebdbf">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_1a05ffad3621567e0bab14384d2c40c358">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_1a63c57f819484eb8113b95bda67ae5dec">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_1a17645de64a4f4e2fee9439c3ce7c59b6">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_1ab09becd3893ac48b3c0f3c93689a6e11">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_1a7257b7b4a682fed5216d0abb08dce26a">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_1a2d002c89dac391a65321505e63366d9c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_1ab07d63141dfecf44f356eca21ae64ad6">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_1aeeef130098bbc78ab02ec3521aee651c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_1a0b2958c38a9ddf74333b32185f2fe947">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_1a16da8751fb35c0c0e5265f61abf097b1">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_1ac7cccf730fc5375b239061ab840e704c">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_1a41286c39522c0d8f98774a9e36e08dc5">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_1a935716c2f023cbd8887341aba4cb76dd">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_1a9ad7d50062d24943d128c0a94ad4e86e">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_1adea3c0735bbe2fad58c5fc18e0358f02">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_builder_1a8c836c6e7fd6f74f5244210e78cc7c1b">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_builder_1a902f73ea78031b06aca183a417f3413b">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_1a5b973c3aff79e46b2793bb604c1b95ac">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_1a9501100c7cb40aa14f2b404a9eb14a8d">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_geometry_1a18363bf7b63896084e4a4a8052e81089">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_1a98ee63625f2f357a131934e7d71140ce">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_1a9ba235d39a1b994f22a13edeff862ba3">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_1a82626198cbebe3c7bd945ba364cca841">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_1a6ad5005460344037804f13c3c167cfb5">getClassName</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_1adca5df13b8f7a74aa5a34e6d4253f958">getClassName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>virtual s32 njli::AbstractFactoryObject::getType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1a08dcf202a47f0782813b8bc98c659e78">getType</reimplements>
+        <reimplementedby refid="classnjli_1_1_world_debug_drawer_1a4d833532351fd78967c053e66f10223a">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_1a0cd52f719ec47e495c9d328140b6218a">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_1ad677d52b4ad3a52bb2d748099e473ccf">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_1a448d35f5705d1b2a78ac1d0ac093d84e">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_1a366d8700cb45a1b3a4b516936e92e940">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_1a9d5c8d02162086a496373eea065671f2">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_1afdf8fc497ab94254804286d0dac1a0f1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_builder_1acaf7034e9c6f7bfce28d465bab53b0b6">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_builder_1a9d652e696387879bfa0105ddec06b534">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_builder_1aab730f7f348ffc037bb535fe5adee793">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_1a6c6224d4a72051758a61b10c1d6757de">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_1ac2afbca662cb4140296174556b17a982">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_1a81ff35831dabfe9dd4bf8b23406bfef1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_1a67d681ce97affb6b0e357e46bbfc9f11">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_1ab7c1223bf41e4c9f6042a9e9204518f7">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_builder_1a03d9262c6bf1c6f333d084c2ecaede77">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_1a5ea0e0c8297248e3c216bac8e2aee41c">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_1a0ea77d8283826d515cf2668aa89d99c4">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_1ad7a65bf4ab14ba32640f4016a2ddffdf">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_1a90c691674614feed280cc77db99c31a1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_1a3660709d9d9f772da882de090741b923">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_1a34468ccef13baf9af39a71dbc15d9247">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_builder_1afdd9b9688034982fa4e5291583a7ed4f">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_builder_1a4d09be319464b4e5c4bce25f385b2f38">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_builder_1ad27e4a291ff4048291526388912141d1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_builder_1a6fc5326c5b779c30769a62152044b5c0">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_builder_1aab74e53f9fa857f9b72f8e5ce3e30aad">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_builder_1a358907ae1e64e01b70e291f21061b768">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_builder_1a6036c2679b50e80628ccdde503383847">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_builder_1accdea2abcf82c4f8254d3f40f8c82d68">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_builder_1a226dd2c4195bfa320ac11ef59aafeb86">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_builder_1a7e8e167425880a3161159ce60be6e722">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_1a8d16a919c7edd593792937ac5827f174">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_1aad43b1fbb7c2bdad086bcf89e065b5df">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_1a3351acc299a43e51265b98d4c1963c30">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_1abcee986b72cc94c0b8a55286ec5cf539">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_builder_1a17ae98f137a2a2720c3bbd0b6bfb40a1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_1af4956c9f6d462ccc607040aa0becf0e9">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_builder_1aec4850f8fde06a2320f786e54ffc01ef">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_1ae114d459c2affce5b011b9f7d5ef1eb7">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_builder_1a155c8e579dcac5d04a9c5029d01be675">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_builder_1ac2dcbba79d9fb67fef68ad35cfc6b913">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_builder_1a42ababaf4045032d58ada3df42ec212a">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_builder_1a013871974d7174b32fe363d04295b2cd">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_builder_1a2ca651d394b2b3c0bf82e9b597738868">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_builder_1ae6988c83ce7daf8f1d22bee81e0116a7">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_builder_1a478ab1e5e9f7c6f206a1011b537add9e">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_1a14c21f370a39700031334a919d8ba133">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_1a04355018c5f0340d8e7b178f9a2903d2">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_builder_1ad7cff57d9bbe7b7a60b4a9375b38a532">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_1afee75c880fdd5fef409dbb74806f10f1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_1a45d8fd81c6bb33fbd1ed7c7fc5f02c1a">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_1ac9b72f04debad9ffab25c9e708378a90">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_1a71bc12b928b4dcf8fb545f3f0c7f0592">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_builder_1a18709de9173e926a83aa6cc62ebbd06f">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_builder_1ae82e6fa5c2fac19adce4d2c258a182a4">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_builder_1a93aeedd2f2de88bcd541823d12a9c817">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_builder_1a04367ec94347d95926db3726f7305ac8">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_builder_1a012257cc364f7eab04d4fb99fa6a63ea">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_builder_1abebb7f09636b19f0271b14d1aab7e941">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_builder_1abb0bd4579bad27f37a5abdf8fc80de65">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_builder_1a0eb501158a984836223ca6aa30f71367">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_builder_1ae2adf4b82bfba239f3cb5c295abdfd7b">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_builder_1a27762749a2261010446cf3020c93755b">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_builder_1a8105b27cbcc1855b0087630d4b0113fb">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_builder_1a9cf68b0b81bd090788f53349e18dacd3">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_builder_1a198b7584cba37e593f778eea3fb1b5fe">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_builder_1a421905a3e6e10d533c453e7efe785ceb">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_builder_1aa641e2f9b558c50dfda29b65992f13fd">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_builder_1a89d02574e7d7c31157ddf80b5252d50c">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_1a6ef8e17755492263922c31bf46053a9e">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_builder_1a6155936f801346b1677332b15f3d7601">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_builder_1a9be5b8065168573bc48bd64a8f317e3b">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_builder_1a66b75d3ba79ce870d1c63f665527ad3e">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder_1a92c4ee210a4e7c716bb42419fe743eb0">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_builder_1ac0352c524608cf7342a547282c0a8ed8">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_builder_1a04b955ab0af08d3d26d7b6612deec16d">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_builder_1a4afb662f9af4cadab829f909f5f55008">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder_1a9eef7aca7946f22cc78dc514bb1abe4d">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_1a47f9ce95b9ea5b97760bbf5623af0d8f">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_builder_1ab6fce4da9bb3b0c52ca7057743a6e8ae">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_1a4086b31af0592084c3fb21c8bc8bd441">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_1a4640b79f7a596befc244367dc1d56222">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_1ae15c47f7a9adcfa4f68f8a0ccdca2b84">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a1e10f31d8472a1137f0146f95efb643b">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_1a0fb84802778d3f252a335b97d7eee329">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_1a2718e5cacaec1eb53ea5dcc62df2672f">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_1a567dec99e2751ff5341a76ebe7c469cc">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_1a42a92c8b335c9a095c9bba2ac65ae096">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_builder_1aa84d58e282f779799cd4ff267dcd863d">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_1a5318ddd5d7d00ee3673652538b595626">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_builder_1a54135d2d3899afb4ed353deb8419b8e5">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_1a1de8dc0c52333d4ab190c0b29198d43d">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_builder_1a6347bab956156a1f374b54b457a6b993">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_builder_1abb854c79389ced64d981193c45d55627">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_1a937b848a460757e172db98eebec4e757">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_1a0b8dbb1cabc69330aec71aab27265c31">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_builder_1abe4c05bea7526574a370fb9e707ffebf">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_builder_1a97f3caf646608ba31d5b95b74d73440b">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_1ac7c6b2ac373892095f8220d56f8ad6de">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_builder_1a34c9c509f8897b81a014ec5c114d8434">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_builder_1aa2f27f7efc1da0fa6fbac0d6618642e1">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_builder_1a9f3386c463a9dea271b332efb0f86ae2">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder_1a5eae2949a4ca699ae82e23c415564371">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_builder_1a3d2be074130ecc138572cc76b75a0413">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_builder_1ab00e3ba58a46aa88c95b9dd960f73464">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_builder_1a58c365009c6a22adfda4b7a713ec93d0">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_builder_1a5253411a7071a729ebb04a653de8e073">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_1ab7e908f3651b87422588568a724a912a">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_1ad10d688df4f28d7eff85ef1f876a2dc6">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_1a550113d4f011a4eb0ef2806b39f35197">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_1a7a3e8235e5dea77f7df71cad92c116bb">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_1a3b7efb67bb8d17acf6d567fb2b32d0c9">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_builder_1a1d0bb98c6fc41224c277cc7775c5e5f2">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_1ae65b7bbe93fbdb2dc473080e54ee6c9d">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_1a65c9777a551951a8251701c1059a0734">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_1a3d839a60794bcbdc6ef50d33bc9a7ec6">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_1ad45504d83d6280bbca92fa2c901a3d42">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_1abfc88697bf3691fb813281f9ede83273">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_1a07e2fc86c8dacc1358adae792da5a40e">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_1a17108a2d62c3d64af7a67b4f0f5c077c">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_1a67ef5bc2aa89291e5c3e6516c60bd56e">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_1ab7c13f55d1f54081cdd25153f7214177">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_1ab4c0e987d977bc8560a9af11a0e68f59">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_1ae055470f1ec8208925e8d8456631dd78">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_builder_1a8a08d9c68fc60ff67db9f9e1134b9b4c">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_builder_1abb4a8161cd71be12807fe85864b67050">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_1a8f8dc93d66fde4e38623b46ee3670477">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_1a0f264baa2c26987faf1121afbc14bdb2">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_geometry_1a69bc7a259420cbed410a8216106ed954">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_1a8831b8b9c3c097394f1cffc2913b55be">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_1a1338648bed55e4ca2d3c50d953fd60c4">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_1a98b4d6846012b3b82af05bbbb00b16ba">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_1aea2a754c4688385e8e586d17b4a78266">getType</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_1ac7373831fbb93394e36b86f9fc001b3a">getType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>virtual njli::AbstractFactoryObject::operator std::string</definition>
+        <argsstring>() const =0</argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1afc07f4138bd3003910e7aa7fa0fe11ad">operator std::string</reimplements>
+        <reimplementedby refid="classnjli_1_1_world_debug_drawer_1a81b295c06c84d89dfab99560db2eb2b4">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_1a0d55fd96177c180592e2a2858cc9a01e">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_1a9b0b6988031995380f0a56510013849f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_1a6010dd661e73e962558ffebb238b6d24">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_1ad3ca14c400cc2e059a300bf66cf50ff8">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_1af611b1faa067ba41caabe593dd3f8afe">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_1a5e0e5c08950cc3512c0243fa4f0bca40">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_builder_1ae09d42b25fedb83ad6b2ca59d47e5130">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_builder_1a73c4ce3137067dea4a01fabb35c6994f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_builder_1a56f867d6c5d870351dcd8cf1057ed8b9">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_1aa9de0f5850c2d8ae0c89f04d4824795c">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_1a140d38afd4b525629e7b307439d15dcf">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_1ab7499c81a03853208ab8027bedaa47b3">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_1a24daf77b030cd6602cd9dc409c28b687">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_1af49dc5ac3fecf2713da014ff01b4bca4">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_builder_1affc310e8a67fb9d6d3f94eb9ff73cd31">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_1a521406fece9a97727756504d25e97031">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_1a171e6891c0a9ebd5fc109da99cc939d2">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_1adb9afca22ca22701e9efdfeabcb469c4">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_1a48ba74162262e7d5d067e50a4f9c6cdd">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_1a48c80c4d77c0aa2f9d82b19794503e4f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_1a4b3ce202f2b061904a1ac9c21b89d1a8">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_builder_1adfd5af74349931af33056cbb58058f80">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_builder_1a60233da3c5f0893f061803ce76a587f7">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_builder_1a8d4e496c66f2c3236146e382e9cda35f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_builder_1a768796e2ffd0653a7e60982925ff7ab6">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_builder_1a6f67d4e604d12efab990599663ec2176">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_builder_1a61843013c4b89ddfccc1fa2bcb6b6035">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_builder_1ae8feef9d2f17f8b98e14a4625e8ab214">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_builder_1ac3ef8023ad78b2c35abe93f49eb5c424">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_builder_1af439a423a88088abcb9ad182375c435f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_builder_1a9393d37f2ae39053342e4335b6b36a95">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_1a9d74f46d93ebfb05fe41162192a53ddf">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_1a27535b5843d41261e95d715d7e1e6615">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_1ab5763288091f3b07f62fbfc5fba4dbd7">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_1a266d984e41c846297dd695ca5c19ab5b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_builder_1a63b7ef6e767a20d5073a81847493f15d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_1aa16c15d5b0a0b68a0f681405749f976f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_builder_1a443c042cfcd72c60e4b4ca6a1eaa714f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_1ac8f625eab130cf680b03ec7099a55947">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_builder_1a793838b780671e070bff97c137d62076">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_builder_1a6c14cab8abd4a91c92e81a8919201f23">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_builder_1ac6df29af2519db6000cec3b95b973db1">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_builder_1a5d94578cdf1c5df6ced697ceb4d19804">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_builder_1a2ed93263ea97275742eef48a1c1e329b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_builder_1a919e962a843e1deae904a14591b94de1">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_builder_1aad958aeb08f3a9e7b6d4801dd0b02b36">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_1a305831e365f3e40a877150f4cb23aa96">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_1a94b3b93cdf38fc039d4f8a320b983754">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_builder_1a292b5082e0718ac7185a424656c16019">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_1aeaa2b89e8dce62b5d8f55f1acfd2e239">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_1af9766c9dc1a770cea6713bcf30e9ae98">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_1a96b37ed6288a0daf3bd2adc2e042f24a">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_1ab226e9b5cb52f927f3c4007964d43a5f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_builder_1ad9e3db5523e8290c938443b858256c0a">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_builder_1a36123d9ab213f9d61356aaf9e510d90d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_builder_1a750d2e874fa14e144f8a328700eabdf6">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_builder_1a59b9cee72bdcf663ca55a3cec1a90012">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_builder_1ad5c7e862c0bb69962c5cfcdf616fa088">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_builder_1a46cbd5c3520ba7388d658a1fa024788a">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_builder_1a3cced075d7f40009628c0cfcf89025bc">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_builder_1a3c763def03afa60a409568efcf8fbb9b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_builder_1aed8726e0c36ba947855178a04663e58b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_builder_1a4455e62be5801808c75ced7c2c1d9e93">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_builder_1aebddce8551b961247641b8ee86eb691f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_builder_1a366a6c56998897fddac196492079d946">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_builder_1aa3b1a743385a2c841b6693cfbea87df9">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_builder_1a58244983c0efd369687df0b6047cdb0d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_builder_1a3d1af7efed75248f0d60ba5d1e968eae">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_builder_1a3bbac005e86932f5c84997197174c376">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_1a0632943ed03d5ca5112e2f00daccf728">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_builder_1a8927c7f6fa2d6feaf69faf790b367548">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_builder_1ad12926ce9350cd274d571fd37be9b915">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_builder_1a71bd57ab5567b3e3453caf85ab19d347">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder_1aba26742ecc9168f5aea202625bf89f90">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_builder_1a28e90d531e01ab5ed249f71927637895">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_builder_1ae480888c37db8ce05ecdb9dff027b32a">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_builder_1a8b7e048691078c8a32b52cb4dab71d04">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder_1ad599bdf65c89e2ef56642b4ae8eb7451">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_1aed1d740ea47733a651ac869443ab31c3">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_builder_1a40ec97d8c093e44911fea5fe8d9259d1">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_1a86c4b392a3d42c4c98241f97550b059b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_1a204a9f5976013d8cbb40247096f09af5">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_1a954bb5f88bd59a9a634b75f8665cd4a1">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a5bc5bf70e7695adb20faa1c68b277d37">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_1ada9b7e6bcdecd676020141df02163aac">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_1a883d6d8f909f34c94551ffa080496c36">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_1a1d914ccd2f4e31c1b64c076582d68b85">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_1a7e9063c16ffbed9557a7b8b6ceb6907e">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_builder_1aeed076fc9e1b6c8f176b7ee76996e436">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_1aee5ee1fa435402d015a325d534d1f50b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_builder_1ac4ecaba90b6445e3164743886ac2abf2">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_1a44eb54a8ef51420870cb91d7e03bf776">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_builder_1af2521615d20bc4ef376e5e41dc8f0b3d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_builder_1adeaff5c04de77fbabf72f5769da60224">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_1a654ed86d68af67be94afbd267e54a64d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_1ada951c1f437c682b0eff122095ad44fb">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_builder_1a355186851976919c3f0bdea1bed52a8c">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_builder_1afb1c102f2b52edb85127d863f1996bea">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_1a890d915f88af06dcf1ac1fa4f5943dc2">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_builder_1a4763fbb07cc98c6072055c6229146041">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_builder_1a06ab55808c1573294da2ba7d69a8aa5d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_builder_1a44293b3af174637ad2a41a988cc0cbce">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder_1aac5575ec2c409c35a7558a4ee4e2106d">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_builder_1ac919e92b2e196f98760ad6c38972615b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_builder_1a4ca7506e89e7f154c7e6c6c062b7b03b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_builder_1a3303618ff00a28b233146444182c2ed6">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_builder_1ab7178567cbb7cde0d75049bf5358d757">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_1abc2f28e73fe91cb9c4d9791a11b4f9a2">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_1ab0a526f3c0d0166dbdd6bf9e8037b7cc">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_1a039c049aac266522b364987695ae3b73">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_1a27882d0981b2e65f3a3eab173e27f034">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_1a97df8964fff2dcfb91bc2535f3a71494">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_1a5c83fbea8bf711bb1282c9f7bb43d3c7">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_1ac2fe85aabfdc007eecd967ebe5f21832">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_1acc4f24f5c91eaf997179925caab8a094">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_1a554b5fd8c31aa5245762c2f711fc1c60">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_builder_1a24e387fda55055fe7dea9c565b630427">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_1a6b438352b99b5261bb6ea6803cc84ea3">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_1ace784d5c35e4b2fdcde1cb1a6859d962">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_1ad51c2495e5b58b0be78160d6996cb01f">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_1a8a22e2dc6e6cd6e6713b0ed7c404366b">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_1a0a9ebc607a7ba821d4cbd7c7f1ed3eab">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_1a1c0ba6c7d5f12c0684a59f7576c3e0ee">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_1a4f82baf12c1bbb6499d92d7581181106">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_builder_1ae2da40ebf795f9a9d2b3687c682a42fd">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_builder_1a3e6e553e06d1ca30517ad5fb0bd4d000">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_1a596966521886aec9f8f90051b9e7c7d5">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_1af7e103d6bae0a80691c78ca17b649f0e">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_geometry_1a2c06a8fcaf48cbc2b3b15f7ffbfa005a">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_1a83dbb91dfe5745ad209918e803569ea6">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_1a0c12067445dfd7893e37052ae90a9173">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_1ac860f1e5bca6011c1b5c0ee3e320ff39">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_1ac81050c2cde740f62e24bdeaec85b9ac">operator std::string</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_1a111619cdfe31b436798411374a2b08d9">operator std::string</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> *</type>
+        <definition>AbstractFactoryObject * njli::AbstractFactoryObject::create</definition>
+        <argsstring>(const AbstractBuilder &amp;builder) const </argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="58" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> *</type>
+        <definition>AbstractFactoryObject * njli::AbstractFactoryObject::clone</definition>
+        <argsstring>(bool shared=false) const </argsstring>
+        <name>clone</name>
+        <param>
+          <type>bool</type>
+          <declname>shared</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shared</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#shared description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="67" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractFactoryObject::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="72" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>virtual s32 njli::AbstractFactoryObject::calculateSerializeBufferSize</definition>
+        <argsstring>() const =0</argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_builder_1a90bfe649c160ed937d09b6c97a14cd02">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_builder_1a044598f2d550645ad2a0fb398a7bc58a">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_builder_1ad08a90c7326568674cec639372364b78">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_builder_1a5af5fa23d3133958b68e0c4104e139ac">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_builder_1a4a7aea2b99544a458c9643d700281b37">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_1a2bd22a40d60690091afa0d8fd0ff0a1b">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_builder_1a20abadb127a3916aed64f413fbcea4a2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_builder_1abccb18d67fca8c8dc2b0bb8e691c7c40">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_1a0219eb7f997180d19fbbd5223956d610">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_builder_1ab9883fa17b097652223f31ac78245ca3">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_1a4dbee681db3d31f396022e459da825f2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_builder_1a2292ecf5ef96a60724cfa853f6ab49d5">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_builder_1adb59a5671a922b1015b881dd0c449cb2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_builder_1a57be632dab7674b4df58e6fd1705c87a">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_builder_1a5ec989825ff51c730d510ff83181e1b8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_builder_1a90bd12798a283224fb9a167d3c4e7726">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_builder_1ae74a88885ee33f101b20c9ac68559a14">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_builder_1a78e92aab8b0fdde3e502054861d863a3">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_1ab872b90f4fd80066576f7ac2ffdbd98d">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_builder_1acff2d999b1a09f5be84bb95a4d69518e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_builder_1af701bc6c823bdc374ca5c6228a0f4858">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_builder_1a625eca482a094e116a1c35ef1167271f">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_builder_1a2a02dc05fa53015014531953eb2f8b89">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_builder_1af5cb00019f66fc7db4c99da1eb3d6b79">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_builder_1a99d06c6ceff56a1a86118ed913ba7658">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_builder_1af93727cdd63ee542a767fc35d8a5f182">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_1a63986c0442936d5195d080f150b7b76e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_builder_1a8ff7fe997524ba6077e8beda160d23b6">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_builder_1a869810583a75318968556e0dbcb3e2a2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_builder_1a01ad5ca209875d9fb241e51b6c51aaeb">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_builder_1aac7356fd941ae2c09c286ad534d7a88f">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_builder_1a01a281d12251dcc1836e7aa53c63a184">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_builder_1a1e6556d386171783350b1a725b300e8e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_builder_1a03f517b587dc3fe56f7a8f6bd6564bc0">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_builder_1a5bf8b90cd09a850137d8f681729830e6">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_builder_1a34ba107a8d9826982b03146e1e5852ef">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_builder_1a5289c7fb600bb4ec6c401912e52d05e6">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_builder_1a777a0dabf45bf7aa350eead4b2d429b6">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_builder_1aba605e83cc6c339c6284b0354584b936">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_1a3a08e0f15ac755ede59d0c705b6778bc">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_builder_1ab883b51f9ad11d11fd57bec5f641b030">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_1aba49570ea3011a9736466b11d4155634">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_1a7645fd57d7769219ea67f83db718ff70">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_builder_1ac793e261982c0304bbf539c8145bf363">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_builder_1ab7087d8e74110082a9891d4502490c82">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_builder_1a6ad05d05ace6d6eca5ffc35ea9769663">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_builder_1a0061cf9535f7cc39935a3a2b6419abf8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_builder_1a8f741689d269fdf11644732cddbfe4ee">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_builder_1aca9cde97af074f14c0b756b92512dc77">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_builder_1abd6b3a13c517f516b916a1a8a18da8fd">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_builder_1a69a9bd58bdf7db8306f69ffef3a30db7">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_builder_1af246362e779e52613957eda5deb65bf1">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_1a9e2fbefdf9b0034b0dbcaea14fdc9e9e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_1a0f4fadb6794e5366041b7f29a16930f2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_builder_1a4529a397c935b1d72a1443d2f485f75b">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_builder_1a96f4b7de7d0ff27e12d1a1daa17792c8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_1a252dd0b62cd706c9a805425aa59bb550">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_builder_1a400c75380b108af46e43cebae7a12682">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_builder_1a17ffdaba5673d70264c22816b432625e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_1a7fc4441d7033e5fe27c8d3470c104d06">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_builder_1a8bba25d777b4a5e58bd1343e153dfae8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_1a7c8371af653a141ad559b2769e0846a5">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_builder_1a6076296d996f7bcee6637aea2fc5dee2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_builder_1aace60baf70b29a06b8273f779445c3e7">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder_1a24486e9018fef252642a83d622ccb3bd">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_1aaaa98e4491bda2203b9e8d302194f988">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_builder_1a1f8c0863182f05f6a220485121a57769">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_1a1eba30dd3745fbd4c0048fb5fdf6dcb9">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_builder_1a12bd2d4999e288dea2d61e0e67e20e74">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_builder_1a37aa687fcbe6b8987ccc4a13572a30ff">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_1a51ca432f1d6e59a4e33884fb71945661">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder_1a0e7e031e5851df149fab3e5f4c600470">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_builder_1aa8da19d67d23ec885441eb22bcbb2ac0">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_builder_1a1a5a754f512a001ccad0b1c8e341f9c3">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_builder_1ada9ced590d113d177e2cd01167c0282b">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder_1a5468aa6ab6d768e655a373c43990f6b8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_builder_1aecafa957a0d40d3380402ca7c43b254a">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_builder_1a9117b058a12e0cef532360f7d04223c8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_builder_1a33c250d6e144d5ecf76e91f390be4428">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_builder_1a0a34c4d5446393c20b0b3cb544d46dc7">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_1ac4ecd71b089a505c9f32f6ef77ed110d">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_1afa57bd6584a89eab9e8b7245eb89acb2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_1a68a5d701069104a02193826de7100279">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_1af4ce7b8248ad9eabf49dbd11bcc5279a">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_1a5818d9fd7fee28109d553a6164afb2a9">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_1aa3aa6fec119b3c037126333c834cbd2c">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_1aac3361f987acd0721ecc2ddf4f9351f3">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_1a6007bffcfa4818fccd300606a879e5fb">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_1a0d7823f6a24df0245a7374b1397cfdce">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_1adb1fffea09213fbc9387d12cc73d7108">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_1a11efabd574d565380a36f14f7164a5c7">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_1a1bc3320c890689bfcd1c5950ebc9169a">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_1ab705e72f7d883de64d7cdae8014e0d8a">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a131a9d6cf090bbe38eb6b03b9590bb65">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_1ac179bc02abd73c98a2cb71cc4e22fb32">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_1a8ff23cc674643badc43214afcf172bff">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_1aac5ab091f756a79fcfa2f82f5797269b">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_1a64a365f6419a0a423d9b9e62abe2e73f">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_1a49a5ca73314c77683178c379d6f658e7">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_1a8141ac38cab5920994269cf078f43a5b">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_1a71063ba61ffee06fdf43f5c652db37d2">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_1ade61056a72278c046a2e62b7ac0ceeee">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_1a83f5c9203e1430cd6e4aa47302077c6d">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_1a290eeb5d4dd2d1d4df4c35db1aafdab0">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_1a3f545956fa3dfa04a05defef1ee5fcde">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_1a5767ebcc1c80cce5cae2eff76138c1f3">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_1ab17b1b7ec5dc20cbed5400925a10ef60">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_builder_1a00afd17e5b81ea439d2d16c58959ddc8">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_1a90d15e3d2ce35a1d51f2891c54829b51">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_1ae3016059de8f00570bde0482e2ee6f38">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_1adda357901d74500336c94c7ee9669aa9">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_1a0612a1c8c3f4520d78cb7f5838f03074">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_1ada6aec1d946691aa037faa999f4eec65">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_1af022a0ebc94b705f79a33335e45986ea">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_1a7c5b95794e007ccbc6df8b272f25c30e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_1a456996bd407aadcff106066fee534f79">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_1a786d5ed2213e0d54c5a5ad4e8595c183">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_1ac3beb5646d97d427a0ad996bba178255">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_1a02def10c1bc81dbdbebffc6ccf4a491e">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_1a5bbef4d51aa3d85be8b3172c96a091aa">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_1a1c74cc631aa78569c35b0e4113f1c4e1">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_1a28829ca230552d9c6428c8612c535886">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_1a3d9608fee3e29cb75255d4c8a52f6402">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_1a33443a3f03144ed102b04a7cc512a168">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_builder_1aa1d220053e182c37b31b427499c6eacf">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_1aae83e8f50688f4e6d995131577c6f877">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_1a82fd5c6fe3160e4a97ba5c757a299b39">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_geometry_1a34d36cac83ff09f287d53bd1ffcdec20">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_1a797f44ec1c40d785e9aac03022f5d47c">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_1a21bdbc459532f004dc4cd0e9c99a4765">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_1a0707038e994ae3bed22babf6e776a044">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_1a31c34734eb1151e104bffd02be6250fe">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_1ad4914d637fdf3394b5fac8281d887029">calculateSerializeBufferSize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_1aee7675db01493f21366214bc44519e0f">calculateSerializeBufferSize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>virtual void njli::AbstractFactoryObject::serialize</definition>
+        <argsstring>(void *dataBuffer, btSerializer *serializer) const =0</argsstring>
+        <name>serialize</name>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_builder_1a713d3fd79b529284c5ab6fc47edc0033">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_builder_1a3b104cc9679d775b9bd3867aa5b7a0c7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_builder_1a407b99a6d3ba2b4f80d22e307262bb49">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_1a4ec8b1a2999aefa871198df3e65e51a2">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_builder_1a1f0076e0d469bc4c6e23d59679b96446">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_builder_1aa4e6f0ffcb105c5486d63de8e1c037b4">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_builder_1abccaf8b1a144a49da28232d5c8c94acb">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_builder_1afea3c5198b470396afbead31fc3fb0d2">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_builder_1af3379c6b5ac90d2e3f4ab7f24bbabbfc">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_builder_1a221547ecebd70a83b58a4fca922a80e8">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_builder_1af065cc6f8d5de1e09f2be21cf8f4d20c">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_builder_1a306e553fed4c336c671baca228ddfd30">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_machine_1ae267f17cda2e4334011569c86363d6bc">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_builder_1ad5b24e5d48ae38e32ac5bfa7a25907f2">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_plane_builder_1af183aaf444f24c14fdd148fc58c2465a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_builder_1a403ae66d0cbbf9734a6733ec263920e3">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box2_d_1affc32f0d81f5312843af73beb3912930">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_builder_1ad97be4863fbfec112da69abf4eae6eb1">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_builder_1a981e0b0b5ebc65db6e472b94c4cae845">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_machine_1ae734d8563fe9816995a99233385e788d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_builder_1a11eeb7b8e499838f4b3300ef30edf835">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_builder_1a251753cee40b4220e473e65df449c6bd">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_builder_1aa563c46bd7829e75fea39e58e2f7571b">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_builder_1a252f102d80b0b214068e07b4b348dda4">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_builder_1a850a001e3ca6191e14709d89ba673a14">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_builder_1ab041158a6d4356e3f9f774b2ce85fbe2">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_1a1474ecdeff160922912c7699dd1b9331">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_builder_1a79b7691a80ea05b92929ac39ace83638">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_ghost_1a1db4d7ab6a172ae2e6d4d18a627357ce">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_box_1a5ce79fc6e0b6f39f284d41ff68e6aeaa">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_builder_1a6ed5085fd6a8abe3b662bcd649213c0c">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_soft_builder_1a602a5d124fb1704d45827dbeb5737f18">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_builder_1ac22350adb6aae5731c31f9e161c42d41">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_builder_1ab3fc74e109418f697b8bd37bad1cade8">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_machine_1a3cb9305953b2efcfbf41b3547d282a5e">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_builder_1ab8a6173937822999d4556ecb2affd9d9">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_builder_1a40c2e53598a28eb07b9323f6930b20bb">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_builder_1ac686c303c49c237b249c66f034134296">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_builder_1ad5669753eb53ac4f59f9ae3aa3a06249">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_builder_1a8661f91d87b8074d74ed765080f76295">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_builder_1ab8c231d85099f7a6d22b618dd8ead520">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_builder_1a65fd9359f86d1832accd678c32f0d5c8">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_builder_1aa5a3ca78ee946c9bd93edc9d286c2e68">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_builder_1a125207ce7b17c2c930210690cda6e4a7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_builder_1a49d6eaf02a37582f2d696f44ea7cac1d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_builder_1a573603a3b9590297c693adb6aa14fcf1">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_builder_1adf134bd99fbaee4b234ddc3cf5aca850">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_builder_1acc36a3cb04cc69d541ef7fab8f1b15a8">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_builder_1a1cee7460592fa029cfa78c25e4dbf6da">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite2_d_1a2f57128fa5ef1417ee3598fe0792187a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_1a5c0858370ba136781686931f82bc669a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_builder_1a4e48cc19e4baf5985cf0677dab55170a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_multi_sphere_1a3463dcfecd8fda119372d072217b0075">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_builder_1a2a052b4d0b20a346bd756cb7f9b9631e">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_builder_1af731f25b14039b85c9085b93572b5965">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder_1a6304782e5fe9fde65c1ab20168bbc13a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_triangle_mesh_1aeb702fb3a6f3967316f513bff332deb7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_builder_1a7c23c982f1fdc2075df7cbbb6b6e72bc">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_convex_hull_1a814b41a9336adea57ad0d5a2a6aa39c6">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_builder_1acab7ec13c81ad0683271fb752ca70882">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_builder_1a522089305c2e08532fbb4cc98858ea19">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_capsule_1a546cd1410dc22e0f1f8393d733b788d3">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder_1abe00fdb540232f3aa057bbcf42635ca7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_builder_1af3551f8429e9c379d4ea2a478d2ff58b">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_cube_1af61265769b468b97db1d74b92a053f19">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_heightfield_terrain_1a158411ca1d8a5b90bbc90b9e5740654a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cylinder_1a1ab2ae487b269c8598c758dedd175301">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_cone_1ab3f595bb2a593547e3f2301726626b99">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_1a336cf8ff04379e0cfd994b232dacc327">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_builder_1af66cd2c3ef0599eca0142b10ef27ee45">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_builder_1a1f04fcbac0717300ff59bc3983473c44">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_builder_1ad07d539dc779a9f8ce97ce258bea2bc7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_builder_1af430a184a1cae8ac0dee69924689b4a1">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_rigid_1a0bf6d72cd5cce0255ac709ac44aed222">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_xml_1afacda94402ce1aabee14daa4fda38443">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_builder_1a38edeb70bf2cca8fbdb0d2e5af464fc7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_sphere_builder_1a50f623827b7a22cafdbc5a0a14396a86">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_builder_1a485aee6ad4c028ad34cac1021f08876d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_builder_1a02f2103234e8a554f7a95806f0606487">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_builder_1a30127457ca74f08311a33b3c26a307c8">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder_1a46557b6cce7d900460e7af8b6f5dc1c6">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_builder_1af3f90a8f596de035be413b0861388485">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_builder_1a362dc344568983411c03526e7ef2457e">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_builder_1aadef1f3088b069f3482bfdc343aa6125">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_builder_1a5d784834716f345f8152eae10fbd6a3d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_timer_1a6557e298455bd31c62f93b83fa9d67df">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_skinner_1a106a2cc4b8209d9541bf8afef4ca052d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_static_plane_1a0472514aba8b899d32e2c407eda027a9">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_point_to_point_1af64b3c95fcb47c28834492619a58359b">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_hinge_1a6370a93b9ee0c355846197972d03dc55">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_fixed_1a136a339896795f610341fcb037631307">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_cone_twist_1a481d849af80292c04c6d08f35ab6a5b6">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_stop_watch_1a55dd0bee07e17fc069ff2f3d4304995f">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_slider_1ae560842deb31201f2c5dbf2312d896f7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sound_1a76b263a615e9e27d6d7f3d5355ed478f">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_state_1aef750ad4fec1c3958cbc85abf74fd8d4">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_field_1a21072975305b1ee5a43a47781397d421">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_contact_1a15e18faa54c37dd27323e2956aa89b97">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_spring_1a92b6361d3b8560008e0f84f1f7ff390a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_generic6_dof_1a248dcb551972e6c96bffe5b29877ea1b">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_close_contact_1a246a8e9dd9743523701b9aad1115d051">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_light_1a1b7fdd6fab1109728cd29f0a6b38e725">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_level_of_detail_1a664f4e2718da6c5d978c024dd47cde0c">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_font_1aef584a28250b4bda59f5fe1b7436ad02">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_collision_response_1ab0b1938969cfb130dea4d4a0b7209fba">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_json_j_l_i_1a5b74cc43dbce86c50393c19d3aef021a">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_world_state_1a98936f2ad09b94a3fb4248ef9b198e05">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_shape_1a2ac8a109a5ad67ee79f40ce8f28337cf">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_clock_1a6450a0b8789fa7e5a36c9a6e3d5caaf7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_state_1aa76688814f4ae0d5397072d0fec32009">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_slider_h_u_d_1a1f2cd8e4157d05801d22801e7f58ad1b">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_builder_1a770ce9cc5acda779b4e7cac097789fd5">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_textbox_h_u_d_1a4e2d74acafe6d4a73d33d5b36af18262">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_ray_contact_1a0145afe364fd8ab6f42f5180d7bd07cc">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_dropdown_h_u_d_1a57d1d37ab05530b8eb88f595d22c02d6">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_thread_1a95eeff9ff9e585d8aff7cb9fc7633693">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_constraint_1a316b7cdb68cae42d7bdef1e7468c9f04">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_action_1a67caf3959a60cdd6d158de8e6e1866bc">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_button_h_u_d_1ab4e4d62af2b4de5ad95218ecd5870d69">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_builder_1ab66b774e02ccb9da554c9aab7fa6d981">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_shader_program_1a7a620016678fc921ebf0100bb4b4108d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_property_1a955606826931d35be766179546ba3c1d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_material_1a8d1519f3e480e5e0e700434703268152">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_label_h_u_d_1ac6d1f89820fcdd62d04d245324df9cc7">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_checkbox_h_u_d_1a2f4a7c62936fb7e91274081cb04c1d11">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_image_1a5f92e1419c9a58c18234a8ff511ff4d2">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_particle_emitter_1a63d39362c0bb4bcc3a977b5ddba94155">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_scene_1a2f62aff9de100ccc100381a8961fa107">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_geometry_1a19d2c2833d9ee3abbbb7cf7605777fdf">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_camera_1a5d966c55a274d041a4a60ca75d144842">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_body_1a3c40378e7f3033557ec6adf9428b6a9d">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_physics_world_1a2ff05b98cd0383bd2236ea32049ec424">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_node_1a1e8e7aa692a12206175bf64d4ccc3d15">serialize</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_sprite_frame_atlas_1ab276a9707f185e46ca7007d82db92540">serialize</reimplementedby>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <declname>serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#dataBuffer description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#serializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+        <definition>const void * njli::AbstractFactoryObject::getPointer</definition>
+        <argsstring>() const </argsstring>
+        <name>getPointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="92" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1ad758b7a5c3f18ed79d2fcd23d9f16357" kindref="member">u64</ref></type>
+        <definition>u64 njli::AbstractFactoryObject::getPointerValue</definition>
+        <argsstring>() const </argsstring>
+        <name>getPointerValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="99" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::operator==</definition>
+        <argsstring>(const AbstractFactoryObject &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="108" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::operator&lt;</definition>
+        <argsstring>(const AbstractFactoryObject &amp;rhs) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="117" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::operator&gt;</definition>
+        <argsstring>(const AbstractFactoryObject &amp;rhs) const </argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="126" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::operator!=</definition>
+        <argsstring>(const AbstractFactoryObject &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="135" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::operator&lt;=</definition>
+        <argsstring>(const AbstractFactoryObject &amp;rhs) const </argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="144" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::operator&gt;=</definition>
+        <argsstring>(const AbstractFactoryObject &amp;rhs) const </argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#rhs description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="153" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractFactoryObject::serializeObject</definition>
+        <argsstring>(class btSerializer *serializer) const </argsstring>
+        <name>serializeObject</name>
+        <param>
+          <type>class btSerializer *</type>
+          <declname>serializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>serializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#serializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="160" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="92" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::canDelete</definition>
+        <argsstring>() const </argsstring>
+        <name>canDelete</name>
+        <reimplementedby refid="classnjli_1_1_node_1ae9289bb4088bd17a4d68fbcee1c227a1">canDelete</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="163" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractFactoryObject::enableCanDelete</definition>
+        <argsstring>(const bool enable=true)</argsstring>
+        <name>enableCanDelete</name>
+        <reimplementedby refid="classnjli_1_1_abstract_state_1a4ed007508bd8f80af668a302376b7d1a">enableCanDelete</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_state_1a4ed007508bd8f80af668a302376b7d1a">enableCanDelete</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_state_1a4ed007508bd8f80af668a302376b7d1a">enableCanDelete</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_state_1a4ed007508bd8f80af668a302376b7d1a">enableCanDelete</reimplementedby>
+        <reimplementedby refid="classnjli_1_1_abstract_state_1a4ed007508bd8f80af668a302376b7d1a">enableCanDelete</reimplementedby>
+        <param>
+          <type>const bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="164" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractFactoryObject::isRenderObject</definition>
+        <argsstring>() const </argsstring>
+        <name>isRenderObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="166" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractFactoryObject::enableRenderObject</definition>
+        <argsstring>(const bool enable=true)</argsstring>
+        <name>enableRenderObject</name>
+        <param>
+          <type>const bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="167" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a4f7ae7bf09c7c9426e7d6023f7fd8dec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractFactoryObject::AbstractFactoryObject</definition>
+        <argsstring>()</argsstring>
+        <name>AbstractFactoryObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1a171f8eecedafbe703fd27d2cf9e51f9f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractFactoryObject::AbstractFactoryObject</definition>
+        <argsstring>(const AbstractFactoryObject &amp;)</argsstring>
+        <name>AbstractFactoryObject</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_factory_object_1ae2c1cfc2cf1b38931ac450e2598a6bb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+        <definition>AbstractFactoryObject&amp; njli::AbstractFactoryObject::operator=</definition>
+        <argsstring>(const AbstractFactoryObject &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="172" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2495">
+        <label>njli::JsonJLIBuilder</label>
+        <link refid="classnjli_1_1_json_j_l_i_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2499">
+        <label>njli::MaterialBuilder</label>
+        <link refid="classnjli_1_1_material_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2503">
+        <label>njli::NodeStateMachineBuilder</label>
+        <link refid="classnjli_1_1_node_state_machine_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2468">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="2469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2567">
+        <label>njli::LabelHUD</label>
+        <link refid="classnjli_1_1_label_h_u_d"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2564">
+        <label>njli::WorldDebugDrawer</label>
+        <link refid="classnjli_1_1_world_debug_drawer"/>
+        <childnode refid="2560" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2578">
+        <label>njli::PhysicsCloseContact</label>
+        <link refid="classnjli_1_1_physics_close_contact"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2589">
+        <label>njli::PhysicsRayContact</label>
+        <link refid="classnjli_1_1_physics_ray_contact"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2480">
+        <label>njli::AbstractStateMachine&lt; Scene &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2593">
+        <label>njli::PhysicsShapeBvhTriangleMesh</label>
+        <link refid="classnjli_1_1_physics_shape_bvh_triangle_mesh"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2595">
+        <label>njli::PhysicsShapeCone</label>
+        <link refid="classnjli_1_1_physics_shape_cone"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2478">
+        <label>njli::AbstractStateMachine&lt; Node &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2579">
+        <label>njli::PhysicsConstraint</label>
+        <link refid="classnjli_1_1_physics_constraint"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2489">
+        <label>njli::ClockBuilder</label>
+        <link refid="classnjli_1_1_clock_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2470">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="2485">
+        <label>njli::ActionBuilder</label>
+        <link refid="classnjli_1_1_action_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2486">
+        <label>njli::ButtonHUDBuilder</label>
+        <link refid="classnjli_1_1_button_h_u_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2517">
+        <label>njli::PhysicsContactBuilder</label>
+        <link refid="classnjli_1_1_physics_contact_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2502">
+        <label>njli::NodeStateBuilder</label>
+        <link refid="classnjli_1_1_node_state_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2598">
+        <label>njli::PhysicsShapeCylinder</label>
+        <link refid="classnjli_1_1_physics_shape_cylinder"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2484">
+        <label>njli::AbstractBuilder</label>
+        <link refid="classnjli_1_1_abstract_builder"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2580">
+        <label>njli::PhysicsConstraintConeTwist</label>
+        <link refid="classnjli_1_1_physics_constraint_cone_twist"/>
+        <childnode refid="2579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2549">
+        <label>njli::XmlBuilder</label>
+        <link refid="classnjli_1_1_xml_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2537">
+        <label>njli::ShaderProgramBuilder</label>
+        <link refid="classnjli_1_1_shader_program_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2533">
+        <label>njli::PlaneBuilder</label>
+        <link refid="classnjli_1_1_plane_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2541">
+        <label>njli::Sprite2DBuilder</label>
+        <link refid="classnjli_1_1_sprite2_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2576">
+        <label>njli::PhysicsBodyRigid</label>
+        <link refid="classnjli_1_1_physics_body_rigid"/>
+        <childnode refid="2574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2591">
+        <label>njli::PhysicsShapeBox</label>
+        <link refid="classnjli_1_1_physics_shape_box"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2538">
+        <label>njli::SkinnerBuilder</label>
+        <link refid="classnjli_1_1_skinner_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2555">
+        <label>njli::CheckboxHUD</label>
+        <link refid="classnjli_1_1_checkbox_h_u_d"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2553">
+        <label>njli::ButtonHUD</label>
+        <link refid="classnjli_1_1_button_h_u_d"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2583">
+        <label>njli::PhysicsConstraintGeneric6DofSpring</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof_spring"/>
+        <childnode refid="2582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2515">
+        <label>njli::PhysicsConstraintPointToPointBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_point_to_point_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2530">
+        <label>njli::PhysicsShapeSphereBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_sphere_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2500">
+        <label>njli::MaterialPropertyBuilder</label>
+        <link refid="classnjli_1_1_material_property_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2603">
+        <label>njli::PhysicsWorld</label>
+        <link refid="classnjli_1_1_physics_world"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2546">
+        <label>njli::TimerBuilder</label>
+        <link refid="classnjli_1_1_timer_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2479">
+        <label>njli::NodeStateMachine</label>
+        <link refid="classnjli_1_1_node_state_machine"/>
+        <childnode refid="2478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2559">
+        <label>njli::Font</label>
+        <link refid="classnjli_1_1_font"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2520">
+        <label>njli::PhysicsShapeBox2DBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_box2_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2568">
+        <label>njli::LevelOfDetail</label>
+        <link refid="classnjli_1_1_level_of_detail"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2565">
+        <label>njli::Image</label>
+        <link refid="classnjli_1_1_image"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2493">
+        <label>njli::FontBuilder</label>
+        <link refid="classnjli_1_1_font_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2476">
+        <label>njli::AbstractState&lt; void &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2491">
+        <label>njli::CubeBuilder</label>
+        <link refid="classnjli_1_1_cube_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2469">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="2470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2472">
+        <label>njli::NodeState</label>
+        <link refid="classnjli_1_1_node_state"/>
+        <childnode refid="2471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2611">
+        <label>njli::TextboxHUD</label>
+        <link refid="classnjli_1_1_textbox_h_u_d"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2573">
+        <label>njli::ParticleEmitter</label>
+        <link refid="classnjli_1_1_particle_emitter"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2601">
+        <label>njli::PhysicsShapeSphere</label>
+        <link refid="classnjli_1_1_physics_shape_sphere"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2535">
+        <label>njli::SceneStateBuilder</label>
+        <link refid="classnjli_1_1_scene_state_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2594">
+        <label>njli::PhysicsShapeCapsule</label>
+        <link refid="classnjli_1_1_physics_shape_capsule"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2514">
+        <label>njli::PhysicsConstraintHingeBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_hinge_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2475">
+        <label>njli::SceneState</label>
+        <link refid="classnjli_1_1_scene_state"/>
+        <childnode refid="2474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2599">
+        <label>njli::PhysicsShapeHeightfieldTerrain</label>
+        <link refid="classnjli_1_1_physics_shape_heightfield_terrain"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2507">
+        <label>njli::PhysicsBodySoftBuilder</label>
+        <link refid="classnjli_1_1_physics_body_soft_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2509">
+        <label>njli::PhysicsConstraintBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2590">
+        <label>njli::PhysicsShape</label>
+        <link refid="classnjli_1_1_physics_shape"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2504">
+        <label>njli::ParticleEmitterBuilder</label>
+        <link refid="classnjli_1_1_particle_emitter_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2518">
+        <label>njli::PhysicsFieldBuilder</label>
+        <link refid="classnjli_1_1_physics_field_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2490">
+        <label>njli::CollisionResponseBuilder</label>
+        <link refid="classnjli_1_1_collision_response_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2521">
+        <label>njli::PhysicsShapeBoxBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_box_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2588">
+        <label>njli::PhysicsField</label>
+        <link refid="classnjli_1_1_physics_field"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2508">
+        <label>njli::PhysicsCloseContactBuilder</label>
+        <link refid="classnjli_1_1_physics_close_contact_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2512">
+        <label>njli::PhysicsConstraintGeneric6DofBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2498">
+        <label>njli::LightBuilder</label>
+        <link refid="classnjli_1_1_light_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2592">
+        <label>njli::PhysicsShapeBox2D</label>
+        <link refid="classnjli_1_1_physics_shape_box2_d"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2570">
+        <label>njli::Material</label>
+        <link refid="classnjli_1_1_material"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2572">
+        <label>njli::Node</label>
+        <link refid="classnjli_1_1_node"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2492">
+        <label>njli::DropdownHUDBuilder</label>
+        <link refid="classnjli_1_1_dropdown_h_u_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2547">
+        <label>njli::WorldStateBuilder</label>
+        <link refid="classnjli_1_1_world_state_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2558">
+        <label>njli::DropdownHUD</label>
+        <link refid="classnjli_1_1_dropdown_h_u_d"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2531">
+        <label>njli::PhysicsShapeStaticPlaneBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_static_plane_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2516">
+        <label>njli::PhysicsConstraintSliderBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_slider_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2482">
+        <label>njli::AbstractStateMachine&lt; void &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2577">
+        <label>njli::PhysicsBodySoft</label>
+        <link refid="classnjli_1_1_physics_body_soft"/>
+        <childnode refid="2574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2496">
+        <label>njli::LabelHUDBuilder</label>
+        <link refid="classnjli_1_1_label_h_u_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2585">
+        <label>njli::PhysicsConstraintPointToPoint</label>
+        <link refid="classnjli_1_1_physics_constraint_point_to_point"/>
+        <childnode refid="2579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2582">
+        <label>njli::PhysicsConstraintGeneric6Dof</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof"/>
+        <childnode refid="2579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2523">
+        <label>njli::PhysicsShapeCapsuleBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_capsule_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2600">
+        <label>njli::PhysicsShapeMultiSphere</label>
+        <link refid="classnjli_1_1_physics_shape_multi_sphere"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2613">
+        <label>njli::Timer</label>
+        <link refid="classnjli_1_1_timer"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2606">
+        <label>njli::Skinner</label>
+        <link refid="classnjli_1_1_skinner"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2554">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2519">
+        <label>njli::PhysicsRayContactBuilder</label>
+        <link refid="classnjli_1_1_physics_ray_contact_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2488">
+        <label>njli::CheckboxHUDBuilder</label>
+        <link refid="classnjli_1_1_checkbox_h_u_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2540">
+        <label>njli::SoundBuilder</label>
+        <link refid="classnjli_1_1_sound_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2528">
+        <label>njli::PhysicsShapeHeightfieldTerrainBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_heightfield_terrain_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2526">
+        <label>njli::PhysicsShapeConvexTriangleMeshBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2608">
+        <label>njli::Sound</label>
+        <link refid="classnjli_1_1_sound"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2471">
+        <label>njli::AbstractState&lt; Node &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2610">
+        <label>njli::StopWatch</label>
+        <link refid="classnjli_1_1_stop_watch"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2548">
+        <label>njli::WorldStateMachineBuilder</label>
+        <link refid="classnjli_1_1_world_state_machine_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2513">
+        <label>njli::PhysicsConstraintGeneric6DofSpringBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>njli::SceneStateMachine</label>
+        <link refid="classnjli_1_1_scene_state_machine"/>
+        <childnode refid="2480" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2552">
+        <label>njli::Action</label>
+        <link refid="classnjli_1_1_action"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2586">
+        <label>njli::PhysicsConstraintSlider</label>
+        <link refid="classnjli_1_1_physics_constraint_slider"/>
+        <childnode refid="2579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2494">
+        <label>njli::ImageBuilder</label>
+        <link refid="classnjli_1_1_image_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2483">
+        <label>njli::WorldStateMachine</label>
+        <link refid="classnjli_1_1_world_state_machine"/>
+        <childnode refid="2482" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2607">
+        <label>njli::SliderHUD</label>
+        <link refid="classnjli_1_1_slider_h_u_d"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2551">
+        <label>njli::AbstractStateMachine&lt; OWNER_TYPE &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2532">
+        <label>njli::PhysicsWorldBuilder</label>
+        <link refid="classnjli_1_1_physics_world_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2544">
+        <label>njli::TextboxHUDBuilder</label>
+        <link refid="classnjli_1_1_textbox_h_u_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2505">
+        <label>njli::PhysicsBodyGhostBuilder</label>
+        <link refid="classnjli_1_1_physics_body_ghost_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2487">
+        <label>njli::CameraBuilder</label>
+        <link refid="classnjli_1_1_camera_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2545">
+        <label>njli::ThreadBuilder</label>
+        <link refid="classnjli_1_1_thread_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2604">
+        <label>njli::Scene</label>
+        <link refid="classnjli_1_1_scene"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2587">
+        <label>njli::PhysicsContact</label>
+        <link refid="classnjli_1_1_physics_contact"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2474">
+        <label>njli::AbstractState&lt; Scene &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2497">
+        <label>njli::LevelOfDetailBuilder</label>
+        <link refid="classnjli_1_1_level_of_detail_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2612">
+        <label>njli::Thread</label>
+        <link refid="classnjli_1_1_thread"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2614">
+        <label>njli::Xml</label>
+        <link refid="classnjli_1_1_xml"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2524">
+        <label>njli::PhysicsShapeConeBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_cone_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2477">
+        <label>njli::WorldState</label>
+        <link refid="classnjli_1_1_world_state"/>
+        <childnode refid="2476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2529">
+        <label>njli::PhysicsShapeMultiSphereBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_multi_sphere_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2602">
+        <label>njli::PhysicsShapeStaticPlane</label>
+        <link refid="classnjli_1_1_physics_shape_static_plane"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2542">
+        <label>njli::SpriteFrameAtlasBuilder</label>
+        <link refid="classnjli_1_1_sprite_frame_atlas_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2571">
+        <label>njli::MaterialProperty</label>
+        <link refid="classnjli_1_1_material_property"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2562">
+        <label>njli::Plane</label>
+        <link refid="classnjli_1_1_plane"/>
+        <childnode refid="2560" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2557">
+        <label>njli::CollisionResponse</label>
+        <link refid="classnjli_1_1_collision_response"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2501">
+        <label>njli::NodeBuilder</label>
+        <link refid="classnjli_1_1_node_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2522">
+        <label>njli::PhysicsShapeBvhTriangleMeshBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2511">
+        <label>njli::PhysicsConstraintFixedBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_fixed_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2584">
+        <label>njli::PhysicsConstraintHinge</label>
+        <link refid="classnjli_1_1_physics_constraint_hinge"/>
+        <childnode refid="2579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2536">
+        <label>njli::SceneStateMachineBuilder</label>
+        <link refid="classnjli_1_1_scene_state_machine_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2563">
+        <label>njli::Sprite2D</label>
+        <link refid="classnjli_1_1_sprite2_d"/>
+        <childnode refid="2560" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2534">
+        <label>njli::SceneBuilder</label>
+        <link refid="classnjli_1_1_scene_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2473">
+        <label>njli::AbstractState&lt; OWNER_TYPE &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2556">
+        <label>njli::Clock</label>
+        <link refid="classnjli_1_1_clock"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2609">
+        <label>njli::SpriteFrameAtlas</label>
+        <link refid="classnjli_1_1_sprite_frame_atlas"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2581">
+        <label>njli::PhysicsConstraintFixed</label>
+        <link refid="classnjli_1_1_physics_constraint_fixed"/>
+        <childnode refid="2579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2561">
+        <label>njli::Cube</label>
+        <link refid="classnjli_1_1_cube"/>
+        <childnode refid="2560" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2574">
+        <label>njli::PhysicsBody</label>
+        <link refid="classnjli_1_1_physics_body"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2560">
+        <label>njli::Geometry</label>
+        <link refid="classnjli_1_1_geometry"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2506">
+        <label>njli::PhysicsBodyRigidBuilder</label>
+        <link refid="classnjli_1_1_physics_body_rigid_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2566">
+        <label>njli::JsonJLI</label>
+        <link refid="classnjli_1_1_json_j_l_i"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2550">
+        <label>njli::AbstractState&lt; OBJECT_TYPE &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2539">
+        <label>njli::SliderHUDBuilder</label>
+        <link refid="classnjli_1_1_slider_h_u_d_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2597">
+        <label>njli::PhysicsShapeConvexTriangleMesh</label>
+        <link refid="classnjli_1_1_physics_shape_convex_triangle_mesh"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2605">
+        <label>njli::ShaderProgram</label>
+        <link refid="classnjli_1_1_shader_program"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2527">
+        <label>njli::PhysicsShapeCylinderBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_cylinder_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2525">
+        <label>njli::PhysicsShapeConvexHullBuilder</label>
+        <link refid="classnjli_1_1_physics_shape_convex_hull_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2569">
+        <label>njli::Light</label>
+        <link refid="classnjli_1_1_light"/>
+        <childnode refid="2468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2543">
+        <label>njli::StopWatchBuilder</label>
+        <link refid="classnjli_1_1_stop_watch_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2596">
+        <label>njli::PhysicsShapeConvexHull</label>
+        <link refid="classnjli_1_1_physics_shape_convex_hull"/>
+        <childnode refid="2590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2510">
+        <label>njli::PhysicsConstraintConeTwistBuilder</label>
+        <link refid="classnjli_1_1_physics_constraint_cone_twist_builder"/>
+        <childnode refid="2484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2575">
+        <label>njli::PhysicsBodyGhost</label>
+        <link refid="classnjli_1_1_physics_body_ghost"/>
+        <childnode refid="2574" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2615">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="2616" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2617">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="2617" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="2616">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="2617" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" line="23" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h" bodystart="23" bodyend="179"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a4f7ae7bf09c7c9426e7d6023f7fd8dec" prot="private" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a171f8eecedafbe703fd27d2cf9e51f9f" prot="private" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8" prot="public" virt="pure-virtual"><scope>njli::AbstractFactoryObject</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278" prot="public" virt="pure-virtual"><scope>njli::AbstractFactoryObject</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7" prot="public" virt="pure-virtual"><scope>njli::AbstractFactoryObject</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a4977cfd3030c6610ea54ec279b253f45" prot="private" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>m_canDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a7b32ea157388606e926495880208db97" prot="private" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>m_isRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942" prot="public" virt="pure-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ae2c1cfc2cf1b38931ac450e2598a6bb9" prot="private" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976" prot="public" virt="pure-virtual"><scope>njli::AbstractFactoryObject</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::AbstractFactoryObject</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::AbstractFactoryObject</scope><name>~AbstractObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

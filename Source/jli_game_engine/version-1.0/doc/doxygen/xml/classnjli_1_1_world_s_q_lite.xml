@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_world_s_q_lite" kind="class" prot="public">
+    <compoundname>njli::WorldSQLite</compoundname>
+    <includes refid="_world_s_q_lite_8h" local="no">WorldSQLite.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_world_s_q_lite_1a87141c2dcaf02be8e00dc2696f4a7e22" prot="private" static="no" mutable="no">
+        <type>sqlite3 *</type>
+        <definition>sqlite3* njli::WorldSQLite::m_db</definition>
+        <argsstring></argsstring>
+        <name>m_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="171" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_world_s_q_lite_1ac0a96c31f65afc8ffc24ed0c60f3e10d" prot="private" static="yes" mutable="no">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+        <definition>void * njli::WorldSQLite::s_Buffer</definition>
+        <argsstring></argsstring>
+        <name>s_Buffer</name>
+        <initializer>= <ref refid="_util_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="172" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1ae8b49b545d08177a4e58056ae27d7859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::WorldSQLite::WorldSQLite</definition>
+        <argsstring>()</argsstring>
+        <name>WorldSQLite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="25" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="125" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1aacd5989ec668af746b8418a674d6aafd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::WorldSQLite::~WorldSQLite</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldSQLite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="31" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="131" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a8e2f5d242c1a8ea8abe1e98818079590" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::WorldSQLite::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="37" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1accef1db356e5808ce4a8b09f6e281e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldSQLite::openDatabase</definition>
+        <argsstring>(const char *database_name)</argsstring>
+        <name>openDatabase</name>
+        <param>
+          <type>const char *</type>
+          <declname>database_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>database_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#database_name description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="48" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="153" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1af8e9250d44184a8de8e40dc9ed1c40c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldSQLite::getBool</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>getBool</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="57" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1afb82be07208f59c71a9b6e04917362a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::setBool</definition>
+        <argsstring>(const char *key, bool value)</argsstring>
+        <name>setBool</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#value description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="64" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a3bb42e79df188cc25b6d3904576b75d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::WorldSQLite::getInt</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>getInt</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="73" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1aadc1f838093117092df257b2fea7258f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::setInt</definition>
+        <argsstring>(const char *key, s32 value)</argsstring>
+        <name>setInt</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#value description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="80" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="189" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a916b11643626a38c6d433750f102fff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::WorldSQLite::getFloat</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>getFloat</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="89" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1ad16a39bfeb227189ca498a6901981b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::setFloat</definition>
+        <argsstring>(const char *key, f32 value)</argsstring>
+        <name>setFloat</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#value description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="96" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a61b599bccb2ca51a6607917c3bc19e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::WorldSQLite::getString</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>getString</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="105" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1aebae42b8891cba7d8bf52cee9f14b084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::setString</definition>
+        <argsstring>(const char *key, const char *value)</argsstring>
+        <name>setString</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#value description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="112" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a09a2776ae95b66db3a312a12135f9119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldSQLite::createFile</definition>
+        <argsstring>(const char *filename, const char *buffer)</argsstring>
+        <name>createFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filename description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#buffer description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="122" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="215" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a579fb614f206ee25a233749bfa50f721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldSQLite::updateFile</definition>
+        <argsstring>(const char *filename, s32 offset, s32 size, const void *buffer)</argsstring>
+        <name>updateFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filename description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filename description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#offset description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#buffer description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="141" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="238" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1adeb13af951e08c35fbfa8dc70bd2fe02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::WorldSQLite::deleteFile</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>deleteFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#filename description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="149" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="243" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1ab51f837fdf4648da70e8d70290870586" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::setBuffer</definition>
+        <argsstring>(const void *, int size)</argsstring>
+        <name>setBuffer</name>
+        <param>
+          <type>const <ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <defname>buffer</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;<ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="157" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="248" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a931ee4df5343e19945fa3d6169e10279" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::createBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>createBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="161" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="254" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1a3765395e887176976ef67e4c363119f8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::WorldSQLite::deleteBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>deleteBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="261" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1af9696cbf07856690ed16438604d1e003" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::WorldSQLite::WorldSQLite</definition>
+        <argsstring>(const WorldSQLite &amp;)</argsstring>
+        <name>WorldSQLite</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_world_s_q_lite" kindref="compound">WorldSQLite</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_s_q_lite_1af9543d2b6b4c105a1e58385d3babea7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_s_q_lite" kindref="compound">WorldSQLite</ref> &amp;</type>
+        <definition>WorldSQLite &amp; njli::WorldSQLite::operator=</definition>
+        <argsstring>(const WorldSQLite &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_world_s_q_lite" kindref="compound">WorldSQLite</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="169" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.cpp" bodystart="144" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;#Description#&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" line="20" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldSQLite.h" bodystart="19" bodyend="173"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_world_s_q_lite_1a931ee4df5343e19945fa3d6169e10279" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>createBuffer</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a09a2776ae95b66db3a312a12135f9119" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>createFile</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a3765395e887176976ef67e4c363119f8" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>deleteBuffer</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1adeb13af951e08c35fbfa8dc70bd2fe02" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>deleteFile</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1af8e9250d44184a8de8e40dc9ed1c40c0" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>getBool</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a916b11643626a38c6d433750f102fff5" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>getFloat</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a3bb42e79df188cc25b6d3904576b75d1" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>getInt</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a61b599bccb2ca51a6607917c3bc19e8c" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>getString</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a87141c2dcaf02be8e00dc2696f4a7e22" prot="private" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>m_db</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1accef1db356e5808ce4a8b09f6e281e15" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>openDatabase</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a8e2f5d242c1a8ea8abe1e98818079590" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1af9543d2b6b4c105a1e58385d3babea7f" prot="private" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1ac0a96c31f65afc8ffc24ed0c60f3e10d" prot="private" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>s_Buffer</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1afb82be07208f59c71a9b6e04917362a0" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>setBool</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1ab51f837fdf4648da70e8d70290870586" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>setBuffer</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1ad16a39bfeb227189ca498a6901981b33" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>setFloat</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1aadc1f838093117092df257b2fea7258f" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>setInt</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1aebae42b8891cba7d8bf52cee9f14b084" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>setString</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1a579fb614f206ee25a233749bfa50f721" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>updateFile</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1ae8b49b545d08177a4e58056ae27d7859" prot="public" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>WorldSQLite</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1af9696cbf07856690ed16438604d1e003" prot="private" virt="non-virtual"><scope>njli::WorldSQLite</scope><name>WorldSQLite</name></member>
+      <member refid="classnjli_1_1_world_s_q_lite_1aacd5989ec668af746b8418a674d6aafd" prot="public" virt="virtual"><scope>njli::WorldSQLite</scope><name>~WorldSQLite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,132 @@
+<LINK REL="stylesheet" href="../../static/styles.css">
+<HTML>
+<HEAD>
+<TITLE>Basic Information</TITLE>
+</HEAD>
+<BODY TOPMARGIN="0">
+<p class="header">Firelight Technologies FMOD Studio API</p>
+<h1>Basic Information</h1>
+
+<h2>SDK Version</h2>
+
+<p>FMOD is compiled using the following tools.</p>
+
+<ul>
+<li><strong>Xcode</strong> - version 7.2 targeting iOS 9.2 and tvOS 9.1 SDKs.</li>
+</ul>
+
+<h2>Compatibility</h2>
+
+<p>FMOD supports devices of the below architectures back to iOS 6.0 and tvOS 9.0. Please note that armv6 is no longer accepted for submission to the iOS App Store and thus is no longer supported by FMOD.</p>
+
+<ul>
+<li><strong>ios armv7</strong></li>
+<li><strong>ios armv7s</strong></li>
+<li><strong>ios arm64</strong></li>
+<li><strong>tvos arm64</strong></li>
+<li><strong>simulator x86</strong></li>
+<li><strong>simulator x86_64</strong></li>
+</ul>
+
+<h2>Libraries</h2>
+
+<p><em>Each lib is a universal binary containing the relevant architectures from the 'Compatibility' list above.</em></p>
+
+<p>FMOD Low level library</p>
+
+<ul>
+<li><strong>/api/lowlevel/lib/libfmod_iphoneos.a</strong> - Release iOS device binary for production code.</li>
+<li><strong>/api/lowlevel/lib/libfmodL_iphoneos.a</strong> - Release iOS device binary with logging enabled for development.</li>
+<li><strong>/api/lowlevel/lib/libfmod_iphonesimulator.a</strong> - Release iOS simulator binary for production code.</li>
+<li><strong>/api/lowlevel/lib/libfmodL_iphonesimulator.a</strong> - Release iOS simulator binary with logging enabled for development.</li>
+<li><strong>/api/lowlevel/lib/libfmod_appletvos.a</strong> - Release tvOS device binary for production code.</li>
+<li><strong>/api/lowlevel/lib/libfmodL_appletvos.a</strong> - Release tvOS device binary with logging enabled for development.</li>
+<li><strong>/api/lowlevel/lib/libfmod_appletvsimulator.a</strong> - Release tvOS simulator binary for production code.</li>
+<li><strong>/api/lowlevel/lib/libfmodL_appletvsimulator.a</strong> - Release tvOS simulator binary with logging enabled for development.</li>
+</ul>
+
+<p>FMOD Studio Runtime library (used in conjunction with low level library)</p>
+
+<ul>
+<li><strong>/api/studio/lib/libfmodstudio_iphoneos.a</strong> - Release iOS device binary for production code.</li>
+<li><strong>/api/studio/lib/libfmodstudioL_iphoneos.a</strong> - Release iOS device binary with logging enabled for development.</li>
+<li><strong>/api/studio/lib/libfmodstudio_iphonesimulator.a</strong> - Release iOS simulator binary for production code.</li>
+<li><strong>/api/studio/lib/libfmodstudioL_iphonesimulator.a</strong> - Release iOS simulator binary with logging enabled for development.</li>
+<li><strong>/api/studio/lib/libfmodstudio_appletvos.a</strong> - Release tvOS device binary for production code.</li>
+<li><strong>/api/studio/lib/libfmodstudioL_appletvos.a</strong> - Release tvOS device binary with logging enabled for development.</li>
+<li><strong>/api/studio/lib/libfmodstudio_appletvsimulator.a</strong> - Release tvOS simulator binary for production code.</li>
+<li><strong>/api/studio/lib/libfmodstudioL_appletvsimulator.a</strong> - Release tvOS simulator binary with logging enabled for development.</li>
+</ul>
+
+<p>Apple libraries (required for Low Level and Studio Runtime libraries)</p>
+
+<ul>
+<li><strong>AudioToolbox.framework</strong> - Audio output.</li>
+<li><strong>AVFoundation.framework</strong> - Audio Session query.</li>
+</ul>
+
+<h2>Hardware Decoding</h2>
+
+<p>Via the AudioQueue codec FMOD supports decoding AAC, ALAC and MP3. At present iOS devices only have support for decoding one sound with hardware at a time (which may be consumed by playing the iPod). At the cost of extra CPU, all iOS devices have access to software codecs to support more than one sound of these formats. By default FMOD will try to use hardware, if it is in use a software codec will be used. If you want explicit control over whether hardware or software is chosen you can use the <A HREF="../FMOD_AUDIOQUEUE_CODECPOLICY.html">FMOD_AUDIOQUEUE_CODECPOLICY</A> enumeration provided in fmod_ios.h. This is set with the audioqueuepolicy member of the <A HREF="../FMOD_CREATESOUNDEXINFO.html">FMOD_CREATESOUNDEXINFO</A> structure via <A HREF="../FMOD_System_CreateSound.html">System::createSound</A>.</p>
+
+<p>When playing MP3s using the AudioQueue codec, seeking is generally slow for the first time each position is visited. If you need fast random access to a file you can create the sound using the <A HREF="../FMOD_MODE.html">FMOD_ACCURATETIME</A> flag. This will scan the file at load time to determine its accurate length, which has the benefit of creating a seek table to aid in seeking. This is a one-time upfront cost for fast seeking vs paying the cost at runtime for each unique position.</p>
+
+<p>All decoding performed by the AudioQueue codec is done on standalone files such as .mp3, .m4a, etc. There is no support for using AudioQueue with FSB / Bank compressed audio, any MP3 decoding for FSB files will be performed by the standard cross-platform FMOD decoder.</p>
+
+<h2>Handling Interruptions</h2>
+
+<p>Unlike in previous versions of FMOD, it is now the responsibility of the developer to interact with the AudioSession APIs native to this platform. To assist in this matter we provide two functions you can use when you need to handle interruptions, <A HREF="../FMOD_System_MixerSuspend.html">System::mixerSuspend</A> and <A HREF="../FMOD_System_MixerResume.html">System::mixerResume</A>. For more information about interruptions please check the <a href=http://developer.apple.com/Library/ios/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/HandlingAudioInterruptions/HandlingAudioInterruptions.html target="_blank">Apple documentation</a>.</p>
+
+<h2>Lock Screen &amp; Background Audio</h2>
+
+<p>There is no special configuration inside FMOD required to enable the playback of audio from the lock screen or the background, there are two things you must configure outside of FMOD to do this though.</p>
+
+<ol>
+<li>Choose an AudioSession category that supports background / lock screen audio, see <a href=http://developer.apple.com/Library/ios/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html target="_blank">audio session basics</a> for more details.</li>
+<li>Enable background audio functionality in your info.plist with the UIBackgroundModes key, see the <a href=http://developer.apple.com/Library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html target="_blank">iOS key reference</a> for more details.</li>
+</ol>
+
+<p>When playing audio on the lock screen it is important to ensure your buffering is configured correctly to allow low power audio playback. Please consult the latency section of this doc for further details.</p>
+
+<h2>Recording</h2>
+
+<p>Much like lock screen and background audio, recording requires a particular AudioSession category to be active at the time of <A HREF="../FMOD_System_RecordStart.html">System::recordStart</A> (and must remain active until the recording finishes). The required category is called 'play and record' and can be read about in the <a href=http://developer.apple.com/Library/ios/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html target="_blank">audio session basics</a> documentation. Note that FMOD is always 'playing' audio (even silence) so it is not sufficient to simply use the 'recording' category unless you are running the 'No Sound' or 'Wav Writer' output mode.</p>
+
+<p>Some devices may take some time to switch AudioSession category so it is recommended to set this category at application start time to avoid any hiccups in audio playback.</p>
+
+<h2>Latency</h2>
+
+<p>The default latency introduced by FMOD for this platform is 4 blocks of 512 samples at a sample rate of 24KHz, which equates to approximately 85ms. You are free to change this using two APIs, <A HREF="../FMOD_System_SetDSPBufferSize.html">System::setDSPBufferSize</A> and <A HREF="../FMOD_System_SetSoftwareFormat.html">System::setSoftwareFormat</A> but there are some important considerations.</p>
+
+<p>If you have configured background or lock screen audio when locking the device the OS will conserve power by requesting audio from FMOD less frequently. If you desire this functionality please ensure your DSP buffer size is sufficiently large to cover the request, you can find details about buffer sizing in the TTY output from the logging version of FMOD.</p>
+
+<p>If you are worried about latency and do not want automatic low power mode you can configure the Audio Session buffer and sample rate to match FMOD for best results. Assuming an FMOD block size of 512 samples and 24KHz sample rate you should configure the OS with the following:</p>
+
+<pre><code>Float32 preferredDuration = 512 / 24000.0f;
+AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareIOBufferDuration, sizeof(preferredDuration), &amp;preferredDuration);
+
+Float64 preferredSampleRate = 24000;
+AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareSampleRate, sizeof(preferredSampleRate), &amp;preferredSampleRate);
+</code></pre>
+
+<h2>Multichannel Output</h2>
+
+<p>For hardware that supports greater than stereo output you can configure the device to operate with that channel count using the AudioSession API.</p>
+
+<p>Here is a code snippet that demonstrates using as many channels as available:</p>
+
+<pre><code>AVAudioSession *session = [AVAudioSession sharedInstance];
+long maxChannels = [session maximumOutputNumberOfChannels];
+
+BOOL success = [session setPreferredOutputNumberOfChannels:maxChannels error:nil];
+assert(success);
+
+success = [session setActive:TRUE error:nil];
+assert(success);
+</code></pre>
+
+<p>For FMOD to detect the channel count you must use setPreferredOutputNumberOfChannels and activate your AudioSession before calling <A HREF="../FMOD_System_Init.html">System::init</A>.</p>
+
+<h2>Known Issues</h2>
+
+<p>No known issues, please contact <a href="&#109;&#x61;&#x69;&#x6C;t&#x6F;:&#115;&#117;&#112;&#112;&#x6F;&#114;&#x74;&#64;&#x66;&#x6D;&#x6F;&#x64;&#46;&#x63;&#111;&#109;">&#115;&#117;&#112;&#112;&#x6F;&#114;&#x74;&#64;&#x66;&#x6D;&#x6F;&#x64;&#46;&#x63;&#111;&#109;</a> if you discover a problem.</p>

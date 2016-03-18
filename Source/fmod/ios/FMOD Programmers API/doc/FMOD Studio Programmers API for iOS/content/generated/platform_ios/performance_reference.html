@@ -1,0 +1,68 @@
+<LINK REL="stylesheet" href="../../static/styles.css">
+<HTML>
+<HEAD>
+<TITLE>Performance Reference</TITLE>
+</HEAD>
+<BODY TOPMARGIN="0">
+<p class="header">Firelight Technologies FMOD Studio API</p>
+<h1>Performance Reference</h1>
+
+<p>This document is a companion for the <a href="../overview/performance.html">performance tutorial</a> document and serves as a quick reference of facts targeting this platform.</p>
+
+<h2>Format Choice</h2>
+
+<p>Each compression format provided in FMOD has a reason for being included, the below list will detail our recommendations for this platform. Formats listed as primary are considering the best choice, secondary formats should only be considered if the primary doesn't satisfy your requirements.</p>
+
+<ul>
+<li><strong>FADPCM</strong>: Primary format for all sounds.</li>
+<li><strong>Vorbis</strong>: Secondary format for long streams if FADPCM compression is too low.</li>
+<li><strong>PCM</strong>: Secondary format for short sounds if FADPCM cost is too high.</li>
+<li><strong>AAC</strong>: Special format for long streams, single hardware assisted codec available for .MP4 / .M4A files. </li>
+<li><strong>XMA</strong>: Unavailable.</li>
+<li><strong>AT9</strong>: Unavailable.</li>
+</ul>
+
+<h2>Voice Count</h2>
+
+<p>To give developers an idea about the costs of a particular format we provide synthetic benchmark results. These results are based on simple usage of the FMOD Studio API using recommended configuration settings.</p>
+
+<h3>Settings</h3>
+
+<ul>
+<li><strong>Voice count:</strong> 32</li>
+<li><strong>Sample rate:</strong> 24KHz</li>
+<li><strong>Speaker mode:</strong> Stereo</li>
+<li><strong>DSP block size:</strong> 1024 samples</li>
+</ul>
+
+<h3>Test Device: A</h3>
+
+<ul>
+<li><strong>CPU:</strong> Apple A7 @ 1.3 GHz (iPhone 5S)</li>
+<li><strong>OS:</strong> 8.0</li>
+</ul>
+
+<h3>Results: A</h3>
+
+<ul>
+<li><strong>DSP with Vorbis:</strong> 13.7% (+/- 1.3%)</li>
+<li><strong>DSP with FADPCM:</strong> 3.3% (+/- 0.3%)</li>
+<li><strong>DSP with PCM:</strong> 1.1% (+/- 0.2%)</li>
+<li><strong>Update at 60 FPS:</strong> 0.9% (+/- 0.1%)</li>
+</ul>
+
+<h3>Test Device: B</h3>
+
+<ul>
+<li><strong>CPU:</strong> ARM Cortex-A9 @ 0.8 GHz (iPhone 4S)</li>
+<li><strong>OS:</strong> 7.1.2</li>
+</ul>
+
+<h3>Results: B</h3>
+
+<ul>
+<li><strong>DSP with Vorbis:</strong> N/A</li>
+<li><strong>DSP with FADPCM:</strong> 11.9% (+/- 0.8%)</li>
+<li><strong>DSP with PCM:</strong> 6.9% (+/- 0.6%)</li>
+<li><strong>Update at 60 FPS:</strong> 2.8% (+/- 0.5%)</li>
+</ul>

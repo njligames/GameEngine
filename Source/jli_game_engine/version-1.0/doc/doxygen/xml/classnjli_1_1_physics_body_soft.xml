@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_physics_body_soft" kind="class" prot="public">
+    <compoundname>njli::PhysicsBodySoft</compoundname>
+    <basecompoundref refid="classnjli_1_1_physics_body" prot="public" virt="non-virtual">njli::PhysicsBody</basecompoundref>
+    <includes refid="_physics_body_soft_8h" local="no">PhysicsBodySoft.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_physics_body_soft_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="26" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_physics_body_soft_1a3a3770a0489d8629de7b88de0c79fad3" prot="private" static="no" mutable="no">
+        <type>btSoftBodyWorldInfo *</type>
+        <definition>btSoftBodyWorldInfo* njli::PhysicsBodySoft::m_btSoftBodyWorldInfo</definition>
+        <argsstring></argsstring>
+        <name>m_btSoftBodyWorldInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="171" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_physics_body_soft_1a5cc839e65a947ce67d81141aceffff53" prot="private" static="no" mutable="no">
+        <type>btSoftBody *</type>
+        <definition>btSoftBody* njli::PhysicsBodySoft::m_btSoftBody</definition>
+        <argsstring></argsstring>
+        <name>m_btSoftBody</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="172" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1ad1a57cd27522290455d696bcf9a797d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsBodySoft::PhysicsBodySoft</definition>
+        <argsstring>()</argsstring>
+        <name>PhysicsBodySoft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="28" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a00848efd4496fe05e9dc05340eef2fc2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsBodySoft::PhysicsBodySoft</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>PhysicsBodySoft</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="29" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a6545d7e6a7706d93266e6fe5299978d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsBodySoft::PhysicsBodySoft</definition>
+        <argsstring>(const PhysicsBodySoft &amp;)</argsstring>
+        <name>PhysicsBodySoft</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="30" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a0d39f39abc7a807e9ef68e2a44a8d1af" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::PhysicsBodySoft::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a9ebf45057d7aba42e8ef2f5d568eb45a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::PhysicsBodySoft::~PhysicsBodySoft</definition>
+        <argsstring>()</argsstring>
+        <name>~PhysicsBodySoft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="32" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1ac430659453eb940e833df9bf06c41a99" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> &amp;</type>
+        <definition>PhysicsBodySoft &amp; njli::PhysicsBodySoft::operator=</definition>
+        <argsstring>(const PhysicsBodySoft &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="33" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1acc09fa9a6bf5132bf5c901e664589321" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const btCollisionObject *</type>
+        <definition>const btCollisionObject * njli::PhysicsBodySoft::getCollisionObject</definition>
+        <argsstring>() const </argsstring>
+        <name>getCollisionObject</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a48031c76bbe2bd9c4540d6d27b8b42bb">getCollisionObject</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="161" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="230" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1abb9ce90a2d536afcd22b1d84ef1881c2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>btCollisionObject *</type>
+        <definition>btCollisionObject * njli::PhysicsBodySoft::getCollisionObject</definition>
+        <argsstring>()</argsstring>
+        <name>getCollisionObject</name>
+        <reimplements refid="classnjli_1_1_physics_body_1ad3edabf71cfde91351bb428c9f06931e">getCollisionObject</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="162" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a65236be10459d5990a854f84ca5b2e4c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsBodySoft::setCollisionObject</definition>
+        <argsstring>(const btCollisionObject &amp;obj, PhysicsShape *shape)</argsstring>
+        <name>setCollisionObject</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a674974f0df3db645620c7156177659ee">setCollisionObject</reimplements>
+        <param>
+          <type>const btCollisionObject &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref> *</type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="163" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="240" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a005a5ef2e48156c908eb0cb3ca40f9a8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool njli::PhysicsBodySoft::addPhysicsBody</definition>
+        <argsstring>(const btTransform &amp;transform=btTransform::getIdentity())</argsstring>
+        <name>addPhysicsBody</name>
+        <reimplements refid="classnjli_1_1_physics_body_1abeb1a0e956743d810b6e35329dbf599f">addPhysicsBody</reimplements>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>transform</declname>
+          <defval>btTransform::getIdentity()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="250" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1acab6d13f4bd544ea66fe1957765c9fa1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool njli::PhysicsBodySoft::removePhysicsBody</definition>
+        <argsstring>()</argsstring>
+        <name>removePhysicsBody</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a832ed4f79a2b52b334d63d094364f86a">removePhysicsBody</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="166" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="256" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a2ae8bc28bbdc5cadfad911de788ce394" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const btSoftBody *</type>
+        <definition>const btSoftBody * njli::PhysicsBodySoft::getBody</definition>
+        <argsstring>() const </argsstring>
+        <name>getBody</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="168" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a31c39467b13c6e2f928cf8339848bbad" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>btSoftBody *</type>
+        <definition>btSoftBody * njli::PhysicsBodySoft::getBody</definition>
+        <argsstring>()</argsstring>
+        <name>getBody</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="169" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a0219eb7f997180d19fbbd5223956d610" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::PhysicsBodySoft::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a21bdbc459532f004dc4cd0e9c99a4765">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="40" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a1474ecdeff160922912c7699dd1b9331" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsBodySoft::serialize</definition>
+        <argsstring>(void *dataBuffer, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a3c40378e7f3033557ec6adf9428b6a9d">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 15:02:26</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#dataBuffer description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="50" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a1379451d46cec99b1efa672a924be432" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::PhysicsBodySoft::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a9ba235d39a1b994f22a13edeff862ba3">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="56" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1afdf8fc497ab94254804286d0dac1a0f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::PhysicsBodySoft::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a1338648bed55e4ca2d3c50d953fd60c4">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="62" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a5e0e5c08950cc3512c0243fa4f0bca40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::PhysicsBodySoft::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a0c12067445dfd7893e37052ae90a9173">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="68" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a4c6a5f18d7b04e7613ae06321ec18c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsBodySoft::setWorldTransform</definition>
+        <argsstring>(const btTransform &amp;transform)</argsstring>
+        <name>setWorldTransform</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a570891a03ea4f8243ccec9202b3dc965">setWorldTransform</reimplements>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#transform description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="141" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1ac3e43068ae871f5fea1139255e1d1c4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool njli::PhysicsBodySoft::isInWorld</definition>
+        <argsstring>() const </argsstring>
+        <name>isInWorld</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a9f98398ebd273f305ffb8316908d8088">isInWorld</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="147" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a08e8ad16ada2a5a80e7ea16319055d0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const btVector3 &amp;</type>
+        <definition>const btVector3 &amp; njli::PhysicsBodySoft::getVelocity</definition>
+        <argsstring>() const </argsstring>
+        <name>getVelocity</name>
+        <reimplements refid="classnjli_1_1_physics_body_1add437a6d229dfbf74a838d0de7229867">getVelocity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="153" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a732e991030dcf0f1bdc9281329a102fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const btVector3 &amp;</type>
+        <definition>const btVector3 &amp; njli::PhysicsBodySoft::getAngularVelocity</definition>
+        <argsstring>() const </argsstring>
+        <name>getAngularVelocity</name>
+        <reimplements refid="classnjli_1_1_physics_body_1a598de298accae3b59c821ab8e640d464">getAngularVelocity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="159" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="203" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1ac0e47c55dc57b429679fdb69a8f66073" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> **</type>
+        <definition>PhysicsBodySoft ** njli::PhysicsBodySoft::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="77" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a07bfe19db444626f925faacc9d49dd84" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsBodySoft::destroyArray</definition>
+        <argsstring>(PhysicsBodySoft **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="83" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a5fd086438f62b4fd8dc045bdf3692439" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> *</type>
+        <definition>PhysicsBodySoft * njli::PhysicsBodySoft::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="89" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1ac7c918544acc7fbb138a0576a79dc8d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> *</type>
+        <definition>PhysicsBodySoft * njli::PhysicsBodySoft::create</definition>
+        <argsstring>(const PhysicsBodySoftBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_body_soft_builder" kindref="compound">PhysicsBodySoftBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="97" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="97" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a46378e4d7269a67fc3fedb1915f07db2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> *</type>
+        <definition>PhysicsBodySoft * njli::PhysicsBodySoft::clone</definition>
+        <argsstring>(const PhysicsBodySoft &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="105" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a2c0c06f3ef2d81a8ae83dae450be76aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> *</type>
+        <definition>PhysicsBodySoft * njli::PhysicsBodySoft::copy</definition>
+        <argsstring>(const PhysicsBodySoft &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="113" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a466506546370e272f2f6b4a07375a51e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsBodySoft::destroy</definition>
+        <argsstring>(PhysicsBodySoft *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="119" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="114" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a1d427fc9cde67c908943a1646c2764cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::PhysicsBodySoft::load</definition>
+        <argsstring>(PhysicsBodySoft &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="127" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="123" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_physics_body_soft_1a77f1c0596ee8a0e43f9d16fb836692cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::PhysicsBodySoft::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="133" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3376">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3377" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3378">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="3377">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3378" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3374">
+        <label>njli::PhysicsBodySoft</label>
+        <link refid="classnjli_1_1_physics_body_soft"/>
+        <childnode refid="3375" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3375">
+        <label>njli::PhysicsBody</label>
+        <link refid="classnjli_1_1_physics_body"/>
+        <childnode refid="3376" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3381">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3382" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3383">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="3383" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3382">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3383" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3384">
+        <label>njli::PhysicsShape</label>
+        <link refid="classnjli_1_1_physics_shape"/>
+        <childnode refid="3381" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3379">
+        <label>njli::PhysicsBodySoft</label>
+        <link refid="classnjli_1_1_physics_body_soft"/>
+        <childnode refid="3380" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3380">
+        <label>njli::PhysicsBody</label>
+        <link refid="classnjli_1_1_physics_body"/>
+        <childnode refid="3381" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3384" relation="usage">
+          <edgelabel>m_PhysicsShape</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" line="25" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.h" bodystart="23" bodyend="174"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a005a5ef2e48156c908eb0cb3ca40f9a8" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>addPhysicsBody</name></member>
+      <member refid="classnjli_1_1_physics_body_1aada3ab35adecd8cb382411356bf6fb3e" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>addPhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_body_1a83de0044a031a18ac9618b86c8d539ce" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>addPhysicsShape</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a0d39f39abc7a807e9ef68e2a44a8d1af" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a0219eb7f997180d19fbbd5223956d610" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a46378e4d7269a67fc3fedb1915f07db2" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::PhysicsBody::"><scope>njli::PhysicsBodySoft</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a2c0c06f3ef2d81a8ae83dae450be76aa" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a5fd086438f62b4fd8dc045bdf3692439" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>create</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1ac7c918544acc7fbb138a0576a79dc8d8" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>create</name></member>
+      <member refid="classnjli_1_1_physics_body_1a07ea5401f330fbde1eb2f080e079c8bf" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsBody::"><scope>njli::PhysicsBodySoft</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::PhysicsBodySoft</scope><name>create</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1ac0e47c55dc57b429679fdb69a8f66073" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a466506546370e272f2f6b4a07375a51e" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_physics_body_1a142b27ce8c2b903fc9de3b3e52fb5b35" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsBody::"><scope>njli::PhysicsBodySoft</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::PhysicsBodySoft</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a07bfe19db444626f925faacc9d49dd84" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_physics_body_1a9202636b997a1ab1155dc827581a94ab" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>enableContactResponse</name></member>
+      <member refid="classnjli_1_1_physics_body_1a3ab49264b605d3a261cdfb6db36389aa" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>enableHandleCollideCallback</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_physics_body_1aa1d4897b6b751610ce1470dac2679eb9" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>enableResting</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_physics_body_1a2dfd5a660b3f3aba42aebe8e0c6d32ab" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getActivationState</name></member>
+      <member refid="classnjli_1_1_physics_body_1aa9e3550a04ab2f1d1fab46f3fe195f30" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getAngularFriction</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a732e991030dcf0f1bdc9281329a102fd" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getAngularVelocity</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a2ae8bc28bbdc5cadfad911de788ce394" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getBody</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a31c39467b13c6e2f928cf8339848bbad" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getBody</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a1379451d46cec99b1efa672a924be432" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_physics_body_1aead9ed1157f369c6f310fbb5f4d0017b" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getCollisionFlags</name></member>
+      <member refid="classnjli_1_1_physics_body_1a5f9302be3234d9559887d0dc01920b00" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getCollisionGroup</name></member>
+      <member refid="classnjli_1_1_physics_body_1a0b03710f75ecab07d31089d3e3204990" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getCollisionMask</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1acc09fa9a6bf5132bf5c901e664589321" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getCollisionObject</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1abb9ce90a2d536afcd22b1d84ef1881c2" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getCollisionObject</name></member>
+      <member refid="classnjli_1_1_physics_body_1a7902144cadcc96623647f197ea06e26c" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getFriction</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_physics_body_1a0387ce41605f311b4cf24046e6f9e36d" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_physics_body_1a4aa29d0693b62447efeaa40fc6f58b61" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_physics_body_1a0ba90aaf5e9990cc92a1e4e8b6d594db" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_body_1a80e0ef46d50bafd597fbc6bfa9e77c90" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_body_1ad34d7a223ace5d09b0a5a975e99ff289" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsConstraintIndex</name></member>
+      <member refid="classnjli_1_1_physics_body_1ab26cf8febd1d0358688e217c66fcc39e" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsConstraints</name></member>
+      <member refid="classnjli_1_1_physics_body_1a24b7094de88e83499741dbe4e9f289dc" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsShape</name></member>
+      <member refid="classnjli_1_1_physics_body_1aba6ce88973cdbf3075c1bbbce3359406" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsShape</name></member>
+      <member refid="classnjli_1_1_physics_body_1af8bde28f4eb63e577c7302765594e680" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getPhysicsType</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_physics_body_1a2bf874a1820d5d8fd511bd6eb54f30e3" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getRestitution</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1afdf8fc497ab94254804286d0dac1a0f1" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a08e8ad16ada2a5a80e7ea16319055d0c" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getVelocity</name></member>
+      <member refid="classnjli_1_1_physics_body_1ab92a433d0ae2b714e1c3b5556893d029" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>getWorldTransform</name></member>
+      <member refid="classnjli_1_1_physics_body_1a5e3c626da8fdf32375e0f16f6187934d" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>handleCollide</name></member>
+      <member refid="classnjli_1_1_physics_body_1ae317118b0cad6699ce9d7c1aa27db7fa" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>handleCollisionNear</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_physics_body_1a678f6ddc6e6c2c020444f4523375d563" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>hasPhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_body_1a8fab0b666e3bbbea022c0b1e13aa3e76" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>isDynamicPhysics</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1ac3e43068ae871f5fea1139255e1d1c4a" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>isInWorld</name></member>
+      <member refid="classnjli_1_1_physics_body_1a3cdf426ac3cb39cd4f58072c65837b5b" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>isKinematicPhysics</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_physics_body_1a378060d96bdc1412e41fc02e8e81111e" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>isResting</name></member>
+      <member refid="classnjli_1_1_physics_body_1adf0cd3ea74d1f5ad91069f67d22b5c3e" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>isStaticPhysics</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a1d427fc9cde67c908943a1646c2764cf" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>load</name></member>
+      <member refid="classnjli_1_1_physics_body_1ade2c057b6bf5cdba1228cad45b97d294" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsBody::"><scope>njli::PhysicsBodySoft</scope><name>load</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a5cc839e65a947ce67d81141aceffff53" prot="private" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>m_btSoftBody</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a3a3770a0489d8629de7b88de0c79fad3" prot="private" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>m_btSoftBodyWorldInfo</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a5e0e5c08950cc3512c0243fa4f0bca40" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1ac430659453eb940e833df9bf06c41a99" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_physics_body_1aa2177d15a5c8dc231efefde1dc439d1d" prot="public" virt="non-virtual" ambiguityscope="njli::PhysicsBody::"><scope>njli::PhysicsBodySoft</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_physics_body_1ad68e3bd30ca09693f5b03855d020923b" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>PhysicsBody</name></member>
+      <member refid="classnjli_1_1_physics_body_1a58cbc549412fc623f35276d2f18b8785" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>PhysicsBody</name></member>
+      <member refid="classnjli_1_1_physics_body_1ae72cb51b910158466d481481e1042a2e" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>PhysicsBody</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1ad1a57cd27522290455d696bcf9a797d0" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>PhysicsBodySoft</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a00848efd4496fe05e9dc05340eef2fc2" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>PhysicsBodySoft</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a6545d7e6a7706d93266e6fe5299978d4" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>PhysicsBodySoft</name></member>
+      <member refid="classnjli_1_1_physics_body_1ae4a8cca611e33c624b287613eac4d72c" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removeAllPhysicsConstraints</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1acab6d13f4bd544ea66fe1957765c9fa1" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>removePhysicsBody</name></member>
+      <member refid="classnjli_1_1_physics_body_1a45058a03979e89b0b0fc4dceb07d8b4d" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removePhysicsConstraint</name></member>
+      <member refid="classnjli_1_1_physics_body_1a5ecb49baeaa8c38937ee5fc566702148" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>removePhysicsShape</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a1474ecdeff160922912c7699dd1b9331" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_physics_body_1ad3c3a9a335bbbe8144c488673037abae" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setAngularFriction</name></member>
+      <member refid="classnjli_1_1_physics_body_1adebe9e1510c2301cc0178072f6849359" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setCollisionGroup</name></member>
+      <member refid="classnjli_1_1_physics_body_1a1318143d3ea839d34ee51dea4bf1cb28" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setCollisionMask</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a65236be10459d5990a854f84ca5b2e4c" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setCollisionObject</name></member>
+      <member refid="classnjli_1_1_physics_body_1ac24d4f1971e9a936f32f7bfcd06d8ee6" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setDynamicPhysics</name></member>
+      <member refid="classnjli_1_1_physics_body_1a6b71ecd5df9868f35b8365bf70455f6b" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setFriction</name></member>
+      <member refid="classnjli_1_1_physics_body_1abbf7115e5b57161da8e3c56ccc433e3a" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setKinematicPhysics</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_physics_body_1a24a8fe4c7fd12b3435c264fb8feab6d4" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setPhysicsType</name></member>
+      <member refid="classnjli_1_1_physics_body_1a67ebcf753e1bc5c5e228d4f18c7534a4" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setRestitution</name></member>
+      <member refid="classnjli_1_1_physics_body_1a8a3699741bc55ef2f292307c8bca316a" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setStaticPhysics</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a4c6a5f18d7b04e7613ae06321ec18c58" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>setWorldTransform</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a77f1c0596ee8a0e43f9d16fb836692cb" prot="public" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>type</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::PhysicsBodySoft</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_physics_body_1a9abcecd3f34f0b4c2c18971f093bd770" prot="public" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>~PhysicsBody</name></member>
+      <member refid="classnjli_1_1_physics_body_soft_1a9ebf45057d7aba42e8ef2f5d568eb45a" prot="protected" virt="virtual"><scope>njli::PhysicsBodySoft</scope><name>~PhysicsBodySoft</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

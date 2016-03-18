@@ -1,0 +1,1419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_checkbox_h_u_d" kind="class" prot="public">
+    <compoundname>njli::CheckboxHUD</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_factory_object" prot="public" virt="non-virtual">njli::AbstractFactoryObject</basecompoundref>
+    <basecompoundref refid="classnjli_1_1_abstract_frame_buffer_object" prot="public" virt="non-virtual">njli::AbstractFrameBufferObject</basecompoundref>
+    <includes refid="_checkbox_h_u_d_8h" local="no">CheckboxHUD.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_checkbox_h_u_d_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="32" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" prot="private" static="no" mutable="no">
+        <type>btVector2 *</type>
+        <definition>btVector2* njli::CheckboxHUD::m_dimensions</definition>
+        <argsstring></argsstring>
+        <name>m_dimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="198" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" prot="private" static="no" mutable="no">
+        <type>btVector2 *</type>
+        <definition>btVector2* njli::CheckboxHUD::m_position</definition>
+        <argsstring></argsstring>
+        <name>m_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="199" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a0e1d4b8f2b740d9d6189da68959b34d5" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::m_fontSize</definition>
+        <argsstring></argsstring>
+        <name>m_fontSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="200" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1ae30d4899d8b3bb39b583005d30e94d80" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::CheckboxHUD::m_fontFace</definition>
+        <argsstring></argsstring>
+        <name>m_fontFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="201" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::CheckboxHUD::m_fillColor</definition>
+        <argsstring></argsstring>
+        <name>m_fillColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="202" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a57ec6ee10cf894de31c8f5d3c1987cbf" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::CheckboxHUD::m_align</definition>
+        <argsstring></argsstring>
+        <name>m_align</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="203" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a4a42a1e6ec369fe33ea9a7d6b546048a" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::m_cornerRadius</definition>
+        <argsstring></argsstring>
+        <name>m_cornerRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="204" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a06f4f2ae5cbff9350537724e8b2f5f5f" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::m_feather</definition>
+        <argsstring></argsstring>
+        <name>m_feather</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="205" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a1f692a5cf90de60c6a1d3747b1f3710d" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::CheckboxHUD::m_gradientStartColor</definition>
+        <argsstring></argsstring>
+        <name>m_gradientStartColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="206" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::CheckboxHUD::m_gradientEndColor</definition>
+        <argsstring></argsstring>
+        <name>m_gradientEndColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="207" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1ac904923a373f4c67ab94dbf407459245" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::m_iconFontSize</definition>
+        <argsstring></argsstring>
+        <name>m_iconFontSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="208" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1ae3f331029c085859eb0e47c66d16ae56" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::CheckboxHUD::m_iconFontFace</definition>
+        <argsstring></argsstring>
+        <name>m_iconFontFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="209" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::CheckboxHUD::m_iconFillColor</definition>
+        <argsstring></argsstring>
+        <name>m_iconFillColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="210" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1aafd86237ddcbc55e4797d478b906bc2f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::CheckboxHUD::m_iconText</definition>
+        <argsstring></argsstring>
+        <name>m_iconText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="211" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a5746b7e4e3127374c6761d077e061661" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::CheckboxHUD::m_text</definition>
+        <argsstring></argsstring>
+        <name>m_text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="212" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" prot="private" static="no" mutable="no">
+        <type>btVector2 *</type>
+        <definition>btVector2* njli::CheckboxHUD::m_checkboxDimension</definition>
+        <argsstring></argsstring>
+        <name>m_checkboxDimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="213" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_checkbox_h_u_d_1a412e277cbdbd39ce605d81342ef11f91" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::CheckboxHUD::m_isChecked</definition>
+        <argsstring></argsstring>
+        <name>m_isChecked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="214" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::CheckboxHUD::CheckboxHUD</definition>
+        <argsstring>()</argsstring>
+        <name>CheckboxHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="35" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="26" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a85dcc4809caadfeb82fbfc48e9fbc33e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::CheckboxHUD::CheckboxHUD</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>CheckboxHUD</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="36" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a3eb6d43b7a6bc7f47f0d6619bb226d11" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::CheckboxHUD::CheckboxHUD</definition>
+        <argsstring>(const CheckboxHUD &amp;)</argsstring>
+        <name>CheckboxHUD</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="37" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1adbd098f0f7b90603014c8c45df1fab91" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::CheckboxHUD::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a455334383e0cadeeaa1c09752064ec67" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::CheckboxHUD::~CheckboxHUD</definition>
+        <argsstring>()</argsstring>
+        <name>~CheckboxHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="39" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="61" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a440d2c1e0ca2850ffc333ae8f4df24ba" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> &amp;</type>
+        <definition>CheckboxHUD &amp; njli::CheckboxHUD::operator=</definition>
+        <argsstring>(const CheckboxHUD &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="40" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ac373a05200f80a5a5c927f8ab7199d6f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::renderFunction</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>renderFunction</name>
+        <reimplements refid="classnjli_1_1_abstract_frame_buffer_object_1aa75a537f5745e4be8f749892d195b43c">renderFunction</reimplements>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="41" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="82" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a3d9608fee3e29cb75255d4c8a52f6402" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::CheckboxHUD::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="60" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="127" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a2f4a7c62936fb7e91274081cb04c1d11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::serialize</definition>
+        <argsstring>(void *dataBuffer, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>James Folk, 16-02-11 15:02:30</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#dataBuffer description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="70" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a9ad7d50062d24943d128c0a94ad4e86e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::CheckboxHUD::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="77" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ab4c0e987d977bc8560a9af11a0e68f59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::CheckboxHUD::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="83" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a1c0ba6c7d5f12c0684a59f7576c3e0ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::CheckboxHUD::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="89" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a1f5298769d6467f4333a6fa208131ccd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setDimensions</definition>
+        <argsstring>(const btVector2 &amp;dim)</argsstring>
+        <name>setDimensions</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="158" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1aaa1068b0211ba419f36dfb3b10e726b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setPosition</definition>
+        <argsstring>(const btVector2 &amp;pos)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="159" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="264" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a4063a85d6fb9bc70311171465efa7025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontSize</definition>
+        <argsstring>(f32 fontSize)</argsstring>
+        <name>setFontSize</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>fontSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="160" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ae4b99948d4cc44e2ddd6f1b8b2e6cbf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontFace</definition>
+        <argsstring>(const char *fontFace)</argsstring>
+        <name>setFontFace</name>
+        <param>
+          <type>const char *</type>
+          <declname>fontFace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="161" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a34ff2d255d4c683052a099f8207988ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontColor</definition>
+        <argsstring>(const btVector4 &amp;color)</argsstring>
+        <name>setFontColor</name>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="162" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a186750a8e24a00f9473bb14c47248810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setText</definition>
+        <argsstring>(const char *text)</argsstring>
+        <name>setText</name>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="163" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="284" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ad910eaefd683c7809d908aa43aba1770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontAlign</definition>
+        <argsstring>(njliHUDAlign align)</argsstring>
+        <name>setFontAlign</name>
+        <param>
+          <type><ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref></type>
+          <declname>align</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="164" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ae3f929ce57043944b8193b5e82396fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setCheckboxRadius</definition>
+        <argsstring>(f32 radius)</argsstring>
+        <name>setCheckboxRadius</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="165" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="294" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a185341fbfa8e4a4f6c011f6b6a90216f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setCheckboxFeather</definition>
+        <argsstring>(f32 feather)</argsstring>
+        <name>setCheckboxFeather</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>feather</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="166" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ac96f62891f59b1f56285b1aeb8dcefb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setCheckboxGradientStartColor</definition>
+        <argsstring>(const btVector4 &amp;start)</argsstring>
+        <name>setCheckboxGradientStartColor</name>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="167" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="304" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a2731b7eaefa483f90e8fe96ec4951fae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setCheckboxGradientEndColor</definition>
+        <argsstring>(const btVector4 &amp;end)</argsstring>
+        <name>setCheckboxGradientEndColor</name>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="168" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a57260414f1a25ced9c1da85f67641c24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setCheckboxDimensions</definition>
+        <argsstring>(const btVector2 &amp;dim)</argsstring>
+        <name>setCheckboxDimensions</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="169" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="314" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a4b88a46f30ab4675d3f9d2e14ca59a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontSizeIcon</definition>
+        <argsstring>(f32 size)</argsstring>
+        <name>setFontSizeIcon</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="170" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a9f5a683fa1eadb2844f1d7735e01f389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontFaceIcon</definition>
+        <argsstring>(const char *fontFace)</argsstring>
+        <name>setFontFaceIcon</name>
+        <param>
+          <type>const char *</type>
+          <declname>fontFace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="171" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="324" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ab23a6ab181e6698b8653c0c8f45a5b78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setFontColorIcon</definition>
+        <argsstring>(const btVector4 &amp;color)</argsstring>
+        <name>setFontColorIcon</name>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="172" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="329" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ab1fe6f159b1937786b4c070c682220f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::setTextIcon</definition>
+        <argsstring>(const char *text)</argsstring>
+        <name>setTextIcon</name>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="173" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="334" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1abc3c9bdb220e6f12ae6f604282df350e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector2 &amp;</type>
+        <definition>const btVector2 &amp; njli::CheckboxHUD::getDimensions</definition>
+        <argsstring>() const </argsstring>
+        <name>getDimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="175" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="340" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a39b4d8b338311780efcba1e3bb40a4ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector2 &amp;</type>
+        <definition>const btVector2 &amp; njli::CheckboxHUD::getPosition</definition>
+        <argsstring>(const btVector2 &amp;pos) const </argsstring>
+        <name>getPosition</name>
+        <param>
+          <type>const btVector2 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="176" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="345" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a7abe03703e44a6ca75911701fdfb6e26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::getFontSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="177" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1abcb50a74e3ede0d25b64ccea5375c9f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::CheckboxHUD::getFontFace</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="178" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="355" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a2d74cfbdfa01b6eeda63c2ef389ade35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector4 &amp;</type>
+        <definition>const btVector4 &amp; njli::CheckboxHUD::getFontColor</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="179" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1abc9efbd27a9d8e49b8c132e8b514e0c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::CheckboxHUD::getText</definition>
+        <argsstring>() const </argsstring>
+        <name>getText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="180" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="365" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1aa77626cb568dfb747237f83d72d064c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacenjli_1a376c3102aef4710f2b54a545bf0e2b3a" kindref="member">njliHUDAlign</ref></type>
+        <definition>njliHUDAlign njli::CheckboxHUD::getFontAlign</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontAlign</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="181" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ab6dd29f576851759e287cd59d48fbd3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::getCheckboxRadius</definition>
+        <argsstring>() const </argsstring>
+        <name>getCheckboxRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="182" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="375" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ad017164469dffafec422d009c4009603" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::getCheckboxFeather</definition>
+        <argsstring>() const </argsstring>
+        <name>getCheckboxFeather</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="183" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="380" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a1025ff961e313a9b297d5f439fd82f3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector4 &amp;</type>
+        <definition>const btVector4 &amp; njli::CheckboxHUD::getCheckboxGradientStartColor</definition>
+        <argsstring>() const </argsstring>
+        <name>getCheckboxGradientStartColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="184" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="385" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ab3028cbd3a0a2ffba9c0760b0435bce5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector4 &amp;</type>
+        <definition>const btVector4 &amp; njli::CheckboxHUD::getCheckboxGradientEndColor</definition>
+        <argsstring>() const </argsstring>
+        <name>getCheckboxGradientEndColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="185" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="390" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1aa9f2a6a721d87fa6c25fe992deb994e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector2 &amp;</type>
+        <definition>const btVector2 &amp; njli::CheckboxHUD::getCheckboxDimensions</definition>
+        <argsstring>() const </argsstring>
+        <name>getCheckboxDimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="186" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="395" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ad4f28446a0c7b8aa868cbad40fbf6dff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::CheckboxHUD::getFontSizeIcon</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="187" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="400" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a8e37efd669ed288c04230cacf87045df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::CheckboxHUD::getFontFaceIcon</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontFaceIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="188" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="405" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1aa7d1790f3d62e9897f7cf6413bff30a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector4 &amp;</type>
+        <definition>const btVector4 &amp; njli::CheckboxHUD::getFontColorIcon</definition>
+        <argsstring>() const </argsstring>
+        <name>getFontColorIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="189" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="410" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a38a066fe72f94f0bcab5d93cadba8308" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::CheckboxHUD::getTextIcon</definition>
+        <argsstring>() const </argsstring>
+        <name>getTextIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="190" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="415" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ad543bafb52bd55a7143af7a9312d663a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="192" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="420" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a6e4733ecf2b4e5e44cd8206af9bdc671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::unCheck</definition>
+        <argsstring>()</argsstring>
+        <name>unCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="193" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="425" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ade4afc4e3a0b8feb1574afb1d8c05451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::CheckboxHUD::isChecked</definition>
+        <argsstring>() const </argsstring>
+        <name>isChecked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="194" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="430" bodyend="433"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a22d51a25e265add58686c00c030cadc8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> **</type>
+        <definition>CheckboxHUD ** njli::CheckboxHUD::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="98" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a1ca38e5db835fc353407f8c5bfae4039" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::destroyArray</definition>
+        <argsstring>(CheckboxHUD **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="104" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a73657218e0fe45f9f0fe4d6877f12fbf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> *</type>
+        <definition>CheckboxHUD * njli::CheckboxHUD::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="110" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ab2fa7becc1b4e1110a57d6d04f9e55eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> *</type>
+        <definition>CheckboxHUD * njli::CheckboxHUD::create</definition>
+        <argsstring>(const CheckboxHUDBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_checkbox_h_u_d_builder" kindref="compound">CheckboxHUDBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="118" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="168" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1ad900735c5021aa4557d049e3c4ff7f91" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> *</type>
+        <definition>CheckboxHUD * njli::CheckboxHUD::clone</definition>
+        <argsstring>(const CheckboxHUD &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="126" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1afc718237c1b7e03f45567a56f267da39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> *</type>
+        <definition>CheckboxHUD * njli::CheckboxHUD::copy</definition>
+        <argsstring>(const CheckboxHUD &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="134" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a7852f303352b39bc1c82195e336d3f4d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::destroy</definition>
+        <argsstring>(CheckboxHUD *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="140" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="185" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a0a834ee3236f5dae14f7ab32c69708eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::CheckboxHUD::load</definition>
+        <argsstring>(CheckboxHUD &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="148" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="193" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_checkbox_h_u_d_1a84526a179ce84ac76f694927cddff8f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::CheckboxHUD::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="154" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp" bodystart="254" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2870">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="2871" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2872">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="2869">
+        <label>njli::CheckboxHUD</label>
+        <link refid="classnjli_1_1_checkbox_h_u_d"/>
+        <childnode refid="2870" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2873" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2873">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="2871">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="2872" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2875">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="2876" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2877">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="2877" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="2874">
+        <label>njli::CheckboxHUD</label>
+        <link refid="classnjli_1_1_checkbox_h_u_d"/>
+        <childnode refid="2875" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2878" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2878">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="2876">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="2877" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" line="31" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUD.h" bodystart="28" bodyend="215"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1ac8d66ca8d605b2c45873fc4020c579ee" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>AbstractFrameBufferObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1adbd098f0f7b90603014c8c45df1fab91" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a3d9608fee3e29cb75255d4c8a52f6402" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ad543bafb52bd55a7143af7a9312d663a" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>check</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1aec11f8636407a40541f56c650ac8ce3e" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>CheckboxHUD</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a85dcc4809caadfeb82fbfc48e9fbc33e" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>CheckboxHUD</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a3eb6d43b7a6bc7f47f0d6619bb226d11" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>CheckboxHUD</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ad900735c5021aa4557d049e3c4ff7f91" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::CheckboxHUD</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1afc718237c1b7e03f45567a56f267da39" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a73657218e0fe45f9f0fe4d6877f12fbf" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>create</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab2fa7becc1b4e1110a57d6d04f9e55eb" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::CheckboxHUD</scope><name>create</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a22d51a25e265add58686c00c030cadc8" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a7852f303352b39bc1c82195e336d3f4d" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::CheckboxHUD</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a1ca38e5db835fc353407f8c5bfae4039" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1aded6f9fc4da10af752cf90a97aaa751d" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getAspectRatio</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1aa9f2a6a721d87fa6c25fe992deb994e1" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getCheckboxDimensions</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ad017164469dffafec422d009c4009603" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getCheckboxFeather</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab3028cbd3a0a2ffba9c0760b0435bce5" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getCheckboxGradientEndColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a1025ff961e313a9b297d5f439fd82f3d" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getCheckboxGradientStartColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab6dd29f576851759e287cd59d48fbd3b" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getCheckboxRadius</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a9ad7d50062d24943d128c0a94ad4e86e" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1abc3c9bdb220e6f12ae6f604282df350e" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getDimensions</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1aa77626cb568dfb747237f83d72d064c0" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontAlign</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a2d74cfbdfa01b6eeda63c2ef389ade35" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1aa7d1790f3d62e9897f7cf6413bff30a2" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontColorIcon</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1abcb50a74e3ede0d25b64ccea5375c9f2" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontFace</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a8e37efd669ed288c04230cacf87045df" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontFaceIcon</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a7abe03703e44a6ca75911701fdfb6e26" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontSize</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ad4f28446a0c7b8aa868cbad40fbf6dff" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getFontSizeIcon</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a95ae9779550ed7496011f859ec3d4766" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getHeight</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a39b4d8b338311780efcba1e3bb40a4ad" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getPosition</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1abc9efbd27a9d8e49b8c132e8b514e0c5" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getText</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a38a066fe72f94f0bcab5d93cadba8308" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getTextIcon</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a6a954c3ede9278ae901b68bbeccc86a5" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getTextureID</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab4c0e987d977bc8560a9af11a0e68f59" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1aa4ab66fbdcb04f1834d1dc05b4c7a10c" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>getWidth</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a5d7b8b3bc421084f282343e506a6d289" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>hide</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ade4afc4e3a0b8feb1574afb1d8c05451" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>isChecked</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a25ec8745d2c47f961fde39c6dc4e83aa" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>isHidden</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a85e419449efe44466d81f9502fca2c3e" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>isLoadedGPU</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a0a834ee3236f5dae14f7ab32c69708eb" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>load</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a9fa4ab667a74a7a23b18ae3418e56f7d" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>loadGPU</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a57ec6ee10cf894de31c8f5d3c1987cbf" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_align</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a2b013bfab34f523e31de0eae6c113d2f" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_checkboxDimension</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a4a42a1e6ec369fe33ea9a7d6b546048a" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_cornerRadius</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1af97939ec2d8f7137dd7206aaef82ebeb" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_dimensions</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a06f4f2ae5cbff9350537724e8b2f5f5f" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_feather</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1acaa459636c3131b4991b2a7d74d4b6c5" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_fillColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ae30d4899d8b3bb39b583005d30e94d80" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_fontFace</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a0e1d4b8f2b740d9d6189da68959b34d5" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_fontSize</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a3f4833ec007b2ee45c150e5b851dc1d0" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_gradientEndColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a1f692a5cf90de60c6a1d3747b1f3710d" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_gradientStartColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab725b03ce1e63bef6675bea2f5cef7a8" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_iconFillColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ae3f331029c085859eb0e47c66d16ae56" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_iconFontFace</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ac904923a373f4c67ab94dbf407459245" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_iconFontSize</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1aafd86237ddcbc55e4797d478b906bc2f" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_iconText</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a412e277cbdbd39ce605d81342ef11f91" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_isChecked</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a15d15c4ef020a1d109c1257b535ef6af" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_position</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a5746b7e4e3127374c6761d077e061661" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>m_text</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a1c0ba6c7d5f12c0684a59f7576c3e0ee" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a440d2c1e0ca2850ffc333ae8f4df24ba" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1ababe9973dc3593e158adf12033f66b71" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>render</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ac373a05200f80a5a5c927f8ab7199d6f" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>renderFunction</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a2f4a7c62936fb7e91274081cb04c1d11" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a57260414f1a25ced9c1da85f67641c24" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setCheckboxDimensions</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a185341fbfa8e4a4f6c011f6b6a90216f" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setCheckboxFeather</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a2731b7eaefa483f90e8fe96ec4951fae" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setCheckboxGradientEndColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ac96f62891f59b1f56285b1aeb8dcefb0" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setCheckboxGradientStartColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ae3f929ce57043944b8193b5e82396fd5" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setCheckboxRadius</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a1f5298769d6467f4333a6fa208131ccd" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setDimensions</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ad910eaefd683c7809d908aa43aba1770" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontAlign</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a34ff2d255d4c683052a099f8207988ba" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontColor</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab23a6ab181e6698b8653c0c8f45a5b78" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontColorIcon</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ae4b99948d4cc44e2ddd6f1b8b2e6cbf0" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontFace</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a9f5a683fa1eadb2844f1d7735e01f389" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontFaceIcon</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a4063a85d6fb9bc70311171465efa7025" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontSize</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a4b88a46f30ab4675d3f9d2e14ca59a6f" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setFontSizeIcon</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1aaa1068b0211ba419f36dfb3b10e726b3" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setPosition</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a186750a8e24a00f9473bb14c47248810" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setText</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1ab1fe6f159b1937786b4c070c682220f9" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>setTextIcon</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a73ffd499fceaacd59b518a541ed2133e" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>show</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a84526a179ce84ac76f694927cddff8f1" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>type</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a6e4733ecf2b4e5e44cd8206af9bdc671" prot="public" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>unCheck</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a66d234282238e25ef245d64d087be8d8" prot="protected" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>unLoadGPU</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::CheckboxHUD</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_frame_buffer_object_1a52386b04787e7e8b9ca5eab11ef744b4" prot="public" virt="virtual"><scope>njli::CheckboxHUD</scope><name>~AbstractFrameBufferObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_checkbox_h_u_d_1a455334383e0cadeeaa1c09752064ec67" prot="protected" virt="virtual"><scope>njli::CheckboxHUD</scope><name>~CheckboxHUD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

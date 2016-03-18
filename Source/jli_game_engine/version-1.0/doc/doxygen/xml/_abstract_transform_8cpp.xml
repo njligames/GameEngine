@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_abstract_transform_8cpp" kind="file">
+    <compoundname>AbstractTransform.cpp</compoundname>
+    <includes refid="_abstract_transform_8h" local="yes">AbstractTransform.h</includes>
+    <includes local="yes">btTransform.h</includes>
+    <includes local="yes">btQuaternion.h</includes>
+    <includes local="yes">btVector3.h</includes>
+    <includes local="yes">btVector2.h</includes>
+    <includes refid="_util_8h" local="yes">Util.h</includes>
+    <incdepgraph>
+      <node id="21661">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp</label>
+        <link refid="AbstractTransform.cpp"/>
+        <childnode refid="21662" relation="include">
+        </childnode>
+        <childnode refid="21668" relation="include">
+        </childnode>
+        <childnode refid="21669" relation="include">
+        </childnode>
+        <childnode refid="21670" relation="include">
+        </childnode>
+        <childnode refid="21671" relation="include">
+        </childnode>
+        <childnode refid="21663" relation="include">
+        </childnode>
+      </node>
+      <node id="21664">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="21665" relation="include">
+        </childnode>
+      </node>
+      <node id="21671">
+        <label>btVector2.h</label>
+      </node>
+      <node id="21663">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="21664" relation="include">
+        </childnode>
+        <childnode refid="21666" relation="include">
+        </childnode>
+        <childnode refid="21667" relation="include">
+        </childnode>
+      </node>
+      <node id="21666">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21670">
+        <label>btVector3.h</label>
+      </node>
+      <node id="21662">
+        <label>AbstractTransform.h</label>
+        <link refid="_abstract_transform_8h"/>
+        <childnode refid="21663" relation="include">
+        </childnode>
+      </node>
+      <node id="21669">
+        <label>btQuaternion.h</label>
+      </node>
+      <node id="21668">
+        <label>btTransform.h</label>
+      </node>
+      <node id="21665">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="21667">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>AbstractTransform.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>12/21/14.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_transform_8h" kindref="compound">AbstractTransform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btTransform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btQuaternion.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btVector3.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btVector2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_util_8h" kindref="compound">Util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1ae81766ce7baa95743ad256dfab13a086" kindref="member">AbstractTransform::AbstractTransform</ref>():</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>m_WorldTransform(new<sp/>btTransform(btTransform::getIdentity())),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Orientation(new<sp/>btQuaternion(btQuaternion::getIdentity())),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Pivot(new<sp/>btTransform(btTransform::getIdentity()))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1ae81766ce7baa95743ad256dfab13a086" kindref="member">AbstractTransform::AbstractTransform</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AbstractTransform<sp/>&amp;copy):</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>m_WorldTransform(new<sp/>btTransform(*copy.m_WorldTransform)),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Orientation(new<sp/>btQuaternion(*copy.m_Orientation)),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>m_Pivot(new<sp/>btTransform(*copy.m_Pivot))</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1af9f17c8a7ac8a2aafaf7742c50fb5bb5" kindref="member">AbstractTransform::~AbstractTransform</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a6c1eda10f9fa9bd340e3b1a560f3954a" kindref="member">m_Pivot</ref>;<ref refid="classnjli_1_1_abstract_transform_1a6c1eda10f9fa9bd340e3b1a560f3954a" kindref="member">m_Pivot</ref><sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1ab86688491ad0a42d93ebf4242a12c17e" kindref="member">m_Orientation</ref>;<ref refid="classnjli_1_1_abstract_transform_1ab86688491ad0a42d93ebf4242a12c17e" kindref="member">m_Orientation</ref><sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>;<ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref><sp/>=<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>AbstractTransform<sp/>&amp;<ref refid="classnjli_1_1_abstract_transform_1ae9d36f8d695542afbe19b9cf20426e3f" kindref="member">AbstractTransform::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AbstractTransform<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref><sp/>=<sp/>*rhs.m_WorldTransform;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>btTransform<sp/>&amp;<ref refid="classnjli_1_1_abstract_transform_1a55d3af659fe71a8b6be70875a2557a57" kindref="member">AbstractTransform::getTransform</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="50"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a2c2a2edb25e1d978ffe2d3979a2012b1" kindref="member">AbstractTransform::setTransform</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btTransform<sp/>&amp;transform)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref><sp/>=<sp/>transform;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3<sp/>&amp;<ref refid="classnjli_1_1_abstract_transform_1af834762b8dda517f47b5e9135160fa3c" kindref="member">AbstractTransform::getOrigin</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="60"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>-&gt;getOrigin();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a84e65d2fc93ada77417e577ff0b1bd30" kindref="member">AbstractTransform::setOrigin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3<sp/>&amp;origin)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>-&gt;setOrigin(origin);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a84e65d2fc93ada77417e577ff0b1bd30" kindref="member">AbstractTransform::setOrigin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2<sp/>&amp;origin)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector3<sp/>v<sp/>=<sp/><ref refid="classnjli_1_1_abstract_transform_1af834762b8dda517f47b5e9135160fa3c" kindref="member">getOrigin</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1a84e65d2fc93ada77417e577ff0b1bd30" kindref="member">setOrigin</ref>(btVector3(origin.x(),<sp/>origin.y(),<sp/>v.z()));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>btQuaternion<sp/><ref refid="classnjli_1_1_abstract_transform_1a35cbde52ea7f047bf4738dbf90ab6967" kindref="member">AbstractTransform::getRotation</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="76"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>-&gt;getRotation();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a6a21cef934dc0d075fe1f70cceafe4cb" kindref="member">AbstractTransform::setRotation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btQuaternion<sp/>&amp;rotation)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>-&gt;setRotation(rotation);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3<sp/><ref refid="classnjli_1_1_abstract_transform_1a1cbc7b5d3fcccb60be0c15739b044178" kindref="member">AbstractTransform::getEulerAngles</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="86"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>x,<sp/>y,<sp/>z;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>-&gt;getBasis().getEulerYPR(x,<sp/>y,<sp/>z);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector3<sp/>v(x,y,z);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1abd9b461c56bf979fd3853d482636eede" kindref="member">AbstractTransform::setEulerAngles</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3<sp/>&amp;angles)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1a90ca5d67abcb0a5ea1e3c3554c9f8e0e" kindref="member">m_WorldTransform</ref>-&gt;getBasis().setEulerYPR(angles.x(),<sp/>angles.y(),<sp/>angles.z());</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>btQuaternion<sp/>&amp;<ref refid="classnjli_1_1_abstract_transform_1a9443e0ab496e5e8fa6614fab2b67e1b8" kindref="member">AbstractTransform::getOrientation</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="101"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_abstract_transform_1ab86688491ad0a42d93ebf4242a12c17e" kindref="member">m_Orientation</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1a8668e1e13020412115e65b7e50176262" kindref="member">AbstractTransform::setOrientation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btQuaternion<sp/>&amp;orientation)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_abstract_transform_1ab86688491ad0a42d93ebf4242a12c17e" kindref="member">m_Orientation</ref><sp/>=<sp/>orientation;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>btVector3<sp/><ref refid="classnjli_1_1_abstract_transform_1ab294f0ef2bd997d2c01dfbef717a6b0d" kindref="member">AbstractTransform::getScale</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="111"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btTransform<sp/>trans(<ref refid="classnjli_1_1_abstract_transform_1a25e1a5d3daf3c0c5839915f33e37e51a" kindref="member">getWorldTransform</ref>());</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btVector3<sp/>t(trans.getBasis().getColumn(0).length(),</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trans.getBasis().getColumn(0).length(),</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trans.getBasis().getColumn(0).length());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1afcb4d785570c651f7765519eebff88f7" kindref="member">AbstractTransform::setScale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector3<sp/>&amp;scale)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1a55d3af659fe71a8b6be70875a2557a57" kindref="member">getTransform</ref>().setBasis(<ref refid="classnjli_1_1_abstract_transform_1a55d3af659fe71a8b6be70875a2557a57" kindref="member">getTransform</ref>().getBasis().scaled(scale));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1afcb4d785570c651f7765519eebff88f7" kindref="member">AbstractTransform::setScale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/>scale)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_transform_1afcb4d785570c651f7765519eebff88f7" kindref="member">setScale</ref>(btVector3(scale,<sp/>scale,<sp/>scale));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>btTransform<sp/>&amp;<ref refid="classnjli_1_1_abstract_transform_1aff55af8cb19e941e1fe58c3e3acd2695" kindref="member">AbstractTransform::getPivot</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="130"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classnjli_1_1_abstract_transform_1a6c1eda10f9fa9bd340e3b1a560f3954a" kindref="member">m_Pivot</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_transform_1ac58afc1596f3c95b941c03a0ca2a7d75" kindref="member">AbstractTransform::setPivot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btTransform<sp/>&amp;pivot)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classnjli_1_1_abstract_transform_1a6c1eda10f9fa9bd340e3b1a560f3954a" kindref="member">m_Pivot</ref><sp/>=<sp/>pivot;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractTransform.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_abstract_actionable" kind="class" prot="public">
+    <compoundname>njli::AbstractActionable</compoundname>
+    <derivedcompoundref refid="classnjli_1_1_node" prot="public" virt="non-virtual">njli::Node</derivedcompoundref>
+    <includes refid="_abstract_actionable_8h" local="no">AbstractActionable.h</includes>
+    <innerclass refid="structnjli_1_1_abstract_actionable_1_1_actionable_action" prot="private">njli::AbstractActionable::ActionableAction</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_abstract_actionable_1ab26c1fab1197b15bb2ecc21c4ac03463" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structnjli_1_1_abstract_actionable_1_1_actionable_action" kindref="compound">ActionableAction</ref> * &gt;</type>
+        <definition>std::vector&lt;ActionableAction*&gt; njli::AbstractActionable::m_Actions</definition>
+        <argsstring></argsstring>
+        <name>m_Actions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="98" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_abstract_actionable_1ae1df3f83b726e71662f560cee9b273ed" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; <ref refid="structnjli_1_1_abstract_actionable_1_1_actionable_action" kindref="compound">ActionableAction</ref> * &gt;</type>
+        <definition>std::queue&lt;ActionableAction*&gt; njli::AbstractActionable::m_ActionMemoryQueue</definition>
+        <argsstring></argsstring>
+        <name>m_ActionMemoryQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="99" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a14bdb9bfc024571d6989763629625949" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractActionable::AbstractActionable</definition>
+        <argsstring>()</argsstring>
+        <name>AbstractActionable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="30" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a18dc6c2833ee933c1bd7bd61100452ae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::AbstractActionable::~AbstractActionable</definition>
+        <argsstring>()</argsstring>
+        <name>~AbstractActionable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="36" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="27" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1abf6aa72a4d7b646f14fe2f05c56a8813" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractActionable::update</definition>
+        <argsstring>(f32 timeStep)</argsstring>
+        <name>update</name>
+        <reimplementedby refid="classnjli_1_1_node_1a3eb1db3aa2681e4acaf3e9e95fd01e69">update</reimplementedby>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="85" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="112" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a9df58912375974fd1e5da088e4d4225d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractActionable::getAllActionNames</definition>
+        <argsstring>(std::vector&lt; std::string &gt; &amp;actionNames)</argsstring>
+        <name>getAllActionNames</name>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>actionNames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="86" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="143" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1aa4773ce9842af5e721fb06b64283f0de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractActionable::runAction</definition>
+        <argsstring>(Action *action, bool callCompletionFunction=false)</argsstring>
+        <name>runAction</name>
+        <reimplementedby refid="classnjli_1_1_node_1a39032af457e76ea7121332a4d3ce63a3">runAction</reimplementedby>
+        <param>
+          <type><ref refid="classnjli_1_1_action" kindref="compound">Action</ref> *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>callCompletionFunction</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#action description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callCompletionFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#callCompletionFunction description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="44" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1adb3a9cb006b18f67f500f52e6a40b5a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractActionable::runAction</definition>
+        <argsstring>(Action *action, const char *key, bool callCompletionFunction=false)</argsstring>
+        <name>runAction</name>
+        <reimplementedby refid="classnjli_1_1_node_1a66eab09b1b7abdf92653ba60dcad6e46">runAction</reimplementedby>
+        <param>
+          <type><ref refid="classnjli_1_1_action" kindref="compound">Action</ref> *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>callCompletionFunction</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#action description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callCompletionFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#callCompletionFunction description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="52" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="51" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a56a311d63b3309d910f134238c4b9f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_action" kindref="compound">Action</ref> *</type>
+        <definition>Action * njli::AbstractActionable::getAction</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>getAction</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="61" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="69" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a19d340355f22865e2e40c2b597556b80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractActionable::hasActions</definition>
+        <argsstring>() const </argsstring>
+        <name>hasActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="68" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1ada32a60390e3ef8582f209a65c24bad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool njli::AbstractActionable::removeAction</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>removeAction</name>
+        <reimplementedby refid="classnjli_1_1_node_1a555087d31d3756bdae7dd85f1042c145">removeAction</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#key description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="77" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="88" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1ac8d68d9e3f34d70d05ad6e5704152e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::AbstractActionable::removeAllActions</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllActions</name>
+        <reimplementedby refid="classnjli_1_1_node_1a0e1da463c8453dc1086a473cff4f9830">removeAllActions</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="82" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp" bodystart="104" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a7674886976b87af3bfa33ad030268e3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::AbstractActionable::AbstractActionable</definition>
+        <argsstring>(const AbstractActionable &amp;copy)</argsstring>
+        <name>AbstractActionable</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_actionable" kindref="compound">AbstractActionable</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_abstract_actionable_1a0f09166a53c6d1b5652ad268fcdfcb46" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_abstract_actionable" kindref="compound">AbstractActionable</ref> &amp;</type>
+        <definition>AbstractActionable&amp; njli::AbstractActionable::operator=</definition>
+        <argsstring>(const AbstractActionable &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_actionable" kindref="compound">AbstractActionable</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="89" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;#Description#&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2229">
+        <label>njli::AbstractActionable</label>
+        <link refid="classnjli_1_1_abstract_actionable"/>
+      </node>
+      <node id="2230">
+        <label>njli::Node</label>
+        <link refid="classnjli_1_1_node"/>
+        <childnode refid="2229" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" line="25" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.h" bodystart="24" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_actionable_1a14bdb9bfc024571d6989763629625949" prot="protected" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>AbstractActionable</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1a7674886976b87af3bfa33ad030268e3e" prot="private" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>AbstractActionable</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1a56a311d63b3309d910f134238c4b9f6c" prot="public" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>getAction</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1a9df58912375974fd1e5da088e4d4225d" prot="protected" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>getAllActionNames</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1a19d340355f22865e2e40c2b597556b80" prot="public" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>hasActions</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1ae1df3f83b726e71662f560cee9b273ed" prot="private" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>m_ActionMemoryQueue</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1ab26c1fab1197b15bb2ecc21c4ac03463" prot="private" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>m_Actions</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1a0f09166a53c6d1b5652ad268fcdfcb46" prot="private" virt="non-virtual"><scope>njli::AbstractActionable</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1ada32a60390e3ef8582f209a65c24bad2" prot="public" virt="virtual"><scope>njli::AbstractActionable</scope><name>removeAction</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1ac8d68d9e3f34d70d05ad6e5704152e6d" prot="public" virt="virtual"><scope>njli::AbstractActionable</scope><name>removeAllActions</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1aa4773ce9842af5e721fb06b64283f0de" prot="public" virt="virtual"><scope>njli::AbstractActionable</scope><name>runAction</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1adb3a9cb006b18f67f500f52e6a40b5a0" prot="public" virt="virtual"><scope>njli::AbstractActionable</scope><name>runAction</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1abf6aa72a4d7b646f14fe2f05c56a8813" prot="protected" virt="virtual"><scope>njli::AbstractActionable</scope><name>update</name></member>
+      <member refid="classnjli_1_1_abstract_actionable_1a18dc6c2833ee933c1bd7bd61100452ae" prot="protected" virt="virtual"><scope>njli::AbstractActionable</scope><name>~AbstractActionable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structnjli_1_1_occlusion_buffer" kind="struct" prot="public">
+    <compoundname>njli::OcclusionBuffer</compoundname>
+    <innerclass refid="structnjli_1_1_occlusion_buffer_1_1_query_o_c_l" prot="public">njli::OcclusionBuffer::QueryOCL</innerclass>
+    <innerclass refid="structnjli_1_1_occlusion_buffer_1_1_write_o_c_l" prot="public">njli::OcclusionBuffer::WriteOCL</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1a192a9715d6ef9dd8a4ddd55e1d0ed564" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::OcclusionBuffer::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="628" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="628" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1a428eb582ed4be5fe850351fe5c2c14c1" prot="public" static="no" mutable="no">
+        <type>btAlignedObjectArray&lt; btScalar &gt;</type>
+        <definition>btAlignedObjectArray&lt;btScalar&gt; njli::OcclusionBuffer::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="629" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1a5a6e5183f8636fcbb3ef0449d5a43860" prot="public" static="no" mutable="no">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::OcclusionBuffer::sizes[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>sizes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="630" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="630" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1afd1f26c34a1424cfa03c5248b24c814f" prot="public" static="no" mutable="no">
+        <type>btScalar</type>
+        <definition>btScalar njli::OcclusionBuffer::scales[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>scales</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="631" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1a9d82d976e09ed8aa7a0807f3d6be6b34" prot="public" static="no" mutable="no">
+        <type>btScalar</type>
+        <definition>btScalar njli::OcclusionBuffer::offsets[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>offsets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="632" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="632" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1a80974fee2f24b000a5a64a713f7b47f7" prot="public" static="no" mutable="no">
+        <type>btScalar</type>
+        <definition>btScalar njli::OcclusionBuffer::wtrs[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>wtrs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="633" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1ab10ac684ab2b0f68b1a0f202a10a51ec" prot="public" static="no" mutable="no">
+        <type>btVector3</type>
+        <definition>btVector3 njli::OcclusionBuffer::eye</definition>
+        <argsstring></argsstring>
+        <name>eye</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="634" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="634" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1ac4de00259981e2c422b1fc43bd089f81" prot="public" static="no" mutable="no">
+        <type>btVector3</type>
+        <definition>btVector3 njli::OcclusionBuffer::neardist</definition>
+        <argsstring></argsstring>
+        <name>neardist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="635" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1a4ecd2b4e006dda08d06e57687593521c" prot="public" static="no" mutable="no">
+        <type>btScalar</type>
+        <definition>btScalar njli::OcclusionBuffer::ocarea</definition>
+        <argsstring></argsstring>
+        <name>ocarea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="636" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1accda56d326ca223fcb669384b48d2a35" prot="public" static="no" mutable="no">
+        <type>btScalar</type>
+        <definition>btScalar njli::OcclusionBuffer::qrarea</definition>
+        <argsstring></argsstring>
+        <name>qrarea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="637" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="637" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnjli_1_1_occlusion_buffer_1aca6d3c4c3850b0761557365018d04339" prot="public" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* njli::OcclusionBuffer::m_Camera</definition>
+        <argsstring></argsstring>
+        <name>m_Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="638" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a170bb1b85f0c4fb657937ef350ddfa84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::setCamera</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>setCamera</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="640" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="640" bodyend="643"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1adc6f298fe68f57412b3e65e0e6913e08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>njli::OcclusionBuffer::OcclusionBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>OcclusionBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="644" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="644" bodyend="651"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a931f89dd74da1dab476ec4a7ab4e3fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::setup</definition>
+        <argsstring>(s32 w, s32 h)</argsstring>
+        <name>setup</name>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="652" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="652" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1abc49c9937ac6b244543ceaeda5fadeb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="664" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="664" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a8d4767aec8d1f2415643f661c146c9b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="669" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="669" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a30511465775b6465cff5f6009fe02ebd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>btVector4</type>
+        <definition>btVector4 njli::OcclusionBuffer::transform</definition>
+        <argsstring>(const btVector3 &amp;x) const </argsstring>
+        <name>transform</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="684" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="684" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a135f9a5caf62f225a3777c34b915dd90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename POLICY</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool njli::OcclusionBuffer::draw</definition>
+        <argsstring>(const btVector4 &amp;a, const btVector4 &amp;b, const btVector4 &amp;c, const btScalar minarea)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const btScalar</type>
+          <declname>minarea</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="738" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="738" bodyend="793"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1ab31154dadf4a0d72674e0fa381fccf40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>const <ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+            <declname>NP</declname>
+            <defname>NP</defname>
+          </param>
+          <param>
+            <type>typename POLICY</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool njli::OcclusionBuffer::clipDraw</definition>
+        <argsstring>(const btVector4 *p, btScalar minarea)</argsstring>
+        <name>clipDraw</name>
+        <param>
+          <type>const btVector4 *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>btScalar</type>
+          <declname>minarea</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="795" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="795" bodyend="807"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a4d7e112ac0b84a59a44b167f90098275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::appendOccluder</definition>
+        <argsstring>(const btVector3 &amp;a, const btVector3 &amp;b, const btVector3 &amp;c)</argsstring>
+        <name>appendOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="808" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="808" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1ad964dc40d8638b46e7241617af9b4fc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::appendOccluder</definition>
+        <argsstring>(const btVector3 &amp;a, const btVector3 &amp;b, const btVector3 &amp;c, const btVector3 &amp;d)</argsstring>
+        <name>appendOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="815" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="815" bodyend="822"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a731287246bbbe3593a76c92d1ab47b44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::appendOccluder</definition>
+        <argsstring>(const btVector3 &amp;c, const btVector3 &amp;e)</argsstring>
+        <name>appendOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="823" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="823" bodyend="848"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a965ff058968e517244baba6594d47c8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::OcclusionBuffer::appendOccluder</definition>
+        <argsstring>(const btVector3 &amp;occluderInnerBoxCollisionShapeHalfExtent, const btTransform &amp;collisionObjectWorldTransform)</argsstring>
+        <name>appendOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>occluderInnerBoxCollisionShapeHalfExtent</declname>
+        </param>
+        <param>
+          <type>const btTransform &amp;</type>
+          <declname>collisionObjectWorldTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="849" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="849" bodyend="877"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a2854e6d1a4cd88e7c7a2d7bb3aa5352a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::OcclusionBuffer::queryOccluder</definition>
+        <argsstring>(const btVector3 &amp;a, const btVector3 &amp;b, const btVector3 &amp;c)</argsstring>
+        <name>queryOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="878" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="878" bodyend="884"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a8aef5d2db01a73bc492f394f31ff53f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::OcclusionBuffer::queryOccluder</definition>
+        <argsstring>(const btVector3 &amp;a, const btVector3 &amp;b, const btVector3 &amp;c, const btVector3 &amp;d)</argsstring>
+        <name>queryOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="885" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="885" bodyend="892"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a6d75072407aab547560fb4118d4fcaf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::OcclusionBuffer::queryOccluder</definition>
+        <argsstring>(const btVector3 &amp;c, const btVector3 &amp;e)</argsstring>
+        <name>queryOccluder</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="893" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="893" bodyend="923"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1aeeb65fa2cf1af158214fa72c0b3fab60" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool njli::OcclusionBuffer::project</definition>
+        <argsstring>(btVector4 *p, s32 n)</argsstring>
+        <name>project</name>
+        <param>
+          <type>btVector4 *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="693" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="693" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="structnjli_1_1_occlusion_buffer_1a0ddff9ee16d2fd2e8c7732887242df2b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>const <ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+            <declname>NP</declname>
+            <defname>NP</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>static s32 njli::OcclusionBuffer::clip</definition>
+        <argsstring>(const btVector4 *pi, btVector4 *po)</argsstring>
+        <name>clip</name>
+        <param>
+          <type>const btVector4 *</type>
+          <declname>pi</declname>
+        </param>
+        <param>
+          <type>btVector4 *</type>
+          <declname>po</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="704" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="704" bodyend="736"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3253">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3254" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3255">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="3255" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3257">
+        <label>btDbvt::ICollide</label>
+      </node>
+      <node id="3254">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3251">
+        <label>njli::OcclusionBuffer</label>
+        <link refid="structnjli_1_1_occlusion_buffer"/>
+        <childnode refid="3252" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="3256">
+        <label>njli::SceneRenderer</label>
+        <link refid="classnjli_1_1_scene_renderer"/>
+        <childnode refid="3257" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3251" relation="usage">
+          <edgelabel>m_ocb</edgelabel>
+        </childnode>
+        <childnode refid="3252" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="3252">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="3253" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3251" relation="usage">
+          <edgelabel>m_OcclusionBuffer</edgelabel>
+        </childnode>
+        <childnode refid="3256" relation="usage">
+          <edgelabel>m_SceneRenderer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" line="619" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp" bodystart="618" bodyend="925"/>
+    <listofallmembers>
+      <member refid="structnjli_1_1_occlusion_buffer_1a4d7e112ac0b84a59a44b167f90098275" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>appendOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1ad964dc40d8638b46e7241617af9b4fc2" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>appendOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a731287246bbbe3593a76c92d1ab47b44" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>appendOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a965ff058968e517244baba6594d47c8c" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>appendOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a428eb582ed4be5fe850351fe5c2c14c1" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>buffer</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1abc49c9937ac6b244543ceaeda5fadeb2" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>clear</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a0ddff9ee16d2fd2e8c7732887242df2b" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>clip</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1ab31154dadf4a0d72674e0fa381fccf40" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>clipDraw</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a135f9a5caf62f225a3777c34b915dd90" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>draw</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1ab10ac684ab2b0f68b1a0f202a10a51ec" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>eye</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a8d4767aec8d1f2415643f661c146c9b5" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>initialize</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a192a9715d6ef9dd8a4ddd55e1d0ed564" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>initialized</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1aca6d3c4c3850b0761557365018d04339" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>m_Camera</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1ac4de00259981e2c422b1fc43bd089f81" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>neardist</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a4ecd2b4e006dda08d06e57687593521c" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>ocarea</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1adc6f298fe68f57412b3e65e0e6913e08" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>OcclusionBuffer</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a9d82d976e09ed8aa7a0807f3d6be6b34" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>offsets</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1aeeb65fa2cf1af158214fa72c0b3fab60" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>project</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1accda56d326ca223fcb669384b48d2a35" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>qrarea</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a2854e6d1a4cd88e7c7a2d7bb3aa5352a" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>queryOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a8aef5d2db01a73bc492f394f31ff53f5" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>queryOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a6d75072407aab547560fb4118d4fcaf6" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>queryOccluder</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1afd1f26c34a1424cfa03c5248b24c814f" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>scales</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a170bb1b85f0c4fb657937ef350ddfa84" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>setCamera</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a931f89dd74da1dab476ec4a7ab4e3fe7" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>setup</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a5a6e5183f8636fcbb3ef0449d5a43860" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>sizes</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a30511465775b6465cff5f6009fe02ebd" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>transform</name></member>
+      <member refid="structnjli_1_1_occlusion_buffer_1a80974fee2f24b000a5a64a713f7b47f7" prot="public" virt="non-virtual"><scope>njli::OcclusionBuffer</scope><name>wtrs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

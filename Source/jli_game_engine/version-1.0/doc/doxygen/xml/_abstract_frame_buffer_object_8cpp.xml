@@ -1,0 +1,792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_abstract_frame_buffer_object_8cpp" kind="file">
+    <compoundname>AbstractFrameBufferObject.cpp</compoundname>
+    <includes refid="_abstract_frame_buffer_object_8h" local="yes">AbstractFrameBufferObject.h</includes>
+    <includes local="yes">GLPlatform.h</includes>
+    <includes refid="_camera_8h" local="yes">Camera.h</includes>
+    <includes refid="_world_8h" local="yes">World.h</includes>
+    <includes refid="_world_h_u_d_8h" local="yes">WorldHUD.h</includes>
+    <incdepgraph>
+      <node id="31372">
+        <label>btIDebugDraw.h</label>
+      </node>
+      <node id="31343">
+        <label>lua.hpp</label>
+      </node>
+      <node id="31350">
+        <label>WorldLuaVirtualMachine.h</label>
+        <link refid="_world_lua_virtual_machine_8h"/>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+        <childnode refid="31351" relation="include">
+        </childnode>
+        <childnode refid="31353" relation="include">
+        </childnode>
+        <childnode refid="31356" relation="include">
+        </childnode>
+        <childnode refid="31358" relation="include">
+        </childnode>
+        <childnode refid="31359" relation="include">
+        </childnode>
+        <childnode refid="31360" relation="include">
+        </childnode>
+        <childnode refid="31361" relation="include">
+        </childnode>
+        <childnode refid="31362" relation="include">
+        </childnode>
+        <childnode refid="31334" relation="include">
+        </childnode>
+      </node>
+      <node id="31331">
+        <label>Camera.h</label>
+        <link refid="_camera_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+        <childnode refid="31342" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+      </node>
+      <node id="31326">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="31327" relation="include">
+        </childnode>
+      </node>
+      <node id="31379">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="31337">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31349">
+        <label>queue</label>
+      </node>
+      <node id="31366">
+        <label>WorldClock.h</label>
+        <link refid="_world_clock_8h"/>
+        <childnode refid="31367" relation="include">
+        </childnode>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31368" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31355">
+        <label>btVector2.h</label>
+      </node>
+      <node id="31325">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="31326" relation="include">
+        </childnode>
+        <childnode refid="31328" relation="include">
+        </childnode>
+        <childnode refid="31329" relation="include">
+        </childnode>
+      </node>
+      <node id="31363">
+        <label>WorldSQLite.h</label>
+        <link refid="_world_s_q_lite_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31364" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31351">
+        <label>AbstractState.h</label>
+        <link refid="_abstract_state_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31352" relation="include">
+        </childnode>
+        <childnode refid="31328" relation="include">
+        </childnode>
+      </node>
+      <node id="31328">
+        <label>stdlib.h</label>
+      </node>
+      <node id="31354">
+        <label>DeviceInputTime.h</label>
+        <link refid="_device_input_time_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+      </node>
+      <node id="31383">
+        <label>btQuickprof.h</label>
+      </node>
+      <node id="31374">
+        <label>File.h</label>
+        <link refid="_file_8h"/>
+        <childnode refid="31327" relation="include">
+        </childnode>
+        <childnode refid="31329" relation="include">
+        </childnode>
+        <childnode refid="31328" relation="include">
+        </childnode>
+      </node>
+      <node id="31373">
+        <label>WorldHUD.h</label>
+        <link refid="_world_h_u_d_8h"/>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31374" relation="include">
+        </childnode>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31375" relation="include">
+        </childnode>
+        <childnode refid="31324" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+        <childnode refid="31334" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+      </node>
+      <node id="31370">
+        <label>Geometry.h</label>
+        <link refid="_geometry_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+        <childnode refid="31371" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31355" relation="include">
+        </childnode>
+        <childnode refid="31342" relation="include">
+        </childnode>
+      </node>
+      <node id="31367">
+        <label>AbstractClock.h</label>
+        <link refid="_abstract_clock_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31336">
+        <label>string</label>
+      </node>
+      <node id="31358">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31334" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+      </node>
+      <node id="31353">
+        <label>DeviceTouch.h</label>
+        <link refid="_device_touch_8h"/>
+        <childnode refid="31354" relation="include">
+        </childnode>
+        <childnode refid="31355" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31348">
+        <label>map</label>
+      </node>
+      <node id="31356">
+        <label>Node.h</label>
+        <link refid="_node_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31357" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+        <childnode refid="31355" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31380">
+        <label>WorldState.h</label>
+        <link refid="_world_state_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31351" relation="include">
+        </childnode>
+        <childnode refid="31353" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+      </node>
+      <node id="31342">
+        <label>btVector3.h</label>
+      </node>
+      <node id="31334">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="31362">
+        <label>PhysicsRayContact.h</label>
+        <link refid="_physics_ray_contact_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+      </node>
+      <node id="31364">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="31332">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31339" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31323">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractFrameBufferObject.cpp</label>
+        <link refid="AbstractFrameBufferObject.cpp"/>
+        <childnode refid="31324" relation="include">
+        </childnode>
+        <childnode refid="31330" relation="include">
+        </childnode>
+        <childnode refid="31331" relation="include">
+        </childnode>
+        <childnode refid="31344" relation="include">
+        </childnode>
+        <childnode refid="31373" relation="include">
+        </childnode>
+      </node>
+      <node id="31339">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="31341">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="31369">
+        <label>WorldDebugDrawer.h</label>
+        <link refid="_world_debug_drawer_8h"/>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31370" relation="include">
+        </childnode>
+        <childnode refid="31372" relation="include">
+        </childnode>
+      </node>
+      <node id="31368">
+        <label>btClock.h</label>
+      </node>
+      <node id="31378">
+        <label>WorldSocket.h</label>
+        <link refid="_world_socket_8h"/>
+        <childnode refid="31379" relation="include">
+        </childnode>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31349" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31374" relation="include">
+        </childnode>
+      </node>
+      <node id="31330">
+        <label>GLPlatform.h</label>
+      </node>
+      <node id="31346">
+        <label>WorldFactory.h</label>
+        <link refid="_world_factory_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31334" relation="include">
+        </childnode>
+        <childnode refid="31347" relation="include">
+        </childnode>
+        <childnode refid="31339" relation="include">
+        </childnode>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31348" relation="include">
+        </childnode>
+        <childnode refid="31349" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+      </node>
+      <node id="31360">
+        <label>btManifoldPoint.h</label>
+      </node>
+      <node id="31352">
+        <label>btScalar.h</label>
+      </node>
+      <node id="31371">
+        <label>bitset</label>
+      </node>
+      <node id="31357">
+        <label>AbstractActionable.h</label>
+        <link refid="_abstract_actionable_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31349" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+      </node>
+      <node id="31347">
+        <label>btHashMap.h</label>
+      </node>
+      <node id="31338">
+        <label>vector</label>
+      </node>
+      <node id="31376">
+        <label>WorldInput.h</label>
+        <link refid="_world_input_8h"/>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31359">
+        <label>btDispatcher.h</label>
+      </node>
+      <node id="31335">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+        <childnode refid="31337" relation="include">
+        </childnode>
+      </node>
+      <node id="31340">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31341" relation="include">
+        </childnode>
+      </node>
+      <node id="31324">
+        <label>AbstractFrameBufferObject.h</label>
+        <link refid="_abstract_frame_buffer_object_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+      </node>
+      <node id="31381">
+        <label>WorldStateMachine.h</label>
+        <link refid="_world_state_machine_8h"/>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31382" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+      </node>
+      <node id="31345">
+        <label>cstddef</label>
+      </node>
+      <node id="31344">
+        <label>World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31345" relation="include">
+        </childnode>
+        <childnode refid="31346" relation="include">
+        </childnode>
+        <childnode refid="31350" relation="include">
+        </childnode>
+        <childnode refid="31363" relation="include">
+        </childnode>
+        <childnode refid="31365" relation="include">
+        </childnode>
+        <childnode refid="31331" relation="include">
+        </childnode>
+        <childnode refid="31366" relation="include">
+        </childnode>
+        <childnode refid="31369" relation="include">
+        </childnode>
+        <childnode refid="31373" relation="include">
+        </childnode>
+        <childnode refid="31376" relation="include">
+        </childnode>
+        <childnode refid="31377" relation="include">
+        </childnode>
+        <childnode refid="31378" relation="include">
+        </childnode>
+        <childnode refid="31380" relation="include">
+        </childnode>
+        <childnode refid="31381" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31365">
+        <label>WorldSound.h</label>
+        <link refid="_world_sound_8h"/>
+        <childnode refid="31330" relation="include">
+        </childnode>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31336" relation="include">
+        </childnode>
+      </node>
+      <node id="31327">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="31375">
+        <label>nanovg.h</label>
+      </node>
+      <node id="31361">
+        <label>Action.h</label>
+        <link refid="_action_8h"/>
+        <childnode refid="31357" relation="include">
+        </childnode>
+        <childnode refid="31332" relation="include">
+        </childnode>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+        <childnode refid="31334" relation="include">
+        </childnode>
+        <childnode refid="31343" relation="include">
+        </childnode>
+        <childnode refid="31349" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+      </node>
+      <node id="31377">
+        <label>WorldResourceLoader.h</label>
+        <link refid="_world_resource_loader_8h"/>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31340" relation="include">
+        </childnode>
+        <childnode refid="31347" relation="include">
+        </childnode>
+        <childnode refid="31338" relation="include">
+        </childnode>
+      </node>
+      <node id="31329">
+        <label>stdio.h</label>
+      </node>
+      <node id="31333">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="31334" relation="include">
+        </childnode>
+        <childnode refid="31335" relation="include">
+        </childnode>
+        <childnode refid="31325" relation="include">
+        </childnode>
+        <childnode refid="31339" relation="include">
+        </childnode>
+      </node>
+      <node id="31382">
+        <label>AbstractStateMachine.h</label>
+        <link refid="_abstract_state_machine_8h"/>
+        <childnode refid="31333" relation="include">
+        </childnode>
+        <childnode refid="31351" relation="include">
+        </childnode>
+        <childnode refid="31383" relation="include">
+        </childnode>
+        <childnode refid="31349" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>AbstractFrameBufferObject.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>1/27/15.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_frame_buffer_object_8h" kindref="compound">AbstractFrameBufferObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GLPlatform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_camera_8h" kindref="compound">Camera.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_8h" kindref="compound">World.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_h_u_d_8h" kindref="compound">WorldHUD.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//http://blog.angusforbes.com/openglglsl-render-to-texture/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ac8d66ca8d605b2c45873fc4020c579ee" kindref="member">AbstractFrameBufferObject::AbstractFrameBufferObject</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>m_textureA(-1),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>m_textureB(-1),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>m_height(0),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>m_width(0),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>m_counter(0),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>m_frameBufferA(-1),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>m_frameBufferB(-1),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>m_stencilBufferA(-1),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>m_stencilBufferB(-1),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isHidden(false)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">njli::World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a40adfae9fbe51bb80879166d3f91acbf" kindref="member">getWorldHUD</ref>()-&gt;<ref refid="classnjli_1_1_world_h_u_d_1af9a191868f90ef56bcfabf2b9367264c" kindref="member">addFBO</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a52386b04787e7e8b9ca5eab11ef744b4" kindref="member">AbstractFrameBufferObject::~AbstractFrameBufferObject</ref>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" kindref="member">njli::World::getInstance</ref>()-&gt;<ref refid="classnjli_1_1_world_1a40adfae9fbe51bb80879166d3f91acbf" kindref="member">getWorldHUD</ref>()-&gt;<ref refid="classnjli_1_1_world_h_u_d_1a4baeb3d5641693f60c61f5b982cb159b" kindref="member">removeFBO</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a66d234282238e25ef245d64d087be8d8" kindref="member">unLoadGPU</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a85e419449efe44466d81f9502fca2c3e" kindref="member">AbstractFrameBufferObject::isLoadedGPU</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="42"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((<ref refid="classnjli_1_1_abstract_frame_buffer_object_1aed8941fa16af18e00f890ed6eadf67c4" kindref="member">m_frameBufferA</ref><sp/>!=<sp/>-1)<sp/>&amp;&amp;<sp/>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a69aab8142ecbbb43a3d4e43f3a8cfc2c" kindref="member">m_frameBufferB</ref><sp/>!=<sp/>-1)<sp/>&amp;&amp;<sp/>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a513f1d176292bb518491b174a57b74b1" kindref="member">m_textureA</ref><sp/>!=<sp/>-1)<sp/>&amp;&amp;<sp/>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a180636e09d0ea991b25b2e45ec06c1ea" kindref="member">m_textureB</ref><sp/>!=<sp/>-1));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacenjli_1a250589dfb52cb55a0cea374beb111622" kindref="member">createFBO</ref>(GLuint<sp/>&amp;frameBuffer,<sp/>GLuint<sp/>&amp;texColorBuffer,<sp/>GLuint<sp/>&amp;rboDepthStencil,<sp/>GLsizei<sp/>width,<sp/>GLsizei<sp/>height)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>begin<sp/>createFBO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>defaultFBO;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>defaultRBO;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_FRAMEBUFFER_BINDING,<sp/>&amp;defaultFBO);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_RENDERBUFFER_BINDING,<sp/>&amp;defaultRBO);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>frame<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenFramebuffers(1,<sp/>&amp;frameBuffer);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindFramebuffer(GL_FRAMEBUFFER,<sp/>frameBuffer);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>texture<sp/>to<sp/>hold<sp/>color<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenTextures(1,<sp/>&amp;texColorBuffer);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindTexture(GL_TEXTURE_2D,<sp/>texColorBuffer);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glTexImage2D(GL_TEXTURE_2D,<sp/>0,<sp/>GL_RGBA,<sp/>width,<sp/>height,<sp/>0,<sp/>GL_RGBA,<sp/>GL_UNSIGNED_BYTE,<sp/><ref refid="_abstract_state_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glTexParameteri(GL_TEXTURE_2D,<sp/>GL_TEXTURE_MIN_FILTER,<sp/>GL_LINEAR);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glTexParameteri(GL_TEXTURE_2D,<sp/>GL_TEXTURE_MAG_FILTER,<sp/>GL_LINEAR);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glFramebufferTexture2D(GL_FRAMEBUFFER,<sp/>GL_COLOR_ATTACHMENT0,<sp/>GL_TEXTURE_2D,<sp/>texColorBuffer,<sp/>0);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>Renderbuffer<sp/>Object<sp/>to<sp/>hold<sp/>depth<sp/>and<sp/>stencil<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenRenderbuffers(1,<sp/>&amp;rboDepthStencil);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindRenderbuffer(GL_RENDERBUFFER,<sp/>rboDepthStencil);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glRenderbufferStorage(GL_RENDERBUFFER,<sp/>GL_STENCIL_INDEX8,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glFramebufferRenderbuffer(GL_FRAMEBUFFER,<sp/>GL_STENCIL_ATTACHMENT,<sp/>GL_RENDERBUFFER,<sp/>rboDepthStencil);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindFramebuffer(GL_FRAMEBUFFER,<sp/>defaultFBO);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindRenderbuffer(GL_RENDERBUFFER,<sp/>defaultRBO);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>end<sp/>createFBO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a9fa4ab667a74a7a23b18ae3418e56f7d" kindref="member">AbstractFrameBufferObject::loadGPU</ref>(<ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>width,<sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>height)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a85e419449efe44466d81f9502fca2c3e" kindref="member">isLoadedGPU</ref>())</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a66d234282238e25ef245d64d087be8d8" kindref="member">unLoadGPU</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(width<sp/>&gt;<sp/>2048)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width<sp/>=<sp/>2048;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(height<sp/>&gt;<sp/>2048)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>height<sp/>=<sp/>2048;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa1664d2cb683746ddd76be458554c7bc" kindref="member">m_width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a192aef9e52e79eb705258273089a7721" kindref="member">m_height</ref><sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a250589dfb52cb55a0cea374beb111622" kindref="member">createFBO</ref>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1aed8941fa16af18e00f890ed6eadf67c4" kindref="member">m_frameBufferA</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a513f1d176292bb518491b174a57b74b1" kindref="member">m_textureA</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a16e27e78936b43b521f4a295b3bb26a3" kindref="member">m_stencilBufferA</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa1664d2cb683746ddd76be458554c7bc" kindref="member">m_width</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a192aef9e52e79eb705258273089a7721" kindref="member">m_height</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a250589dfb52cb55a0cea374beb111622" kindref="member">createFBO</ref>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a69aab8142ecbbb43a3d4e43f3a8cfc2c" kindref="member">m_frameBufferB</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a180636e09d0ea991b25b2e45ec06c1ea" kindref="member">m_textureB</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a5af08a294c714db024533f9f0fc0c521" kindref="member">m_stencilBufferB</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa1664d2cb683746ddd76be458554c7bc" kindref="member">m_width</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a192aef9e52e79eb705258273089a7721" kindref="member">m_height</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>a<sp/>counter<sp/>so<sp/>we<sp/>know<sp/>if<sp/>we<sp/>are<sp/>&quot;pinging&quot;<sp/>or<sp/>&quot;ponging&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(i.e.<sp/>if<sp/>counter<sp/>is<sp/>even<sp/>then<sp/>FBO<sp/>A<sp/>is<sp/>current,<sp/>if<sp/>odd,<sp/>FBO<sp/>B<sp/>is<sp/>current.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae58bffbd830c6b4f8c85d233a6ba4355" kindref="member">m_counter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ababe9973dc3593e158adf12033f66b71" kindref="member">AbstractFrameBufferObject::render</ref>(Camera<sp/>*camera)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>begin<sp/>render</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a85e419449efe44466d81f9502fca2c3e" kindref="member">isLoadedGPU</ref>())</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a9fa4ab667a74a7a23b18ae3418e56f7d" kindref="member">loadGPU</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>defaultFBO;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>defaultRBO;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_FRAMEBUFFER_BINDING,<sp/>&amp;defaultFBO);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_RENDERBUFFER_BINDING,<sp/>&amp;defaultRBO);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>viewPort[4]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_VIEWPORT,<sp/>viewPort);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae58bffbd830c6b4f8c85d233a6ba4355" kindref="member">m_counter</ref><sp/>%<sp/>2<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae5861927463cc57cdd8214a4b957a68d" kindref="member">renderInternal</ref>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1aed8941fa16af18e00f890ed6eadf67c4" kindref="member">m_frameBufferA</ref>,<sp/>camera);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae5861927463cc57cdd8214a4b957a68d" kindref="member">renderInternal</ref>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a69aab8142ecbbb43a3d4e43f3a8cfc2c" kindref="member">m_frameBufferB</ref>,<sp/>camera);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae58bffbd830c6b4f8c85d233a6ba4355" kindref="member">m_counter</ref>++;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(viewPort[0],<sp/>viewPort[1],<sp/>viewPort[2],<sp/>viewPort[3]);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindFramebuffer(GL_FRAMEBUFFER,<sp/>defaultFBO);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindRenderbuffer(GL_RENDERBUFFER,<sp/>defaultRBO);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>end<sp/>render</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a6a954c3ede9278ae901b68bbeccc86a5" kindref="member">AbstractFrameBufferObject::getTextureID</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="129"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae58bffbd830c6b4f8c85d233a6ba4355" kindref="member">m_counter</ref><sp/>%<sp/>2<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a180636e09d0ea991b25b2e45ec06c1ea" kindref="member">m_textureB</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a513f1d176292bb518491b174a57b74b1" kindref="member">m_textureA</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a66d234282238e25ef245d64d087be8d8" kindref="member">AbstractFrameBufferObject::unLoadGPU</ref>()</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>begin<sp/>unloadGPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a16e27e78936b43b521f4a295b3bb26a3" kindref="member">m_stencilBufferA</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteRenderbuffers(1,<sp/>&amp;<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a16e27e78936b43b521f4a295b3bb26a3" kindref="member">m_stencilBufferA</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a16e27e78936b43b521f4a295b3bb26a3" kindref="member">m_stencilBufferA</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a5af08a294c714db024533f9f0fc0c521" kindref="member">m_stencilBufferB</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteRenderbuffers(1,<sp/>&amp;<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a5af08a294c714db024533f9f0fc0c521" kindref="member">m_stencilBufferB</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a5af08a294c714db024533f9f0fc0c521" kindref="member">m_stencilBufferB</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1aed8941fa16af18e00f890ed6eadf67c4" kindref="member">m_frameBufferA</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteFramebuffers(1,<sp/>&amp;<ref refid="classnjli_1_1_abstract_frame_buffer_object_1aed8941fa16af18e00f890ed6eadf67c4" kindref="member">m_frameBufferA</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aed8941fa16af18e00f890ed6eadf67c4" kindref="member">m_frameBufferA</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a69aab8142ecbbb43a3d4e43f3a8cfc2c" kindref="member">m_frameBufferB</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteFramebuffers(1,<sp/>&amp;<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a69aab8142ecbbb43a3d4e43f3a8cfc2c" kindref="member">m_frameBufferB</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a69aab8142ecbbb43a3d4e43f3a8cfc2c" kindref="member">m_frameBufferB</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a513f1d176292bb518491b174a57b74b1" kindref="member">m_textureA</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteTextures(1,<sp/>&amp;<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a513f1d176292bb518491b174a57b74b1" kindref="member">m_textureA</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a513f1d176292bb518491b174a57b74b1" kindref="member">m_textureA</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a180636e09d0ea991b25b2e45ec06c1ea" kindref="member">m_textureB</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteTextures(1,<sp/>&amp;<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a180636e09d0ea991b25b2e45ec06c1ea" kindref="member">m_textureB</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a180636e09d0ea991b25b2e45ec06c1ea" kindref="member">m_textureB</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>end<sp/>unloadGPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa4ab66fbdcb04f1834d1dc05b4c7a10c" kindref="member">AbstractFrameBufferObject::getWidth</ref>()</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa1664d2cb683746ddd76be458554c7bc" kindref="member">m_width</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a95ae9779550ed7496011f859ec3d4766" kindref="member">AbstractFrameBufferObject::getHeight</ref>()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a192aef9e52e79eb705258273089a7721" kindref="member">m_height</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aded6f9fc4da10af752cf90a97aaa751d" kindref="member">AbstractFrameBufferObject::getAspectRatio</ref>()</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fabsf((<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>)<ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa4ab66fbdcb04f1834d1dc05b4c7a10c" kindref="member">getWidth</ref>()<sp/>/<sp/>(<ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref>)<ref refid="classnjli_1_1_abstract_frame_buffer_object_1a95ae9779550ed7496011f859ec3d4766" kindref="member">getHeight</ref>());</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a25ec8745d2c47f961fde39c6dc4e83aa" kindref="member">AbstractFrameBufferObject::isHidden</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="181"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a6046080b62350f10fc21c2ff4f9c5227" kindref="member">m_isHidden</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a5d7b8b3bc421084f282343e506a6d289" kindref="member">AbstractFrameBufferObject::hide</ref>()</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a6046080b62350f10fc21c2ff4f9c5227" kindref="member">m_isHidden</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a73ffd499fceaacd59b518a541ed2133e" kindref="member">AbstractFrameBufferObject::show</ref>()</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a6046080b62350f10fc21c2ff4f9c5227" kindref="member">m_isHidden</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1ae5861927463cc57cdd8214a4b957a68d" kindref="member">AbstractFrameBufferObject::renderInternal</ref>(<ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>fbo,<sp/>Camera<sp/>*camera)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>begin<sp/>renderInternal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bind<sp/>FBO<sp/>to<sp/>set<sp/>textureA<sp/>as<sp/>the<sp/>output<sp/>texture.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindFramebuffer(GL_FRAMEBUFFER,<sp/>fbo);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>the<sp/>viewport<sp/>to<sp/>be<sp/>the<sp/>size<sp/>of<sp/>the<sp/>texture</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(0,<sp/>0,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa1664d2cb683746ddd76be458554c7bc" kindref="member">m_width</ref>,<sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1a192aef9e52e79eb705258273089a7721" kindref="member">m_height</ref>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClearColor(0.0,<sp/>0.0,<sp/>0.0,<sp/>0.0);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>srcRGB,<sp/>dstRGB,<sp/>srcAlpha,<sp/>dstAlpha;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_BLEND_SRC_RGB,<sp/>&amp;srcRGB);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_BLEND_DST_RGB,<sp/>&amp;dstRGB);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_BLEND_SRC_ALPHA,<sp/>&amp;srcAlpha);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetIntegerv(GL_BLEND_DST_ALPHA,<sp/>&amp;dstAlpha);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendFuncSeparate(GL_SRC_ALPHA,<sp/>GL_ONE_MINUS_SRC_ALPHA,<sp/>GL_ONE,<sp/>GL_ONE_MINUS_SRC_ALPHA);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>the<sp/>ouput<sp/>texture</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClear<sp/>(<sp/>GL_COLOR_BUFFER_BIT<sp/>|<sp/>GL_DEPTH_BUFFER_BIT<sp/>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object_1aa75a537f5745e4be8f749892d195b43c" kindref="member">renderFunction</ref>(camera);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBlendFuncSeparate(srcRGB,<sp/>dstRGB,<sp/>srcAlpha,<sp/>dstAlpha);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//gl<sp/>end<sp/>renderInternal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractFrameBufferObject.cpp"/>
+  </compounddef>
+</doxygen>

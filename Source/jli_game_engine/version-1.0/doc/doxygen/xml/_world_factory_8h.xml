@@ -1,0 +1,1296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_world_factory_8h" kind="file">
+    <compoundname>WorldFactory.h</compoundname>
+    <includes refid="_util_8h" local="yes">Util.h</includes>
+    <includes local="yes">btAlignedObjectArray.h</includes>
+    <includes local="yes">btHashMap.h</includes>
+    <includes local="yes">btSerializer.h</includes>
+    <includes refid="_abstract_builder_8h" local="yes">AbstractBuilder.h</includes>
+    <includes refid="_abstract_factory_object_8h" local="yes">AbstractFactoryObject.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includedby refid="_world_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h</includedby>
+    <includedby refid="_j_l_i_engine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</includedby>
+    <includedby refid="_world_factory_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</includedby>
+    <includedby refid="_world_lua_virtual_machine_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</includedby>
+    <incdepgraph>
+      <node id="35104">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="35105" relation="include">
+        </childnode>
+      </node>
+      <node id="35115">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="35103" relation="include">
+        </childnode>
+        <childnode refid="35116" relation="include">
+        </childnode>
+        <childnode refid="35114" relation="include">
+        </childnode>
+      </node>
+      <node id="35118">
+        <label>queue</label>
+      </node>
+      <node id="35103">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="35104" relation="include">
+        </childnode>
+        <childnode refid="35106" relation="include">
+        </childnode>
+        <childnode refid="35107" relation="include">
+        </childnode>
+      </node>
+      <node id="35106">
+        <label>stdlib.h</label>
+      </node>
+      <node id="35114">
+        <label>string</label>
+      </node>
+      <node id="35117">
+        <label>map</label>
+      </node>
+      <node id="35108">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="35111">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="35112" relation="include">
+        </childnode>
+        <childnode refid="35103" relation="include">
+        </childnode>
+        <childnode refid="35110" relation="include">
+        </childnode>
+        <childnode refid="35114" relation="include">
+        </childnode>
+      </node>
+      <node id="35110">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="35120">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="35102">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.h</label>
+        <link refid="WorldFactory.h"/>
+        <childnode refid="35103" relation="include">
+        </childnode>
+        <childnode refid="35108" relation="include">
+        </childnode>
+        <childnode refid="35109" relation="include">
+        </childnode>
+        <childnode refid="35110" relation="include">
+        </childnode>
+        <childnode refid="35111" relation="include">
+        </childnode>
+        <childnode refid="35112" relation="include">
+        </childnode>
+        <childnode refid="35117" relation="include">
+        </childnode>
+        <childnode refid="35118" relation="include">
+        </childnode>
+        <childnode refid="35114" relation="include">
+        </childnode>
+        <childnode refid="35116" relation="include">
+        </childnode>
+        <childnode refid="35119" relation="include">
+        </childnode>
+      </node>
+      <node id="35109">
+        <label>btHashMap.h</label>
+      </node>
+      <node id="35116">
+        <label>vector</label>
+      </node>
+      <node id="35113">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="35103" relation="include">
+        </childnode>
+        <childnode refid="35114" relation="include">
+        </childnode>
+        <childnode refid="35115" relation="include">
+        </childnode>
+      </node>
+      <node id="35119">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="35103" relation="include">
+        </childnode>
+        <childnode refid="35120" relation="include">
+        </childnode>
+      </node>
+      <node id="35105">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="35107">
+        <label>stdio.h</label>
+      </node>
+      <node id="35112">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="35108" relation="include">
+        </childnode>
+        <childnode refid="35113" relation="include">
+        </childnode>
+        <childnode refid="35103" relation="include">
+        </childnode>
+        <childnode refid="35110" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="35186">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsContactBuilder.cpp</label>
+        <link refid="_physics_contact_builder_8cpp"/>
+      </node>
+      <node id="35221">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneBuilder.cpp</label>
+        <link refid="_scene_builder_8cpp"/>
+      </node>
+      <node id="35195">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBoxBuilder.cpp</label>
+        <link refid="_physics_shape_box_builder_8cpp"/>
+      </node>
+      <node id="35123">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractActionable.cpp</label>
+        <link refid="_abstract_actionable_8cpp"/>
+      </node>
+      <node id="35174">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixedBuilder.cpp</label>
+        <link refid="_physics_constraint_fixed_builder_8cpp"/>
+      </node>
+      <node id="35200">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCone.cpp</label>
+        <link refid="_physics_shape_cone_8cpp"/>
+      </node>
+      <node id="35240">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TimerBuilder.cpp</label>
+        <link refid="_timer_builder_8cpp"/>
+      </node>
+      <node id="35144">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LabelHUDBuilder.cpp</label>
+        <link refid="_label_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35236">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/TextboxHUDBuilder.cpp</label>
+        <link refid="_textbox_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35220">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="35187">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsField.cpp</label>
+        <link refid="_physics_field_8cpp"/>
+      </node>
+      <node id="35181">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPoint.cpp</label>
+        <link refid="_physics_constraint_point_to_point_8cpp"/>
+      </node>
+      <node id="35201">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConeBuilder.cpp</label>
+        <link refid="_physics_shape_cone_builder_8cpp"/>
+      </node>
+      <node id="35234">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/StopWatch.cpp</label>
+        <link refid="_stop_watch_8cpp"/>
+      </node>
+      <node id="35131">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Clock.cpp</label>
+        <link refid="_clock_8cpp"/>
+      </node>
+      <node id="35210">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeMultiSphere.cpp</label>
+        <link refid="_physics_shape_multi_sphere_8cpp"/>
+      </node>
+      <node id="35139">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Image.cpp</label>
+        <link refid="_image_8cpp"/>
+      </node>
+      <node id="35227">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Skinner.cpp</label>
+        <link refid="_skinner_8cpp"/>
+      </node>
+      <node id="35222">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneState.cpp</label>
+        <link refid="_scene_state_8cpp"/>
+      </node>
+      <node id="35156">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateMachine.cpp</label>
+        <link refid="_node_state_machine_8cpp"/>
+      </node>
+      <node id="35129">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CameraBuilder.cpp</label>
+        <link refid="_camera_builder_8cpp"/>
+      </node>
+      <node id="35134">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CollisionResponseBuilder.cpp</label>
+        <link refid="_collision_response_builder_8cpp"/>
+      </node>
+      <node id="35247">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateMachine.cpp</label>
+        <link refid="_world_state_machine_8cpp"/>
+      </node>
+      <node id="35133">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CollisionResponse.cpp</label>
+        <link refid="_collision_response_8cpp"/>
+      </node>
+      <node id="35153">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeBuilder.cpp</label>
+        <link refid="_node_builder_8cpp"/>
+      </node>
+      <node id="35135">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CubeBuilder.cpp</label>
+        <link refid="_cube_builder_8cpp"/>
+      </node>
+      <node id="35243">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</label>
+        <link refid="_world_lua_virtual_machine_8cpp"/>
+      </node>
+      <node id="35262">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/TextboxHUD.cpp</label>
+        <link refid="_textbox_h_u_d_8cpp"/>
+      </node>
+      <node id="35246">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateBuilder.cpp</label>
+        <link refid="_world_state_builder_8cpp"/>
+      </node>
+      <node id="35233">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SpriteFrameAtlasBuilder.cpp</label>
+        <link refid="_sprite_frame_atlas_builder_8cpp"/>
+      </node>
+      <node id="35256">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Geometry.cpp</label>
+        <link refid="_geometry_8cpp"/>
+      </node>
+      <node id="35157">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateMachineBuilder.cpp</label>
+        <link refid="_node_state_machine_builder_8cpp"/>
+      </node>
+      <node id="35150">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialBuilder.cpp</label>
+        <link refid="_material_builder_8cpp"/>
+      </node>
+      <node id="35163">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigid.cpp</label>
+        <link refid="_physics_body_rigid_8cpp"/>
+      </node>
+      <node id="35164">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyRigidBuilder.cpp</label>
+        <link refid="_physics_body_rigid_builder_8cpp"/>
+      </node>
+      <node id="35260">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/SliderHUD.cpp</label>
+        <link refid="_slider_h_u_d_8cpp"/>
+      </node>
+      <node id="35219">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PlaneBuilder.cpp</label>
+        <link refid="_plane_builder_8cpp"/>
+      </node>
+      <node id="35263">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/WorldHUD.cpp</label>
+        <link refid="_world_h_u_d_8cpp"/>
+      </node>
+      <node id="35160">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBody.cpp</label>
+        <link refid="_physics_body_8cpp"/>
+      </node>
+      <node id="35191">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShape.cpp</label>
+        <link refid="_physics_shape_8cpp"/>
+      </node>
+      <node id="35168">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsCloseContactBuilder.cpp</label>
+        <link refid="_physics_close_contact_builder_8cpp"/>
+      </node>
+      <node id="35198">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCapsule.cpp</label>
+        <link refid="_physics_shape_capsule_8cpp"/>
+      </node>
+      <node id="35189">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContact.cpp</label>
+        <link refid="_physics_ray_contact_8cpp"/>
+      </node>
+      <node id="35241">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp</label>
+        <link refid="_world_8cpp"/>
+      </node>
+      <node id="35235">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/StopWatchBuilder.cpp</label>
+        <link refid="_stop_watch_builder_8cpp"/>
+      </node>
+      <node id="35143">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JsonJLIBuilder.cpp</label>
+        <link refid="_json_j_l_i_builder_8cpp"/>
+      </node>
+      <node id="35166">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoftBuilder.cpp</label>
+        <link refid="_physics_body_soft_builder_8cpp"/>
+      </node>
+      <node id="35249">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Xml.cpp</label>
+        <link refid="_xml_8cpp"/>
+      </node>
+      <node id="35254">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Cube.cpp</label>
+        <link refid="_cube_8cpp"/>
+      </node>
+      <node id="35208">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeHeightfieldTerrain.cpp</label>
+        <link refid="_physics_shape_heightfield_terrain_8cpp"/>
+      </node>
+      <node id="35155">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeStateBuilder.cpp</label>
+        <link refid="_node_state_builder_8cpp"/>
+      </node>
+      <node id="35128">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Camera.cpp</label>
+        <link refid="_camera_8cpp"/>
+      </node>
+      <node id="35188">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsFieldBuilder.cpp</label>
+        <link refid="_physics_field_builder_8cpp"/>
+      </node>
+      <node id="35250">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/XmlBuilder.cpp</label>
+        <link refid="_xml_builder_8cpp"/>
+      </node>
+      <node id="35214">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeStaticPlane.cpp</label>
+        <link refid="_physics_shape_static_plane_8cpp"/>
+      </node>
+      <node id="35251">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/AbstractFrameBufferObject.cpp</label>
+        <link refid="_abstract_frame_buffer_object_8cpp"/>
+      </node>
+      <node id="35182">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintPointToPointBuilder.cpp</label>
+        <link refid="_physics_constraint_point_to_point_builder_8cpp"/>
+      </node>
+      <node id="35177">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpring.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_8cpp"/>
+      </node>
+      <node id="35223">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateBuilder.cpp</label>
+        <link refid="_scene_state_builder_8cpp"/>
+      </node>
+      <node id="35124">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.cpp</label>
+        <link refid="_abstract_factory_object_8cpp"/>
+      </node>
+      <node id="35211">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeMultiSphereBuilder.cpp</label>
+        <link refid="_physics_shape_multi_sphere_builder_8cpp"/>
+      </node>
+      <node id="35253">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/CheckboxHUD.cpp</label>
+        <link refid="_checkbox_h_u_d_8cpp"/>
+      </node>
+      <node id="35231">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Sprite2DBuilder.cpp</label>
+        <link refid="_sprite2_d_builder_8cpp"/>
+      </node>
+      <node id="35215">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeStaticPlaneBuilder.cpp</label>
+        <link refid="_physics_shape_static_plane_builder_8cpp"/>
+      </node>
+      <node id="35248">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldStateMachineBuilder.cpp</label>
+        <link refid="_world_state_machine_builder_8cpp"/>
+      </node>
+      <node id="35261">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Sprite2D.cpp</label>
+        <link refid="_sprite2_d_8cpp"/>
+      </node>
+      <node id="35180">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHingeBuilder.cpp</label>
+        <link refid="_physics_constraint_hinge_builder_8cpp"/>
+      </node>
+      <node id="35147">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Light.cpp</label>
+        <link refid="_light_8cpp"/>
+      </node>
+      <node id="35178">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofSpringBuilder.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_spring_builder_8cpp"/>
+      </node>
+      <node id="35224">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateMachine.cpp</label>
+        <link refid="_scene_state_machine_8cpp"/>
+      </node>
+      <node id="35225">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SceneStateMachineBuilder.cpp</label>
+        <link refid="_scene_state_machine_builder_8cpp"/>
+      </node>
+      <node id="35229">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SliderHUDBuilder.cpp</label>
+        <link refid="_slider_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35121">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.h</label>
+        <link refid="WorldFactory.h"/>
+        <childnode refid="35122" relation="include">
+        </childnode>
+        <childnode refid="35141" relation="include">
+        </childnode>
+        <childnode refid="35242" relation="include">
+        </childnode>
+        <childnode refid="35243" relation="include">
+        </childnode>
+      </node>
+      <node id="35145">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LevelOfDetail.cpp</label>
+        <link refid="_level_of_detail_8cpp"/>
+      </node>
+      <node id="35204">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexTriangleMesh.cpp</label>
+        <link refid="_physics_shape_convex_triangle_mesh_8cpp"/>
+      </node>
+      <node id="35162">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhostBuilder.cpp</label>
+        <link refid="_physics_body_ghost_builder_8cpp"/>
+      </node>
+      <node id="35212">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeSphere.cpp</label>
+        <link refid="_physics_shape_sphere_8cpp"/>
+      </node>
+      <node id="35185">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsContact.cpp</label>
+        <link refid="_physics_contact_8cpp"/>
+      </node>
+      <node id="35152">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Node.cpp</label>
+        <link refid="_node_8cpp"/>
+      </node>
+      <node id="35192">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox.cpp</label>
+        <link refid="_physics_shape_box_8cpp"/>
+      </node>
+      <node id="35126">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ActionBuilder.cpp</label>
+        <link refid="_action_builder_8cpp"/>
+      </node>
+      <node id="35230">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SoundBuilder.cpp</label>
+        <link refid="_sound_builder_8cpp"/>
+      </node>
+      <node id="35175">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6Dof.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_8cpp"/>
+      </node>
+      <node id="35255">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/DropdownHUD.cpp</label>
+        <link refid="_dropdown_h_u_d_8cpp"/>
+      </node>
+      <node id="35196">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBvhTriangleMesh.cpp</label>
+        <link refid="_physics_shape_bvh_triangle_mesh_8cpp"/>
+      </node>
+      <node id="35190">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsRayContactBuilder.cpp</label>
+        <link refid="_physics_ray_contact_builder_8cpp"/>
+      </node>
+      <node id="35217">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorldBuilder.cpp</label>
+        <link refid="_physics_world_builder_8cpp"/>
+      </node>
+      <node id="35161">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodyGhost.cpp</label>
+        <link refid="_physics_body_ghost_8cpp"/>
+      </node>
+      <node id="35228">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SkinnerBuilder.cpp</label>
+        <link refid="_skinner_builder_8cpp"/>
+      </node>
+      <node id="35158">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitter.cpp</label>
+        <link refid="_particle_emitter_8cpp"/>
+      </node>
+      <node id="35206">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCylinder.cpp</label>
+        <link refid="_physics_shape_cylinder_8cpp"/>
+      </node>
+      <node id="35140">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ImageBuilder.cpp</label>
+        <link refid="_image_builder_8cpp"/>
+      </node>
+      <node id="35252">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ButtonHUD.cpp</label>
+        <link refid="_button_h_u_d_8cpp"/>
+      </node>
+      <node id="35258">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp</label>
+        <link refid="_material_property_8cpp"/>
+      </node>
+      <node id="35203">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexHullBuilder.cpp</label>
+        <link refid="_physics_shape_convex_hull_builder_8cpp"/>
+      </node>
+      <node id="35259">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/ShaderProgram.cpp</label>
+        <link refid="_shader_program_8cpp"/>
+      </node>
+      <node id="35176">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintGeneric6DofBuilder.cpp</label>
+        <link refid="_physics_constraint_generic6_dof_builder_8cpp"/>
+      </node>
+      <node id="35193">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2D.cpp</label>
+        <link refid="_physics_shape_box2_d_8cpp"/>
+      </node>
+      <node id="35173">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintFixed.cpp</label>
+        <link refid="_physics_constraint_fixed_8cpp"/>
+      </node>
+      <node id="35159">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ParticleEmitterBuilder.cpp</label>
+        <link refid="_particle_emitter_builder_8cpp"/>
+      </node>
+      <node id="35239">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Timer.cpp</label>
+        <link refid="_timer_8cpp"/>
+      </node>
+      <node id="35130">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/CheckboxHUDBuilder.cpp</label>
+        <link refid="_checkbox_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35194">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBox2DBuilder.cpp</label>
+        <link refid="_physics_shape_box2_d_builder_8cpp"/>
+      </node>
+      <node id="35141">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</label>
+        <link refid="_j_l_i_engine_8h"/>
+      </node>
+      <node id="35142">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JsonJLI.cpp</label>
+        <link refid="_json_j_l_i_8cpp"/>
+      </node>
+      <node id="35244">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldResourceLoader.cpp</label>
+        <link refid="_world_resource_loader_8cpp"/>
+      </node>
+      <node id="35218">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Plane.cpp</label>
+        <link refid="_plane_8cpp"/>
+      </node>
+      <node id="35167">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsCloseContact.cpp</label>
+        <link refid="_physics_close_contact_8cpp"/>
+      </node>
+      <node id="35165">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsBodySoft.cpp</label>
+        <link refid="_physics_body_soft_8cpp"/>
+      </node>
+      <node id="35257">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/LabelHUD.cpp</label>
+        <link refid="_label_h_u_d_8cpp"/>
+      </node>
+      <node id="35179">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintHinge.cpp</label>
+        <link refid="_physics_constraint_hinge_8cpp"/>
+      </node>
+      <node id="35122">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h</label>
+        <link refid="_world_8h"/>
+        <childnode refid="35123" relation="include">
+        </childnode>
+        <childnode refid="35124" relation="include">
+        </childnode>
+        <childnode refid="35125" relation="include">
+        </childnode>
+        <childnode refid="35126" relation="include">
+        </childnode>
+        <childnode refid="35127" relation="include">
+        </childnode>
+        <childnode refid="35128" relation="include">
+        </childnode>
+        <childnode refid="35129" relation="include">
+        </childnode>
+        <childnode refid="35130" relation="include">
+        </childnode>
+        <childnode refid="35131" relation="include">
+        </childnode>
+        <childnode refid="35132" relation="include">
+        </childnode>
+        <childnode refid="35133" relation="include">
+        </childnode>
+        <childnode refid="35134" relation="include">
+        </childnode>
+        <childnode refid="35135" relation="include">
+        </childnode>
+        <childnode refid="35136" relation="include">
+        </childnode>
+        <childnode refid="35137" relation="include">
+        </childnode>
+        <childnode refid="35138" relation="include">
+        </childnode>
+        <childnode refid="35139" relation="include">
+        </childnode>
+        <childnode refid="35140" relation="include">
+        </childnode>
+        <childnode refid="35141" relation="include">
+        </childnode>
+        <childnode refid="35142" relation="include">
+        </childnode>
+        <childnode refid="35143" relation="include">
+        </childnode>
+        <childnode refid="35144" relation="include">
+        </childnode>
+        <childnode refid="35145" relation="include">
+        </childnode>
+        <childnode refid="35146" relation="include">
+        </childnode>
+        <childnode refid="35147" relation="include">
+        </childnode>
+        <childnode refid="35148" relation="include">
+        </childnode>
+        <childnode refid="35149" relation="include">
+        </childnode>
+        <childnode refid="35150" relation="include">
+        </childnode>
+        <childnode refid="35151" relation="include">
+        </childnode>
+        <childnode refid="35152" relation="include">
+        </childnode>
+        <childnode refid="35153" relation="include">
+        </childnode>
+        <childnode refid="35154" relation="include">
+        </childnode>
+        <childnode refid="35155" relation="include">
+        </childnode>
+        <childnode refid="35156" relation="include">
+        </childnode>
+        <childnode refid="35157" relation="include">
+        </childnode>
+        <childnode refid="35158" relation="include">
+        </childnode>
+        <childnode refid="35159" relation="include">
+        </childnode>
+        <childnode refid="35160" relation="include">
+        </childnode>
+        <childnode refid="35161" relation="include">
+        </childnode>
+        <childnode refid="35162" relation="include">
+        </childnode>
+        <childnode refid="35163" relation="include">
+        </childnode>
+        <childnode refid="35164" relation="include">
+        </childnode>
+        <childnode refid="35165" relation="include">
+        </childnode>
+        <childnode refid="35166" relation="include">
+        </childnode>
+        <childnode refid="35167" relation="include">
+        </childnode>
+        <childnode refid="35168" relation="include">
+        </childnode>
+        <childnode refid="35169" relation="include">
+        </childnode>
+        <childnode refid="35170" relation="include">
+        </childnode>
+        <childnode refid="35171" relation="include">
+        </childnode>
+        <childnode refid="35172" relation="include">
+        </childnode>
+        <childnode refid="35173" relation="include">
+        </childnode>
+        <childnode refid="35174" relation="include">
+        </childnode>
+        <childnode refid="35175" relation="include">
+        </childnode>
+        <childnode refid="35176" relation="include">
+        </childnode>
+        <childnode refid="35177" relation="include">
+        </childnode>
+        <childnode refid="35178" relation="include">
+        </childnode>
+        <childnode refid="35179" relation="include">
+        </childnode>
+        <childnode refid="35180" relation="include">
+        </childnode>
+        <childnode refid="35181" relation="include">
+        </childnode>
+        <childnode refid="35182" relation="include">
+        </childnode>
+        <childnode refid="35183" relation="include">
+        </childnode>
+        <childnode refid="35184" relation="include">
+        </childnode>
+        <childnode refid="35185" relation="include">
+        </childnode>
+        <childnode refid="35186" relation="include">
+        </childnode>
+        <childnode refid="35187" relation="include">
+        </childnode>
+        <childnode refid="35188" relation="include">
+        </childnode>
+        <childnode refid="35189" relation="include">
+        </childnode>
+        <childnode refid="35190" relation="include">
+        </childnode>
+        <childnode refid="35191" relation="include">
+        </childnode>
+        <childnode refid="35192" relation="include">
+        </childnode>
+        <childnode refid="35193" relation="include">
+        </childnode>
+        <childnode refid="35194" relation="include">
+        </childnode>
+        <childnode refid="35195" relation="include">
+        </childnode>
+        <childnode refid="35196" relation="include">
+        </childnode>
+        <childnode refid="35197" relation="include">
+        </childnode>
+        <childnode refid="35198" relation="include">
+        </childnode>
+        <childnode refid="35199" relation="include">
+        </childnode>
+        <childnode refid="35200" relation="include">
+        </childnode>
+        <childnode refid="35201" relation="include">
+        </childnode>
+        <childnode refid="35202" relation="include">
+        </childnode>
+        <childnode refid="35203" relation="include">
+        </childnode>
+        <childnode refid="35204" relation="include">
+        </childnode>
+        <childnode refid="35205" relation="include">
+        </childnode>
+        <childnode refid="35206" relation="include">
+        </childnode>
+        <childnode refid="35207" relation="include">
+        </childnode>
+        <childnode refid="35208" relation="include">
+        </childnode>
+        <childnode refid="35209" relation="include">
+        </childnode>
+        <childnode refid="35210" relation="include">
+        </childnode>
+        <childnode refid="35211" relation="include">
+        </childnode>
+        <childnode refid="35212" relation="include">
+        </childnode>
+        <childnode refid="35213" relation="include">
+        </childnode>
+        <childnode refid="35214" relation="include">
+        </childnode>
+        <childnode refid="35215" relation="include">
+        </childnode>
+        <childnode refid="35216" relation="include">
+        </childnode>
+        <childnode refid="35217" relation="include">
+        </childnode>
+        <childnode refid="35218" relation="include">
+        </childnode>
+        <childnode refid="35219" relation="include">
+        </childnode>
+        <childnode refid="35220" relation="include">
+        </childnode>
+        <childnode refid="35221" relation="include">
+        </childnode>
+        <childnode refid="35222" relation="include">
+        </childnode>
+        <childnode refid="35223" relation="include">
+        </childnode>
+        <childnode refid="35224" relation="include">
+        </childnode>
+        <childnode refid="35225" relation="include">
+        </childnode>
+        <childnode refid="35226" relation="include">
+        </childnode>
+        <childnode refid="35227" relation="include">
+        </childnode>
+        <childnode refid="35228" relation="include">
+        </childnode>
+        <childnode refid="35229" relation="include">
+        </childnode>
+        <childnode refid="35230" relation="include">
+        </childnode>
+        <childnode refid="35231" relation="include">
+        </childnode>
+        <childnode refid="35232" relation="include">
+        </childnode>
+        <childnode refid="35233" relation="include">
+        </childnode>
+        <childnode refid="35234" relation="include">
+        </childnode>
+        <childnode refid="35235" relation="include">
+        </childnode>
+        <childnode refid="35236" relation="include">
+        </childnode>
+        <childnode refid="35237" relation="include">
+        </childnode>
+        <childnode refid="35238" relation="include">
+        </childnode>
+        <childnode refid="35239" relation="include">
+        </childnode>
+        <childnode refid="35240" relation="include">
+        </childnode>
+        <childnode refid="35241" relation="include">
+        </childnode>
+        <childnode refid="35242" relation="include">
+        </childnode>
+        <childnode refid="35243" relation="include">
+        </childnode>
+        <childnode refid="35244" relation="include">
+        </childnode>
+        <childnode refid="35245" relation="include">
+        </childnode>
+        <childnode refid="35246" relation="include">
+        </childnode>
+        <childnode refid="35247" relation="include">
+        </childnode>
+        <childnode refid="35248" relation="include">
+        </childnode>
+        <childnode refid="35249" relation="include">
+        </childnode>
+        <childnode refid="35250" relation="include">
+        </childnode>
+        <childnode refid="35251" relation="include">
+        </childnode>
+        <childnode refid="35252" relation="include">
+        </childnode>
+        <childnode refid="35253" relation="include">
+        </childnode>
+        <childnode refid="35254" relation="include">
+        </childnode>
+        <childnode refid="35255" relation="include">
+        </childnode>
+        <childnode refid="35256" relation="include">
+        </childnode>
+        <childnode refid="35257" relation="include">
+        </childnode>
+        <childnode refid="35258" relation="include">
+        </childnode>
+        <childnode refid="35259" relation="include">
+        </childnode>
+        <childnode refid="35260" relation="include">
+        </childnode>
+        <childnode refid="35261" relation="include">
+        </childnode>
+        <childnode refid="35262" relation="include">
+        </childnode>
+        <childnode refid="35263" relation="include">
+        </childnode>
+        <childnode refid="35264" relation="include">
+        </childnode>
+      </node>
+      <node id="35245">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldState.cpp</label>
+        <link refid="_world_state_8cpp"/>
+      </node>
+      <node id="35132">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ClockBuilder.cpp</label>
+        <link refid="_clock_builder_8cpp"/>
+      </node>
+      <node id="35213">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeSphereBuilder.cpp</label>
+        <link refid="_physics_shape_sphere_builder_8cpp"/>
+      </node>
+      <node id="35136">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/DropdownHUDBuilder.cpp</label>
+        <link refid="_dropdown_h_u_d_builder_8cpp"/>
+      </node>
+      <node id="35148">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LightBuilder.cpp</label>
+        <link refid="_light_builder_8cpp"/>
+      </node>
+      <node id="35137">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Font.cpp</label>
+        <link refid="_font_8cpp"/>
+      </node>
+      <node id="35151">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialPropertyBuilder.cpp</label>
+        <link refid="_material_property_builder_8cpp"/>
+      </node>
+      <node id="35169">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraint.cpp</label>
+        <link refid="_physics_constraint_8cpp"/>
+      </node>
+      <node id="35205">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexTriangleMeshBuilder.cpp</label>
+        <link refid="_physics_shape_convex_triangle_mesh_builder_8cpp"/>
+      </node>
+      <node id="35264">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/platform/core/Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="35207">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCylinderBuilder.cpp</label>
+        <link refid="_physics_shape_cylinder_builder_8cpp"/>
+      </node>
+      <node id="35202">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeConvexHull.cpp</label>
+        <link refid="_physics_shape_convex_hull_8cpp"/>
+      </node>
+      <node id="35154">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/NodeState.cpp</label>
+        <link refid="_node_state_8cpp"/>
+      </node>
+      <node id="35171">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwist.cpp</label>
+        <link refid="_physics_constraint_cone_twist_8cpp"/>
+      </node>
+      <node id="35170">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintBuilder.cpp</label>
+        <link refid="_physics_constraint_builder_8cpp"/>
+      </node>
+      <node id="35197">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeBvhTriangleMeshBuilder.cpp</label>
+        <link refid="_physics_shape_bvh_triangle_mesh_builder_8cpp"/>
+      </node>
+      <node id="35199">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeCapsuleBuilder.cpp</label>
+        <link refid="_physics_shape_capsule_builder_8cpp"/>
+      </node>
+      <node id="35232">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/SpriteFrameAtlas.cpp</label>
+        <link refid="_sprite_frame_atlas_8cpp"/>
+      </node>
+      <node id="35238">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ThreadBuilder.cpp</label>
+        <link refid="_thread_builder_8cpp"/>
+      </node>
+      <node id="35216">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsWorld.cpp</label>
+        <link refid="_physics_world_8cpp"/>
+      </node>
+      <node id="35172">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintConeTwistBuilder.cpp</label>
+        <link refid="_physics_constraint_cone_twist_builder_8cpp"/>
+      </node>
+      <node id="35183">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSlider.cpp</label>
+        <link refid="_physics_constraint_slider_8cpp"/>
+      </node>
+      <node id="35184">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsConstraintSliderBuilder.cpp</label>
+        <link refid="_physics_constraint_slider_builder_8cpp"/>
+      </node>
+      <node id="35209">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/PhysicsShapeHeightfieldTerrainBuilder.cpp</label>
+        <link refid="_physics_shape_heightfield_terrain_builder_8cpp"/>
+      </node>
+      <node id="35146">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/LevelOfDetailBuilder.cpp</label>
+        <link refid="_level_of_detail_builder_8cpp"/>
+      </node>
+      <node id="35237">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Thread.cpp</label>
+        <link refid="_thread_8cpp"/>
+      </node>
+      <node id="35125">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Action.cpp</label>
+        <link refid="_action_8cpp"/>
+      </node>
+      <node id="35242">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</label>
+        <link refid="_world_factory_8cpp"/>
+      </node>
+      <node id="35226">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ShaderProgramBuilder.cpp</label>
+        <link refid="_shader_program_builder_8cpp"/>
+      </node>
+      <node id="35149">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Material.cpp</label>
+        <link refid="_material_8cpp"/>
+      </node>
+      <node id="35138">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/FontBuilder.cpp</label>
+        <link refid="_font_builder_8cpp"/>
+      </node>
+      <node id="35127">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/ButtonHUDBuilder.cpp</label>
+        <link refid="_button_h_u_d_builder_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classnjli_1_1_world_factory" prot="public">njli::WorldFactory</innerclass>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>WorldFactory.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>11/9/14.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JLIGameEngineTest_WorldFactory_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JLIGameEngineTest_WorldFactory_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_util_8h" kindref="compound">Util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btAlignedObjectArray.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btHashMap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btSerializer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_builder_8h" kindref="compound">AbstractBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_factory_object_8h" kindref="compound">AbstractFactoryObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="classnjli_1_1_world_factory" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_object" kindref="compound">AbstractObject</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" kindref="member">AbstractDecorator::setName</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" kindref="member">AbstractDecorator::getName</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classnjli_1_1_world_factory_1a4783e795a32a2feb5b07db0cbddb9371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;AbstractFactoryObject*&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a4783e795a32a2feb5b07db0cbddb9371" kindref="member">ObjectList</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classnjli_1_1_world_factory_1a3cf9fde8a3186340fdec7f81de21f0bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;AbstractFactoryObject**&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a3cf9fde8a3186340fdec7f81de21f0bc" kindref="member">ObjectArrayList</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classnjli_1_1_world_factory_1af17ac95ff692d4a098f82e45d135281f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;u64,<sp/>s32&gt;<sp/><ref refid="classnjli_1_1_world_factory_1af17ac95ff692d4a098f82e45d135281f" kindref="member">ObjectDuplicatePair</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classnjli_1_1_world_factory_1a15eec8c4710c8ec66e7cd06dd2327be6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;u64,<sp/>s32&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a15eec8c4710c8ec66e7cd06dd2327be6" kindref="member">ObjectDuplicateMap</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classnjli_1_1_world_factory_1a59f5fcb165066624f68fb5417aa3586e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classnjli_1_1_world_factory_1a2df56bce875115e30eee589571642e33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_action" kindref="compound">Action</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classnjli_1_1_world_factory_1a6a5fbb3d9afc8ecdda801eb0baa72618" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_action_builder" kindref="compound">ActionBuilder</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classnjli_1_1_world_factory_1a19c07f330269ab1d6555234c92605d56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_button_h_u_d" kindref="compound">ButtonHUD</ref>;</highlight></codeline>
+<codeline lineno="47" refid="classnjli_1_1_world_factory_1a8c026aede787124ffee5dfcadef572ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_button_h_u_d_builder" kindref="compound">ButtonHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="48" refid="classnjli_1_1_world_factory_1ad8bd9afbbd7af19d996da80e9d25890d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classnjli_1_1_world_factory_1a7752fee1bd2b982e8f23fedc42a80a2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_camera_builder" kindref="compound">CameraBuilder</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classnjli_1_1_world_factory_1a0aab48d603790a3ca2c4d7dd7ab9e519" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d" kindref="compound">CheckboxHUD</ref>;</highlight></codeline>
+<codeline lineno="51" refid="classnjli_1_1_world_factory_1a218892def884e56259183e1a5999c6e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_checkbox_h_u_d_builder" kindref="compound">CheckboxHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classnjli_1_1_world_factory_1a5ae5b1616a53c84525df7446cb4014e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classnjli_1_1_world_factory_1acb9ae88f448a010684fe7bda1f015d62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_clock_builder" kindref="compound">ClockBuilder</ref>;</highlight></codeline>
+<codeline lineno="54" refid="classnjli_1_1_world_factory_1aada10170113bd62fd216e56e169c30bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_collision_response" kindref="compound">CollisionResponse</ref>;</highlight></codeline>
+<codeline lineno="55" refid="classnjli_1_1_world_factory_1a2c7af76413a94496eea595a1640f050f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_collision_response_builder" kindref="compound">CollisionResponseBuilder</ref>;</highlight></codeline>
+<codeline lineno="56" refid="classnjli_1_1_world_factory_1a8faee6be39d1c71eee071a7874631653" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_cube" kindref="compound">Cube</ref>;</highlight></codeline>
+<codeline lineno="57" refid="classnjli_1_1_world_factory_1a662086a007f158ad6a1a9cd4968b6f05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_cube_builder" kindref="compound">CubeBuilder</ref>;</highlight></codeline>
+<codeline lineno="58" refid="classnjli_1_1_world_factory_1aff628788b98fce5e2ba538f3d1548af4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_dropdown_h_u_d" kindref="compound">DropdownHUD</ref>;</highlight></codeline>
+<codeline lineno="59" refid="classnjli_1_1_world_factory_1ace95ee82bd9b0868dca558d191db23fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_dropdown_h_u_d_builder" kindref="compound">DropdownHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classnjli_1_1_world_factory_1ad564b94b59dc295de3dfc4415d95cca8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_font" kindref="compound">Font</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classnjli_1_1_world_factory_1aa1571d8b2e1c2d040a767ed3b23f5e25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_font_builder" kindref="compound">FontBuilder</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classnjli_1_1_world_factory_1a9aca7b7350e6ffa0e2d6320834ad1857" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classnjli_1_1_world_factory_1a5d6b29a75202aeeaef335faca9eb55e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classnjli_1_1_world_factory_1a6e4a3b87650c7e051e932fc81e2b2ad5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_image_builder" kindref="compound">ImageBuilder</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classnjli_1_1_world_factory_1a1c7fea89e4146ea859f344c20bf17ac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_json_j_l_i" kindref="compound">JsonJLI</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classnjli_1_1_world_factory_1afbd2803f566fe8f3d08650c15f61b2f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_json_j_l_i_builder" kindref="compound">JsonJLIBuilder</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classnjli_1_1_world_factory_1aa8844d2831cd99e31cc82dd81b171f11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_label_h_u_d" kindref="compound">LabelHUD</ref>;</highlight></codeline>
+<codeline lineno="68" refid="classnjli_1_1_world_factory_1abcd9b8ad9755b1de56dd38ef4a89037f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_label_h_u_d_builder" kindref="compound">LabelHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="69" refid="classnjli_1_1_world_factory_1a27862a9fe512b352f98ec1c054680edd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_light" kindref="compound">Light</ref>;</highlight></codeline>
+<codeline lineno="70" refid="classnjli_1_1_world_factory_1a8cd2216c776d440c957f9961ce19b1bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_light_builder" kindref="compound">LightBuilder</ref>;</highlight></codeline>
+<codeline lineno="71" refid="classnjli_1_1_world_factory_1a30b1a5fe07be473df6700c36c640ed17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_level_of_detail" kindref="compound">LevelOfDetail</ref>;</highlight></codeline>
+<codeline lineno="72" refid="classnjli_1_1_world_factory_1a719da6b5d45b216585e173af095bb963" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_level_of_detail_builder" kindref="compound">LevelOfDetailBuilder</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classnjli_1_1_world_factory_1a92273d66fac956d168c3dcbd891ae6bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory_1a92273d66fac956d168c3dcbd891ae6bf" kindref="member">Lua</ref>;</highlight></codeline>
+<codeline lineno="74" refid="classnjli_1_1_world_factory_1a6ff54f81b70b57898d3cb747e0ad258d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory_1a6ff54f81b70b57898d3cb747e0ad258d" kindref="member">LuaBuilder</ref>;</highlight></codeline>
+<codeline lineno="75" refid="classnjli_1_1_world_factory_1aa1212b6e372a0f45d2c01f3cd203af77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_material" kindref="compound">Material</ref>;</highlight></codeline>
+<codeline lineno="76" refid="classnjli_1_1_world_factory_1ab38588cd27b640aa96c8788441852561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_material_builder" kindref="compound">MaterialBuilder</ref>;</highlight></codeline>
+<codeline lineno="77" refid="classnjli_1_1_world_factory_1ae7c7f3376b81514442fbc2a5fe2f5ec9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>;</highlight></codeline>
+<codeline lineno="78" refid="classnjli_1_1_world_factory_1aba999bd8688594614e940d994d71b864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_material_property_builder" kindref="compound">MaterialPropertyBuilder</ref>;</highlight></codeline>
+<codeline lineno="79" refid="classnjli_1_1_world_factory_1a6db9d28bd448a131448276ee03de1e6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node" kindref="compound">Node</ref>;</highlight></codeline>
+<codeline lineno="80" refid="classnjli_1_1_world_factory_1a3698ada19fa4946ec1b589a2b23e695f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node_builder" kindref="compound">NodeBuilder</ref>;</highlight></codeline>
+<codeline lineno="81" refid="classnjli_1_1_world_factory_1adfdd1242f00ef4da9a9a01d996fc292c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node_state" kindref="compound">NodeState</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classnjli_1_1_world_factory_1ab5f35f6c48aabf3adba3148d9e5017b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node_state_builder" kindref="compound">NodeStateBuilder</ref>;</highlight></codeline>
+<codeline lineno="83" refid="classnjli_1_1_world_factory_1a37124479a38545f4b2bec91d7f6acda0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node_state_machine" kindref="compound">NodeStateMachine</ref>;</highlight></codeline>
+<codeline lineno="84" refid="classnjli_1_1_world_factory_1aa0337fe62ed48d71c7fb641e4588d796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_node_state_machine_builder" kindref="compound">NodeStateMachineBuilder</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classnjli_1_1_world_factory_1a82b374d797a09668286ac5cf26f539f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref>;</highlight></codeline>
+<codeline lineno="86" refid="classnjli_1_1_world_factory_1a4663c75ff33f5066276a2beef9a10b57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_particle_emitter_builder" kindref="compound">ParticleEmitterBuilder</ref>;</highlight></codeline>
+<codeline lineno="87" refid="classnjli_1_1_world_factory_1a5602338bf4d8e0e6baa58d3daa8dc90a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body" kindref="compound">PhysicsBody</ref>;</highlight></codeline>
+<codeline lineno="88" refid="classnjli_1_1_world_factory_1a75e9d5e413912c976f8b366674be6676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body_ghost" kindref="compound">PhysicsBodyGhost</ref>;</highlight></codeline>
+<codeline lineno="89" refid="classnjli_1_1_world_factory_1a36d224b713bd19fb758d964b8111182a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body_ghost_builder" kindref="compound">PhysicsBodyGhostBuilder</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classnjli_1_1_world_factory_1ada345e4f9c2a87f06868b74d30e94ad2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body_rigid" kindref="compound">PhysicsBodyRigid</ref>;</highlight></codeline>
+<codeline lineno="91" refid="classnjli_1_1_world_factory_1ac3d9efde8beb285372a9042d055c738a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body_rigid_builder" kindref="compound">PhysicsBodyRigidBuilder</ref>;</highlight></codeline>
+<codeline lineno="92" refid="classnjli_1_1_world_factory_1a8aab1bff165cf88cf8e13fb00b2b5f1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body_soft" kindref="compound">PhysicsBodySoft</ref>;</highlight></codeline>
+<codeline lineno="93" refid="classnjli_1_1_world_factory_1af4691e69bff78222d4abfff307c0bcb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_body_soft_builder" kindref="compound">PhysicsBodySoftBuilder</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classnjli_1_1_world_factory_1aedf5835c05d4fe2aa76acfe736c1b9fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_close_contact" kindref="compound">PhysicsCloseContact</ref>;</highlight></codeline>
+<codeline lineno="95" refid="classnjli_1_1_world_factory_1aae9fd5c0211139108faab6d7ccf95c40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_close_contact_builder" kindref="compound">PhysicsCloseContactBuilder</ref>;</highlight></codeline>
+<codeline lineno="96" refid="classnjli_1_1_world_factory_1aa59c958a66870f0d251ec0dd477d2eff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint" kindref="compound">PhysicsConstraint</ref>;</highlight></codeline>
+<codeline lineno="97" refid="classnjli_1_1_world_factory_1aed3f799c6061225153a01b5eb7141786" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_builder" kindref="compound">PhysicsConstraintBuilder</ref>;</highlight></codeline>
+<codeline lineno="98" refid="classnjli_1_1_world_factory_1a0117dac2d3ca1ac4ebe089ac8c258560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_hinge" kindref="compound">PhysicsConstraintHinge</ref>;</highlight></codeline>
+<codeline lineno="99" refid="classnjli_1_1_world_factory_1aaf6a85f39db8c1e31e6aa37c65e1a674" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_hinge_builder" kindref="compound">PhysicsConstraintHingeBuilder</ref>;</highlight></codeline>
+<codeline lineno="100" refid="classnjli_1_1_world_factory_1a06afcd7f1b1822af8e15e045e77eed2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_point_to_point" kindref="compound">PhysicsConstraintPointToPoint</ref>;</highlight></codeline>
+<codeline lineno="101" refid="classnjli_1_1_world_factory_1ae8bb8accca080bd60527bc8d691149a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_point_to_point_builder" kindref="compound">PhysicsConstraintPointToPointBuilder</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classnjli_1_1_world_factory_1a6b9fa11eb22d1cb30e2d4fc2247e9afa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_slider" kindref="compound">PhysicsConstraintSlider</ref>;</highlight></codeline>
+<codeline lineno="104" refid="classnjli_1_1_world_factory_1a6b751cf38f887ce08753757be0cccc26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_slider_builder" kindref="compound">PhysicsConstraintSliderBuilder</ref>;</highlight></codeline>
+<codeline lineno="105" refid="classnjli_1_1_world_factory_1a2ccf10571ac5c97189a4c7d1fe3831ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_cone_twist" kindref="compound">PhysicsConstraintConeTwist</ref>;</highlight></codeline>
+<codeline lineno="106" refid="classnjli_1_1_world_factory_1a80d4d8b5e97b1f9310737e5230e0ca67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_cone_twist_builder" kindref="compound">PhysicsConstraintConeTwistBuilder</ref>;</highlight></codeline>
+<codeline lineno="107" refid="classnjli_1_1_world_factory_1a684f5ece6d7d44c2b9f689e76458a8fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_fixed" kindref="compound">PhysicsConstraintFixed</ref>;</highlight></codeline>
+<codeline lineno="108" refid="classnjli_1_1_world_factory_1a2740ddc13d801da4128c33e9a5b9b492" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_fixed_builder" kindref="compound">PhysicsConstraintFixedBuilder</ref>;</highlight></codeline>
+<codeline lineno="109" refid="classnjli_1_1_world_factory_1a1d2185bf07a23cc48cd8f9d4271f3e39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_generic6_dof" kindref="compound">PhysicsConstraintGeneric6Dof</ref>;</highlight></codeline>
+<codeline lineno="110" refid="classnjli_1_1_world_factory_1aca6d04b7c0d4627405b54ec4ec7af313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_generic6_dof_builder" kindref="compound">PhysicsConstraintGeneric6DofBuilder</ref>;</highlight></codeline>
+<codeline lineno="111" refid="classnjli_1_1_world_factory_1af32c447e4cf588410ecc1a6106157f9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_generic6_dof_spring" kindref="compound">PhysicsConstraintGeneric6DofSpring</ref>;</highlight></codeline>
+<codeline lineno="112" refid="classnjli_1_1_world_factory_1a933373e183ecd046f268e1b69038a02e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_constraint_generic6_dof_spring_builder" kindref="compound">PhysicsConstraintGeneric6DofSpringBuilder</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classnjli_1_1_world_factory_1af82a8eac76d39e47206a7eb1917e53f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_contact" kindref="compound">PhysicsContact</ref>;</highlight></codeline>
+<codeline lineno="115" refid="classnjli_1_1_world_factory_1aa61adc7648e4c29d071f44e17614316c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_contact_builder" kindref="compound">PhysicsContactBuilder</ref>;</highlight></codeline>
+<codeline lineno="116" refid="classnjli_1_1_world_factory_1a8216afecc63791c1d19b902232c886b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_field" kindref="compound">PhysicsField</ref>;</highlight></codeline>
+<codeline lineno="117" refid="classnjli_1_1_world_factory_1a09c097cb47fc1f3568d827cf0536b6ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_field_builder" kindref="compound">PhysicsFieldBuilder</ref>;</highlight></codeline>
+<codeline lineno="118" refid="classnjli_1_1_world_factory_1a2fb3e6c99ae1c2204a36f0e83adab75e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_ray_contact" kindref="compound">PhysicsRayContact</ref>;</highlight></codeline>
+<codeline lineno="119" refid="classnjli_1_1_world_factory_1a51efff0009aa2c9c621486a310037129" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_ray_contact_builder" kindref="compound">PhysicsRayContactBuilder</ref>;</highlight></codeline>
+<codeline lineno="120" refid="classnjli_1_1_world_factory_1a726223aef7972f289c4a01ccfd23d5ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape" kindref="compound">PhysicsShape</ref>;</highlight></codeline>
+<codeline lineno="121" refid="classnjli_1_1_world_factory_1aa594c185e502e1b87c998e01dd17a50f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_box" kindref="compound">PhysicsShapeBox</ref>;</highlight></codeline>
+<codeline lineno="122" refid="classnjli_1_1_world_factory_1a32f571aedc28d4347ba0d3a2a9acc7fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_box_builder" kindref="compound">PhysicsShapeBoxBuilder</ref>;</highlight></codeline>
+<codeline lineno="123" refid="classnjli_1_1_world_factory_1ae9fdb8cf9943dbfd76910301cb0ac1bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_box2_d" kindref="compound">PhysicsShapeBox2D</ref>;</highlight></codeline>
+<codeline lineno="124" refid="classnjli_1_1_world_factory_1a9300c5f6d79ededa841d102672c1abed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_box2_d_builder" kindref="compound">PhysicsShapeBox2DBuilder</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classnjli_1_1_world_factory_1aedad28d3885a187a21a94756dd00263c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_sphere" kindref="compound">PhysicsShapeSphere</ref>;</highlight></codeline>
+<codeline lineno="127" refid="classnjli_1_1_world_factory_1afc061546bfa689988558e8bb36979312" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_sphere_builder" kindref="compound">PhysicsShapeSphereBuilder</ref>;</highlight></codeline>
+<codeline lineno="128" refid="classnjli_1_1_world_factory_1aa2e59a26c135fb52f13d19f1f09b6880" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_cylinder" kindref="compound">PhysicsShapeCylinder</ref>;</highlight></codeline>
+<codeline lineno="129" refid="classnjli_1_1_world_factory_1a1df6e91827326ced519104ee8edcafb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_cylinder_builder" kindref="compound">PhysicsShapeCylinderBuilder</ref>;</highlight></codeline>
+<codeline lineno="130" refid="classnjli_1_1_world_factory_1a08be67d95b7957ebd88a3944ff9a7afa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_capsule" kindref="compound">PhysicsShapeCapsule</ref>;</highlight></codeline>
+<codeline lineno="131" refid="classnjli_1_1_world_factory_1a47391e36c657b268fe97217194bf713e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_capsule_builder" kindref="compound">PhysicsShapeCapsuleBuilder</ref>;</highlight></codeline>
+<codeline lineno="132" refid="classnjli_1_1_world_factory_1a1e046c5bc3ad2999646274d22417d017" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_cone" kindref="compound">PhysicsShapeCone</ref>;</highlight></codeline>
+<codeline lineno="133" refid="classnjli_1_1_world_factory_1a18107e28deb5ee79a2fd4d512772d7ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_cone_builder" kindref="compound">PhysicsShapeConeBuilder</ref>;</highlight></codeline>
+<codeline lineno="134" refid="classnjli_1_1_world_factory_1a6d8dd0dab37f03d905eb3066b816ae30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_multi_sphere" kindref="compound">PhysicsShapeMultiSphere</ref>;</highlight></codeline>
+<codeline lineno="135" refid="classnjli_1_1_world_factory_1a71dcdde15201e2df59abaa1bde57e73c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_multi_sphere_builder" kindref="compound">PhysicsShapeMultiSphereBuilder</ref>;</highlight></codeline>
+<codeline lineno="136" refid="classnjli_1_1_world_factory_1a894f78151e6b10ffb19539384b946e12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_convex_hull" kindref="compound">PhysicsShapeConvexHull</ref>;</highlight></codeline>
+<codeline lineno="137" refid="classnjli_1_1_world_factory_1ad33a0bea05e9549fd9950ac4a1acbfa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_convex_hull_builder" kindref="compound">PhysicsShapeConvexHullBuilder</ref>;</highlight></codeline>
+<codeline lineno="138" refid="classnjli_1_1_world_factory_1a12f965e3d87c71370f0288e42f12a4cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_convex_triangle_mesh" kindref="compound">PhysicsShapeConvexTriangleMesh</ref>;</highlight></codeline>
+<codeline lineno="139" refid="classnjli_1_1_world_factory_1abf5b0c4f21459fff5c6ed5cb9fcd96c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_convex_triangle_mesh_builder" kindref="compound">PhysicsShapeConvexTriangleMeshBuilder</ref>;</highlight></codeline>
+<codeline lineno="140" refid="classnjli_1_1_world_factory_1a4dc6a23ee90da790604a65d9e0e504d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_bvh_triangle_mesh" kindref="compound">PhysicsShapeBvhTriangleMesh</ref>;</highlight></codeline>
+<codeline lineno="141" refid="classnjli_1_1_world_factory_1a14ad61e7f0d93976b4a05ddf2bcccf30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_bvh_triangle_mesh_builder" kindref="compound">PhysicsShapeBvhTriangleMeshBuilder</ref>;</highlight></codeline>
+<codeline lineno="142" refid="classnjli_1_1_world_factory_1af5f61f67c01c8aa161044e2f7669b8e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_heightfield_terrain" kindref="compound">PhysicsShapeHeightfieldTerrain</ref>;</highlight></codeline>
+<codeline lineno="143" refid="classnjli_1_1_world_factory_1a0d9797805600b9e2c132b57950ea7926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_heightfield_terrain_builder" kindref="compound">PhysicsShapeHeightfieldTerrainBuilder</ref>;</highlight></codeline>
+<codeline lineno="144" refid="classnjli_1_1_world_factory_1af4b40469a84199477879e33321c6f02a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_static_plane" kindref="compound">PhysicsShapeStaticPlane</ref>;</highlight></codeline>
+<codeline lineno="145" refid="classnjli_1_1_world_factory_1a04aa4ba3952aae7bb7bd4c31ad24a705" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_shape_static_plane_builder" kindref="compound">PhysicsShapeStaticPlaneBuilder</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classnjli_1_1_world_factory_1abd7959b8cbcd7c25bc6c0c8b1ea26ce6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref>;</highlight></codeline>
+<codeline lineno="148" refid="classnjli_1_1_world_factory_1ab5ea5e632e260cb2f092d2423645bc82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_physics_world_builder" kindref="compound">PhysicsWorldBuilder</ref>;</highlight></codeline>
+<codeline lineno="149" refid="classnjli_1_1_world_factory_1a89c71bac3ec153ca700e1cd69900b6ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_plane" kindref="compound">Plane</ref>;</highlight></codeline>
+<codeline lineno="150" refid="classnjli_1_1_world_factory_1abcb05c23b1eab15866956ae243491395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_plane_builder" kindref="compound">PlaneBuilder</ref>;</highlight></codeline>
+<codeline lineno="151" refid="classnjli_1_1_world_factory_1a032858ae1fe02d2d1170981c2af2d67c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="152" refid="classnjli_1_1_world_factory_1af744eb288828f7c98d57adeb8603027a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene_builder" kindref="compound">SceneBuilder</ref>;</highlight></codeline>
+<codeline lineno="153" refid="classnjli_1_1_world_factory_1ace13a6b81a7cce08dd6f9d0c1c00af04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene_state" kindref="compound">SceneState</ref>;</highlight></codeline>
+<codeline lineno="154" refid="classnjli_1_1_world_factory_1ab8cb8ab88a21ac3720ea996ba7e6aa9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene_state_builder" kindref="compound">SceneStateBuilder</ref>;</highlight></codeline>
+<codeline lineno="155" refid="classnjli_1_1_world_factory_1a0554623d5c61159d79d55a1d5a0f3c25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene_state_machine" kindref="compound">SceneStateMachine</ref>;</highlight></codeline>
+<codeline lineno="156" refid="classnjli_1_1_world_factory_1a4d92e8ea8141a3032ed9fcc2a7451218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_scene_state_machine_builder" kindref="compound">SceneStateMachineBuilder</ref>;</highlight></codeline>
+<codeline lineno="157" refid="classnjli_1_1_world_factory_1aef20119bde6aff11ffd23f3ea2131b86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref>;</highlight></codeline>
+<codeline lineno="158" refid="classnjli_1_1_world_factory_1a95d0213badfc8214cbfd42122b313cef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_shader_program_builder" kindref="compound">ShaderProgramBuilder</ref>;</highlight></codeline>
+<codeline lineno="159" refid="classnjli_1_1_world_factory_1a7d2180162b18e72eaec14e87269710da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_skinner" kindref="compound">Skinner</ref>;</highlight></codeline>
+<codeline lineno="160" refid="classnjli_1_1_world_factory_1a389430808fadd843bcbe0e688a805990" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_skinner_builder" kindref="compound">SkinnerBuilder</ref>;</highlight></codeline>
+<codeline lineno="161" refid="classnjli_1_1_world_factory_1a601e2cab15ade2e7f8e72cd6b68c3b1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_slider_h_u_d" kindref="compound">SliderHUD</ref>;</highlight></codeline>
+<codeline lineno="162" refid="classnjli_1_1_world_factory_1abf1112100157e104cac60cd5134cb52f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_slider_h_u_d_builder" kindref="compound">SliderHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="163" refid="classnjli_1_1_world_factory_1a50914f77c7cf4fb97616c898c5291f4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_sound" kindref="compound">Sound</ref>;</highlight></codeline>
+<codeline lineno="164" refid="classnjli_1_1_world_factory_1ae2f1c8c3b6e1df88a207c6189f601fce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_sound_builder" kindref="compound">SoundBuilder</ref>;</highlight></codeline>
+<codeline lineno="165" refid="classnjli_1_1_world_factory_1ac1e5ab02d2359e991783010c562791e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_sprite2_d" kindref="compound">Sprite2D</ref>;</highlight></codeline>
+<codeline lineno="166" refid="classnjli_1_1_world_factory_1a426536e3f63ba8c46a268e2fc01dc6d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_sprite2_d_builder" kindref="compound">Sprite2DBuilder</ref>;</highlight></codeline>
+<codeline lineno="167" refid="classnjli_1_1_world_factory_1a83269c8e3483e24989223393adfe4cc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_sprite_frame_atlas" kindref="compound">SpriteFrameAtlas</ref>;</highlight></codeline>
+<codeline lineno="168" refid="classnjli_1_1_world_factory_1a9a77a7ee21b233ff37780fdba5ff2655" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_sprite_frame_atlas_builder" kindref="compound">SpriteFrameAtlasBuilder</ref>;</highlight></codeline>
+<codeline lineno="169" refid="classnjli_1_1_world_factory_1a9cfe516a7abece038bff141a1bbe49f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_stop_watch" kindref="compound">StopWatch</ref>;</highlight></codeline>
+<codeline lineno="170" refid="classnjli_1_1_world_factory_1a0c05537ccc765fccea6bc44fdd1c27fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_stop_watch_builder" kindref="compound">StopWatchBuilder</ref>;</highlight></codeline>
+<codeline lineno="171" refid="classnjli_1_1_world_factory_1a043f6c225e4e72e1152c60f8c442fdc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_textbox_h_u_d" kindref="compound">TextboxHUD</ref>;</highlight></codeline>
+<codeline lineno="172" refid="classnjli_1_1_world_factory_1a750965b3f8531f8610b0ed8fe05c00e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_textbox_h_u_d_builder" kindref="compound">TextboxHUDBuilder</ref>;</highlight></codeline>
+<codeline lineno="173" refid="classnjli_1_1_world_factory_1a50de43af5bed41f30c071d8cce0e81bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="174" refid="classnjli_1_1_world_factory_1a4bf1b31126e9d45534b120a6e4af0c08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_timer_builder" kindref="compound">TimerBuilder</ref>;</highlight></codeline>
+<codeline lineno="175" refid="classnjli_1_1_world_factory_1adbc148eaddd341d7ae4d07c9e9e33bfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_thread" kindref="compound">Thread</ref>;</highlight></codeline>
+<codeline lineno="176" refid="classnjli_1_1_world_factory_1a96c37036c1767736e6aa216fd68b62a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_thread_builder" kindref="compound">ThreadBuilder</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classnjli_1_1_world_factory_1a59cdb6fe5b378389e35b8b2a2f4e990e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_state" kindref="compound">WorldState</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classnjli_1_1_world_factory_1a3d8dab2e937d753e7ddb14442e9acdea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_state_builder" kindref="compound">WorldStateBuilder</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classnjli_1_1_world_factory_1a737b3b9af90a96d9da0b4f27196f97d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_state_machine" kindref="compound">WorldStateMachine</ref>;</highlight></codeline>
+<codeline lineno="180" refid="classnjli_1_1_world_factory_1abe950a299dceab3248d0732737858b94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_state_machine_builder" kindref="compound">WorldStateMachineBuilder</ref>;</highlight></codeline>
+<codeline lineno="181" refid="classnjli_1_1_world_factory_1a6da91779d499b1ad3035fe196aecd99a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_xml" kindref="compound">Xml</ref>;</highlight></codeline>
+<codeline lineno="182" refid="classnjli_1_1_world_factory_1ab51c8e735775c191a627d07f8ca5890d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_xml_builder" kindref="compound">XmlBuilder</ref>;</highlight></codeline>
+<codeline lineno="183" refid="classnjli_1_1_world_factory_1a7b4bcdf992c21ae83363f25df05b1d25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world" kindref="compound">World</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>**<sp/><ref refid="classnjli_1_1_world_factory_1a6c379949bd79510d934515f9a0aa4008" kindref="member">createArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a460ca9070090b1516aa60255e8200de4" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a2998139e94a357430e4d3a26606d7efb" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref>&amp;);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1ad45e7eac9f28b683a29fc3e397549d84" kindref="member">clone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>&amp;,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a6de4857f488e1ff055b8160620102615" kindref="member">has</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1ace215cda602d0bc17315d755036fb497" kindref="member">destroy</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>array<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a40a00fcf24618fa8e4c037efe19119d9" kindref="member">destroyArray</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>**,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRenderObject<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a65cfc38185622e37a14ce386de2365da" kindref="member">destroyAll</ref>();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a460ca9070090b1516aa60255e8200de4" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1ad0cad99d856f764d363c823b1d778990" kindref="member">numberOfReferences</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1ae2f30af43e11fee85059589ce05bdac5" kindref="member">getAll</ref>(std::vector&lt;AbstractFactoryObject*&gt;&amp;<sp/>objects)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1ada9249d9e9a89d724e5eb47e991014a4" kindref="member">index</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a3361e71f5627dc003a8655de1358f8a7" kindref="member">serialize</ref>(btSerializer*<sp/>serializer);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classnjli_1_1_world_factory_1ac66422fbed2f23d7c7054b0591a44373" kindref="member">getClassName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a3b8c1fe1c043d061a0a24970b6d54ef5" kindref="member">getType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a3d793e4bc22b7a72b733d62c6241c62f" kindref="member">isBuilder</ref>(<ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_world_factory_1a726158c2c7cfe4b1f1311e2c15c37f07" kindref="member">WorldFactory</ref>();</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1ab3de541502ca2ed1c281119e43d42863" kindref="member">~WorldFactory</ref>();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a71669f6be7839a3634d9037e15ba5e31" kindref="member">ctor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>&amp;<sp/><ref refid="classnjli_1_1_world_factory_1a460ca9070090b1516aa60255e8200de4" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>**<sp/><ref refid="classnjli_1_1_world_factory_1a71669f6be7839a3634d9037e15ba5e31" kindref="member">ctor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>&amp;<sp/>idx,<sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a460ca9070090b1516aa60255e8200de4" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a71669f6be7839a3634d9037e15ba5e31" kindref="member">ctor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">njli::AbstractBuilder</ref>&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a71669f6be7839a3634d9037e15ba5e31" kindref="member">ctor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a96f0ae6c8b847996217dd0737973b208" kindref="member">create_Internal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref>);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1a96f0ae6c8b847996217dd0737973b208" kindref="member">create_Internal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref>&amp;);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*<sp/><ref refid="classnjli_1_1_world_factory_1ac13a667d3fe7bd186096b985dfca1ba8" kindref="member">clone_Internal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>&amp;,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a16e5466e3041d3abd9715b66742e9374" kindref="member">numberOfObjects_Internal</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a2e3f3c897e12187b0413ed58b85fba9b" kindref="member">removeObject_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1adda8260e8e970db55234fd12f13ce093" kindref="member">addObject_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a557648faef4c6347863c1c447182982a" kindref="member">numberOfArrayObjects_Internal</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1afceced94230870133427e27148963c58" kindref="member">removeArrayObject_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>**);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1ab9fb791c31f5fda79de73949e32fd65a" kindref="member">addArrayObject_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>**);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_world_factory_1a3adffe81b38fb2a57d28405f5b299211" kindref="member">numberOfReferences_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*);</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a739d97d5e0c332971564768bfa5e12c5" kindref="member">removeReference_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1aadfd67f947c9ff8159f20fb3b6a893b0" kindref="member">addReference_Internal</ref>(<ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref>*);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a8a119571be5748f45d525cfed1b66b6c" kindref="member">collectGarbage</ref>();</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a4258bfb2c3a440d06c4aaa3c2b450dde" kindref="member">s64</ref><sp/><ref refid="classnjli_1_1_world_factory_1aa3090848f6fa06c4e71fc2a155fd558a" kindref="member">collectGarbageSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_world_factory_1a0f79c06f6add6fb56e77b4ee93d92574" kindref="member">collectGarbage_GPU</ref>();</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a4258bfb2c3a440d06c4aaa3c2b450dde" kindref="member">s64</ref><sp/><ref refid="classnjli_1_1_world_factory_1a5d1da7f6e56ed127d22e49baa2aa76a8" kindref="member">collectGarbage_GPUSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="485" refid="classnjli_1_1_world_factory_1ad8c7adb588d481784128249f971d0bde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ObjectList<sp/><ref refid="classnjli_1_1_world_factory_1ad8c7adb588d481784128249f971d0bde" kindref="member">m_ObjectList</ref>;</highlight></codeline>
+<codeline lineno="486" refid="classnjli_1_1_world_factory_1a0502a6e72721c46c66ce443e5d051085" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ObjectArrayList<sp/><ref refid="classnjli_1_1_world_factory_1a0502a6e72721c46c66ce443e5d051085" kindref="member">m_ObjectArrayList</ref>;</highlight></codeline>
+<codeline lineno="487" refid="classnjli_1_1_world_factory_1a1adb9a8f15198258dd3bbe3bedd2de2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ObjectDuplicateMap<sp/><ref refid="classnjli_1_1_world_factory_1a1adb9a8f15198258dd3bbe3bedd2de2b" kindref="member">m_ObjectDuplicateMap</ref>;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489" refid="classnjli_1_1_world_factory_1a9f786a2b7ca464a3a1a391283d8e4b23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AbstractFactoryObject*&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a9f786a2b7ca464a3a1a391283d8e4b23" kindref="member">m_ObjectsToDelete</ref>;</highlight></codeline>
+<codeline lineno="490" refid="classnjli_1_1_world_factory_1a8ed01a184e70e5f80d442af0dbe24c5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AbstractFactoryObject**&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a8ed01a184e70e5f80d442af0dbe24c5e" kindref="member">m_ArrayObjectsToDelete</ref>;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492" refid="classnjli_1_1_world_factory_1a5cb1fb329965dbb78c19e16092b9ed52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AbstractFactoryObject*&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a5cb1fb329965dbb78c19e16092b9ed52" kindref="member">m_ObjectsToDelete_GPU</ref>;</highlight></codeline>
+<codeline lineno="493" refid="classnjli_1_1_world_factory_1a6c68af6211ab6c9daac880ee67d6eb07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AbstractFactoryObject**&gt;<sp/><ref refid="classnjli_1_1_world_factory_1a6c68af6211ab6c9daac880ee67d6eb07" kindref="member">m_ArrayObjectsToDelete_GPU</ref>;</highlight></codeline>
+<codeline lineno="494"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="495"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.h"/>
+  </compounddef>
+</doxygen>

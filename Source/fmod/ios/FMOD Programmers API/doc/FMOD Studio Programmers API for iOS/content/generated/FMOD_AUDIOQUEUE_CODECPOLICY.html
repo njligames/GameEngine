@@ -1,0 +1,32 @@
+<LINK REL="stylesheet" HREF="../static/styles.css">
+<HTML>
+<HEAD>
+<TITLE>FMOD_AUDIOQUEUE_CODECPOLICY</TITLE>
+</HEAD>
+<BODY TOPMARGIN="0" class="api_reference">
+<p class="header">Firelight Technologies FMOD Studio API</p>
+<H1>FMOD_AUDIOQUEUE_CODECPOLICY</H1>
+<P>
+<p>Control whether the sound will use a the dedicated hardware decoder or a software codec.</p>
+</P>
+<h3>Enumeration</h3>
+<PRE class=syntax><CODE>typedef enum {
+  FMOD_AUDIOQUEUE_CODECPOLICY_DEFAULT,
+  FMOD_AUDIOQUEUE_CODECPOLICY_SOFTWAREONLY,
+  FMOD_AUDIOQUEUE_CODECPOLICY_HARDWAREONLY
+} FMOD_AUDIOQUEUE_CODECPOLICY;
+</CODE></PRE>
+<h2>Values</h2>
+<P class=dt><I>FMOD_AUDIOQUEUE_CODECPOLICY_DEFAULT</I></P>
+<P class=indent>Try hardware first, if it's in use or prohibited by audio session, try software. </P>
+<P class=dt><I>FMOD_AUDIOQUEUE_CODECPOLICY_SOFTWAREONLY</I></P>
+<P class=indent>kAudioQueueHardwareCodecPolicy_UseSoftwareOnly ~ try software, if not available fail. </P>
+<P class=dt><I>FMOD_AUDIOQUEUE_CODECPOLICY_HARDWAREONLY</I></P>
+<P class=indent>kAudioQueueHardwareCodecPolicy_UseHardwareOnly ~ try hardware, if not available fail. </P>
+<h2>Remarks</h2><P>
+<p>Every devices has a single hardware decoder and unlimited software decoders.</p>
+</P>
+<BR><BR><BR>
+<P align=center><font size=-2>Version 1.08.00 Built on Mar 4, 2016</font></P>
+<BR>
+</HTML>

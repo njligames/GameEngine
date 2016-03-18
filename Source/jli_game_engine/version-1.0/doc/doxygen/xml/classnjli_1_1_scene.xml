@@ -1,0 +1,1725 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_scene" kind="class" prot="public">
+    <compoundname>njli::Scene</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_factory_object" prot="public" virt="non-virtual">njli::AbstractFactoryObject</basecompoundref>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classnjli_1_1_scene_1acb96ebb09abe8f2a37a915a842babfac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="45" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_scene_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class World</definition>
+        <argsstring></argsstring>
+        <name>World</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="46" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_scene_1a6db9d28bd448a131448276ee03de1e6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Node</definition>
+        <argsstring></argsstring>
+        <name>Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="47" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_scene_1a5a2020205bbce2fe559331689dd5d3c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldInput</definition>
+        <argsstring></argsstring>
+        <name>WorldInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="48" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classnjli_1_1_scene_1a59cdb6fe5b378389e35b8b2a2f4e990e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WorldState</definition>
+        <argsstring></argsstring>
+        <name>WorldState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="49" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a43647a8e0be9fc885b5154c1af895afa" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+        <definition>Node* njli::Scene::m_RootNode</definition>
+        <argsstring></argsstring>
+        <name>m_RootNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="395" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1af74cab422e8f225410580c3094a621ab" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_scene_state_machine" kindref="compound">SceneStateMachine</ref> *</type>
+        <definition>SceneStateMachine* njli::Scene::m_SceneStateMachine</definition>
+        <argsstring></argsstring>
+        <name>m_SceneStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="396" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1ae68fc17490d0d3afc6aa5ac61cde8944" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+        <definition>Material* njli::Scene::m_BackgroundMaterial</definition>
+        <argsstring></argsstring>
+        <name>m_BackgroundMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="398" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a987c6686913633182f6d4d71a917872a" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref> *</type>
+        <definition>PhysicsWorld* njli::Scene::m_PhysicsWorld</definition>
+        <argsstring></argsstring>
+        <name>m_PhysicsWorld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="399" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a23ab43beff4af464ec9ea551aa892a84" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> * &gt;</type>
+        <definition>std::vector&lt;Clock*&gt; njli::Scene::m_ClockList</definition>
+        <argsstring></argsstring>
+        <name>m_ClockList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="400" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a41a8ee42401a0e68da0820a980b9b042" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref> * &gt;</type>
+        <definition>std::vector&lt;Geometry*&gt; njli::Scene::m_ActiveGeometries</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveGeometries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="403" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1abe73b94214ffe8887d59a09a94bd4ec6" prot="private" static="no" mutable="no">
+        <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> * &gt; *</type>
+        <definition>btAlignedObjectArray&lt;Camera*&gt;* njli::Scene::m_ActiveCameras</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveCameras</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="405" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a076af6349b415c06d86800ded39d0880" prot="private" static="no" mutable="no">
+        <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_node" kindref="compound">Node</ref> * &gt; *</type>
+        <definition>btAlignedObjectArray&lt;Node*&gt;* njli::Scene::m_ActiveNodes</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="406" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a9e2632db11c766c01c3895648d8dc3d6" prot="private" static="no" mutable="no">
+        <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref> * &gt; *</type>
+        <definition>btAlignedObjectArray&lt;ParticleEmitter*&gt;* njli::Scene::m_ActiveParticleEmitters</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveParticleEmitters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="408" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1a52406da635df8eccbda23477113a472d" prot="private" static="no" mutable="no">
+        <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> * &gt; *</type>
+        <definition>btAlignedObjectArray&lt;Clock*&gt;* njli::Scene::m_ActiveClocks</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveClocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="409" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_scene_1ab32ba0913f59d782b2b9bbeea39be250" prot="private" static="no" mutable="no">
+        <type>btAlignedObjectArray&lt; <ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref> * &gt; *</type>
+        <definition>btAlignedObjectArray&lt;Geometry*&gt;* njli::Scene::m_ActiveGeometry</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveGeometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="410" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_scene_1af5b5f627027c8c24f6a9eb27c1cb1dbf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="52" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="37" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ab7db7cebb1627f136ea6831bb455a073" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Scene::Scene</definition>
+        <argsstring>(const AbstractBuilder &amp;)</argsstring>
+        <name>Scene</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref> &amp;</type>
+          <defname>builder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="53" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="55" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a833d4549a6020037969b44d7dc766027" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Scene::Scene</definition>
+        <argsstring>(const Scene &amp;)</argsstring>
+        <name>Scene</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <defname>copy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="54" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="73" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a04e4c63725b6fc0df8581eb71231d18d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::Scene::BT_DECLARE_ALIGNED_ALLOCATOR</definition>
+        <argsstring>()</argsstring>
+        <name>BT_DECLARE_ALIGNED_ALLOCATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a817eeb559aaf499ed6b638ebafca1789" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="56" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="91" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ad99f4f5cb53d3330628071f08d7533d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+        <definition>Scene &amp; njli::Scene::operator=</definition>
+        <argsstring>(const Scene &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <defname>rhs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="57" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1aad491cfead02896db73ba6271d58a298" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::update</definition>
+        <argsstring>(f32 timeStep, const u32 numSubSteps=2)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>timeStep</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>numSubSteps</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="168" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="251" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1adc510ff6029dca669031a031d9ca0069" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="169" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="307" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1af8678a1d8c84d02cda6029f4afdaf484" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addActiveCamera</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>addActiveCamera</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; &lt;#Description#&gt; &lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="375" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="719" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a27894158aebeba1a3251efa33c41aa71" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeActiveCamera</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>removeActiveCamera</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="376" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="726" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1af1b996e40edb70d8eff9b3aef11f9197" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addActiveNode</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>addActiveNode</name>
+        <param>
+          <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="378" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="732" bodyend="738"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a5a826df53ef02ccb6bdcd7969c186162" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeActiveNode</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>removeActiveNode</name>
+        <param>
+          <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="379" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="739" bodyend="744"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ac4345dcab380f4f28240047f684100a8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addActiveParticleEmitter</definition>
+        <argsstring>(ParticleEmitter *particleEmitter)</argsstring>
+        <name>addActiveParticleEmitter</name>
+        <param>
+          <type><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref> *</type>
+          <declname>particleEmitter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="381" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="745" bodyend="753"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a09172111155b23406c7110982fbce2bc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeActiveParticleEmitter</definition>
+        <argsstring>(ParticleEmitter *particleEmitter)</argsstring>
+        <name>removeActiveParticleEmitter</name>
+        <param>
+          <type><ref refid="classnjli_1_1_particle_emitter" kindref="compound">ParticleEmitter</ref> *</type>
+          <declname>particleEmitter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="382" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="754" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a8ccfdf570bddfeda002ab780f14223a0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addActiveClock</definition>
+        <argsstring>(Clock *clock)</argsstring>
+        <name>addActiveClock</name>
+        <param>
+          <type><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="384" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="762" bodyend="768"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a31e1f83511a7340324c21cb1285ed0a2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeActiveClock</definition>
+        <argsstring>(Clock *clock)</argsstring>
+        <name>removeActiveClock</name>
+        <param>
+          <type><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="385" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="769" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1aadb34e2132fede8f4a3dc0a9fdbb9d2c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addActiveGeometry</definition>
+        <argsstring>(Geometry *clock)</argsstring>
+        <name>addActiveGeometry</name>
+        <param>
+          <type><ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="387" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="775" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1af4f7c3b7b136bbf4f8aad6640814b9a3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeActiveGeometry</definition>
+        <argsstring>(Geometry *clock)</argsstring>
+        <name>removeActiveGeometry</name>
+        <param>
+          <type><ref refid="classnjli_1_1_geometry" kindref="compound">Geometry</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="388" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="782" bodyend="787"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ad8f34eff6d8d4fff8c293936b316f4b9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::clearNodeTouches</definition>
+        <argsstring>()</argsstring>
+        <name>clearNodeTouches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="390" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="789" bodyend="795"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a7a3b03d4a7537c7716f88ba8e10af13a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::clearAllStates</definition>
+        <argsstring>()</argsstring>
+        <name>clearAllStates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="392" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="797" bodyend="813"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_scene_1a0707038e994ae3bed22babf6e776a044" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::Scene::calculateSerializeBufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>calculateSerializeBufferSize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a4763d05bc9dc37c559111f8bb30e1dd8">calculateSerializeBufferSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="73" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a2f62aff9de100ccc100381a8961fa107" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::serialize</definition>
+        <argsstring>(void *, btSerializer *) const </argsstring>
+        <name>serialize</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1aad2fbe86fb3bdecf02918a96b9c57976">serialize</reimplements>
+        <param>
+          <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref> *</type>
+          <defname>dataBuffer</defname>
+        </param>
+        <param>
+          <type>btSerializer *</type>
+          <defname>serializer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>btSerializer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#btSerializer description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="79" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a9501100c7cb40aa14f2b404a9eb14a8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::Scene::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1af4151e41b80d5bc3fc42822c67fc2278">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="86" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a0f264baa2c26987faf1121afbc14bdb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::Scene::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a207c86146d40d0794708ae7f2d4e60a7">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="92" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1af7e103d6bae0a80691c78ca17b649f0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::Scene::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_factory_object_1a838f4fa7e65cace6098aab5222892942">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="98" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a59f6db36b0f7af0f0da9fad35d489a5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addRootNode</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>addRootNode</name>
+        <param>
+          <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#node description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="177" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="366" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ae29659499a79266189dbed583e262873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeRootNode</definition>
+        <argsstring>()</argsstring>
+        <name>removeRootNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="181" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="380" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1afbbba85f0713ce1366b2bdc838908e76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+        <definition>Node * njli::Scene::getRootNode</definition>
+        <argsstring>()</argsstring>
+        <name>getRootNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="187" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="393" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1aa240923d4d9d2915578e799b283e70f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_node" kindref="compound">Node</ref> *</type>
+        <definition>const Node * njli::Scene::getRootNode</definition>
+        <argsstring>() const </argsstring>
+        <name>getRootNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="193" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="401" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ae38e36bb5b256c846f22a2740a954a43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene_state_machine" kindref="compound">SceneStateMachine</ref> *</type>
+        <definition>SceneStateMachine * njli::Scene::getStateMachine</definition>
+        <argsstring>()</argsstring>
+        <name>getStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="200" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="409" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ad2d9a121ea179363f9fcb09f42816a75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_scene_state_machine" kindref="compound">SceneStateMachine</ref> *</type>
+        <definition>const SceneStateMachine * njli::Scene::getStateMachine</definition>
+        <argsstring>() const </argsstring>
+        <name>getStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="206" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="417" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ab67517186a935dae9dca439f31c5154a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeStateMachine</definition>
+        <argsstring>()</argsstring>
+        <name>removeStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="208" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="425" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a1df198e68ada8de3eb23caa2eba04f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addBackground</definition>
+        <argsstring>(Material *material)</argsstring>
+        <name>addBackground</name>
+        <param>
+          <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+          <declname>material</declname>
+        </param>
+        <briefdescription>
+<para>&lt;#Description#&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#emitter description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#emitter description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt; &lt;#Description#&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particleEmitters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#particleEmitters description#&gt; &lt;#Description#&gt;</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+<simplesect kind="author"><para>James Folk, 16-02-11 17:02:26</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>material</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#material description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="268" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="528" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a9186fa26416275bd05fdcc0357fa1745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeBackground</definition>
+        <argsstring>()</argsstring>
+        <name>removeBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="272" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="540" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a12ecfd14510a44dfa83274a8c12c29ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+        <definition>Material * njli::Scene::getBackground</definition>
+        <argsstring>()</argsstring>
+        <name>getBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="278" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="548" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a11cb91df34a699520f0a046c71b11565" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+        <definition>const Material * njli::Scene::getBackground</definition>
+        <argsstring>() const </argsstring>
+        <name>getBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="284" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="556" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a90def3d75ecf11778a5728de8bb1d4af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::addPhysicsWorld</definition>
+        <argsstring>(PhysicsWorld *world)</argsstring>
+        <name>addPhysicsWorld</name>
+        <param>
+          <type><ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref> *</type>
+          <declname>world</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#world description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="291" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="564" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a967c76f1e30d1690cd5c7425f3dd2f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removePhysicsWorld</definition>
+        <argsstring>()</argsstring>
+        <name>removePhysicsWorld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="295" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="578" bodyend="586"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a122a2588d621f218327f09b6fafaead0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref> *</type>
+        <definition>PhysicsWorld * njli::Scene::getPhysicsWorld</definition>
+        <argsstring>()</argsstring>
+        <name>getPhysicsWorld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="301" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="588" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a43084ffbe6481515c8bd133d0e939e0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_physics_world" kindref="compound">PhysicsWorld</ref> *</type>
+        <definition>const PhysicsWorld * njli::Scene::getPhysicsWorld</definition>
+        <argsstring>() const </argsstring>
+        <name>getPhysicsWorld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="307" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="596" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a666d9639161eaad751d3ff373325b33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::Scene::addClock</definition>
+        <argsstring>(Clock *clock)</argsstring>
+        <name>addClock</name>
+        <param>
+          <type><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#clock description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="316" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="604" bodyend="624"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a52ebc14871130c84d52d2db461cdd1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::Scene::removeClock</definition>
+        <argsstring>(Clock *clock)</argsstring>
+        <name>removeClock</name>
+        <param>
+          <type><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#clock description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="324" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="626" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a245ec2b188fb22f97e58d2bbca676424" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::removeAllClocks</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllClocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="328" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="643" bodyend="652"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a4ebd612572eb4427a0fbc6253595559b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::getClocks</definition>
+        <argsstring>(std::vector&lt; Clock * &gt; &amp;clocks) const </argsstring>
+        <name>getClocks</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> * &gt; &amp;</type>
+          <declname>clocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clocks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#clocks description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="334" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="654" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1aa003e8d6eeddcc4a035f4660b2b22592" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::Scene::getClockIndex</definition>
+        <argsstring>(Clock *clock) const </argsstring>
+        <name>getClockIndex</name>
+        <param>
+          <type><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#clock description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="342" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="665" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a20db92de3bd211d7ee6ac54e224e7d59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+        <definition>Clock * njli::Scene::getClock</definition>
+        <argsstring>(const u32 index)</argsstring>
+        <name>getClock</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="350" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="676" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a683151c7da5638bdbc9c0d5af4ab833c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_clock" kindref="compound">Clock</ref> *</type>
+        <definition>const Clock * njli::Scene::getClock</definition>
+        <argsstring>(const u32 index) const </argsstring>
+        <name>getClock</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#index description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="358" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="687" bodyend="696"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_scene_1ad64cbb97e7e84d5d87983c0347255ddd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> **</type>
+        <definition>Scene ** njli::Scene::createArray</definition>
+        <argsstring>(const u32 size)</argsstring>
+        <name>createArray</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#size description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="107" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ac2c8df0a9f3a2431616695a431d02454" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::destroyArray</definition>
+        <argsstring>(Scene **array, const u32 size=0)</argsstring>
+        <name>destroyArray</name>
+        <param>
+          <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#array description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="113" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a61a4e750719d86e456fd5a4abc9a07f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene * njli::Scene::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="119" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a7f10f9629740b036c78a63d4b0316c8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene * njli::Scene::create</definition>
+        <argsstring>(const SceneBuilder &amp;builder)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene_builder" kindref="compound">SceneBuilder</ref> &amp;</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>builder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#builder description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="127" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a293b5ea74645a774f41073830c793d88" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene * njli::Scene::clone</definition>
+        <argsstring>(const Scene &amp;object)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="135" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1adcbb1f5c0aba762c0f473f6d039311c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene * njli::Scene::copy</definition>
+        <argsstring>(const Scene &amp;object)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="143" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1ad35fda4699c0bc0849fe2a0f8ef87d1b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::destroy</definition>
+        <argsstring>(Scene *object)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="149" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="167" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1a3b7117279d96c87c6fd8b06204b58661" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::Scene::load</definition>
+        <argsstring>(Scene &amp;object, lua_State *L, int stack_index)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>lua_State *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stack_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#object description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#L description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#stack_index description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="157" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="185" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_scene_1adbe1acb134a946e54d85b865c5bd6193" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+        <definition>u32 njli::Scene::type</definition>
+        <argsstring>()</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="163" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.cpp" bodystart="246" bodyend="249"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>&lt;#Description#&gt; </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3962">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3963" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3964">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="3963">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3964" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3961">
+        <label>njli::Scene</label>
+        <link refid="classnjli_1_1_scene"/>
+        <childnode refid="3962" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3966">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="3967" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3990">
+        <label>njli::AbstractStateMachine&lt; Scene &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3991" relation="usage">
+          <edgelabel>m_pCurrentState</edgelabel>
+          <edgelabel>m_pPreviousState</edgelabel>
+        </childnode>
+      </node>
+      <node id="3980">
+        <label>njli::AbstractStateMachine&lt; Node &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3981" relation="usage">
+          <edgelabel>m_pCurrentState</edgelabel>
+          <edgelabel>m_pPreviousState</edgelabel>
+        </childnode>
+      </node>
+      <node id="3968">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="3968" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3988">
+        <label>btDbvt::ICollide</label>
+      </node>
+      <node id="3969">
+        <label>njli::PhysicsWorld</label>
+        <link refid="classnjli_1_1_physics_world"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3979">
+        <label>njli::NodeStateMachine</label>
+        <link refid="classnjli_1_1_node_state_machine"/>
+        <childnode refid="3980" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3978">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="3974">
+        <label>njli::Image</label>
+        <link refid="classnjli_1_1_image"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3971">
+        <label>njli::AbstractActionable</label>
+        <link refid="classnjli_1_1_abstract_actionable"/>
+      </node>
+      <node id="3967">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="3968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3986">
+        <label>njli::OcclusionBuffer</label>
+        <link refid="structnjli_1_1_occlusion_buffer"/>
+        <childnode refid="3985" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="3984">
+        <label>njli::PhysicsShape</label>
+        <link refid="classnjli_1_1_physics_shape"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3987">
+        <label>njli::SceneRenderer</label>
+        <link refid="classnjli_1_1_scene_renderer"/>
+        <childnode refid="3988" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3986" relation="usage">
+          <edgelabel>m_ocb</edgelabel>
+        </childnode>
+        <childnode refid="3985" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="3972">
+        <label>njli::PhysicsField</label>
+        <link refid="classnjli_1_1_physics_field"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3976">
+        <label>njli::Material</label>
+        <link refid="classnjli_1_1_material"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3977" relation="usage">
+          <edgelabel>m_Specular</edgelabel>
+          <edgelabel>m_Reflective</edgelabel>
+          <edgelabel>m_Diffuse</edgelabel>
+          <edgelabel>m_Multiply</edgelabel>
+          <edgelabel>m_Emission</edgelabel>
+          <edgelabel>m_Normal</edgelabel>
+          <edgelabel>m_Transparent</edgelabel>
+          <edgelabel>m_Ambient</edgelabel>
+        </childnode>
+      </node>
+      <node id="3970">
+        <label>njli::Node</label>
+        <link refid="classnjli_1_1_node"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3971" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3972" relation="usage">
+          <edgelabel>m_PhysicsField</edgelabel>
+        </childnode>
+        <childnode refid="3970" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="3973" relation="usage">
+          <edgelabel>m_Geometry</edgelabel>
+        </childnode>
+        <childnode refid="3979" relation="usage">
+          <edgelabel>m_NodeStateMachine</edgelabel>
+        </childnode>
+        <childnode refid="3982" relation="usage">
+          <edgelabel>m_Light</edgelabel>
+        </childnode>
+        <childnode refid="3983" relation="usage">
+          <edgelabel>m_PhysicsBody</edgelabel>
+        </childnode>
+        <childnode refid="3985" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="3985">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3986" relation="usage">
+          <edgelabel>m_OcclusionBuffer</edgelabel>
+        </childnode>
+        <childnode refid="3987" relation="usage">
+          <edgelabel>m_SceneRenderer</edgelabel>
+        </childnode>
+      </node>
+      <node id="3981">
+        <label>njli::AbstractState&lt; Node &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3989">
+        <label>njli::SceneStateMachine</label>
+        <link refid="classnjli_1_1_scene_state_machine"/>
+        <childnode refid="3990" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3965">
+        <label>njli::Scene</label>
+        <link refid="classnjli_1_1_scene"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3969" relation="usage">
+          <edgelabel>m_PhysicsWorld</edgelabel>
+        </childnode>
+        <childnode refid="3970" relation="usage">
+          <edgelabel>m_RootNode</edgelabel>
+        </childnode>
+        <childnode refid="3976" relation="usage">
+          <edgelabel>m_BackgroundMaterial</edgelabel>
+        </childnode>
+        <childnode refid="3989" relation="usage">
+          <edgelabel>m_SceneStateMachine</edgelabel>
+        </childnode>
+      </node>
+      <node id="3991">
+        <label>njli::AbstractState&lt; Scene &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3977">
+        <label>njli::MaterialProperty</label>
+        <link refid="classnjli_1_1_material_property"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3974" relation="usage">
+          <edgelabel>m_loadGPU_images</edgelabel>
+        </childnode>
+        <childnode refid="3978" relation="usage">
+          <edgelabel>m_AbstractFrameBufferObject</edgelabel>
+          <edgelabel>m_loadGPU_fbo</edgelabel>
+        </childnode>
+      </node>
+      <node id="3983">
+        <label>njli::PhysicsBody</label>
+        <link refid="classnjli_1_1_physics_body"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3984" relation="usage">
+          <edgelabel>m_PhysicsShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="3973">
+        <label>njli::Geometry</label>
+        <link refid="classnjli_1_1_geometry"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3974" relation="usage">
+          <edgelabel>m_setupOpacity_Image</edgelabel>
+        </childnode>
+        <childnode refid="3975" relation="usage">
+          <edgelabel>m_ShaderProgram</edgelabel>
+        </childnode>
+        <childnode refid="3976" relation="usage">
+          <edgelabel>m_setupOpacity_Material</edgelabel>
+          <edgelabel>m_Material</edgelabel>
+        </childnode>
+      </node>
+      <node id="3975">
+        <label>njli::ShaderProgram</label>
+        <link refid="classnjli_1_1_shader_program"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3982">
+        <label>njli::Light</label>
+        <link refid="classnjli_1_1_light"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" line="44" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Scene.h" bodystart="42" bodyend="411"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad8a2eaf0b14375ad9739a8968429739e" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_scene_1af8678a1d8c84d02cda6029f4afdaf484" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>addActiveCamera</name></member>
+      <member refid="classnjli_1_1_scene_1a8ccfdf570bddfeda002ab780f14223a0" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>addActiveClock</name></member>
+      <member refid="classnjli_1_1_scene_1aadb34e2132fede8f4a3dc0a9fdbb9d2c" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>addActiveGeometry</name></member>
+      <member refid="classnjli_1_1_scene_1af1b996e40edb70d8eff9b3aef11f9197" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>addActiveNode</name></member>
+      <member refid="classnjli_1_1_scene_1ac4345dcab380f4f28240047f684100a8" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>addActiveParticleEmitter</name></member>
+      <member refid="classnjli_1_1_scene_1a1df198e68ada8de3eb23caa2eba04f5b" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>addBackground</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_scene_1a666d9639161eaad751d3ff373325b33e" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>addClock</name></member>
+      <member refid="classnjli_1_1_scene_1a90def3d75ecf11778a5728de8bb1d4af" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>addPhysicsWorld</name></member>
+      <member refid="classnjli_1_1_scene_1a59f6db36b0f7af0f0da9fad35d489a5e" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>addRootNode</name></member>
+      <member refid="classnjli_1_1_scene_1a04e4c63725b6fc0df8581eb71231d18d" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>BT_DECLARE_ALIGNED_ALLOCATOR</name></member>
+      <member refid="classnjli_1_1_scene_1a0707038e994ae3bed22babf6e776a044" prot="public" virt="virtual"><scope>njli::Scene</scope><name>calculateSerializeBufferSize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a479f2ca6ff107902aad2458c326726e1" prot="protected" virt="virtual"><scope>njli::Scene</scope><name>canDelete</name></member>
+      <member refid="classnjli_1_1_scene_1a7a3b03d4a7537c7716f88ba8e10af13a" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>clearAllStates</name></member>
+      <member refid="classnjli_1_1_scene_1ad8f34eff6d8d4fff8c293936b316f4b9" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>clearNodeTouches</name></member>
+      <member refid="classnjli_1_1_scene_1a293b5ea74645a774f41073830c793d88" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1ad9750ee376e973e4e45ef5b8d566efc4" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::Scene</scope><name>clone</name></member>
+      <member refid="classnjli_1_1_scene_1adcbb1f5c0aba762c0f473f6d039311c7" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>copy</name></member>
+      <member refid="classnjli_1_1_scene_1a61a4e750719d86e456fd5a4abc9a07f5" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>create</name></member>
+      <member refid="classnjli_1_1_scene_1a7f10f9629740b036c78a63d4b0316c8c" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>create</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::Scene</scope><name>create</name></member>
+      <member refid="classnjli_1_1_scene_1ad64cbb97e7e84d5d87983c0347255ddd" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>createArray</name></member>
+      <member refid="classnjli_1_1_scene_1ad35fda4699c0bc0849fe2a0f8ef87d1b" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8776a16a4f861e556bd9395c8a93ba71" prot="public" virt="virtual" ambiguityscope="njli::AbstractFactoryObject::"><scope>njli::Scene</scope><name>destroy</name></member>
+      <member refid="classnjli_1_1_scene_1ac2c8df0a9f3a2431616695a431d02454" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>destroyArray</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a798a7b4650cbdf87d7839f4ab5b70b78" prot="protected" virt="virtual"><scope>njli::Scene</scope><name>enableCanDelete</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a87597409cecc91b4d40be5e9b3a2d4dc" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>enableRenderObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_scene_1a12ecfd14510a44dfa83274a8c12c29ef" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getBackground</name></member>
+      <member refid="classnjli_1_1_scene_1a11cb91df34a699520f0a046c71b11565" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getBackground</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_scene_1a9501100c7cb40aa14f2b404a9eb14a8d" prot="public" virt="virtual"><scope>njli::Scene</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_scene_1a20db92de3bd211d7ee6ac54e224e7d59" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getClock</name></member>
+      <member refid="classnjli_1_1_scene_1a683151c7da5638bdbc9c0d5af4ab833c" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getClock</name></member>
+      <member refid="classnjli_1_1_scene_1aa003e8d6eeddcc4a035f4660b2b22592" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getClockIndex</name></member>
+      <member refid="classnjli_1_1_scene_1a4ebd612572eb4427a0fbc6253595559b" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getClocks</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_scene_1a122a2588d621f218327f09b6fafaead0" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getPhysicsWorld</name></member>
+      <member refid="classnjli_1_1_scene_1a43084ffbe6481515c8bd133d0e939e0e" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getPhysicsWorld</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getPointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getPointerValue</name></member>
+      <member refid="classnjli_1_1_scene_1afbbba85f0713ce1366b2bdc838908e76" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getRootNode</name></member>
+      <member refid="classnjli_1_1_scene_1aa240923d4d9d2915578e799b283e70f7" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getRootNode</name></member>
+      <member refid="classnjli_1_1_scene_1ae38e36bb5b256c846f22a2740a954a43" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getStateMachine</name></member>
+      <member refid="classnjli_1_1_scene_1ad2d9a121ea179363f9fcb09f42816a75" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>getStateMachine</name></member>
+      <member refid="classnjli_1_1_scene_1a0f264baa2c26987faf1121afbc14bdb2" prot="public" virt="virtual"><scope>njli::Scene</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a31be74226dae8b0e6fd8a0859b1bc527" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>isRenderObject</name></member>
+      <member refid="classnjli_1_1_scene_1a3b7117279d96c87c6fd8b06204b58661" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>load</name></member>
+      <member refid="classnjli_1_1_scene_1abe73b94214ffe8887d59a09a94bd4ec6" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ActiveCameras</name></member>
+      <member refid="classnjli_1_1_scene_1a52406da635df8eccbda23477113a472d" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ActiveClocks</name></member>
+      <member refid="classnjli_1_1_scene_1a41a8ee42401a0e68da0820a980b9b042" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ActiveGeometries</name></member>
+      <member refid="classnjli_1_1_scene_1ab32ba0913f59d782b2b9bbeea39be250" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ActiveGeometry</name></member>
+      <member refid="classnjli_1_1_scene_1a076af6349b415c06d86800ded39d0880" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ActiveNodes</name></member>
+      <member refid="classnjli_1_1_scene_1a9e2632db11c766c01c3895648d8dc3d6" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ActiveParticleEmitters</name></member>
+      <member refid="classnjli_1_1_scene_1ae68fc17490d0d3afc6aa5ac61cde8944" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_BackgroundMaterial</name></member>
+      <member refid="classnjli_1_1_scene_1a23ab43beff4af464ec9ea551aa892a84" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_ClockList</name></member>
+      <member refid="classnjli_1_1_scene_1a987c6686913633182f6d4d71a917872a" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_PhysicsWorld</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a8eea2673c37f55c871de8a808a1a0b94" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>m_pointer</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af1a3dd67b0ce2fc70cff9ca111263829" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>m_pointerVal</name></member>
+      <member refid="classnjli_1_1_scene_1a43647a8e0be9fc885b5154c1af895afa" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_RootNode</name></member>
+      <member refid="classnjli_1_1_scene_1af74cab422e8f225410580c3094a621ab" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>m_SceneStateMachine</name></member>
+      <member refid="classnjli_1_1_scene_1a6db9d28bd448a131448276ee03de1e6d" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>Node</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_scene_1af7e103d6bae0a80691c78ca17b649f0e" prot="public" virt="virtual"><scope>njli::Scene</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a2c06da8ccb23065ed2527a9fd5321307" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>operator!=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1aff65c5ff0060e64463acb78e2c3ee0fa" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>operator&lt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a680d6b05e920e407856e81a77201e445" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>operator&lt;=</name></member>
+      <member refid="classnjli_1_1_scene_1ad99f4f5cb53d3330628071f08d7533d0" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a84f85e5d5039be7d66305b5d57537b43" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>operator==</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a423675a076695410ba91c672ab8c2708" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>operator&gt;</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1a0c32e12af66d89087d475e449766d485" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>operator&gt;=</name></member>
+      <member refid="classnjli_1_1_scene_1a27894158aebeba1a3251efa33c41aa71" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeActiveCamera</name></member>
+      <member refid="classnjli_1_1_scene_1a31e1f83511a7340324c21cb1285ed0a2" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeActiveClock</name></member>
+      <member refid="classnjli_1_1_scene_1af4f7c3b7b136bbf4f8aad6640814b9a3" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeActiveGeometry</name></member>
+      <member refid="classnjli_1_1_scene_1a5a826df53ef02ccb6bdcd7969c186162" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeActiveNode</name></member>
+      <member refid="classnjli_1_1_scene_1a09172111155b23406c7110982fbce2bc" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeActiveParticleEmitter</name></member>
+      <member refid="classnjli_1_1_scene_1a245ec2b188fb22f97e58d2bbca676424" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>removeAllClocks</name></member>
+      <member refid="classnjli_1_1_scene_1a9186fa26416275bd05fdcc0357fa1745" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>removeBackground</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_scene_1a52ebc14871130c84d52d2db461cdd1fe" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>removeClock</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_scene_1a967c76f1e30d1690cd5c7425f3dd2f29" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>removePhysicsWorld</name></member>
+      <member refid="classnjli_1_1_scene_1ae29659499a79266189dbed583e262873" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>removeRootNode</name></member>
+      <member refid="classnjli_1_1_scene_1ab67517186a935dae9dca439f31c5154a" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>removeStateMachine</name></member>
+      <member refid="classnjli_1_1_scene_1adc510ff6029dca669031a031d9ca0069" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>render</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_scene_1af5b5f627027c8c24f6a9eb27c1cb1dbf" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>Scene</name></member>
+      <member refid="classnjli_1_1_scene_1ab7db7cebb1627f136ea6831bb455a073" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>Scene</name></member>
+      <member refid="classnjli_1_1_scene_1a833d4549a6020037969b44d7dc766027" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>Scene</name></member>
+      <member refid="classnjli_1_1_scene_1a2f62aff9de100ccc100381a8961fa107" prot="public" virt="virtual"><scope>njli::Scene</scope><name>serialize</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" prot="public" virt="virtual"><scope>njli::Scene</scope><name>serializeObject</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::Scene</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_scene_1adbe1acb134a946e54d85b865c5bd6193" prot="public" virt="non-virtual"><scope>njli::Scene</scope><name>type</name></member>
+      <member refid="classnjli_1_1_scene_1aad491cfead02896db73ba6271d58a298" prot="protected" virt="non-virtual"><scope>njli::Scene</scope><name>update</name></member>
+      <member refid="classnjli_1_1_scene_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>World</name></member>
+      <member refid="classnjli_1_1_scene_1acb96ebb09abe8f2a37a915a842babfac" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>WorldFactory</name></member>
+      <member refid="classnjli_1_1_scene_1a5a2020205bbce2fe559331689dd5d3c4" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>WorldInput</name></member>
+      <member refid="classnjli_1_1_scene_1a59cdb6fe5b378389e35b8b2a2f4e990e" prot="private" virt="non-virtual"><scope>njli::Scene</scope><name>WorldState</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::Scene</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_factory_object_1afdff01ff050ea5519cb882f226d3b12f" prot="public" virt="virtual"><scope>njli::Scene</scope><name>~AbstractFactoryObject</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::Scene</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_scene_1a817eeb559aaf499ed6b638ebafca1789" prot="protected" virt="virtual"><scope>njli::Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>testmod docs</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>testmod</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Macros">Macros</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>mod1</strong></li>
+  <li><strong>mod1</strong></li>
+  <li><a href="../modules/mylib.html">mylib</a></li>
+  <li><strong>mod1</strong></li>
+  <li><a href="../modules/mod.html">mod</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/modtest.html">modtest</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>mod1</code></h1>
+<p>Test module providing bonzo.dog.</p>
+<p>
+ Rest is a longer description</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#zero_fun">zero_fun (k1, k2)</a></td>
+	<td class="summary">zero function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#first_fun">first_fun (p1, p2)</a></td>
+	<td class="summary">first function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#second_function">second_function (...)</a></td>
+	<td class="summary">second function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#third_function">third_function (alpha, beta, gamma)</a></td>
+	<td class="summary">third function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#zero_function">zero_function (p)</a></td>
+	<td class="summary">Another function.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#config">config</a></td>
+	<td class="summary">general configuration table</td>
+	</tr>
+</table>
+<h2><a href="#Macros">Macros</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#first_macro">first_macro</a></td>
+	<td class="summary">A useful macro.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "zero_fun"></a>
+    <strong>zero_fun (k1, k2)</strong>
+    </dt>
+    <dd>
+    zero function.  Two new ldoc features here; item types
+ can be used directly as tags, and aliases for tags
+ can be defined in config.lp.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">k1</span>
+         first
+        </li>
+        <li><span class="parameter">k2</span>
+         second
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "first_fun"></a>
+    <strong>first_fun (p1, p2)</strong>
+    </dt>
+    <dd>
+    first function.  Some description
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">p1</span>
+         first parameter
+        </li>
+        <li><span class="parameter">p2</span>
+         second parameter
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "second_function"></a>
+    <strong>second_function (...)</strong>
+    </dt>
+    <dd>
+    second function.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+         var args!
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "third_function"></a>
+    <strong>third_function (alpha, beta, gamma)</strong>
+    </dt>
+    <dd>
+    third function.  Can also provide parameter comments inline,
+ provided they follow this pattern.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">alpha</span>
+        correction A
+        </li>
+        <li><span class="parameter">beta</span>
+        correction B
+        </li>
+        <li><span class="parameter">gamma</span>
+        factor C
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "zero_function"></a>
+    <strong>zero_function (p)</strong>
+    </dt>
+    <dd>
+    Another function.  Using a Lua block comment
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">p</span>
+         a parameter
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "config"></a>
+    <strong>config</strong>
+    </dt>
+    <dd>
+    general configuration table
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">A</span>
+         alpha
+        </li>
+        <li><span class="parameter">B</span>
+         beta
+        </li>
+        <li><span class="parameter">C</span>
+         gamma
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Macros"></a>Macros</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "first_macro"></a>
+    <strong>first_macro</strong>
+    </dt>
+    <dd>
+    A useful macro.  This is an example of a custom 'kind'.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/mod1.html#second_function">second_function</a>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2016-02-08 20:35:31 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

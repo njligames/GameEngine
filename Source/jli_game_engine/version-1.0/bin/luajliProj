@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# echo $1
+
+#python /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/jli_game_engine/version-1.0/bin/clientAll.py $1
+
+for i in $(find $1 -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" -not -path "*/_*" )
+do
+    echo $i
+    /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/jli_game_engine/version-1.0/bin/removeComments $i | python /Users/jamesfolk/Dropbox/GameDevelopment/mygames/third_party/jli_game_engine/version-1.0/bin/client.py lua $i build
+done
+

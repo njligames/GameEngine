@@ -1,0 +1,2224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classnjli_1_1_world" kind="class" prot="public">
+    <compoundname>njli::World</compoundname>
+    <basecompoundref refid="classnjli_1_1_abstract_object" prot="public" virt="non-virtual">njli::AbstractObject</basecompoundref>
+    <includes refid="_world_8h" local="no">World.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_world_1a95bcdb1d140d15e4b022f72ea55286c2" prot="private" static="yes" mutable="no">
+        <type><ref refid="classnjli_1_1_world" kindref="compound">World</ref> *</type>
+        <definition>World * njli::World::s_Instance</definition>
+        <argsstring></argsstring>
+        <name>s_Instance</name>
+        <initializer>= <ref refid="_util_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="464" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnjli_1_1_world_1ae50678873f637941aa87ec45c33e9a1c" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref> *</type>
+        <definition>WorldFactory* njli::World::m_WorldFactory</definition>
+        <argsstring></argsstring>
+        <name>m_WorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="466" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a4ebb658eba80c17e930b96881d3a4e19" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_resource_loader" kindref="compound">WorldResourceLoader</ref> *</type>
+        <definition>WorldResourceLoader* njli::World::m_WorldResourceLoader</definition>
+        <argsstring></argsstring>
+        <name>m_WorldResourceLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="467" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1aacebc8d861e42a409cf1a875972da641" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_clock" kindref="compound">WorldClock</ref> *</type>
+        <definition>WorldClock* njli::World::m_WorldClock</definition>
+        <argsstring></argsstring>
+        <name>m_WorldClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="468" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1ab3878c3df6c61327dfd7a08864e567a9" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_lua_virtual_machine" kindref="compound">WorldLuaVirtualMachine</ref> *</type>
+        <definition>WorldLuaVirtualMachine* njli::World::m_WorldLuaVirtualMachine</definition>
+        <argsstring></argsstring>
+        <name>m_WorldLuaVirtualMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="469" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a14412bd1ed14fca506732c0234db2b28" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_state_machine" kindref="compound">WorldStateMachine</ref> *</type>
+        <definition>WorldStateMachine* njli::World::m_stateMachine</definition>
+        <argsstring></argsstring>
+        <name>m_stateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="471" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a0ac18bfa72f55b16c00703e1035a0af7" prot="private" static="no" mutable="no">
+        <type>btVector2 *</type>
+        <definition>btVector2* njli::World::m_ViewPortDimensions</definition>
+        <argsstring></argsstring>
+        <name>m_ViewPortDimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="473" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a9c9279cbbb77ef973cb7d003198789b7" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* njli::World::m_Scene</definition>
+        <argsstring></argsstring>
+        <name>m_Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="475" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a0f6ea126555fa904aa246baba084c9de" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_socket" kindref="compound">WorldSocket</ref> *</type>
+        <definition>WorldSocket* njli::World::m_WorldSocket</definition>
+        <argsstring></argsstring>
+        <name>m_WorldSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="476" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="476" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a922a3ec1f96ac87f97faee6329f39686" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref> *</type>
+        <definition>WorldHUD* njli::World::m_WorldHUD</definition>
+        <argsstring></argsstring>
+        <name>m_WorldHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="477" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a87601ddb30dead7b8b0bd05bcc1f7ff3" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_input" kindref="compound">WorldInput</ref> *</type>
+        <definition>WorldInput* njli::World::m_WorldInput</definition>
+        <argsstring></argsstring>
+        <name>m_WorldInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="478" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a004cd4a3a730b83733b3ff91bfaedce2" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_sound" kindref="compound">WorldSound</ref> *</type>
+        <definition>WorldSound* njli::World::m_WorldSound</definition>
+        <argsstring></argsstring>
+        <name>m_WorldSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="479" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1aa92f105e6f53c7d8c30b8e453e1181c8" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_debug_drawer" kindref="compound">WorldDebugDrawer</ref> *</type>
+        <definition>WorldDebugDrawer* njli::World::m_WorldDebugDrawer</definition>
+        <argsstring></argsstring>
+        <name>m_WorldDebugDrawer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="480" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a08dcff070cf899e54e3aa9e4d1741c03" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_world_s_q_lite" kindref="compound">WorldSQLite</ref> *</type>
+        <definition>WorldSQLite* njli::World::m_WorldSQLite</definition>
+        <argsstring></argsstring>
+        <name>m_WorldSQLite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="481" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1ac9ab0b237e486a28bd08adf913b3908c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::World::m_enableDebugDraw</definition>
+        <argsstring></argsstring>
+        <name>m_enableDebugDraw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="483" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a5ae1a42d02339871c60b45ecacc92753" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* njli::World::m_DebugDrawCamera</definition>
+        <argsstring></argsstring>
+        <name>m_DebugDrawCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="484" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a180a3f557467c6bb6d88cf05b691a6f4" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+        <definition>Material* njli::World::m_DebugDrawMaterial</definition>
+        <argsstring></argsstring>
+        <name>m_DebugDrawMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="485" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a67cab53aa644efd7c2e6f6d7df9c1745" prot="private" static="no" mutable="no">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* njli::World::m_TouchCamera</definition>
+        <argsstring></argsstring>
+        <name>m_TouchCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="487" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1ab701cb678bcb47262db407e4684608a2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::World::m_SocketEnabled</definition>
+        <argsstring></argsstring>
+        <name>m_SocketEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="489" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a51c1d3b5047c2e10c2850faf137efa9a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::World::m_SocketAddress</definition>
+        <argsstring></argsstring>
+        <name>m_SocketAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="490" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1aafbdf669fc3dbc91c2b746b653ac4f17" prot="private" static="no" mutable="no">
+        <type><ref refid="_util_8h_1a9e6c91d77e24643b888dbd1a1a590054" kindref="member">u16</ref></type>
+        <definition>u16 njli::World::m_SocketPort</definition>
+        <argsstring></argsstring>
+        <name>m_SocketPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="491" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1acf0b94b1d7cba8d62158065b03de9012" prot="private" static="no" mutable="no">
+        <type>btVector4 *</type>
+        <definition>btVector4* njli::World::m_BackgroundColor</definition>
+        <argsstring></argsstring>
+        <name>m_BackgroundColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="492" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a9dc158249ba20ca7b1523cce0d8d309f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string njli::World::m_DeviceName</definition>
+        <argsstring></argsstring>
+        <name>m_DeviceName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="493" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1a5a261c335c55b2fd0e678e815a6cc85a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::World::m_AnimationPaused</definition>
+        <argsstring></argsstring>
+        <name>m_AnimationPaused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="495" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnjli_1_1_world_1af387313aec7a62f3792e76d9610b70a8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool njli::World::m_GamePaused</definition>
+        <argsstring></argsstring>
+        <name>m_GamePaused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="496" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnjli_1_1_world_1a3f112f579abdd04d6b59b1ff8941cc09" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::createInstance</definition>
+        <argsstring>()</argsstring>
+        <name>createInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="41" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a37e168a7d1dde0b24c184cf092b5f506" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::destroyInstance</definition>
+        <argsstring>()</argsstring>
+        <name>destroyInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="42" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world" kindref="compound">World</ref> *</type>
+        <definition>World * njli::World::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="43" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ab92bd6e910bf66b785200f5ca9b1012f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::World::hasInstance</definition>
+        <argsstring>()</argsstring>
+        <name>hasInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="44" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnjli_1_1_world_1af01e96219aea73e611ba28179b3532ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::World::World</definition>
+        <argsstring>()</argsstring>
+        <name>World</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="47" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="65" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a9afc8afbde61ce7dde33ef37877c7453" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::World::~World</definition>
+        <argsstring>()</argsstring>
+        <name>~World</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="48" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="108" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1abf9c0b24c17244baf76d760e81974cfe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>njli::World::World</definition>
+        <argsstring>(const World &amp;)</argsstring>
+        <name>World</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_world" kindref="compound">World</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="461" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a2fe83dc2d899a91ef21ac20220e2ada4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world" kindref="compound">World</ref> &amp;</type>
+        <definition>World&amp; njli::World::operator=</definition>
+        <argsstring>(const World &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classnjli_1_1_world" kindref="compound">World</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="462" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref> *</type>
+        <definition>WorldFactory * njli::World::getWorldFactory</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="56" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="134" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ab344de6cddf96f4cfeaa358585ba4ca4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref> *</type>
+        <definition>const WorldFactory * njli::World::getWorldFactory</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="62" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="142" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ac63f035e992870bd8b8a17f2273d8cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_resource_loader" kindref="compound">WorldResourceLoader</ref> *</type>
+        <definition>WorldResourceLoader * njli::World::getWorldResourceLoader</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldResourceLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="69" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="150" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a41f2109f9deb6d4eecf7d383e83c9464" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_resource_loader" kindref="compound">WorldResourceLoader</ref> *</type>
+        <definition>const WorldResourceLoader * njli::World::getWorldResourceLoader</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldResourceLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="75" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="158" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a53d2776971466a8e3e8bd928058ac3ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_clock" kindref="compound">WorldClock</ref> *</type>
+        <definition>WorldClock * njli::World::getWorldClock</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="82" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="166" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a671e2a935d966ebd09daf94390c7561c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_clock" kindref="compound">WorldClock</ref> *</type>
+        <definition>const WorldClock * njli::World::getWorldClock</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="88" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="174" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1adfe48d79f8ed5f30aeb3675506d0f3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_lua_virtual_machine" kindref="compound">WorldLuaVirtualMachine</ref> *</type>
+        <definition>WorldLuaVirtualMachine * njli::World::getWorldLuaVirtualMachine</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldLuaVirtualMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="95" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="182" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a5b3c55392c4bd72b1fb7c4fd56e14fe4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_lua_virtual_machine" kindref="compound">WorldLuaVirtualMachine</ref> *</type>
+        <definition>const WorldLuaVirtualMachine * njli::World::getWorldLuaVirtualMachine</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldLuaVirtualMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="101" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="190" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ad2e539aebc7349a690c930bc00ba9761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_socket" kindref="compound">WorldSocket</ref> *</type>
+        <definition>WorldSocket * njli::World::getWorldSocket</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="121" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="214" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1aeb2171b3be01fd166f48249b47abb43a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_socket" kindref="compound">WorldSocket</ref> *</type>
+        <definition>const WorldSocket * njli::World::getWorldSocket</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="127" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="222" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a40adfae9fbe51bb80879166d3f91acbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref> *</type>
+        <definition>WorldHUD * njli::World::getWorldHUD</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; &lt;#Description#&gt;</para></simplesect>
+<simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="147" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="246" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a2e440ab39d0a2d3c02bee623e84e712e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_h_u_d" kindref="compound">WorldHUD</ref> *</type>
+        <definition>const WorldHUD * njli::World::getWorldHUD</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldHUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="153" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="254" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a712594bdfb7bd51cdbbb2de4d5393d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_input" kindref="compound">WorldInput</ref> *</type>
+        <definition>WorldInput * njli::World::getWorldInput</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="160" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="262" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a716faf8b9b15ff7a584da9fb1685a5a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_input" kindref="compound">WorldInput</ref> *</type>
+        <definition>const WorldInput * njli::World::getWorldInput</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="166" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="270" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a4a5a98058882437d3eb23814b4cacdb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_sound" kindref="compound">WorldSound</ref> *</type>
+        <definition>WorldSound * njli::World::getWorldSound</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="173" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="278" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a6636a00ece9288ae469f623139d9cb18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_sound" kindref="compound">WorldSound</ref> *</type>
+        <definition>const WorldSound * njli::World::getWorldSound</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="179" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="285" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a32d0d1105d6a0f8b0411e7ebd2b60b60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_state_machine" kindref="compound">WorldStateMachine</ref> *</type>
+        <definition>WorldStateMachine * njli::World::getStateMachine</definition>
+        <argsstring>()</argsstring>
+        <name>getStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="186" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="293" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a4f0f084bc7d61f7b776d133d12044207" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_state_machine" kindref="compound">WorldStateMachine</ref> *</type>
+        <definition>const WorldStateMachine * njli::World::getStateMachine</definition>
+        <argsstring>() const </argsstring>
+        <name>getStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="192" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="301" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1aeb8eee919b8281fc8bbc5749e9a88303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_debug_drawer" kindref="compound">WorldDebugDrawer</ref> *</type>
+        <definition>WorldDebugDrawer * njli::World::getDebugDrawer</definition>
+        <argsstring>()</argsstring>
+        <name>getDebugDrawer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="199" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a0d5a1cb767b22e5af8bc17ec806fd8cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_debug_drawer" kindref="compound">WorldDebugDrawer</ref> *</type>
+        <definition>const WorldDebugDrawer * njli::World::getDebugDrawer</definition>
+        <argsstring>() const </argsstring>
+        <name>getDebugDrawer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="205" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="314" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a29ea248bbec95dacc7b0f027b054e310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_world_s_q_lite" kindref="compound">WorldSQLite</ref> *</type>
+        <definition>WorldSQLite * njli::World::getWorldSQLite</definition>
+        <argsstring>()</argsstring>
+        <name>getWorldSQLite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="212" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1afc0f1d8b0c7610d4d5391239c6d6f594" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_world_s_q_lite" kindref="compound">WorldSQLite</ref> *</type>
+        <definition>const WorldSQLite * njli::World::getWorldSQLite</definition>
+        <argsstring>() const </argsstring>
+        <name>getWorldSQLite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="218" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="324" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1af2a39625b45e1de4d7363e817e80df58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::touchDown</definition>
+        <argsstring>(DeviceTouch **m_CurrentTouches)</argsstring>
+        <name>touchDown</name>
+        <param>
+          <type><ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> **</type>
+          <declname>m_CurrentTouches</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_CurrentTouches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#m_CurrentTouches description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="225" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="329" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a0aa11e8df6bf8f01f53bf2c5fe06ce3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::touchUp</definition>
+        <argsstring>(DeviceTouch **m_CurrentTouches)</argsstring>
+        <name>touchUp</name>
+        <param>
+          <type><ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> **</type>
+          <declname>m_CurrentTouches</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_CurrentTouches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#m_CurrentTouches description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="231" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="345" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1abe96b82186df7d0f6f18e8970e8a0d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::touchMove</definition>
+        <argsstring>(DeviceTouch **m_CurrentTouches)</argsstring>
+        <name>touchMove</name>
+        <param>
+          <type><ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> **</type>
+          <declname>m_CurrentTouches</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_CurrentTouches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#m_CurrentTouches description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="237" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="359" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ac885088233b87f30b5be62cd7f6a6c08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::touchCancelled</definition>
+        <argsstring>(DeviceTouch **m_CurrentTouches)</argsstring>
+        <name>touchCancelled</name>
+        <param>
+          <type><ref refid="classnjli_1_1_device_touch" kindref="compound">DeviceTouch</ref> **</type>
+          <declname>m_CurrentTouches</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_CurrentTouches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#m_CurrentTouches description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="243" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="373" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1aeec194d8bb29e91a3a51c8af7cae6452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::setTouchCamera</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>setTouchCamera</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#camera description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="249" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="387" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1aa5833c82b6b49b2fa4e130be6c9e428e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera * njli::World::getTouchCamera</definition>
+        <argsstring>()</argsstring>
+        <name>getTouchCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="255" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="391" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a2be8a1f61c69a00fce5c62d00b20a00c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+        <definition>const Camera * njli::World::getTouchCamera</definition>
+        <argsstring>() const </argsstring>
+        <name>getTouchCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="261" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="395" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a18b7d4f19e5c8fbb43e52f7fbc3f89f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::getViewPort</definition>
+        <argsstring>(s32 *viewPort) const </argsstring>
+        <name>getViewPort</name>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref> *</type>
+          <declname>viewPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>viewPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#viewPort description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="267" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="400" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a248c324a0a97b0f286eaedf8f997688e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::update</definition>
+        <argsstring>(f32 timeStep, const u32 numSubSteps)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>timeStep</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>numSubSteps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeStep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#timeStep description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="274" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="417" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a3e7f68f7467d421971e13dfcc5e2100e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="279" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="451" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ae01dbf26d72e505fd67458d881dfa44c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::resize</definition>
+        <argsstring>(s32 width, s32 height, s32 orientation)</argsstring>
+        <name>resize</name>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+          <declname>orientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#width description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#height description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#orientation description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="288" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="496" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a0c840ed03a509073591181a0db3326be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector2 &amp;</type>
+        <definition>const btVector2 &amp; njli::World::getViewportDimensions</definition>
+        <argsstring>() const </argsstring>
+        <name>getViewportDimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="295" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="506" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a9625ac484cd8e0bfd4533d1bd4308432" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+        <definition>f32 njli::World::getAspectRatio</definition>
+        <argsstring>() const </argsstring>
+        <name>getAspectRatio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="301" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="511" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a4860bc3b1638d3d4c0138f21b1078206" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * njli::World::getClassName</definition>
+        <argsstring>() const </argsstring>
+        <name>getClassName</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1afdabb48c4bf763e297ffe810b433a863">getClassName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="308" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="516" bodyend="519"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ad9b777af5ff42c8010f2eb6581ca2837" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref></type>
+        <definition>s32 njli::World::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1a08dcf202a47f0782813b8bc98c659e78">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="314" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="521" bodyend="524"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a39f4eb464e14da5f5bcb00f30e13c707" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>njli::World::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <reimplements refid="classnjli_1_1_abstract_object_1afc07f4138bd3003910e7aa7fa0fe11ad">operator std::string</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="320" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="526" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a2c0fcfa71f2459fd3e4eec11d5146ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::addScene</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>addScene</name>
+        <param>
+          <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#scene description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="327" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="536" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1aabf2a07e2fab640f5800357ad1fd7717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::removeScene</definition>
+        <argsstring>()</argsstring>
+        <name>removeScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="331" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="548" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a77de3f785d9c487c510f9061945a83ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene * njli::World::getScene</definition>
+        <argsstring>()</argsstring>
+        <name>getScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="337" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="556" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a0d14db95ba73974567bac4e98a49564c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classnjli_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>const Scene * njli::World::getScene</definition>
+        <argsstring>() const </argsstring>
+        <name>getScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="343" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="564" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a319c7afd4e53395eac71c2f2e0a5a5a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::enableDebugDraw</definition>
+        <argsstring>(Camera *camera, ShaderProgram *shader, Material *material)</argsstring>
+        <name>enableDebugDraw</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_material" kindref="compound">Material</ref> *</type>
+          <declname>material</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#camera description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#shader description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>material</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#material description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="352" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="572" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a0451b10adb6965957a2b9de6ff72df90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::enableDebugDraw</definition>
+        <argsstring>(Camera *camera, ShaderProgram *shader=NULL)</argsstring>
+        <name>enableDebugDraw</name>
+        <param>
+          <type><ref refid="classnjli_1_1_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <param>
+          <type><ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref> *</type>
+          <declname>shader</declname>
+          <defval><ref refid="_util_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#camera description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#shader description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>material</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#material description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="361" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="587" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a4894e4a53f692a503661a7836bf7713f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::disableDebugDraw</definition>
+        <argsstring>()</argsstring>
+        <name>disableDebugDraw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="366" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="611" bodyend="617"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a5b67da9acd56cec605ad0dccc2b957cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::startSocket</definition>
+        <argsstring>(u8 n0, u8 n1, u8 n2, u8 n3, u16 port=2223)</argsstring>
+        <name>startSocket</name>
+        <param>
+          <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref></type>
+          <declname>n3</declname>
+        </param>
+        <param>
+          <type><ref refid="_util_8h_1a9e6c91d77e24643b888dbd1a1a590054" kindref="member">u16</ref></type>
+          <declname>port</declname>
+          <defval>2223</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#n0 description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#n1 description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#n2 description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#n3 description#&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#port description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="377" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="643" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ac4b819fe8d34e6661d8f47138c318ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::startSocket</definition>
+        <argsstring>(u16 port=2223)</argsstring>
+        <name>startSocket</name>
+        <param>
+          <type><ref refid="_util_8h_1a9e6c91d77e24643b888dbd1a1a590054" kindref="member">u16</ref></type>
+          <declname>port</declname>
+          <defval>2223</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="378" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="665" bodyend="672"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a1d671225308c15c773354a73b67f4539" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::World::isSocketEnabled</definition>
+        <argsstring>() const </argsstring>
+        <name>isSocketEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="384" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="674" bodyend="677"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a7d217f38577d72d349e2df64761dc4c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::stopSocket</definition>
+        <argsstring>()</argsstring>
+        <name>stopSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="388" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="678" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a7789d1910fb503a23af33bf15d9c2a02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::World::getSocketAddress</definition>
+        <argsstring>() const </argsstring>
+        <name>getSocketAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="395" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="685" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ad85d66e2b189aa69a267dad3a96c6308" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_util_8h_1a9e6c91d77e24643b888dbd1a1a590054" kindref="member">u16</ref></type>
+        <definition>u16 njli::World::getSocketPort</definition>
+        <argsstring>() const </argsstring>
+        <name>getSocketPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="401" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="689" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a7eebf55a7920061d87e5dc03feb692da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::setBackgroundAlpha</definition>
+        <argsstring>(const f32 alpha)</argsstring>
+        <name>setBackgroundAlpha</name>
+        <param>
+          <type>const <ref refid="_util_8h_1a5f6906312a689f27d70e9d086649d3fd" kindref="member">f32</ref></type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#alpha description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="408" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="694" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a011db5e9383aa6628892cd431c3657a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::setBackgroundColor</definition>
+        <argsstring>(const btVector3 &amp;color)</argsstring>
+        <name>setBackgroundColor</name>
+        <param>
+          <type>const btVector3 &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#color description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="414" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="700" bodyend="704"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ab7bbd4dee42bec416fb2b64e9843ddf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::setBackgroundColor</definition>
+        <argsstring>(const btVector4 &amp;color)</argsstring>
+        <name>setBackgroundColor</name>
+        <param>
+          <type>const btVector4 &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#color description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="420" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="706" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1af71f1daa7201bc43fec380f0d8e59886" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const btVector4 &amp;</type>
+        <definition>const btVector4 &amp; njli::World::getBackgroundColor</definition>
+        <argsstring>() const </argsstring>
+        <name>getBackgroundColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="426" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="714" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a7c0486ee9156abea442848faf85051cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * njli::World::getDeviceName</definition>
+        <argsstring>() const </argsstring>
+        <name>getDeviceName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="433" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="719" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a5c9cc63ac7cb847e6d581a867614e47d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::setDeviceName</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>setDeviceName</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&lt;#name description#&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="439" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="724" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a41b67b3dea3196afa6ff1b0d961b39d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::enablePauseAnimation</definition>
+        <argsstring>(bool enable=true)</argsstring>
+        <name>enablePauseAnimation</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="441" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="729" bodyend="732"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a23a43bf65b215f40803dca83ff9f738c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::World::isAnimationPaused</definition>
+        <argsstring>() const </argsstring>
+        <name>isAnimationPaused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;#Description#&gt;</para><para><simplesect kind="return"><para>&lt;#return value description#&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="448" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="734" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1ae8f238cc0f23ce6b8a05ad5a3da555f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::enablePauseGame</definition>
+        <argsstring>(bool enable=true)</argsstring>
+        <name>enablePauseGame</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="450" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="739" bodyend="756"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a6c78f7f0112fea8a0c56b20835a8ae2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::World::isPausedGame</definition>
+        <argsstring>() const </argsstring>
+        <name>isPausedGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="451" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="758" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a0c6f38f48b3d7393d01f922a499a4fd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool njli::World::isDebug</definition>
+        <argsstring>() const </argsstring>
+        <name>isDebug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="453" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="763" bodyend="769"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnjli_1_1_world_1a4118fbcbb82b872369b235bbc7cde67f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::processMessage</definition>
+        <argsstring>(const std::string &amp;msg, const std::string delimeter=&quot;root&quot;)</argsstring>
+        <name>processMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>delimeter</declname>
+          <defval>&quot;root&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="457" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="843" bodyend="938"/>
+      </memberdef>
+      <memberdef kind="function" id="classnjli_1_1_world_1a322956de68eb15d43bfb39083942edee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_thread_8h_1af1e856da2e658414cb2456cb6f7ebc66" kindref="member">void</ref></type>
+        <definition>void njli::World::handleSocketMessage</definition>
+        <argsstring>()</argsstring>
+        <name>handleSocketMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="458" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp" bodystart="940" bodyend="955"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;#Description#&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4264">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+      </node>
+      <node id="4262">
+        <label>njli::World</label>
+        <link refid="classnjli_1_1_world"/>
+        <childnode refid="4263" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4263">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4264" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4284">
+        <label>njli::WorldResourceLoader</label>
+        <link refid="classnjli_1_1_world_resource_loader"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4270">
+        <label>njli::AbstractFactoryObject</label>
+        <link refid="classnjli_1_1_abstract_factory_object"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4268">
+        <label>njli::WorldDebugDrawer</label>
+        <link refid="classnjli_1_1_world_debug_drawer"/>
+        <childnode refid="4269" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4276" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4277" relation="usage">
+          <edgelabel>m_Line</edgelabel>
+        </childnode>
+      </node>
+      <node id="4310">
+        <label>njli::AbstractStateMachine&lt; Scene &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4311" relation="usage">
+          <edgelabel>m_pCurrentState</edgelabel>
+          <edgelabel>m_pPreviousState</edgelabel>
+        </childnode>
+      </node>
+      <node id="4304">
+        <label>njli::AbstractStateMachine&lt; Node &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4305" relation="usage">
+          <edgelabel>m_pCurrentState</edgelabel>
+          <edgelabel>m_pPreviousState</edgelabel>
+        </childnode>
+      </node>
+      <node id="4267">
+        <label>njli::AbstractDecorator</label>
+        <link refid="classnjli_1_1_abstract_decorator"/>
+        <childnode refid="4267" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="4290">
+        <label>btClock</label>
+      </node>
+      <node id="4286">
+        <label>njli::WorldFactory</label>
+        <link refid="classnjli_1_1_world_factory"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4265">
+        <label>njli::World</label>
+        <link refid="classnjli_1_1_world"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4268" relation="usage">
+          <edgelabel>m_WorldDebugDrawer</edgelabel>
+        </childnode>
+        <childnode refid="4278" relation="usage">
+          <edgelabel>m_WorldInput</edgelabel>
+        </childnode>
+        <childnode refid="4281" relation="usage">
+          <edgelabel>m_stateMachine</edgelabel>
+        </childnode>
+        <childnode refid="4284" relation="usage">
+          <edgelabel>m_WorldResourceLoader</edgelabel>
+        </childnode>
+        <childnode refid="4285" relation="usage">
+          <edgelabel>m_WorldSQLite</edgelabel>
+        </childnode>
+        <childnode refid="4286" relation="usage">
+          <edgelabel>m_WorldFactory</edgelabel>
+        </childnode>
+        <childnode refid="4287" relation="usage">
+          <edgelabel>m_WorldLuaVirtualMachine</edgelabel>
+        </childnode>
+        <childnode refid="4265" relation="usage">
+          <edgelabel>s_Instance</edgelabel>
+        </childnode>
+        <childnode refid="4288" relation="usage">
+          <edgelabel>m_WorldClock</edgelabel>
+        </childnode>
+        <childnode refid="4291" relation="usage">
+          <edgelabel>m_WorldSocket</edgelabel>
+        </childnode>
+        <childnode refid="4273" relation="usage">
+          <edgelabel>m_DebugDrawMaterial</edgelabel>
+        </childnode>
+        <childnode refid="4292" relation="usage">
+          <edgelabel>m_WorldHUD</edgelabel>
+        </childnode>
+        <childnode refid="4293" relation="usage">
+          <edgelabel>m_DebugDrawCamera</edgelabel>
+          <edgelabel>m_TouchCamera</edgelabel>
+        </childnode>
+        <childnode refid="4297" relation="usage">
+          <edgelabel>m_WorldSound</edgelabel>
+        </childnode>
+        <childnode refid="4298" relation="usage">
+          <edgelabel>m_Scene</edgelabel>
+        </childnode>
+      </node>
+      <node id="4297">
+        <label>njli::WorldSound</label>
+        <link refid="classnjli_1_1_world_sound"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4296">
+        <label>btDbvt::ICollide</label>
+      </node>
+      <node id="4288">
+        <label>njli::WorldClock</label>
+        <link refid="classnjli_1_1_world_clock"/>
+        <childnode refid="4289" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4290" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4299">
+        <label>njli::PhysicsWorld</label>
+        <link refid="classnjli_1_1_physics_world"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4303">
+        <label>njli::NodeStateMachine</label>
+        <link refid="classnjli_1_1_node_state_machine"/>
+        <childnode refid="4304" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4275">
+        <label>njli::AbstractFrameBufferObject</label>
+        <link refid="classnjli_1_1_abstract_frame_buffer_object"/>
+      </node>
+      <node id="4271">
+        <label>njli::Image</label>
+        <link refid="classnjli_1_1_image"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4301">
+        <label>njli::AbstractActionable</label>
+        <link refid="classnjli_1_1_abstract_actionable"/>
+      </node>
+      <node id="4283">
+        <label>njli::AbstractState&lt; void &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4266">
+        <label>njli::AbstractObject</label>
+        <link refid="classnjli_1_1_abstract_object"/>
+        <childnode refid="4267" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4292">
+        <label>njli::WorldHUD</label>
+        <link refid="classnjli_1_1_world_h_u_d"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4293" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="4277">
+        <label>njli::WorldDebugDrawer::Line</label>
+        <link refid="structnjli_1_1_world_debug_drawer_1_1_line"/>
+      </node>
+      <node id="4294">
+        <label>njli::OcclusionBuffer</label>
+        <link refid="structnjli_1_1_occlusion_buffer"/>
+        <childnode refid="4293" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="4308">
+        <label>njli::PhysicsShape</label>
+        <link refid="classnjli_1_1_physics_shape"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4280">
+        <label>njli::DeviceInputTime</label>
+        <link refid="classnjli_1_1_device_input_time"/>
+      </node>
+      <node id="4295">
+        <label>njli::SceneRenderer</label>
+        <link refid="classnjli_1_1_scene_renderer"/>
+        <childnode refid="4296" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4294" relation="usage">
+          <edgelabel>m_ocb</edgelabel>
+        </childnode>
+        <childnode refid="4293" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="4302">
+        <label>njli::PhysicsField</label>
+        <link refid="classnjli_1_1_physics_field"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4273">
+        <label>njli::Material</label>
+        <link refid="classnjli_1_1_material"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4274" relation="usage">
+          <edgelabel>m_Specular</edgelabel>
+          <edgelabel>m_Reflective</edgelabel>
+          <edgelabel>m_Diffuse</edgelabel>
+          <edgelabel>m_Multiply</edgelabel>
+          <edgelabel>m_Emission</edgelabel>
+          <edgelabel>m_Normal</edgelabel>
+          <edgelabel>m_Transparent</edgelabel>
+          <edgelabel>m_Ambient</edgelabel>
+        </childnode>
+      </node>
+      <node id="4300">
+        <label>njli::Node</label>
+        <link refid="classnjli_1_1_node"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4301" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4302" relation="usage">
+          <edgelabel>m_PhysicsField</edgelabel>
+        </childnode>
+        <childnode refid="4300" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="4269" relation="usage">
+          <edgelabel>m_Geometry</edgelabel>
+        </childnode>
+        <childnode refid="4303" relation="usage">
+          <edgelabel>m_NodeStateMachine</edgelabel>
+        </childnode>
+        <childnode refid="4306" relation="usage">
+          <edgelabel>m_Light</edgelabel>
+        </childnode>
+        <childnode refid="4307" relation="usage">
+          <edgelabel>m_PhysicsBody</edgelabel>
+        </childnode>
+        <childnode refid="4293" relation="usage">
+          <edgelabel>m_Camera</edgelabel>
+        </childnode>
+      </node>
+      <node id="4278">
+        <label>njli::WorldInput</label>
+        <link refid="classnjli_1_1_world_input"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4279" relation="usage">
+          <edgelabel>m_AllTouches</edgelabel>
+          <edgelabel>m_CurrentTouches</edgelabel>
+        </childnode>
+      </node>
+      <node id="4282">
+        <label>njli::AbstractStateMachine&lt; void &gt;</label>
+        <link refid="classnjli_1_1_abstract_state_machine"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4283" relation="usage">
+          <edgelabel>m_pCurrentState</edgelabel>
+          <edgelabel>m_pPreviousState</edgelabel>
+        </childnode>
+      </node>
+      <node id="4293">
+        <label>njli::Camera</label>
+        <link refid="classnjli_1_1_camera"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4294" relation="usage">
+          <edgelabel>m_OcclusionBuffer</edgelabel>
+        </childnode>
+        <childnode refid="4295" relation="usage">
+          <edgelabel>m_SceneRenderer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4291">
+        <label>njli::WorldSocket</label>
+        <link refid="classnjli_1_1_world_socket"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4305">
+        <label>njli::AbstractState&lt; Node &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4287">
+        <label>njli::WorldLuaVirtualMachine</label>
+        <link refid="classnjli_1_1_world_lua_virtual_machine"/>
+        <childnode refid="4266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4309">
+        <label>njli::SceneStateMachine</label>
+        <link refid="classnjli_1_1_scene_state_machine"/>
+        <childnode refid="4310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4281">
+        <label>njli::WorldStateMachine</label>
+        <link refid="classnjli_1_1_world_state_machine"/>
+        <childnode refid="4282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4298">
+        <label>njli::Scene</label>
+        <link refid="classnjli_1_1_scene"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4299" relation="usage">
+          <edgelabel>m_PhysicsWorld</edgelabel>
+        </childnode>
+        <childnode refid="4300" relation="usage">
+          <edgelabel>m_RootNode</edgelabel>
+        </childnode>
+        <childnode refid="4273" relation="usage">
+          <edgelabel>m_BackgroundMaterial</edgelabel>
+        </childnode>
+        <childnode refid="4309" relation="usage">
+          <edgelabel>m_SceneStateMachine</edgelabel>
+        </childnode>
+      </node>
+      <node id="4311">
+        <label>njli::AbstractState&lt; Scene &gt;</label>
+        <link refid="classnjli_1_1_abstract_state"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4276">
+        <label>btIDebugDraw</label>
+      </node>
+      <node id="4279">
+        <label>njli::DeviceTouch</label>
+        <link refid="classnjli_1_1_device_touch"/>
+        <childnode refid="4280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4274">
+        <label>njli::MaterialProperty</label>
+        <link refid="classnjli_1_1_material_property"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4271" relation="usage">
+          <edgelabel>m_loadGPU_images</edgelabel>
+        </childnode>
+        <childnode refid="4275" relation="usage">
+          <edgelabel>m_AbstractFrameBufferObject</edgelabel>
+          <edgelabel>m_loadGPU_fbo</edgelabel>
+        </childnode>
+      </node>
+      <node id="4285">
+        <label>njli::WorldSQLite</label>
+        <link refid="classnjli_1_1_world_s_q_lite"/>
+      </node>
+      <node id="4307">
+        <label>njli::PhysicsBody</label>
+        <link refid="classnjli_1_1_physics_body"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4308" relation="usage">
+          <edgelabel>m_PhysicsShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="4269">
+        <label>njli::Geometry</label>
+        <link refid="classnjli_1_1_geometry"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4271" relation="usage">
+          <edgelabel>m_setupOpacity_Image</edgelabel>
+        </childnode>
+        <childnode refid="4272" relation="usage">
+          <edgelabel>m_ShaderProgram</edgelabel>
+        </childnode>
+        <childnode refid="4273" relation="usage">
+          <edgelabel>m_setupOpacity_Material</edgelabel>
+          <edgelabel>m_Material</edgelabel>
+        </childnode>
+      </node>
+      <node id="4289">
+        <label>njli::AbstractClock</label>
+        <link refid="classnjli_1_1_abstract_clock"/>
+      </node>
+      <node id="4272">
+        <label>njli::ShaderProgram</label>
+        <link refid="classnjli_1_1_shader_program"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4306">
+        <label>njli::Light</label>
+        <link refid="classnjli_1_1_light"/>
+        <childnode refid="4270" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" line="36" column="1" bodyfile="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.h" bodystart="36" bodyend="497"/>
+    <listofallmembers>
+      <member refid="classnjli_1_1_abstract_decorator_1aeebcf1e20165c7d17da774f57eb2a989" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6b94b03ed7bcf783795e02a628d46bca" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>addChild</name></member>
+      <member refid="classnjli_1_1_world_1a2c0fcfa71f2459fd3e4eec11d5146ab5" prot="public" virt="non-virtual"><scope>njli::World</scope><name>addScene</name></member>
+      <member refid="classnjli_1_1_world_1a3f112f579abdd04d6b59b1ff8941cc09" prot="public" virt="non-virtual"><scope>njli::World</scope><name>createInstance</name></member>
+      <member refid="classnjli_1_1_world_1a37e168a7d1dde0b24c184cf092b5f506" prot="public" virt="non-virtual"><scope>njli::World</scope><name>destroyInstance</name></member>
+      <member refid="classnjli_1_1_world_1a4894e4a53f692a503661a7836bf7713f" prot="public" virt="non-virtual"><scope>njli::World</scope><name>disableDebugDraw</name></member>
+      <member refid="classnjli_1_1_world_1a319c7afd4e53395eac71c2f2e0a5a5a2" prot="public" virt="non-virtual"><scope>njli::World</scope><name>enableDebugDraw</name></member>
+      <member refid="classnjli_1_1_world_1a0451b10adb6965957a2b9de6ff72df90" prot="public" virt="non-virtual"><scope>njli::World</scope><name>enableDebugDraw</name></member>
+      <member refid="classnjli_1_1_world_1a41b67b3dea3196afa6ff1b0d961b39d2" prot="public" virt="non-virtual"><scope>njli::World</scope><name>enablePauseAnimation</name></member>
+      <member refid="classnjli_1_1_world_1ae8f238cc0f23ce6b8a05ad5a3da555f7" prot="public" virt="non-virtual"><scope>njli::World</scope><name>enablePauseGame</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a404aacf155dd325617fa271edb3d76cf" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad9a84c8c505c1e16633c9cc5a4ff85be" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>findChild</name></member>
+      <member refid="classnjli_1_1_world_1a9625ac484cd8e0bfd4533d1bd4308432" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getAspectRatio</name></member>
+      <member refid="classnjli_1_1_world_1af71f1daa7201bc43fec380f0d8e59886" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getBackgroundColor</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a490c8ca3c8055dbf7eddac231a3ab35d" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9b933891adc24e07496837c27a45e0bc" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a36ac221195b725e91bf2078ef706e59c" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1aa1c6e03576355963a3ea5b87463c1bd5" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getChildIndex</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a6cfd65297f5fa8a39a5507bcaf609252" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getChildren</name></member>
+      <member refid="classnjli_1_1_world_1a4860bc3b1638d3d4c0138f21b1078206" prot="public" virt="virtual"><scope>njli::World</scope><name>getClassName</name></member>
+      <member refid="classnjli_1_1_world_1aeb8eee919b8281fc8bbc5749e9a88303" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getDebugDrawer</name></member>
+      <member refid="classnjli_1_1_world_1a0d5a1cb767b22e5af8bc17ec806fd8cd" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getDebugDrawer</name></member>
+      <member refid="classnjli_1_1_world_1a7c0486ee9156abea442848faf85051cc" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getDeviceName</name></member>
+      <member refid="classnjli_1_1_world_1a916b92be91d763c4dda322458eca74be" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getInstance</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a51cc3fb78f2b04d19f5b21cf1e43e79b" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a72cd0e1e56e66d2a1bb616280e3a76bb" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>getParent</name></member>
+      <member refid="classnjli_1_1_world_1a77de3f785d9c487c510f9061945a83ef" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getScene</name></member>
+      <member refid="classnjli_1_1_world_1a0d14db95ba73974567bac4e98a49564c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getScene</name></member>
+      <member refid="classnjli_1_1_world_1a7789d1910fb503a23af33bf15d9c2a02" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getSocketAddress</name></member>
+      <member refid="classnjli_1_1_world_1ad85d66e2b189aa69a267dad3a96c6308" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getSocketPort</name></member>
+      <member refid="classnjli_1_1_world_1a32d0d1105d6a0f8b0411e7ebd2b60b60" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getStateMachine</name></member>
+      <member refid="classnjli_1_1_world_1a4f0f084bc7d61f7b776d133d12044207" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getStateMachine</name></member>
+      <member refid="classnjli_1_1_world_1aa5833c82b6b49b2fa4e130be6c9e428e" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getTouchCamera</name></member>
+      <member refid="classnjli_1_1_world_1a2be8a1f61c69a00fce5c62d00b20a00c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getTouchCamera</name></member>
+      <member refid="classnjli_1_1_world_1ad9b777af5ff42c8010f2eb6581ca2837" prot="public" virt="virtual"><scope>njli::World</scope><name>getType</name></member>
+      <member refid="classnjli_1_1_world_1a18b7d4f19e5c8fbb43e52f7fbc3f89f8" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getViewPort</name></member>
+      <member refid="classnjli_1_1_world_1a0c840ed03a509073591181a0db3326be" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getViewportDimensions</name></member>
+      <member refid="classnjli_1_1_world_1a53d2776971466a8e3e8bd928058ac3ea" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldClock</name></member>
+      <member refid="classnjli_1_1_world_1a671e2a935d966ebd09daf94390c7561c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldClock</name></member>
+      <member refid="classnjli_1_1_world_1a02d2a4cda6b5a38bc1db523aba97c52c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldFactory</name></member>
+      <member refid="classnjli_1_1_world_1ab344de6cddf96f4cfeaa358585ba4ca4" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldFactory</name></member>
+      <member refid="classnjli_1_1_world_1a40adfae9fbe51bb80879166d3f91acbf" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldHUD</name></member>
+      <member refid="classnjli_1_1_world_1a2e440ab39d0a2d3c02bee623e84e712e" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldHUD</name></member>
+      <member refid="classnjli_1_1_world_1a712594bdfb7bd51cdbbb2de4d5393d68" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldInput</name></member>
+      <member refid="classnjli_1_1_world_1a716faf8b9b15ff7a584da9fb1685a5a9" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldInput</name></member>
+      <member refid="classnjli_1_1_world_1adfe48d79f8ed5f30aeb3675506d0f3de" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldLuaVirtualMachine</name></member>
+      <member refid="classnjli_1_1_world_1a5b3c55392c4bd72b1fb7c4fd56e14fe4" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldLuaVirtualMachine</name></member>
+      <member refid="classnjli_1_1_world_1ac63f035e992870bd8b8a17f2273d8cf5" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldResourceLoader</name></member>
+      <member refid="classnjli_1_1_world_1a41f2109f9deb6d4eecf7d383e83c9464" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldResourceLoader</name></member>
+      <member refid="classnjli_1_1_world_1ad2e539aebc7349a690c930bc00ba9761" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldSocket</name></member>
+      <member refid="classnjli_1_1_world_1aeb2171b3be01fd166f48249b47abb43a" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldSocket</name></member>
+      <member refid="classnjli_1_1_world_1a4a5a98058882437d3eb23814b4cacdb5" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldSound</name></member>
+      <member refid="classnjli_1_1_world_1a6636a00ece9288ae469f623139d9cb18" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldSound</name></member>
+      <member refid="classnjli_1_1_world_1a29ea248bbec95dacc7b0f027b054e310" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldSQLite</name></member>
+      <member refid="classnjli_1_1_world_1afc0f1d8b0c7610d4d5391239c6d6f594" prot="public" virt="non-virtual"><scope>njli::World</scope><name>getWorldSQLite</name></member>
+      <member refid="classnjli_1_1_world_1a322956de68eb15d43bfb39083942edee" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>handleSocketMessage</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a9bd85cebb830dff23892f02baab1b583" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>hasChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a954a31a53d097a3d6e111c7c5262d792" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>hasChildren</name></member>
+      <member refid="classnjli_1_1_world_1ab92bd6e910bf66b785200f5ca9b1012f" prot="public" virt="non-virtual"><scope>njli::World</scope><name>hasInstance</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a8754d94fd0ad677a28a47773bcd6bb7b" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>hasParent</name></member>
+      <member refid="classnjli_1_1_world_1a23a43bf65b215f40803dca83ff9f738c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>isAnimationPaused</name></member>
+      <member refid="classnjli_1_1_world_1a0c6f38f48b3d7393d01f922a499a4fd3" prot="public" virt="non-virtual"><scope>njli::World</scope><name>isDebug</name></member>
+      <member refid="classnjli_1_1_world_1a6c78f7f0112fea8a0c56b20835a8ae2a" prot="public" virt="non-virtual"><scope>njli::World</scope><name>isPausedGame</name></member>
+      <member refid="classnjli_1_1_world_1a1d671225308c15c773354a73b67f4539" prot="public" virt="non-virtual"><scope>njli::World</scope><name>isSocketEnabled</name></member>
+      <member refid="classnjli_1_1_world_1a5a261c335c55b2fd0e678e815a6cc85a" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_AnimationPaused</name></member>
+      <member refid="classnjli_1_1_world_1acf0b94b1d7cba8d62158065b03de9012" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_BackgroundColor</name></member>
+      <member refid="classnjli_1_1_world_1a5ae1a42d02339871c60b45ecacc92753" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_DebugDrawCamera</name></member>
+      <member refid="classnjli_1_1_world_1a180a3f557467c6bb6d88cf05b691a6f4" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_DebugDrawMaterial</name></member>
+      <member refid="classnjli_1_1_world_1a9dc158249ba20ca7b1523cce0d8d309f" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_DeviceName</name></member>
+      <member refid="classnjli_1_1_world_1ac9ab0b237e486a28bd08adf913b3908c" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_enableDebugDraw</name></member>
+      <member refid="classnjli_1_1_world_1af387313aec7a62f3792e76d9610b70a8" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_GamePaused</name></member>
+      <member refid="classnjli_1_1_world_1a9c9279cbbb77ef973cb7d003198789b7" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_Scene</name></member>
+      <member refid="classnjli_1_1_world_1a51c1d3b5047c2e10c2850faf137efa9a" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_SocketAddress</name></member>
+      <member refid="classnjli_1_1_world_1ab701cb678bcb47262db407e4684608a2" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_SocketEnabled</name></member>
+      <member refid="classnjli_1_1_world_1aafbdf669fc3dbc91c2b746b653ac4f17" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_SocketPort</name></member>
+      <member refid="classnjli_1_1_world_1a14412bd1ed14fca506732c0234db2b28" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_stateMachine</name></member>
+      <member refid="classnjli_1_1_world_1a67cab53aa644efd7c2e6f6d7df9c1745" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_TouchCamera</name></member>
+      <member refid="classnjli_1_1_world_1a0ac18bfa72f55b16c00703e1035a0af7" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_ViewPortDimensions</name></member>
+      <member refid="classnjli_1_1_world_1aacebc8d861e42a409cf1a875972da641" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldClock</name></member>
+      <member refid="classnjli_1_1_world_1aa92f105e6f53c7d8c30b8e453e1181c8" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldDebugDrawer</name></member>
+      <member refid="classnjli_1_1_world_1ae50678873f637941aa87ec45c33e9a1c" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldFactory</name></member>
+      <member refid="classnjli_1_1_world_1a922a3ec1f96ac87f97faee6329f39686" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldHUD</name></member>
+      <member refid="classnjli_1_1_world_1a87601ddb30dead7b8b0bd05bcc1f7ff3" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldInput</name></member>
+      <member refid="classnjli_1_1_world_1ab3878c3df6c61327dfd7a08864e567a9" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldLuaVirtualMachine</name></member>
+      <member refid="classnjli_1_1_world_1a4ebb658eba80c17e930b96881d3a4e19" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldResourceLoader</name></member>
+      <member refid="classnjli_1_1_world_1a0f6ea126555fa904aa246baba084c9de" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldSocket</name></member>
+      <member refid="classnjli_1_1_world_1a004cd4a3a730b83733b3ff91bfaedce2" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldSound</name></member>
+      <member refid="classnjli_1_1_world_1a08dcff070cf899e54e3aa9e4d1741c03" prot="private" virt="non-virtual"><scope>njli::World</scope><name>m_WorldSQLite</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a1a8c380d937337233418c1954ba7d797" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>numberOfChildren</name></member>
+      <member refid="classnjli_1_1_world_1a39f4eb464e14da5f5bcb00f30e13c707" prot="public" virt="virtual"><scope>njli::World</scope><name>operator std::string</name></member>
+      <member refid="classnjli_1_1_world_1a2fe83dc2d899a91ef21ac20220e2ada4" prot="private" virt="non-virtual"><scope>njli::World</scope><name>operator=</name></member>
+      <member refid="classnjli_1_1_world_1a4118fbcbb82b872369b235bbc7cde67f" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>processMessage</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a907a417691a2e3bfef5fd7d0f0eb0417" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a3de9eaa0ff8afc7ccd4378efdaadc191" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>removeChild</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1accd814c7ee5dd1b5e00a3e44e79bff27" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>removeChildren</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a04b797ac24b5de658d1e6dc165167d8f" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>removeFromParent</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a5ef875734a96eca9b3c7aa3be482ff29" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>removeParent</name></member>
+      <member refid="classnjli_1_1_world_1aabf2a07e2fab640f5800357ad1fd7717" prot="public" virt="non-virtual"><scope>njli::World</scope><name>removeScene</name></member>
+      <member refid="classnjli_1_1_world_1a3e7f68f7467d421971e13dfcc5e2100e" prot="public" virt="non-virtual"><scope>njli::World</scope><name>render</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1afd5844a76f88ee1271f228c6dab2dc6d" prot="protected" virt="non-virtual"><scope>njli::World</scope><name>replaceChild</name></member>
+      <member refid="classnjli_1_1_world_1ae01dbf26d72e505fd67458d881dfa44c" prot="public" virt="non-virtual"><scope>njli::World</scope><name>resize</name></member>
+      <member refid="classnjli_1_1_world_1a95bcdb1d140d15e4b022f72ea55286c2" prot="private" virt="non-virtual"><scope>njli::World</scope><name>s_Instance</name></member>
+      <member refid="classnjli_1_1_world_1a7eebf55a7920061d87e5dc03feb692da" prot="public" virt="non-virtual"><scope>njli::World</scope><name>setBackgroundAlpha</name></member>
+      <member refid="classnjli_1_1_world_1a011db5e9383aa6628892cd431c3657a5" prot="public" virt="non-virtual"><scope>njli::World</scope><name>setBackgroundColor</name></member>
+      <member refid="classnjli_1_1_world_1ab7bbd4dee42bec416fb2b64e9843ddf1" prot="public" virt="non-virtual"><scope>njli::World</scope><name>setBackgroundColor</name></member>
+      <member refid="classnjli_1_1_world_1a5c9cc63ac7cb847e6d581a867614e47d" prot="public" virt="non-virtual"><scope>njli::World</scope><name>setDeviceName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" prot="public" virt="non-virtual"><scope>njli::World</scope><name>setName</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1a0ae8cbf30cb6d32ea932159ec0de2576" prot="protected" virt="virtual"><scope>njli::World</scope><name>setParent</name></member>
+      <member refid="classnjli_1_1_world_1aeec194d8bb29e91a3a51c8af7cae6452" prot="public" virt="non-virtual"><scope>njli::World</scope><name>setTouchCamera</name></member>
+      <member refid="classnjli_1_1_world_1a5b67da9acd56cec605ad0dccc2b957cd" prot="public" virt="non-virtual"><scope>njli::World</scope><name>startSocket</name></member>
+      <member refid="classnjli_1_1_world_1ac4b819fe8d34e6661d8f47138c318ff5" prot="public" virt="non-virtual"><scope>njli::World</scope><name>startSocket</name></member>
+      <member refid="classnjli_1_1_world_1a7d217f38577d72d349e2df64761dc4c5" prot="public" virt="non-virtual"><scope>njli::World</scope><name>stopSocket</name></member>
+      <member refid="classnjli_1_1_world_1ac885088233b87f30b5be62cd7f6a6c08" prot="public" virt="non-virtual"><scope>njli::World</scope><name>touchCancelled</name></member>
+      <member refid="classnjli_1_1_world_1af2a39625b45e1de4d7363e817e80df58" prot="public" virt="non-virtual"><scope>njli::World</scope><name>touchDown</name></member>
+      <member refid="classnjli_1_1_world_1abe96b82186df7d0f6f18e8970e8a0d3d" prot="public" virt="non-virtual"><scope>njli::World</scope><name>touchMove</name></member>
+      <member refid="classnjli_1_1_world_1a0aa11e8df6bf8f01f53bf2c5fe06ce3e" prot="public" virt="non-virtual"><scope>njli::World</scope><name>touchUp</name></member>
+      <member refid="classnjli_1_1_world_1a248c324a0a97b0f286eaedf8f997688e" prot="public" virt="non-virtual"><scope>njli::World</scope><name>update</name></member>
+      <member refid="classnjli_1_1_world_1af01e96219aea73e611ba28179b3532ed" prot="private" virt="non-virtual"><scope>njli::World</scope><name>World</name></member>
+      <member refid="classnjli_1_1_world_1abf9c0b24c17244baf76d760e81974cfe" prot="private" virt="non-virtual"><scope>njli::World</scope><name>World</name></member>
+      <member refid="classnjli_1_1_abstract_decorator_1ad7e4cf09f67ea308123abaf1ff109d10" prot="protected" virt="virtual"><scope>njli::World</scope><name>~AbstractDecorator</name></member>
+      <member refid="classnjli_1_1_abstract_object_1aadfc508440196d05461ebf48fd3d3625" prot="protected" virt="virtual"><scope>njli::World</scope><name>~AbstractObject</name></member>
+      <member refid="classnjli_1_1_world_1a9afc8afbde61ce7dde33ef37877c7453" prot="private" virt="virtual"><scope>njli::World</scope><name>~World</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

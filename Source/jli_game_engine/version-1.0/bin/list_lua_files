@@ -1,0 +1,21 @@
+
+topath="$1"
+frompath="$2"
+binpath="$3"
+rm -rf $topath/*
+
+for i in $(find $frompath -type d -not -path "*_OLD*" -not -path "*_archive*")
+do
+    if [ "${i##$frompath}" != "" ]
+    then
+        mkdir $topath/${i##$frompath/}
+    fi
+done
+
+
+for i in $(find $frompath -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" -not -path "*/_*" )
+do
+    #cat $i >  $topath/${i##$frompath/}
+    #luamin -f $i > $topath/${i##$frompath/}
+    $binpath/removeComments $i $binpath >  $topath/${i##$frompath/}
+done

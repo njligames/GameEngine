@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_material_property_8h" kind="file">
+    <compoundname>MaterialProperty.h</compoundname>
+    <includes refid="_abstract_builder_8h" local="yes">AbstractBuilder.h</includes>
+    <includes refid="_abstract_factory_object_8h" local="yes">AbstractFactoryObject.h</includes>
+    <includes refid="_j_l_i_factory_types_8h" local="yes">JLIFactoryTypes.h</includes>
+    <includes local="yes">btVector2.h</includes>
+    <includes local="yes">lua.hpp</includes>
+    <includes local="no">bitset</includes>
+    <includedby refid="_j_l_i_engine_8h" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</includedby>
+    <includedby refid="_material_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Material.cpp</includedby>
+    <includedby refid="_world_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp</includedby>
+    <includedby refid="_world_factory_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</includedby>
+    <includedby refid="_world_lua_virtual_machine_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</includedby>
+    <includedby refid="_geometry_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Geometry.cpp</includedby>
+    <includedby refid="_material_property_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp</includedby>
+    <includedby refid="_sprite2_d_8cpp" local="yes">/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Sprite2D.cpp</includedby>
+    <incdepgraph>
+      <node id="24828">
+        <label>lua.hpp</label>
+      </node>
+      <node id="24817">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="24818" relation="include">
+        </childnode>
+      </node>
+      <node id="24822">
+        <label>AbstractDecorator.h</label>
+        <link refid="_abstract_decorator_8h"/>
+        <childnode refid="24816" relation="include">
+        </childnode>
+        <childnode refid="24823" relation="include">
+        </childnode>
+        <childnode refid="24821" relation="include">
+        </childnode>
+      </node>
+      <node id="24827">
+        <label>btVector2.h</label>
+      </node>
+      <node id="24816">
+        <label>Util.h</label>
+        <link refid="_util_8h"/>
+        <childnode refid="24817" relation="include">
+        </childnode>
+        <childnode refid="24819" relation="include">
+        </childnode>
+        <childnode refid="24820" relation="include">
+        </childnode>
+      </node>
+      <node id="24819">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24811">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h</label>
+        <link refid="MaterialProperty.h"/>
+        <childnode refid="24812" relation="include">
+        </childnode>
+        <childnode refid="24813" relation="include">
+        </childnode>
+        <childnode refid="24825" relation="include">
+        </childnode>
+        <childnode refid="24827" relation="include">
+        </childnode>
+        <childnode refid="24828" relation="include">
+        </childnode>
+        <childnode refid="24829" relation="include">
+        </childnode>
+      </node>
+      <node id="24821">
+        <label>string</label>
+      </node>
+      <node id="24814">
+        <label>btAlignedObjectArray.h</label>
+      </node>
+      <node id="24812">
+        <label>AbstractBuilder.h</label>
+        <link refid="_abstract_builder_8h"/>
+        <childnode refid="24813" relation="include">
+        </childnode>
+        <childnode refid="24816" relation="include">
+        </childnode>
+        <childnode refid="24824" relation="include">
+        </childnode>
+        <childnode refid="24821" relation="include">
+        </childnode>
+      </node>
+      <node id="24824">
+        <label>btSerializer.h</label>
+      </node>
+      <node id="24826">
+        <label>btBroadphaseProxy.h</label>
+      </node>
+      <node id="24829">
+        <label>bitset</label>
+      </node>
+      <node id="24823">
+        <label>vector</label>
+      </node>
+      <node id="24815">
+        <label>AbstractObject.h</label>
+        <link refid="_abstract_object_8h"/>
+        <childnode refid="24816" relation="include">
+        </childnode>
+        <childnode refid="24821" relation="include">
+        </childnode>
+        <childnode refid="24822" relation="include">
+        </childnode>
+      </node>
+      <node id="24825">
+        <label>JLIFactoryTypes.h</label>
+        <link refid="_j_l_i_factory_types_8h"/>
+        <childnode refid="24816" relation="include">
+        </childnode>
+        <childnode refid="24826" relation="include">
+        </childnode>
+      </node>
+      <node id="24818">
+        <label>Macros.h</label>
+        <link refid="_macros_8h"/>
+      </node>
+      <node id="24820">
+        <label>stdio.h</label>
+      </node>
+      <node id="24813">
+        <label>AbstractFactoryObject.h</label>
+        <link refid="_abstract_factory_object_8h"/>
+        <childnode refid="24814" relation="include">
+        </childnode>
+        <childnode refid="24815" relation="include">
+        </childnode>
+        <childnode refid="24816" relation="include">
+        </childnode>
+        <childnode refid="24824" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="24830">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h</label>
+        <link refid="MaterialProperty.h"/>
+        <childnode refid="24831" relation="include">
+        </childnode>
+        <childnode refid="24832" relation="include">
+        </childnode>
+        <childnode refid="24833" relation="include">
+        </childnode>
+        <childnode refid="24834" relation="include">
+        </childnode>
+        <childnode refid="24835" relation="include">
+        </childnode>
+        <childnode refid="24836" relation="include">
+        </childnode>
+        <childnode refid="24837" relation="include">
+        </childnode>
+        <childnode refid="24838" relation="include">
+        </childnode>
+      </node>
+      <node id="24835">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.cpp</label>
+        <link refid="_world_lua_virtual_machine_8cpp"/>
+      </node>
+      <node id="24836">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Geometry.cpp</label>
+        <link refid="_geometry_8cpp"/>
+      </node>
+      <node id="24833">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/World.cpp</label>
+        <link refid="_world_8cpp"/>
+      </node>
+      <node id="24838">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/Sprite2D.cpp</label>
+        <link refid="_sprite2_d_8cpp"/>
+      </node>
+      <node id="24837">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/render/OpenGLES20/MaterialProperty.cpp</label>
+        <link refid="_material_property_8cpp"/>
+      </node>
+      <node id="24831">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/JLIEngine.h</label>
+        <link refid="_j_l_i_engine_8h"/>
+      </node>
+      <node id="24834">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/WorldFactory.cpp</label>
+        <link refid="_world_factory_8cpp"/>
+      </node>
+      <node id="24832">
+        <label>/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/Material.cpp</label>
+        <link refid="_material_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classnjli_1_1_material_property" prot="public">njli::MaterialProperty</innerclass>
+    <innernamespace refid="namespacenjli">njli</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>MaterialProperty.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>JLIGameEngineTest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>James<sp/>Folk<sp/>on<sp/>11/22/14.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>James<sp/>Folk.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__JLIGameEngineTest__MaterialProperty__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__JLIGameEngineTest__MaterialProperty__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_builder_8h" kindref="compound">AbstractBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abstract_factory_object_8h" kindref="compound">AbstractFactoryObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_l_i_factory_types_8h" kindref="compound">JLIFactoryTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;btVector2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lua.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bitset&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">btTransform;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenjli" kindref="compound">njli</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MaterialPropertyBuilder;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Image;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ShaderProgram;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AbstractFrameBufferObject;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Material;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classnjli_1_1_material_property" refkind="compound"><highlight class="normal">ATTRIBUTE_ALIGNED16(</highlight><highlight class="keyword">class</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref><sp/>:<sp/>public<sp/><ref refid="classnjli_1_1_abstract_factory_object" kindref="compound">AbstractFactoryObject</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="classnjli_1_1_material_property_1acb96ebb09abe8f2a37a915a842babfac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_world_factory" kindref="compound">WorldFactory</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classnjli_1_1_material_property_1aa1212b6e372a0f45d2c01f3cd203af77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnjli_1_1_material" kindref="compound">Material</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_builder" kindref="compound">AbstractBuilder</ref>&amp;);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>&amp;);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>BT_DECLARE_ALIGNED_ALLOCATOR();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>&amp;);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a087eb5f8d9f51cc476f12f1d10a3cb95" kindref="member">AbstractDecorator::setName</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_decorator_1a615f28a723c233e6c8e0154f26c9211c" kindref="member">AbstractDecorator::getName</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a2f69a21b1f548d10ca5e5310d4a84570" kindref="member">AbstractFactoryObject::create</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>using<sp/>AbstractFactoryObject::clone;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1a40f34f74548bc892b500dfceb828c864" kindref="member">AbstractFactoryObject::getPointer</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1acc031cc8dee1b86531dc7c327f74b30b" kindref="member">AbstractFactoryObject::getPointerValue</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_abstract_factory_object_1af4234af26cc358d628c45899be311ffc" kindref="member">AbstractFactoryObject::serializeObject</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>calculateSerializeBufferSize()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serialize(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dataBuffer,<sp/>btSerializer*)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>getClassName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>getType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>std::string()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>**<sp/>createArray(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroyArray(<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref><sp/>*<sp/>*array,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>size<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*<sp/><ref refid="_world_lua_virtual_machine_8cpp_1a36640a33d07dcc94ed03bce5f71ece33" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property_builder" kindref="compound">MaterialPropertyBuilder</ref>&amp;<sp/>builder);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*<sp/>clone(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*<sp/>copy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy(<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref><sp/>*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>load(<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref><sp/>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>lua_State<sp/>*<sp/>L,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stack_index);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>type();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material" kindref="compound">Material</ref>*<sp/>getParent();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material" kindref="compound">Material</ref>*<sp/>getParent()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>fill<sp/>in<sp/>specific<sp/>methods<sp/>for<sp/>Texture</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMinificationFilter(<ref refid="namespacenjli_1a980b62f11da3b7143a525012cb512bac" kindref="member">njliTextureMinificationValueType</ref><sp/>val);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a980b62f11da3b7143a525012cb512bac" kindref="member">njliTextureMinificationValueType</ref><sp/>getMinificationFilter()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMagnificationFilter(<ref refid="namespacenjli_1a9fe7a080d946c5be3afc71d834dc7902" kindref="member">njliTextureMagnificationValueType</ref><sp/>val);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a9fe7a080d946c5be3afc71d834dc7902" kindref="member">njliTextureMagnificationValueType</ref><sp/>getMagnificationFilter()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWrapS(<ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref><sp/>val);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref><sp/>getWrapS()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWrapT(<ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref><sp/>val);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref><sp/>getWrapT()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>img);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>negativeX,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>negativeY,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>negativeZ,</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>positiveX,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>positiveY,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>positiveZ);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU(<ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref><sp/>*<sp/>fbo);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unLoadGPU();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reLoadGPU(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>img,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>offset<sp/>=<sp/>btVector2(0,<sp/>0));</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reLoadGPU(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>img,<sp/><ref refid="namespacenjli_1a3287657f79ee806953cdf2a3e719a9dd" kindref="member">njliTextureCubeSides</ref><sp/>cubeSide,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>offset<sp/>=<sp/>btVector2(0,<sp/>0));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setTextureTransform(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btTransform&amp;<sp/>transform);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btTransform&amp;<sp/>getTextureTransform()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>getWidth()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>getHeight()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isTextureCube()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isTexture2D()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasOpacity()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initReferences();</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>getTextureIndex()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setTextureIndex(<ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>index);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bind(<ref refid="classnjli_1_1_shader_program" kindref="compound">ShaderProgram</ref><sp/>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>propertyName);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unBind()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadTexImage2DInternal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>img,<sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>target);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reLoadTexImage2DInternal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>img,<sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/>target,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>btVector2&amp;<sp/>offset<sp/>=<sp/>btVector2(0,<sp/>0));</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadProperties()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>render();</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="341" refid="classnjli_1_1_material_property_1a54b3b51f4b0d736d316b63777ccda316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a54b3b51f4b0d736d316b63777ccda316" kindref="member">m_textureID</ref>;</highlight></codeline>
+<codeline lineno="342" refid="classnjli_1_1_material_property_1a13b42d54787929d981050557ac4748a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a980b62f11da3b7143a525012cb512bac" kindref="member">njliTextureMinificationValueType</ref><sp/><ref refid="classnjli_1_1_material_property_1a13b42d54787929d981050557ac4748a8" kindref="member">m_minVal</ref>;</highlight></codeline>
+<codeline lineno="343" refid="classnjli_1_1_material_property_1a99668eb548352e3b136eff0d78bdaf47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a9fe7a080d946c5be3afc71d834dc7902" kindref="member">njliTextureMagnificationValueType</ref><sp/><ref refid="classnjli_1_1_material_property_1a99668eb548352e3b136eff0d78bdaf47" kindref="member">m_magVal</ref>;</highlight></codeline>
+<codeline lineno="344" refid="classnjli_1_1_material_property_1a18842aef4fce7ec9871bcf206fc5d517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref><sp/><ref refid="classnjli_1_1_material_property_1a18842aef4fce7ec9871bcf206fc5d517" kindref="member">m_sWrap</ref>;</highlight></codeline>
+<codeline lineno="345" refid="classnjli_1_1_material_property_1a1db9e13afa4a288eaf901c7e6726d36f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacenjli_1a6e9496d4850ec7151f04a220e1979b62" kindref="member">njliTextureWrapType</ref><sp/><ref refid="classnjli_1_1_material_property_1a1db9e13afa4a288eaf901c7e6726d36f" kindref="member">m_tWrap</ref>;</highlight></codeline>
+<codeline lineno="346" refid="classnjli_1_1_material_property_1a6561cf1412426aa7a0b40590ad221169" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aa62c75d314a0d1f37f79c4b73b2292e2" kindref="member">s32</ref><sp/><ref refid="classnjli_1_1_material_property_1a6561cf1412426aa7a0b40590ad221169" kindref="member">m_textureType</ref>;</highlight></codeline>
+<codeline lineno="347" refid="classnjli_1_1_material_property_1aeab9a246acdf7a58f77381addbe25af3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>btTransform*<sp/><ref refid="classnjli_1_1_material_property_1aeab9a246acdf7a58f77381addbe25af3" kindref="member">m_TextureTransform</ref>;</highlight></codeline>
+<codeline lineno="348" refid="classnjli_1_1_material_property_1acbc4746b18b182d07313eeab1fb0a62c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/><ref refid="classnjli_1_1_material_property_1acbc4746b18b182d07313eeab1fb0a62c" kindref="member">m_TextureIndex</ref>;</highlight></codeline>
+<codeline lineno="349" refid="classnjli_1_1_material_property_1a8e0a5e6f9f07c09905cc9bdef219486b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a8e0a5e6f9f07c09905cc9bdef219486b" kindref="member">m_Width</ref>;</highlight></codeline>
+<codeline lineno="350" refid="classnjli_1_1_material_property_1a51e2a105287561c4417234e5a804fa32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a51e2a105287561c4417234e5a804fa32" kindref="member">m_Height</ref>;</highlight></codeline>
+<codeline lineno="351" refid="classnjli_1_1_material_property_1aa65bd34c711ad4a992d9c0cca0408502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1aa65bd34c711ad4a992d9c0cca0408502" kindref="member">m_NumberOfComponents</ref>;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="classnjli_1_1_material_property_1a71f667dc1a2ab962ed1d014b223c6c2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a71f667dc1a2ab962ed1d014b223c6c2d" kindref="member">m_2DUniform</ref>;</highlight></codeline>
+<codeline lineno="354" refid="classnjli_1_1_material_property_1a48374b6e4a3ec749e21499e76633606e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a48374b6e4a3ec749e21499e76633606e" kindref="member">m_CubeUniform</ref>;</highlight></codeline>
+<codeline lineno="355" refid="classnjli_1_1_material_property_1a6ca2655337c3335aa3188e4b0a202d0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a6ca2655337c3335aa3188e4b0a202d0e" kindref="member">m_is2DUniform</ref>;</highlight></codeline>
+<codeline lineno="356" refid="classnjli_1_1_material_property_1a24142b6247dd361b43102f83d2d8e36c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_util_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/><ref refid="classnjli_1_1_material_property_1a24142b6247dd361b43102f83d2d8e36c" kindref="member">m_isCubeUniform</ref>;</highlight></codeline>
+<codeline lineno="357" refid="classnjli_1_1_material_property_1a6d09f742e5c768571d6a240648cfc488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref>*<sp/><ref refid="classnjli_1_1_material_property_1a6d09f742e5c768571d6a240648cfc488" kindref="member">m_AbstractFrameBufferObject</ref>;</highlight></codeline>
+<codeline lineno="358" refid="classnjli_1_1_material_property_1adda1b2988da4117aefb2d54ff735c13c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property_1adda1b2988da4117aefb2d54ff735c13c" kindref="member">m_hasOpacity</ref>;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addReference(<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>removeReference(<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasReference(<ref refid="classnjli_1_1_material_property" kindref="compound">MaterialProperty</ref>*);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="classnjli_1_1_material_property_1a3ce7f792c0a4ab622a118832075df57e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::bitset&lt;16&gt;<sp/><ref refid="classnjli_1_1_material_property_1a3ce7f792c0a4ab622a118832075df57e" kindref="member">s_TextureIDReferences</ref>;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(DEBUG)<sp/>||<sp/>defined(_DEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1ad758b7a5c3f18ed79d2fcd23d9f16357" kindref="member">u64</ref><sp/>s_MaxTextureUnits;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_util_8h_1ad758b7a5c3f18ed79d2fcd23d9f16357" kindref="member">u64</ref><sp/>s_MaxTextureSize;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855b" kindref="member">njliLoadGPUType</ref><sp/>{</highlight></codeline>
+<codeline lineno="372" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab2312f8edb2846647ff841d4a7813c89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab2312f8edb2846647ff841d4a7813c89" kindref="member">JLI_LOAD_GPU_TYPE_NONE</ref>,</highlight></codeline>
+<codeline lineno="373" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba19facd571e661394fd10c4adc26e2de6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba19facd571e661394fd10c4adc26e2de6" kindref="member">JLI_LOAD_GPU_TYPE_2D_EMPTY</ref>,</highlight></codeline>
+<codeline lineno="374" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba84cee2de1a9c1bff7902327c2871a4cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba84cee2de1a9c1bff7902327c2871a4cf" kindref="member">JLI_LOAD_GPU_TYPE_2D</ref>,</highlight></codeline>
+<codeline lineno="375" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba705566d6faa4dc00bf60956035329286" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855ba705566d6faa4dc00bf60956035329286" kindref="member">JLI_LOAD_GPU_TYPE_CUBE</ref>,</highlight></codeline>
+<codeline lineno="376" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bac5507e15f557a30a23a193db80d35b57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bac5507e15f557a30a23a193db80d35b57" kindref="member">JLI_LOAD_GPU_TYPE_FBO</ref>,</highlight></codeline>
+<codeline lineno="377" refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855bab57e4f81335fbb5b1af57ef0dde78a59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JLI_LOAD_GPU_TYPE_MAX</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380" refid="classnjli_1_1_material_property_1a3ad0ce3f3e483eff600e95737228c218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_material_property_1ae02b26fdb8ff7968cc6def931e69855b" kindref="member">njliLoadGPUType</ref><sp/><ref refid="classnjli_1_1_material_property_1a3ad0ce3f3e483eff600e95737228c218" kindref="member">m_njliLoadGPUType</ref>;</highlight></codeline>
+<codeline lineno="381" refid="classnjli_1_1_material_property_1ad46878315683b289618fc02ade373381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref>*<sp/><ref refid="classnjli_1_1_material_property_1ad46878315683b289618fc02ade373381" kindref="member">m_loadGPU_fbo</ref>;</highlight></codeline>
+<codeline lineno="382" refid="classnjli_1_1_material_property_1a1e9f5824628544430cbe914ca7e6b605" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>**<sp/><ref refid="classnjli_1_1_material_property_1a1e9f5824628544430cbe914ca7e6b605" kindref="member">m_loadGPU_images</ref>;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU_Internal();</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU_Internal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>img);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU_Internal(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>negativeX,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>negativeY,</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>negativeZ,</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>positiveX,</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>positiveY,</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classnjli_1_1_image" kindref="compound">Image</ref>&amp;<sp/>positiveZ);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGPU_Internal(<ref refid="classnjli_1_1_abstract_frame_buffer_object" kindref="compound">AbstractFrameBufferObject</ref><sp/>*<sp/>fbo);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__JLIGameEngineTest__MaterialProperty__)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jamesfolk/Dropbox/GameDevelopment/NJLIGames/NJLIGameEngine/Source/jli_game_engine/version-1.0/src/MaterialProperty.h"/>
+  </compounddef>
+</doxygen>
