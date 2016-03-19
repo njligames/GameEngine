@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C18B9AA31C9CF5EE003628FE /* Framework_macOSx */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C18B9AA41C9CF5EE003628FE /* Build configuration list for PBXAggregateTarget "Framework_macOSx" */;
+			buildPhases = (
+				C18B9AA91C9CF5FA003628FE /* Multiplatform Build */,
+			);
+			dependencies = (
+				C18B9AA81C9CF5F5003628FE /* PBXTargetDependency */,
+			);
+			name = Framework_macOSx;
+			productName = Framework_macOSx;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C18B8FE31C9BC21B003628FE /* NJLIGameEngine_macOSx.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B8FE21C9BC21B003628FE /* NJLIGameEngine_macOSx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C18B8FEE1C9BC2DE003628FE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B8FED1C9BC2DE003628FE /* OpenGL.framework */; };
@@ -870,6 +885,16 @@
 		C18B9A741C9C9CB4003628FE /* WorldPythonVirtualMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B9A6A1C9C9CB4003628FE /* WorldPythonVirtualMachine.cpp */; };
 		C18B9A751C9C9CB4003628FE /* WorldSound.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18B9A6B1C9C9CB4003628FE /* WorldSound.mm */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C18B9AA71C9CF5F5003628FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18B8FD71C9BC21B003628FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18B8FDE1C9BC21B003628FE;
+			remoteInfo = NJLIGameEngine_macOSx;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C18B8FDF1C9BC21B003628FE /* libNJLIGameEngine_macOSx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNJLIGameEngine_macOSx.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3500,6 +3525,7 @@
 				C18B8FDB1C9BC21B003628FE /* Sources */,
 				C18B8FDC1C9BC21B003628FE /* Frameworks */,
 				C18B8FDD1C9BC21B003628FE /* Headers */,
+				C18B9A911C9CED16003628FE /* Build Framework */,
 			);
 			buildRules = (
 			);
@@ -3522,6 +3548,9 @@
 					C18B8FDE1C9BC21B003628FE = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					C18B9AA31C9CF5EE003628FE = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = C18B8FDA1C9BC21B003628FE /* Build configuration list for PBXProject "NJLIGameEngine_macOSx" */;
@@ -3537,9 +3566,41 @@
 			projectRoot = "";
 			targets = (
 				C18B8FDE1C9BC21B003628FE /* NJLIGameEngine_macOSx */,
+				C18B9AA31C9CF5EE003628FE /* Framework_macOSx */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C18B9A911C9CED16003628FE /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n";
+		};
+		C18B9AA91C9CF5FA003628FE /* Multiplatform Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Multiplatform Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (appletvos/appletvsimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\n#if [ \"$RW_SDK_PLATFORM\" == \"appletvos\" ]; then\n#RW_OTHER_PLATFORM=appletvsimulator\n#else\n#RW_OTHER_PLATFORM=appletvos\n#fi\n\n# 4 - Find the build directory\n#if [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\n#RW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\n#else\n#echo \"Could not find other platform build directory.\"\n#exit 1\n#fi\n\n# Build the other platform.\n#build_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for appletvsimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\n#if [ \"$RW_SDK_PLATFORM\" == \"appletvsimulator\" ]; then\n#build_static_library \"${SDK_NAME}\"\n#fi\n\n# Join the 2 static libs into 1 and push into the .framework\n#make_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n\n# Ensure that the framework is present in both platform's build directories\n#cp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\n#ditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\n\n# Copy the framework to NJLIGameEngine directory.\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/NJLI/${RW_FRAMEWORK_NAME}.framework\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C18B8FDB1C9BC21B003628FE /* Sources */ = {
@@ -3914,6 +3975,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C18B9AA81C9CF5F5003628FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18B8FDE1C9BC21B003628FE /* NJLIGameEngine_macOSx */;
+			targetProxy = C18B9AA71C9CF5F5003628FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		C18B8FE81C9BC21B003628FE /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4050,6 +4119,22 @@
 			};
 			name = Release;
 		};
+		C18B9AA51C9CF5EE003628FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C18B9AA61C9CF5EE003628FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4070,6 +4155,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C18B9AA41C9CF5EE003628FE /* Build configuration list for PBXAggregateTarget "Framework_macOSx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18B9AA51C9CF5EE003628FE /* Debug */,
+				C18B9AA61C9CF5EE003628FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
