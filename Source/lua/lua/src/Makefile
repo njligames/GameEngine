@@ -3,6 +3,8 @@
 
 # == CHANGE THE SETTINGS BELOW TO SUIT YOUR ENVIRONMENT =======================
 
+# install_name_tool -change @rpath/libfmodL.dylib "/Users/jamesfolk/NJLI/GameEngine/Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib/libfmodL.dylib" /usr/local/bin/lua
+# -L../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/lib
 # Your platform. See PLATS for possible values.
 PLAT= none
 
@@ -19,6 +21,7 @@ MY_JSON_VERSION = jsoncpp
 MY_XML_VERSION = tinyxml
 MY_ZLIB_VERSION = zlib_SIO2
 MY_SQLITE_VERSION = sqlite-amalgamation-3080700
+MY_LUA_VERSION = lua
 
 CC= cc 
 CXX= clang++ 
@@ -55,12 +58,13 @@ MYCFLAGS = \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/bullet/$(MY_BULLET_VERSION)/src/LinearMath \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/jli_game_engine/$(MY_NJLI_VERSION)/src \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/jli_game_engine/$(MY_NJLI_VERSION)/src/render/OpenGL \
--I$(MY_THIRD_PARTY_RELATIVE_PATH)/lua/lua/src \
+-I$(MY_THIRD_PARTY_RELATIVE_PATH)/lua/$(MY_LUA_VERSION)/src \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/nanovg/$(MY_NANOVG_VERSION)/src \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/json/$(MY_JSON_VERSION)/include \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/xml/$(MY_XML_VERSION) \
 -I$(MY_THIRD_PARTY_RELATIVE_PATH)/zlib/$(MY_ZLIB_VERSION) \
--I$(MY_THIRD_PARTY_RELATIVE_PATH)/sqlite/$(MY_SQLITE_VERSION)
+-I$(MY_THIRD_PARTY_RELATIVE_PATH)/sqlite/$(MY_SQLITE_VERSION) \
+-I$(MY_THIRD_PARTY_RELATIVE_PATH)/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc
 
 MYCFILES= \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/core/Game.cpp \
@@ -69,7 +73,6 @@ $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/File.cpp \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/Localization.cpp \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/Log.cpp \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/Sound.cpp \
-$(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/WorldFacebook.cpp \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/WorldInput.cpp \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/WorldSound.cpp \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/bullet/btClock.cpp \
@@ -388,7 +391,7 @@ $(MY_THIRD_PARTY_RELATIVE_PATH)/zlib/$(MY_ZLIB_VERSION)/zutil.c \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/sqlite/$(MY_SQLITE_VERSION)/sqlite3.c \
 
 
-MYLIBS=-stdlib=libstdc++ -lstdc++
+MYLIBS=-stdlib=libstdc++ -lstdc++ -lGL -lGLU
 
 MYOBJS= \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/core/Game.o \
@@ -397,7 +400,6 @@ $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/File.o \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/Localization.o \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/Log.o \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/Sound.o \
-$(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/WorldFacebook.o \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/WorldInput.o \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/platform/mac/WorldSound.o \
 $(MY_THIRD_PARTY_RELATIVE_PATH)/bullet/btClock.o \
@@ -805,7 +807,7 @@ linux:
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -ldl -lreadline" MYLDFLAGS="-lGL -lGLU -lglut"
 
 macosx:
-	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_MACOSX" SYSLIBS="-lreadline" CC=cc MYLDFLAGS="-framework Carbon -framework OpenGL -framework GLUT"
+	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_MACOSX" SYSLIBS="-lreadline -L../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/lib -lfmodL -L/System/Library/Frameworks/OpenGL.framework/Libraries" CC=clang MYLDFLAGS="-framework OpenGL -framework GLUT -lGL -lGLU"
 
 mingw:
 	$(MAKE) "LUA_A=lua53.dll" "LUA_T=lua.exe" \
@@ -1443,8 +1445,14 @@ lnjli.o: lnjli.cpp ../../../../Source/lua/lua/src/lua.h \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldDebugDrawer.h \
   ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btIDebugDraw.h \
@@ -1497,7 +1505,8 @@ loslib.o: loslib.c ../../../../Source/lua/lua/src/lprefix.h \
   ../../../../Source/lua/lua/src/lauxlib.h \
   ../../../../Source/lua/lua/src/../../../../Source/platform/core/Log.h \
   ../../../../Source/platform/core/Macros.h \
-  ../../../../Source/lua/lua/src/lualib.h
+  ../../../../Source/lua/lua/src/lualib.h \
+  ../../../../Source/platform/mac/GLPlatform.h
 lparser.o: lparser.c ../../../../Source/lua/lua/src/lprefix.h \
   ../../../../Source/lua/lua/src/lua.h \
   ../../../../Source/lua/lua/src/luaconf.h \
@@ -1591,15 +1600,9 @@ ltm.o: ltm.c ../../../../Source/lua/lua/src/lprefix.h \
   ../../../../Source/lua/lua/src/lgc.h \
   ../../../../Source/lua/lua/src/ltable.h \
   ../../../../Source/lua/lua/src/lvm.h
-lua.o: lua.cpp ../../../../Source/lua/lua/src/lprefix.h \
-  ../../../../Source/lua/lua/src/lua.h \
-  ../../../../Source/lua/lua/src/luaconf.h \
-  ../../../../Source/lua/lua/src/lauxlib.h \
-  ../../../../Source/lua/lua/src/../../../../Source/platform/core/Log.h \
-  ../../../../Source/platform/core/Macros.h \
-  ../../../../Source/lua/lua/src/lualib.h \
-  ../../../../Source/platform/core/Game.h \
+lua.o: lua.cpp ../../../../Source/platform/core/Game.h \
   ../../../../Source/platform/core/Log.h \
+  ../../../../Source/platform/core/Macros.h \
   ../../../../Source/jli_game_engine/version-1.0/src/World.h \
   ../../../../Source/platform/core/Util.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldFactory.h \
@@ -1618,6 +1621,11 @@ lua.o: lua.cpp ../../../../Source/lua/lua/src/lprefix.h \
   ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMinMax.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.h \
   ../../../../Source/lua/lua/src/lua.hpp \
+  ../../../../Source/lua/lua/src/lua.h \
+  ../../../../Source/lua/lua/src/luaconf.h \
+  ../../../../Source/lua/lua/src/lualib.h \
+  ../../../../Source/lua/lua/src/lauxlib.h \
+  ../../../../Source/lua/lua/src/../../../../Source/platform/core/Log.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractState.h \
   ../../../../Source/platform/core/DeviceTouch.h \
   ../../../../Source/platform/core/DeviceInputTime.h \
@@ -1638,8 +1646,14 @@ lua.o: lua.cpp ../../../../Source/lua/lua/src/lprefix.h \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -1769,8 +1783,14 @@ Game.o: ../../../../Source/platform/core/Game.cpp \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldSQLite.h \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -1835,8 +1855,14 @@ DeviceTouch.o: ../../../../Source/platform/mac/DeviceTouch.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -1863,7 +1889,77 @@ Localization.o: ../../../../Source/platform/mac/Localization.cpp \
   ../../../../Source/platform/core/Localization.h
 Log.o: ../../../../Source/platform/mac/Log.cpp \
   ../../../../Source/platform/core/Log.h \
-  ../../../../Source/platform/core/Macros.h
+  ../../../../Source/platform/core/Macros.h \
+  ../../../../Source/platform/core/Game.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/World.h \
+  ../../../../Source/platform/core/Util.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldFactory.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btAlignedObjectArray.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btScalar.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btHashMap.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btSerializer.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractBuilder.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractFactoryObject.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractObject.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractDecorator.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/JLIFactoryTypes.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btVector3.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMinMax.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldLuaVirtualMachine.h \
+  ../../../../Source/lua/lua/src/lua.hpp \
+  ../../../../Source/lua/lua/src/lua.h \
+  ../../../../Source/lua/lua/src/luaconf.h \
+  ../../../../Source/lua/lua/src/lualib.h \
+  ../../../../Source/lua/lua/src/lauxlib.h \
+  ../../../../Source/lua/lua/src/../../../../Source/platform/core/Log.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractState.h \
+  ../../../../Source/platform/core/DeviceTouch.h \
+  ../../../../Source/platform/core/DeviceInputTime.h \
+  ../../../../Source/bullet/btVector2.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/Node.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractActionable.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/Scene.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/BroadphaseCollision/btDispatcher.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btTransformUtil.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btTransform.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMatrix3x3.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuaternion.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuadWord.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/Action.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/PhysicsRayContact.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldSQLite.h \
+  ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
+  ../../../../Source/platform/core/WorldSound.h \
+  ../../../../Source/platform/mac/GLPlatform.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
+  ../../../../Source/bullet/btClock.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldDebugDrawer.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/Geometry.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btIDebugDraw.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldHUD.h \
+  ../../../../Source/platform/core/File.h \
+  ../../../../Source/nanovg/nanovg/src/nanovg.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractFrameBufferObject.h \
+  ../../../../Source/platform/core/WorldInput.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldResourceLoader.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldSocket.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldState.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/WorldStateMachine.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/AbstractStateMachine.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuickprof.h
 Sound.o: ../../../../Source/platform/mac/Sound.cpp \
   ../../../../Source/platform/core/Sound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
@@ -1886,8 +1982,14 @@ Sound.o: ../../../../Source/platform/mac/Sound.cpp \
   ../../../../Source/lua/lua/src/lualib.h \
   ../../../../Source/lua/lua/src/lauxlib.h \
   ../../../../Source/lua/lua/src/../../../../Source/platform/core/Log.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/JLIFactoryTypes.h \
   ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h \
   ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btVector3.h \
@@ -1933,20 +2035,20 @@ Sound.o: ../../../../Source/platform/mac/Sound.cpp \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractStateMachine.h \
   ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuickprof.h \
   ../../../../Source/jli_game_engine/version-1.0/src/SoundBuilder.h \
-  ../../../../Source/jli_game_engine/version-1.0/src/PhysicsBody.h
-WorldFacebook.o: ../../../../Source/platform/mac/WorldFacebook.cpp \
-  ../../../../Source/platform/core/WorldFacebook.h \
-  ../../../../Source/jli_game_engine/version-1.0/src/AbstractObject.h \
-  ../../../../Source/platform/core/Util.h \
-  ../../../../Source/platform/core/Log.h \
-  ../../../../Source/platform/core/Macros.h \
-  ../../../../Source/jli_game_engine/version-1.0/src/AbstractDecorator.h \
-  ../../../../Source/jli_game_engine/version-1.0/src/JLIFactoryTypes.h \
-  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h \
-  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btScalar.h \
-  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btVector3.h \
-  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMinMax.h \
-  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+  ../../../../Source/jli_game_engine/version-1.0/src/PhysicsBody.h \
+  ../../../../Source/bullet/btPrint.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/JsonJLI.h \
+  ../../../../Source/json/jsoncpp/include/json/json.h \
+  ../../../../Source/json/jsoncpp/include/json/autolink.h \
+  ../../../../Source/json/jsoncpp/include/json/config.h \
+  ../../../../Source/json/jsoncpp/include/json/value.h \
+  ../../../../Source/json/jsoncpp/include/json/forwards.h \
+  ../../../../Source/json/jsoncpp/include/json/reader.h \
+  ../../../../Source/json/jsoncpp/include/json/features.h \
+  ../../../../Source/json/jsoncpp/include/json/writer.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/CollisionDispatch/btCollisionObject.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMotionState.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletDynamics/Dynamics/btRigidBody.h
 WorldInput.o: ../../../../Source/platform/mac/WorldInput.cpp \
   ../../../../Source/platform/core/WorldInput.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractObject.h \
@@ -1994,8 +2096,14 @@ WorldInput.o: ../../../../Source/platform/mac/WorldInput.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -2012,12 +2120,31 @@ WorldInput.o: ../../../../Source/platform/mac/WorldInput.cpp \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldState.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldStateMachine.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractStateMachine.h \
-  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuickprof.h
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuickprof.h \
+  ../../../../Source/bullet/btPrint.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/JsonJLI.h \
+  ../../../../Source/json/jsoncpp/include/json/json.h \
+  ../../../../Source/json/jsoncpp/include/json/autolink.h \
+  ../../../../Source/json/jsoncpp/include/json/config.h \
+  ../../../../Source/json/jsoncpp/include/json/value.h \
+  ../../../../Source/json/jsoncpp/include/json/forwards.h \
+  ../../../../Source/json/jsoncpp/include/json/reader.h \
+  ../../../../Source/json/jsoncpp/include/json/features.h \
+  ../../../../Source/json/jsoncpp/include/json/writer.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/CollisionDispatch/btCollisionObject.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMotionState.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletDynamics/Dynamics/btRigidBody.h
 WorldSound.o: ../../../../Source/platform/mac/WorldSound.cpp \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractObject.h \
   ../../../../Source/platform/core/Util.h \
   ../../../../Source/platform/core/Log.h \
@@ -2042,7 +2169,28 @@ WorldSound.o: ../../../../Source/platform/mac/WorldSound.cpp \
   ../../../../Source/lua/lua/src/lualib.h \
   ../../../../Source/lua/lua/src/lauxlib.h \
   ../../../../Source/lua/lua/src/../../../../Source/platform/core/Log.h \
-  ../../../../Source/platform/core/File.h
+  ../../../../Source/bullet/btPrint.h \
+  ../../../../Source/jli_game_engine/version-1.0/src/JsonJLI.h \
+  ../../../../Source/json/jsoncpp/include/json/json.h \
+  ../../../../Source/json/jsoncpp/include/json/autolink.h \
+  ../../../../Source/json/jsoncpp/include/json/config.h \
+  ../../../../Source/json/jsoncpp/include/json/value.h \
+  ../../../../Source/json/jsoncpp/include/json/forwards.h \
+  ../../../../Source/json/jsoncpp/include/json/reader.h \
+  ../../../../Source/json/jsoncpp/include/json/features.h \
+  ../../../../Source/json/jsoncpp/include/json/writer.h \
+  ../../../../Source/bullet/btVector2.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btTransformUtil.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btTransform.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMatrix3x3.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuaternion.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuadWord.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletCollision/CollisionDispatch/btCollisionObject.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btMotionState.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/BulletDynamics/Dynamics/btRigidBody.h \
+  ../../../../Source/platform/core/File.h \
+  ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btQuickprof.h
 btClock.o: ../../../../Source/bullet/btClock.cpp \
   ../../../../Source/bullet/btClock.h
 btAxisSweep3.o: \
@@ -5338,8 +5486,14 @@ AbstractActionable.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -5429,8 +5583,14 @@ AbstractFactoryObject.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -5510,8 +5670,14 @@ Action.o: ../../../../Source/jli_game_engine/version-1.0/src/Action.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -5592,8 +5758,14 @@ ActionBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -5673,8 +5845,14 @@ ButtonHUDBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -5753,8 +5931,14 @@ Camera.o: ../../../../Source/jli_game_engine/version-1.0/src/Camera.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
   ../../../../Source/bullet/btClock.h \
@@ -5842,8 +6026,14 @@ CameraBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -5923,8 +6113,14 @@ CheckboxHUDBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6005,8 +6201,14 @@ Clock.o: ../../../../Source/jli_game_engine/version-1.0/src/Clock.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldDebugDrawer.h \
@@ -6085,8 +6287,14 @@ ClockBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6166,8 +6374,14 @@ CollisionResponse.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6248,8 +6462,14 @@ CollisionResponseBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6329,8 +6549,14 @@ CubeBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6410,8 +6636,14 @@ DropdownHUDBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6490,8 +6722,14 @@ Font.o: ../../../../Source/jli_game_engine/version-1.0/src/Font.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6572,8 +6810,14 @@ FontBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6659,8 +6903,14 @@ Image.o: ../../../../Source/jli_game_engine/version-1.0/src/Image.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6742,8 +6992,14 @@ ImageBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6841,8 +7097,14 @@ JsonJLI.o: ../../../../Source/jli_game_engine/version-1.0/src/JsonJLI.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6914,8 +7176,14 @@ JsonJLIBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -6995,8 +7263,14 @@ LabelHUDBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7076,8 +7350,14 @@ LevelOfDetail.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7158,8 +7438,14 @@ LevelOfDetailBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7238,8 +7524,14 @@ Light.o: ../../../../Source/jli_game_engine/version-1.0/src/Light.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7320,8 +7612,14 @@ LightBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7401,8 +7699,14 @@ Material.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7485,8 +7789,14 @@ MaterialBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7566,8 +7876,14 @@ MaterialPropertyBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7645,8 +7961,14 @@ Node.o: ../../../../Source/jli_game_engine/version-1.0/src/Node.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7755,8 +8077,14 @@ NodeBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7836,8 +8164,14 @@ NodeState.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -7918,8 +8252,14 @@ NodeStateBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8001,8 +8341,14 @@ NodeStateMachine.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8081,8 +8427,14 @@ NodeStateMachineBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8162,8 +8514,14 @@ ParticleEmitter.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8246,8 +8604,14 @@ ParticleEmitterBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8327,8 +8691,14 @@ PhysicsBody.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8419,8 +8789,14 @@ PhysicsBodyGhost.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8514,8 +8890,14 @@ PhysicsBodyGhostBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8596,8 +8978,14 @@ PhysicsBodyRigid.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8695,8 +9083,14 @@ PhysicsBodyRigidBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8777,8 +9171,14 @@ PhysicsBodySoft.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8882,8 +9282,14 @@ PhysicsBodySoftBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -8963,8 +9369,14 @@ PhysicsCloseContact.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9045,8 +9457,14 @@ PhysicsCloseContactBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9133,8 +9551,14 @@ PhysicsConstraint.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9226,8 +9650,14 @@ PhysicsConstraintBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9315,8 +9745,14 @@ PhysicsConstraintConeTwist.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9409,8 +9845,14 @@ PhysicsConstraintConeTwistBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9498,8 +9940,14 @@ PhysicsConstraintFixed.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9592,8 +10040,14 @@ PhysicsConstraintFixedBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9681,8 +10135,14 @@ PhysicsConstraintGeneric6Dof.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9775,8 +10235,14 @@ PhysicsConstraintGeneric6DofBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9865,8 +10331,14 @@ PhysicsConstraintGeneric6DofSpring.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -9960,8 +10432,14 @@ PhysicsConstraintGeneric6DofSpringBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10049,8 +10527,14 @@ PhysicsConstraintHinge.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10143,8 +10627,14 @@ PhysicsConstraintHingeBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10232,8 +10722,14 @@ PhysicsConstraintPointToPoint.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10326,8 +10822,14 @@ PhysicsConstraintPointToPointBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10415,8 +10917,14 @@ PhysicsConstraintSlider.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10509,8 +11017,14 @@ PhysicsConstraintSliderBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10590,8 +11104,14 @@ PhysicsContact.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10672,8 +11192,14 @@ PhysicsContactBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10753,8 +11279,14 @@ PhysicsField.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10835,8 +11367,14 @@ PhysicsFieldBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10915,8 +11453,14 @@ PhysicsRayContact.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -10997,8 +11541,14 @@ PhysicsRayContactBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11078,8 +11628,14 @@ PhysicsShape.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11152,8 +11708,14 @@ PhysicsShapeBox.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11243,8 +11805,14 @@ PhysicsShapeBox2D.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11333,8 +11901,14 @@ PhysicsShapeBox2DBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11414,8 +11988,14 @@ PhysicsShapeBoxBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11496,8 +12076,14 @@ PhysicsShapeBvhTriangleMesh.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11587,8 +12173,14 @@ PhysicsShapeBvhTriangleMeshBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11669,8 +12261,14 @@ PhysicsShapeCapsule.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11757,8 +12355,14 @@ PhysicsShapeCapsuleBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11839,8 +12443,14 @@ PhysicsShapeCone.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -11927,8 +12537,14 @@ PhysicsShapeConeBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12009,8 +12625,14 @@ PhysicsShapeConvexHull.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12098,8 +12720,14 @@ PhysicsShapeConvexHullBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12180,8 +12808,14 @@ PhysicsShapeConvexTriangleMesh.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12269,8 +12903,14 @@ PhysicsShapeConvexTriangleMeshBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12351,8 +12991,14 @@ PhysicsShapeCylinder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12441,8 +13087,14 @@ PhysicsShapeCylinderBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12523,8 +13175,14 @@ PhysicsShapeHeightfieldTerrain.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12609,8 +13267,14 @@ PhysicsShapeHeightfieldTerrainBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12691,8 +13355,14 @@ PhysicsShapeMultiSphere.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12779,8 +13449,14 @@ PhysicsShapeMultiSphereBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12861,8 +13537,14 @@ PhysicsShapeSphere.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -12949,8 +13631,14 @@ PhysicsShapeSphereBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13031,8 +13719,14 @@ PhysicsShapeStaticPlane.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13117,8 +13811,14 @@ PhysicsShapeStaticPlaneBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13212,8 +13912,14 @@ PhysicsWorld.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13318,8 +14024,14 @@ PhysicsWorldBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13399,8 +14111,14 @@ Plane.o: ../../../../Source/jli_game_engine/version-1.0/src/Plane.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13480,8 +14198,14 @@ PlaneBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13559,8 +14283,14 @@ Scene.o: ../../../../Source/jli_game_engine/version-1.0/src/Scene.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13661,8 +14391,14 @@ SceneBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13742,8 +14478,14 @@ SceneState.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13824,8 +14566,14 @@ SceneStateBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13907,8 +14655,14 @@ SceneStateMachine.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -13987,8 +14741,14 @@ SceneStateMachineBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14068,8 +14828,14 @@ ShaderProgramBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14148,8 +14914,14 @@ Skinner.o: ../../../../Source/jli_game_engine/version-1.0/src/Skinner.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14230,8 +15002,14 @@ SkinnerBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14311,8 +15089,14 @@ SliderHUDBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14392,8 +15176,14 @@ SoundBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14473,8 +15263,14 @@ Sprite2DBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14554,8 +15350,14 @@ SpriteFrameAtlas.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14636,8 +15438,14 @@ SpriteFrameAtlasBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14719,8 +15527,14 @@ StopWatch.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldDebugDrawer.h \
@@ -14799,8 +15613,14 @@ StopWatchBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14880,8 +15700,14 @@ TextboxHUDBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -14960,8 +15786,14 @@ Thread.o: ../../../../Source/jli_game_engine/version-1.0/src/Thread.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -15042,8 +15874,14 @@ ThreadBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -15124,8 +15962,14 @@ Timer.o: ../../../../Source/jli_game_engine/version-1.0/src/Timer.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldDebugDrawer.h \
@@ -15204,8 +16048,14 @@ TimerBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -15283,8 +16133,14 @@ World.o: ../../../../Source/jli_game_engine/version-1.0/src/World.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -15433,8 +16289,14 @@ WorldFactory.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -15813,8 +16675,14 @@ WorldLuaVirtualMachine.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldDebugDrawer.h \
   ../../../../Source/bullet/bullet-2.82-r2704/src/LinearMath/btIDebugDraw.h \
@@ -15880,8 +16748,14 @@ WorldResourceLoader.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16067,8 +16941,14 @@ WorldState.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16163,8 +17043,14 @@ WorldStateBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16246,8 +17132,14 @@ WorldStateMachine.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16325,8 +17217,14 @@ WorldStateMachineBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16405,8 +17303,14 @@ Xml.o: ../../../../Source/jli_game_engine/version-1.0/src/Xml.cpp \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16487,8 +17391,14 @@ XmlBuilder.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16569,8 +17479,14 @@ AbstractFrameBufferObject.o: \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldSQLite.h \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
   ../../../../Source/bullet/btClock.h \
@@ -16643,8 +17559,14 @@ ButtonHUD.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16726,8 +17648,14 @@ CheckboxHUD.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16808,8 +17736,14 @@ Cube.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16891,8 +17825,14 @@ DropdownHUD.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -16972,8 +17912,14 @@ Geometry.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17058,8 +18004,14 @@ LabelHUD.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17140,8 +18092,14 @@ MaterialProperty.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17225,8 +18183,14 @@ ShaderProgram.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17308,8 +18272,14 @@ SliderHUD.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17391,8 +18361,14 @@ Sprite2D.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17479,8 +18455,14 @@ TextboxHUD.o: \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
   ../../../../Source/platform/mac/GLPlatform.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \
@@ -17614,8 +18596,14 @@ WorldHUD.o: \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldSQLite.h \
   ../../../../Source/sqlite/sqlite-amalgamation-3080700/sqlite3.h \
   ../../../../Source/platform/core/WorldSound.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/alc.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.hpp \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_common.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_codec.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_dsp_effects.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_output.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod.h \
+  ../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/inc/fmod_errors.h \
   ../../../../Source/jli_game_engine/version-1.0/src/Camera.h \
   ../../../../Source/jli_game_engine/version-1.0/src/WorldClock.h \
   ../../../../Source/jli_game_engine/version-1.0/src/AbstractClock.h \

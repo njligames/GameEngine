@@ -68,12 +68,14 @@ bool NJLIGameEngine::create(const char* deviceName)
     //#if defined(DEBUG) || defined (_DEBUG)
     //    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile(ASSET_PATH("scripts/start.lua"));
     //#else
-    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile(
-        "scripts/main.lua");
+//
     //#endif
+    
+    
     njli::World::getInstance()->getWorldClock()->reset();
 
-    njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
+//    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/main.lua");
+//    njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
 
     return true;
 }

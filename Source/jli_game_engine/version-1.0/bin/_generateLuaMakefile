@@ -1,0 +1,39 @@
+GAMEPLAY_SCRIPTS=$1
+SCRIPTS=$1/../assets/scripts
+EXE=$2
+
+rm -rf ${SCRIPTS}/*
+
+#make the directories.
+for i in $(find ${GAMEPLAY_SCRIPTS} -type d -not -path "*_OLD*" -not -path "*_archive*")
+do
+	if [ "${i##${GAMEPLAY_SCRIPTS}}" != "" ]
+	then
+		mkdir ${SCRIPTS}/${i##${GAMEPLAY_SCRIPTS}/}
+	fi
+done
+
+#list all the targets...
+TARGET='all: '
+
+for i in $(find ${GAMEPLAY_SCRIPTS} -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" -not -path "*/_*" )
+do
+    FILE=${i##${GAMEPLAY_SCRIPTS}}
+    FULLPATH=${SCRIPTS}${FILE}
+    TARGET="${TARGET} ${FULLPATH}"
+done
+
+echo ${TARGET}
+echo ''
+
+
+#make all the targets...
+for i in $(find $GAMEPLAY_SCRIPTS -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" -not -path "*/_*" )
+do
+    FILE=${i##$GAMEPLAY_SCRIPTS}
+
+    echo ${SCRIPTS}${FILE}: ${GAMEPLAY_SCRIPTS}${FILE}
+    echo '\t'${EXE} '<' ${GAMEPLAY_SCRIPTS}${FILE} '>' ${SCRIPTS}${FILE}
+	#echo '\t'${EXE} ${GAMEPLAY_SCRIPTS}${FILE} ${SCRIPTS}${FILE}
+    echo ''
+done

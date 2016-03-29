@@ -31,7 +31,7 @@ enum NVGcreateFlags {
 	// slower, but path overlaps (i.e. self-intersecting or sharp turns) will be drawn just once.
 	NVG_STENCIL_STROKES	= 1<<1,
 	// Flag indicating that additional debug checks are done.
-	NVG_DEBUG 			= 1<<2,
+	NVG_DEBUG 			= 0,//1<<2,
 };
 
 #if defined NANOVG_GL2_IMPLEMENTATION

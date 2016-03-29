@@ -1,4 +1,4 @@
-
+--test
 local startStopWatch = function(self)
 	self.stopWatchTimer:stop();
 	self.stopWatchTimer:start()

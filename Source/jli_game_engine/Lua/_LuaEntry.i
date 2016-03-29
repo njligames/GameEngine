@@ -58,13 +58,11 @@
 //MARK: %luacode wrapper doesn't work in an external file.
 %luacode
 %{
-    {
-    function example.greet()
+    function greet()
     print "hello world"
     end
 
-    print "Module loaded ok"
-}
+    --greet()
 %}
 
 %insert("runtime")
