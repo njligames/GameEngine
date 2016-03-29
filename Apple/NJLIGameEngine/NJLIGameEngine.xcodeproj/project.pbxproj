@@ -38,6 +38,8 @@
 		C18B9A5D1C9C711E003628FE /* assets in Resources */ = {isa = PBXBuildFile; fileRef = C18B9A5A1C9C711E003628FE /* assets */; };
 		C18B9A5E1C9C711E003628FE /* assets in Resources */ = {isa = PBXBuildFile; fileRef = C18B9A5A1C9C711E003628FE /* assets */; };
 		C18B9A871C9CA364003628FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B9A861C9CA364003628FE /* Foundation.framework */; };
+		C18B9AF61CA0098B003628FE /* libfmod.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B9AF41CA0098B003628FE /* libfmod.dylib */; };
+		C18B9AF71CA0098B003628FE /* libfmodL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B9AF51CA0098B003628FE /* libfmodL.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		C18B9A4E1C9C6D02003628FE /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C18B9A5A1C9C711E003628FE /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../COMMON/assets; sourceTree = "<group>"; };
 		C18B9A861C9CA364003628FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C18B9AF41CA0098B003628FE /* libfmod.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmod.dylib; sourceTree = "<group>"; };
+		C18B9AF51CA0098B003628FE /* libfmodL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmodL.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18B9AF61CA0098B003628FE /* libfmod.dylib in Frameworks */,
+				C18B9AF71CA0098B003628FE /* libfmodL.dylib in Frameworks */,
 				C18B9A871C9CA364003628FE /* Foundation.framework in Frameworks */,
 				C18B9A391C9C66BC003628FE /* GLUT.framework in Frameworks */,
 				C18B9A371C9C66B7003628FE /* OpenGL.framework in Frameworks */,
@@ -353,6 +359,8 @@
 		C18B9A2C1C9C54E8003628FE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C18B9AF41CA0098B003628FE /* libfmod.dylib */,
+				C18B9AF51CA0098B003628FE /* libfmodL.dylib */,
 				C18B9A861C9CA364003628FE /* Foundation.framework */,
 				C18B9A381C9C66BC003628FE /* GLUT.framework */,
 				C18B9A361C9C66B7003628FE /* OpenGL.framework */,
@@ -960,8 +968,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/fmod/mac/FMOD Programmers API/api/lowlevel/inc\"";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib\"";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib\"",
+					"$(PROJECT_DIR)/macOSx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = "-lfmodL";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -973,8 +985,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/fmod/mac/FMOD Programmers API/api/lowlevel/inc\"";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib\"";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib\"",
+					"$(PROJECT_DIR)/macOSx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = "-lfmod";
 				PRODUCT_NAME = "$(TARGET_NAME)";

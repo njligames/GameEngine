@@ -656,7 +656,7 @@ function processDimensions(x, y)
 
     local width = njli.World.getInstance():getViewportDimensions():x()
     local height = njli.World.getInstance():getViewportDimensions():y()
-
+print(width)
     -- return ProcessDimension(tostring(x), width), ProcessDimension(tostring(y), height)
     return ProcessLuaCode(x), ProcessLuaCode(y)
 end

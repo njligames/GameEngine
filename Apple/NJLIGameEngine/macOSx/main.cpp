@@ -59,6 +59,7 @@ static void idle_njli(void)
     
     
     njli::NJLIGameEngine::update(timeStep);
+    glutPostRedisplay();
     
 }
 
@@ -73,12 +74,12 @@ static void timerCallback_njli (int value)
     /* call back again after elapsedUSecs have passed */
     glutTimerFunc (elapsedUSecs, timerCallback_njli, value);
 }
-
+//1136, 640
 int main(int argc,  char * argv[])
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH);
-    glutInitWindowSize (250, 250);
+    glutInitWindowSize (1136, 640);
     glutInitWindowPosition (100, 100);
     win = glutCreateWindow ("NJLIGameEngine");
     glutDisplayFunc(display_njli);
@@ -88,7 +89,7 @@ int main(int argc,  char * argv[])
     glutIdleFunc(idle_njli);
     glutTimerFunc (elapsedUSecs, timerCallback_njli, 0);
     
-    njli::NJLIGameEngine::create(0, 0, 250, 250, 0, "MAC", true);
+    njli::NJLIGameEngine::create(0, 0, 1136, 640, 0, "Simulator", true);
     
     glutMainLoop();
     

@@ -63,6 +63,10 @@ install: dummy
 	cd src && $(INSTALL_DATA) $(TO_INC) $(INSTALL_INC)
 	cd src && $(INSTALL_DATA) $(TO_LIB) $(INSTALL_LIB)
 	cd doc && $(INSTALL_DATA) $(TO_MAN) $(INSTALL_MAN)
+	install_name_tool -change @rpath/libfmod.dylib "/Users/jamesfolk/NJLI/GameEngine/Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib/libfmod.dylib" $(INSTALL_BIN)/lua
+	install_name_tool -change @rpath/libfmodL.dylib "/Users/jamesfolk/NJLI/GameEngine/Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib/libfmodL.dylib" $(INSTALL_BIN)/lua
+	install_name_tool -change @rpath/libfmod.dylib "/Users/jamesfolk/NJLI/GameEngine/Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib/libfmod.dylib" $(INSTALL_BIN)/luac
+	install_name_tool -change @rpath/libfmodL.dylib "/Users/jamesfolk/NJLI/GameEngine/Source/fmod/mac/FMOD Programmers API/api/lowlevel/lib/libfmodL.dylib" $(INSTALL_BIN)/luac
 
 uninstall:
 	cd src && cd $(INSTALL_BIN) && $(RM) $(TO_BIN)
