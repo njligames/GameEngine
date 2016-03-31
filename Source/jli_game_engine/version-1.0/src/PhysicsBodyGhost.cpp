@@ -186,6 +186,16 @@ namespace njli
         return false;
     }
     
+    void PhysicsBodyGhost::setMass(f32 mass)
+    {
+        
+    }
+    
+    f32 PhysicsBodyGhost::getMass()const
+    {
+        return 0;
+    }
+    
     const btVector3 &PhysicsBodyGhost::getVelocity()const
     {
         return btVector3(0,0,0);

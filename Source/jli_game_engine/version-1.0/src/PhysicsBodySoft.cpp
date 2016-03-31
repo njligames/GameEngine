@@ -195,6 +195,16 @@ namespace njli
         return false;
     }
     
+    void PhysicsBodySoft::setMass(f32 mass)
+    {
+        
+    }
+    
+    f32 PhysicsBodySoft::getMass()const
+    {
+        return 0;
+    }
+    
     const btVector3 &PhysicsBodySoft::getVelocity()const
     {
         return btVector3(0,0,0);

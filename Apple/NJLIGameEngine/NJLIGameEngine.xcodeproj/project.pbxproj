@@ -419,6 +419,7 @@
 			buildPhases = (
 				C18B84681C9B96E1003628FE /* Sources */,
 				C18B84691C9B96E1003628FE /* Frameworks */,
+				C1ACD8EF1CACE58700AB4CF7 /* make */,
 				C18B846A1C9B96E1003628FE /* Resources */,
 			);
 			buildRules = (
@@ -658,6 +659,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C1ACD8EF1CACE58700AB4CF7 /* make */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = make;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${SRCROOT}/../../COMMON && make";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C18B84681C9B96E1003628FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -855,6 +873,7 @@
 				OTHER_LDFLAGS = "-lfmodL_$PLATFORM_NAME";
 				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REZ_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
 		};
@@ -870,6 +889,7 @@
 				OTHER_LDFLAGS = "-lfmod_$PLATFORM_NAME";
 				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REZ_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
 		};

@@ -25,8 +25,8 @@ MY_LUA_VERSION = lua
 
 CC= cc 
 CXX= clang++ 
-CFLAGS= $(DEBUG) $(MYWARNINGS) -DLUA_COMPAT_5_2 -DLUA_COMPAT_NJLI $(SYSCFLAGS) $(MYCFLAGS)
-CXXFLAGS= -std=gnu++11 -stdlib=libstdc++ $(DEBUG) $(MYWARNINGS) -DLUA_COMPAT_5_2 -DLUA_COMPAT_NJLI $(SYSCFLAGS) $(MYCFLAGS)
+CFLAGS= $(RELEASE) $(MYWARNINGS) -DLUA_COMPAT_5_2 -DLUA_COMPAT_NJLI $(SYSCFLAGS) $(MYCFLAGS)
+CXXFLAGS= -std=gnu++11 -stdlib=libstdc++ $(RELEASE) $(MYWARNINGS) -DLUA_COMPAT_5_2 -DLUA_COMPAT_NJLI $(SYSCFLAGS) $(MYCFLAGS)
 LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
 LIBS= -lm $(SYSLIBS) $(MYLIBS)
 
@@ -807,7 +807,7 @@ linux:
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -ldl -lreadline" MYLDFLAGS="-lGL -lGLU -lglut"
 
 macosx:
-	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_MACOSX" SYSLIBS="-lreadline -L../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/lib -lfmodL -L/System/Library/Frameworks/OpenGL.framework/Libraries" CC=clang MYLDFLAGS="-framework OpenGL -framework GLUT -lGL -lGLU"
+	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_MACOSX" SYSLIBS="-lreadline -L../../../../Source/fmod/mac/FMOD\ Programmers\ API/api/lowlevel/lib -lfmod -L/System/Library/Frameworks/OpenGL.framework/Libraries" CC=clang MYLDFLAGS="-framework OpenGL -framework GLUT -lGL -lGLU"
 
 mingw:
 	$(MAKE) "LUA_A=lua53.dll" "LUA_T=lua.exe" \
