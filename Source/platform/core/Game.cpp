@@ -74,8 +74,8 @@ bool NJLIGameEngine::create(const char* deviceName)
     
     njli::World::getInstance()->getWorldClock()->reset();
 
-//    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/main.lua");
-//    njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/main.lua");
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
 
     return true;
 }
