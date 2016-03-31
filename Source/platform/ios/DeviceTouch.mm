@@ -174,6 +174,21 @@ namespace njli
         return CGPointZero;
     }
     
+    static void test(CGPoint point, CGFloat scaleFactor)
+    {
+        
+        float width = njli::World::getInstance()->getViewportDimensions().x();
+        float height = njli::World::getInstance()->getViewportDimensions().y();
+        
+        float x = (point.x * scaleFactor);
+        float y = ((height - point.y) * scaleFactor);
+        
+        DEBUG_LOG_V("devictouch", "%f, %f", x, y);
+        
+        
+        
+    }
+    
     void DeviceTouch::convert(DeviceTouch &t, const void *_touch)
     {
         if(_touch)
@@ -182,17 +197,19 @@ namespace njli
             
 //            pixelPointFromViewPoint([touch locationInView:touch.view], touch.view);
             
-            CGFloat scaleFactor = touch.view.contentScaleFactor;
-            m_scale = scaleFactor;
-//            m_scale = [UIScreen mainScreen].nativeScale * 0.96;
+            m_scale = touch.view.contentScaleFactor;
+            
+            test([touch locationInView:touch.view], m_scale);
+            
+            
             
             t.setTimeStampFrame(touch.timestamp);
             CGPoint p = [touch locationInView:touch.view];
-            m_xpos = (p.x * scaleFactor) * 1;
-            m_ypos = (njli::World::getInstance()->getViewportDimensions().y() - (p.y * scaleFactor)) * 1;
+            m_xpos = (p.x * m_scale) * 1;
+            m_ypos = (njli::World::getInstance()->getViewportDimensions().y() - (p.y * m_scale)) * 1;
             p = [touch previousLocationInView:touch.view];
-            m_prev_xpos = (p.x * scaleFactor);
-            m_prev_ypos = njli::World::getInstance()->getViewportDimensions().y() - (p.y * scaleFactor);
+            m_prev_xpos = (p.x * m_scale);
+            m_prev_ypos = njli::World::getInstance()->getViewportDimensions().y() - (p.y * m_scale);
             t.m_address = [touch hash];
             t.m_tapCount = [touch tapCount];
         }

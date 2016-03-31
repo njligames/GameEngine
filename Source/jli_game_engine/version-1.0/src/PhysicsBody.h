@@ -331,6 +331,9 @@ public:
          *  @return <#return value description#>
          */
     virtual bool isInWorld() const = 0;
+    
+    virtual void setMass(f32 mass) = 0;
+    virtual f32 getMass()const = 0;
 
 protected:
     virtual const btCollisionObject* getCollisionObject() const = 0;

@@ -145,6 +145,10 @@ namespace njli
          *  @return <#return value description#>
          */
         virtual bool isInWorld()const;
+        
+        virtual void setMass(f32 mass);
+        virtual f32 getMass()const;
+        
         /**
          *  <#Description#>
          *
