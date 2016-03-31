@@ -73,7 +73,7 @@ namespace njli
     m_ViewPortDimensions(new btVector2()),
     m_Scene(NULL),
     m_WorldSocket(new WorldSocket),
-//    m_WorldHUD(new WorldHUD),
+    m_WorldHUD(new WorldHUD),
     m_WorldInput(new WorldInput),
     m_WorldSound(new WorldSound),
     m_WorldDebugDrawer(new WorldDebugDrawer),
@@ -93,7 +93,7 @@ namespace njli
     {
         addChild(m_WorldSound);
         addChild(m_WorldInput);
-//        addChild(m_WorldHUD);
+        addChild(m_WorldHUD);
         addChild(m_WorldSocket);
         addChild(m_stateMachine);
         addChild(m_WorldLuaVirtualMachine);
