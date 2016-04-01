@@ -205,7 +205,15 @@ local touchDown = function(self, touches)
         --     projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
         -- end / 1.15
 
-        projectile = self.world:createWaterBalloonNode((touches[1]:getPosition():x() * touches[1]:getScale()) , (touches[1]:getPosition():y() * touches[1]:getScale()) )
+        if DeviceNameShouldScale(njli.World.getInstance():getDeviceName()) then
+            print("SCALING")
+            projectile = self.world:createWaterBalloonNode((touches[1]:getPosition():x() * touches[1]:getScale()) , (touches[1]:getPosition():y() * touches[1]:getScale()) )
+        else
+            print("NOTSCALING")
+            projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
+        end
+        --projectile = self.world:createWaterBalloonNode((touches[1]:getPosition():x() * touches[1]:getScale()) , (touches[1]:getPosition():y() * touches[1]:getScale()) )
+        --projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
         projectile:start()
         -- print_r(projectile)
 

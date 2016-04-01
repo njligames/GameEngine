@@ -333,6 +333,9 @@ function WorldCreate()
 
     yappyWorld = yappyBirdsWorld.new("YappyBirds")
     yappyWorld.startWorldName = theStartWorldName
+
+njli.World.getInstance():enableDebugDraw(getOrthoCamera(), getShaderProgram())
+
     worldObjectTable = yappyWorld:start()
 end
 
@@ -396,6 +399,8 @@ end
 
 print("\n\n")
 print("getDeviceName\t", DeviceNameToResolutionDeviceName(njli.World.getInstance():getDeviceName()))
+print("DeviceNameDownsizeAmount\t", DeviceNameDownsizeAmount(njli.World.getInstance():getDeviceName()))
+
 print("\n\n\n\n")
 
 WorldCreate()
