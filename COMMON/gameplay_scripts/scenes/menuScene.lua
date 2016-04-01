@@ -304,6 +304,8 @@ local enter = function(self, scene)
         -- print(njli.World.getInstance():getViewportDimensions())
         local x, y = processDimensions(_menuNodePositions[stateName][name][deviceName].x, _menuNodePositions[stateName][name][deviceName].y)
 
+        
+x, y = DeviceTouchScale(njli.World.getInstance():getDeviceName(), x, y)
         self.nodes[name].node:setOrigin(bullet.btVector3(x, y, -1))
         self.nodes[name]:setScale(menuScale * 0.85)
 
@@ -344,6 +346,8 @@ local enter = function(self, scene)
 
             local x, y = processDimensions(_menuNodePositions[stateName][name][deviceName].x, _menuNodePositions[stateName][name][deviceName].y)
 
+
+x, y = DeviceTouchScale(njli.World.getInstance():getDeviceName(), x, y)
             theNode.node:setOrigin(bullet.btVector3(x, y, -1))
             -- theNode.node:show(getOrthoCamera())
 
