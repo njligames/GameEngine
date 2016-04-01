@@ -73,8 +73,11 @@ local new = function(worldName)
     shader:setName("Yappy Shader")
     njli.World.getInstance():getWorldResourceLoader():load("shaders/objectShader.vsh", "shaders/objectShader.fsh", shader)
 
+
+
     local orthoCameraNode = createOrthoCameraNode("orthoCamera")
     local perspectiveCameraNode = createPerspectiveCameraNode("perspectiveCamera")
+
 
     local rootNode = njli.Node.create()
     rootNode:setName("rootNode")

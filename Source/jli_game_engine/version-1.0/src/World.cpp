@@ -580,7 +580,12 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "Unable to enableDebugDraw\n");
+            if (camera == NULL)
+                DEBUG_LOG_WRITE_D(TAG, "Unable to enableDebugDraw, camera is NULL\n");
+            if (shader == NULL)
+                DEBUG_LOG_WRITE_D(TAG, "Unable to enableDebugDraw, shader is NULL\n");
+            if (material == NULL)
+                DEBUG_LOG_WRITE_D(TAG, "Unable to enableDebugDraw, material is NULL\n");
         }
     }
     

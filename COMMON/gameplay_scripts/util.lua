@@ -62,6 +62,19 @@ _resolutionDeviceNames =
 -- http://stackoverflow.com/questions/7587854/is-there-a-list-of-screen-resolutions-for-all-android-based-phones-and-tablets/23009368#23009368
 -- http://www.emirweb.com/ScreenDeviceStatistics.php#Header248
 -- http://handsontable.com/demo/column_freeze.html
+function DeviceNameShouldScale(name)
+    if name == _deviceNames[14] then
+        return false
+    end
+    return true
+end
+
+function DeviceNameDownsizeAmount(name)
+    if name == _deviceNames[14] then
+        return 1.15
+    end
+    return 1.0
+end
 
 function DeviceNameToResolutionDeviceName(name)
     if name == "Simulator" then

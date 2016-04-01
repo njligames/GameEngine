@@ -174,44 +174,30 @@ namespace njli
         return CGPointZero;
     }
     
-    static void test(CGPoint point, CGFloat scaleFactor)
-    {
-        
-        float width = njli::World::getInstance()->getViewportDimensions().x();
-        float height = njli::World::getInstance()->getViewportDimensions().y();
-        
-        float x = (point.x * scaleFactor);
-        float y = ((height - point.y) * scaleFactor);
-        
-        DEBUG_LOG_V("devictouch", "%f, %f", x, y);
-        
-        
-        
-    }
-    
     void DeviceTouch::convert(DeviceTouch &t, const void *_touch)
     {
         if(_touch)
         {
             UITouch *touch = (__bridge UITouch*)_touch;
             
-//            pixelPointFromViewPoint([touch locationInView:touch.view], touch.view);
+            float height = njli::World::getInstance()->getViewportDimensions().y();
             
             m_scale = touch.view.contentScaleFactor;
             
-            test([touch locationInView:touch.view], m_scale);
-            
-            
+            CGPoint touchPoint = [touch locationInView:touch.view];
+            CGPoint previousTouchPoint = [touch previousLocationInView:touch.view];
             
             t.setTimeStampFrame(touch.timestamp);
-            CGPoint p = [touch locationInView:touch.view];
-            m_xpos = (p.x * m_scale) * 1;
-            m_ypos = (njli::World::getInstance()->getViewportDimensions().y() - (p.y * m_scale)) * 1;
-            p = [touch previousLocationInView:touch.view];
-            m_prev_xpos = (p.x * m_scale);
-            m_prev_ypos = njli::World::getInstance()->getViewportDimensions().y() - (p.y * m_scale);
             t.m_address = [touch hash];
             t.m_tapCount = [touch tapCount];
+            
+            t.m_xpos = (touchPoint.x * m_scale);
+            t.m_ypos = height - (touchPoint.y * m_scale);
+            
+            t.m_prev_xpos = (previousTouchPoint.x * m_scale);
+            t.m_prev_ypos = height - (previousTouchPoint.y * m_scale);
+            
+//            DEBUG_LOG_V("devictouch", "%s", ((std::string)t).c_str());
         }
     }
 }
