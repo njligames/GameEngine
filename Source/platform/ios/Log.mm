@@ -17,6 +17,8 @@
 #include "WorldSocket.h"
 #include <stdio.h>
 
+#import <UIKit/UIKit.h>
+
 njli::NJLIGameEngine::PlatformID njli::NJLIGameEngine::platformID()
 {
     return njli::NJLIGameEngine::PlatformID_iOS;
@@ -75,11 +77,16 @@ void njliSleep( unsigned int _ms )
     
     struct timeval tv;
     
+    double seconds = _ms / 1000.0f;
+    
     microsecs = _ms * 1000;
     
     tv.tv_sec  = microsecs / 1000000;
     tv.tv_usec = microsecs % 1000000;
     
-    select( 0, NULL, NULL, NULL, &tv );
+    [NSThread sleepForTimeInterval:seconds];
+    
+//    select( 0, NULL, NULL, NULL, &tv );
+    
 }
 

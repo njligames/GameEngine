@@ -2,7 +2,8 @@ local path = njli.ASSET_PATH("scripts/util.lua")
 local util = (loadfile(path))()
 
 local function writeAll(file, data)
-    local f = assert(io.open(file, "w"))
+    --local f = assert(io.open(file, "w"))
+    local f = io.open(file, "w")
     
     if f then
 		f:write(data)

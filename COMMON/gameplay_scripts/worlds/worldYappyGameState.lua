@@ -386,11 +386,6 @@ local createWaterBalloonNode = function(self, x, y)
     local origin = self:getOriginForLayer(x, y, 4)
     origin = self:transformCoordinate(origin)
 
---print("before ", origin)
---origin:setX(origin:x() / DeviceNameDownsizeAmount(njli.World.getInstance():getDeviceName()))
---origin:setY(origin:y() / DeviceNameDownsizeAmount(njli.World.getInstance():getDeviceName()))
---print("after ", origin)
-
     self.nodes[instanceName].node:setOrigin(origin )
     insertNodeObject(self.nodes[instanceName], instanceName)
     
@@ -1062,10 +1057,12 @@ local new = function(name)
 
 
 
-        -- function(self)
+        function(self)
 
-            
-        -- end,
+            local camera = getPerspectiveCamera()
+            local shader = getShaderProgram()
+            njli.World.getInstance():enableDebugDraw(camera, shader)
+        end,
 
 
 
