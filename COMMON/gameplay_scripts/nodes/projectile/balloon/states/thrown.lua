@@ -86,7 +86,7 @@ local collide = function(self, otherNode, collisionPoint)
     local node = nodeObject:getNode()
     
     node:hide()
-    node:getPhysicsBody():setCollisionMask(CollisionMasks.projectile)
+    node:getPhysicsBody():setCollisionMask(CollisionMasks.none)
     nodeObject:getStateObject("Hit"):push()
 end
 

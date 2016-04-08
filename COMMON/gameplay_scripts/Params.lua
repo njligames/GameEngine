@@ -84,6 +84,7 @@ ParamInfo =
 			Azimuth = 10,
 			Magnitude = 45,
 			DieY = -50,
+            Mass = 1,
 		},
 	},
 }

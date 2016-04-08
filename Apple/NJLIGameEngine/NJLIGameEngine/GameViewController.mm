@@ -84,7 +84,7 @@
     //
     //#endif
     
-    //    setupFileSystem();
+        setupFileSystem();
     
     [[AVAudioSession sharedInstance] setDelegate:self];
     

@@ -66,7 +66,7 @@ local new = function(worldName)
     njli.World.getInstance():getScene():setName(worldName .. "Scene")
 
     local physicsWorld = njli.PhysicsWorld.create()
-    physicsWorld:setGravity(bullet.btVector3(0, -9.81, 0))
+    physicsWorld:setGravity(bullet.btVector3(0, -60.81, 0))
     njli.World.getInstance():getScene():addPhysicsWorld(physicsWorld)
 
     local shader = njli.ShaderProgram.create();

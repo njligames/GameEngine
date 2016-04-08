@@ -185,56 +185,35 @@ end
 
 local touchDown = function(self, touches)
 
-    -- if self.world.theDog then
-    --     local node = self.world.theDog.node
-    --     local axis = bullet.btVector3(0,1,0)
-    --     local angle = njli.btRadians(180)
 
-    --     if node:getRotation() == njli.btQuaternion(axis, angle) then
-    --         angle = njli.btRadians(0)
-    --     end
-        
-    --     node:setRotation(njli.btQuaternion(axis, angle))
-    -- end
+    if DeviceNameShouldScale(njli.World.getInstance():getDeviceName()) then
+        print("SCALING")
+        projectile = self.world:createWaterBalloonNode((touches[1]:getPosition():x() * touches[1]:getScale()) , (touches[1]:getPosition():y() * touches[1]:getScale()) )
+    else
+        print("NOTSCALING")
+        projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
+    end
+    projectile:start()
 
-    -- if self.gamePlaying then
-        -- local projectile = nil
-        -- if njli.isIOS() then
-        --     projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x()*2, touches[1]:getPosition():y()*2)
-        -- elseif njli.isANDROID() then
-        --     projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
-        -- end / 1.15
-
-        if DeviceNameShouldScale(njli.World.getInstance():getDeviceName()) then
-            print("SCALING")
-            projectile = self.world:createWaterBalloonNode((touches[1]:getPosition():x() * touches[1]:getScale()) , (touches[1]:getPosition():y() * touches[1]:getScale()) )
-        else
-            print("NOTSCALING")
-            projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
-        end
-        --projectile = self.world:createWaterBalloonNode((touches[1]:getPosition():x() * touches[1]:getScale()) , (touches[1]:getPosition():y() * touches[1]:getScale()) )
-        --projectile = self.world:createWaterBalloonNode(touches[1]:getPosition():x(), touches[1]:getPosition():y())
-        projectile:start()
-        -- print_r(projectile)
-
-        local direction = bullet.btVector3(0, 0, 1)
-        local magnitude = self.world.Prm.Projectile["WaterBalloon"].Magnitude
-        local azimuth = self.world.Prm.Projectile["WaterBalloon"].Azimuth
+    local direction = bullet.btVector3(0, 0, 1)
+    local magnitude = self.world.Prm.Projectile["WaterBalloon"].Magnitude
+    local azimuth = self.world.Prm.Projectile["WaterBalloon"].Azimuth
+    local mass = self.world.Prm.Projectile["WaterBalloon"].Mass
 
 
-        local x = projectile.node:getWorldTransform():getOrigin():x()
-        local y = projectile.node:getWorldTransform():getOrigin():y()
-        local z = projectile.node:getWorldTransform():getOrigin():z()
+    local x = projectile.node:getWorldTransform():getOrigin():x()
+    local y = projectile.node:getWorldTransform():getOrigin():y()
+    local z = projectile.node:getWorldTransform():getOrigin():z()
 
-        direction = direction:rotate(bullet.btVector3(-1,0,0), math.atan(azimuth, z))
-        direction = direction:rotate(bullet.btVector3(0,1,0), math.atan(x, z))
-        direction = direction:rotate(bullet.btVector3(-1,0,0), math.atan(y, z))
+    direction = direction:rotate(bullet.btVector3(-1,0,0), math.atan(azimuth, z))
+    direction = direction:rotate(bullet.btVector3(0,1,0), math.atan(x, z))
+    direction = direction:rotate(bullet.btVector3(-1,0,0), math.atan(y, z))
 
-        
+    
 
-        projectile.node:getPhysicsBody():applyForce(direction * magnitude, true)
-        projectile.node:show(getPerspectiveCamera())
-    -- end
+    projectile.node:getPhysicsBody():setMass(mass)
+    projectile.node:getPhysicsBody():applyForce(direction * magnitude, true)
+    projectile.node:show(getPerspectiveCamera())
 end
 
 local touchUp = function(self, touches)
