@@ -1345,6 +1345,7 @@ int PVRTShadowVolSilhouetteProjectedRender(
 #endif
 
 #endif
+    return 0;
 }
 
 /*****************************************************************************

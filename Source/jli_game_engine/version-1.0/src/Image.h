@@ -277,6 +277,9 @@ public:
          *  @return <#return value description#>
          */
     const u8* getDataRaw() const;
+    
+    bool isCompressed()const;
+    
     /**
          *  <#Description#>
          *
@@ -397,6 +400,7 @@ private:
     bool m_IsInWorldResourceLoader;
     std::string m_Filename;
     bool m_hasAlpha;
+    bool m_isCompressed;
 };
 }
 

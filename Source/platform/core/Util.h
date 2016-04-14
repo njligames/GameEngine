@@ -75,5 +75,23 @@ inline f32 clampColor(const f32 color)
     return clampf(color, 0.0f, 1.0f);
 }
 
+inline s32 isPowerOfTwo(s32 v)
+{
+    return v && !(v & (v - 1));
+}
+
+inline s32 fixPowerOfTwo(s32 v)
+{
+    v--;
+    v |= v >> 1;
+    v |= v >> 2;
+    v |= v >> 4;
+    v |= v >> 8;
+    v |= v >> 16;
+    v++;
+    
+    return v;
+}
+
 
 #endif

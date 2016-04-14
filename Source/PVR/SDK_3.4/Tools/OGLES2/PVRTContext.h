@@ -16,6 +16,7 @@
 */
 
 #include <stdio.h>
+
 #if defined(BUILD_OGLES2)
 #if defined(__APPLE__)
 #if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE==1
