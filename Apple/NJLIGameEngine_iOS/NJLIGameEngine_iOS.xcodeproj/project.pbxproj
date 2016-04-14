@@ -874,6 +874,7 @@
 		C18B84601C9B90BF003628FE /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B802F1C9B8E21003628FE /* zlib.h */; };
 		C18B84611C9B90BF003628FE /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B80301C9B8E21003628FE /* zutil.c */; };
 		C18B84621C9B90BF003628FE /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B80311C9B8E21003628FE /* zutil.h */; };
+		C1A821061CC0261E009E562B /* libOGLES2Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A821051CC025D4009E562B /* libOGLES2Tools.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -883,6 +884,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C18B7A951C9B88C1003628FE;
 			remoteInfo = NJLIGameEngine_iOS;
+		};
+		C1A821041CC025D4009E562B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8748A3A0FF221480052D400;
+			remoteInfo = OGLES2Tools;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1756,6 +1764,7 @@
 		C18B84A91C9B9A54003628FE /* libfmod_iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmod_iphonesimulator.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmod_iphonesimulator.a"; sourceTree = "<group>"; };
 		C18B84AA1C9B9A54003628FE /* libfmodL_iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphoneos.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmodL_iphoneos.a"; sourceTree = "<group>"; };
 		C18B84AB1C9B9A54003628FE /* libfmodL_iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphonesimulator.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmodL_iphonesimulator.a"; sourceTree = "<group>"; };
+		C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OGLES2Tools.xcodeproj; path = ../../Source/PVR/SDK_3.4/Tools/OGLES2/Build/iOS/OGLES2Tools.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1763,6 +1772,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A821061CC0261E009E562B /* libOGLES2Tools.a in Frameworks */,
 				C18B7AA51C9B8924003628FE /* OpenGLES.framework in Frameworks */,
 				C18B7AA31C9B8920003628FE /* GLKit.framework in Frameworks */,
 			);
@@ -1804,6 +1814,7 @@
 		C18B7AA61C9B8927003628FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */,
 				C18B84A81C9B9A54003628FE /* libfmod_iphoneos.a */,
 				C18B84A91C9B9A54003628FE /* libfmod_iphonesimulator.a */,
 				C18B84AA1C9B9A54003628FE /* libfmodL_iphoneos.a */,
@@ -2998,6 +3009,14 @@
 			path = ../../../Source/zlib/zlib_SIO2;
 			sourceTree = "<group>";
 		};
+		C1A821011CC025D4009E562B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1A821051CC025D4009E562B /* libOGLES2Tools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -3541,6 +3560,12 @@
 			mainGroup = C18B7A8D1C9B88C1003628FE;
 			productRefGroup = C18B7A971C9B88C1003628FE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C1A821011CC025D4009E562B /* Products */;
+					ProjectRef = C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C18B7A951C9B88C1003628FE /* NJLIGameEngine_iOS */,
@@ -3548,6 +3573,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C1A821051CC025D4009E562B /* libOGLES2Tools.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOGLES2Tools.a;
+			remoteRef = C1A821041CC025D4009E562B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		C18B9A8F1C9CEA9A003628FE /* Build Framework */ = {
@@ -4061,6 +4096,8 @@
 					"\"$(SRCROOT)/../../Source/nanovg/nanovg/src\"/**",
 					"\"$(SRCROOT)/../../Source/lua/lua/src\"/**",
 					"\"$(SRCROOT)/../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/inc\"/**",
+					"\"$(SRCROOT)/../../Source/PVR/SDK_3.4/Tools\"",
+					"\"$(SRCROOT)/../../Source/PVR/SDK_3.4/Tools/OGLES2\"",
 				);
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib\"";
 				OTHER_LDFLAGS = (
@@ -4091,6 +4128,8 @@
 					"\"$(SRCROOT)/../../Source/nanovg/nanovg/src\"/**",
 					"\"$(SRCROOT)/../../Source/lua/lua/src\"/**",
 					"\"$(SRCROOT)/../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/inc\"/**",
+					"\"$(SRCROOT)/../../Source/PVR/SDK_3.4/Tools\"",
+					"\"$(SRCROOT)/../../Source/PVR/SDK_3.4/Tools/OGLES2\"",
 				);
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib\"";
 				OTHER_LDFLAGS = (
@@ -4148,6 +4187,7 @@
 				C18B9A981C9CEE5A003628FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
