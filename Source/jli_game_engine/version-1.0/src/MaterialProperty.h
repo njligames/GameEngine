@@ -333,6 +333,7 @@ protected:
 
     void loadTexImage2DInternal(const Image& img, s32 target);
     void reLoadTexImage2DInternal(const Image& img, s32 target, const btVector2& offset = btVector2(0, 0));
+    
     virtual void loadProperties() const;
 
     void render();

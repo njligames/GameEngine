@@ -331,6 +331,7 @@ public:
     bool loadDataFromFile(const char* filePath, const void** buff, unsigned long* length);
 
 protected:
+    bool setPvrImage(const char *filePath, Image &img);
     bool isLoaded(const char* file);
     njliFileType getType(const char* file) const;
 

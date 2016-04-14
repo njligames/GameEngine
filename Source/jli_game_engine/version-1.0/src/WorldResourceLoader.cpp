@@ -52,6 +52,24 @@ namespace njli
     {
         return "WorldResourceLoader";
     }
+    
+    
+    
+    bool WorldResourceLoader::setPvrImage(const char *filePath, Image &img)
+    {
+        const void *content;
+        unsigned long file_size;
+        
+        if(njli::World::getInstance()->getWorldResourceLoader()->loadDataFromFile(filePath,
+                                                                               &content,
+                                                                               &file_size))
+        {
+//            return img.setData(content, filePath);
+        }
+        
+        return false;
+    }
+    
     s32 WorldResourceLoader::getType()const
     {
         return JLI_OBJECT_TYPE_WorldResourceLoader;
@@ -165,9 +183,6 @@ namespace njli
             }
             return false;
         }
-        
-//        DEBUG_ASSERT(*cachedImage);
-//        image = **cachedImage;
         
         return true;
     }

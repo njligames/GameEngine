@@ -597,7 +597,17 @@ namespace njli
                 break;
         }
         
-        glTexImage2D(target, level, internalformat, m_Width, m_Height, border, format, type, pixels);DEBUG_GL_ERROR_WRITE("glTexImage2D");
+        if(img.isCompressed())
+        {
+            glCompressedTexImage2D(target, level, internalformat, m_Width, m_Height, border, imageSize, pixels);
+            DEBUG_GL_ERROR_WRITE("glCompressedTexImage2D");
+        }
+        else
+        {
+            glTexImage2D(target, level, internalformat, m_Width, m_Height, border, format, type, pixels);
+            DEBUG_GL_ERROR_WRITE("glTexImage2D");
+        }
+        
         
         if(isTexture2D())
         {
@@ -650,7 +660,16 @@ namespace njli
                 break;
         }
         
-        glTexSubImage2D(target, level, offset.x(), offset.y(), m_Width, m_Height, format, type, pixels);DEBUG_GL_ERROR_WRITE("glTexSubImage2D");
+        if(img.isCompressed())
+        {
+            glCompressedTexSubImage2D(target, level, offset.x(), offset.y(), m_Width, m_Height, format, imageSize, pixels);
+            DEBUG_GL_ERROR_WRITE("glCompressedTexSubImage2D");
+        }
+        else
+        {
+            glTexSubImage2D(target, level, offset.x(), offset.y(), m_Width, m_Height, format, type, pixels);
+            DEBUG_GL_ERROR_WRITE("glTexSubImage2D");
+        }
         
         glGenerateMipmap(target);DEBUG_GL_ERROR_WRITE("glGenerateMipmap");
         

@@ -29,7 +29,8 @@ namespace njli
     m_Componenents(0),
     m_IsInWorldResourceLoader(false),
     m_Filename(""),
-    m_hasAlpha(false)
+    m_hasAlpha(false),
+    m_isCompressed(false)
     {
         generate(2, 2, 4);
     }
@@ -42,7 +43,8 @@ namespace njli
     m_Componenents(0),
     m_IsInWorldResourceLoader(false),
     m_Filename(""),
-    m_hasAlpha(false)
+    m_hasAlpha(false),
+    m_isCompressed(false)
     {
     }
     
@@ -54,7 +56,8 @@ namespace njli
     m_Componenents(copy.m_Componenents),
     m_IsInWorldResourceLoader(false),
     m_Filename(copy.m_Filename),
-    m_hasAlpha(copy.m_hasAlpha)
+    m_hasAlpha(copy.m_hasAlpha),
+    m_isCompressed(copy.m_isCompressed)
     {
         
         u32 size = copy.getWidth()  *
@@ -90,6 +93,7 @@ namespace njli
             m_IsInWorldResourceLoader = false;
             m_Filename = rhs.m_Filename;
             m_hasAlpha = rhs.m_hasAlpha;
+            m_isCompressed = rhs.m_isCompressed;
             
             if(m_RawData)
                 delete [] m_RawData;
@@ -423,6 +427,11 @@ namespace njli
     const u8* Image::getDataRaw() const
     {
         return m_RawData;
+    }
+    
+    bool Image::isCompressed()const
+    {
+        return m_isCompressed;
     }
     
     u8* Image::getDataRaw()
