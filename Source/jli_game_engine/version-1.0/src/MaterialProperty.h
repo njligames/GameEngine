@@ -329,7 +329,7 @@ protected:
     void setTextureIndex(u8 index);
 
     void bind(ShaderProgram * program, const char* propertyName);
-    void unBind() const;
+    void unBind() ;
 
     void loadTexImage2DInternal(const Image& img, s32 target);
     void reLoadTexImage2DInternal(const Image& img, s32 target, const btVector2& offset = btVector2(0, 0));
@@ -339,6 +339,8 @@ protected:
     void render();
 
 private:
+    bool m_diffuseBound;
+    bool *m_materialBound;
     u32 m_textureID;
     njliTextureMinificationValueType m_minVal;
     njliTextureMagnificationValueType m_magVal;

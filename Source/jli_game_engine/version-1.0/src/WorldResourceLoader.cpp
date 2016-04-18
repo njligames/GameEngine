@@ -38,6 +38,8 @@
 #define FORMATSTRING "{\"njli::WorldResourceLoader\":[]}"
 #include "btPrint.h"
 
+#include "PVRTTexture.h"
+
 namespace njli
 {
     WorldResourceLoader::WorldResourceLoader()
@@ -64,7 +66,11 @@ namespace njli
                                                                                &content,
                                                                                &file_size))
         {
-//            return img.setData(content, filePath);
+            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
+            
+            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
+            
+            return true;
         }
         
         return false;
@@ -165,20 +171,23 @@ namespace njli
             }
             else
             {
-                DEBUG_LOG_PRINT_V(TAG, "Error (%s) : %s", stbi_failure_reason(), buffer);
-                
-//                Image *img = Image::create();
-                
-//                if(img)
+                if(!setPvrImage(filePath, img))
                 {
-//                    img->setDataRawFromWorldResourceLoader(fileContent, x, y, comp, filePath);
-                    img.generate(256, 256, 4, btVector4(1.0, 0.0, 1.0, 1.0));
-//                    m_Images.insert(btHashString(filePath), img);
-//                    image = *img;
+                    DEBUG_LOG_PRINT_V(TAG, "Error (%s) : %s", stbi_failure_reason(), buffer);
                     
-                    stbi_image_free(fileContent);
+    //                Image *img = Image::create();
                     
-                    return true;
+    //                if(img)
+                    {
+    //                    img->setDataRawFromWorldResourceLoader(fileContent, x, y, comp, filePath);
+                        img.generate(256, 256, 4, btVector4(1.0, 0.0, 1.0, 1.0));
+    //                    m_Images.insert(btHashString(filePath), img);
+    //                    image = *img;
+                        
+                        stbi_image_free(fileContent);
+                        
+                        return true;
+                    }
                 }
             }
             return false;

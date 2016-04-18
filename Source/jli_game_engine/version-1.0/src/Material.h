@@ -420,7 +420,7 @@ protected:
     //        void removeTextureIDReference(MaterialProperty *);
 
     void bind(ShaderProgram * shader);
-    void unBind() const;
+    void unBind() ;
 
     void render();
 
