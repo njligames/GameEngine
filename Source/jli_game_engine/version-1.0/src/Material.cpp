@@ -743,7 +743,7 @@ namespace njli
 //        getTransparent()->bind(shader, "Transparent");
 //        getMultiply()->bind(shader, "Multiply");
     }
-    void Material::unBind()const
+    void Material::unBind()
     {
 //        getMultiply()->unBind();
 //        getTransparent()->unBind();

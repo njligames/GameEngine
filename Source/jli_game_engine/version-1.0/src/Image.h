@@ -15,6 +15,7 @@
 #include "btVector2.h"
 #include "btVector3.h"
 #include "lua.hpp"
+#include "PVRTTexture.h"
 
 namespace njli {
 class ImageBuilder;
@@ -278,6 +279,7 @@ public:
          */
     const u8* getDataRaw() const;
     
+    bool isPvr()const;
     bool isCompressed()const;
     
     /**
@@ -370,6 +372,9 @@ public:
          *  <#Description#>
          */
     void flip();
+    
+    void setPVRData(u8 *pvrData, unsigned long dataSize, const char *fileName);
+//    u8 *getCompressedData()const;
 
 protected:
     u32 getClosestValidGLDim(const u32 dim) const;
@@ -401,6 +406,7 @@ private:
     std::string m_Filename;
     bool m_hasAlpha;
     bool m_isCompressed;
+    unsigned long m_pvrDataSize;
 };
 }
 
