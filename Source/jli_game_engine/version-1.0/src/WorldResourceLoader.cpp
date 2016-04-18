@@ -66,9 +66,9 @@ namespace njli
                                                                                &content,
                                                                                &file_size))
         {
-            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
-            
-            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
+//            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
+//            
+//            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
             
             return true;
         }
