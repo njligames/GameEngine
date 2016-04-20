@@ -1132,6 +1132,9 @@ namespace njli
     
     void WorldHUD::renderFBOs()
     {
+#if defined(DEBUG) || defined (_DEBUG)
+        glPushGroupMarkerEXT(0, "WorldHUD::renderFBOs()");
+#endif
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
@@ -1143,6 +1146,9 @@ namespace njli
             }
         }
         glDisable(GL_BLEND);
+#if defined(DEBUG) || defined (_DEBUG)
+        glPopGroupMarkerEXT();
+#endif
     }
     void WorldHUD::render()
     {

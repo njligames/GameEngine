@@ -34,6 +34,9 @@ void initGL()
 
 void renderGL()
 {
+#if defined(DEBUG) || defined (_DEBUG)
+    glPushGroupMarkerEXT(0, "renderGL()");
+#endif
     glViewport(viewX, viewY, viewWidth, viewHeight);
 //    glClearColor(bgRed, bgGreen, bgBlue, bgAlpha);
     glClearColor(0.52, 0.86, 0.99, 1.0f);
@@ -43,6 +46,9 @@ void renderGL()
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glEnable(GL_STENCIL_TEST);
     glEnable(GL_DEPTH_TEST);
+#if defined(DEBUG) || defined (_DEBUG)
+    glPopGroupMarkerEXT();
+#endif
 }
 
 void printGLInfo()
