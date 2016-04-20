@@ -641,6 +641,11 @@ namespace njli
     
     void Geometry::render(Camera *camera, s32 mode)
     {
+#if defined(DEBUG) || defined (_DEBUG)
+        GLchar buffer[2048];
+        sprintf(buffer, "%s, %s", getName(), camera->getName());
+        glPushGroupMarkerEXT(0, buffer);
+#endif
         Material *material = getMaterial();
         ShaderProgram *shader = getShaderProgram();
         
@@ -765,6 +770,9 @@ namespace njli
         
         if(material)
             material->unBind();
+#if defined(DEBUG) || defined (_DEBUG)
+        glPopGroupMarkerEXT();
+#endif
     }
     
 //    void Geometry::setupShader()
