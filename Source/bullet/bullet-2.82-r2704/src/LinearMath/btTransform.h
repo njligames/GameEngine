@@ -248,6 +248,11 @@ SIMD_FORCE_INLINE bool operator==(const btTransform& t1, const btTransform& t2)
             t1.getOrigin() == t2.getOrigin() );
 }
 
+/**@brief Test if two transforms have all elements not equal */
+SIMD_FORCE_INLINE bool operator!=(const btTransform& t1, const btTransform& t2)
+{
+    return !(t1 == t2);
+}
 
 ///for serialization
 struct	btTransformFloatData
