@@ -47,7 +47,7 @@ for i in $(find ${GAMEPLAYSCRIPTS_ABSOLUTEPATH} -type f -name "*.wav" -not -path
 do
   FILE=${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}}
   TO=${SCRIPTS}${FILE}
-  FULLPATH=${TO%.${WAV}}.${_OGG}
+  FULLPATH=${TO%.${_WAV}}.${_OGG}
 
   echo ${FULLPATH}: ${GAMEPLAYSCRIPTS}${FILE}
   echo '\t./../bin/sox' ${GAMEPLAYSCRIPTS}${FILE} ${FULLPATH}
@@ -60,7 +60,7 @@ do
   if [ "${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}}" != "" ]
   then
     echo ${SCRIPTS_ABSOLUTEPATH}/${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/}:
-    echo '\tmkdir -p ' ${SCRIPTS_ABSOLUTEPATH}/${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/}
+    echo '\tmkdir -p ' ${SCRIPTS}/${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/}
     echo ''
   fi
 done

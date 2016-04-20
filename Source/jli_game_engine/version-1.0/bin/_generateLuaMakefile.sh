@@ -52,7 +52,7 @@ do
   if [ "${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}}" != "" ]
   then
     echo ${SCRIPTS_ABSOLUTEPATH}/${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/}:
-    echo '\tmkdir -p ' ${SCRIPTS_ABSOLUTEPATH}/${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/}
+    echo '\tmkdir -p ' ${SCRIPTS}/${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/}
     echo ''
   fi
 done
