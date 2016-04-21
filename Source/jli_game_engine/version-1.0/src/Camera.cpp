@@ -1660,14 +1660,21 @@ namespace njli
     }
     
     
-    const f32 *Camera::getModelViewMatrixArray()
+//    const f32 *Camera::getModelViewMatrixArray()
+//    {
+//        if(getParent())
+//            getParent()->getWorldTransform().getOpenGLMatrix(m_ModelViewMatrixArray);
+//        else
+//            btTransform::getIdentity().getOpenGLMatrix(m_ModelViewMatrixArray);
+//        
+//        return m_ModelViewMatrixArray;
+//    }
+    
+    btTransform Camera::getModelView() const
     {
         if(getParent())
-            getParent()->getWorldTransform().getOpenGLMatrix(m_ModelViewMatrixArray);
-        else
-            btTransform::getIdentity().getOpenGLMatrix(m_ModelViewMatrixArray);
-        
-        return m_ModelViewMatrixArray;
+            return getParent()->getWorldTransform();
+        return btTransform::getIdentity();
     }
     
     void Camera::getViewBounds(f32 &left, f32 &right, f32 &bottom, f32 &top, f32 &farLeft, f32 &farRight, f32 &farBottom, f32 &farTop)const

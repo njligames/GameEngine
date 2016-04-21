@@ -44,7 +44,7 @@ namespace njli
     m_Material(NULL),
     m_ShaderProgram(NULL),
     m_projectionMatrixUniform(-1),
-    m_modelViewMatrixUniform(-1),
+//    m_modelViewMatrixUniform(-1),
     m_ModelviewTransform(NULL),
     modelviewBufferID(-1),
     m_InTransformAttrib(-1),
@@ -84,7 +84,7 @@ namespace njli
     m_Material(NULL),
     m_ShaderProgram(NULL),
     m_projectionMatrixUniform(-1),
-    m_modelViewMatrixUniform(-1),
+//    m_modelViewMatrixUniform(-1),
     m_ModelviewTransform(NULL),
     modelviewBufferID(-1),
     m_InTransformAttrib(-1),
@@ -124,7 +124,7 @@ namespace njli
     m_Material(NULL),
     m_ShaderProgram(NULL),
     m_projectionMatrixUniform(-1),
-    m_modelViewMatrixUniform(-1),
+//    m_modelViewMatrixUniform(-1),
     m_ModelviewTransform(NULL),
     modelviewBufferID(-1),
     m_InTransformAttrib(-1),
@@ -709,8 +709,10 @@ namespace njli
 
         if(NULL != material && NULL != shader)
             material->bind(shader);
-            
-        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
+        
+        shader->setUniformValue("modelView",
+                                camera->getModelView());
+//        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
         glUniformMatrix4fv(m_projectionMatrixUniform, 1, 0, camera->getProjectionMatrixArray());
         glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
         
@@ -1045,7 +1047,7 @@ namespace njli
         
         m_InTransformAttrib = shader->getAttributeLocation("inTransform");
         
-        m_modelViewMatrixUniform = shader->getUniformLocation("modelView");
+//        m_modelViewMatrixUniform = shader->getUniformLocation("modelView");
         m_projectionMatrixUniform = shader->getUniformLocation("projection");
         u_opacityModifyRGB = shader->getUniformLocation("u_opacityModifyRGB");
         //        u_pointSize = shader->getUniformLocation("u_pointSize");

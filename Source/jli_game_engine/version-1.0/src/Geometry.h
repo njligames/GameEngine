@@ -540,7 +540,7 @@ private:
     Material* m_Material;
     ShaderProgram* m_ShaderProgram;
     u32 m_projectionMatrixUniform;
-    u32 m_modelViewMatrixUniform;
+//    u32 m_modelViewMatrixUniform;
     u32 modelviewBufferID;
     f32* m_ModelviewTransform;
     u32 m_InTransformAttrib;

@@ -17,7 +17,7 @@
 #define TAG "ShaderProgram.cpp"
 #define FORMATSTRING "{\"njli::ShaderProgram\":[]}"
 #include "btPrint.h"
-
+//#include "btTransform.h"
 
 enum njliGLSLVarType
 {
@@ -204,7 +204,10 @@ namespace njli
     AbstractFactoryObject(this),
     m_Program(-1),//glCreateProgram()),
     vertShader(-1),
-    fragShader(-1)
+    fragShader(-1),
+    m_VertexShaderSource(""),
+    m_FragmentShaderSource(""),
+    m_mat4Buffer(new float[16])
     {
         enableRenderObject();
         m_uniformValueMap.clear();
@@ -214,7 +217,10 @@ namespace njli
     AbstractFactoryObject(this),
     m_Program(-1),//glCreateProgram()),
     vertShader(-1),
-    fragShader(-1)
+    fragShader(-1),
+    m_VertexShaderSource(""),
+    m_FragmentShaderSource(""),
+    m_mat4Buffer(new float[16])
     {
         enableRenderObject();
         m_uniformValueMap.clear();
@@ -224,7 +230,10 @@ namespace njli
     AbstractFactoryObject(this),
     m_Program(-1),//glCreateProgram()),
     vertShader(-1),
-    fragShader(-1)
+    fragShader(-1),
+    m_VertexShaderSource(""),
+    m_FragmentShaderSource(""),
+    m_mat4Buffer(new float[16])
     {
         enableRenderObject();
         m_uniformValueMap.clear();
@@ -232,6 +241,9 @@ namespace njli
     
     ShaderProgram::~ShaderProgram()
     {
+        delete [] m_mat4Buffer;
+        m_mat4Buffer = NULL;
+        
         unLoadGPU();
     }
     
@@ -479,6 +491,53 @@ namespace njli
         {
             glGetUniformiv(currentProgram, location, &value);
             DEBUG_GL_ERROR_PRINT("glGetUniformiv", "glGetUniformiv(%d, %d)",currentProgram,location);
+            
+            return true;
+        }
+        return false;
+    }
+    
+    bool ShaderProgram::setUniformValue(const char *uniformName, const btTransform &value, bool transpose)
+    {
+        s32 location = getUniformLocation(uniformName);
+        GLint currentProgram=0;
+        
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        if (location != -1 && currentProgram)
+        {
+            value.getOpenGLMatrix(m_mat4Buffer);
+            glUniformMatrix4fv(location,
+                               1,
+                               (transpose)?GL_TRUE:GL_FALSE,
+                               m_mat4Buffer);
+            DEBUG_GL_ERROR_PRINT("glUniformMatrix4fv", "glUniformMatrix4fv(%d, %d, %s)",
+                                 location,
+                                 transpose,
+                                 toJsonString(value).c_str());
+            return true;
+        }
+        return false;
+    }
+    
+    bool ShaderProgram::getUniformValue(const char *uniformName, btTransform &value)
+    {
+        s32 location = getUniformLocation(uniformName);
+        GLint currentProgram=0;
+        
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        if (location != -1 && currentProgram)
+        {
+            glGetUniformfv(currentProgram, location, m_mat4Buffer);
+            DEBUG_GL_ERROR_PRINT("glGetUniformfv", "glGetUniformfv(%d, %s)",
+                                 location,
+                                 toJsonString(value).c_str());
+            value.setFromOpenGLMatrix(m_mat4Buffer);
             
             return true;
         }

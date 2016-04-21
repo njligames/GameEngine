@@ -16,6 +16,7 @@
 
 #include <vector>
 #include <map>
+#include "btTransform.h"
 
 typedef void (*GLInfoFunction)(u32 program,
     s32 pname,
@@ -29,6 +30,7 @@ typedef void (*GLLogFunction)(u32 program,
 namespace njli {
 class ShaderProgramBuilder;
 class Camera;
+//    class btTransform;
 
 /**
      *  <#Description#>
@@ -193,6 +195,9 @@ protected:
 
     bool setUniformValue(const char *uniformName, s32 value);
     bool getUniformValue(const char *uniformName, s32 &value);
+    
+    bool setUniformValue(const char *uniformName, const btTransform &value, bool transpose = false);
+    bool getUniformValue(const char *uniformName, btTransform &value);
     /**
          *  <#Description#>
          *
@@ -250,6 +255,7 @@ private:
     typedef std::map<std::string, s32> UniformValueMap;
     typedef std::pair<std::string, s32> UniformValuePair;
     UniformValueMap m_uniformValueMap;
+    float *m_mat4Buffer;
 };
 }
 
