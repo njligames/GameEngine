@@ -272,8 +272,8 @@ namespace njli
                 
                 geometry->setTransform(node->getGeometryIndex(), node->getWorldTransform());
                 
-                if(m_ActiveGeometries.end() == std::find(m_ActiveGeometries.begin(), m_ActiveGeometries.end(), geometry))
-                    m_ActiveGeometries.push_back(geometry);
+//                if(m_ActiveGeometries.end() == std::find(m_ActiveGeometries.begin(), m_ActiveGeometries.end(), geometry))
+//                    m_ActiveGeometries.push_back(geometry);
             }
         }
         
@@ -331,6 +331,8 @@ namespace njli
             Camera *camera = (*m_ActiveCameras).at(i);
             btVector3 cameraOrigin(camera->getParent()->getWorldTransform().getOrigin());
             
+            m_ActiveGeometries.clear();
+            
             for (s32 k = 0; k < (*m_ActiveNodes).size(); ++k)
             {
                 Node *node = (*m_ActiveNodes).at(k);
@@ -347,7 +349,8 @@ namespace njli
             for (s32 j = 0; j < m_ActiveGeometries.size(); ++j)
             {
                 Geometry *geometry = m_ActiveGeometries.at(j);
-                if(geometry)
+                
+                if(geometry && !geometry->isHidden(camera))
                 {
 //                    geometry->sort(cameraOrigin);
                     geometry->render(camera);

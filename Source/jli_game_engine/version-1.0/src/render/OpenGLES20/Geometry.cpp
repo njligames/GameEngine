@@ -72,7 +72,8 @@ namespace njli
     m_bufferModified(true),
     m_vertexAttribChanged(false),
     m_MatrixBuffer(new float[16]),
-    m_maxindice(0)
+    m_maxindice(0),
+    m_RenderCategory(JLI_BIT_CATEGORY_NONE)
     {
         enableRenderObject();
     }
@@ -111,7 +112,8 @@ namespace njli
     m_bufferModified(true),
     m_vertexAttribChanged(false),
     m_MatrixBuffer(new float[16]),
-    m_maxindice(0)
+    m_maxindice(0),
+    m_RenderCategory(JLI_BIT_CATEGORY_NONE)
     {
         enableRenderObject();
     }
@@ -152,7 +154,8 @@ namespace njli
     m_bufferModified(true),
     m_vertexAttribChanged(false),
     m_MatrixBuffer(new float[16]),
-    m_maxindice(0)
+    m_maxindice(0),
+    m_RenderCategory(JLI_BIT_CATEGORY_NONE)
     {
         enableRenderObject();
     }
@@ -612,6 +615,21 @@ namespace njli
     void Geometry::enableStencilTest(const bool enable)
     {
         m_enableStencilTest = enable;
+    }
+    
+    void Geometry::hide(Camera* camera)
+    {
+        m_RenderCategory = (njliBitCategories)Off(m_RenderCategory, camera->getRenderCategory());
+    }
+    
+    void Geometry::show(Camera * camera)
+    {
+        m_RenderCategory = (njliBitCategories)On(m_RenderCategory, camera->getRenderCategory());
+    }
+    
+    bool Geometry::isHidden(Camera * camera) const
+    {
+        return !camera->hasRenderCategory(m_RenderCategory);
     }
     
     void Geometry::load()

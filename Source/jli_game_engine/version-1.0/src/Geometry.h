@@ -18,6 +18,7 @@
 
 #include "btVector2.h"
 #include "btVector3.h"
+#include "JLIFactoryTypes.h"
 
 class btTransform;
 
@@ -428,6 +429,9 @@ public:
     void enableDepthTest(const bool enable = true);
     void enableStencilTest(const bool enable = true);
 
+    void hide(Camera* camera);
+    void show(Camera * camera);
+    bool isHidden(Camera * camera) const;
 protected:
     virtual void load();
     virtual void unLoad();
@@ -444,6 +448,8 @@ protected:
 
     void enableBufferModified(bool modified = true);
     bool isBufferModified() const;
+    
+    
 
 public:
     static void setPointSize(const f32 size);
@@ -586,6 +592,7 @@ private:
 
     float* m_MatrixBuffer;
     size_t m_maxindice;
+    njliBitCategories m_RenderCategory;
 };
 }
 
