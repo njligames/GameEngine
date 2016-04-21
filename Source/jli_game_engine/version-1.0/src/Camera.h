@@ -354,7 +354,8 @@ protected:
 
     const btTransform& getProjection() const;
     const f32* getProjectionMatrixArray();
-    const f32* getModelViewMatrixArray();
+//    const f32* getModelViewMatrixArray();
+    btTransform getModelView() const;
 
     void getViewBounds(f32 & left, f32 & right, f32 & bottom, f32 & top, f32 & farLeft, f32 & farRight, f32 & farBottom, f32 & farTop) const;
 
