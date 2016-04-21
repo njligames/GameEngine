@@ -62,6 +62,7 @@ namespace njli
     m_isTouchedByRay(false),
     m_ApplyPhysicsShape(false),
     m_Transform(new btTransform(btTransform::getIdentity())),
+    m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
     m_Pivot(new btTransform(btTransform::getIdentity()))//,
@@ -88,6 +89,7 @@ namespace njli
     m_isTouchedByRay(false),
     m_ApplyPhysicsShape(false),
     m_Transform(new btTransform(btTransform::getIdentity())),
+    m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
     m_Pivot(new btTransform(btTransform::getIdentity()))//,
@@ -113,6 +115,7 @@ namespace njli
     m_isTouchedByRay(false),
     m_ApplyPhysicsShape(false),
     m_Transform(new btTransform(btTransform::getIdentity())),
+    m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
     m_Pivot(new btTransform(btTransform::getIdentity()))//,
@@ -136,6 +139,9 @@ namespace njli
         
         delete m_Transform;
         m_Transform = NULL;
+        
+        delete m_ColorTransform;
+        m_ColorTransform = NULL;
         
         removeFromParentNode();
         
@@ -321,6 +327,16 @@ namespace njli
         transform.setBasis(transform.getBasis().scaled(getScale()));
         
         return (transform * parentTransform);
+    }
+    
+    const btTransform& Node::getColorTransform() const
+    {
+        return *m_ColorTransform;
+    }
+    
+    void Node::setColorTransform(const btTransform& transform)
+    {
+        *m_ColorTransform = transform;
     }
     
     const btTransform &Node::getTransform()const

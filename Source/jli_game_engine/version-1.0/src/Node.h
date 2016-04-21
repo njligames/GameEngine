@@ -280,6 +280,10 @@ public:
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
     virtual btTransform getWorldTransform() const;
+    
+    
+    const btTransform& getColorTransform() const;
+    void setColorTransform(const btTransform& transform);
 
 public:
     //TODO: fill in specific methods for Node
@@ -1538,6 +1542,7 @@ private:
     static void updateActions(void* _ptr);
 
     btTransform* m_Transform;
+    btTransform* m_ColorTransform;
     btQuaternion* m_Orientation;
     btVector3* m_Scale;
     btTransform* m_Pivot;

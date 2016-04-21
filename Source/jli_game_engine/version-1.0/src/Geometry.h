@@ -422,6 +422,31 @@ public:
          *  @return <#return value description#>
          */
     virtual btTransform getTransform(const u64 index);
+    
+    
+    
+    
+    
+    
+    /**
+     *  <#Description#>
+     *
+     *  @param index     <#index description#>
+     *  @param transform <#transform description#>
+     */
+    virtual void setColorTransform(const u64 index, const btTransform& transform);
+    /**
+     *  <#Description#>
+     *
+     *  @param index <#index description#>
+     *
+     *  @return <#return value description#>
+     */
+    virtual btTransform getColorTransform(const u64 index);
+    
+    
+    
+    
 
     virtual void getAabb(Node * node, btVector3 & aabbMin, btVector3 & aabbMax) const;
 
@@ -535,6 +560,7 @@ private:
     virtual void swapVertexData(const size_t idx1, const size_t idx2) = 0;
 
     void bindTransform();
+    void bindColorTransform();
     std::vector<LevelOfDetail*> m_LevelOfDetailList;
 
     Material* m_Material;
@@ -542,8 +568,12 @@ private:
     u32 m_projectionMatrixUniform;
 //    u32 m_modelViewMatrixUniform;
     u32 modelviewBufferID;
+    u32 colorTransformBufferID;
     f32* m_ModelviewTransform;
+    f32 *m_ColorTransform;
+
     u32 m_InTransformAttrib;
+    u32 m_InColorTransform;
     u32 verticesID;
     u32 indexBufferID;
     u32 vertexArrayID;

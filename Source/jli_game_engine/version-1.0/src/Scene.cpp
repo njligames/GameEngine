@@ -272,6 +272,8 @@ namespace njli
                 
                 geometry->setTransform(node->getGeometryIndex(), node->getWorldTransform());
                 
+                geometry->setColorTransform(node->getGeometryIndex(), node->getColorTransform());
+                
 //                if(m_ActiveGeometries.end() == std::find(m_ActiveGeometries.begin(), m_ActiveGeometries.end(), geometry))
 //                    m_ActiveGeometries.push_back(geometry);
             }
