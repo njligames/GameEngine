@@ -18,6 +18,7 @@
 #define FORMATSTRING "{\"njli::ShaderProgram\":[]}"
 #include "btPrint.h"
 
+
 enum njliGLSLVarType
 {
     JLI_GL_FLOAT = GL_FLOAT,
@@ -201,29 +202,32 @@ namespace njli
 {
     ShaderProgram::ShaderProgram():
     AbstractFactoryObject(this),
-    program(-1),//glCreateProgram()),
+    m_Program(-1),//glCreateProgram()),
     vertShader(-1),
     fragShader(-1)
     {
         enableRenderObject();
+        m_uniformValueMap.clear();
     }
     
     ShaderProgram::ShaderProgram(const AbstractBuilder &builder):
     AbstractFactoryObject(this),
-    program(-1),//glCreateProgram()),
+    m_Program(-1),//glCreateProgram()),
     vertShader(-1),
     fragShader(-1)
     {
         enableRenderObject();
+        m_uniformValueMap.clear();
     }
     
     ShaderProgram::ShaderProgram(const ShaderProgram &copy):
     AbstractFactoryObject(this),
-    program(-1),//glCreateProgram()),
+    m_Program(-1),//glCreateProgram()),
     vertShader(-1),
     fragShader(-1)
     {
         enableRenderObject();
+        m_uniformValueMap.clear();
     }
     
     ShaderProgram::~ShaderProgram()
@@ -386,11 +390,7 @@ namespace njli
                 
                 compileShader(&fragShader, GL_FRAGMENT_SHADER, source);
                 ret = true;
-//                ret = compileShader(&fragShader, GL_FRAGMENT_SHADER, source);
-//                if(ret)
-//                {
-//                    glAttachShader(program, fragShader);
-//                }
+
             }
                 break;
             case JLI_SHADER_TYPE_VERTEX:
@@ -402,11 +402,7 @@ namespace njli
                 
                 compileShader(&vertShader, GL_VERTEX_SHADER, source);
                 ret = true;
-//                ret = compileShader(&vertShader, GL_VERTEX_SHADER, source);
-//                if(ret)
-//                {
-//                    glAttachShader(program, vertShader);
-//                }
+
             }
                 break;
             default:
@@ -415,31 +411,106 @@ namespace njli
         return ret;
     }
     
-    void ShaderProgram::bindAttribute(const char *attributeName)
+    bool ShaderProgram::bindAttribute(const char *attributeName)
     {
-        s32 index = getAttributeIndex(attributeName);
+        s32 location = getAttributeLocation(attributeName);
+        GLint currentProgram=0;
         
-        glBindAttribLocation(program, index, attributeName);DEBUG_GL_ERROR_WRITE("glBindAttribLocation");
-//        log_program_info_log(program);
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        if (location != -1 && currentProgram)
+        {
+            glBindAttribLocation(currentProgram, location, attributeName);
+            DEBUG_GL_ERROR_PRINT("glBindAttribLocation", "glBindAttribLocation(%d, %d, %s)",currentProgram,location, attributeName);
+            
+            DEBUG_GL_ERROR_WRITE("glBindAttribLocation");
+            return true;
+        }
+        return false;
     }
     
-    u32 ShaderProgram::getAttributeIndex(const char *attributeName)const
+    u32 ShaderProgram::getAttributeLocation(const char *attributeName)const
     {
-        s32 _id = glGetAttribLocation(program, attributeName);DEBUG_GL_ERROR_WRITE("glGetAttribLocation\n");
-//        log_program_info_log(program);
+        GLint currentProgram=0;
         
-        DEBUG_ASSERT_PRINT(-1 != _id, "The named attribute variable (%s) is not an active attribute in the specified program object or if name starts with the reserved prefix \"gl_\"", attributeName);
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
         
-        return _id;
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        s32 location = glGetAttribLocation(currentProgram, attributeName);
+        DEBUG_GL_ERROR_WRITE("glGetAttribLocation\n");
+        
+        DEBUG_ASSERT_PRINT(-1 != location, "The named attribute variable (%s) is not an active attribute in the specified program object or if name starts with the reserved prefix \"gl_\"", attributeName);
+        
+        return location;
     }
     
-    u32 ShaderProgram::getUniformIndex(const char *uniformName)const
+    bool ShaderProgram::setUniformValue(const char *uniformName, s32 value)
     {
-        s32 _id = glGetUniformLocation(program, uniformName);//DEBUG_GL_ERROR_PRINT("glGetUniformLocation\n", "%d,%s",program,uniformName);
+        s32 location = getUniformLocation(uniformName);
+        GLint currentProgram=0;
         
-        DEBUG_ASSERT_PRINT(-1 != _id, "The named uniform variable (%s) is not an active uniform in the specified program object or if name starts with the reserved prefix \"gl_\"", uniformName);
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
         
-        return _id;
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        if (location != -1 && currentProgram)
+        {
+            glUniform1i(location, value);
+            DEBUG_GL_ERROR_PRINT("glUniform1i", "glUniform1i(%d, %d)",location,value);
+            
+            return true;
+        }
+        return false;
+    }
+    
+    bool ShaderProgram::getUniformValue(const char *uniformName, s32 &value)
+    {
+        s32 location = getUniformLocation(uniformName);
+        GLint currentProgram=0;
+        
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        if (location != -1 && currentProgram)
+        {
+            glGetUniformiv(currentProgram, location, &value);
+            DEBUG_GL_ERROR_PRINT("glGetUniformiv", "glGetUniformiv(%d, %d)",currentProgram,location);
+            
+            return true;
+        }
+        return false;
+    }
+    
+    u32 ShaderProgram::getUniformLocation(const char *uniformName)
+    {
+        GLint currentProgram=0;
+        
+        glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        
+        DEBUG_ASSERT(m_Program == currentProgram);
+        
+        s32 location = -1;
+        
+        UniformValueMap::iterator iter = m_uniformValueMap.find(std::string(uniformName));
+        if(iter != m_uniformValueMap.end())
+        {
+            location = iter->second;
+        }
+        else
+        {
+            location = glGetUniformLocation(currentProgram, uniformName);
+            DEBUG_GL_ERROR_PRINT("glGetUniformLocation\n", "%d, %s",m_Program,uniformName);
+            
+            m_uniformValueMap.insert(UniformValuePair(std::string(uniformName), location));
+        }
+        
+        DEBUG_ASSERT_PRINT(-1 != location, "The named uniform variable (%s) is not an active uniform in the specified program object or if name starts with the reserved prefix \"gl_\"", uniformName);
+        
+        return location;
     }
     
     bool ShaderProgram::link()
@@ -458,9 +529,9 @@ namespace njli
             return false;
         }
         
-        program = link_program(vertShader, fragShader);
+        m_Program = link_program(vertShader, fragShader);
         
-        GLint status = validate_program(program);
+        GLint status = validate_program(m_Program);
         
         if( LOGGING_ON && GL_TRUE == status)
         {
@@ -471,13 +542,13 @@ namespace njli
             GLint nameMaxLength = 0;
             GLchar *variableName = NULL;
             
-            glGetProgramiv(program, GL_ACTIVE_UNIFORMS, &active);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
-            glGetProgramiv(program, GL_ACTIVE_UNIFORM_MAX_LENGTH, &nameMaxLength);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
+            glGetProgramiv(m_Program, GL_ACTIVE_UNIFORMS, &active);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
+            glGetProgramiv(m_Program, GL_ACTIVE_UNIFORM_MAX_LENGTH, &nameMaxLength);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
             
             variableName = new GLchar[nameMaxLength];
             for(GLuint index = 0; index < active; ++index)
             {
-                glGetActiveUniform(program, index, nameMaxLength, &length, &size, &type, variableName);DEBUG_GL_ERROR_WRITE("glGetActiveUniform\n");
+                glGetActiveUniform(m_Program, index, nameMaxLength, &length, &size, &type, variableName);DEBUG_GL_ERROR_WRITE("glGetActiveUniform\n");
 //                DEBUG_LOG_V(TAG, "Uniform Variable Loaded: %s %s (size=%d)", getGLSLVarTypeName((njliGLSLVarType)type), variableName, size);
                 
             }
@@ -486,39 +557,20 @@ namespace njli
             
             
             
-            glGetProgramiv(program, GL_ACTIVE_ATTRIBUTES, &active);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
-            glGetProgramiv(program, GL_ACTIVE_ATTRIBUTE_MAX_LENGTH, &nameMaxLength);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
+            glGetProgramiv(m_Program, GL_ACTIVE_ATTRIBUTES, &active);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
+            glGetProgramiv(m_Program, GL_ACTIVE_ATTRIBUTE_MAX_LENGTH, &nameMaxLength);DEBUG_GL_ERROR_WRITE("glGetProgramiv\n");
             
             variableName = new GLchar[nameMaxLength];
             for(GLuint index = 0; index < active; ++index)
             {
-                glGetActiveAttrib(program, index, nameMaxLength, &length, &size, &type, variableName);DEBUG_GL_ERROR_WRITE("glGetActiveAttrib\n");
-//                DEBUG_LOG_V(TAG, "Attribute Loaded: %s %s (size=%d)", getGLSLVarTypeName((njliGLSLVarType)type), variableName, size);
+                glGetActiveAttrib(m_Program, index, nameMaxLength, &length, &size, &type, variableName);DEBUG_GL_ERROR_WRITE("glGetActiveAttrib\n");
+
                 
             }
             delete [] variableName;variableName=NULL;
         }
         
-//
-//        glLinkProgram(program);
-//        glGetProgramiv(program, GL_LINK_STATUS, &status);
-        
-//#if defined(DEBUG) || defined (_DEBUG)
-//        if (status == GL_FALSE)
-//        {
-//            GLint logLength = 4098;
-//            GLchar *log = new GLchar[logLength];
-//            glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
-//            glGetShaderInfoLog(program, 4098, &logLength, (GLchar*)log);
-//            DEBUG_LOG_V(TAG, "%s", log);
-//            
-//            glValidateProgram(program);
-//            glGetShaderInfoLog(program, 4098, &logLength, (GLchar*)log);
-//            DEBUG_LOG_V(TAG, "%s", log);
-//            
-//            delete [] log;
-//        }
-//#endif
+
         
         if (status == GL_FALSE)
             return false;
@@ -534,14 +586,12 @@ namespace njli
     
     bool ShaderProgram::isLinked()const
     {
-        return (program != -1);
+        return (m_Program != -1);
     }
     
     void ShaderProgram::use()
     {
-//        DEBUG_LOG_D("SHADER", "BEFORE USE %d", program);
-        glUseProgram(program);//DEBUG_GL_ERROR_PRINT("glUseProgram", "%d", program);
-//        DEBUG_LOG_D("SHADER", "AFTER USE %d", program);
+        glUseProgram(m_Program);
     }
     
 //    void ShaderProgram::unUse()
@@ -561,7 +611,7 @@ namespace njli
     
     const char *ShaderProgram::programLog()const
     {
-        return logForOpenGLObject(program, (GLInfoFunction)&glGetProgramiv, (GLLogFunction)&glGetProgramInfoLog);
+        return logForOpenGLObject(m_Program, (GLInfoFunction)&glGetProgramiv, (GLLogFunction)&glGetProgramInfoLog);
     }
     
     void ShaderProgram::unLoadGPU()
@@ -574,9 +624,10 @@ namespace njli
             glDeleteShader(fragShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
         fragShader = -1;
         
-        if(-1 != program)
-            glDeleteProgram(program);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
-        program = -1;
+        if(-1 != m_Program)
+            glDeleteProgram(m_Program);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+        m_Program = -1;
+        m_uniformValueMap.clear();
     }
     
     bool ShaderProgram::compileShader(s32 *shader, const GLenum type, const char *source)

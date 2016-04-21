@@ -15,6 +15,7 @@
 #include "lua.hpp"
 
 #include <vector>
+#include <map>
 
 typedef void (*GLInfoFunction)(u32 program,
     s32 pname,
@@ -179,7 +180,7 @@ protected:
          *
          *  @param attributeName <#attributeName description#>
          */
-    void bindAttribute(const char* attributeName);
+    bool bindAttribute(const char* attributeName);
 
     /**
          *  <#Description#>
@@ -188,8 +189,10 @@ protected:
          *
          *  @return <#return value description#>
          */
-    u32 getAttributeIndex(const char* attributeName) const;
+    u32 getAttributeLocation(const char* attributeName) const;
 
+    bool setUniformValue(const char *uniformName, s32 value);
+    bool getUniformValue(const char *uniformName, s32 &value);
     /**
          *  <#Description#>
          *
@@ -197,7 +200,7 @@ protected:
          *
          *  @return <#return value description#>
          */
-    u32 getUniformIndex(const char* uniformName) const;
+    u32 getUniformLocation(const char* uniformName) ;
 
     /**
          *  <#Description#>
@@ -237,12 +240,16 @@ protected:
     const char* logForOpenGLObject(u32 object, GLInfoFunction infoFunc, GLLogFunction logFunc) const;
 
 private:
-    s32 program;
+    s32 m_Program;
     s32 vertShader;
     s32 fragShader;
 
     std::string m_VertexShaderSource;
     std::string m_FragmentShaderSource;
+    
+    typedef std::map<std::string, s32> UniformValueMap;
+    typedef std::pair<std::string, s32> UniformValuePair;
+    UniformValueMap m_uniformValueMap;
 };
 }
 
