@@ -38,7 +38,7 @@ namespace njli
 //    m_diffuseBound(false),
     m_materialBound(new bool[16]),
     m_textureID(-1),
-    m_minVal(JLI_TEXTURE_MINIFICATION_VALUE_TYPE_LINEAR),
+    m_minVal(JLI_TEXTURE_MINIFICATION_VALUE_TYPE_LINEAR_MIPMAP_LINEAR),
     m_magVal(JLI_TEXTURE_MAGNIFICATION_VALUE_TYPE_LINEAR),
     m_sWrap(JLI_TEXTURE_WRAP_TYPE_CLAMP_TO_EDGE),
     m_tWrap(JLI_TEXTURE_WRAP_TYPE_CLAMP_TO_EDGE),
