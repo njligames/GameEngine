@@ -561,7 +561,7 @@ private:
     s32 m_blendFuncSource;
     s32 m_blendFuncDestination;
     bool _opacityModifyRGB;
-    u32 u_opacityModifyRGB;
+//    u32 u_opacityModifyRGB;
     u32 u_pointSize;
 
     bool m_enableBlend;
