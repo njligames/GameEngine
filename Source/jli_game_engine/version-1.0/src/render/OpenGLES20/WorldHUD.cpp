@@ -1132,23 +1132,28 @@ namespace njli
     
     void WorldHUD::renderFBOs()
     {
-#if defined(DEBUG) || defined (_DEBUG)
-        glPushGroupMarkerEXT(0, "WorldHUD::renderFBOs()");
-#endif
-        glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-        
-        for (std::vector<AbstractFrameBufferObject*>::iterator i = m_FBOvector.begin(); i != m_FBOvector.end(); ++i)
+        if (m_FBOvector.size() > 0)
         {
-            if (!(*i)->isHidden())
-            {
-                (*i)->render(NULL);
-            }
-        }
-        glDisable(GL_BLEND);
 #if defined(DEBUG) || defined (_DEBUG)
-        glPopGroupMarkerEXT();
+            glPushGroupMarkerEXT(0, "WorldHUD::renderFBOs()");
 #endif
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            
+            for (std::vector<AbstractFrameBufferObject*>::iterator i = m_FBOvector.begin(); i != m_FBOvector.end(); ++i)
+            {
+                AbstractFrameBufferObject *fbo = *i;
+                
+                if (!fbo->isHidden())
+                {
+                    fbo->render(NULL);
+                }
+            }
+            glDisable(GL_BLEND);
+#if defined(DEBUG) || defined (_DEBUG)
+            glPopGroupMarkerEXT();
+#endif
+        }
     }
     void WorldHUD::render()
     {
