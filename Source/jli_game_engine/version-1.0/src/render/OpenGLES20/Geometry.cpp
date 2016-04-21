@@ -1025,6 +1025,7 @@ namespace njli
                 DEBUG_LOG_PRINT_E(TAG, "Fragment log: %s", shader->fragmentShaderLog());
             }
         }
+        shader->use();
         // ... and add the attributes the shader needs for the vertex position, color and texture st information
         shader->bindAttribute("inPosition");
         shader->bindAttribute("inTexCoord");
@@ -1035,22 +1036,19 @@ namespace njli
         shader->bindAttribute("inTransform");
         
         // Setup the index pointers into the shader for our attributes
-        m_InPositionAttrib = shader->getAttributeIndex("inPosition");
-        m_InTexCoordAttrib = shader->getAttributeIndex("inTexCoord");
-        m_InColorAttrib = shader->getAttributeIndex("inColor");
-        m_InOpacityAttrib = shader->getAttributeIndex("inOpacity");
-        m_InHiddenAttrib = shader->getAttributeIndex("inHidden");
+        m_InPositionAttrib = shader->getAttributeLocation("inPosition");
+        m_InTexCoordAttrib = shader->getAttributeLocation("inTexCoord");
+        m_InColorAttrib = shader->getAttributeLocation("inColor");
+        m_InOpacityAttrib = shader->getAttributeLocation("inOpacity");
+        m_InHiddenAttrib = shader->getAttributeLocation("inHidden");
         
         
+        m_InTransformAttrib = shader->getAttributeLocation("inTransform");
         
-        shader->use();
-        
-        m_InTransformAttrib = shader->getAttributeIndex("inTransform");
-        
-        m_modelViewMatrixUniform = shader->getUniformIndex("modelView");
-        m_projectionMatrixUniform = shader->getUniformIndex("projection");
-        u_opacityModifyRGB = shader->getUniformIndex("u_opacityModifyRGB");
-        //        u_pointSize = shader->getUniformIndex("u_pointSize");
+        m_modelViewMatrixUniform = shader->getUniformLocation("modelView");
+        m_projectionMatrixUniform = shader->getUniformLocation("projection");
+        u_opacityModifyRGB = shader->getUniformLocation("u_opacityModifyRGB");
+        //        u_pointSize = shader->getUniformLocation("u_pointSize");
         
 //        m_setupShader = false;
         m_vertexAttribChanged = true;

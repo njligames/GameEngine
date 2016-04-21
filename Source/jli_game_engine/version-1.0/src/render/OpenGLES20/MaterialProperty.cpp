@@ -565,9 +565,10 @@ namespace njli
                 
                 property[0] = property[0] + 32;
                 sprintf(buffer, "%sTexture2D", property);
-                m_2DUniform = shader->getUniformIndex(buffer);
-                glUniform1i(m_2DUniform, textureIndex);
-                DEBUG_GL_ERROR_PRINT("glUniform1i", "%d,%hhu",m_2DUniform,textureIndex);
+                shader->setUniformValue(buffer, textureIndex);
+//                m_2DUniform = shader->getUniformLocation(buffer);
+//                glUniform1i(m_2DUniform, textureIndex);
+//                DEBUG_GL_ERROR_PRINT("glUniform1i", "%d,%hhu",m_2DUniform,textureIndex);
             }
         }
     }
