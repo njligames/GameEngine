@@ -712,9 +712,12 @@ namespace njli
         
         shader->setUniformValue("modelView",
                                 camera->getModelView());
+//        shader->setUniformValue("projection", camera->getProjection());
+        
 //        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
         glUniformMatrix4fv(m_projectionMatrixUniform, 1, 0, camera->getProjectionMatrixArray());
-        glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
+//        glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
+        shader->setUniformValue("u_opacityModifyRGB", _opacityModifyRGB);
         
         glBindVertexArrayOES(vertexArrayID);
         
@@ -1049,7 +1052,7 @@ namespace njli
         
 //        m_modelViewMatrixUniform = shader->getUniformLocation("modelView");
         m_projectionMatrixUniform = shader->getUniformLocation("projection");
-        u_opacityModifyRGB = shader->getUniformLocation("u_opacityModifyRGB");
+//        u_opacityModifyRGB = shader->getUniformLocation("u_opacityModifyRGB");
         //        u_pointSize = shader->getUniformLocation("u_pointSize");
         
 //        m_setupShader = false;
