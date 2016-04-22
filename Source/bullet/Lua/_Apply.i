@@ -7,7 +7,7 @@ SWIG_USERDATA_TYPEMAP(btVector2);
 SWIG_USERDATA_TYPEMAP(btVector3);
 SWIG_USERDATA_TYPEMAP(btVector4);
 
-%apply btVector3** OUTPUT {btVector3& aabbMin,btVector3& aabbMax};
+//%apply btVector3** OUTPUT {btVector3& aabbMin,btVector3& aabbMax};
 %apply btVector3** OUTPUT {btVector3& inertia};
 %apply btVector3** OUTPUT {btVector3& planeNormal,btVector3& planeSupport};
 %apply btVector3** OUTPUT {btVector3& vtx};
@@ -29,3 +29,5 @@ SWIG_USERDATA_TYPEMAP(btVector4);
 %apply btMatrix3x3** OUTPUT {btMatrix3x3 &ascender, btMatrix3x3 &descender, btMatrix3x3 &lineh};
 %apply btMatrix3x3** OUTPUT {btMatrix3x3& floats};
 %apply btMatrix3x3** OUTPUT {btMatrix3x3 &dstx, btMatrix3x3 &dsty, btMatrix3x3 &xform};
+
+%apply float* OUTPUT {float &x1, float &y1, float &z1, float &w1, float &x2, float &y2, float &z2, float &w2, float &x3, float &y3, float &z3, float &w3, float &x4, float &y4, float &z4, float &w4};
