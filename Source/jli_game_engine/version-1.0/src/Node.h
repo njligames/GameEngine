@@ -18,6 +18,8 @@
 #include "lua.hpp"
 #include <string>
 
+#include "btTransform.h"
+
 class btQuaternion;
 class btTransform;
 
@@ -283,7 +285,7 @@ public:
     
     
     const btTransform& getColorTransform() const;
-    void setColorTransform(const btTransform& transform);
+    void setColorTransform(const btTransform& transform = btTransform::getIdentity());
 
 public:
     //TODO: fill in specific methods for Node

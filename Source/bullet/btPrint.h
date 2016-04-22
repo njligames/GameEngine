@@ -160,36 +160,36 @@ SIMD_FORCE_INLINE std::string toJsonString(const std::string &v)
     return njli::JsonJLI::parse(string_format("\"%s\"", v.c_str()).c_str());
 }
 
-SIMD_FORCE_INLINE void transformValues(const btTransform &t,
-                                       float &x1, float &y1, float &z1, float &w1,
-                                       float &x2, float &y2, float &z2, float &w2,
-                                       float &x3, float &y3, float &z3, float &w3,
-                                       float &x4, float &y4, float &z4, float &w4)
-{
-    btScalar *m = new btScalar[16];
-    
-    t.getOpenGLMatrix(m);
-    
-    x1=m[0];
-    y1=m[1];
-    z1=m[2];
-    w1=m[3];
-    
-    x2=m[4];
-    y2=m[5];
-    z2=m[6];
-    w2=m[7];
-    
-    x3=m[8];
-    y3=m[9];
-    z3=m[10];
-    w3=m[11];
-    
-    x4=m[12];
-    y4=m[13];
-    z4=m[14];
-    w4=m[15];
-    
-    delete [] m;
-}
+//SIMD_FORCE_INLINE void transformValues(const btTransform &t,
+//                                       float &x1, float &y1, float &z1, float &w1,
+//                                       float &x2, float &y2, float &z2, float &w2,
+//                                       float &x3, float &y3, float &z3, float &w3,
+//                                       float &x4, float &y4, float &z4, float &w4)
+//{
+//    btScalar *m = new btScalar[16];
+//    
+//    t.getOpenGLMatrix(m);
+//    
+//    x1=m[0];
+//    y1=m[1];
+//    z1=m[2];
+//    w1=m[3];
+//    
+//    x2=m[4];
+//    y2=m[5];
+//    z2=m[6];
+//    w2=m[7];
+//    
+//    x3=m[8];
+//    y3=m[9];
+//    z3=m[10];
+//    w3=m[11];
+//    
+//    x4=m[12];
+//    y4=m[13];
+//    z4=m[14];
+//    w4=m[15];
+//    
+//    delete [] m;
+//}
 #endif
