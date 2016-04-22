@@ -285,7 +285,7 @@ public:
     
     
     const btTransform& getColorTransform() const;
-    void setColorTransform(const btTransform& transform = btTransform::getIdentity());
+    void setColorTransform(const btTransform& transform);
 
 public:
     //TODO: fill in specific methods for Node

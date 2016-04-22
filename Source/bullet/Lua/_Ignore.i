@@ -184,3 +184,6 @@
 %ignore btHashString;
 
 %ignore btStorageResult;
+
+%ignore setFromOpenGLSubMatrix;
+%ignore setFromOpenGLMatrix;

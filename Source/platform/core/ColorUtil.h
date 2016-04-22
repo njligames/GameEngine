@@ -11,6 +11,8 @@
 
 #include "btScalar.h"
 #include "btTransform.h"
+#include "Log.h"
+#include "Util.h"
 
 #define RLUM    (0.3086)
 #define GLUM    (0.6094)
@@ -30,43 +32,19 @@ namespace njli {
         const ColorUtil &operator=(const ColorUtil&);
     public:
         
-        static SIMD_FORCE_INLINE void getTransformValues(const btTransform &t,
-                                               float &x1, float &y1, float &z1, float &w1,
-                                               float &x2, float &y2, float &z2, float &w2,
-                                               float &x3, float &y3, float &z3, float &w3,
-                                               float &x4, float &y4, float &z4, float &w4)
+        static SIMD_FORCE_INLINE btTransform createMatrixFromArray(const btScalar *matrix)
         {
-            btScalar *m = new btScalar[16];
+            DEBUG_ASSERT(matrix);
             
-            t.getOpenGLMatrix(m);
-            
-            x1=m[0];
-            y1=m[1];
-            z1=m[2];
-            w1=m[3];
-            
-            x2=m[4];
-            y2=m[5];
-            z2=m[6];
-            w2=m[7];
-            
-            x3=m[8];
-            y3=m[9];
-            z3=m[10];
-            w3=m[11];
-            
-            x4=m[12];
-            y4=m[13];
-            z4=m[14];
-            w4=m[15];
-            
-            delete [] m;
+            btTransform t;
+            t.setFromOpenGLMatrix(matrix);
+            return t;
         }
         
-        static SIMD_FORCE_INLINE btTransform createHueRotationMatrix(const float rot)
+        static SIMD_FORCE_INLINE btTransform createHueRotationMatrix(const double rot)
         {
-            float mat[4][4];
-            identmat((float*)mat);
+            double mat[4][4];
+            identmat((double*)mat);
             huerotatemat(mat, rot);
             
             btTransform ret;
@@ -74,10 +52,28 @@ namespace njli {
             return ret;
         }
         
+//        static SIMD_FORCE_INLINE btTransform createHueRotationMatrix(const double rot)
+//        {
+//            rgb white = {1,1,1};
+//            
+//            hsv c = rgb2hsv(white);
+//            c.h += rot;
+//            
+//            rgb _white = hsv2rgb(c);
+//            
+//            double mat[4][4];
+//            identmat((double*)mat);
+//            cscalemat(mat, _white.r, _white.g, _white.b);
+//            
+//            btTransform ret;
+//            ret.setFromOpenGLMatrix((float*)mat);
+//            return ret;
+//        }
+        
         static SIMD_FORCE_INLINE btTransform createBrightnessMatrix(const btVector3 &brightness)
         {
-            float mat[4][4];
-            identmat((float*)mat);
+            double mat[4][4];
+            identmat((double*)mat);
             cscalemat(mat, brightness.x(), brightness.y(), brightness.z());
             
             btTransform ret;
@@ -87,8 +83,8 @@ namespace njli {
         
         static SIMD_FORCE_INLINE btTransform createBlackAndWhiteMatrix()
         {
-            float mat[4][4];
-            identmat((float*)mat);
+            double mat[4][4];
+            identmat((double*)mat);
             lummat(mat);
             
             btTransform ret;
@@ -96,10 +92,10 @@ namespace njli {
             return ret;
         }
         
-        static SIMD_FORCE_INLINE btTransform createSaturationMatrix(const float saturation)
+        static SIMD_FORCE_INLINE btTransform createSaturationMatrix(const double saturation)
         {
-            float mat[4][4];
-            identmat((float*)mat);
+            double mat[4][4];
+            identmat((double*)mat);
             saturatemat(mat, saturation);
             
             btTransform ret;
@@ -109,8 +105,8 @@ namespace njli {
         
         static SIMD_FORCE_INLINE btTransform createColorOffsetMatrix(const btVector3 &colorOffset)
         {
-            float mat[4][4];
-            identmat((float*)mat);
+            double mat[4][4];
+            identmat((double*)mat);
             offsetmat(mat, colorOffset.x(), colorOffset.y(), colorOffset.z());
             
             btTransform ret;
@@ -124,7 +120,7 @@ namespace njli {
          *		use a matrix to transform colors.
          */
         static SIMD_FORCE_INLINE void applymatrix(unsigned long *lptr,
-                                                  float mat[4][4],
+                                                  double mat[4][4],
                                                   int n)
         {
             int ir, ig, ib, r, g, b;
@@ -155,10 +151,10 @@ namespace njli {
          *	matrixmult -
          *		multiply two matricies
          */
-        static SIMD_FORCE_INLINE void matrixmult(const float a[4][4], const float b[4][4], float c[4][4])
+        static SIMD_FORCE_INLINE void matrixmult(const double a[4][4], const double b[4][4], double c[4][4])
         {
             int x, y;
-            float temp[4][4];
+            double temp[4][4];
             
             for(y=0; y<4 ; y++)
                 for(x=0 ; x<4 ; x++) {
@@ -176,7 +172,7 @@ namespace njli {
          *	identmat -
          *		make an identity matrix
          */
-        static SIMD_FORCE_INLINE void identmat(float *matrix)
+        static SIMD_FORCE_INLINE void identmat(double *matrix)
         {
             *matrix++ = 1.0;    /* row 1        */
             *matrix++ = 0.0;
@@ -200,13 +196,13 @@ namespace njli {
          *	xformpnt -
          *		transform a 3D point using a matrix
          */
-        static SIMD_FORCE_INLINE void xformpnt(const float matrix[4][4],
-                                               const float x,
-                                               const float y,
-                                               const float z,
-                                               float *tx,
-                                               float *ty,
-                                               float *tz)
+        static SIMD_FORCE_INLINE void xformpnt(const double matrix[4][4],
+                                               const double x,
+                                               const double y,
+                                               const double z,
+                                               double *tx,
+                                               double *ty,
+                                               double *tz)
         {
             *tx = x*matrix[0][0] + y*matrix[1][0] + z*matrix[2][0] + matrix[3][0];
             *ty = x*matrix[0][1] + y*matrix[1][1] + z*matrix[2][1] + matrix[3][1];
@@ -217,12 +213,12 @@ namespace njli {
          *	cscalemat -
          *		make a color scale marix
          */
-        static SIMD_FORCE_INLINE void cscalemat(float mat[4][4],
-                                                const float rscale,
-                                                const float gscale,
-                                                const float bscale)
+        static SIMD_FORCE_INLINE void cscalemat(double mat[4][4],
+                                                const double rscale,
+                                                const double gscale,
+                                                const double bscale)
         {
-            float mmat[4][4];
+            double mmat[4][4];
             
             mmat[0][0] = rscale;
             mmat[0][1] = 0.0;
@@ -252,10 +248,10 @@ namespace njli {
          *		make a luminance marix
          */
 
-        static SIMD_FORCE_INLINE void lummat(float mat[4][4])
+        static SIMD_FORCE_INLINE void lummat(double mat[4][4])
         {
-            float mmat[4][4];
-            float rwgt, gwgt, bwgt;
+            double mmat[4][4];
+            double rwgt, gwgt, bwgt;
             
             rwgt = RLUM;
             gwgt = GLUM;
@@ -286,11 +282,11 @@ namespace njli {
          *	saturatemat -
          *		make a saturation marix
          */
-        static SIMD_FORCE_INLINE void saturatemat(float mat[4][4], const float sat)
+        static SIMD_FORCE_INLINE void saturatemat(double mat[4][4], const double sat)
         {
-            float mmat[4][4];
-            float a, b, c, d, e, f, g, h, i;
-            float rwgt, gwgt, bwgt;
+            double mmat[4][4];
+            double a, b, c, d, e, f, g, h, i;
+            double rwgt, gwgt, bwgt;
             
             rwgt = RLUM;
             gwgt = GLUM;
@@ -331,12 +327,12 @@ namespace njli {
          *	offsetmat -
          *		offset r, g, and b
          */
-        static SIMD_FORCE_INLINE void offsetmat(float mat[4][4],
-                                                const float roffset,
-                                                const float goffset,
-                                                const float boffset)
+        static SIMD_FORCE_INLINE void offsetmat(double mat[4][4],
+                                                const double roffset,
+                                                const double goffset,
+                                                const double boffset)
         {
-            float mmat[4][4];
+            double mmat[4][4];
             
             mmat[0][0] = 1.0;
             mmat[0][1] = 0.0;
@@ -364,11 +360,11 @@ namespace njli {
          *	xrotate -
          *		rotate about the x (red) axis
          */
-        static SIMD_FORCE_INLINE void xrotatemat(float mat[4][4],
-                                                 const float rs,
-                                                 const float rc)
+        static SIMD_FORCE_INLINE void xrotatemat(double mat[4][4],
+                                                 const double rs,
+                                                 const double rc)
         {
-            float mmat[4][4];
+            double mmat[4][4];
             
             mmat[0][0] = 1.0;
             mmat[0][1] = 0.0;
@@ -396,11 +392,11 @@ namespace njli {
          *	yrotate -
          *		rotate about the y (green) axis
          */
-        static SIMD_FORCE_INLINE void yrotatemat(float mat[4][4],
-                                                 const float rs,
-                                                 const float rc)
+        static SIMD_FORCE_INLINE void yrotatemat(double mat[4][4],
+                                                 const double rs,
+                                                 const double rc)
         {
-            float mmat[4][4];
+            double mmat[4][4];
             
             mmat[0][0] = rc;
             mmat[0][1] = 0.0;
@@ -428,11 +424,11 @@ namespace njli {
          *	zrotate -
          *		rotate about the z (blue) axis
          */
-        static SIMD_FORCE_INLINE void zrotatemat(float mat[4][4],
-                                                 const float rs,
-                                                 const float rc)
+        static SIMD_FORCE_INLINE void zrotatemat(double mat[4][4],
+                                                 const double rs,
+                                                 const double rc)
         {
-            float mmat[4][4];
+            double mmat[4][4];
             
             mmat[0][0] = rc;
             mmat[0][1] = rs;
@@ -460,11 +456,11 @@ namespace njli {
          *	zshear -
          *		shear z using x and y.
          */
-        static SIMD_FORCE_INLINE void zshearmat(float mat[4][4],
-                                                const float dx,
-                                                const float dy)
+        static SIMD_FORCE_INLINE void zshearmat(double mat[4][4],
+                                                const double dx,
+                                                const double dy)
         {
-            float mmat[4][4];
+            double mmat[4][4];
             
             mmat[0][0] = 1.0;
             mmat[0][1] = 0.0;
@@ -492,13 +488,13 @@ namespace njli {
          *	simplehuerotatemat -
          *		simple hue rotation. This changes luminance
          */
-        static SIMD_FORCE_INLINE void simplehuerotatemat(float mat[4][4],
-                                                         const float rot)
+        static SIMD_FORCE_INLINE void simplehuerotatemat(double mat[4][4],
+                                                         const double rot)
         {
-            float mag;
-            float xrs, xrc;
-            float yrs, yrc;
-            float zrs, zrc;
+            double mag;
+            double xrs, xrc;
+            double yrs, yrc;
+            double zrs, zrc;
             
             /* rotate the grey vector into positive Z */
             mag = sqrt(2.0);
@@ -525,18 +521,18 @@ namespace njli {
          *	huerotatemat -
          *		rotate the hue, while maintaining luminance.
          */
-        static SIMD_FORCE_INLINE void huerotatemat(float mat[4][4],
-                                                   const float rot)
+        static SIMD_FORCE_INLINE void huerotatemat(double mat[4][4],
+                                                   const double rot)
         {
-            float mmat[4][4];
-            float mag;
-            float lx, ly, lz;
-            float xrs, xrc;
-            float yrs, yrc;
-            float zrs, zrc;
-            float zsx, zsy;
+            double mmat[4][4];
+            double mag;
+            double lx, ly, lz;
+            double xrs, xrc;
+            double yrs, yrc;
+            double zrs, zrc;
+            double zsx, zsy;
             
-            identmat((float*)mmat);
+            identmat((double*)mmat);
             
             /* rotate the grey vector into positive Z */
             mag = sqrt(2.0);
