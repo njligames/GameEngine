@@ -1139,6 +1139,7 @@ namespace njli
 #endif
             glEnable(GL_BLEND);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            glBlendEquation(GL_FUNC_ADD);
             
             for (std::vector<AbstractFrameBufferObject*>::iterator i = m_FBOvector.begin(); i != m_FBOvector.end(); ++i)
             {
@@ -1159,7 +1160,7 @@ namespace njli
     {
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//        glEnable(GL_DEPTH_TEST);
+        glBlendEquation(GL_FUNC_ADD);
         
         nvgBeginFrame(m_NVGContext,
                       njli::World::getInstance()->getViewportDimensions().x(),
@@ -1173,8 +1174,6 @@ namespace njli
         nvgEndFrame(m_NVGContext);
         
         glDisable(GL_BLEND);
-        
-        
     }
     
     NVGcontext *WorldHUD::getContext()

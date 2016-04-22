@@ -770,9 +770,15 @@ namespace njli
 //            setupShader_Internal();
         
         if (m_enableBlend)
+        {
             glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            glBlendEquation(GL_FUNC_ADD);
+        }
         else
+        {
             glDisable(GL_BLEND);
+        }
         
         if (m_enableDepthTest)
             glEnable(GL_DEPTH_TEST);
@@ -785,12 +791,6 @@ namespace njli
             glDisable(GL_STENCIL_TEST);
         
         
-        glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//        glBlendFunc(GL_ONE_MINUS_DST_ALPHA,GL_DST_ALPHA);
-//        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-//        glBlendFunc(m_blendFuncSource, m_blendFuncDestination);
-        
-//        glDisable(GL_CULL_FACE);
         
         if(NULL != shader)
             shader->use();
@@ -882,6 +882,11 @@ namespace njli
         
         if(material)
             material->unBind();
+        
+        glDisable(GL_STENCIL_TEST);
+        glDisable(GL_DEPTH_TEST);
+        glDisable(GL_BLEND);
+        
 #if defined(DEBUG) || defined (_DEBUG)
         glPopGroupMarkerEXT();
 #endif
