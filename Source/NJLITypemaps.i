@@ -20,3 +20,14 @@
 
 
 
+
+
+
+
+
+%define SWIG_USERDATA_ARRAY_TYPEMAP(TYPE, numarguments)
+%typemap(in, numinputs=0) TYPE OUTPUT ($*1_ltype *temp)
+%{ $1 = new $*1_ltype[numarguments](); %}
+%typemap(argout) TYPE OUTPUT
+%{ SWIG_NewPointerObj(L,(void *) $1,$1_descriptor,0); SWIG_arg++; %}
+%enddef
