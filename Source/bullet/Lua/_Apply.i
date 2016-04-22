@@ -30,4 +30,6 @@ SWIG_USERDATA_TYPEMAP(btVector4);
 %apply btMatrix3x3** OUTPUT {btMatrix3x3& floats};
 %apply btMatrix3x3** OUTPUT {btMatrix3x3 &dstx, btMatrix3x3 &dsty, btMatrix3x3 &xform};
 
-%apply float* OUTPUT {float &x1, float &y1, float &z1, float &w1, float &x2, float &y2, float &z2, float &w2, float &x3, float &y3, float &z3, float &w3, float &x4, float &y4, float &z4, float &w4};
+//float* OUTPUT {btScalar *m};
+
+//%apply float* OUTPUT {float &x1, float &y1, float &z1, float &w1, float &x2, float &y2, float &z2, float &w2, float &x3, float &y3, float &z3, float &w3, float &x4, float &y4, float &z4, float &w4};
