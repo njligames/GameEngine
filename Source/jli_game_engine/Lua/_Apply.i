@@ -159,5 +159,6 @@ SWIG_USERDATA_TYPEMAP(Xml);
 SWIG_USERDATA_TYPEMAP(XmlBuilder);
 
 
-//%apply s32* OUTPUT {s32  &w, s32 &h};
+%apply s32* OUTPUT {s32  &w, s32 &h};
+
 
