@@ -22,7 +22,7 @@ done
 
 
 >&2 echo "accumulate the file targets..."
-for i in $(find ${GAMEPLAYSCRIPTS_ABSOLUTEPATH} -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" -not -path "*/_*" )
+for i in $(find ${GAMEPLAYSCRIPTS_ABSOLUTEPATH} -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" )
 do
     FILE=${i##${GAMEPLAYSCRIPTS_ABSOLUTEPATH}}
     FULLPATH=${SCRIPTS}${FILE}
@@ -37,7 +37,7 @@ echo ''
 
 
 >&2 echo "list the file targets..."
-for i in $(find $GAMEPLAYSCRIPTS_ABSOLUTEPATH -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" -not -path "*/_*" )
+for i in $(find $GAMEPLAYSCRIPTS_ABSOLUTEPATH -type f -name "*.lua" -not -path "*/_OLD/*" -not -path "*/_archive/*" )
 do
   FILE=${i##$GAMEPLAYSCRIPTS_ABSOLUTEPATH}
 

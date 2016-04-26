@@ -13,6 +13,11 @@
 #include "btTransform.h"
 #include "Log.h"
 #include "Util.h"
+#include <math.h>
+#include "btMatrix3x3.h"
+
+
+
 
 #define RLUM    (0.3086)
 #define GLUM    (0.6094)
@@ -30,6 +35,57 @@ namespace njli {
         ColorUtil();
         ColorUtil(const ColorUtil&);
         const ColorUtil &operator=(const ColorUtil&);
+        
+        static const btMatrix3x3 RGB_TO_YIQ;
+        static const btMatrix3x3 YIQ_TO_RGB;
+        
+        static double U_VALUE(const double H)
+        {
+            return (cos(H*M_PI/180.0));
+        }
+        
+        static double W_VALUE(const double H)
+        {
+            return (cos(H*M_PI/180.0));
+        }
+        
+        /*
+         Must be in YIQ color space
+         http://beesbuzz.biz/code/hsv_color_transforms.php
+         */
+        static inline btMatrix3x3 HUE(const double hueTransformDegreeAmount)
+        {
+            
+            const double U = U_VALUE(hueTransformDegreeAmount);
+            
+            const double W = W_VALUE(hueTransformDegreeAmount);
+            
+            return btMatrix3x3(1, 0,  0,
+                               0, U, -W,
+                               0, W,  U);
+        }
+        
+        /*
+         Must be in YIQ color space
+         http://beesbuzz.biz/code/hsv_color_transforms.php
+         */
+        static inline btMatrix3x3 SATURATION(const double saturationAmount)
+        {
+            return btMatrix3x3(1, 0,                0,
+                               0, saturationAmount, 0,
+                               0, 0,                saturationAmount);
+        }
+        
+        /*
+         Must be in YIQ color space
+         http://beesbuzz.biz/code/hsv_color_transforms.php
+         */
+        static inline btMatrix3x3 VALUE(const double valueAmount)
+        {
+            return btMatrix3x3(valueAmount, 0,           0,
+                               0,           valueAmount, 0,
+                               0,           0,           valueAmount);
+        }
     public:
         
         static SIMD_FORCE_INLINE btTransform createMatrixFromArray(const btScalar *matrix)
@@ -43,42 +99,12 @@ namespace njli {
         
         static SIMD_FORCE_INLINE btTransform createHueRotationMatrix(const double rot)
         {
-            double mat[4][4];
-            identmat((double*)mat);
-            huerotatemat(mat, rot);
-            
-            btTransform ret;
-            ret.setFromOpenGLMatrix((float*)mat);
-            return ret;
+            return btTransform(RGB_TO_YIQ * HUE(rot) * YIQ_TO_RGB);
         }
         
-//        static SIMD_FORCE_INLINE btTransform createHueRotationMatrix(const double rot)
-//        {
-//            rgb white = {1,1,1};
-//            
-//            hsv c = rgb2hsv(white);
-//            c.h += rot;
-//            
-//            rgb _white = hsv2rgb(c);
-//            
-//            double mat[4][4];
-//            identmat((double*)mat);
-//            cscalemat(mat, _white.r, _white.g, _white.b);
-//            
-//            btTransform ret;
-//            ret.setFromOpenGLMatrix((float*)mat);
-//            return ret;
-//        }
-        
-        static SIMD_FORCE_INLINE btTransform createBrightnessMatrix(const btVector3 &brightness)
+        static SIMD_FORCE_INLINE btTransform createBrightnessMatrix(const double brightness)
         {
-            double mat[4][4];
-            identmat((double*)mat);
-            cscalemat(mat, brightness.x(), brightness.y(), brightness.z());
-            
-            btTransform ret;
-            ret.setFromOpenGLMatrix((float*)mat);
-            return ret;
+            return btTransform(RGB_TO_YIQ * VALUE(brightness) * YIQ_TO_RGB);
         }
         
         static SIMD_FORCE_INLINE btTransform createBlackAndWhiteMatrix()
@@ -94,13 +120,7 @@ namespace njli {
         
         static SIMD_FORCE_INLINE btTransform createSaturationMatrix(const double saturation)
         {
-            double mat[4][4];
-            identmat((double*)mat);
-            saturatemat(mat, saturation);
-            
-            btTransform ret;
-            ret.setFromOpenGLMatrix((float*)mat);
-            return ret;
+            return btTransform(RGB_TO_YIQ * SATURATION(saturation) * YIQ_TO_RGB);
         }
         
         static SIMD_FORCE_INLINE btTransform createColorOffsetMatrix(const btVector3 &colorOffset)
