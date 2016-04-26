@@ -2,7 +2,7 @@
 WORKING_DIRECTORY=$1
 
 ## declare an array variable
-declare -a arr=("gameplay_scripts" "audio" )
+declare -a arr=("countryLevel" "gameplay" "interface" "gameplay_scripts" "audio" )
 
 echo 'all: '
 
@@ -26,5 +26,18 @@ do
 done
 
 
-# You can access them using echo "${arr[0]}", "${arr[1]}" also
+echo ''
+echo 'clean: '
+echo '\tcd ./countryLevel && make clean'
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/cameras
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/curves
+#echo '\trm -rf '${WORKING_DIRECTORY}/assets/fonts
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/images
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/materials
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/meshes
+#echo '\trm -rf '${WORKING_DIRECTORY}/assets/particles
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/scripts
+#echo '\trm -rf '${WORKING_DIRECTORY}/assets/shaders
+echo '\trm -rf '${WORKING_DIRECTORY}/assets/sounds
+#echo '\trm -rf '${WORKING_DIRECTORY}/assets/strings
 
