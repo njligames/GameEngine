@@ -5,7 +5,7 @@
 #if defined(DEBUG) || defined(_DEBUG)
 #define LOGGING_ON 1
 #define LUA_WRAPPER_LOGGING 0
-#define FMOD_LOGGING_ON 0
+#define FMOD_LOGGING_ON 1
 #else
 #define LOGGING_ON 0
 #define LUA_WRAPPER_LOGGING 0

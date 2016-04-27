@@ -915,10 +915,11 @@ namespace njli
             
             DEBUG_GL_ERROR_WRITE("glActiveTexture");
             
-            if(PVRTTextureLoadFromPVR(ASSET_PATH(img.getFilename()), &m_textureID) == PVR_SUCCESS)
+            
+            if(PVRTTextureLoadFromPointer(img.getDataRaw(), &m_textureID) == PVR_SUCCESS)
             {
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+//                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+//                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
             }
             else
             {

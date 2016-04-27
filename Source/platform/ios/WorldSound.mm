@@ -15,8 +15,13 @@
 
 #define MAXCHANNELS (32)
 
-void ERRCHECK_fn(FMOD_RESULT result, const char *file, int line);
+//void ERRCHECK_fn(FMOD_RESULT result, const char *file, int line);
 #define FMOD_ERRCHECK(_result) do { if (FMOD_LOGGING_ON) ERRCHECK_fn(_result, __FILE__, __LINE__); } while (0)
+
+//void FMOD_ERRCHECK(FMOD_RESULT _result)
+//{
+//    do { if (FMOD_LOGGING_ON) ERRCHECK_fn(_result, __FILE__, __LINE__); } while (0);
+//}
 
 FMOD_RESULT F_CALLBACK fmodDebugCallback(FMOD_DEBUG_FLAGS flags, const char *file, int line, const char *func, const char *message)
 {
@@ -101,6 +106,28 @@ FMOD_RESULT F_CALLBACK fmodFileAsyncCancelCallback(FMOD_ASYNCREADINFO *info, voi
 {
     if(FMOD_LOGGING_ON)
         DEBUG_LOG_WRITE_V(TAG, "NOTE : FMOD_FILE_ASYNCCANCEL_CALLBACK occured.\n");
+    return FMOD_OK;
+}
+
+static FMOD_RESULT F_CALLBACK fmodErrorCallback(FMOD_DEBUG_FLAGS flags, const char *file, int line, const char *func, const char *message)
+{
+    
+    //MOD_DEBUG_LEVEL_ERROR | FMOD_DEBUG_LEVEL_WARNING | FMOD_DEBUG_LEVEL_LOG
+    switch (flags)
+    {
+        case FMOD_DEBUG_LEVEL_ERROR:
+            DEBUG_LOG_E(TAG, "%s - %d - %s - %s\n", file, line, func, message);
+            break;
+        case FMOD_DEBUG_LEVEL_WARNING:
+            DEBUG_LOG_W(TAG, "%s - %d - %s - %s\n", file, line, func, message);
+            break;
+        case FMOD_DEBUG_LEVEL_LOG:
+            DEBUG_LOG_V(TAG, "%s - %d - %s - %s\n", file, line, func, message);
+            break;
+        default:
+            break;
+    }
+    
     return FMOD_OK;
 }
 
@@ -356,6 +383,8 @@ void ERRCHECK_fn(FMOD_RESULT result, const char *file, int line)
     }
 }
 
+
+
 //@interface AudioBufferPlayer : NSObject <AVAudioSessionDelegate>
 //@end
 //
@@ -405,6 +434,7 @@ namespace njli
         
         AVAudioSession *session = [AVAudioSession sharedInstance];
         
+//        success = [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
         success = [session setCategory:AVAudioSessionCategoryPlayback error:&error];
         if(FMOD_LOGGING_ON)DEBUG_ASSERT_PRINT(success, "%s", [[error localizedDescription] UTF8String]);
         
@@ -414,7 +444,7 @@ namespace njli
         FMOD_RESULT   result        = FMOD_OK;
         unsigned int  version       = 0;
         
-        FMOD::Debug_Initialize(FMOD_DEBUG_LEVEL_ERROR);
+        FMOD::Debug_Initialize(FMOD_DEBUG_LEVEL_NONE | FMOD_DEBUG_LEVEL_ERROR | FMOD_DEBUG_LEVEL_WARNING | FMOD_DEBUG_LEVEL_LOG, FMOD_DEBUG_MODE_CALLBACK, fmodErrorCallback);
         
         result = FMOD::System_Create(&m_System);
         FMOD_ERRCHECK(result);
@@ -507,6 +537,7 @@ namespace njli
         
         FMOD::Sound * s = 0;
         FMOD_MODE mode = FMOD_OPENMEMORY | FMOD_LOOP_OFF;
+//        FMOD_MODE mode = FMOD_DEFAULT | FMOD_LOOP_OFF;
         FMOD_RESULT result = m_System->createSound(fileContent, mode, &info, &s);
         FMOD_ERRCHECK(result);
         sound.m_Sound = s;
