@@ -534,9 +534,15 @@ namespace njli
         memset(&info, 0, sizeof(FMOD_CREATESOUNDEXINFO));
         info.cbsize = sizeof(FMOD_CREATESOUNDEXINFO);
         info.length = file_size;
+        info.format = FMOD_SOUND_FORMAT_PCM16;
+        info.numchannels = 1;
+        info.defaultfrequency = 44100;
+        
+        //channels 1, format 2, freq 44100, mode 00000809
+        
         
         FMOD::Sound * s = 0;
-        FMOD_MODE mode = FMOD_OPENMEMORY | FMOD_LOOP_OFF;
+        FMOD_MODE mode = FMOD_OPENMEMORY | FMOD_2D;// | FMOD_LOOP_OFF | FMOD_OPENRAW;
 //        FMOD_MODE mode = FMOD_DEFAULT | FMOD_LOOP_OFF;
         FMOD_RESULT result = m_System->createSound(fileContent, mode, &info, &s);
         FMOD_ERRCHECK(result);
