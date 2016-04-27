@@ -15,6 +15,7 @@
 
 #include "PVRShell.h"
 #import "EAGLView.h"
+#import <UIKit/UIKit.h>
 
 //CLASS INTERFACES:
 
@@ -33,6 +34,7 @@
 	
 	PVRShell*			m_pPVRShell;
 	PVRShellInit*		m_pPVRShellInit ;
+    UIViewController* _viewController;
 }
 
 - (void) doExitFromFunction:(NSString*)reason;

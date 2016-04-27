@@ -792,28 +792,34 @@ namespace njli
         
         
         
-        if(NULL != shader)
-            shader->use();
-
-        if(NULL != material && NULL != shader)
-            material->bind(shader);
         
-        shader->setUniformValue("modelView",
-                                camera->getModelView());
-//        shader->setUniformValue("projection", camera->getProjection());
         
-//        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
-        glUniformMatrix4fv(m_projectionMatrixUniform, 1, 0, camera->getProjectionMatrixArray());
-//        glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
-        shader->setUniformValue("u_opacityModifyRGB", _opacityModifyRGB);
         
-        glBindVertexArrayOES(vertexArrayID);
         
         if(!isLoadedGPU())
         {
             m_LoadGPU = true;
             loadGPU_Internal();
         }
+        
+        glBindVertexArrayOES(vertexArrayID);
+        
+        if(NULL != material && NULL != shader)
+            material->bind(shader);
+        
+        if(NULL != shader)
+            shader->use();
+        
+        
+        
+        shader->setUniformValue("modelView",
+                                camera->getModelView());
+        //        shader->setUniformValue("projection", camera->getProjection());
+        
+        //        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
+        glUniformMatrix4fv(m_projectionMatrixUniform, 1, 0, camera->getProjectionMatrixArray());
+        //        glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
+        shader->setUniformValue("u_opacityModifyRGB", _opacityModifyRGB);
         
         bindTransform();
         bindColorTransform();

@@ -915,15 +915,15 @@ namespace njli
             
             DEBUG_GL_ERROR_WRITE("glActiveTexture");
             
-//            if(PVRTTextureLoadFromPVR(ASSET_PATH(img.getFilename()), &m_textureID) == PVR_SUCCESS)
-//            {
-////                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
-////                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-//            }
-//            else
-//            {
-//                DEBUG_LOG_WRITE_E(TAG, "ERROR: Failed to load texture.");
-//            }
+            if(PVRTTextureLoadFromPVR(ASSET_PATH(img.getFilename()), &m_textureID) == PVR_SUCCESS)
+            {
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            }
+            else
+            {
+                DEBUG_LOG_WRITE_E(TAG, "ERROR: Failed to load texture.");
+            }
             
         }
         else
