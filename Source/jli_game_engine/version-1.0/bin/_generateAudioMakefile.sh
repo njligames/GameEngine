@@ -50,7 +50,8 @@ do
   FULLPATH=${TO%.${_WAV}}.${_OGG}
 
   echo ${FULLPATH}: ${GAMEPLAYSCRIPTS}${FILE}
-  echo '\t./../bin/sox' ${GAMEPLAYSCRIPTS}${FILE} ${FULLPATH}
+  #echo '\t./../bin/sox' ${GAMEPLAYSCRIPTS}${FILE} ${FULLPATH}
+  echo '\t./../bin/packAudio.sh' ${GAMEPLAYSCRIPTS}${FILE} ${FULLPATH}
   echo ''
 done
 
