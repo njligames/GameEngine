@@ -468,12 +468,19 @@ namespace njli
         
         DEBUG_ASSERT(m_Program == currentProgram);
         
-        if (location != -1 && currentProgram)
+        if (location != -1 && currentProgram && glIsProgram(m_Program))
         {
-            glUniform1i(location, value);
-            DEBUG_GL_ERROR_PRINT("glUniform1i", "glUniform1i(%d, %d)",location,value);
-            
-            return true;
+            s32 tvalue=value;
+            if(getUniformValue(uniformName, tvalue))
+            {
+                if(tvalue != value)
+                {
+                    glUniform1i(location, value);
+                    DEBUG_GL_ERROR_PRINT("glUniform1i", "glUniform1i(%s, %d)",uniformName,value);
+                }
+                
+                return true;
+            }
         }
         return false;
     }
@@ -484,13 +491,14 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
         
         DEBUG_ASSERT(m_Program == currentProgram);
         
-        if (location != -1 && currentProgram)
+        if (location != -1 && currentProgram && glIsProgram(m_Program))
         {
             glGetUniformiv(currentProgram, location, &value);
-            DEBUG_GL_ERROR_PRINT("glGetUniformiv", "glGetUniformiv(%d, %d)",currentProgram,location);
+            DEBUG_GL_ERROR_PRINT("glGetUniformiv", "glGetUniformiv(%d, %s)",currentProgram,uniformName);
             
             return true;
         }
@@ -503,21 +511,31 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
         
         DEBUG_ASSERT(m_Program == currentProgram);
         
-        if (location != -1 && currentProgram)
+        if (location != -1 && currentProgram && glIsProgram(m_Program))
         {
-            value.getOpenGLMatrix(m_mat4Buffer);
-            glUniformMatrix4fv(location,
-                               1,
-                               (transpose)?GL_TRUE:GL_FALSE,
-                               m_mat4Buffer);
-            DEBUG_GL_ERROR_PRINT("glUniformMatrix4fv", "glUniformMatrix4fv(%d, %d, %s)",
-                                 location,
-                                 transpose,
-                                 toJsonString(value).c_str());
-            return true;
+            btTransform tvalue=value;
+            if(getUniformValue(uniformName, tvalue))
+            {
+                if(tvalue != value)
+                {
+                    value.getOpenGLMatrix(m_mat4Buffer);
+                    glUniformMatrix4fv(location,
+                                       1,
+                                       (transpose)?GL_TRUE:GL_FALSE,
+                                       m_mat4Buffer);
+                    DEBUG_GL_ERROR_PRINT("glUniformMatrix4fv", "glUniformMatrix4fv(%s, %d, %s)",
+                                         uniformName,
+                                         transpose,
+                                         toJsonString(value).c_str());
+                }
+                
+                return true;
+            }
+            
         }
         return false;
     }
@@ -528,14 +546,15 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
         
         DEBUG_ASSERT(m_Program == currentProgram);
         
-        if (location != -1 && currentProgram)
+        if (location != -1 && currentProgram && glIsProgram(m_Program))
         {
             glGetUniformfv(currentProgram, location, m_mat4Buffer);
-            DEBUG_GL_ERROR_PRINT("glGetUniformfv", "glGetUniformfv(%d, %s)",
-                                 location,
+            DEBUG_GL_ERROR_PRINT("glGetUniformfv", "glGetUniformfv(%s, %s)",
+                                 uniformName,
                                  toJsonString(value).c_str());
             value.setFromOpenGLMatrix(m_mat4Buffer);
             
@@ -549,6 +568,7 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
         
         DEBUG_ASSERT(m_Program == currentProgram);
         
@@ -561,6 +581,8 @@ namespace njli
         }
         else
         {
+            DEBUG_ASSERT(glIsProgram(m_Program));
+            
             location = glGetUniformLocation(currentProgram, uniformName);
             DEBUG_GL_ERROR_PRINT("glGetUniformLocation\n", "%d, %s",m_Program,uniformName);
             

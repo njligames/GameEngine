@@ -66,9 +66,9 @@ namespace njli
                                                                                &content,
                                                                                &file_size))
         {
-//            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
-//            
-//            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
+            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
+//
+            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
             
             return true;
         }
@@ -160,7 +160,7 @@ namespace njli
 //                if(img)
                 {
                     img.setDataRawFromWorldResourceLoader(fileContent, x, y, comp, buffer);
-                    img.flip();
+//                    img.flip();
 //                    m_Images.insert(btHashString(buffer), img);
 //                    image = *img;
                     

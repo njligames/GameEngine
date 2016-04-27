@@ -166,7 +166,8 @@ const int kFPS = 60.0;
 
 #endif
 		// actually make it
-		
+        _viewController = [[UIViewController alloc] init];
+        
 		_glView = [[EAGLView alloc] initWithFrame:appBounds pixelFormat:strColourFormat depthFormat:iDepthFormat stencilFormat:iStencilFormat preserveBackbuffer:NO scale:scale msaaMaxSamples:iMSAA];	// i.e. 1,2,4 for MSAA
 
 		// check for failure and reduce features of view requested until no failure or complete failure
@@ -198,7 +199,11 @@ const int kFPS = 60.0;
 		
 	}
 	
-	[_window addSubview:_glView];
+    
+    [_viewController setView:_glView];
+    [_window setRootViewController:_viewController];
+//	[_window addSubview:_glView];
+    
 
 	[_glView setPVRShellInit:m_pPVRShellInit];
 	
