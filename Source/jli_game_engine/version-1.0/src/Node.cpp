@@ -581,7 +581,16 @@ namespace njli
     {
         s32 idx = getChildIndex(m_PhysicsBody);
         if(idx != -1)
-            return dynamic_cast<PhysicsBody*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<PhysicsBody*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<PhysicsBody*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     
@@ -589,7 +598,16 @@ namespace njli
     {
         s32 idx = getChildIndex(m_PhysicsBody);
         if(idx != -1)
-            return dynamic_cast<const PhysicsBody*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<const PhysicsBody*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<const PhysicsBody*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     
@@ -1007,15 +1025,34 @@ namespace njli
     {
         s32 idx = getChildIndex(m_NodeStateMachine);
         if(idx != -1)
-            return dynamic_cast<NodeStateMachine*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<NodeStateMachine*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<NodeStateMachine*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     
     const NodeStateMachine *Node::getStateMachine() const
     {
         s32 idx = getChildIndex(m_NodeStateMachine);
+        
         if(idx != -1)
-            return dynamic_cast<const NodeStateMachine*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<const NodeStateMachine*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<const NodeStateMachine*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     

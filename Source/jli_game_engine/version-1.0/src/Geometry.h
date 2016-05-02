@@ -22,7 +22,7 @@
 
 class btTransform;
 
-#define NUMBER_OF_MESHES (10000)
+#define NUMBER_OF_MESHES (100)
 
 namespace njli {
 class GeometryBuilder;
@@ -599,6 +599,7 @@ private:
     bool m_enableStencilTest;
 
     bool m_TransformDirty;
+    bool m_ColorTransformDirty;
     //u64 m_StartCopyTransform;
 
     bool m_LoadGPU;
@@ -621,7 +622,7 @@ private:
     bool m_vertexAttribChanged;
 
     float* m_MatrixBuffer;
-    size_t m_maxindice;
+    u64 m_maxindice;
     njliBitCategories m_RenderCategory;
 };
 }

@@ -755,8 +755,8 @@ namespace njli
         getDiffuse()->unBind();
     }
     
-    void Material::render()
-    {
-        getDiffuse()->render();
-    }
+//    void Material::render()
+//    {
+//        getDiffuse()->render();
+//    }
 }

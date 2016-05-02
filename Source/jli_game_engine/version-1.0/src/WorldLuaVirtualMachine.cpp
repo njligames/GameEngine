@@ -963,44 +963,15 @@ namespace njli
     {
         if(m_lua_State)
         {
-            const void *buff;
-            unsigned long length;
-            
-//            char b[1024];
-//            sprintf(b, "%s%s", BUNDLE_PATH(), filePath);
-            
-            njli::World::getInstance()->getWorldResourceLoader()->loadDataFromFile(filePath, &buff, &length);
-            
-            return loadString((const char *)buff);
-//            char buffer[2048];
-//            sprintf(buffer, "%s", (filePath));
-//            
-//            FILE *stream = fopen(buffer, "r");
-//            
-//            int error_code = luaL_loadfile(m_lua_State, (filePath));
-//            
-//            if(LUA_OK == error_code)
-//            {
-////                DEBUG_ASSERT(NULL != stream);
-////                char *fileContent = NULL;
-////                
-////                fseek(stream, 0, SEEK_END);
-////                size_t file_size = ftell(stream);
-////                fseek(stream, 0, SEEK_SET);
-////                
-////                fileContent = (char*)malloc(file_size);
-////                fread(fileContent, file_size, 1, stream);
-////                
-////                DEBUG_ASSERT(ferror(stream) == 0);
-////                fclose(stream);
-////                
-////                fileContent[file_size] = '\0';
-////                
-////                free(fileContent);
-//                
-//                return true;
-//            }
-//            getError("", error_code);
+            std::string script;
+            if(njli::World::getInstance()->getWorldResourceLoader()->load(filePath, &script))
+            {
+                return loadString(script.c_str());
+            }
+            else
+            {
+                DEBUG_LOG_WRITE_W(TAG, "Unable to load script file");
+            }
         }
         
         return false;

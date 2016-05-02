@@ -222,7 +222,7 @@ namespace njli
         
         if (rigidBodyA && !rigidBodyB)
         {
-            m_btGeneric6DofConstraint = new btGeneric6DofConstraint(*rigidBodyB, frameInB, useLinearReferenceFrameA);
+            m_btGeneric6DofConstraint = new btGeneric6DofConstraint(*rigidBodyA, frameInB, useLinearReferenceFrameA);
         }
         else if (rigidBodyA && rigidBodyB)
         {

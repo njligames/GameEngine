@@ -51,12 +51,14 @@ namespace njli
     Sound::~Sound()
     {
         delete m_Transform;
+        m_Transform = NULL;
         
         FMOD_RESULT result;
         if (m_Sound)
         {
             result = m_Sound->release();
             DEBUG_ASSERT_WRITE(result==FMOD_OK, FMOD_ErrorString(result));
+            m_Sound = NULL;
         }
     }
     

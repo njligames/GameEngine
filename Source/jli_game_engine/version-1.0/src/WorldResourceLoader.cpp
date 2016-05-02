@@ -38,10 +38,368 @@
 #define FORMATSTRING "{\"njli::WorldResourceLoader\":[]}"
 #include "btPrint.h"
 
-#include "PVRTTexture.h"
+//#include "PVRTTexture.h"
 
 namespace njli
 {
+    WorldResourceLoader::FileData::FileData():
+    m_buffer(NULL),
+    m_fileSize(0),
+    m_fileName("")
+    {
+        
+    }
+//    WorldResourceLoader::FileData::FileData(const FileData &rhs):
+//    m_buffer(malloc(rhs.m_fileSize)),
+//    m_fileSize(rhs.m_fileSize),
+//    m_fileName(rhs.m_fileName)
+//    {
+//        memcpy(m_buffer, rhs.m_buffer, rhs.m_fileSize);
+//    }
+    
+//    WorldResourceLoader::FileData::FileData(const void* buffer, long size):
+//    m_buffer(malloc(size)),
+//    m_fileSize(size),
+//    m_fileName("")
+//    {
+//        memcpy(m_buffer, buffer, size);
+//    }
+    
+    WorldResourceLoader::FileData::FileData(const char *filePath):
+    m_buffer(NULL),
+    m_fileSize(0),
+    m_fileName("")
+    {
+        load(filePath);
+    }
+    
+    WorldResourceLoader::FileData::~FileData()
+    {
+        if(m_buffer)
+            free(m_buffer);
+        m_buffer = NULL;
+    }
+
+//    WorldResourceLoader::FileData &WorldResourceLoader::operator=(const WorldResourceLoader::FileData &rhs)
+//    {
+//        
+//    }
+//    WorldResourceLoader::FileData &WorldResourceLoader::operator=(const WorldResourceLoader::FileData &rhs)
+//    {
+//        
+//    }
+    
+    void* WorldResourceLoader::FileData::getBufferPtr()const
+    {
+        return m_buffer;
+    }
+    long WorldResourceLoader::FileData::getSize()const
+    {
+        return m_fileSize;
+    }
+    
+    void WorldResourceLoader::FileData::setFilename(const char *filename)
+    {
+        m_fileName = filename;
+    }
+    
+    const char *WorldResourceLoader::FileData::getFilename()const
+    {
+        return m_fileName.c_str();
+    }
+    
+    bool WorldResourceLoader::FileData::load(const char *filePath)
+    {
+        FILE *file = njli_fopen(ASSET_PATH(filePath), "rb");
+        
+        if(file)
+        {
+            fseek(file, 0, SEEK_END);
+            m_fileSize = ftell(file);
+            fseek(file, 0, SEEK_SET);
+            
+            if(m_buffer)
+                free(m_buffer);
+            m_buffer = malloc(m_fileSize);
+            DEBUG_ASSERT(m_buffer);
+            
+            fread(m_buffer, 1, m_fileSize, file);
+            
+            fclose(file);
+            
+            m_fileName = filePath;
+            
+            return true;
+        }
+        else
+        {
+            DEBUG_LOG_PRINT_W(TAG, "Unable to open the file: %s", filePath);
+        }
+        return false;
+    }
+    
+    
+    
+//    static u8 GetNumberOfComponents(const PVRTextureHeaderV3& sTextureHeader)
+//    {
+//        PVRTuint64 PixelFormat = sTextureHeader.u64PixelFormat;
+//        EPVRTVariableType ChannelType = (EPVRTVariableType)sTextureHeader.u32ChannelType;
+//        EPVRTColourSpace ColourSpace = (EPVRTColourSpace)sTextureHeader.u32ColourSpace;
+//        
+//        
+//        //Get the last 32 bits of the pixel format.
+//        PVRTuint64 PixelFormatPartHigh = PixelFormat&PVRTEX_PFHIGHMASK;
+//        
+//        //Check for a compressed format (The first 8 bytes will be 0, so the whole thing will be equal to the last 32 bits).
+//        if (PixelFormatPartHigh==0)
+//        {
+//            //Format and type == 0 for compressed textures.
+//            switch (PixelFormat)
+//            {
+//                case ePVRTPF_PVRTCI_2bpp_RGB:
+//                {
+//                    return 3;
+//                }
+//                case ePVRTPF_PVRTCI_2bpp_RGBA:
+//                {
+//                    return 4;
+//                }
+//                case ePVRTPF_PVRTCI_4bpp_RGB:
+//                {
+//                    return 3;
+//                }
+//                case ePVRTPF_PVRTCI_4bpp_RGBA:
+//                {
+//                    return 4;
+//                }
+//                default:
+//                    return 4;
+//            }
+//        }
+//        else
+//        {
+//            switch (ChannelType)
+//            {
+//                case ePVRTVarTypeFloat:
+//                {
+//                    switch (PixelFormat)
+//                    {
+//                            //HALF_FLOAT_OES
+//                        case PVRTGENPIXELID4('r','g','b','a',16,16,16,16):
+//                        {
+//                            return 4;
+//                        }
+//                        case PVRTGENPIXELID3('r','g','b',16,16,16):
+//                        {
+//                            return 3;
+//                        }
+//                        case PVRTGENPIXELID2('l','a',16,16):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID1('l',16):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID1('a',16):
+//                        {
+//                            return 1;
+//                        }
+//                            //FLOAT (OES)
+//                        case PVRTGENPIXELID4('r','g','b','a',32,32,32,32):
+//                        {
+//                            return 4;
+//                        }
+//                        case PVRTGENPIXELID3('r','g','b',32,32,32):
+//                        {
+//                            return 3;
+//                        }
+//                        case PVRTGENPIXELID2('l','a',32,32):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID1('l',32):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID1('a',32):
+//                        {
+//                            return 1;
+//                        }
+//                    }
+//                    break;
+//                }
+//                case ePVRTVarTypeUnsignedByteNorm:
+//                {
+//                    switch (PixelFormat)
+//                    {
+//                        case PVRTGENPIXELID4('r','g','b','a',8,8,8,8):
+//                        {
+//                            return 4;
+//                        }
+//                        case PVRTGENPIXELID3('r','g','b',8,8,8):
+//                        {
+//                            return 3;
+//                        }
+//                        case PVRTGENPIXELID2('l','a',8,8):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID1('l',8):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID1('a',8):
+//                        {
+//                            return 1;
+//                        }
+//                        case PVRTGENPIXELID4('b','g','r','a',8,8,8,8):
+//                        {
+//                            return 4;
+//                        }
+//                    }
+//                    break;
+//                }
+//                case ePVRTVarTypeUnsignedShortNorm:
+//                {
+//                    switch (PixelFormat)
+//                    {
+//                        case PVRTGENPIXELID4('r','g','b','a',4,4,4,4):
+//                        {
+//                            return 4;
+//                        }
+//                        case PVRTGENPIXELID4('r','g','b','a',5,5,5,1):
+//                        {
+//                            return 4;
+//                        }
+//                        case PVRTGENPIXELID3('r','g','b',5,6,5):
+//                        {
+//                            return 3;
+//                        }
+//                    }
+//                    break;
+//                }
+//                default:
+//                    return 4;
+//            }
+//        }
+//        return 4;
+//    }
+    
+    
+    
+    
+    
+    
+    
+//    WorldResourceLoader::ImageFileData::ImageFileData():
+//    WorldResourceLoader::FileData(),
+//    m_width(0),
+//    m_height(0),
+//    m_components(0),
+//    m_type(JLI_IMAGE_TYPE_NONE)
+//    {
+//        
+//    }
+//    WorldResourceLoader::ImageFileData::ImageFileData(const WorldResourceLoader::ImageFileData &rhs):
+//    WorldResourceLoader::FileData(rhs),
+//    m_width(rhs.m_width),
+//    m_height(rhs.m_height),
+//    m_components(rhs.m_components)
+//    {
+//        
+//    }
+    WorldResourceLoader::ImageFileData::ImageFileData(const char *filePath):
+    WorldResourceLoader::FileData(),
+    m_width(0),
+    m_height(0),
+    m_components(0),
+    m_type(JLI_IMAGE_TYPE_NONE)
+    {
+        std::string s(filePath);
+        std::reverse(s.begin(), s.end());
+        std::string extension = s.substr(0, s.find("."));
+        std::reverse(extension.begin(), extension.end());
+        std::transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
+        
+        if(extension == "jpeg")m_type = JLI_IMAGE_TYPE_JPEG;
+        if(extension == "png")m_type = JLI_IMAGE_TYPE_PNG;
+        if(extension == "bmp")m_type = JLI_IMAGE_TYPE_BMP;
+        if(extension == "gif")m_type = JLI_IMAGE_TYPE_GIF;
+        if(extension == "psd")m_type = JLI_IMAGE_TYPE_PSD;
+        if(extension == "pic")m_type = JLI_IMAGE_TYPE_PIC;
+        if(extension == "hdr")m_type = JLI_IMAGE_TYPE_HDR;
+        if(extension == "tga")m_type = JLI_IMAGE_TYPE_TGA;
+        if(extension == "pvr")m_type = JLI_IMAGE_TYPE_PVR;
+        
+        if ((extension == "jpeg") ||
+            (extension == "png") ||
+            (extension == "bmp") ||
+            (extension == "gif") ||
+            (extension == "psd") ||
+            (extension == "pic") ||
+            (extension == "hdr") ||
+            (extension == "tga"))
+        {
+            if(m_buffer)
+                free(m_buffer);
+            m_buffer = (void*)stbi_load(ASSET_PATH(filePath), &m_width, &m_height, &m_components, 0);
+            DEBUG_ASSERT(m_buffer);
+            
+            m_fileSize = (m_width * m_height * m_components);
+        }
+        else if(extension == "pvr")
+        {
+            if(FileData::load(filePath))
+            {
+                DEBUG_ASSERT_WRITE(true, "Need to implement the PVR loading...");
+//                PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)m_buffer;
+//                m_fileSize = PVRTGetTextureDataSize(*header);
+//                m_components = GetNumberOfComponents(*header);
+//                m_width = header->u32Width;
+//                m_height = header->u32Height;
+            }
+        }
+        
+        setFilename(filePath);
+        
+        DEBUG_ASSERT(m_buffer);
+    }
+    
+//    WorldResourceLoader::ImageFileData::~ImageFileData()
+//    {
+//        if(m_buffer)
+//            stbi_image_free(m_buffer);
+//        m_buffer = NULL;
+//    }
+    
+    s32 WorldResourceLoader::ImageFileData::getWidth()const
+    {
+        return m_width;
+    }
+    
+    s32 WorldResourceLoader::ImageFileData::getHeight()const
+    {
+        return m_height;
+    }
+    
+    s32 WorldResourceLoader::ImageFileData::numberOfComponents()const
+    {
+        return m_components;
+    }
+    
+    njliImageType WorldResourceLoader::ImageFileData::getType()const
+    {
+        return m_type;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     WorldResourceLoader::WorldResourceLoader()
     {
         
@@ -57,24 +415,23 @@ namespace njli
     
     
     
-    bool WorldResourceLoader::setPvrImage(const char *filePath, Image &img)
-    {
-        const void *content;
-        unsigned long file_size;
-        
-        if(njli::World::getInstance()->getWorldResourceLoader()->loadDataFromFile(filePath,
-                                                                               &content,
-                                                                               &file_size))
-        {
-            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
-//
-            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
-            
-            return true;
-        }
-        
-        return false;
-    }
+//    bool WorldResourceLoader::setPvrImage(const char *filePath, Image &img)
+//    {
+//        const void *content;
+//        unsigned long file_size;
+//        
+////        if(njli::World::getInstance()->getWorldResourceLoader()->loadDataFromFile(filePath,
+////                                                                               &content,
+////                                                                               &file_size))
+////        {
+////            PVRTextureHeaderV3 *header = (PVRTextureHeaderV3*)content;
+////            img.setPVRData((u8*)content, PVRTGetTextureDataSize(*header), filePath);
+////            
+////            return true;
+////        }
+//        
+//        return false;
+//    }
     
     s32 WorldResourceLoader::getType()const
     {
@@ -85,136 +442,187 @@ namespace njli
         return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
     }
     
+    long WorldResourceLoader::dataPtrSize(const char* filePath)const
+    {
+        if (filePath)
+        {
+            FileData *fileData = getFileData(filePath);
+            if(fileData)
+            {
+                return fileData->getSize();
+            }
+        }
+        return 0;
+    }
+    
+//    bool WorldResourceLoader::copyDataPtr(const char* filePath, u8 **dataPtr, long *size)const
+//    {
+//        bool retVal = false;
+//        
+//        DEBUG_ASSERT(*dataPtr);
+//        DEBUG_ASSERT(*size);
+//        
+//        if (filePath)
+//        {
+//            FileData *fileData = getFileData(filePath);
+//            if(fileData)
+//            {
+//                memcpy(*dataPtr, fileData->getBufferPtr(), fileData->getSize());
+//                retVal = true;
+//            }
+//        }
+//        return retVal;
+//    }
+    
 #define ROUND(val,places) (roundf(val * pow(10,places)) / (pow(10,places)))
 //    float rounded_down = floorf(val * 100) / 100;   /* Result: 37.77 */
 //    float nearest = roundf(val * 100) / 100;  /* Result: 37.78 */
 //    float rounded_up = ceilf(val * 100) / 100;      /* Result: 37.78 */
     
-    bool WorldResourceLoader::load(const char *filePath, Image &img)
+    bool WorldResourceLoader::load(const char* filePath, Image *image)
     {
-        char buffer[2048] = "";
-        sprintf(buffer, "%s", filePath);
+        DEBUG_ASSERT(image);
+        bool retVal = false;
         
-        char *s = strtok(buffer, "%");
-        char *end = strtok(NULL, "%");
-        if (end)
+        if (filePath)
         {
-            char buffer2[8];
-            strcpy(buffer2, end);
-            sprintf(buffer, "%s", s);
-            f32 aspect = ROUND(njli::World::getInstance()->getAspectRatio(), 1);
-            f32 ratio1 = ROUND(3.0f/2.0f, 1);
-            f32 ratio2 = ROUND(16.0f/9.0f, 1);
-            f32 ratio3 = ROUND(4.0f/3.0f, 1);
+            ImageFileData *fileData = loadImageFileData(filePath);
             
-            //8:5
-            //128 : 75
-            //5 : 3
-            
-            if(aspect == ratio1)
-            {
-                strcat(buffer, "_3_2_");
-            }
-            else if(aspect == ratio2)
-            {
-                strcat(buffer, "_16_9_");
-            }
-            else if(aspect == ratio3)
-            {
-                strcat(buffer, "_4_3_");
-            }
-            
-            strcat(buffer, buffer2);
-        }
-        
-        
-        
-//        Image *const*cachedImage = m_Images.find(btHashString(filePath));
-        
-//        if(!cachedImage)
-        {
-            s32 req_comp = 0;
-            s32 x, y, comp;
-            unsigned char *fileContent = stbi_load(ASSET_PATH(buffer), &x, &y, &comp, req_comp);
-            
-            u32 pixel_count = x * y;
-            bool hasAlpha = false;
-            if(comp == 4)
-            {
-                for (s32 i = 0, color = 0; i < pixel_count && !hasAlpha; ++i,color+=4)
-                {
-                    unsigned char alpha = fileContent[color + 3];
-                    if (alpha != 0xFF)
-                    {
-                        hasAlpha = true;
-                    }
-                }
-            }
-            img.m_hasAlpha = hasAlpha;
-            
+            void *fileContent = fileData->getBufferPtr();
             
             if(fileContent)
             {
-//                Image *img = Image::create();
+//                retVal = image->setData(fileData);
+                retVal = image->copyData(fileData);
                 
-//                if(img)
-                {
-                    img.setDataRawFromWorldResourceLoader(fileContent, x, y, comp, buffer);
-//                    img.flip();
-//                    m_Images.insert(btHashString(buffer), img);
-//                    image = *img;
-                    
-                    stbi_image_free(fileContent);
-                    
-                    return true;
-                }
+                removeFileData(filePath);
+                
+                retVal = true;
             }
             else
             {
-                if(!setPvrImage(filePath, img))
-                {
-                    DEBUG_LOG_PRINT_V(TAG, "Error (%s) : %s", stbi_failure_reason(), buffer);
-                    
-    //                Image *img = Image::create();
-                    
-    //                if(img)
-                    {
-    //                    img->setDataRawFromWorldResourceLoader(fileContent, x, y, comp, filePath);
-                        img.generate(256, 256, 4, btVector4(1.0, 0.0, 1.0, 1.0));
-    //                    m_Images.insert(btHashString(filePath), img);
-    //                    image = *img;
-                        
-                        stbi_image_free(fileContent);
-                        
-                        return true;
-                    }
-                }
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
             }
-            return false;
         }
         
-        return true;
+        return retVal;
     }
+    
+//    bool WorldResourceLoader::load(const char *filePath, Image &img)
+//    {
+//        char buffer[2048] = "";
+//        sprintf(buffer, "%s", filePath);
+//        
+//        char *s = strtok(buffer, "%");
+//        char *end = strtok(NULL, "%");
+//        if (end)
+//        {
+//            char buffer2[8];
+//            strcpy(buffer2, end);
+//            sprintf(buffer, "%s", s);
+//            f32 aspect = ROUND(njli::World::getInstance()->getAspectRatio(), 1);
+//            f32 ratio1 = ROUND(3.0f/2.0f, 1);
+//            f32 ratio2 = ROUND(16.0f/9.0f, 1);
+//            f32 ratio3 = ROUND(4.0f/3.0f, 1);
+//            
+//            //8:5
+//            //128 : 75
+//            //5 : 3
+//            
+//            if(aspect == ratio1)
+//            {
+//                strcat(buffer, "_3_2_");
+//            }
+//            else if(aspect == ratio2)
+//            {
+//                strcat(buffer, "_16_9_");
+//            }
+//            else if(aspect == ratio3)
+//            {
+//                strcat(buffer, "_4_3_");
+//            }
+//            
+//            strcat(buffer, buffer2);
+//        }
+//        
+//        {
+//            s32 req_comp = 0;
+//            s32 x, y, components;
+//            unsigned char *fileContent = stbi_load(ASSET_PATH(buffer), &x, &y, &components, 0);
+//            
+//            u32 pixel_count = x * y;
+//            bool hasAlpha = false;
+//            if(comp == 4)
+//            {
+//                for (s32 i = 0, color = 0; i < pixel_count && !hasAlpha; ++i,color+=4)
+//                {
+//                    unsigned char alpha = fileContent[color + 3];
+//                    if (alpha != 0xFF)
+//                    {
+//                        hasAlpha = true;
+//                    }
+//                }
+//            }
+//            img.m_hasAlpha = hasAlpha;
+//            
+//            `
+//            if(fileContent)
+//            {
+//                img.setDataRawFromWorldResourceLoader(fileContent, x, y, comp, buffer);
+//                stbi_image_free(fileContent);
+//                
+//                return true;
+//            }
+//            else
+//            {
+//                if(!setPvrImage(filePath, img))
+//                {
+//                    DEBUG_LOG_PRINT_V(TAG, "Error (%s) : %s", stbi_failure_reason(), buffer);
+//                    img.generate(256, 256, 4, btVector4(1.0, 0.0, 1.0, 1.0));
+//                    stbi_image_free(fileContent);
+//                    return true;
+//                }
+//            }
+//            return false;
+//        }
+//        
+//        return true;
+//    }
     
     bool WorldResourceLoader::load(const char *filePath, ParticleEmitter *object)
     {
         DEBUG_ASSERT(object);
+        bool retVal = false;
         
-        const void *buffer;
-        char *_fileContent;
-        unsigned long fileSize;
-        
-        loadDataFromFile(filePath, &buffer, &fileSize);
-        _fileContent = (char*)buffer;
-        
-        if (_fileContent)
+        if(filePath)
         {
-            _fileContent[fileSize] = '\0';
+            FileData *fileData = loadFileData(filePath);
             
-            object->parseFileData(_fileContent);
-            return true;
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if (fileContent)
+            {
+                if(object->parseFileData(fileContent))
+                {
+                    removeFileData(filePath);
+                    retVal = true;
+                }
+                else
+                {
+                    DEBUG_LOG_WRITE_W(TAG, "Unable to parse the ParticleEmitter file");
+                }
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "Particle file content is empty.");
+            }
         }
-        return false;
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *vertexFile,
@@ -222,131 +630,346 @@ namespace njli
                                    ShaderProgram *shader)
     {
         DEBUG_ASSERT(shader);
+        bool retVal = false;
         
-        const void *buffer;
-        char *fileContent;
-        unsigned long fileSize;
+        if(vertexFile &&
+           fragmentFile)
+        {
+            FileData *vertexFileData = loadFileData(vertexFile);
+            FileData *fragmentFileData = loadFileData(fragmentFile);
+            
+            char *vertexFileContent = (char*)vertexFileData->getBufferPtr();
+            long vertexFileSize = vertexFileData->getSize();
+            vertexFileContent[vertexFileSize] = '\0';
+            
+            char *fragmentFileContent = (char*)fragmentFileData->getBufferPtr();
+            long fragmentFileSize = fragmentFileData->getSize();
+            fragmentFileContent[fragmentFileSize] = '\0';
+            
+            
+            if(vertexFileContent != NULL &&
+               fragmentFileContent != NULL)
+            {
+                shader->saveSource((char*)vertexFileData->getBufferPtr(), (char*)fragmentFileData->getBufferPtr());
+                
+                removeFileData(vertexFile);
+                removeFileData(fragmentFile);
+                retVal = true;
+            }
+            else
+            {
+                if(!vertexFileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "Vertex file content is empty.");
+                if(!fragmentFileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "Fragment file content is empty.");
+            }
+        }
+        else
+        {
+            if(!vertexFile)
+                DEBUG_LOG_WRITE_W(TAG, "Vertex filename is empty.");
+            if(!fragmentFile)
+                DEBUG_LOG_WRITE_W(TAG, "Fragment filename is empty.");
+        }
         
-        loadDataFromFile(vertexFile, &buffer, &fileSize);
-        fileContent = (char*)buffer;
-        fileContent[fileSize] = '\0';
-        std::string vertexFileContent(fileContent);
-        
-        loadDataFromFile(fragmentFile, &buffer, &fileSize);
-        fileContent = (char*)buffer;
-        fileContent[fileSize] = '\0';
-        std::string fragmentFileContent(fileContent);
-        
-        shader->saveSource(vertexFileContent, fragmentFileContent);
-        
-//        if(vertexFileContent != "")
-//        {
-//            if(!shader->compile(vertexFileContent.c_str(), JLI_SHADER_TYPE_VERTEX))
-//            {
-//                DEBUG_LOG_PRINT_E(TAG, "Vertex log: %s", shader->vertexShaderLog());
-//                return false;
-//            }
-//        }
-//        else
-//        {
-//            DEBUG_LOG_PRINT_W(TAG, "Content from %s was empty", vertexFile);
-//            return false;
-//        }
-//        
-//        if(fragmentFileContent != "")
-//        {
-//            if(!shader->compile(fragmentFileContent.c_str(), JLI_SHADER_TYPE_FRAGMENT))
-//            {
-//                DEBUG_LOG_PRINT_E(TAG, "Fragment log: %s", shader->fragmentShaderLog());
-//                return false;
-//            }
-//        }
-//        else
-//        {
-//            DEBUG_LOG_PRINT_W(TAG, "Content from %s was empty", vertexFile);
-//            return false;
-//        }
-        
-        return true;
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Sound *object)
     {
         DEBUG_ASSERT(object);
+        bool retVal = false;
         
         if (filePath)
         {
-            const void *content;
-            unsigned long file_size;
-            loadDataFromFile(filePath, &content, &file_size);
+            FileData *fileData = loadFileData(filePath);
             
-            njli::World::getInstance()->getWorldSound()->createSound((const char*)content, file_size, *object);
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
             
-            return true;
+            if(fileContent)
+            {
+                if(njli::World::getInstance()->getWorldSound()->createSound(fileContent,
+                                                                            fileSize,
+                                                                            *object))
+                {
+                    removeFileData(filePath);
+                    retVal = true;
+                }
+                else
+                {
+                    DEBUG_LOG_WRITE_W(TAG, "Unable to create the Sound file");
+                }
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
         }
         
-        return false;
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Light *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Light object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Geometry *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Geometry object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Font *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Font object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Lua *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Lua object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Xml *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Xml object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, JsonJLI *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the JsonJLI object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Material *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Material object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Skinner *object)
     {
-        return false;
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                //!!!TODO: load the Skinner object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
     }
     
     bool WorldResourceLoader::load(const char *filePath, Camera *object)
     {
-        return false;
-    }
-    
-    bool WorldResourceLoader::load(const char *filePath, const void **content, unsigned long *file_size)
-    {
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
         if (filePath)
         {
+            FileData *fileData = loadFileData(filePath);
             
-            loadDataFromFile(filePath, content, file_size);
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
             
-            return true;
+            if(fileContent)
+            {
+                //!!!TODO: load the Camera object...
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
         }
         
-        content = NULL;
-        file_size = 0;
-        
-        return false;
+        return retVal;
     }
     
     bool WorldResourceLoader::loadZip(const char *filePath, const char *password)
@@ -383,7 +1006,8 @@ namespace njli
             {
                 if( unzOpenCurrentFilePassword( uf, password ) == UNZ_OK )
                 {
-                    void *buffer = malloc( fi.uncompressed_size + 1);
+                    void *_buffer = malloc( fi.uncompressed_size + 1);
+                    DEBUG_ASSERT(_buffer);
 //                    buffer[ fi.uncompressed_size ] = 0;
                     uLong _size = fi.uncompressed_size;
                     
@@ -391,7 +1015,7 @@ namespace njli
                     
                     do
                     {
-                        error = unzReadCurrentFile( uf, buffer, fi.uncompressed_size );
+                        error = unzReadCurrentFile( uf, _buffer, fi.uncompressed_size );
                         if ( error < 0 )
                         {
 //                            DEBUG_LOG_E(TAG, "error %d\n", error);
@@ -412,12 +1036,12 @@ namespace njli
                         if(0 == strcmp(RESOURCE_PATH[j], pch) && (strstr(name, "/.DS_Store") == NULL))
                         {
                             
-                            const void *p = buffer;
-                            bool exists = getFileData(name, &p, &_size);
+//                            void *p = NULL;
+//                            bool exists = getFileData(name, &p, &_size);
                             
-                            if(!exists)
+                            if(getFileData(name) != NULL)
                             {
-                                addFileData(name, p, _size);
+                                addFileData(name);
                                 DEBUG_LOG_V(TAG, "Added file: %s - size: %lu\n", name, _size);
                             }
                             else
@@ -428,7 +1052,8 @@ namespace njli
                         ++j;
                     }
                     
-                    free(buffer);
+                    free(_buffer);
+                    _buffer = NULL;
                 }
                 else
                 {
@@ -447,192 +1072,136 @@ namespace njli
         return true;
     }
     
+    bool WorldResourceLoader::load(const char *filePath, std::string *object)
+    {
+        DEBUG_ASSERT(object);
+        bool retVal = false;
+        
+        if (filePath)
+        {
+            FileData *fileData = loadFileData(filePath);
+            
+            char *fileContent = (char*)fileData->getBufferPtr();
+            long fileSize = fileData->getSize();
+            fileContent[fileSize] = '\0';
+            
+            if(fileContent)
+            {
+                *object = std::string(fileContent);
+                removeFileData(filePath);
+                retVal = true;
+            }
+            else
+            {
+                if(!fileContent)
+                    DEBUG_LOG_WRITE_W(TAG, "filename is empty for the sound.");
+            }
+        }
+        
+        return retVal;
+    }
+    
     bool WorldResourceLoader::unLoad(const char *filePath)
     {
         return removeFileData(filePath);
-//        const char*const * fileContent = m_Files.find(btHashString(filePath));
-//        
-//        if (fileContent && *fileContent)
-//        {
-//            m_Files.remove(btHashString(filePath));
-//            
-//            delete [] fileContent;
-//            
-//            return true;
-//        }
-        
-//        Image*const * cachedImage = m_Images.find(btHashString(filePath));
-        
-//        if (cachedImage && *cachedImage)
-//        {
-//            Image::destroy(*cachedImage);
-//            m_Images.remove(btHashString(filePath));
-//            
-//            return true;
-//        }
-        
-//        return false;
     }
     
     bool WorldResourceLoader::unLoadAll()
     {
-        for (s32 i = 0; i < m_FileData.size(); ++i)
+        for (FileDataMap::iterator i = m_FileDataMap.begin(); i != m_FileDataMap.end(); )
         {
-            FileData *const *cachedFileContent = m_FileData.getAtIndex(i);
+            FileData *fileData = i->second;
             
-            if(cachedFileContent)
-            {
-//                free((*cachedFileContent)->buffer);
-                delete cachedFileContent;cachedFileContent=NULL;
-            }
+            if (fileData)
+                delete fileData;
+            fileData = NULL;
+            
+            i = m_FileDataMap.erase(i);
         }
-        m_FileData.clear();
-        m_HashKeys.clear();
-        
-//        for (s32 i = 0; i < m_Images.size(); ++i)
-//        {
-//            Image*const * cachedImage = m_Images.getAtIndex(i);
-//            if(World::getInstance()->getWorldFactory()->has(*cachedImage))
-//                Image::destroy(*cachedImage);
-//        }
-//        m_Images.clear();
+        m_FileDataMap.clear();
         
         return true;
     }
     
-    void WorldResourceLoader::remove(const char *filePath)
+    WorldResourceLoader::ImageFileData *WorldResourceLoader::addImageFileData(const char* filePath)
     {
-//        Image *const*cachedImage = m_Images.find(btHashString(filePath));
-//        
-//        if (cachedImage && *cachedImage)
-//        {
-//            m_Images.remove(btHashString(filePath));
-//        }
+        ImageFileData *fileData = (ImageFileData*)getFileData(filePath);
+        if(NULL == fileData)
+        {
+            fileData = new ImageFileData(filePath);
+            
+            DEBUG_ASSERT(fileData);
+            
+            m_FileDataMap.insert(FileDataPair(filePath, fileData));
+        }
+        return fileData;
     }
     
-    const void *WorldResourceLoader::addFileData(const char *filePath, const void *buffer, unsigned long size)
+    WorldResourceLoader::FileData *WorldResourceLoader::addFileData(const char* filePath)
     {
-        if(!getFileData(filePath, &buffer, &size))
+        FileData *fileData = getFileData(filePath);
+        if(NULL == fileData)
         {
-            FileData *f = new FileData(buffer, size);
-//            f->buffer = buffer;
-//            f->fileSize = size;
+            fileData = new FileData(filePath);
             
-            std::string _filePath(filePath);
-            m_HashKeys.push_back(_filePath);
-            m_FileData.insert(btHashString(_filePath.c_str()), f);
+            DEBUG_ASSERT(fileData);
             
-            return f->getBuffer();
+            m_FileDataMap.insert(FileDataPair(filePath, fileData));
         }
-        return buffer;
+        return fileData;
     }
     
     bool WorldResourceLoader::removeFileData(const char *filePath)
     {
-        FileData * cachedFileContent = *m_FileData.find(btHashString(filePath));
-        if(cachedFileContent)
+        FileDataMap::iterator m = m_FileDataMap.find(filePath);
+        if(m != m_FileDataMap.end())
         {
-            m_FileData.remove(btHashString(filePath));
-
-            m_HashKeys.erase(std::find(m_HashKeys.begin(), m_HashKeys.end(), std::string(filePath)));
+            FileData *fileData = m->second;
             
-//            free(cachedFileContent->buffer);
-            delete cachedFileContent;cachedFileContent=NULL;
+            DEBUG_ASSERT(fileData);
+            
+            delete fileData;
+            fileData=NULL;
+            
+            m_FileDataMap.erase(m);
             return true;
         }
         return false;
     }
     
-    bool WorldResourceLoader::getFileData(const char *filePath, const void **buffer, unsigned long *size)const
+    WorldResourceLoader::FileData *WorldResourceLoader::getFileData(const char* filePath)const
     {
-        FileData *const* cachedFileContent = m_FileData.find(btHashString(filePath));
-        if (cachedFileContent)
+        FileDataMap::const_iterator m = m_FileDataMap.find(filePath);
+        if(m != m_FileDataMap.end())
         {
-//            *buffer = (*cachedFileContent)->buffer;
-//            *size = (*cachedFileContent)->fileSize;
-            *buffer = (*cachedFileContent)->getBuffer();
-            *size = (*cachedFileContent)->getSize();
+            FileData *cachedFileContent = m->second;
             
-            return true;
+            DEBUG_ASSERT(cachedFileContent);
+            
+            return cachedFileContent;
         }
-        return false;
+        return NULL;
     }
     
-//    std::string WorldResourceLoader::loadFromFile(const char *filePath, size_t &file_size)
-//    {
-//        char *const* cachedFileContent = m_Files.find(btHashString(filePath));
-//        char *fileContentReturned = NULL;
-//        std::string ret("");
-//        file_size = 0;
-//        
-//        if (!cachedFileContent)
-//        {
-//            char buffer[1024];
-//            sprintf(buffer, "%s", ASSET_PATH(filePath));
-//            FILE *stream = fopen(buffer, "rb");
-//            if(stream)
-//            {
-//                fseek(stream, 0, SEEK_END);
-//                file_size = ftell(stream);
-//                fseek(stream, 0, SEEK_SET);
-//                
-//                fileContentReturned = new char[file_size];
-//                
-//                fread(fileContentReturned, file_size, 1, stream);
-//                
-//                assert(ferror(stream) == 0);
-//                fclose(stream);
-//                
-//                fileContentReturned[file_size] = '\0';
-//                
-//                m_Files.insert(btHashString(filePath), fileContentReturned);
-//                
-//                ret = std::string(fileContentReturned);
-//                
-////                delete [] fileContentReturned;
-//            }
-//        }
-//        else
-//        {
-//            ret = std::string(*cachedFileContent);
-//        }
-//        
-//        return ret;
-//    }
-    
-    bool WorldResourceLoader::loadDataFromFile(const char *filePath, const void **buff, unsigned long *length)
+    WorldResourceLoader::FileData *WorldResourceLoader::loadFileData(const char* filePath)
     {
-        if(!getFileData(filePath, buff, length))
+        FileData *fileData = getFileData(filePath);
+        if(NULL == fileData)
         {
-            char buffer[2048];
-            sprintf(buffer, "%s", ASSET_PATH(filePath));
-//            FILE *file = fopen(buffer, "rb");
-            FILE *file = njli_fopen(buffer, "rb");
-            
-            if(file)
-            {
-                fseek(file, 0, SEEK_END);
-                long len = ftell(file);
-                fseek(file, 0, SEEK_SET);
-                
-                void *mem = malloc(len);
-                fread(mem, 1, len, file);
-                
-                fclose(file);
-                
-//                *buff = mem;
-                *length = len;
-                
-                *buff = addFileData(filePath, mem, len);
-                
-                free(mem);
-                
-                return true;
-            }
-            
-            DEBUG_LOG_PRINT_W(TAG, "Unable to open the file: %s", filePath);
-//            return false;
+            fileData = addFileData(filePath);
+            DEBUG_ASSERT(fileData);
         }
-        return false;
+        return fileData;
+    }
+    
+    WorldResourceLoader::ImageFileData *WorldResourceLoader::loadImageFileData(const char* filePath)
+    {
+        ImageFileData *fileData = (ImageFileData*)getFileData(filePath);
+        if(NULL == fileData)
+        {
+            fileData = addImageFileData(filePath);
+            DEBUG_ASSERT(fileData);
+        }
+        return fileData;
     }
 }

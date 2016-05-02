@@ -55,8 +55,8 @@ namespace njli
     m_AbstractFrameBufferObject(NULL),
     m_hasOpacity(false),
     m_njliLoadGPUType(JLI_LOAD_GPU_TYPE_NONE),
-    m_loadGPU_fbo(NULL),
-    m_loadGPU_images(Image::createArray(NUMBER_OF_IMAGES))
+    m_loadGPU_fbo(NULL)//,
+//    m_loadGPU_images(Image::createArray(NUMBER_OF_IMAGES))
     {
         memset(m_materialBound, 0, sizeof(bool) * 16);
         
@@ -65,12 +65,12 @@ namespace njli
         char buffer[1024];
         sprintf(buffer, "%s's Image", getName());
         
-        for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
-        {
-            Image *img = m_loadGPU_images[i];
-            img->setName(buffer);
-            addChild(img);
-        }
+//        for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
+//        {
+//            Image *img = m_loadGPU_images[i];
+//            img->setName(buffer);
+//            addChild(img);
+//        }
     }
     
     MaterialProperty::MaterialProperty(const AbstractBuilder &builder):
@@ -95,8 +95,8 @@ namespace njli
     m_AbstractFrameBufferObject(NULL),
     m_hasOpacity(false),
     m_njliLoadGPUType(JLI_LOAD_GPU_TYPE_NONE),
-    m_loadGPU_fbo(NULL),
-    m_loadGPU_images(Image::createArray(NUMBER_OF_IMAGES))
+    m_loadGPU_fbo(NULL)//,
+//    m_loadGPU_images(Image::createArray(NUMBER_OF_IMAGES))
     {
         memset(m_materialBound, 0, sizeof(bool) * 16);
         
@@ -105,12 +105,12 @@ namespace njli
         char buffer[1024];
         sprintf(buffer, "%s's Image", getName());
         
-        for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
-        {
-            Image *img = m_loadGPU_images[i];
-            img->setName(buffer);
-            addChild(img);
-        }
+//        for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
+//        {
+//            Image *img = m_loadGPU_images[i];
+//            img->setName(buffer);
+//            addChild(img);
+//        }
     }
     
     MaterialProperty::MaterialProperty(const MaterialProperty &copy):
@@ -135,8 +135,8 @@ namespace njli
     m_AbstractFrameBufferObject(NULL),
     m_hasOpacity(false),
     m_njliLoadGPUType(JLI_LOAD_GPU_TYPE_NONE),
-    m_loadGPU_fbo(NULL),
-    m_loadGPU_images(Image::createArray(NUMBER_OF_IMAGES))
+    m_loadGPU_fbo(NULL)//,
+//    m_loadGPU_images(Image::createArray(NUMBER_OF_IMAGES))
     {
         memcpy(m_materialBound, copy.m_materialBound, sizeof(bool) * 16);
         
@@ -145,12 +145,12 @@ namespace njli
         char buffer[1024];
         sprintf(buffer, "%s's Image", getName());
         
-        for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
-        {
-            Image *img = m_loadGPU_images[i];
-            img->setName(buffer);
-            addChild(img);
-        }
+//        for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
+//        {
+//            Image *img = m_loadGPU_images[i];
+//            img->setName(buffer);
+//            addChild(img);
+//        }
     }
     
     MaterialProperty::~MaterialProperty()
@@ -232,13 +232,13 @@ namespace njli
     {
         if(object)
         {
-            for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
-            {
-                Image *img = object->m_loadGPU_images[i];
-                object->removeChild(img);
-                Image::destroy(img);
-            }
-            Image::destroyArray(object->m_loadGPU_images);
+//            for (s32 i = 0; i < NUMBER_OF_IMAGES; ++i)
+//            {
+//                Image *img = object->m_loadGPU_images[i];
+//                object->removeChild(img);
+//                Image::destroy(img);
+//            }
+//            Image::destroyArray(object->m_loadGPU_images);
             
             World::getInstance()->getWorldFactory()->destroy(object);
         }
@@ -374,7 +374,8 @@ namespace njli
     {
         m_njliLoadGPUType = JLI_LOAD_GPU_TYPE_2D;
         loadGPU_Internal(img);
-        *m_loadGPU_images[0] = img;
+//        *m_loadGPU_images[0] = img;
+//        m_loadGPU_images[0] = njli::Image::copy(img);
     }
     
     void MaterialProperty::loadGPU(const Image &negativeX,
@@ -385,19 +386,19 @@ namespace njli
                           const Image &positiveZ)
     {
         m_njliLoadGPUType = JLI_LOAD_GPU_TYPE_CUBE;
-        *m_loadGPU_images[0] = negativeX;
-        *m_loadGPU_images[1] = negativeY;
-        *m_loadGPU_images[2] = negativeZ;
-        *m_loadGPU_images[3] = positiveX;
-        *m_loadGPU_images[4] = positiveY;
-        *m_loadGPU_images[5] = positiveZ;
+//        *m_loadGPU_images[0] = negativeX;
+//        *m_loadGPU_images[1] = negativeY;
+//        *m_loadGPU_images[2] = negativeZ;
+//        *m_loadGPU_images[3] = positiveX;
+//        *m_loadGPU_images[4] = positiveY;
+//        *m_loadGPU_images[5] = positiveZ;
         
-        loadGPU_Internal(*m_loadGPU_images[0],
-                         *m_loadGPU_images[1],
-                         *m_loadGPU_images[2],
-                         *m_loadGPU_images[3],
-                         *m_loadGPU_images[4],
-                         *m_loadGPU_images[5]);
+        loadGPU_Internal(negativeX,
+                         negativeY,
+                         negativeZ,
+                         positiveX,
+                         positiveY,
+                         positiveZ);
     }
     
     void MaterialProperty::loadGPU(AbstractFrameBufferObject *fbo)
@@ -597,7 +598,7 @@ namespace njli
         GLint border = 0;
         GLenum format = GL_RGBA;
         GLenum type = GL_UNSIGNED_BYTE;
-        const GLvoid* pixels = (const GLvoid*)img.getDataRaw();
+        const GLvoid* pixels = (const GLvoid*)img.getDataPtr();
         GLsizei imageSize = img.getWidth() * img.getHeight() * img.getNumberOfComponents();
         
         switch(m_NumberOfComponents)
@@ -656,7 +657,7 @@ namespace njli
         GLint border = 0;
         GLenum format = GL_RGBA;
         GLenum type = GL_UNSIGNED_BYTE;
-        const GLvoid* pixels = (const GLvoid*)img.getDataRaw();
+        const GLvoid* pixels = (const GLvoid*)img.getDataPtr();
         GLsizei imageSize = img.getWidth() * img.getHeight() * img.getNumberOfComponents();
         
         DEBUG_ASSERT(offset.x() + img.getWidth() < getWidth());
@@ -783,37 +784,37 @@ namespace njli
         }
     }
     
-    void MaterialProperty::render()
-    {
-        if (m_njliLoadGPUType != JLI_LOAD_GPU_TYPE_NONE)
-        {
-            switch (m_njliLoadGPUType)
-            {
-                case JLI_LOAD_GPU_TYPE_2D:
-                    loadGPU_Internal(*m_loadGPU_images[0]);
-                    break;
-                case JLI_LOAD_GPU_TYPE_2D_EMPTY:
-                    loadGPU_Internal();
-                    
-                    break;
-                case JLI_LOAD_GPU_TYPE_CUBE:
-                    loadGPU_Internal(*m_loadGPU_images[0],
-                                     *m_loadGPU_images[1],
-                                     *m_loadGPU_images[2],
-                                     *m_loadGPU_images[3],
-                                     *m_loadGPU_images[4],
-                                     *m_loadGPU_images[5]);
-                    break;
-                case JLI_LOAD_GPU_TYPE_FBO:
-                    loadGPU_Internal(m_loadGPU_fbo);
-                    break;
-                    
-                default:
-                    break;
-            }
-            m_njliLoadGPUType = JLI_LOAD_GPU_TYPE_NONE;
-        }
-    }
+//    void MaterialProperty::render()
+//    {
+//        if (m_njliLoadGPUType != JLI_LOAD_GPU_TYPE_NONE)
+//        {
+//            switch (m_njliLoadGPUType)
+//            {
+//                case JLI_LOAD_GPU_TYPE_2D:
+//                    loadGPU_Internal(*m_loadGPU_images[0]);
+//                    break;
+//                case JLI_LOAD_GPU_TYPE_2D_EMPTY:
+//                    loadGPU_Internal();
+//                    
+//                    break;
+//                case JLI_LOAD_GPU_TYPE_CUBE:
+//                    loadGPU_Internal(*m_loadGPU_images[0],
+//                                     *m_loadGPU_images[1],
+//                                     *m_loadGPU_images[2],
+//                                     *m_loadGPU_images[3],
+//                                     *m_loadGPU_images[4],
+//                                     *m_loadGPU_images[5]);
+//                    break;
+//                case JLI_LOAD_GPU_TYPE_FBO:
+//                    loadGPU_Internal(m_loadGPU_fbo);
+//                    break;
+//                    
+//                default:
+//                    break;
+//            }
+//            m_njliLoadGPUType = JLI_LOAD_GPU_TYPE_NONE;
+//        }
+//    }
     
 #if defined(DEBUG) || defined (_DEBUG)
     u64 MaterialProperty::s_MaxTextureUnits = 0;
@@ -909,22 +910,19 @@ namespace njli
         
         m_textureType = GL_TEXTURE_2D;
         
+        
         if (img.isPvr())
         {
             glActiveTexture(GL_TEXTURE0 + getTextureIndex());
             
             DEBUG_GL_ERROR_WRITE("glActiveTexture");
             
+            DEBUG_ASSERT_WRITE(true, "need to add the functionality to load pvr images");
             
-            if(PVRTTextureLoadFromPointer(img.getDataRaw(), &m_textureID) == PVR_SUCCESS)
-            {
-//                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-//                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-            }
-            else
-            {
-                DEBUG_LOG_WRITE_E(TAG, "ERROR: Failed to load texture.");
-            }
+//            if(PVRTTextureLoadFromPointer(img.getDataRaw(), &m_textureID) != PVR_SUCCESS)
+//            {
+//                DEBUG_LOG_WRITE_E(TAG, "ERROR: Failed to load texture.");
+//            }
             
         }
         else

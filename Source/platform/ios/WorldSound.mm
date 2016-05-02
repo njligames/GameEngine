@@ -444,7 +444,8 @@ namespace njli
         FMOD_RESULT   result        = FMOD_OK;
         unsigned int  version       = 0;
         
-        FMOD::Debug_Initialize(FMOD_DEBUG_LEVEL_NONE | FMOD_DEBUG_LEVEL_ERROR | FMOD_DEBUG_LEVEL_WARNING | FMOD_DEBUG_LEVEL_LOG, FMOD_DEBUG_MODE_CALLBACK, fmodErrorCallback);
+//        FMOD::Debug_Initialize(FMOD_DEBUG_LEVEL_NONE | FMOD_DEBUG_LEVEL_ERROR | FMOD_DEBUG_LEVEL_WARNING | FMOD_DEBUG_LEVEL_LOG, FMOD_DEBUG_MODE_CALLBACK, fmodErrorCallback);
+        FMOD::Debug_Initialize(FMOD_DEBUG_LEVEL_NONE);// | FMOD_DEBUG_LEVEL_ERROR | FMOD_DEBUG_LEVEL_WARNING | FMOD_DEBUG_LEVEL_LOG);
         
         result = FMOD::System_Create(&m_System);
         FMOD_ERRCHECK(result);
@@ -520,7 +521,10 @@ namespace njli
             FMOD_ERRCHECK(result);
 
             if(channel)
-                channel->getIndex(&sound.m_ChannelIndex);
+            {
+                result = channel->getIndex(&sound.m_ChannelIndex);
+                FMOD_ERRCHECK(result);
+            }
         }
         else
         {
@@ -528,7 +532,7 @@ namespace njli
         }
     }
     
-    void WorldSound::createSound(const char *fileContent, size_t file_size, Sound &sound)
+    bool WorldSound::createSound(const char *fileContent, size_t file_size, Sound &sound)
     {
         FMOD_CREATESOUNDEXINFO info;
         memset(&info, 0, sizeof(FMOD_CREATESOUNDEXINFO));
@@ -542,12 +546,14 @@ namespace njli
         
         
         FMOD::Sound * s = 0;
-        FMOD_MODE mode = FMOD_OPENMEMORY | FMOD_2D;// | FMOD_LOOP_OFF | FMOD_OPENRAW;
+        FMOD_MODE mode = FMOD_OPENMEMORY;// | FMOD_LOOP_OFF | FMOD_OPENRAW;
 //        FMOD_MODE mode = FMOD_DEFAULT | FMOD_LOOP_OFF;
         FMOD_RESULT result = m_System->createSound(fileContent, mode, &info, &s);
         FMOD_ERRCHECK(result);
         sound.m_Sound = s;
         sound.m_Mode = mode;
+        
+        return (result == FMOD_OK);
     }
     
     void WorldSound::enableSuspend(bool enable)

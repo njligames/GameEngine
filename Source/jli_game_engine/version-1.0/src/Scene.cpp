@@ -594,7 +594,16 @@ namespace njli
     {
         s32 idx = getChildIndex(m_PhysicsWorld);
         if(idx != -1)
-            return dynamic_cast<PhysicsWorld*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<PhysicsWorld*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<PhysicsWorld*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     
@@ -602,7 +611,17 @@ namespace njli
     {
         s32 idx = getChildIndex(m_PhysicsWorld);
         if(idx != -1)
-            return dynamic_cast<const PhysicsWorld*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<const PhysicsWorld*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<const PhysicsWorld*>(getChild(idx));
+        }
+//#endif
+        
+        
         return NULL;
     }
     

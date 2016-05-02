@@ -30,7 +30,7 @@ namespace njli {
 class Sound;
 
 class WorldSound : public AbstractObject {
-    friend class WorldResourceLoader;
+//    friend class WorldResourceLoader;
     friend class Sound;
     friend class World;
 
@@ -47,12 +47,13 @@ public:
 
     void enableSuspend(bool enable = true);
 
+    bool createSound(const char* fileContent, size_t file_size, Sound& sound);
 protected:
     void update();
 
     void playSound(Sound& sound, bool isPaused = false);
 
-    void createSound(const char* fileContent, size_t file_size, Sound& sound);
+    
 
 #ifdef USE_OPENAL
     // OpenAL context for playing sounds

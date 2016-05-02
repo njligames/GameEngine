@@ -59,7 +59,7 @@ bool NJLIGameEngine::create(const char* deviceName)
 
     initGL();
 
-    njli::World::createInstance();
+//    njli::World::createInstance();
 
     //    njli::World::getInstance()->getWorldResourceLoader()->loadZip("Archive.zip");
 
@@ -82,6 +82,7 @@ bool NJLIGameEngine::create(const char* deviceName)
 bool NJLIGameEngine::create(int x, int y, int width, int height,
     int orientation, const char* deviceName, bool initLua)
 {
+    njli::World::createInstance();
     if(initLua)
         njli::World::getInstance()->getWorldLuaVirtualMachine()->init();
     
@@ -199,5 +200,12 @@ void NJLIGameEngine::keyboardReturn(const char* text)
     sprintf(buffer, "%s", "KeyboardReturn");
 
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, text);
+}
+    
+void NJLIGameEngine::receivedMemoryWarning()
+{
+    njli::World::getInstance()->getWorldResourceLoader()->unLoadAll();
+    njli::World::getInstance()->getWorldFactory()->collectGarbage();
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute("ReceivedMemoryWarning");
 }
 }

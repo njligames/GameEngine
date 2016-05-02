@@ -15,7 +15,10 @@
 #include "btVector2.h"
 #include "btVector3.h"
 #include "lua.hpp"
-#include "PVRTTexture.h"
+#include "JLIFactoryTypes.h"
+#include "WorldResourceLoader.h"
+
+//#include "PVRTTexture.h"
 
 namespace njli {
 class ImageBuilder;
@@ -271,23 +274,29 @@ public:
          *  @return <#return value description#>
          */
     u8 getBytesPerPixel() const;
-
+    
+    
+    u8 *getDataPtr()const;
+    long getDataSize()const;
+    
     /**
          *  <#Description#>
          *
          *  @return <#return value description#>
          */
-    const u8* getDataRaw() const;
+//    const u8* getDataRaw() const;
     
     bool isPvr()const;
     bool isCompressed()const;
     
+    njliImageType getImageType()const;
+    
     /**
          *  <#Description#>
          *
          *  @return <#return value description#>
          */
-    u8* getDataRaw();
+//    u8* getDataRaw();
     /**
          *  <#Description#>
          *
@@ -300,7 +309,9 @@ public:
          *  @param 1.0f               <#1.0f description#>
          *  @param 0.0f               <#0.0f description#>
          */
-    void setDataRaw(u32 width, u32 height, u8 numberOfComponents, const u8* const, const btVector4& fillColor = btVector4(1.0f, 1.0f, 1.0f, 0.0f));
+//    void setDataRaw(u32 width, u32 height, u8 numberOfComponents, const u8* const, const btVector4& fillColor = btVector4(1.0f, 1.0f, 1.0f, 0.0f));
+//    void copy(const char *fileName);
+    
     /**
          *  <#Description#>
          *
@@ -318,7 +329,7 @@ public:
          *
          *  @return <#return value description#>
          */
-    u64 getDataRawLength() const;
+//    u64 getDataRawLength() const;
 
     /**
          *  <#Description#>
@@ -373,18 +384,21 @@ public:
          */
     void flip();
     
-    void setPVRData(u8 *pvrData, unsigned long dataSize, const char *fileName);
+//    void setPVRData(u8 *pvrData, unsigned long dataSize, const char *fileName);
 //    u8 *getCompressedData()const;
 
 protected:
+    bool copyData(void *dataPtr, long dataSize, s32 width, s32 height, s32 components, njliImageType imageType, const std::string &filename);
+    
+    bool copyData(const WorldResourceLoader::ImageFileData *fileData);
     u32 getClosestValidGLDim(const u32 dim) const;
-    void setDataRawFromWorldResourceLoader(u8*, u32 x, u32 y, u8 numberOfComponents, const char* filename);
-    bool isInWorldResourceLoader() const;
+//    void setDataRawFromWorldResourceLoader(u8*, u32 x, u32 y, u8 numberOfComponents, const char* filename);
+//    bool isInWorldResourceLoader() const;
 
     void setPixelRow(u8 * data, u32 row, u32 width, u32 xOffset = 0);
     void getPixelRow(u8 * data, u32 row, u32 width);
 
-    u8* createFillRow(s32 xOffset, s32 fillWidth, const btVector4& fillColor = btVector4(1.0f, 1.0f, 1.0f, 1.0f));
+    u8* createFillRow_createsmemory(s32 xOffset, s32 fillWidth, const btVector4& fillColor = btVector4(1.0f, 1.0f, 1.0f, 1.0f));
 
 private:
     // An output image with N components has the following components interleaved
@@ -398,15 +412,18 @@ private:
 
     u8* m_RawData;
 
+    long m_RawDataSize;
+    njliImageType m_njliImageType;
+    
     u32 m_Width;
     u32 m_Height;
     u8 m_Componenents;
-
-    bool m_IsInWorldResourceLoader;
+    
     std::string m_Filename;
-    bool m_hasAlpha;
-    bool m_isCompressed;
-    unsigned long m_pvrDataSize;
+//    bool m_hasAlpha;
+    
+//    bool m_IsInWorldResourceLoader;
+//    unsigned long m_pvrDataSize;
 };
 }
 
