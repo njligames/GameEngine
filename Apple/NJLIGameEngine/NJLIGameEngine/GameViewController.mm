@@ -149,6 +149,7 @@
     }
     
     // Dispose of any resources that can be recreated.
+    njli::NJLIGameEngine::receivedMemoryWarning();
     
 }
 

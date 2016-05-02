@@ -13,35 +13,12 @@
 #include "JLIFactoryTypes.h"
 #include "btHashMap.h"
 #include <vector>
+#include <map>
 
 class File;
 
 namespace njli {
-struct FileData {
-public:
-    FileData(const void* buffer, s32 size)
-    {
-        m_buffer = malloc(size);
-        m_fileSize = size;
-        memcpy(m_buffer, buffer, size);
-    }
-    ~FileData()
-    {
-        free(m_buffer);
-    }
-    const void* getBuffer()
-    {
-        return m_buffer;
-    }
-    s32 getSize()
-    {
-        return m_fileSize;
-    }
 
-private:
-    void* m_buffer;
-    s32 m_fileSize;
-};
 
 class Light;
 class Image;
@@ -61,6 +38,51 @@ class ParticleEmitter;
 /// <#Description#>
 class WorldResourceLoader : public AbstractObject {
 
+    struct FileData {
+    public:
+        FileData();
+//        FileData(const FileData &rhs);
+//        FileData(const void* buffer, long size);
+        FileData(const char *filePath);
+        
+        virtual ~FileData();
+        
+        void* getBufferPtr()const;
+        long getSize()const;
+        
+        void setFilename(const char *filename);
+        const char *getFilename()const;
+        
+    protected:
+        FileData &operator=(const FileData &rhs);
+        bool load(const char *filePath);
+        
+        void* m_buffer;
+        long m_fileSize;
+        std::string m_fileName;
+    };
+    
+    struct ImageFileData : public FileData{
+        
+        ImageFileData(const char *filePath);
+        
+//        virtual ~ImageFileData();
+        
+        s32 getWidth()const;
+        s32 getHeight()const;
+        s32 numberOfComponents()const;
+        njliImageType getType()const;
+    private:
+        ImageFileData();
+        ImageFileData(const ImageFileData &rhs);
+        ImageFileData &operator=(const ImageFileData &rhs);
+        
+        s32 m_width;
+        s32 m_height;
+        s32 m_components;
+        njliImageType m_type;
+    };
+    
     friend class Image;
 
 public:
@@ -113,6 +135,11 @@ public:
     virtual operator std::string() const;
     //TODO: fill in specific methods for WorldLuaVirtualMachine
 public:
+    long dataPtrSize(const char* filePath)const;
+//    bool copyDataPtr(const char* filePath, u8 **dataPtr, long *size)const;
+    
+    bool load(const char* filePath, Image *image);
+    
     /**
          *  @author James Folk, 16-02-11 18:02:43
          *
@@ -123,7 +150,7 @@ public:
          *
          *  @return <#return value description#>
          */
-    bool load(const char* filePath, Image& img);
+//    bool load(const char* filePath, Image& img);
 
     /**
          *  @author James Folk, 16-02-11 18:02:48
@@ -283,7 +310,7 @@ public:
          *
          *  @return <#return value description#>
          */
-    bool load(const char* filePath, const void** content, unsigned long* file_size);
+//    bool load(const char* filePath, void** content, unsigned long* file_size);
 
     /**
          *  @author James Folk, 16-02-11 21:02:52
@@ -296,6 +323,8 @@ public:
          *  @return <#return value description#>
          */
     bool loadZip(const char* filePath, const char* password = "");
+    
+    bool load(const char *filePath, std::string *content);
 
     /**
          *  @author James Folk, 16-02-11 18:02:51
@@ -328,27 +357,34 @@ public:
          *
          *  @return <#return value description#>
          */
-    bool loadDataFromFile(const char* filePath, const void** buff, unsigned long* length);
+//    bool loadDataFromFile(const char* filePath, void** buff, unsigned long* length);
+    
+    
 
 protected:
-    bool setPvrImage(const char *filePath, Image &img);
+    FileData *loadFileData(const char* filePath);
+    ImageFileData *loadImageFileData(const char* filePath);
+//    bool setPvrImage(const char *filePath, Image &img);
     bool isLoaded(const char* file);
     njliFileType getType(const char* file) const;
 
-    void remove(const char* file);
-
-    const void* addFileData(const char* filePath, const void* buffer, unsigned long size);
-    FileData* createFileData(const char* filePath, const void* buffer, s32 size);
+    FileData *addFileData(const char* filePath);
+    ImageFileData *addImageFileData(const char* filePath);
+    FileData *createFileData(const char* filePath, const void* buffer, s32 size);
 
     bool removeFileData(const char* filePath);
-    bool getFileData(const char* filePath, const void** buffer = NULL, unsigned long* size = NULL) const;
+    FileData *getFileData(const char* filePath)const;
+//    bool getFileData(const char* filePath, void** buffer = NULL, unsigned long* size = NULL) const;
 
 private:
     WorldResourceLoader(const WorldResourceLoader&);
     WorldResourceLoader& operator=(const WorldResourceLoader&);
 
-    std::vector<std::string> m_HashKeys;
-    btHashMap<btHashString, FileData*> m_FileData;
+    typedef std::map<std::string, FileData*> FileDataMap;
+    typedef std::pair<std::string, FileData*> FileDataPair;
+    
+    FileDataMap m_FileDataMap;
+    
 };
 }
 

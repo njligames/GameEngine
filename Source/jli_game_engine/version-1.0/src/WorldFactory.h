@@ -475,7 +475,7 @@ protected:
          *  @return returns true if the instance shoudl be added to the ObjecdtArrayList;
          */
     bool addReference_Internal(AbstractFactoryObject*);
-
+public:
     void collectGarbage();
     s64 collectGarbageSize() const;
     void collectGarbage_GPU();

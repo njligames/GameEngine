@@ -422,7 +422,7 @@ protected:
     void bind(ShaderProgram * shader);
     void unBind() ;
 
-    void render();
+//    void render();
 
 private:
     MaterialProperty* m_Diffuse; //

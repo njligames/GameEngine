@@ -15,7 +15,20 @@
 namespace njli
 {
     
-    
+    enum njliImageType
+    {
+        JLI_IMAGE_TYPE_NONE,
+        JLI_IMAGE_TYPE_JPEG,
+        JLI_IMAGE_TYPE_PNG,
+        JLI_IMAGE_TYPE_BMP,
+        JLI_IMAGE_TYPE_GIF,
+        JLI_IMAGE_TYPE_PSD,
+        JLI_IMAGE_TYPE_PIC,
+        JLI_IMAGE_TYPE_HDR,
+        JLI_IMAGE_TYPE_TGA,
+        JLI_IMAGE_TYPE_PVR,
+        JLI_IMAGE_TYPE_MAX
+    };
     
     enum njliActionTimingMode
     {

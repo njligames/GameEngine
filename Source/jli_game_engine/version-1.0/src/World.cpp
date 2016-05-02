@@ -39,6 +39,7 @@ namespace njli
             s_Instance = new World();
         }
         MaterialProperty::initReferences();
+        
     }
     
     void World::destroyInstance()
@@ -49,6 +50,7 @@ namespace njli
     
     World * World::getInstance()
     {
+        DEBUG_ASSERT(s_Instance);
         if(NULL == s_Instance)
         {
             s_Instance = new World();
@@ -102,12 +104,12 @@ namespace njli
         addChild(m_WorldFactory);
         //addChild(m_WorldFacebook);
         
-        getWorldSQLite()->createBuffer();
+//        getWorldSQLite()->createBuffer();
     }
     
     World::~World()
     {
-        getWorldSQLite()->deleteBuffer();
+//        getWorldSQLite()->deleteBuffer();
         
         delete m_BackgroundColor;m_BackgroundColor=NULL;
         //delete m_WorldFacebook;m_WorldFacebook=NULL;
@@ -183,7 +185,15 @@ namespace njli
     {
         s32 idx = getChildIndex(m_WorldLuaVirtualMachine);
         if(idx != -1)
-            return dynamic_cast<WorldLuaVirtualMachine*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<WorldLuaVirtualMachine*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<WorldLuaVirtualMachine*>(getChild(idx));
+        }
+//#endif
         return NULL;
     }
     
@@ -191,7 +201,16 @@ namespace njli
     {
         s32 idx = getChildIndex(m_WorldLuaVirtualMachine);
         if(idx != -1)
-            return dynamic_cast<const WorldLuaVirtualMachine*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<const WorldLuaVirtualMachine*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<const WorldLuaVirtualMachine*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     
@@ -557,7 +576,16 @@ namespace njli
     {
         s32 idx = getChildIndex(m_Scene);
         if(idx != -1)
-            return dynamic_cast<Scene*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<Scene*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<Scene*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     
@@ -565,7 +593,16 @@ namespace njli
     {
         s32 idx = getChildIndex(m_Scene);
         if(idx != -1)
-            return dynamic_cast<const Scene*>(getChild(idx));
+//#if defined(DEBUG) || defined(_DEBUG)
+//        {
+//            return dynamic_cast<const Scene*>(getChild(idx));
+//        }
+//#else
+        {
+            return reinterpret_cast<const Scene*>(getChild(idx));
+        }
+//#endif
+        
         return NULL;
     }
     

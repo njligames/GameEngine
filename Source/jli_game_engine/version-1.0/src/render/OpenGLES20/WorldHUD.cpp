@@ -486,14 +486,14 @@ namespace njli
 
     s32 WorldHUD::createImageRGBA(const Image &image, njliHUDImageFlags imageFlags)
     {
-        s32 img = nvgCreateImageRGBA(m_NVGContext, image.getWidth(), image.getHeight(), imageFlags, image.getDataRaw());
+        s32 img = nvgCreateImageRGBA(m_NVGContext, image.getWidth(), image.getHeight(), imageFlags, image.getDataPtr());
         m_images.push_back(img);
         return img;
     }
 
     void WorldHUD::updateImage(s32 imageHandle, const Image &image)
     {
-        nvgUpdateImage(m_NVGContext, imageHandle, image.getDataRaw());
+        nvgUpdateImage(m_NVGContext, imageHandle, image.getDataPtr());
     }
 
     void WorldHUD::imageSize(s32 imageHandle, s32 &w, s32 &h)

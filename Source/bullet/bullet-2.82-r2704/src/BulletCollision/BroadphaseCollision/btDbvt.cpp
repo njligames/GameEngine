@@ -137,7 +137,7 @@ static void						insertleaf(	btDbvt* pdbvt,
 	}
 	else
 	{
-		if(!root->isleaf())
+		if(root && !root->isleaf())
 		{
 			do	{
 				root=root->childs[Select(	leaf->volume,

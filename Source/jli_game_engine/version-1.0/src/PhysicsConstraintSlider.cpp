@@ -219,7 +219,7 @@ namespace njli
         
         if (rigidBodyA && !rigidBodyB)
         {
-            m_btSliderConstraint = new btSliderConstraint(*rigidBodyB, frameInB, useLinearReferenceFrameA);
+            m_btSliderConstraint = new btSliderConstraint(*rigidBodyA, frameInB, useLinearReferenceFrameA);
         }
         else if (rigidBodyA && rigidBodyB)
         {

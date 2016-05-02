@@ -1467,7 +1467,7 @@ namespace njli
         modMatrix.setRotation(getParent()->getOrientation());
         modMatrix.getOpenGLMatrix(m_ModelMatrix);
         
-        f32 wx0, wy0, wz0;
+        f32 wx0, wy0, wz0;wx0=wy0=wz0=0;
         getProjection().getOpenGLMatrix(m_ProjectionMatrix);
         
         gluProject(objectPosition.x(),

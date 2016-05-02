@@ -63,6 +63,7 @@ void printGLInfo()
     DEBUG_LOG_V(TAG, "%s\n", "GL_EXTENSIONS");
     const char *the_extensions = (const char *) glGetString(GL_EXTENSIONS);
     char *extensions = new char[strlen(the_extensions)+1];
+    DEBUG_ASSERT(extensions);
     strcpy(extensions, the_extensions);
     char *extension = strtok(extensions, " ");
     DEBUG_LOG_V(TAG, "\t%s", extension);
@@ -70,6 +71,8 @@ void printGLInfo()
     {
         DEBUG_LOG_V(TAG, "\t%s\n", extension);
     }
+    delete [] extensions;
+    extensions = NULL;
     //    DEBUG_LOG_PRINT_V(TAG, "%s = %s", "GL_EXTENSIONS", (const char *) glGetString(GL_EXTENSIONS));
     DEBUG_LOG_V(TAG, "%s = %s\n", "GL_SHADING_LANGUAGE_VERSION", (const char *) glGetString(GL_SHADING_LANGUAGE_VERSION));
     

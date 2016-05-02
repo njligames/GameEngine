@@ -285,12 +285,22 @@ namespace njli
         
         if(m_Sprite2D)
         {
-            m_Sprite2D[index].bl.hidden = (hidden)?1.0f:0.0f;
-            m_Sprite2D[index].br.hidden = (hidden)?1.0f:0.0f;
-            m_Sprite2D[index].tl.hidden = (hidden)?1.0f:0.0f;
-            m_Sprite2D[index].tr.hidden = (hidden)?1.0f:0.0f;
+            float h = (hidden)?1.0f:0.0f;
+            if(m_Sprite2D[index].bl.hidden != (h) ||
+            m_Sprite2D[index].br.hidden != (h) ||
+            m_Sprite2D[index].tl.hidden != (h) ||
+            m_Sprite2D[index].tr.hidden != (h))
+            {
+                m_Sprite2D[index].bl.hidden = (hidden)?1.0f:0.0f;
+                m_Sprite2D[index].br.hidden = (hidden)?1.0f:0.0f;
+                m_Sprite2D[index].tl.hidden = (hidden)?1.0f:0.0f;
+                m_Sprite2D[index].tr.hidden = (hidden)?1.0f:0.0f;
+                
+                enableBufferModified();
+            }
             
-            enableBufferModified();
+            
+            
         }
     }
     
@@ -658,12 +668,39 @@ namespace njli
     {
         DEBUG_ASSERT(spriteIndex < getMaxMeshes());
         
-        m_Sprite2D[spriteIndex].bl.vertex = bottomLeft;
-        m_Sprite2D[spriteIndex].br.vertex = bottomRight;
-        m_Sprite2D[spriteIndex].tl.vertex = topLeft;
-        m_Sprite2D[spriteIndex].tr.vertex = topRight;
+        if(m_Sprite2D[spriteIndex].bl.vertex.x() != bottomLeft.x() &&
+           m_Sprite2D[spriteIndex].bl.vertex.y() != bottomLeft.y())
+        {
+            m_Sprite2D[spriteIndex].bl.vertex = bottomLeft;
+            enableBufferModified();
+        }
         
-        enableBufferModified();
+        if(m_Sprite2D[spriteIndex].br.vertex.x() != bottomRight.x() &&
+           m_Sprite2D[spriteIndex].br.vertex.y() != bottomRight.y())
+        {
+            m_Sprite2D[spriteIndex].br.vertex = bottomRight;
+            enableBufferModified();
+        }
+        
+        if(m_Sprite2D[spriteIndex].tl.vertex.x() != topLeft.x() &&
+           m_Sprite2D[spriteIndex].tl.vertex.y() != topLeft.y())
+        {
+            m_Sprite2D[spriteIndex].tl.vertex = topLeft;
+            enableBufferModified();
+        }
+        
+        if(m_Sprite2D[spriteIndex].tr.vertex.x() != topRight.x() &&
+           m_Sprite2D[spriteIndex].tr.vertex.y() != topRight.y())
+        {
+            m_Sprite2D[spriteIndex].tr.vertex = topRight;
+            enableBufferModified();
+        }
+        
+//        m_Sprite2D[spriteIndex].br.vertex = bottomRight;
+//        m_Sprite2D[spriteIndex].tl.vertex = topLeft;
+//        m_Sprite2D[spriteIndex].tr.vertex = topRight;
+        
+        
         
 //        Node *node = getParent();
 //        if(node)

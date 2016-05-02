@@ -299,14 +299,26 @@ void AbstractStateMachine<OWNER_TYPE>::clear(bool callExit)
 template <class OWNER_TYPE>
 AbstractFactoryObject* AbstractStateMachine<OWNER_TYPE>::getOwner()
 {
-    return dynamic_cast<AbstractFactoryObject*>(getParent());
+//#if defined(DEBUG) || defined(_DEBUG)
+//    return dynamic_cast<AbstractFactoryObject*>(getParent());
+//#else
+    return reinterpret_cast<AbstractFactoryObject*>(getParent());
+//#endif
+    
+    
     //        return m_pOwner;
 }
 
 template <class OWNER_TYPE>
 const AbstractFactoryObject* AbstractStateMachine<OWNER_TYPE>::getOwner() const
 {
-    return dynamic_cast<const AbstractFactoryObject*>(getParent());
+//#if defined(DEBUG) || defined(_DEBUG)
+//    return dynamic_cast<const AbstractFactoryObject*>(getParent());
+//#else
+    return reinterpret_cast<const AbstractFactoryObject*>(getParent());
+//#endif
+    
+    
     //        return m_pOwner;
 }
 

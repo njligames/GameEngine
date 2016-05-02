@@ -336,7 +336,7 @@ protected:
     
     virtual void loadProperties() const;
 
-    void render();
+//    void render();
 
 private:
     bool m_diffuseBound;
@@ -382,7 +382,7 @@ private:
 
     njliLoadGPUType m_njliLoadGPUType;
     AbstractFrameBufferObject* m_loadGPU_fbo;
-    Image** m_loadGPU_images;
+//    Image** m_loadGPU_images;
 
     void loadGPU_Internal();
     void loadGPU_Internal(const Image& img);

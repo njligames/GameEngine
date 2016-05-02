@@ -36,6 +36,8 @@ public:
     static void keyboardShow();
     static void keyboardCancel();
     static void keyboardReturn(const char* text);
+    
+    static void receivedMemoryWarning();
 
     enum PlatformID {
         PlatformID_iOS = 0,

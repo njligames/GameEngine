@@ -876,7 +876,6 @@
 		C18B84601C9B90BF003628FE /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B802F1C9B8E21003628FE /* zlib.h */; };
 		C18B84611C9B90BF003628FE /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B80301C9B8E21003628FE /* zutil.c */; };
 		C18B84621C9B90BF003628FE /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B80311C9B8E21003628FE /* zutil.h */; };
-		C1A821061CC0261E009E562B /* libOGLES2Tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A821051CC025D4009E562B /* libOGLES2Tools.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -886,13 +885,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C18B7A951C9B88C1003628FE;
 			remoteInfo = NJLIGameEngine_iOS;
-		};
-		C1A821041CC025D4009E562B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8748A3A0FF221480052D400;
-			remoteInfo = OGLES2Tools;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1768,7 +1760,6 @@
 		C18B84A91C9B9A54003628FE /* libfmod_iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmod_iphonesimulator.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmod_iphonesimulator.a"; sourceTree = "<group>"; };
 		C18B84AA1C9B9A54003628FE /* libfmodL_iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphoneos.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmodL_iphoneos.a"; sourceTree = "<group>"; };
 		C18B84AB1C9B9A54003628FE /* libfmodL_iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphonesimulator.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmodL_iphonesimulator.a"; sourceTree = "<group>"; };
-		C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OGLES2Tools.xcodeproj; path = ../../Source/PVR/SDK_3.4/Tools/OGLES2/Build/iOS/OGLES2Tools.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1776,7 +1767,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1A821061CC0261E009E562B /* libOGLES2Tools.a in Frameworks */,
 				C18B7AA51C9B8924003628FE /* OpenGLES.framework in Frameworks */,
 				C18B7AA31C9B8920003628FE /* GLKit.framework in Frameworks */,
 			);
@@ -1818,7 +1808,6 @@
 		C18B7AA61C9B8927003628FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */,
 				C18B84A81C9B9A54003628FE /* libfmod_iphoneos.a */,
 				C18B84A91C9B9A54003628FE /* libfmod_iphonesimulator.a */,
 				C18B84AA1C9B9A54003628FE /* libfmodL_iphoneos.a */,
@@ -3015,14 +3004,6 @@
 			path = ../../../Source/zlib/zlib_SIO2;
 			sourceTree = "<group>";
 		};
-		C1A821011CC025D4009E562B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C1A821051CC025D4009E562B /* libOGLES2Tools.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -3567,12 +3548,6 @@
 			mainGroup = C18B7A8D1C9B88C1003628FE;
 			productRefGroup = C18B7A971C9B88C1003628FE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C1A821011CC025D4009E562B /* Products */;
-					ProjectRef = C1A821001CC025D4009E562B /* OGLES2Tools.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C18B7A951C9B88C1003628FE /* NJLIGameEngine_iOS */,
@@ -3580,16 +3555,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C1A821051CC025D4009E562B /* libOGLES2Tools.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOGLES2Tools.a;
-			remoteRef = C1A821041CC025D4009E562B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		C18B9A8F1C9CEA9A003628FE /* Build Framework */ = {
@@ -3618,7 +3583,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\n#ditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\n\n# Copy the framework to NJLIGameEngine directory.\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/NJLI/${RW_FRAMEWORK_NAME}.framework\"\n";
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\n#ditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\n\n# Copy the framework to NJLIGameEngine directory.\nrm -rf \"${HOME}/NJLI/${RW_FRAMEWORK_NAME}.framework\"\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/NJLI/${RW_FRAMEWORK_NAME}.framework\"\nDATE=$(date \"+%Y.%m.%d-%H.%M.%S\")\nzip -r \"${HOME}/NJLI/NJLIGameEngine_iOS.framework.${DATE}.zip\" \"${HOME}/NJLI/${RW_FRAMEWORK_NAME}.framework\"/\n\n#/usr/bin/ftp -d njligames.com << ftpEOF\n#    prompt\n#    cd public_ftp/Framework/iOS\n#    put \"${HOME}/NJLI/NJLIGameEngine_iOS.framework.${DATE}.zip\"\n#    quit\n#ftpEOF";
 		};
 /* End PBXShellScriptBuildPhase section */
 
