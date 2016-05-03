@@ -19,6 +19,7 @@
 #include <string>
 
 #include "btTransform.h"
+#include "PhysicsBody.h"
 
 class btQuaternion;
 class btTransform;
@@ -31,7 +32,7 @@ class NodeStateMachine;
 class Camera;
 class Light;
 class Geometry;
-class PhysicsBody;
+//class PhysicsBody;
 class PhysicsField;
 class PhysicsWorld;
 class Scene;
@@ -281,7 +282,33 @@ public:
          *  @section ex1 Lua example
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
-    virtual btTransform getWorldTransform() const;
+    inline btTransform getWorldTransform() const
+    {
+        const PhysicsBody *physicsBody = getPhysicsBody();
+        
+        if(physicsBody)
+        {
+            btTransform transform(physicsBody->getWorldTransform());
+            
+            transform.setBasis(transform.getBasis().scaled(getScale()));
+            
+            if(getParentNode())
+            {
+                return (transform * getParentNode()->getWorldTransform());
+            }
+            return (transform);
+        }
+        
+        btTransform transform(getTransform());
+        
+        transform.setBasis(transform.getBasis().scaled(getScale()));
+        
+        if(getParentNode())
+        {
+            return (transform * getParentNode()->getWorldTransform());
+        }
+        return (transform);
+    }
     
     
     const btTransform& getColorTransform() const;

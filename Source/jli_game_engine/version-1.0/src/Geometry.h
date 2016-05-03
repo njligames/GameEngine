@@ -346,6 +346,7 @@ public:
          */
     virtual void applyShape(Node * node, PhysicsShape * physicsShape) = 0;
 
+    virtual bool shouldApplyShape(Node *node)const = 0;
     /**
          *  <#Description#>
          *

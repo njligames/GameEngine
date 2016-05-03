@@ -268,6 +268,7 @@ namespace njli
         //TODO: fill in specific methods for Cube
         
     protected:
+        virtual bool shouldApplyShape(Node *node)const{DEBUG_ASSERT(true); return true;}
         void swapVertexData(const size_t idx1, const size_t idx2);
         
         ATTRIBUTE_ALIGNED16(struct) CubeVerts

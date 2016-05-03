@@ -47,10 +47,13 @@ namespace njli
     m_SpritePivots(NULL)
     {
         m_SpritePivots = new btVector2[getMaxMeshes()];
+        m_changedDimensionArray = new bool[getMaxMeshes()];
         for(int i=0; i<getMaxMeshes(); i++)
         {
             m_SpritePivots[i] = DEFAULTPIVOT;
+            m_changedDimensionArray[i] = true;
         }
+        
         
         load();
     }
@@ -62,9 +65,11 @@ namespace njli
     m_SpritePivots(NULL)
     {
         m_SpritePivots = new btVector2[getMaxMeshes()];
+        m_changedDimensionArray = new bool[getMaxMeshes()];
         for(int i=0; i<getMaxMeshes(); i++)
         {
             m_SpritePivots[i] = DEFAULTPIVOT;
+            m_changedDimensionArray[i] = true;
         }
         
         load();
@@ -77,9 +82,11 @@ namespace njli
     m_SpritePivots(NULL)
     {
         m_SpritePivots = new btVector2[getMaxMeshes()];
+        m_changedDimensionArray = new bool[getMaxMeshes()];
         for(int i=0; i<getMaxMeshes(); i++)
         {
             m_SpritePivots[i] = DEFAULTPIVOT;
+            m_changedDimensionArray[i] = true;
         }
         
         load();
@@ -87,6 +94,10 @@ namespace njli
     
     Sprite2D::~Sprite2D()
     {
+        if(m_changedDimensionArray)
+            delete [] m_changedDimensionArray;
+        m_changedDimensionArray = NULL;
+        
         if(m_SpritePivots)
             delete [] m_SpritePivots;
         m_SpritePivots=NULL;
@@ -374,16 +385,19 @@ namespace njli
 //        if(NULL != (shape2d  = dynamic_cast<PhysicsShapeBox2D*>(physicsShape)))
         if(strcmp(physicsShape->getClassName(), "PhysicsShapeBox2D") == 0)
         {
-            PhysicsShapeBox2D *shape2d  = dynamic_cast<PhysicsShapeBox2D*>(physicsShape);
+            PhysicsShapeBox2D *shape2d  = reinterpret_cast<PhysicsShapeBox2D*>(physicsShape);
             shape2d->setHalfExtends(halfExtends);
         }
 //        else if(NULL != (shape3d  = dynamic_cast<PhysicsShapeBox*>(physicsShape)))
         else if(strcmp(physicsShape->getClassName(), "PhysicsShapeBox") == 0)
         {
-            PhysicsShapeBox *shape3d  = dynamic_cast<PhysicsShapeBox*>(physicsShape);
+            PhysicsShapeBox *shape3d  = reinterpret_cast<PhysicsShapeBox*>(physicsShape);
             btVector3 halfExtends3d(halfExtends.x(), halfExtends.y(), 1.0f);
             shape3d->setHalfExtends(halfExtends3d);
         }
+        
+        s64 spriteIndex = node->getGeometryIndex();
+        m_changedDimensionArray[spriteIndex] = false;
     }
     
     void Sprite2D::setSpriteAtlasFrame(Node *node,
@@ -454,7 +468,18 @@ namespace njli
             
             setVertexPositions(spriteIndex, bottomLeft, bottomRight, topLeft, topRight);
             m_SpritePivots[spriteIndex] = spritePivotPoint;
+            m_changedDimensionArray[spriteIndex] = true;
         }
+    }
+    
+    bool Sprite2D::shouldApplyShape(Node *node)const
+    {
+        s64 spriteIndex = node->getGeometryIndex();
+        if(spriteIndex >= 0)
+        {
+            return m_changedDimensionArray[spriteIndex];
+        }
+        return false;
     }
     
     btVector2 Sprite2D::getDimensions(Node *node)const

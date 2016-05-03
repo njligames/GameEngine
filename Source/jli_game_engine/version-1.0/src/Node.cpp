@@ -311,23 +311,33 @@ namespace njli
         return JLI_OBJECT_TYPE_Node;
     }
     
-    btTransform Node::getWorldTransform()const
-    {
-        const PhysicsBody *physicsBody = getPhysicsBody();
-        
-        btTransform parentTransform = btTransform::getIdentity();
-        btTransform transform = getTransform();
-        
-        if(physicsBody)
-            transform = physicsBody->getWorldTransform();
-        
-        if(getParentNode())
-            parentTransform = getParentNode()->getWorldTransform();
-        
-        transform.setBasis(transform.getBasis().scaled(getScale()));
-        
-        return (transform * parentTransform);
-    }
+//    btTransform Node::getWorldTransform()const
+//    {
+//        const PhysicsBody *physicsBody = getPhysicsBody();
+//        
+//        if(physicsBody)
+//        {
+//            btTransform transform(physicsBody->getWorldTransform());
+//            
+//            transform.setBasis(transform.getBasis().scaled(getScale()));
+//            
+//            if(getParentNode())
+//            {
+//                return (transform * getParentNode()->getWorldTransform());
+//            }
+//            return (transform);
+//        }
+//        
+//        btTransform transform(getTransform());
+//        
+//        transform.setBasis(transform.getBasis().scaled(getScale()));
+//        
+//        if(getParentNode())
+//        {
+//            return (transform * getParentNode()->getWorldTransform());
+//        }
+//        return (transform);
+//    }
     
     const btTransform& Node::getColorTransform() const
     {
@@ -736,7 +746,8 @@ namespace njli
         {
             s32 idx = getChildIndex(m_Geometry);
             if(idx != -1)
-                return dynamic_cast<Geometry*>(getChild(idx));
+                return reinterpret_cast<Geometry*>(getChild(idx));
+//                return dynamic_cast<Geometry*>(getChild(idx));
         }
         return NULL;
     }

@@ -260,6 +260,7 @@ namespace njli
     public:
         //TODO: fill in specific methods for Plane
     protected:
+        virtual bool shouldApplyShape(Node *node)const{DEBUG_ASSERT(true); return true;}
         void swapVertexData(const size_t idx1, const size_t idx2);
         
         virtual const void *getArrayBuffer()const;

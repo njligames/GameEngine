@@ -260,6 +260,7 @@ namespace njli
         for (s32 i = 0; i < (*m_ActiveNodes).size(); ++i)
         {
             Node *node = (*m_ActiveNodes).at(i);
+            const u64 geometryIndex = node->getGeometryIndex();
             
             node->update(timeStep);
             
@@ -267,19 +268,18 @@ namespace njli
             if(geometry)
             {
                 PhysicsBody *physicsBody = node->getPhysicsBody();
-                if(physicsBody)
+                
+                if(physicsBody && geometry->shouldApplyShape(node))
                     geometry->applyShape(node, physicsBody->getPhysicsShape());
                 
-                geometry->setTransform(node->getGeometryIndex(), node->getWorldTransform());
+                geometry->setTransform(geometryIndex, node->getWorldTransform());
                 
-                geometry->setColorTransform(node->getGeometryIndex(), node->getColorTransform());
-                
-//                if(m_ActiveGeometries.end() == std::find(m_ActiveGeometries.begin(), m_ActiveGeometries.end(), geometry))
-//                    m_ActiveGeometries.push_back(geometry);
+                geometry->setColorTransform(geometryIndex, node->getColorTransform());
             }
         }
         
-        for (s32 i = 0; i < (*m_ActiveNodes).size() * numSubSteps; ++i)
+//        for (s32 i = 0; i < (*m_ActiveNodes).size() * numSubSteps; ++i)
+            for (s32 i = 0; i < (*m_ActiveNodes).size(); ++i)
         {
             s32 idx = i % (*m_ActiveNodes).size();
             

@@ -255,6 +255,7 @@ namespace njli
         
         void setDimensions(Node *node, const btVector2 &dimensions,
                            const btVector2 &spritePivotPoint = btVector2(0.5f, 0.5f));
+        virtual bool shouldApplyShape(Node *node)const;
         
         btVector2 getDimensions(Node *node)const;
         virtual void getAabb(Node *node, btVector3& aabbMin,btVector3& aabbMax) const;
@@ -381,6 +382,7 @@ namespace njli
         u16 *m_Indexes;
         
         btVector2 *m_SpritePivots;
+        bool *m_changedDimensionArray;
         
     };
 }

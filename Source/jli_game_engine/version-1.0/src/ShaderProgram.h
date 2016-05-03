@@ -193,6 +193,7 @@ protected:
          */
     u32 getAttributeLocation(const char* attributeName) const;
 
+public:
     bool setUniformValue(const char *uniformName, s32 value);
     bool getUniformValue(const char *uniformName, s32 &value);
     
