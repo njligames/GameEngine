@@ -306,7 +306,7 @@ namespace njli
     {
         s32 idx = getChildIndex(m_PhysicsShape);
         if(idx != -1)
-            return dynamic_cast<const PhysicsShape*>(getChild(idx));
+            return reinterpret_cast<const PhysicsShape*>(getChild(idx));
         return NULL;
     }
     

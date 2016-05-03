@@ -267,6 +267,7 @@ namespace njli
          */
         virtual int getDebugMode() const;
     protected:
+        virtual bool shouldApplyShape(Node *node)const{DEBUG_ASSERT(true); return true;}
         void swapVertexData(const size_t idx1, const size_t idx2);
         
         

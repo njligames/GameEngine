@@ -51,10 +51,10 @@ namespace njli
     World * World::getInstance()
     {
         DEBUG_ASSERT(s_Instance);
-        if(NULL == s_Instance)
-        {
-            s_Instance = new World();
-        }
+//        if(NULL == s_Instance)
+//        {
+//            s_Instance = new World();
+//        }
         
         return s_Instance;
     }
@@ -477,7 +477,7 @@ namespace njli
         if(getScene())
             getScene()->render();
         
-        getWorldHUD()->render();
+//        getWorldHUD()->render();
         
 #if defined(DEBUG) || defined (_DEBUG)
         Scene *scene = getScene();
