@@ -568,16 +568,16 @@ private:
     ShaderProgram* m_ShaderProgram;
     u32 m_projectionMatrixUniform;
 //    u32 m_modelViewMatrixUniform;
-    u32 modelviewBufferID;
-    u32 colorTransformBufferID;
+    u32 m_modelViewBufferID;
+    u32 m_colorTransformBufferID;
     f32* m_ModelviewTransform;
     f32 *m_ColorTransform;
 
     u32 m_InTransformAttrib;
     u32 m_InColorTransform;
-    u32 verticesID;
+    u32 m_verticesBufferID;
     u32 indexBufferID;
-    u32 vertexArrayID;
+    u32 m_vertexArrayID;
 
     u32 m_InPositionAttrib;
     u32 m_InTexCoordAttrib;

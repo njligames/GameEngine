@@ -282,8 +282,14 @@ namespace njli
         btVector4 getColorTopLeft(Node *node)const;
         btVector4 getColorTopRight(Node *node)const;
         
-        virtual s32 numberOfVertices()const;
-        virtual s32 numberOfIndices()const;
+        virtual inline s32 numberOfVertices()const
+        {
+            return 4;
+        }
+        virtual inline s32 numberOfIndices()const
+        {
+            return 6;
+        }
         
         void setVertexPositions(Node *node,
                                 const btVector2 &bottomLeft,

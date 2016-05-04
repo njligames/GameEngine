@@ -55,14 +55,14 @@ namespace njli
 //    m_modelViewMatrixUniform(-1),
     m_ModelviewTransform(NULL),
     m_ColorTransform(NULL),
-    modelviewBufferID(-1),
-    colorTransformBufferID(-1),
+    m_modelViewBufferID(-1),
+    m_colorTransformBufferID(-1),
     m_InTransformAttrib(-1),
     m_InColorTransform(-1),
 //    m_CurrentMeshCount(-1),
-    verticesID(-1),
+    m_verticesBufferID(-1),
     indexBufferID(-1),
-    vertexArrayID(-1),
+    m_vertexArrayID(-1),
     m_InPositionAttrib(-1),
     m_InTexCoordAttrib(-1),
     m_InColorAttrib(-1),
@@ -99,14 +99,14 @@ namespace njli
 //    m_modelViewMatrixUniform(-1),
     m_ModelviewTransform(NULL),
     m_ColorTransform(NULL),
-    modelviewBufferID(-1),
-    colorTransformBufferID(-1),
+    m_modelViewBufferID(-1),
+    m_colorTransformBufferID(-1),
     m_InTransformAttrib(-1),
     m_InColorTransform(-1),
 //    m_CurrentMeshCount(-1),
-    verticesID(-1),
+    m_verticesBufferID(-1),
     indexBufferID(-1),
-    vertexArrayID(-1),
+    m_vertexArrayID(-1),
     m_InPositionAttrib(-1),
     m_InTexCoordAttrib(-1),
     m_InColorAttrib(-1),
@@ -143,14 +143,14 @@ namespace njli
 //    m_modelViewMatrixUniform(-1),
     m_ModelviewTransform(NULL),
     m_ColorTransform(NULL),
-    modelviewBufferID(-1),
-    colorTransformBufferID(-1),
+    m_modelViewBufferID(-1),
+    m_colorTransformBufferID(-1),
     m_InTransformAttrib(-1),
     m_InColorTransform(-1),
 //    m_CurrentMeshCount(-1),
-    verticesID(-1),
+    m_verticesBufferID(-1),
     indexBufferID(-1),
-    vertexArrayID(-1),
+    m_vertexArrayID(-1),
     m_InPositionAttrib(-1),
     m_InTexCoordAttrib(-1),
     m_InColorAttrib(-1),
@@ -516,7 +516,7 @@ namespace njli
     
     bool Geometry::isLoadedGPU()const
     {
-        return (verticesID != -1);
+        return (m_verticesBufferID != -1);
     }
     
     
@@ -826,7 +826,8 @@ namespace njli
             loadGPU_Internal();
         }
         
-        glBindVertexArrayOES(vertexArrayID);
+        DEBUG_ASSERT(glis)
+        glBindVertexArrayOES(m_vertexArrayID);
         
         if(NULL != material && NULL != shader)
             material->bind(shader);
@@ -856,7 +857,7 @@ namespace njli
         
         if(isBufferModified())
         {
-            glBindBuffer(GL_ARRAY_BUFFER, verticesID);
+            glBindBuffer(GL_ARRAY_BUFFER, m_verticesBufferID);
             glBufferSubData(GL_ARRAY_BUFFER, 0, (GLsizeiptr)getArrayBufferSize(), getArrayBuffer());
             m_bufferModified = false;
 //            printf("buffer");
@@ -941,7 +942,7 @@ namespace njli
         {
             const GLuint STRIDE = 64;
             
-            glBindBuffer(GL_ARRAY_BUFFER, modelviewBufferID);
+            glBindBuffer(GL_ARRAY_BUFFER, m_modelViewBufferID);
             
             GLsizei size = sizeof(GLfloat) * getMaxMeshes() * numberOfVertices() * 16;
             
@@ -972,7 +973,7 @@ namespace njli
         {
             const GLuint STRIDE = 64;
             
-            glBindBuffer(GL_ARRAY_BUFFER, colorTransformBufferID);
+            glBindBuffer(GL_ARRAY_BUFFER, m_colorTransformBufferID);
             
             GLsizei size = sizeof(GLfloat) * getMaxMeshes() * numberOfVertices() * 16;
             
@@ -1084,14 +1085,14 @@ namespace njli
         DEBUG_ASSERT(m_LoadGPU);
         
         
-        DEBUG_ASSERT(vertexArrayID == -1);
-        glGenVertexArraysOES(1, &vertexArrayID);
-        glBindVertexArrayOES(vertexArrayID);
+        DEBUG_ASSERT(m_vertexArrayID == -1);
+        glGenVertexArraysOES(1, &m_vertexArrayID);
+        glBindVertexArrayOES(m_vertexArrayID);
         {
             {
-                DEBUG_ASSERT(modelviewBufferID == -1);
-                glGenBuffers(1, &modelviewBufferID);
-                glBindBuffer(GL_ARRAY_BUFFER, modelviewBufferID);
+                DEBUG_ASSERT(m_modelViewBufferID == -1);
+                glGenBuffers(1, &m_modelViewBufferID);
+                glBindBuffer(GL_ARRAY_BUFFER, m_modelViewBufferID);
                 
                 GLsizei size = sizeof(GLfloat) * getMaxMeshes() * numberOfVertices() * 16;
                 glBufferData(GL_ARRAY_BUFFER, size, m_ModelviewTransform, GL_DYNAMIC_DRAW);
@@ -1099,9 +1100,9 @@ namespace njli
             }
             
             {
-                DEBUG_ASSERT(colorTransformBufferID == -1);
-                glGenBuffers(1, &colorTransformBufferID);
-                glBindBuffer(GL_ARRAY_BUFFER, colorTransformBufferID);
+                DEBUG_ASSERT(m_colorTransformBufferID == -1);
+                glGenBuffers(1, &m_colorTransformBufferID);
+                glBindBuffer(GL_ARRAY_BUFFER, m_colorTransformBufferID);
                 
                 GLsizei size = sizeof(GLfloat) * getMaxMeshes() * numberOfVertices() * 16;
                 glBufferData(GL_ARRAY_BUFFER, size, m_ColorTransform, GL_DYNAMIC_DRAW);
@@ -1109,9 +1110,9 @@ namespace njli
             }
             
             {
-                DEBUG_ASSERT(verticesID == -1);
-                glGenBuffers(1, &verticesID);
-                glBindBuffer(GL_ARRAY_BUFFER, verticesID);
+                DEBUG_ASSERT(m_verticesBufferID == -1);
+                glGenBuffers(1, &m_verticesBufferID);
+                glBindBuffer(GL_ARRAY_BUFFER, m_verticesBufferID);
                 glBufferData(GL_ARRAY_BUFFER, (long)getArrayBufferSize(), getArrayBuffer(), GL_DYNAMIC_DRAW);
                 glBindBuffer(GL_ARRAY_BUFFER, 0);
             }
@@ -1159,16 +1160,16 @@ namespace njli
     {
         DEBUG_ASSERT(m_UnLoadGPU);
         
-        if(modelviewBufferID == -1)
+        if(m_modelViewBufferID == -1)
         {
-            glDeleteBuffers(1, &modelviewBufferID);
-            modelviewBufferID = -1;
+            glDeleteBuffers(1, &m_modelViewBufferID);
+            m_modelViewBufferID = -1;
         }
         
-        if(colorTransformBufferID == -1)
+        if(m_colorTransformBufferID == -1)
         {
-            glDeleteBuffers(1, &colorTransformBufferID);
-            colorTransformBufferID = -1;
+            glDeleteBuffers(1, &m_colorTransformBufferID);
+            m_colorTransformBufferID = -1;
         }
         
         if(indexBufferID == -1)
@@ -1177,16 +1178,16 @@ namespace njli
             indexBufferID = -1;
         }
         
-        if(verticesID == -1)
+        if(m_verticesBufferID == -1)
         {
-            glDeleteBuffers(1, &verticesID);
-            verticesID = -1;
+            glDeleteBuffers(1, &m_verticesBufferID);
+            m_verticesBufferID = -1;
         }
         
-        if(vertexArrayID == -1)
+        if(m_vertexArrayID == -1)
         {
-            glDeleteVertexArraysOES(1, &vertexArrayID);
-            vertexArrayID = -1;
+            glDeleteVertexArraysOES(1, &m_vertexArrayID);
+            m_vertexArrayID = -1;
         }
         
         m_UnLoadGPU = false;

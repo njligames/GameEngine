@@ -328,7 +328,7 @@ protected:
     u8 getTextureIndex() const;
     void setTextureIndex(u8 index);
 
-    void bind(ShaderProgram * program, const char* propertyName);
+    bool bind(ShaderProgram * program);
     void unBind() ;
 
     void loadTexImage2DInternal(const Image& img, s32 target);

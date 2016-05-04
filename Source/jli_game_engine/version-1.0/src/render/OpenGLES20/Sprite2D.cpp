@@ -662,14 +662,14 @@ namespace njli
         return ret;
     }
     
-    s32 Sprite2D::numberOfVertices()const
-    {
-        return 4;
-    }
-    s32 Sprite2D::numberOfIndices()const
-    {
-        return 6;
-    }
+//    s32 Sprite2D::numberOfVertices()const
+//    {
+//        return 4;
+//    }
+//    s32 Sprite2D::numberOfIndices()const
+//    {
+//        return 6;
+//    }
     
     void Sprite2D::setVertexPositions(Node *node,
                             const btVector2 &bottomLeft,

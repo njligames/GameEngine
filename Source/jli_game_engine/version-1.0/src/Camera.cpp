@@ -1594,12 +1594,12 @@ namespace njli
     
     Node *Camera::getParent()
     {
-        return dynamic_cast<Node*>(AbstractDecorator::getParent());
+        return reinterpret_cast<Node*>(AbstractDecorator::getParent());
     }
     
     const Node *Camera::getParent()const
     {
-        return dynamic_cast<const Node*>(AbstractDecorator::getParent());
+        return reinterpret_cast<const Node*>(AbstractDecorator::getParent());
     }
     
 //    void Camera::updateProjection()
