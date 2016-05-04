@@ -532,9 +532,11 @@ namespace njli
     }
     
     
-    void MaterialProperty::bind(ShaderProgram *shader, const char *propertyName)
+    bool MaterialProperty::bind(ShaderProgram *shader)
     {//https://www.opengl.org/wiki/Texture_Combiners
         DEBUG_ASSERT(shader);
+        
+        bool retVal = false;
         
         s32 textureIndex = getTextureIndex();
         
@@ -544,34 +546,18 @@ namespace njli
         if(m_AbstractFrameBufferObject)
         {
             glBindTexture(m_textureType, m_AbstractFrameBufferObject->getTextureID());
-            return;
+            retVal = true;
         }
         else if(m_textureID != -1)
         {
-            char buffer[256];
-            char property[256];
-            strcpy(property, propertyName);
-            
             // Bind to the texture that has been loaded for this particle system
             glBindTexture(m_textureType, m_textureID);
             
-//            loadProperties();
-
+            m_materialBound[textureIndex] = true;
             
-            
-            
-//            if (false == m_materialBound[textureIndex])
-            {
-                m_materialBound[textureIndex] = true;
-                
-                property[0] = property[0] + 32;
-                sprintf(buffer, "%sTexture2D", property);
-                shader->setUniformValue(buffer, textureIndex);
-//                m_2DUniform = shader->getUniformLocation(buffer);
-//                glUniform1i(m_2DUniform, textureIndex);
-//                DEBUG_GL_ERROR_PRINT("glUniform1i", "%d,%hhu",m_2DUniform,textureIndex);
-            }
+            retVal = true;
         }
+        return retVal;
     }
     
     void MaterialProperty::unBind()

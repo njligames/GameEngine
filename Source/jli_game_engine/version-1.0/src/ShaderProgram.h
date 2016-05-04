@@ -247,8 +247,8 @@ public:
 
 private:
     s32 m_Program;
-    s32 vertShader;
-    s32 fragShader;
+    s32 m_vertShader;
+    s32 m_fragShader;
 
     std::string m_VertexShaderSource;
     std::string m_FragmentShaderSource;

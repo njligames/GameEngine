@@ -203,8 +203,8 @@ namespace njli
     ShaderProgram::ShaderProgram():
     AbstractFactoryObject(this),
     m_Program(-1),//glCreateProgram()),
-    vertShader(-1),
-    fragShader(-1),
+    m_vertShader(-1),
+    m_fragShader(-1),
     m_VertexShaderSource(""),
     m_FragmentShaderSource(""),
     m_mat4Buffer(new float[16])
@@ -216,8 +216,8 @@ namespace njli
     ShaderProgram::ShaderProgram(const AbstractBuilder &builder):
     AbstractFactoryObject(this),
     m_Program(-1),//glCreateProgram()),
-    vertShader(-1),
-    fragShader(-1),
+    m_vertShader(-1),
+    m_fragShader(-1),
     m_VertexShaderSource(""),
     m_FragmentShaderSource(""),
     m_mat4Buffer(new float[16])
@@ -229,8 +229,8 @@ namespace njli
     ShaderProgram::ShaderProgram(const ShaderProgram &copy):
     AbstractFactoryObject(this),
     m_Program(-1),//glCreateProgram()),
-    vertShader(-1),
-    fragShader(-1),
+    m_vertShader(-1),
+    m_fragShader(-1),
     m_VertexShaderSource(""),
     m_FragmentShaderSource(""),
     m_mat4Buffer(new float[16])
@@ -395,24 +395,26 @@ namespace njli
         switch (type) {
             case JLI_SHADER_TYPE_FRAGMENT:
             {
-                if (-1 != fragShader)
+                if (-1 != m_fragShader)
                 {
-                    glDeleteShader(fragShader);DEBUG_GL_ERROR_WRITE("glDeleteShader");
+                    glDeleteShader(m_fragShader);DEBUG_GL_ERROR_WRITE("glDeleteShader");
                 }
                 
-                compileShader(&fragShader, GL_FRAGMENT_SHADER, source);
+                compileShader(&m_fragShader, GL_FRAGMENT_SHADER, source);
+                DEBUG_ASSERT(glIsShader(m_fragShader));
                 ret = true;
 
             }
                 break;
             case JLI_SHADER_TYPE_VERTEX:
             {
-                if (-1 != vertShader)
+                if (-1 != m_vertShader)
                 {
-                    glDeleteShader(vertShader);DEBUG_GL_ERROR_WRITE("glDeleteShader");
+                    glDeleteShader(m_vertShader);DEBUG_GL_ERROR_WRITE("glDeleteShader");
                 }
                 
-                compileShader(&vertShader, GL_VERTEX_SHADER, source);
+                compileShader(&m_vertShader, GL_VERTEX_SHADER, source);
+                DEBUG_ASSERT(glIsShader(m_vertShader));
                 ret = true;
 
             }
@@ -429,18 +431,17 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        DEBUG_ASSERT(currentProgram != 0);
         
         DEBUG_ASSERT(m_Program == currentProgram);
+        DEBUG_ASSERT(glIsProgram(m_Program));
         
-        if (location != -1 && currentProgram)
-        {
-            glBindAttribLocation(currentProgram, location, attributeName);
-            DEBUG_GL_ERROR_PRINT("glBindAttribLocation", "glBindAttribLocation(%d, %d, %s)",currentProgram,location, attributeName);
-            
-            DEBUG_GL_ERROR_WRITE("glBindAttribLocation");
-            return true;
-        }
-        return false;
+        DEBUG_ASSERT_PRINT(-1 != location, "The named attribute variable (%s) is not an active attribute in the specified program object or if name starts with the reserved prefix \"gl_\"", attributeName);
+        
+        glBindAttribLocation(m_Program, location, attributeName);
+        DEBUG_GL_ERROR_PRINT("glBindAttribLocation", "glBindAttribLocation(%d, %d, %s)",currentProgram,location, attributeName);
+        
+        return true;
     }
     
     u32 ShaderProgram::getAttributeLocation(const char *attributeName)const
@@ -450,8 +451,9 @@ namespace njli
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
         
         DEBUG_ASSERT(m_Program == currentProgram);
+        DEBUG_ASSERT(currentProgram != 0);
         
-        s32 location = glGetAttribLocation(currentProgram, attributeName);
+        s32 location = glGetAttribLocation(m_Program, attributeName);
         DEBUG_GL_ERROR_WRITE("glGetAttribLocation\n");
         
         DEBUG_ASSERT_PRINT(-1 != location, "The named attribute variable (%s) is not an active attribute in the specified program object or if name starts with the reserved prefix \"gl_\"", attributeName);
@@ -465,10 +467,12 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
+        DEBUG_ASSERT(currentProgram != 0);
         
         DEBUG_ASSERT(m_Program == currentProgram);
+        DEBUG_ASSERT(glIsProgram(m_Program));
         
-        if (location != -1 && currentProgram && glIsProgram(m_Program))
+        if (location != -1)
         {
             s32 tvalue=value;
             if(getUniformValue(uniformName, tvalue))
@@ -491,11 +495,12 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
-        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
+        DEBUG_ASSERT(currentProgram != 0);
         
         DEBUG_ASSERT(m_Program == currentProgram);
+        DEBUG_ASSERT(glIsProgram(m_Program));
         
-        if (location != -1 && currentProgram && glIsProgram(m_Program))
+        if (location != -1)
         {
             glGetUniformiv(currentProgram, location, &value);
             DEBUG_GL_ERROR_PRINT("glGetUniformiv", "glGetUniformiv(%d, %s)",currentProgram,uniformName);
@@ -511,11 +516,12 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
-        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
+        DEBUG_ASSERT(currentProgram != 0);
         
         DEBUG_ASSERT(m_Program == currentProgram);
+        DEBUG_ASSERT(glIsProgram(m_Program));
         
-        if (location != -1 && currentProgram && glIsProgram(m_Program))
+        if (location != -1)
         {
             btTransform tvalue=value;
             if(getUniformValue(uniformName, tvalue))
@@ -546,11 +552,12 @@ namespace njli
         GLint currentProgram=0;
         
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
-        DEBUG_GL_ERROR_WRITE("glGetIntegerv");
+        DEBUG_ASSERT(currentProgram != 0);
         
         DEBUG_ASSERT(m_Program == currentProgram);
+        DEBUG_ASSERT(glIsProgram(m_Program));
         
-        if (location != -1 && currentProgram && glIsProgram(m_Program))
+        if (location != -1)
         {
             glGetUniformfv(currentProgram, location, m_mat4Buffer);
             DEBUG_GL_ERROR_PRINT("glGetUniformfv", "glGetUniformfv(%s, %s)",
@@ -610,7 +617,10 @@ namespace njli
             return false;
         }
         
-        m_Program = link_program(vertShader, fragShader);
+        DEBUG_ASSERT(glIsShader(m_vertShader));
+        DEBUG_ASSERT(glIsShader(m_fragShader));
+        m_Program = link_program(m_vertShader, m_fragShader);
+        DEBUG_ASSERT(glIsProgram(m_Program));
         
         GLint status = validate_program(m_Program);
         
@@ -633,7 +643,8 @@ namespace njli
 //                DEBUG_LOG_V(TAG, "Uniform Variable Loaded: %s %s (size=%d)", getGLSLVarTypeName((njliGLSLVarType)type), variableName, size);
                 
             }
-            delete [] variableName;variableName=NULL;
+            delete [] variableName;
+            variableName=NULL;
             
             
             
@@ -682,12 +693,12 @@ namespace njli
     
     const char *ShaderProgram::vertexShaderLog()const
     {
-        return logForOpenGLObject(vertShader, (GLInfoFunction)&glGetProgramiv, (GLLogFunction)&glGetProgramInfoLog);
+        return logForOpenGLObject(m_vertShader, (GLInfoFunction)&glGetProgramiv, (GLLogFunction)&glGetProgramInfoLog);
     }
     
     const char *ShaderProgram::fragmentShaderLog()const
     {
-        return logForOpenGLObject(fragShader, (GLInfoFunction)&glGetProgramiv, (GLLogFunction)&glGetProgramInfoLog);
+        return logForOpenGLObject(m_fragShader, (GLInfoFunction)&glGetProgramiv, (GLLogFunction)&glGetProgramInfoLog);
     }
     
     const char *ShaderProgram::programLog()const
@@ -697,13 +708,13 @@ namespace njli
     
     void ShaderProgram::unLoadGPU()
     {
-        if(-1 != vertShader)
-            glDeleteShader(vertShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
-        vertShader = -1;
+        if(-1 != m_vertShader)
+            glDeleteShader(m_vertShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+        m_vertShader = -1;
         
-        if(-1 != fragShader)
-            glDeleteShader(fragShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
-        fragShader = -1;
+        if(-1 != m_fragShader)
+            glDeleteShader(m_fragShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+        m_fragShader = -1;
         
         if(-1 != m_Program)
             glDeleteProgram(m_Program);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
