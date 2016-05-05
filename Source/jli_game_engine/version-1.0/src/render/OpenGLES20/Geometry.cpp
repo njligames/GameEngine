@@ -826,7 +826,6 @@ namespace njli
             loadGPU_Internal();
         }
         
-        DEBUG_ASSERT(glis)
         glBindVertexArrayOES(m_vertexArrayID);
         
         if(NULL != material && NULL != shader)
