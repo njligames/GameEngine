@@ -198,6 +198,9 @@ public:
          *  @return <#return value description#>
          */
     bool getPixel(const btVector2& position, btVector4& pixel) const;
+    btVector4 getPixel(const btVector2 &position)const;
+    
+    
 
     /**
          *  <#Description#>
@@ -384,9 +387,13 @@ public:
          */
     void flip();
     
+    void rotate();
+    
 //    void setPVRData(u8 *pvrData, unsigned long dataSize, const char *fileName);
 //    u8 *getCompressedData()const;
 
+    //get the pixel row
+    std::vector<btVector4> operator[] (u32 row);
 protected:
     bool copyData(void *dataPtr, long dataSize, s32 width, s32 height, s32 components, njliImageType imageType, const std::string &filename);
     
@@ -397,6 +404,7 @@ protected:
 
     void setPixelRow(u8 * data, u32 row, u32 width, u32 xOffset = 0);
     void getPixelRow(u8 * data, u32 row, u32 width);
+    
 
     u8* createFillRow_createsmemory(s32 xOffset, s32 fillWidth, const btVector4& fillColor = btVector4(1.0f, 1.0f, 1.0f, 1.0f));
 

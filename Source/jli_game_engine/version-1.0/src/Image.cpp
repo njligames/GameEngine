@@ -293,8 +293,15 @@ namespace njli
                 return true;
             }
         }
-        
+        pixel = btVector4(0, 0, 0, 0);
         return false;
+    }
+    
+    btVector4 Image::getPixel(const btVector2 &position)const
+    {
+        btVector4 pixel;
+        getPixel(position, pixel);
+        return pixel;
     }
     
     bool Image::setPixels(const btVector2 &destinationPosition,
@@ -984,6 +991,54 @@ namespace njli
             delete [] buf;
             buf=NULL;
         }
+    }
+    
+    void Image::rotate()
+    {
+        DEBUG_ASSERT_WRITE(false, "must test");
+        
+        if(getHeight() == getWidth())
+        {
+            s32 n = getHeight();
+            for(int layer = 0 ; layer < n / 2; ++layer)
+            {
+                int first = layer;
+                int last = n - 1 - layer;
+                for(int i = first; i < last; ++i)
+                {
+                    int offset = i - first;
+                    
+                    
+                    //save top
+                    btVector4 top = (*this)[first][i];
+                    
+                    //left -> top
+                    (*this)[first][i] = (*this)[last-offset][first];
+                    
+                    //bottom -> left
+                    (*this)[last-offset][first] = (*this)[last][last - offset];
+                    
+                    //right -> bottom
+                    (*this)[last][last - offset] = (*this)[i][last];
+                    
+                    //top -> right
+                    (*this)[i][last] = top;
+                    
+                }
+            }
+        }
+        
+    }
+    
+    std::vector<btVector4> Image::operator[] (u32 row)
+    {
+        std::vector<btVector4> ret;
+        ret.resize(getWidth());
+        
+        for(s32 x_indice = 0; x_indice < getWidth(); ++x_indice)
+            ret[x_indice] = getPixel(btVector2(x_indice, row));
+        
+        return ret;
     }
     
     u32 Image::getClosestValidGLDim(const u32 dim)const

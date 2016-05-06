@@ -522,9 +522,9 @@ namespace njli
         }
     }
     
-    s32 Node::getParticleEmitterIndex(ParticleEmitter *sound)const
+    s32 Node::getParticleEmitterIndex(ParticleEmitter *emitter)const
     {
-        std::vector<ParticleEmitter*>::const_iterator iter = std::find(m_ParticleEmitterList.begin(), m_ParticleEmitterList.end(), sound);
+        std::vector<ParticleEmitter*>::const_iterator iter = std::find(m_ParticleEmitterList.begin(), m_ParticleEmitterList.end(), emitter);
         
         if (iter != m_ParticleEmitterList.end())
         {
@@ -597,6 +597,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<PhysicsBody*>(getChild(idx)));
             return reinterpret_cast<PhysicsBody*>(getChild(idx));
         }
 //#endif
@@ -614,6 +615,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<const PhysicsBody*>(getChild(idx)));
             return reinterpret_cast<const PhysicsBody*>(getChild(idx));
         }
 //#endif
@@ -746,7 +748,10 @@ namespace njli
         {
             s32 idx = getChildIndex(m_Geometry);
             if(idx != -1)
+            {
+                DEBUG_ASSERT(dynamic_cast<Geometry*>(getChild(idx)));
                 return reinterpret_cast<Geometry*>(getChild(idx));
+            }
 //                return dynamic_cast<Geometry*>(getChild(idx));
         }
         return NULL;
@@ -1042,6 +1047,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<NodeStateMachine*>(getChild(idx)));
             return reinterpret_cast<NodeStateMachine*>(getChild(idx));
         }
 //#endif
@@ -1060,6 +1066,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<const NodeStateMachine*>(getChild(idx)));
             return reinterpret_cast<const NodeStateMachine*>(getChild(idx));
         }
 //#endif

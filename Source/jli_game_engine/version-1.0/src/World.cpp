@@ -191,6 +191,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<WorldLuaVirtualMachine*>(getChild(idx)));
             return reinterpret_cast<WorldLuaVirtualMachine*>(getChild(idx));
         }
 //#endif
@@ -207,6 +208,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<const WorldLuaVirtualMachine*>(getChild(idx)));
             return reinterpret_cast<const WorldLuaVirtualMachine*>(getChild(idx));
         }
 //#endif
@@ -582,6 +584,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<Scene*>(getChild(idx)));
             return reinterpret_cast<Scene*>(getChild(idx));
         }
 //#endif
@@ -599,6 +602,7 @@ namespace njli
 //        }
 //#else
         {
+            DEBUG_ASSERT(dynamic_cast<const Scene*>(getChild(idx)));
             return reinterpret_cast<const Scene*>(getChild(idx));
         }
 //#endif

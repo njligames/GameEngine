@@ -495,6 +495,7 @@ namespace njli
 //                retVal = image->setData(fileData);
                 retVal = image->copyData(fileData);
                 
+                
                 removeFileData(filePath);
                 
                 retVal = true;
