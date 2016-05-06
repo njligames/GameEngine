@@ -1594,11 +1594,13 @@ namespace njli
     
     Node *Camera::getParent()
     {
+        DEBUG_ASSERT(dynamic_cast<AbstractFactoryObject*>(AbstractDecorator::getParent()));
         return reinterpret_cast<Node*>(AbstractDecorator::getParent());
     }
     
     const Node *Camera::getParent()const
     {
+        DEBUG_ASSERT(dynamic_cast<const AbstractFactoryObject*>(AbstractDecorator::getParent()));
         return reinterpret_cast<const Node*>(AbstractDecorator::getParent());
     }
     

@@ -166,6 +166,45 @@ public:
     friend class Sprite2DBuilder;
     friend class SpriteFrameAtlas;
     friend class SpriteFrameAtlasBuilder;
+    
+    friend class SteeringBehavior;
+    friend class SteeringBehaviorBuilder;
+    
+    friend class SteeringBehaviorAlignment;
+    friend class SteeringBehaviorAlignmentBuilder;
+    friend class SteeringBehaviorArrive;
+    friend class SteeringBehaviorArriveBuilder;
+    friend class SteeringBehaviorCohesion;
+    friend class SteeringBehaviorCohesionBuilder;
+    friend class SteeringBehaviorEvade;
+    friend class SteeringBehaviorEvadeBuilder;
+    friend class SteeringBehaviorFlee;
+    friend class SteeringBehaviorFleeBuilder;
+    friend class SteeringBehaviorFollowPath;
+    friend class SteeringBehaviorFollowPathBuilder;
+    friend class SteeringBehaviorHide;
+    friend class SteeringBehaviorHideBuilder;
+    friend class SteeringBehaviorInterpose;
+    friend class SteeringBehaviorInterposeBuilder;
+    
+    friend class SteeringBehaviorMachine;
+    friend class SteeringBehaviorMachineBuilder;
+    
+    friend class SteeringBehaviorObstacleAvoidance;
+    friend class SteeringBehaviorObstacleAvoidanceBuilder;
+    friend class SteeringBehaviorOffsetPursuit;
+    friend class SteeringBehaviorOffsetPursuitBuilder;
+    friend class SteeringBehaviorPursuit;
+    friend class SteeringBehaviorPursuitBuilder;
+    friend class SteeringBehaviorSeek;
+    friend class SteeringBehaviorSeekBuilder;
+    friend class SteeringBehaviorSeparation;
+    friend class SteeringBehaviorSeparationBuilder;
+    friend class SteeringBehaviorWallAvoidance;
+    friend class SteeringBehaviorWallAvoidanceBuilder;
+    friend class SteeringBehaviorWander;
+    friend class SteeringBehaviorWanderBuilder;
+    
     friend class StopWatch;
     friend class StopWatchBuilder;
     friend class TextboxHUD;
