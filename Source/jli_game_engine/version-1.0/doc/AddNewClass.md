@@ -8,8 +8,8 @@
 	2. `AbstractFactoryObject *WorldFactory::ctor(const u32 &type)`
 	3. `AbstractFactoryObject *WorldFactory::ctor(const AbstractBuilder &builder)`
 	4. `AbstractFactoryObject *WorldFactory::ctor(const AbstractFactoryObject &object)`
-6. Add the construction functionality to WorldLuaVirtualMachine.cpp to the following function...
-	1. `static int iterate_and_build(lua_State *L)`
+6. Add the construction functionality to GameEngine/Source/jli_game_engine/Lua/_LuaEntry.i to the following function...
+	1. `int build_type(lua_State *L)`
 7. Add the builder enumerator to WorldFactory.cpp for the following function...
 	1. `bool WorldFactory::isBuilder(u32 type)
 8. Add the includes to the JLIEngine.h file.

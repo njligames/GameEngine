@@ -3,7 +3,7 @@
 %module bullet
 
 //MARK: Tested Ignore, successfully
-%include "_Ignore.i"
+%include "_IgnoreBullet.i"
 
 %include <lua/factory.i>
 %include <lua/stl.i>
@@ -18,10 +18,10 @@
 %include "../../NJLISwigOverwrite.i"
 
 //MARK: Tested Apply, successfully
-%include "_Apply.i"
+%include "_ApplyBullet.i"
 
 //MARK: Tested Rename, successfully
-%include "_Rename.i"
+%include "_RenameBullet.i"
 
 //#########################################################################################################
 //!!!:TODO Including source files to Public interface
@@ -269,13 +269,14 @@
 ////#include "vectormath/sse/vecidx_aos.h"
 ////#include "vectormath/sse/vectormath_aos.h"
 ////#include "vectormath/vmInclude.h"
+    
 %}
 
 //MARK: Tested Template, successfully
-%include "_Template.i"
+%include "_TemplateBullet.i"
 
 //MARK: Tested Array, successfully
-%include "_Array.i"
+%include "_ArrayBullet.i"
 
 //#########################################################################################################
 //Including source files to Public interface

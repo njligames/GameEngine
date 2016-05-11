@@ -134,6 +134,66 @@
 %njli_array_functions(njli::Sprite2DBuilder, Sprite2DBuilderArray);
 %njli_array_functions(njli::SpriteFrameAtlas, SpriteFrameAtlasArray);
 %njli_array_functions(njli::SpriteFrameAtlasBuilder, SpriteFrameAtlasBuilderArray);
+
+
+
+
+
+
+
+
+
+
+
+//%njli_array_functions(njli::SteeringBehavior, SteeringBehavior);
+//%njli_array_functions(njli::SteeringBehaviorBuilder, SteeringBehaviorBuilder);
+%njli_array_functions(njli::SteeringBehaviorAlignment, SteeringBehaviorAlignment);
+%njli_array_functions(njli::SteeringBehaviorAlignmentBuilder, SteeringBehaviorAlignmentBuilder);
+%njli_array_functions(njli::SteeringBehaviorArrive, SteeringBehaviorArrive);
+%njli_array_functions(njli::SteeringBehaviorArriveBuilder, SteeringBehaviorArriveBuilder);
+%njli_array_functions(njli::SteeringBehaviorCohesion, SteeringBehaviorCohesion);
+%njli_array_functions(njli::SteeringBehaviorCohesionBuilder, SteeringBehaviorCohesionBuilder);
+%njli_array_functions(njli::SteeringBehaviorEvade, SteeringBehaviorEvade);
+%njli_array_functions(njli::SteeringBehaviorEvadeBuilder, SteeringBehaviorEvadeBuilder);
+%njli_array_functions(njli::SteeringBehaviorFlee, SteeringBehaviorFlee);
+%njli_array_functions(njli::SteeringBehaviorFleeBuilder, SteeringBehaviorFleeBuilder);
+%njli_array_functions(njli::SteeringBehaviorFollowPath, SteeringBehaviorFollowPath);
+%njli_array_functions(njli::SteeringBehaviorFollowPathBuilder, SteeringBehaviorFollowPathBuilder);
+%njli_array_functions(njli::SteeringBehaviorHide, SteeringBehaviorHide);
+%njli_array_functions(njli::SteeringBehaviorHideBuilder, SteeringBehaviorHideBuilder);
+%njli_array_functions(njli::SteeringBehaviorInterpose, SteeringBehaviorInterpose);
+%njli_array_functions(njli::SteeringBehaviorInterposeBuilder, SteeringBehaviorInterposeBuilder);
+//%njli_array_functions(njli::SteeringBehaviorMachine, SteeringBehaviorMachine);
+//%njli_array_functions(njli::SteeringBehaviorMachineBuilder, SteeringBehaviorMachineBuilder);
+%njli_array_functions(njli::SteeringBehaviorMachineDithered, SteeringBehaviorMachineDithered);
+%njli_array_functions(njli::SteeringBehaviorMachineDitheredBuilder, SteeringBehaviorMachineDitheredBuilder);
+%njli_array_functions(njli::SteeringBehaviorMachinePrioritized, SteeringBehaviorMachinePrioritized);
+%njli_array_functions(njli::SteeringBehaviorMachinePrioritizedBuilder, SteeringBehaviorMachinePrioritizedBuilder);
+%njli_array_functions(njli::SteeringBehaviorMachineWeighted, SteeringBehaviorMachineWeighted);
+%njli_array_functions(njli::SteeringBehaviorMachineWeightedBuilder, SteeringBehaviorMachineWeightedBuilder);
+%njli_array_functions(njli::SteeringBehaviorObstacleAvoidance, SteeringBehaviorObstacleAvoidance);
+%njli_array_functions(njli::SteeringBehaviorObstacleAvoidanceBuilder, SteeringBehaviorObstacleAvoidanceBuilder);
+%njli_array_functions(njli::SteeringBehaviorOffsetPursuit, SteeringBehaviorOffsetPursuit);
+%njli_array_functions(njli::SteeringBehaviorOffsetPursuitBuilder, SteeringBehaviorOffsetPursuitBuilder);
+%njli_array_functions(njli::SteeringBehaviorPursuit, SteeringBehaviorPursuit);
+%njli_array_functions(njli::SteeringBehaviorPursuitBuilder, SteeringBehaviorPursuitBuilder);
+%njli_array_functions(njli::SteeringBehaviorSeek, SteeringBehaviorSeek);
+%njli_array_functions(njli::SteeringBehaviorSeekBuilder, SteeringBehaviorSeekBuilder);
+%njli_array_functions(njli::SteeringBehaviorSeparation, SteeringBehaviorSeparation);
+%njli_array_functions(njli::SteeringBehaviorSeparationBuilder, SteeringBehaviorSeparationBuilder);
+%njli_array_functions(njli::SteeringBehaviorWallAvoidance, SteeringBehaviorWallAvoidance);
+%njli_array_functions(njli::SteeringBehaviorWallAvoidanceBuilder, SteeringBehaviorWallAvoidanceBuilder);
+%njli_array_functions(njli::SteeringBehaviorWander, SteeringBehaviorWander);
+%njli_array_functions(njli::SteeringBehaviorWanderBuilder, SteeringBehaviorWanderBuilder);
+
+
+
+
+
+
+
+
+
 %njli_array_functions(njli::StopWatch, StopWatchArray);
 %njli_array_functions(njli::StopWatchBuilder, StopWatchBuilderArray);
 %njli_array_functions(njli::TextboxHUD, TextboxHUDArray);
