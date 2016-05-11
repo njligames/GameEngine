@@ -189,6 +189,12 @@ public:
     
     friend class SteeringBehaviorMachine;
     friend class SteeringBehaviorMachineBuilder;
+    friend class SteeringBehaviorMachineDithered;
+    friend class SteeringBehaviorMachineDitheredBuilder;
+    friend class SteeringBehaviorMachinePrioritized;
+    friend class SteeringBehaviorMachinePrioritizedBuilder;
+    friend class SteeringBehaviorMachineWeighted;
+    friend class SteeringBehaviorMachineWeightedBuilder;
     
     friend class SteeringBehaviorObstacleAvoidance;
     friend class SteeringBehaviorObstacleAvoidanceBuilder;

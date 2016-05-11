@@ -15,12 +15,17 @@
 #include "AbstractBuilder.h"
 #include "lua.hpp"
 #include "Log.h"
+#include "btVector3.h"
 
+#include <map>
 
 namespace njli
 {
     class SteeringBehaviorMachineBuilder;
     class Node;
+    class SteeringBehavior;
+    
+    
     
     /**
      *  <#Description#>
@@ -29,6 +34,8 @@ namespace njli
     public AbstractFactoryObject
     {
         friend class WorldFactory;
+        friend class Node;
+        
     protected:
         SteeringBehaviorMachine();
         SteeringBehaviorMachine(const AbstractBuilder&);
@@ -149,8 +156,106 @@ namespace njli
          *  @return <#return value description#>
          */
         const Node* getParent() const;
+        
+        virtual const btVector3 &calculateSteeringForce() = 0;
+        
+        
+        const btVector3 &getCalculatedForce()const;
+        
+        
+        bool setHeuristic(SteeringBehavior *steeringBehavior, f32 heuristic);
+        f32 getHeuristic(SteeringBehavior *steeringBehavior)const;
+        
+        /**
+         *  @author James Folk, 16-02-10 21:02:01
+         *
+         *  @brief <#Description#>
+         *
+         *  @param steeringBehavior <#emitter description#>
+         *
+         *  @return <#return value description#>
+         *
+         *  @section ex1 Lua example
+         *  @snippet SteeringBehaviorMachine.lua SteeringBehaviorMachine_addSteeringBehavior_
+         */
+        bool addSteeringBehavior(SteeringBehavior *steeringBehavior, f32 heuristic);
+        
+        /**
+         *  @author James Folk, 16-02-10 21:02:05
+         *
+         *  @brief <#Description#>
+         *
+         *  @param steeringBehavior <#emitter description#>
+         *
+         *  @return <#return value description#>
+         *
+         *  @section ex1 Lua example
+         *  @snippet SteeringBehaviorMachine.lua SteeringBehaviorMachine_removeSteeringBehavior_
+         */
+        bool removeSteeringBehavior(SteeringBehavior * steeringBehavior);
+        
+        /**
+         *  @author James Folk, 16-02-10 21:02:09
+         *
+         *  @brief <#Description#>
+         *
+         *  @section ex1 Lua example
+         *  @snippet SteeringBehaviorMachine.lua SteeringBehaviorMachine_removeAllSteeringBehaviors_
+         */
+        void removeAllSteeringBehaviors();
+        
+        /**
+         *  @author James Folk, 16-02-10 21:02:14
+         *
+         *  @brief <#Description#>
+         *
+         *  @return <#return value description#>
+         *
+         *  @section ex1 Lua example
+         *  @snippet SteeringBehaviorMachine.lua SteeringBehaviorMachine_numberOfSteeringBehaviors_
+         */
+        u64 numberOfSteeringBehaviors() const;
+        
+        /**
+         *  @author James Folk, 16-02-10 21:02:19
+         *
+         *  @brief <#Description#>
+         *
+         *  @param particleEmitters <#particleEmitters description#>
+         *
+         *  @section ex1 Lua example
+         *  @snippet SteeringBehaviorMachine.lua SteeringBehaviorMachine_getSteeringBehaviors
+         */
+        virtual void getSteeringBehaviors(std::vector<SteeringBehavior*> & steeringBehaviors) const;
+        
+        void setMaxSpeed(const f32 speed);
+        f32 getMaxSpeed()const;
+        
+        void setMaxForce(const f32 speed);
+        f32 getMaxForce()const;
+        
+        const btVector3 &getHeadingVector()const;
     protected:
+        f32 getMaxForce2()const;
+        
+        void setCalculatedForce(const btVector3 &force);
+        typedef std::pair<SteeringBehavior*, f32> SteeringPair;
+        typedef std::map<SteeringBehavior*, f32> SteeringMap;
+        
+        SteeringMap m_SteeringBehaviorMap;
     private:
+        virtual const btVector3 &calculate(f32 timestep);
+        
+        btVector3 *m_CurrentForce;
+        
+        
+//        std::vector<SteeringPair> m_SteeringBehaviorList;
+        btVector3 *m_CurrentVelocity;
+        btVector3 *m_HeadingVector;
+        f32 m_MaxSpeed;
+        f32 m_MaxForce;
+        f32 m_MaxForce2;
+        
     };
 }
 

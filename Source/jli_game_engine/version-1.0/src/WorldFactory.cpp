@@ -145,6 +145,57 @@
 #include "Sprite2DBuilder.h"
 #include "SpriteFrameAtlas.h"
 #include "SpriteFrameAtlasBuilder.h"
+
+
+
+
+
+#include "SteeringBehavior.h"
+#include "SteeringBehaviorBuilder.h"
+#include "SteeringBehaviorAlignment.h"
+#include "SteeringBehaviorAlignmentBuilder.h"
+#include "SteeringBehaviorArrive.h"
+#include "SteeringBehaviorArriveBuilder.h"
+#include "SteeringBehaviorCohesion.h"
+#include "SteeringBehaviorCohesionBuilder.h"
+#include "SteeringBehaviorEvade.h"
+#include "SteeringBehaviorEvadeBuilder.h"
+#include "SteeringBehaviorFlee.h"
+#include "SteeringBehaviorFleeBuilder.h"
+#include "SteeringBehaviorFollowPath.h"
+#include "SteeringBehaviorFollowPathBuilder.h"
+#include "SteeringBehaviorHide.h"
+#include "SteeringBehaviorHideBuilder.h"
+#include "SteeringBehaviorInterpose.h"
+#include "SteeringBehaviorInterposeBuilder.h"
+#include "SteeringBehaviorMachine.h"
+#include "SteeringBehaviorMachineBuilder.h"
+#include "SteeringBehaviorMachineDithered.h"
+#include "SteeringBehaviorMachineDitheredBuilder.h"
+#include "SteeringBehaviorMachinePrioritized.h"
+#include "SteeringBehaviorMachinePrioritizedBuilder.h"
+#include "SteeringBehaviorMachineWeighted.h"
+#include "SteeringBehaviorMachineWeightedBuilder.h"
+#include "SteeringBehaviorObstacleAvoidance.h"
+#include "SteeringBehaviorObstacleAvoidanceBuilder.h"
+#include "SteeringBehaviorOffsetPursuit.h"
+#include "SteeringBehaviorOffsetPursuitBuilder.h"
+#include "SteeringBehaviorPursuit.h"
+#include "SteeringBehaviorPursuitBuilder.h"
+#include "SteeringBehaviorSeek.h"
+#include "SteeringBehaviorSeekBuilder.h"
+#include "SteeringBehaviorSeparation.h"
+#include "SteeringBehaviorSeparationBuilder.h"
+#include "SteeringBehaviorWallAvoidance.h"
+#include "SteeringBehaviorWallAvoidanceBuilder.h"
+#include "SteeringBehaviorWander.h"
+#include "SteeringBehaviorWanderBuilder.h"
+
+
+
+
+
+
 #include "StopWatch.h"
 #include "StopWatchBuilder.h"
 #include "TextboxHUD.h"
@@ -364,6 +415,26 @@ namespace njli
             case JLI_OBJECT_TYPE_SoundBuilder:
             case JLI_OBJECT_TYPE_Sprite2DBuilder:
             case JLI_OBJECT_TYPE_SpriteFrameAtlasBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorArriveBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorCohesionBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorEvadeBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorFleeBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorFollowPathBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorHideBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuitBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorPursuitBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorSeekBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorSeparationBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidanceBuilder:
+            case JLI_OBJECT_TYPE_SteeringBehaviorWanderBuilder:
             case JLI_OBJECT_TYPE_StopWatchBuilder:
             case JLI_OBJECT_TYPE_TimerBuilder:
             case JLI_OBJECT_TYPE_ThreadBuilder:
@@ -1580,6 +1651,406 @@ namespace njli
                 obj = (AbstractFactoryObject**)_obj;
             }
                 break;
+            case JLI_OBJECT_TYPE_SteeringBehavior:
+                {
+                SteeringBehavior **_obj = new SteeringBehavior*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehavior::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorBuilder:
+                {
+                SteeringBehaviorBuilder **_obj = new SteeringBehaviorBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorAlignment:
+                {
+                SteeringBehaviorAlignment **_obj = new SteeringBehaviorAlignment*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorAlignment::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder:
+                {
+                SteeringBehaviorAlignmentBuilder **_obj = new SteeringBehaviorAlignmentBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorAlignmentBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorArrive:
+                {
+                SteeringBehaviorArrive **_obj = new SteeringBehaviorArrive*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorArrive::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorArriveBuilder:
+                {
+                SteeringBehaviorArriveBuilder **_obj = new SteeringBehaviorArriveBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorArriveBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorCohesion:
+                {
+                SteeringBehaviorCohesion **_obj = new SteeringBehaviorCohesion*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorCohesion::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorCohesionBuilder:
+                {
+                SteeringBehaviorCohesionBuilder **_obj = new SteeringBehaviorCohesionBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorCohesionBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorEvade:
+                {
+                SteeringBehaviorEvade **_obj = new SteeringBehaviorEvade*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorEvade::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorEvadeBuilder:
+                {
+                SteeringBehaviorEvadeBuilder **_obj = new SteeringBehaviorEvadeBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorEvadeBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorFlee:
+                {
+                SteeringBehaviorFlee **_obj = new SteeringBehaviorFlee*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorFlee::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorFleeBuilder:
+                {
+                SteeringBehaviorFleeBuilder **_obj = new SteeringBehaviorFleeBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorFleeBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorFollowPath:
+                {
+                SteeringBehaviorFollowPath **_obj = new SteeringBehaviorFollowPath*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorFollowPath::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorFollowPathBuilder:
+                {
+                SteeringBehaviorFollowPathBuilder **_obj = new SteeringBehaviorFollowPathBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorFollowPathBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorHide:
+                {
+                SteeringBehaviorHide **_obj = new SteeringBehaviorHide*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorHide::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorHideBuilder:
+                {
+                SteeringBehaviorHideBuilder **_obj = new SteeringBehaviorHideBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorHideBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorInterpose:
+                {
+                SteeringBehaviorInterpose **_obj = new SteeringBehaviorInterpose*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorInterpose::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder:
+                {
+                SteeringBehaviorInterposeBuilder **_obj = new SteeringBehaviorInterposeBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorInterposeBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachine:
+                {
+                SteeringBehaviorMachine **_obj = new SteeringBehaviorMachine*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachine::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder:
+                {
+                SteeringBehaviorMachineBuilder **_obj = new SteeringBehaviorMachineBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachineBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineDithered:
+                {
+                SteeringBehaviorMachineDithered **_obj = new SteeringBehaviorMachineDithered*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachineDithered::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder:
+                {
+                SteeringBehaviorMachineDitheredBuilder **_obj = new SteeringBehaviorMachineDitheredBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachineDitheredBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritized:
+                {
+                SteeringBehaviorMachinePrioritized **_obj = new SteeringBehaviorMachinePrioritized*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachinePrioritized::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder:
+                {
+                SteeringBehaviorMachinePrioritizedBuilder **_obj = new SteeringBehaviorMachinePrioritizedBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachinePrioritizedBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeighted:
+                {
+                SteeringBehaviorMachineWeighted **_obj = new SteeringBehaviorMachineWeighted*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachineWeighted::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder:
+                {
+                SteeringBehaviorMachineWeightedBuilder **_obj = new SteeringBehaviorMachineWeightedBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorMachineWeightedBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidance:
+                {
+                SteeringBehaviorObstacleAvoidance **_obj = new SteeringBehaviorObstacleAvoidance*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorObstacleAvoidance::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder:
+                {
+                SteeringBehaviorObstacleAvoidanceBuilder **_obj = new SteeringBehaviorObstacleAvoidanceBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorObstacleAvoidanceBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuit:
+                {
+                SteeringBehaviorOffsetPursuit **_obj = new SteeringBehaviorOffsetPursuit*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorOffsetPursuit::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuitBuilder:
+                {
+                SteeringBehaviorOffsetPursuitBuilder **_obj = new SteeringBehaviorOffsetPursuitBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorOffsetPursuitBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorPursuit:
+                {
+                SteeringBehaviorPursuit **_obj = new SteeringBehaviorPursuit*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorPursuit::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorPursuitBuilder:
+                {
+                SteeringBehaviorPursuitBuilder **_obj = new SteeringBehaviorPursuitBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorPursuitBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorSeek:
+                {
+                SteeringBehaviorSeek **_obj = new SteeringBehaviorSeek*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorSeek::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorSeekBuilder:
+                {
+                SteeringBehaviorSeekBuilder **_obj = new SteeringBehaviorSeekBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorSeekBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorSeparation:
+                {
+                SteeringBehaviorSeparation **_obj = new SteeringBehaviorSeparation*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorSeparation::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorSeparationBuilder:
+                {
+                SteeringBehaviorSeparationBuilder **_obj = new SteeringBehaviorSeparationBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorSeparationBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidance:
+                {
+                SteeringBehaviorWallAvoidance **_obj = new SteeringBehaviorWallAvoidance*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorWallAvoidance::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidanceBuilder:
+                {
+                SteeringBehaviorWallAvoidanceBuilder **_obj = new SteeringBehaviorWallAvoidanceBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorWallAvoidanceBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorWander:
+                {
+                SteeringBehaviorWander **_obj = new SteeringBehaviorWander*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorWander::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
+            case JLI_OBJECT_TYPE_SteeringBehaviorWanderBuilder:
+                {
+                SteeringBehaviorWanderBuilder **_obj = new SteeringBehaviorWanderBuilder*[size];
+                for (s32 i = 0; i < size; ++i)
+                {
+                    _obj[i] = SteeringBehaviorWanderBuilder::create();
+                }
+                obj = (AbstractFactoryObject**)_obj;
+                }
+                break;
             case JLI_OBJECT_TYPE_StopWatch:
             {
                 StopWatch **_obj = new StopWatch*[size];
@@ -2095,6 +2566,126 @@ namespace njli
             case JLI_OBJECT_TYPE_SpriteFrameAtlasBuilder:
                     obj = new SpriteFrameAtlasBuilder();
                 break;
+//                case JLI_OBJECT_TYPE_SteeringBehavior:
+//                obj = new SteeringBehavior();
+//                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorBuilder:
+                obj = new SteeringBehaviorBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorAlignment:
+                obj = new SteeringBehaviorAlignment();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder:
+                obj = new SteeringBehaviorAlignmentBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorArrive:
+                obj = new SteeringBehaviorArrive();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorArriveBuilder:
+                obj = new SteeringBehaviorArriveBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorCohesion:
+                obj = new SteeringBehaviorCohesion();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorCohesionBuilder:
+                obj = new SteeringBehaviorCohesionBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorEvade:
+                obj = new SteeringBehaviorEvade();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorEvadeBuilder:
+                obj = new SteeringBehaviorEvadeBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFlee:
+                obj = new SteeringBehaviorFlee();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFleeBuilder:
+                obj = new SteeringBehaviorFleeBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFollowPath:
+                obj = new SteeringBehaviorFollowPath();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFollowPathBuilder:
+                obj = new SteeringBehaviorFollowPathBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorHide:
+                obj = new SteeringBehaviorHide();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorHideBuilder:
+                obj = new SteeringBehaviorHideBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorInterpose:
+                obj = new SteeringBehaviorInterpose();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder:
+                obj = new SteeringBehaviorInterposeBuilder();
+                break;
+//                case JLI_OBJECT_TYPE_SteeringBehaviorMachine:
+//                obj = new SteeringBehaviorMachine();
+//                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder:
+                obj = new SteeringBehaviorMachineBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineDithered:
+                obj = new SteeringBehaviorMachineDithered();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder:
+                obj = new SteeringBehaviorMachineDitheredBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritized:
+                obj = new SteeringBehaviorMachinePrioritized();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder:
+                obj = new SteeringBehaviorMachinePrioritizedBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeighted:
+                obj = new SteeringBehaviorMachineWeighted();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder:
+                obj = new SteeringBehaviorMachineWeightedBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidance:
+                obj = new SteeringBehaviorObstacleAvoidance();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder:
+                obj = new SteeringBehaviorObstacleAvoidanceBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuit:
+                obj = new SteeringBehaviorOffsetPursuit();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuitBuilder:
+                obj = new SteeringBehaviorOffsetPursuitBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorPursuit:
+                obj = new SteeringBehaviorPursuit();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorPursuitBuilder:
+                obj = new SteeringBehaviorPursuitBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeek:
+                obj = new SteeringBehaviorSeek();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeekBuilder:
+                obj = new SteeringBehaviorSeekBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeparation:
+                obj = new SteeringBehaviorSeparation();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeparationBuilder:
+                obj = new SteeringBehaviorSeparationBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidance:
+                obj = new SteeringBehaviorWallAvoidance();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidanceBuilder:
+                obj = new SteeringBehaviorWallAvoidanceBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWander:
+                obj = new SteeringBehaviorWander();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWanderBuilder:
+                obj = new SteeringBehaviorWanderBuilder();
+                break;
             case JLI_OBJECT_TYPE_StopWatch:
                     obj = new StopWatch();
                 break;
@@ -2335,6 +2926,126 @@ namespace njli
                 break;
             case JLI_OBJECT_TYPE_SpriteFrameAtlas:
                 obj = new SpriteFrameAtlas();
+                break;
+//                case JLI_OBJECT_TYPE_SteeringBehavior:
+//                obj = new SteeringBehavior();
+//                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorBuilder:
+                obj = new SteeringBehaviorBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorAlignment:
+                obj = new SteeringBehaviorAlignment();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder:
+                obj = new SteeringBehaviorAlignmentBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorArrive:
+                obj = new SteeringBehaviorArrive();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorArriveBuilder:
+                obj = new SteeringBehaviorArriveBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorCohesion:
+                obj = new SteeringBehaviorCohesion();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorCohesionBuilder:
+                obj = new SteeringBehaviorCohesionBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorEvade:
+                obj = new SteeringBehaviorEvade();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorEvadeBuilder:
+                obj = new SteeringBehaviorEvadeBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFlee:
+                obj = new SteeringBehaviorFlee();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFleeBuilder:
+                obj = new SteeringBehaviorFleeBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFollowPath:
+                obj = new SteeringBehaviorFollowPath();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFollowPathBuilder:
+                obj = new SteeringBehaviorFollowPathBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorHide:
+                obj = new SteeringBehaviorHide();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorHideBuilder:
+                obj = new SteeringBehaviorHideBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorInterpose:
+                obj = new SteeringBehaviorInterpose();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder:
+                obj = new SteeringBehaviorInterposeBuilder();
+                break;
+//                case JLI_OBJECT_TYPE_SteeringBehaviorMachine:
+//                obj = new SteeringBehaviorMachine();
+//                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder:
+                obj = new SteeringBehaviorMachineBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineDithered:
+                obj = new SteeringBehaviorMachineDithered();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder:
+                obj = new SteeringBehaviorMachineDitheredBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritized:
+                obj = new SteeringBehaviorMachinePrioritized();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder:
+                obj = new SteeringBehaviorMachinePrioritizedBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeighted:
+                obj = new SteeringBehaviorMachineWeighted();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder:
+                obj = new SteeringBehaviorMachineWeightedBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidance:
+                obj = new SteeringBehaviorObstacleAvoidance();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder:
+                obj = new SteeringBehaviorObstacleAvoidanceBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuit:
+                obj = new SteeringBehaviorOffsetPursuit();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuitBuilder:
+                obj = new SteeringBehaviorOffsetPursuitBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorPursuit:
+                obj = new SteeringBehaviorPursuit();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorPursuitBuilder:
+                obj = new SteeringBehaviorPursuitBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeek:
+                obj = new SteeringBehaviorSeek();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeekBuilder:
+                obj = new SteeringBehaviorSeekBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeparation:
+                obj = new SteeringBehaviorSeparation();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeparationBuilder:
+                obj = new SteeringBehaviorSeparationBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidance:
+                obj = new SteeringBehaviorWallAvoidance();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidanceBuilder:
+                obj = new SteeringBehaviorWallAvoidanceBuilder();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWander:
+                obj = new SteeringBehaviorWander();
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWanderBuilder:
+                obj = new SteeringBehaviorWanderBuilder();
                 break;
             case JLI_OBJECT_TYPE_StopWatch:
                 obj = new StopWatch(builder);
@@ -2731,6 +3442,126 @@ namespace njli
                 break;
             case JLI_OBJECT_TYPE_SpriteFrameAtlasBuilder:
                 obj = new SpriteFrameAtlasBuilder(*dynamic_cast<const SpriteFrameAtlasBuilder*>(&object));
+                break;
+//                case JLI_OBJECT_TYPE_SteeringBehavior:
+//                obj = new SteeringBehavior(*dynamic_cast<const SteeringBehavior*>(&object));
+//                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorBuilder:
+                obj = new SteeringBehaviorBuilder(*dynamic_cast<const SteeringBehaviorBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorAlignment:
+                obj = new SteeringBehaviorAlignment(*dynamic_cast<const SteeringBehaviorAlignment*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder:
+                obj = new SteeringBehaviorAlignmentBuilder(*dynamic_cast<const SteeringBehaviorAlignmentBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorArrive:
+                obj = new SteeringBehaviorArrive(*dynamic_cast<const SteeringBehaviorArrive*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorArriveBuilder:
+                obj = new SteeringBehaviorArriveBuilder(*dynamic_cast<const SteeringBehaviorArriveBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorCohesion:
+                obj = new SteeringBehaviorCohesion(*dynamic_cast<const SteeringBehaviorCohesion*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorCohesionBuilder:
+                obj = new SteeringBehaviorCohesionBuilder(*dynamic_cast<const SteeringBehaviorCohesionBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorEvade:
+                obj = new SteeringBehaviorEvade(*dynamic_cast<const SteeringBehaviorEvade*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorEvadeBuilder:
+                obj = new SteeringBehaviorEvadeBuilder(*dynamic_cast<const SteeringBehaviorEvadeBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFlee:
+                obj = new SteeringBehaviorFlee(*dynamic_cast<const SteeringBehaviorFlee*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFleeBuilder:
+                obj = new SteeringBehaviorFleeBuilder(*dynamic_cast<const SteeringBehaviorFleeBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFollowPath:
+                obj = new SteeringBehaviorFollowPath(*dynamic_cast<const SteeringBehaviorFollowPath*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorFollowPathBuilder:
+                obj = new SteeringBehaviorFollowPathBuilder(*dynamic_cast<const SteeringBehaviorFollowPathBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorHide:
+                obj = new SteeringBehaviorHide(*dynamic_cast<const SteeringBehaviorHide*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorHideBuilder:
+                obj = new SteeringBehaviorHideBuilder(*dynamic_cast<const SteeringBehaviorHideBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorInterpose:
+                obj = new SteeringBehaviorInterpose(*dynamic_cast<const SteeringBehaviorInterpose*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder:
+                obj = new SteeringBehaviorInterposeBuilder(*dynamic_cast<const SteeringBehaviorInterposeBuilder*>(&object));
+                break;
+//                case JLI_OBJECT_TYPE_SteeringBehaviorMachine:
+//                obj = new SteeringBehaviorMachine(*dynamic_cast<const SteeringBehaviorMachine*>(&object));
+//                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder:
+                obj = new SteeringBehaviorMachineBuilder(*dynamic_cast<const SteeringBehaviorMachineBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineDithered:
+                obj = new SteeringBehaviorMachineDithered(*dynamic_cast<const SteeringBehaviorMachineDithered*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder:
+                obj = new SteeringBehaviorMachineDitheredBuilder(*dynamic_cast<const SteeringBehaviorMachineDitheredBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritized:
+                obj = new SteeringBehaviorMachinePrioritized(*dynamic_cast<const SteeringBehaviorMachinePrioritized*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder:
+                obj = new SteeringBehaviorMachinePrioritizedBuilder(*dynamic_cast<const SteeringBehaviorMachinePrioritizedBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeighted:
+                obj = new SteeringBehaviorMachineWeighted(*dynamic_cast<const SteeringBehaviorMachineWeighted*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder:
+                obj = new SteeringBehaviorMachineWeightedBuilder(*dynamic_cast<const SteeringBehaviorMachineWeightedBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidance:
+                obj = new SteeringBehaviorObstacleAvoidance(*dynamic_cast<const SteeringBehaviorObstacleAvoidance*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder:
+                obj = new SteeringBehaviorObstacleAvoidanceBuilder(*dynamic_cast<const SteeringBehaviorObstacleAvoidanceBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuit:
+                obj = new SteeringBehaviorOffsetPursuit(*dynamic_cast<const SteeringBehaviorOffsetPursuit*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuitBuilder:
+                obj = new SteeringBehaviorOffsetPursuitBuilder(*dynamic_cast<const SteeringBehaviorOffsetPursuitBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorPursuit:
+                obj = new SteeringBehaviorPursuit(*dynamic_cast<const SteeringBehaviorPursuit*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorPursuitBuilder:
+                obj = new SteeringBehaviorPursuitBuilder(*dynamic_cast<const SteeringBehaviorPursuitBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeek:
+                obj = new SteeringBehaviorSeek(*dynamic_cast<const SteeringBehaviorSeek*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeekBuilder:
+                obj = new SteeringBehaviorSeekBuilder(*dynamic_cast<const SteeringBehaviorSeekBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeparation:
+                obj = new SteeringBehaviorSeparation(*dynamic_cast<const SteeringBehaviorSeparation*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorSeparationBuilder:
+                obj = new SteeringBehaviorSeparationBuilder(*dynamic_cast<const SteeringBehaviorSeparationBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidance:
+                obj = new SteeringBehaviorWallAvoidance(*dynamic_cast<const SteeringBehaviorWallAvoidance*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidanceBuilder:
+                obj = new SteeringBehaviorWallAvoidanceBuilder(*dynamic_cast<const SteeringBehaviorWallAvoidanceBuilder*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWander:
+                obj = new SteeringBehaviorWander(*dynamic_cast<const SteeringBehaviorWander*>(&object));
+                break;
+                case JLI_OBJECT_TYPE_SteeringBehaviorWanderBuilder:
+                obj = new SteeringBehaviorWanderBuilder(*dynamic_cast<const SteeringBehaviorWanderBuilder*>(&object));
                 break;
             case JLI_OBJECT_TYPE_StopWatch:
                 obj = new StopWatch(*dynamic_cast<const StopWatch*>(&object));

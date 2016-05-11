@@ -375,8 +375,8 @@ namespace njli
         s32 idx = getChildIndex(m_Diffuse);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -386,8 +386,8 @@ namespace njli
         s32 idx = getChildIndex(m_Ambient);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -397,8 +397,8 @@ namespace njli
         s32 idx = getChildIndex(m_Specular);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -408,8 +408,8 @@ namespace njli
         s32 idx = getChildIndex(m_Normal);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -419,8 +419,8 @@ namespace njli
         s32 idx = getChildIndex(m_Reflective);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -430,8 +430,8 @@ namespace njli
         s32 idx = getChildIndex(m_Emission);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -441,8 +441,8 @@ namespace njli
         s32 idx = getChildIndex(m_Transparent);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -452,8 +452,8 @@ namespace njli
         s32 idx = getChildIndex(m_Multiply);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -463,8 +463,8 @@ namespace njli
         s32 idx = getChildIndex(m_Diffuse);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -474,8 +474,8 @@ namespace njli
         s32 idx = getChildIndex(m_Ambient);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -485,8 +485,8 @@ namespace njli
         s32 idx = getChildIndex(m_Specular);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -496,8 +496,8 @@ namespace njli
         s32 idx = getChildIndex(m_Normal);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -507,8 +507,8 @@ namespace njli
         s32 idx = getChildIndex(m_Reflective);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -518,8 +518,8 @@ namespace njli
         s32 idx = getChildIndex(m_Emission);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -529,8 +529,8 @@ namespace njli
         s32 idx = getChildIndex(m_Transparent);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }
@@ -540,8 +540,8 @@ namespace njli
         s32 idx = getChildIndex(m_Multiply);
         if(idx != -1)
         {
-            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
-            return reinterpret_cast<const MaterialProperty*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const MaterialProperty*>(getChild(idx)));
+            return dynamic_cast<const MaterialProperty*>(getChild(idx));
         }
         return NULL;
     }

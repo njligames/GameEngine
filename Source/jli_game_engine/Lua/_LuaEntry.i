@@ -3,9 +3,9 @@
 %module njli
 
 //MARK: Tested Ignore, successfully
-%include "_Ignore.i"
-%include "../../platform/Lua/_Ignore.i"
-%include "../../bullet/Lua/_Ignore.i"
+%include "_IgnoreNJLI.i"
+%include "../../platform/Lua/_IgnorePlatform.i"
+%include "../../bullet/Lua/_IgnoreBullet.i"
 
 //MARK: Tested ModuleBullet, succesfully
 %include "_Module_Bullet.i"
@@ -46,14 +46,14 @@
 %include "../../NJLISwigOverwrite.i"
 
 //MARK: Tested Apply, successfully
-%include "_Apply.i"
-%include "../../platform/Lua/_Apply.i"
-%include "../../bullet/Lua/_Apply.i"
+%include "_ApplyNJLI.i"
+%include "../../platform/Lua/_ApplyPlatform.i"
+%include "../../bullet/Lua/_ApplyBullet.i"
 
 //MARK: Tested Rename, successfully
-%include "_Rename.i"
-%include "../../platform/Lua/_Rename.i"
-%include "../../bullet/Lua/_Rename.i"
+%include "_RenameNJLI.i"
+%include "../../platform/Lua/_RenamePlatform.i"
+%include "../../bullet/Lua/_RenameBullet.i"
 
 //MARK: %luacode wrapper doesn't work in an external file.
 %luacode
@@ -204,6 +204,47 @@
 #include "Sprite2DBuilder.h"
 #include "SpriteFrameAtlas.h"
 #include "SpriteFrameAtlasBuilder.h"
+#include "SteeringBehavior.h"
+#include "SteeringBehaviorBuilder.h"
+#include "SteeringBehaviorAlignment.h"
+#include "SteeringBehaviorAlignmentBuilder.h"
+#include "SteeringBehaviorArrive.h"
+#include "SteeringBehaviorArriveBuilder.h"
+#include "SteeringBehaviorCohesion.h"
+#include "SteeringBehaviorCohesionBuilder.h"
+#include "SteeringBehaviorEvade.h"
+#include "SteeringBehaviorEvadeBuilder.h"
+#include "SteeringBehaviorFlee.h"
+#include "SteeringBehaviorFleeBuilder.h"
+#include "SteeringBehaviorFollowPath.h"
+#include "SteeringBehaviorFollowPathBuilder.h"
+#include "SteeringBehaviorHide.h"
+#include "SteeringBehaviorHideBuilder.h"
+#include "SteeringBehaviorInterpose.h"
+#include "SteeringBehaviorInterposeBuilder.h"
+#include "SteeringBehaviorMachine.h"
+#include "SteeringBehaviorMachineBuilder.h"
+#include "SteeringBehaviorMachineDithered.h"
+#include "SteeringBehaviorMachineDitheredBuilder.h"
+#include "SteeringBehaviorMachinePrioritized.h"
+#include "SteeringBehaviorMachinePrioritizedBuilder.h"
+#include "SteeringBehaviorMachineWeighted.h"
+#include "SteeringBehaviorMachineWeightedBuilder.h"
+#include "SteeringBehaviorObstacleAvoidance.h"
+#include "SteeringBehaviorObstacleAvoidanceBuilder.h"
+#include "SteeringBehaviorOffsetPursuit.h"
+#include "SteeringBehaviorOffsetPursuitBuilder.h"
+#include "SteeringBehaviorPursuit.h"
+#include "SteeringBehaviorPursuitBuilder.h"
+#include "SteeringBehaviorSeek.h"
+#include "SteeringBehaviorSeekBuilder.h"
+#include "SteeringBehaviorSeparation.h"
+#include "SteeringBehaviorSeparationBuilder.h"
+#include "SteeringBehaviorWallAvoidance.h"
+#include "SteeringBehaviorWallAvoidanceBuilder.h"
+#include "SteeringBehaviorWander.h"
+#include "SteeringBehaviorWanderBuilder.h"
+    
 #include "StopWatch.h"
 #include "StopWatchBuilder.h"
 #include "TextboxHUD.h"
@@ -247,15 +288,15 @@
 %}
 
 //MARK: Tested Template, successfully
-%include "../../bullet/Lua/_Template.i"
-%include "../../platform/Lua/_Template.i"
-%include "_Template.i"
+%include "../../bullet/Lua/_TemplateBullet.i"
+%include "../../platform/Lua/_TemplatePlatform.i"
+%include "_TemplateNJLI.i"
 
 
 //MARK: Tested Array, succesfully.
-%include "../../bullet/Lua/_Array.i"
-%include "../../platform/Lua/_Array.i"
-%include "_Array.i"
+%include "../../bullet/Lua/_ArrayBullet.i"
+%include "../../platform/Lua/_ArrayPlatform.i"
+%include "_ArrayNJLI.i"
 
 //MARK: Tested Factory, successfully
 //%include "AbstractActionable.i"
@@ -396,6 +437,48 @@
 %include "Sprite2DBuilder.i"
 %include "SpriteFrameAtlas.i"
 %include "SpriteFrameAtlasBuilder.i"
+%include "SteeringBehavior.i"
+%include "SteeringBehaviorBuilder.i"
+%include "SteeringBehaviorAlignment.i"
+%include "SteeringBehaviorAlignmentBuilder.i"
+%include "SteeringBehaviorArrive.i"
+%include "SteeringBehaviorArriveBuilder.i"
+%include "SteeringBehaviorCohesion.i"
+%include "SteeringBehaviorCohesionBuilder.i"
+%include "SteeringBehaviorEvade.i"
+%include "SteeringBehaviorEvadeBuilder.i"
+%include "SteeringBehaviorFlee.i"
+%include "SteeringBehaviorFleeBuilder.i"
+%include "SteeringBehaviorFollowPath.i"
+%include "SteeringBehaviorFollowPathBuilder.i"
+%include "SteeringBehaviorHide.i"
+%include "SteeringBehaviorHideBuilder.i"
+%include "SteeringBehaviorInterpose.i"
+%include "SteeringBehaviorInterposeBuilder.i"
+%include "SteeringBehaviorMachine.i"
+%include "SteeringBehaviorMachineBuilder.i"
+%include "SteeringBehaviorMachineDithered.i"
+%include "SteeringBehaviorMachineDitheredBuilder.i"
+%include "SteeringBehaviorMachinePrioritized.i"
+%include "SteeringBehaviorMachinePrioritizedBuilder.i"
+%include "SteeringBehaviorMachineWeighted.i"
+%include "SteeringBehaviorMachineWeightedBuilder.i"
+%include "SteeringBehaviorObstacleAvoidance.i"
+%include "SteeringBehaviorObstacleAvoidanceBuilder.i"
+%include "SteeringBehaviorOffsetPursuit.i"
+%include "SteeringBehaviorOffsetPursuitBuilder.i"
+%include "SteeringBehaviorPursuit.i"
+%include "SteeringBehaviorPursuitBuilder.i"
+%include "SteeringBehaviorSeek.i"
+%include "SteeringBehaviorSeekBuilder.i"
+%include "SteeringBehaviorSeparation.i"
+%include "SteeringBehaviorSeparationBuilder.i"
+%include "SteeringBehaviorWallAvoidance.i"
+%include "SteeringBehaviorWallAvoidanceBuilder.i"
+%include "SteeringBehaviorWander.i"
+%include "SteeringBehaviorWanderBuilder.i"
+
+
 %include "StopWatch.i"
 %include "StopWatchBuilder.i"
 %include "TextboxHUD.i"
@@ -577,6 +660,46 @@
 %include "Sprite2DBuilder.h"
 %include "SpriteFrameAtlas.h"
 %include "SpriteFrameAtlasBuilder.h"
+%include "SteeringBehavior.h"
+%include "SteeringBehaviorBuilder.h"
+%include "SteeringBehaviorAlignment.h"
+%include "SteeringBehaviorAlignmentBuilder.h"
+%include "SteeringBehaviorArrive.h"
+%include "SteeringBehaviorArriveBuilder.h"
+%include "SteeringBehaviorCohesion.h"
+%include "SteeringBehaviorCohesionBuilder.h"
+%include "SteeringBehaviorEvade.h"
+%include "SteeringBehaviorEvadeBuilder.h"
+%include "SteeringBehaviorFlee.h"
+%include "SteeringBehaviorFleeBuilder.h"
+%include "SteeringBehaviorFollowPath.h"
+%include "SteeringBehaviorFollowPathBuilder.h"
+%include "SteeringBehaviorHide.h"
+%include "SteeringBehaviorHideBuilder.h"
+%include "SteeringBehaviorInterpose.h"
+%include "SteeringBehaviorInterposeBuilder.h"
+%include "SteeringBehaviorMachine.h"
+%include "SteeringBehaviorMachineBuilder.h"
+%include "SteeringBehaviorMachineDithered.h"
+%include "SteeringBehaviorMachineDitheredBuilder.h"
+%include "SteeringBehaviorMachinePrioritized.h"
+%include "SteeringBehaviorMachinePrioritizedBuilder.h"
+%include "SteeringBehaviorMachineWeighted.h"
+%include "SteeringBehaviorMachineWeightedBuilder.h"
+%include "SteeringBehaviorObstacleAvoidance.h"
+%include "SteeringBehaviorObstacleAvoidanceBuilder.h"
+%include "SteeringBehaviorOffsetPursuit.h"
+%include "SteeringBehaviorOffsetPursuitBuilder.h"
+%include "SteeringBehaviorPursuit.h"
+%include "SteeringBehaviorPursuitBuilder.h"
+%include "SteeringBehaviorSeek.h"
+%include "SteeringBehaviorSeekBuilder.h"
+%include "SteeringBehaviorSeparation.h"
+%include "SteeringBehaviorSeparationBuilder.h"
+%include "SteeringBehaviorWallAvoidance.h"
+%include "SteeringBehaviorWallAvoidanceBuilder.h"
+%include "SteeringBehaviorWander.h"
+%include "SteeringBehaviorWanderBuilder.h"
 %include "StopWatch.h"
 %include "StopWatchBuilder.h"
 %include "TextboxHUD.h"
@@ -1565,6 +1688,333 @@
                 SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SpriteFrameAtlasBuilder, 0); SWIG_arg++;
             }
                 break;
+                
+                
+                
+                
+                case njli::JLI_OBJECT_TYPE_SteeringBehavior:
+{
+njli::SteeringBehavior *result = njli::SteeringBehavior::create();
+lua_pop(L, 1);
+njli::SteeringBehavior::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehavior, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorBuilder:
+{
+njli::SteeringBehaviorBuilder *result = njli::SteeringBehaviorBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorAlignment:
+{
+njli::SteeringBehaviorAlignment *result = njli::SteeringBehaviorAlignment::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorAlignment::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorAlignment, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder:
+{
+njli::SteeringBehaviorAlignmentBuilder *result = njli::SteeringBehaviorAlignmentBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorAlignmentBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorAlignmentBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorArrive:
+{
+njli::SteeringBehaviorArrive *result = njli::SteeringBehaviorArrive::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorArrive::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorArrive, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorArriveBuilder:
+{
+njli::SteeringBehaviorArriveBuilder *result = njli::SteeringBehaviorArriveBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorArriveBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorArriveBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorCohesion:
+{
+njli::SteeringBehaviorCohesion *result = njli::SteeringBehaviorCohesion::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorCohesion::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorCohesion, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorCohesionBuilder:
+{
+njli::SteeringBehaviorCohesionBuilder *result = njli::SteeringBehaviorCohesionBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorCohesionBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorCohesionBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorEvade:
+{
+njli::SteeringBehaviorEvade *result = njli::SteeringBehaviorEvade::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorEvade::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorEvade, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorEvadeBuilder:
+{
+njli::SteeringBehaviorEvadeBuilder *result = njli::SteeringBehaviorEvadeBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorEvadeBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorEvadeBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorFlee:
+{
+njli::SteeringBehaviorFlee *result = njli::SteeringBehaviorFlee::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorFlee::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorFlee, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorFleeBuilder:
+{
+njli::SteeringBehaviorFleeBuilder *result = njli::SteeringBehaviorFleeBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorFleeBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorFleeBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorFollowPath:
+{
+njli::SteeringBehaviorFollowPath *result = njli::SteeringBehaviorFollowPath::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorFollowPath::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorFollowPath, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorFollowPathBuilder:
+{
+njli::SteeringBehaviorFollowPathBuilder *result = njli::SteeringBehaviorFollowPathBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorFollowPathBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorFollowPathBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorHide:
+{
+njli::SteeringBehaviorHide *result = njli::SteeringBehaviorHide::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorHide::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorHide, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorHideBuilder:
+{
+njli::SteeringBehaviorHideBuilder *result = njli::SteeringBehaviorHideBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorHideBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorHideBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorInterpose:
+{
+njli::SteeringBehaviorInterpose *result = njli::SteeringBehaviorInterpose::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorInterpose::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorInterpose, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder:
+{
+njli::SteeringBehaviorInterposeBuilder *result = njli::SteeringBehaviorInterposeBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorInterposeBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorInterposeBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachine:
+{
+njli::SteeringBehaviorMachine *result = njli::SteeringBehaviorMachine::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachine::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachine, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder:
+{
+njli::SteeringBehaviorMachineBuilder *result = njli::SteeringBehaviorMachineBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachineBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachineBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachineDithered:
+{
+njli::SteeringBehaviorMachineDithered *result = njli::SteeringBehaviorMachineDithered::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachineDithered::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachineDithered, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder:
+{
+njli::SteeringBehaviorMachineDitheredBuilder *result = njli::SteeringBehaviorMachineDitheredBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachineDitheredBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachineDitheredBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritized:
+{
+njli::SteeringBehaviorMachinePrioritized *result = njli::SteeringBehaviorMachinePrioritized::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachinePrioritized::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachinePrioritized, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder:
+{
+njli::SteeringBehaviorMachinePrioritizedBuilder *result = njli::SteeringBehaviorMachinePrioritizedBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachinePrioritizedBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachinePrioritizedBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachineWeighted:
+{
+njli::SteeringBehaviorMachineWeighted *result = njli::SteeringBehaviorMachineWeighted::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachineWeighted::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachineWeighted, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder:
+{
+njli::SteeringBehaviorMachineWeightedBuilder *result = njli::SteeringBehaviorMachineWeightedBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorMachineWeightedBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorMachineWeightedBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidance:
+{
+njli::SteeringBehaviorObstacleAvoidance *result = njli::SteeringBehaviorObstacleAvoidance::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorObstacleAvoidance::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorObstacleAvoidance, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder:
+{
+njli::SteeringBehaviorObstacleAvoidanceBuilder *result = njli::SteeringBehaviorObstacleAvoidanceBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorObstacleAvoidanceBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorObstacleAvoidanceBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuit:
+{
+njli::SteeringBehaviorOffsetPursuit *result = njli::SteeringBehaviorOffsetPursuit::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorOffsetPursuit::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorOffsetPursuit, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuitBuilder:
+{
+njli::SteeringBehaviorOffsetPursuitBuilder *result = njli::SteeringBehaviorOffsetPursuitBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorOffsetPursuitBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorOffsetPursuitBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorPursuit:
+{
+njli::SteeringBehaviorPursuit *result = njli::SteeringBehaviorPursuit::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorPursuit::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorPursuit, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorPursuitBuilder:
+{
+njli::SteeringBehaviorPursuitBuilder *result = njli::SteeringBehaviorPursuitBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorPursuitBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorPursuitBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorSeek:
+{
+njli::SteeringBehaviorSeek *result = njli::SteeringBehaviorSeek::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorSeek::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorSeek, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorSeekBuilder:
+{
+njli::SteeringBehaviorSeekBuilder *result = njli::SteeringBehaviorSeekBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorSeekBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorSeekBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorSeparation:
+{
+njli::SteeringBehaviorSeparation *result = njli::SteeringBehaviorSeparation::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorSeparation::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorSeparation, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorSeparationBuilder:
+{
+njli::SteeringBehaviorSeparationBuilder *result = njli::SteeringBehaviorSeparationBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorSeparationBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorSeparationBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidance:
+{
+njli::SteeringBehaviorWallAvoidance *result = njli::SteeringBehaviorWallAvoidance::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorWallAvoidance::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorWallAvoidance, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorWallAvoidanceBuilder:
+{
+njli::SteeringBehaviorWallAvoidanceBuilder *result = njli::SteeringBehaviorWallAvoidanceBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorWallAvoidanceBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorWallAvoidanceBuilder, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorWander:
+{
+njli::SteeringBehaviorWander *result = njli::SteeringBehaviorWander::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorWander::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorWander, 0); SWIG_arg++;
+}
+break;
+                case njli::JLI_OBJECT_TYPE_SteeringBehaviorWanderBuilder:
+{
+njli::SteeringBehaviorWanderBuilder *result = njli::SteeringBehaviorWanderBuilder::create();
+lua_pop(L, 1);
+njli::SteeringBehaviorWanderBuilder::load(*result, L, -1);
+SWIG_NewPointerObj(L, result, SWIGTYPE_p_njli__SteeringBehaviorWanderBuilder, 0); SWIG_arg++;
+}
+break;
+                
+                
+                
             case njli::JLI_OBJECT_TYPE_StopWatch:
             {
                 njli::StopWatch *result = njli::StopWatch::create();
@@ -1817,6 +2267,48 @@
 %include "Sprite2DBuilder.i"
 %include "SpriteFrameAtlas.i"
 %include "SpriteFrameAtlasBuilder.i"
+
+%include "SteeringBehavior.i"
+%include "SteeringBehaviorBuilder.i"
+%include "SteeringBehaviorAlignment.i"
+%include "SteeringBehaviorAlignmentBuilder.i"
+%include "SteeringBehaviorArrive.i"
+%include "SteeringBehaviorArriveBuilder.i"
+%include "SteeringBehaviorCohesion.i"
+%include "SteeringBehaviorCohesionBuilder.i"
+%include "SteeringBehaviorEvade.i"
+%include "SteeringBehaviorEvadeBuilder.i"
+%include "SteeringBehaviorFlee.i"
+%include "SteeringBehaviorFleeBuilder.i"
+%include "SteeringBehaviorFollowPath.i"
+%include "SteeringBehaviorFollowPathBuilder.i"
+%include "SteeringBehaviorHide.i"
+%include "SteeringBehaviorHideBuilder.i"
+%include "SteeringBehaviorInterpose.i"
+%include "SteeringBehaviorInterposeBuilder.i"
+%include "SteeringBehaviorMachine.i"
+%include "SteeringBehaviorMachineBuilder.i"
+%include "SteeringBehaviorMachineDithered.i"
+%include "SteeringBehaviorMachineDitheredBuilder.i"
+%include "SteeringBehaviorMachinePrioritized.i"
+%include "SteeringBehaviorMachinePrioritizedBuilder.i"
+%include "SteeringBehaviorMachineWeighted.i"
+%include "SteeringBehaviorMachineWeightedBuilder.i"
+%include "SteeringBehaviorObstacleAvoidance.i"
+%include "SteeringBehaviorObstacleAvoidanceBuilder.i"
+%include "SteeringBehaviorOffsetPursuit.i"
+%include "SteeringBehaviorOffsetPursuitBuilder.i"
+%include "SteeringBehaviorPursuit.i"
+%include "SteeringBehaviorPursuitBuilder.i"
+%include "SteeringBehaviorSeek.i"
+%include "SteeringBehaviorSeekBuilder.i"
+%include "SteeringBehaviorSeparation.i"
+%include "SteeringBehaviorSeparationBuilder.i"
+%include "SteeringBehaviorWallAvoidance.i"
+%include "SteeringBehaviorWallAvoidanceBuilder.i"
+%include "SteeringBehaviorWander.i"
+%include "SteeringBehaviorWanderBuilder.i"
+
 %include "StopWatch.i"
 %include "StopWatchBuilder.i"
 %include "TextboxHUD.i"

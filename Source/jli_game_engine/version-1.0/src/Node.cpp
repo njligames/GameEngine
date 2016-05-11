@@ -34,6 +34,7 @@
 
 #include "btQuickprof.h"
 #include "Thread.h"
+#include "SteeringBehaviorMachine.h"
 
 
 
@@ -65,7 +66,8 @@ namespace njli
     m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
-    m_Pivot(new btTransform(btTransform::getIdentity()))//,
+    m_Pivot(new btTransform(btTransform::getIdentity())),
+    m_SteeringBehaviorMachine(NULL)//,
 //    m_ActionThread(Thread::create())
     {
         addChild(m_NodeStateMachine);
@@ -92,7 +94,8 @@ namespace njli
     m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
-    m_Pivot(new btTransform(btTransform::getIdentity()))//,
+    m_Pivot(new btTransform(btTransform::getIdentity())),
+    m_SteeringBehaviorMachine(NULL)//,
 //    m_ActionThread(Thread::create())
     {
         addChild(m_NodeStateMachine);
@@ -118,7 +121,8 @@ namespace njli
     m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
-    m_Pivot(new btTransform(btTransform::getIdentity()))//,
+    m_Pivot(new btTransform(btTransform::getIdentity())),
+    m_SteeringBehaviorMachine(NULL)//,
 //    m_ActionThread(Thread::create())
     {
         addChild(m_NodeStateMachine);
@@ -451,6 +455,50 @@ namespace njli
         *m_Pivot = pivot;
     }
     
+    void Node::addSteeringBehaviorMachine(SteeringBehaviorMachine *steeringBehaviorMachine)
+    {
+        DEBUG_ASSERT(steeringBehaviorMachine != NULL);
+        
+        removeLight();
+        
+        m_SteeringBehaviorMachine = steeringBehaviorMachine;
+        
+        addChild(m_SteeringBehaviorMachine);
+    }
+    
+    void Node::removeSteeringBehaviorMachine()
+    {
+        if(getSteeringBehaviorMachine())
+        {
+            removeChild(getSteeringBehaviorMachine());
+        }
+        
+        m_SteeringBehaviorMachine = NULL;
+
+    }
+    
+    SteeringBehaviorMachine *Node::getSteeringBehaviorMachine()
+    {
+        s32 idx = getChildIndex(m_SteeringBehaviorMachine);
+        if(idx != -1)
+        {
+//            DEBUG_ASSERT(dynamic_cast<SteeringBehaviorMachine*>(getChild(idx)));
+            return dynamic_cast<SteeringBehaviorMachine*>(getChild(idx));
+        }
+        return NULL;
+    }
+    
+    const SteeringBehaviorMachine *Node::getSteeringBehaviorMachine()const
+    {
+        s32 idx = getChildIndex(m_SteeringBehaviorMachine);
+        if(idx != -1)
+        {
+//            DEBUG_ASSERT(dynamic_cast<const SteeringBehaviorMachine*>(getChild(idx)));
+            return dynamic_cast<const SteeringBehaviorMachine*>(getChild(idx));
+        }
+        return NULL;
+    }
+    
     s32 Node::addParticleEmitter(ParticleEmitter *emitter)
     {
         DEBUG_ASSERT(NULL != emitter);
@@ -597,8 +645,8 @@ namespace njli
 //        }
 //#else
         {
-            DEBUG_ASSERT(dynamic_cast<PhysicsBody*>(getChild(idx)));
-            return reinterpret_cast<PhysicsBody*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<PhysicsBody*>(getChild(idx)));
+            return dynamic_cast<PhysicsBody*>(getChild(idx));
         }
 //#endif
         
@@ -615,8 +663,8 @@ namespace njli
 //        }
 //#else
         {
-            DEBUG_ASSERT(dynamic_cast<const PhysicsBody*>(getChild(idx)));
-            return reinterpret_cast<const PhysicsBody*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const PhysicsBody*>(getChild(idx)));
+            return dynamic_cast<const PhysicsBody*>(getChild(idx));
         }
 //#endif
         
@@ -749,8 +797,8 @@ namespace njli
             s32 idx = getChildIndex(m_Geometry);
             if(idx != -1)
             {
-                DEBUG_ASSERT(dynamic_cast<Geometry*>(getChild(idx)));
-                return reinterpret_cast<Geometry*>(getChild(idx));
+//                DEBUG_ASSERT(dynamic_cast<Geometry*>(getChild(idx)));
+                return dynamic_cast<Geometry*>(getChild(idx));
             }
 //                return dynamic_cast<Geometry*>(getChild(idx));
         }
@@ -1047,8 +1095,8 @@ namespace njli
 //        }
 //#else
         {
-            DEBUG_ASSERT(dynamic_cast<NodeStateMachine*>(getChild(idx)));
-            return reinterpret_cast<NodeStateMachine*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<NodeStateMachine*>(getChild(idx)));
+            return dynamic_cast<NodeStateMachine*>(getChild(idx));
         }
 //#endif
         
@@ -1066,8 +1114,8 @@ namespace njli
 //        }
 //#else
         {
-            DEBUG_ASSERT(dynamic_cast<const NodeStateMachine*>(getChild(idx)));
-            return reinterpret_cast<const NodeStateMachine*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const NodeStateMachine*>(getChild(idx)));
+            return dynamic_cast<const NodeStateMachine*>(getChild(idx));
         }
 //#endif
         
@@ -1429,7 +1477,11 @@ namespace njli
     {
         BT_PROFILE("Node::update");
 
-        
+        SteeringBehaviorMachine *steeringMachine = getSteeringBehaviorMachine();
+        if(steeringMachine)
+        {
+            steeringMachine->calculate(timeStep);
+        }
         
 //        if(m_ActionThread->isPaused())
 //        {

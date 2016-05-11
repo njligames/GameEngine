@@ -30,6 +30,7 @@ namespace njli
     public AbstractFactoryObject
     {
         friend class WorldFactory;
+        
     protected:
         SteeringBehavior();
         SteeringBehavior(const AbstractBuilder&);

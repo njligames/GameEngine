@@ -400,7 +400,6 @@ namespace njli
         
         JLI_OBJECT_TYPE_SteeringBehavior,
         JLI_OBJECT_TYPE_SteeringBehaviorBuilder,
-        
         JLI_OBJECT_TYPE_SteeringBehaviorAlignment,
         JLI_OBJECT_TYPE_SteeringBehaviorAlignmentBuilder,
         JLI_OBJECT_TYPE_SteeringBehaviorArrive,
@@ -419,6 +418,12 @@ namespace njli
         JLI_OBJECT_TYPE_SteeringBehaviorInterposeBuilder,
         JLI_OBJECT_TYPE_SteeringBehaviorMachine,
         JLI_OBJECT_TYPE_SteeringBehaviorMachineBuilder,
+        JLI_OBJECT_TYPE_SteeringBehaviorMachineDithered,
+        JLI_OBJECT_TYPE_SteeringBehaviorMachineDitheredBuilder,
+        JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritized,
+        JLI_OBJECT_TYPE_SteeringBehaviorMachinePrioritizedBuilder,
+        JLI_OBJECT_TYPE_SteeringBehaviorMachineWeighted,
+        JLI_OBJECT_TYPE_SteeringBehaviorMachineWeightedBuilder,
         JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidance,
         JLI_OBJECT_TYPE_SteeringBehaviorObstacleAvoidanceBuilder,
         JLI_OBJECT_TYPE_SteeringBehaviorOffsetPursuit,

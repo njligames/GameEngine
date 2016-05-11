@@ -600,8 +600,8 @@ namespace njli
 //        }
 //#else
         {
-            DEBUG_ASSERT(dynamic_cast<PhysicsWorld*>(getChild(idx)));
-            return reinterpret_cast<PhysicsWorld*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<PhysicsWorld*>(getChild(idx)));
+            return dynamic_cast<PhysicsWorld*>(getChild(idx));
         }
 //#endif
         
@@ -618,8 +618,8 @@ namespace njli
 //        }
 //#else
         {
-            DEBUG_ASSERT(dynamic_cast<const PhysicsWorld*>(getChild(idx)));
-            return reinterpret_cast<const PhysicsWorld*>(getChild(idx));
+//            DEBUG_ASSERT(dynamic_cast<const PhysicsWorld*>(getChild(idx)));
+            return dynamic_cast<const PhysicsWorld*>(getChild(idx));
         }
 //#endif
         

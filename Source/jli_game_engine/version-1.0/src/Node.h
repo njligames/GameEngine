@@ -41,6 +41,7 @@ class PhysicsRayContact;
 class Sound;
 class PhysicsConstraint;
 class Thread;
+    class SteeringBehaviorMachine;
 
 /**
      *  <#Description#>
@@ -520,6 +521,11 @@ public:
          */
     void setPivot(const btTransform& pivot);
 
+    void addSteeringBehaviorMachine(SteeringBehaviorMachine *sb);
+    void removeSteeringBehaviorMachine();
+    SteeringBehaviorMachine *getSteeringBehaviorMachine();
+    const SteeringBehaviorMachine *getSteeringBehaviorMachine()const;
+    
     /**
          *  @author James Folk, 16-02-10 21:02:01
          *
@@ -1575,6 +1581,8 @@ private:
     btQuaternion* m_Orientation;
     btVector3* m_Scale;
     btTransform* m_Pivot;
+    
+    SteeringBehaviorMachine *m_SteeringBehaviorMachine;
 };
 }
 

@@ -38,6 +38,9 @@ void _debug_log_stderr(const char* tag, const char* fmt, ...);
     }
 #endif
 
+
+
+
 #if defined(DEBUG) || defined(_DEBUG)
 #define DEBUG_ASSERT(cond) \
     do {                   \
@@ -51,26 +54,51 @@ void _debug_log_stderr(const char* tag, const char* fmt, ...);
     }
 #endif
 
+
+
+
+
+
+
 #define DEBUG_LOG_PRINT_V(tag, fmt, ...)                                                      \
     do {                                                                                      \
         if (LOGGING_ON)                                                                       \
             _debug_log_v(tag, "%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); \
     } while (0)
+
+
+
+
 #define DEBUG_LOG_PRINT_D(tag, fmt, ...)                                                      \
     do {                                                                                      \
         if (LOGGING_ON)                                                                       \
             _debug_log_d(tag, "%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); \
     } while (0)
+
+
+
+
+
 #define DEBUG_LOG_PRINT_W(tag, fmt, ...)                                                      \
     do {                                                                                      \
         if (LOGGING_ON)                                                                       \
             _debug_log_w(tag, "%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); \
     } while (0)
+
+
+
+
+
 #define DEBUG_LOG_PRINT_E(tag, fmt, ...)                                                      \
     do {                                                                                      \
         if (LOGGING_ON)                                                                       \
             _debug_log_e(tag, "%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); \
     } while (0)
+
+
+
+
+
 
 #if defined(DEBUG) || defined(_DEBUG)
 #define DEBUG_ASSERT_PRINT(condition, fmt, ...)                                                   \
@@ -87,41 +115,109 @@ void _debug_log_stderr(const char* tag, const char* fmt, ...);
     }
 #endif
 
+
+
+
+
+
+#if defined(DEBUG) || defined(_DEBUG)
+#define DEBUG_WARN_PRINT(condition, fmt, ...)                                                   \
+do {                                                                                          \
+if (!(condition)) {                                                                       \
+if (LOGGING_ON)                                                                       \
+_debug_log_w("%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__); \
+}                                                                                         \
+} while (0)
+#else
+#define DEBUG_WARN_PRINT(condition, fmt, ...) \
+{                                           \
+}
+#endif
+
+
+
+
+
+
+
+
+
+
+
 #define DEBUG_LOG_V(tag, fmt, ...)               \
     do {                                         \
         if (LOGGING_ON)                          \
             _debug_log_v(tag, fmt, __VA_ARGS__); \
     } while (0)
+
+
+
+
+
+
+
 #define DEBUG_LOG_D(tag, fmt, ...)               \
     do {                                         \
         if (LOGGING_ON)                          \
             _debug_log_d(tag, fmt, __VA_ARGS__); \
     } while (0)
+
+
+
+
+
+
 #define DEBUG_LOG_W(tag, fmt, ...)               \
     do {                                         \
         if (LOGGING_ON)                          \
             _debug_log_w(tag, fmt, __VA_ARGS__); \
     } while (0)
+
+
+
+
+
+
+
 #define DEBUG_LOG_E(tag, fmt, ...)               \
     do {                                         \
         if (LOGGING_ON)                          \
             _debug_log_e(tag, fmt, __VA_ARGS__); \
     } while (0)
 
+
+
+
+
+
+
+
+
+
+
+
+
 #if defined(DEBUG) || defined(_DEBUG)
-#define DEBUG_ASSERT_LOG(condition, fmt, ...)        \
-    do {                                             \
-        if (!(condition)) {                          \
-            if (LOGGING_ON)                          \
-                _debug_log_stderr(fmt, __VA_ARGS__); \
-            CRASH();                                 \
-        }                                            \
-    } while (0)
+#define DEBUG_WARN_LOG(condition, fmt, ...)        \
+do {                                             \
+if (!(condition)) {                          \
+if (LOGGING_ON)                          \
+_debug_log_w(fmt, __VA_ARGS__); \
+}                                            \
+} while (0)
 #else
-#define DEBUG_ASSERT_LOG(condition, fmt, ...) \
-    {                                         \
-    }
+#define DEBUG_WARN_LOG(condition, fmt, ...) \
+{                                         \
+}
 #endif
+
+
+
+
+
+
+
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -132,6 +228,7 @@ extern "C" {
 #define DEBUG_LOG_WRITE_W(tag, text) DEBUG_LOG_PRINT_W(tag, "%s", text)
 #define DEBUG_LOG_WRITE_E(tag, text) DEBUG_LOG_PRINT_E(tag, "%s", text)
 #define DEBUG_ASSERT_WRITE(condition, text) DEBUG_ASSERT_PRINT(condition, "%s", text)
+    #define DEBUG_WARN_WRITE(condition, text) DEBUG_WARN_PRINT(condition, "%s", text)
 
 
 

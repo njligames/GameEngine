@@ -302,8 +302,8 @@ AbstractFactoryObject* AbstractStateMachine<OWNER_TYPE>::getOwner()
 //#if defined(DEBUG) || defined(_DEBUG)
 //    return dynamic_cast<AbstractFactoryObject*>(getParent());
 //#else
-    DEBUG_ASSERT(dynamic_cast<AbstractFactoryObject*>(getParent()));
-    return reinterpret_cast<AbstractFactoryObject*>(getParent());
+//    DEBUG_ASSERT(dynamic_cast<AbstractFactoryObject*>(getParent()));
+    return dynamic_cast<AbstractFactoryObject*>(getParent());
 //#endif
     
     
@@ -316,8 +316,8 @@ const AbstractFactoryObject* AbstractStateMachine<OWNER_TYPE>::getOwner() const
 //#if defined(DEBUG) || defined(_DEBUG)
 //    return dynamic_cast<const AbstractFactoryObject*>(getParent());
 //#else
-    DEBUG_ASSERT(dynamic_cast<const AbstractFactoryObject*>(getParent()));
-    return reinterpret_cast<const AbstractFactoryObject*>(getParent());
+//    DEBUG_ASSERT(dynamic_cast<const AbstractFactoryObject*>(getParent()));
+    return dynamic_cast<const AbstractFactoryObject*>(getParent());
 //#endif
     
     
