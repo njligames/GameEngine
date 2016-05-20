@@ -204,11 +204,11 @@ namespace njli
         DEBUG_ASSERT(NULL != target);
         
         
-        std::vector<Node*>::const_iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
+        TargetVector::const_iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
         
         if(iter == m_TargetList.end())
         {
-            std::vector<Node*>::iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
+            TargetVector::iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
             
             if(iter != m_TargetList.end())
                 removeTarget(target);
@@ -225,7 +225,7 @@ namespace njli
     {
         DEBUG_ASSERT(NULL != target);
         
-        std::vector<Node*>::iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
+        TargetVector::iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
         
         if(iter != m_TargetList.end())
         {
@@ -238,7 +238,7 @@ namespace njli
     
     void SteeringBehavior::removeAllTargets()
     {
-        for(std::vector<Node*>::iterator iter = m_TargetList.begin();
+        for(TargetVector::iterator iter = m_TargetList.begin();
             iter != m_TargetList.end();
             ++iter)
         {
@@ -255,7 +255,7 @@ namespace njli
     
     void SteeringBehavior::getTargets(std::vector<Node*> & targets) const
     {
-        for(std::vector<Node*>::const_iterator iter = m_TargetList.begin();
+        for(TargetVector::const_iterator iter = m_TargetList.begin();
             iter != m_TargetList.end();
             ++iter)
         {
@@ -266,7 +266,7 @@ namespace njli
     
     s32 SteeringBehavior::getTargetIndex(Node * target) const
     {
-        std::vector<Node*>::const_iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
+        TargetVector::const_iterator iter = std::find(m_TargetList.begin(), m_TargetList.end(), target);
         
         if (iter != m_TargetList.end())
         {
@@ -300,6 +300,39 @@ namespace njli
     void SteeringBehavior::setCurrentForce(const btVector3 &force)
     {
         *m_CurrentForce = force;
+    }
+    
+    bool SteeringBehavior::hasOwner()const
+    {
+        return (getParent() &&
+                getParent()->getParent());
+    }
+    
+    btVector3 SteeringBehavior::getOwnerPosition()const
+    {
+        btVector3 pos(0,0,0);
+        if(hasOwner())
+            pos = getParent()->getParent()->getOrigin();
+        return pos;
+    }
+    
+    btVector3 SteeringBehavior::getAverageTargetPosition()const
+    {
+        if(numberOfTargets() > 0)
+        {
+            btVector3 target(0,0,0);
+            
+            for(TargetVector::const_iterator i = m_TargetList.begin();
+                i != m_TargetList.end();
+                i++)
+            {
+                target += (*i)->getOrigin();
+            }
+            
+            return (target / numberOfTargets());
+        }
+        
+        return btVector3(0,0,0);
     }
     
     SteeringBehaviorMachine* SteeringBehavior::getParent()

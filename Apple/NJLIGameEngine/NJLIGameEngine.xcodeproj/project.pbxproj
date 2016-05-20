@@ -663,7 +663,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		C1ACD8EF1CACE58700AB4CF7 /* make */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -671,9 +671,9 @@
 			name = make;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "PROJECT=YappyBirds\ncd ${SRCROOT}/../../../${PROJECT}/COMMON && make";
+			shellScript = "PROJECT=YappyBirdsRewrite\ncd ${SRCROOT}/../../../${PROJECT}/COMMON && make";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -879,6 +879,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				REZ_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -901,6 +902,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				REZ_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

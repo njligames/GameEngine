@@ -342,9 +342,17 @@ namespace njli
     
         void setCurrentForce(const btVector3 &force);
         
+        bool hasOwner()const;
+        btVector3 getOwnerPosition()const;
+        
+        btVector3 getAverageTargetPosition()const;
+        
+        typedef std::vector<Node*> TargetVector;
+        TargetVector m_TargetList;
     private:
         btVector3 *m_CurrentForce;
-        std::vector<Node*> m_TargetList;
+        
+        
     };
 }
 

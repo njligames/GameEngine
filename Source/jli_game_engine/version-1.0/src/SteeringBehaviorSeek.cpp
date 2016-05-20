@@ -194,4 +194,6 @@ namespace njli
         DEBUG_ASSERT_WRITE(false, "TODO");
         return *m_CurrentForce;
     }
+    
+    
 }
