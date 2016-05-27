@@ -12,6 +12,72 @@ local ParamInfo = {}
 
 ParamInfo =
 {
+    World =
+    {
+        Gravity = bullet.btVector3(0,-60.81,0),
+        LayerDistance = 15.24, --meters (50 feet), How far each layer is from eachother
+        LayerMax = 60.96, --meters (200 feet), How far the 4th (farthest) layer is from the camera
+        WorldOffset = bullet.btVector2(1.0, 19.7),
+        WorldScale = 91.0,
+        MinBrightnessForDistance = 0.8, --value from 0.0 (black) to 1.0 (the image's brightness)
+    },
+	Projectile = 
+	{
+		WaterBalloon =
+		{
+			Azimuth = 10, --Angle fro mthe ground up
+			Magnitude = 45, --How fast the balloon goes when you tap the screen.
+			DieY = -50, --Y position for when the balloon's memory gets cleaned up.
+            Mass = 1, --The mass of the balloon.
+            FramesPerSecond = 30.0, -- must be: 1 <= fps <= 60
+            Hues = {
+                0,
+                10,
+                20,
+                30,
+                40,
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140,
+                150,
+                160,
+                170,
+                180,
+                -10,
+                -20,
+                -30,
+                -40,
+                -50,
+                -60,
+                -70,
+                -80,
+                -90,
+                -100,
+                -110,
+                -120,
+                -130,
+                -140,
+                -150,
+                -160,
+                -170,
+                -180,
+            },
+            ScaleMin = 0.9,
+            ScaleMax = 2.0,
+            --Still have to make these variables live...
+            DeathVariables = {
+                FramesPerSecond = 30.0, -- must be: 1 <= fps <= 60
+                ShowParticles = false,
+            },
+		},
+	},
 	Dog = 
 	{
 		MaxSpeed = njli.World.getInstance():getWorldLuaVirtualMachine():getMaxNumber(),
@@ -24,11 +90,22 @@ ParamInfo =
 		chubiBird =
 		{
 			MaxSpeed = njli.World.getInstance():getWorldLuaVirtualMachine():getMaxNumber(),
-			MaxForce = njli.World.getInstance():getWorldLuaVirtualMachine():getMaxNumber(),
-			PursueTime = (6 * 1000),
+			MaxForce = 1,
+            PursueTime = (6 * 1000),
 			StealSpeed = 1,
 			YapTime = {low=(10 * 1000), high=(30 * 1000)},
 			DieY = -50,
+            --David add your variables after here..
+            ScalarVariableExample=0,
+            ArrayVariableExample={
+                Example1 = true,
+                Example2 = "hello i'm  string",
+                Example3 = 1.0,
+                Example4 = {
+                    AnotherVariable = 0
+                },
+
+            }
 		},
 		garuBird =
 		{
@@ -76,16 +153,6 @@ ParamInfo =
 			DieY = -50,
 		},
 		
-	},
-	Projectile = 
-	{
-		WaterBalloon =
-		{
-			Azimuth = 10,
-			Magnitude = 45,
-			DieY = -50,
-            Mass = 1,
-		},
 	},
 }
 

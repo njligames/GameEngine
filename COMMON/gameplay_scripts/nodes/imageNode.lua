@@ -20,7 +20,8 @@ local enter = function(self)
     self.dimSprite = self.node:getGeometry():getDimensions(self.node)
 	local d = bullet.btVector2( (self.dimSprite:x() * self.menuScale), (self.dimSprite:y() * self.menuScale) )
 	self.node:getGeometry():setDimensions(self.node, d)
-    -- self.node:show(getOrthoCamera())
+    self.node:hide(getPerspectiveCamera())
+    --self.node:show(getOrthoCamera())
 end
 
 local update = function(self, timeStep)

@@ -41,6 +41,7 @@ local enter = function(self)
     local node = nodeObject:getNode()
 
     nodeObject:getSound():play()
+    nodeObject:setFPS(nodeObject:getParams().DeathVariables.FramesPerSecond)
 end
 
 local update = function(self, timeStep)

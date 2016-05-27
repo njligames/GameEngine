@@ -15,7 +15,6 @@ _deviceNames = {"iPhone 2G",--3:2
     "iPhone 6",--16:9
     "iPod Touch (1 Gen)",--3:2
     "iPod Touch (2 Gen)",--3:2
-
     "iPod Touch (4 Gen)",--3:2
     "iPod Touch (5 Gen)",--16:9
     "iPad (WiFi)",--4:3
@@ -63,14 +62,27 @@ _resolutionDeviceNames =
 -- http://www.emirweb.com/ScreenDeviceStatistics.php#Header248
 -- http://handsontable.com/demo/column_freeze.html
 function DeviceTouchScale(name, x, y)
-    if x and y and name == _deviceNames[14] then
+    local deviceTypeScale = name == _deviceNames[35] or
+                            name == _deviceNames[36] or
+                            name == _deviceNames[37] or
+                            name == _deviceNames[43] or
+                            name == _deviceNames[44] or
+                            name == _deviceNames[14]
+
+    if x and y and deviceTypeScale then
         return (x*2), (y*2)
     end
+
     return x, y
 end
 
 function DeviceNameShouldScale(name)
-    if name == _deviceNames[14] then
+    if name == _deviceNames[14] or
+        name == _deviceNames[43] or
+        name == _deviceNames[44] or
+        name == _deviceNames[35] or
+        name == _deviceNames[36] or
+        name == _deviceNames[37] then
         return false
     end
     return true
@@ -78,6 +90,13 @@ end
 
 function DeviceNameDownsizeAmount(name)
     if name == _deviceNames[14] then
+        return 1.15
+    elseif name == _deviceNames[35] or
+        name == _deviceNames[36] or
+        name == _deviceNames[37] then
+        return 1.15
+    elseif name == _deviceNames[43] or
+        name == _deviceNames[44] then
         return 1.15
     end
     return 1.0
@@ -433,6 +452,7 @@ function createPerspectiveCameraNode(name)
     local camera = njli.Camera.create()
     camera:enableOrthographic(false)
     camera:setRenderCategory(RenderCategories.perspective)
+    camera:setName("perspectiveCamera")
 
     node:addCamera(camera)
 
@@ -446,6 +466,7 @@ function createOrthoCameraNode(name)
     local camera = njli.Camera.create()
     camera:enableOrthographic()
     camera:setRenderCategory(RenderCategories.orthographic)
+    camera:setName("orthoCamera")
 
     node:addCamera(camera)
 
@@ -698,3 +719,35 @@ function setupSpriteFrame(frameName, node, characterSheetInfo, spriteAtlas, geom
         end
     end
 end
+
+function math.Clamp(val, lower, upper)
+    assert(val and lower and upper, "not very useful error message here")
+    if lower > upper then lower, upper = upper, lower end -- swap if boundaries supplied the wrong way
+    return math.max(lower, math.min(upper, val))
+end
+
+function brightnessForNode(node, initialTransform)
+    function brightnessForDistance(z)
+        function getParam()
+            local assetPath = njli.ASSET_PATH("scripts/Params.lua")
+            return loadfile(assetPath)()
+        end
+        local layerMaxDistance = getParam().World.LayerMax
+        local minBrightnessForDistance = getParam().World.MinBrightnessForDistance
+        assert(minBrightnessForDistance >= 0.0 and minBrightnessForDistance <= 1)
+        local brightness = 1.0 - (z * (1.0 - minBrightnessForDistance))/layerMaxDistance
+        --local brightness = 1.0 - (z / layerMaxDistance)
+        brightness = math.max(brightness, minBrightnessForDistance)
+        --print("brightness", brightness)
+        
+        return brightness
+    end
+
+    if initialTransform == nil then
+        initialTransform = bullet.btTransform.getIdentity()
+    end
+    
+    local transform = njli.ColorUtil.createBrightnessMatrix(brightnessForDistance(node:getOrigin():z()))
+    node:setColorTransform(transform)
+end
+

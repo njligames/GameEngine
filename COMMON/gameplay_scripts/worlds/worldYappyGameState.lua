@@ -231,6 +231,7 @@ local createTileNode = function(self, x, y, layer, opacity, tile, instanceName, 
     self.tileNodes[instanceName] = self.nodes[instanceName]
 
     insertNodeObject(self.nodes[instanceName], instanceName)
+    brightnessForNode(self.nodes[instanceName].node)
 end
 
 local destroyDogNode = function(self)
@@ -310,6 +311,8 @@ local createDogNode = function(self, points)
     self.nodes[instanceName].node:show(getPerspectiveCamera())
 
 
+    brightnessForNode(self.nodes[instanceName].node)
+
     return self.nodes[instanceName]
 end
 
@@ -359,6 +362,7 @@ local createBirdNode = function(self, spawnPoint)
 
     self.nodes[instanceName]:setBirdFlock(self.birdFlock)
 
+    brightnessForNode(self.nodes[instanceName].node)
     return self.nodes[instanceName]
 end
 
@@ -388,7 +392,8 @@ local createWaterBalloonNode = function(self, x, y)
 
     self.nodes[instanceName].node:setOrigin(origin )
     insertNodeObject(self.nodes[instanceName], instanceName)
-    
+    brightnessForNode(self.nodes[instanceName].node)
+
     self.projectileNodes[instanceName] = self.nodes[instanceName]
 
     return self.nodes[instanceName]
@@ -538,6 +543,9 @@ local enter = function(self)
     self.menuGeometry = njli.Sprite2D.create()
     self.menuGeometry:addMaterial(self.menuMaterial)
     self.menuGeometry:addShaderProgram(getShaderProgram())
+    self.menuGeometry:setName("menuGeometry")
+    self.menuGeometry:show(getOrthoCamera())
+    self.menuGeometry:hide(getPerspectiveCamera())
     
 
 
@@ -850,9 +858,19 @@ local new = function(name)
 
         function(self)
             self.characterSpriteAtlas, self.characterSheetInfo, self.characterGeometry, self.characterMaterial = createTexturePackerSpriteAtlas("gameplay", getShaderProgram())
+
+            for k,v in pairs(self.characterGeometry) do
+                v:hide(getOrthoCamera())
+                v:show(getPerspectiveCamera())
+            end
         end,
         function(self)
-            local tileSpriteAtlas, tileSheetInfo, tileGeometry, tileMaterial = createTexturePackerSpriteAtlas("tilesheet_background_country", getShaderProgram())
+            local tileSpriteAtlas, tileSheetInfo, tileGeometry, tileMaterial = createTexturePackerSpriteAtlas("countryLevel", getShaderProgram())
+
+            for k,v in pairs(tileGeometry) do
+                v:hide(getOrthoCamera())
+                v:show(getPerspectiveCamera())
+            end
 
             self.tileSpriteAtlas = tileSpriteAtlas[1]
             self.tileSheetInfo   = tileSheetInfo[1]
@@ -862,45 +880,6 @@ local new = function(name)
         function(self)
             -- self.particleGeometry, self.particleMaterial = createParticleGeometryAndMaterial("particle_water_splash.png", getShaderProgram())
         end,
-        -- function(self)
-        --     local bmf = require 'bitmapFontLoader'
-        --     local pushButtonNode = require "nodes.pushButtonNode"
-        --     local textNode = require "nodes.textNode"
-
-        --     local bmflabel = bmf.loadFont('Ranchers.fnt')
-
-        --     self.fontMaterial = njli.Material.create()
-        --     self.fontGeometry = njli.Sprite2D.create()
-
-
-        --     local winNode = textNode.new("You Win", 
-        --                                     bmflabel, 
-        --                                     self.fontMaterial, 
-        --                                     self.fontGeometry, 
-        --                                     getShaderProgram())
-        --     local wordsX = (njli.World.getInstance():getViewportDimensions():x()/2) - (winNode.rect.width / 2)
-        --     local wordsY = (njli.World.getInstance():getViewportDimensions():y()/3)
-        --     wordsY = wordsY * 2
-        --     winNode.node:setOrigin(bullet.btVector3(wordsX, wordsY, 0))
-
-        --     -- winNode.node:show(getOrthoCamera())
-
-        --     local loseNode = textNode.new("You Lose", 
-        --                                     bmflabel, 
-        --                                     self.fontMaterial, 
-        --                                     self.fontGeometry, 
-        --                                     getShaderProgram())
-        --     wordsX = (njli.World.getInstance():getViewportDimensions():x()/2) - (loseNode.rect.width / 2)
-        --     wordsY = (njli.World.getInstance():getViewportDimensions():y()/3)
-        --     wordsY = wordsY * 2
-        --     loseNode.node:setOrigin(bullet.btVector3(wordsX, wordsY,0))
-
-        --     self.nodes['You Win'] = winNode
-        --     self.nodes['You Lose'] = loseNode
-
-        --     insertNodeObject(winNode, 'You Win')
-        --     insertNodeObject(loseNode, 'You Lose')
-        -- end,
         function(self)
 
             local imageNode = require "nodes.imageNode"
@@ -935,6 +914,9 @@ local new = function(name)
         function(self)
             self.fontMaterial = njli.Material.create()
             self.fontGeometry = njli.Sprite2D.create()
+
+            self.fontGeometry:show(getOrthoCamera())
+            self.fontGeometry:hide(getPerspectiveCamera())
         end,
         function(self)
             local bmf = require 'bitmapFontLoader'
@@ -980,55 +962,14 @@ local new = function(name)
         -- end,
         function(self)
             local assetPath = njli.ASSET_PATH("scripts/Params.lua")
-            
             self.Prm = loadfile(assetPath)()
+
+            self.WORLD_YOFFSET = self.Prm.World.WorldOffset:y()
+            self.WORLD_XOFFSET = self.Prm.World.WorldOffset:x()
+            self.LAYER_DISTANCE = self.Prm.World.LayerDistance
+            self.LAYER_MAX = self.Prm.World.LayerMax
+            self.scale = self.Prm.World.WorldScale
         end,
-        -- function(self)
-        --     local yappyBirdLevelLoader = require "yappyBirdLevelLoader"
-        --     self.level = yappyBirdLevelLoader.new(self)
-
-
-        --     local gameMode = nil
-        --     local gameBoard = nil
-        --     local gameLevelNumber = nil
-
-        --     print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        --     print_r(self:getUserData("userdata"))
-        --     print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-
-        --     if self:getUserData("userdata") ~= nil then
-        --         print("FIRST")
-        --         gameMode = self:getUserData("userdata").gameMode
-        --         gameBoard = self:getUserData("userdata").gameBoard
-        --         gameLevelNumber = self:getUserData("userdata").gameLevelNumber
-
-        --     else
-        --         print("SECOND")
-        --         gameMode = _currentLevel.gameMode
-        --         gameBoard = _currentLevel.gameBoard
-        --         gameLevelNumber = _currentLevel.gameLevelNumber
-        --         self:addUserData("userdata", _currentLevel)
-        --     end
-
-        --     _currentLevel.gameMode = gameMode
-        --     _currentLevel.gameBoard = gameBoard
-        --     _currentLevel.gameLevelNumber = gameLevelNumber
-
-
-        --     local gameLevel = _gameLevels[gameLevelNumber]
-
-        --     print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        --     print(gameMode, gameBoard, gameLevelNumber, gameLevel)
-        --     print_r(self:getUserData("userdata"))
-        --     print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-
-        --     self.level:loadLevel(gameMode, gameBoard, gameLevel)
-
-        --     self.level:createNodes(self, self.tileSpriteAtlas, self.tileGeometry)
-
-        --     local points = self:translateDogWayPoints(self.level.dogWayPoints)
-        --     self.theDog = self:createDogNode(points)
-        -- end,
 
         function(self)
 
@@ -1057,30 +998,12 @@ local new = function(name)
 
 
 
-        function(self)
-
-            local camera = getPerspectiveCamera()
-            local shader = getShaderProgram()
-            njli.World.getInstance():enableDebugDraw(camera, shader)
-        end,
 
 
 
         function(self)
-            -- print(self.soundMenuTheme:getVolume())
-            -- self.soundTitleTheme:setLoopCount(-1)
-            -- self.soundTitleTheme:play()
-
-
-            -- for k,v in pairs(self.nodes) do
-            --     self.nodes[k].node:show(getPerspectiveCamera())
-            -- end
             njli.World.getInstance():setTouchCamera(getOrthoCamera())
             self.sceneStates[_menuSceneStateNames.menu]:push()
-
-
-
-            
         end,
 
     }
@@ -1094,15 +1017,6 @@ local new = function(name)
         sceneStates = {},
         userdata = {},
         nodes = {},
-
-
-
-
-
-
-
-
-
 
         gameBoard = "country",
 

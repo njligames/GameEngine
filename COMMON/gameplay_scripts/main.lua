@@ -1,4 +1,3 @@
--- njli.World.getInstance():startSocket(192, 168, 1, 10, 2223)
 
 local path = njli.ASSET_PATH("scripts/util.lua")
 local util = (loadfile(path))()
@@ -6,24 +5,15 @@ local util = (loadfile(path))()
 path = njli.ASSET_PATH("scripts/filePaths.lua")
 local filePaths = (loadfile(path))()
 
-
-
 local path = njli.ASSET_PATH("scripts/levelData.lua")
 local levelData = (loadfile(path))()
 levelFileData = levelData.new()
 
-
-
-
 path = njli.ASSET_PATH("scripts/menuNodePositions.lua")
 local menuNodePositions = (loadfile(path))()
 
-
 local yappyBirdsWorld = require "worlds.yappyBirdsWorld"
 
--- local theStartWorldName = _worldStateNames.menu
--- local theStartWorldName = _worldStateNames.tests
--- local theStartWorldName = _worldStateNames.game
 local theStartWorldName = _worldStateNames.yappyGame
 
 local worldObjectTable = {}
@@ -58,7 +48,6 @@ function getSceneCurrentState(scene)
 end
 
 function getNodeObject(name)
-
     if nodeObjectTable then
         local nodeObject = nodeObjectTable[name]
         if nodeObject ~= nil then
@@ -113,14 +102,12 @@ function removeNodeObject(nodeObject)
 end
 
 function insertNodeObject(nodeObject, key)
-
-
     assert(nodeObject ~= nil, "The node object is nil")
 
     assert(nodeObjectTable[key] == nil, "There is already a node object with key " .. key)
 
-    nodeObjectTable[key] = nodeObject
 
+    nodeObjectTable[key] = nodeObject
 end
 
 function WorldGamePause()
@@ -334,7 +321,7 @@ function WorldCreate()
     yappyWorld = yappyBirdsWorld.new("YappyBirds")
     yappyWorld.startWorldName = theStartWorldName
 
-njli.World.getInstance():enableDebugDraw(getOrthoCamera(), getShaderProgram())
+--njli.World.getInstance():enableDebugDraw(getOrthoCamera(), getShaderProgram())
 
     worldObjectTable = yappyWorld:start()
 end
@@ -397,11 +384,28 @@ function KeyboardReturn(text)
     print(text)
 end
 
+function ReceivedMemoryWarning()
+    local bytesUsed = collectgarbage("count") * 1024
+    print("Memory in use: " .. bytesUsed .. " bytes")
+
+    collectgarbage()
+end
+
 print("\n\n")
-print("getDeviceName\t", DeviceNameToResolutionDeviceName(njli.World.getInstance():getDeviceName()))
+print("getDeviceResolution\t", DeviceNameToResolutionDeviceName(njli.World.getInstance():getDeviceName()))
+print("getDeviceName\t", njli.World.getInstance():getDeviceName())
 print("DeviceNameDownsizeAmount\t", DeviceNameDownsizeAmount(njli.World.getInstance():getDeviceName()))
 
 print("\n\n\n\n")
+
+--local mtx = bullet.btTransform.getIdentity():getOpenGLMatrix()
+--print(njli.ColorUtil.createMatrixFromArray(mtx))
+--print(bullet.btScalarArray_getitem(mtx, 0))
+--print_r(bullet)--.transformValues(transform))
+--local x1, y1, z1, w1, x2, y2, z2, w2, x3, y3, z3, w3, x4, y4, z4, w4 = bullet.transformValues(transform)
+
+--local transform = njli.ColorUtil.createHueRotationMatrix(0.0)
+--print(transform)
 
 WorldCreate()
 
