@@ -60,7 +60,7 @@ local loadLevel = function(self, gameMode, gameBoard, gameLevel)
 
     self.gameLevel = gameLevel
 
-    local luaPath = "scripts/levels/" .. gameMode .. "_" .. gameBoard .. "_" .. gameLevel .. ".lua"
+    local luaPath = "scripts/levels/" .. gameBoard .. "/_"  .. gameMode .. "_" .. gameBoard .. "_" .. gameLevel .. ".lua"
     local texturePackerImage = ""
 
     -- print(luaPath)

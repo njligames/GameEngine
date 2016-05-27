@@ -52,6 +52,10 @@ local function createStateObjects(self)
   self.paused = false
 end
 
+local setFPS = function(self, fps)
+    assert(fps>=1 and fps<=60)
+    self.fps = fps
+end
 
 local getColor = function(self)
   return self.color
@@ -216,6 +220,7 @@ local start = function(self)
 
   createStateObjects(self)
   self.physicsBody:setAngularFactor(bullet.btVector3(0.0, 0.0, 0.0))
+  self:setFPS(self.params.FramesPerSecond)
 
 end
 
@@ -237,7 +242,7 @@ local actionUpdate = function(self, action, timeStep)
     local nodeName = node:getName()
     local nodeStateName = node:getStateMachine():getState():getName()
 
-    if (self:getAnimationClock():getTimeMilliseconds() / 1000) > (1.0/30.0) then
+    if (self:getAnimationClock():getTimeMilliseconds() / 1000) > (1.0/self.fps) then
       self:getAnimationClock():reset()
 
       self:incrementFrame()
@@ -280,14 +285,17 @@ local enter = function(self)
 end
 
 local update = function(self, timeStep)
-  if not self:isPaused() then
-    
-    local stateName = self:getCurrentStateName()
-    if self:hasStateObject(stateName) then
-      self:getStateObject(stateName):update(timeStep)
-    end
+    if not self:isPaused() then
 
-  end
+        brightnessForNode(self.node)
+        self.node:setColorTransform(self.node:getColorTransform() * self.hueTransform)
+        
+        local stateName = self:getCurrentStateName()
+        if self:hasStateObject(stateName) then
+            self:getStateObject(stateName):update(timeStep)
+        end
+
+    end
 end
 
 local exit = function(self)
@@ -408,6 +416,7 @@ end
 
 local methods = 
 {
+    setFPS = setFPS,
   getColor = getColor,
   getOwner = getOwner,
   getSound = getSound,
@@ -473,27 +482,44 @@ local new = function(name, sheetInfo, spriteAtlas, geometry, particleGeometry, o
   local assetPath = njli.ASSET_PATH("scripts/Params.lua")
   local params = loadfile(assetPath)().Projectile.WaterBalloon
 
+  local fps = params.FramesPerSecond
+
+  assert(params.ScaleMin <= params.ScaleMax)
+  --local randomScale = math.random(params.ScaleMin, params.ScaleMax)
+  --local randomScale = params.ScaleMax
+  --local randomScale = params.ScaleMin
+  math.randomseed(os.time())
+  local randomScale = params.ScaleMin + math.random()  * (params.ScaleMax - params.ScaleMin)
+  print("new scale", randomScale)
+  node:setScale(randomScale)
   local animationClock = njli.Clock.create()
 
   local sound = njli.Sound.create()
   njli.World.getInstance():getWorldResourceLoader():load(_SOUNDPATHS.gameplay.effects.projectile.balloon.die, sound)
 
   math.randomseed( os.time() )
-  local colorIndex = math.random(1, 5)
+  --local colorIndex = math.random(1, 5)
 
   local color = "Red"
 
-  if colorIndex == 1 then
-      color = "Blue"
-  elseif colorIndex == 2 then
-      color = "Green"
-  elseif colorIndex == 3 then
-      color = "Purple"
-  elseif colorIndex == 4 then
-      color = "Red"
-  elseif colorIndex == 5 then
-      color = "Yellow"
-  end
+
+  math.randomseed(os.time())
+  local idx = math.random(1, #params.Hues)
+  print("rotate hue to:", params.Hues[idx])
+  local hueTransform = njli.ColorUtil.createHueRotationMatrix(params.Hues[idx])
+  --node:setColorTransform(transform)
+
+  --if colorIndex == 1 then
+  --    color = "Blue"
+  --elseif colorIndex == 2 then
+  --    color = "Green"
+  --elseif colorIndex == 3 then
+  --    color = "Purple"
+  --elseif colorIndex == 4 then
+  --    color = "Red"
+  --elseif colorIndex == 5 then
+  --    color = "Yellow"
+  --end
   
 
   local properties = 
@@ -514,13 +540,14 @@ local new = function(name, sheetInfo, spriteAtlas, geometry, particleGeometry, o
     paused = false,
 
     params = params,
+    fps = fps,
 
     animationClock = animationClock,
 
     sound = sound,
 
     color = color,
-
+    hueTransform = hueTransform,
 --Shared
     sheetInfo = sheetInfo, 
     spriteAtlas = spriteAtlas, 

@@ -1,7 +1,7 @@
 --
 -- created with TexturePacker (http://www.codeandweb.com/texturepacker)
 --
--- $TexturePacker:SmartUpdate:144bbc6a55bc9eb4352a5b8bec124b1c:69b5ad8ac9dae60ac09bf898af42bafe:7c7b926951ecd55be01c75913320eada$
+-- $TexturePacker:SmartUpdate:8c2575582121ddbb6bf2b46b2d44beec:5353b4cb97d5879e0d8b427285df1d13:7c7b926951ecd55be01c75913320eada$
 --
 -- local sheetInfo = require("mysheet")
 -- local myImageSheet = graphics.newImageSheet( "mysheet.png", sheetInfo:getSheet() )
@@ -15,8 +15,8 @@ SheetInfo.sheet =
     frames = {
     
         {
-            x=0,
-            y=0,
+            x=1,
+            y=1,
             
             width=568,
             height=320,
@@ -36,8 +36,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=0,
-            y=321,
+            x=571,
+            y=1,
             
             width=568,
             height=320,
@@ -57,8 +57,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1675,
-            y=570,
+            x=1744,
+            y=893,
             
             width=57,
             height=48,
@@ -78,8 +78,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=711,
+            x=747,
+            y=869,
             
             width=57,
             height=48,
@@ -99,8 +99,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1028,
-            y=963,
+            x=1935,
+            y=827,
             
             width=112,
             height=48,
@@ -120,8 +120,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=0,
+            x=1935,
+            y=877,
             
             width=112,
             height=48,
@@ -141,8 +141,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1845,
-            y=321,
+            x=1967,
+            y=427,
             
             width=74,
             height=48,
@@ -162,8 +162,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1733,
-            y=609,
+            x=1967,
+            y=477,
             
             width=74,
             height=48,
@@ -183,8 +183,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1748,
-            y=511,
+            x=1967,
+            y=627,
             
             width=64,
             height=48,
@@ -204,8 +204,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1748,
-            y=560,
+            x=1759,
+            y=843,
             
             width=64,
             height=48,
@@ -225,8 +225,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1916,
-            y=392,
+            x=1402,
+            y=856,
             
             width=98,
             height=48,
@@ -246,8 +246,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1816,
-            y=419,
+            x=1502,
+            y=903,
             
             width=98,
             height=48,
@@ -267,8 +267,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=662,
+            x=1843,
+            y=785,
             
             width=90,
             height=48,
@@ -288,8 +288,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1584,
-            y=570,
+            x=1843,
+            y=835,
             
             width=90,
             height=48,
@@ -309,8 +309,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=800,
-            y=963,
+            x=1527,
+            y=853,
             
             width=113,
             height=48,
@@ -330,8 +330,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=914,
-            y=963,
+            x=1931,
+            y=927,
             
             width=113,
             height=48,
@@ -351,8 +351,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1914,
-            y=490,
+            x=1800,
+            y=985,
             
             width=96,
             height=96,
@@ -372,8 +372,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1813,
-            y=517,
+            x=1898,
+            y=1027,
             
             width=96,
             height=96,
@@ -393,8 +393,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=245,
+            x=1642,
+            y=893,
             
             width=100,
             height=48,
@@ -414,8 +414,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=294,
+            x=1803,
+            y=935,
             
             width=100,
             height=48,
@@ -435,8 +435,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=49,
+            x=1936,
+            y=727,
             
             width=111,
             height=48,
@@ -456,8 +456,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=98,
+            x=1936,
+            y=777,
             
             width=111,
             height=48,
@@ -477,8 +477,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1492,
-            y=545,
+            x=1843,
+            y=685,
             
             width=91,
             height=48,
@@ -498,8 +498,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1287,
-            y=631,
+            x=1843,
+            y=735,
             
             width=91,
             height=48,
@@ -519,8 +519,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1580,
-            y=619,
+            x=1052,
+            y=771,
             
             width=50,
             height=48,
@@ -540,8 +540,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1631,
-            y=619,
+            x=1052,
+            y=821,
             
             width=50,
             height=48,
@@ -561,8 +561,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1910,
-            y=587,
+            x=571,
+            y=771,
             
             width=96,
             height=96,
@@ -582,8 +582,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1298,
-            y=437,
+            x=669,
+            y=771,
             
             width=96,
             height=96,
@@ -603,8 +603,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1232,
-            y=662,
+            x=1996,
+            y=1027,
             
             width=51,
             height=48,
@@ -624,8 +624,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1199,
-            y=711,
+            x=1996,
+            y=1077,
             
             width=51,
             height=48,
@@ -645,8 +645,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1748,
-            y=413,
+            x=1967,
+            y=527,
             
             width=67,
             height=48,
@@ -666,8 +666,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1748,
-            y=462,
+            x=1967,
+            y=577,
             
             width=67,
             height=48,
@@ -687,8 +687,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1379,
-            y=642,
+            x=571,
+            y=869,
             
             width=86,
             height=48,
@@ -708,8 +708,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1284,
-            y=680,
+            x=659,
+            y=869,
             
             width=86,
             height=48,
@@ -729,8 +729,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1682,
-            y=619,
+            x=806,
+            y=869,
             
             width=50,
             height=48,
@@ -750,8 +750,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1733,
-            y=658,
+            x=858,
+            y=869,
             
             width=50,
             height=48,
@@ -771,8 +771,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1920,
-            y=343,
+            x=1905,
+            y=977,
             
             width=99,
             height=48,
@@ -792,8 +792,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1816,
-            y=370,
+            x=1301,
+            y=856,
             
             width=99,
             height=48,
@@ -813,8 +813,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=570,
-            y=963,
+            x=1527,
+            y=803,
             
             width=114,
             height=48,
@@ -834,8 +834,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=685,
-            y=963,
+            x=1643,
+            y=843,
             
             width=114,
             height=48,
@@ -855,8 +855,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1915,
-            y=441,
+            x=1602,
+            y=943,
             
             width=97,
             height=48,
@@ -876,8 +876,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1816,
-            y=468,
+            x=1701,
+            y=943,
             
             width=97,
             height=48,
@@ -897,8 +897,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1298,
-            y=534,
+            x=767,
+            y=771,
             
             width=96,
             height=96,
@@ -918,8 +918,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1395,
-            y=545,
+            x=865,
+            y=771,
             
             width=96,
             height=96,
@@ -939,8 +939,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1492,
-            y=594,
+            x=963,
+            y=771,
             
             width=87,
             height=48,
@@ -960,8 +960,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1808,
-            y=614,
+            x=963,
+            y=821,
             
             width=87,
             height=48,
@@ -981,8 +981,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=147,
+            x=1937,
+            y=677,
             
             width=104,
             height=48,
@@ -1002,8 +1002,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1925,
-            y=196,
+            x=1825,
+            y=885,
             
             width=104,
             height=48,
@@ -1023,8 +1023,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1371,
-            y=691,
+            x=1012,
+            y=871,
             
             width=48,
             height=48,
@@ -1044,8 +1044,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1251,
-            y=729,
+            x=1062,
+            y=902,
             
             width=48,
             height=48,
@@ -1065,8 +1065,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1591,
-            y=413,
+            x=1527,
+            y=645,
             
             width=156,
             height=156,
@@ -1086,8 +1086,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1425,
-            y=125,
+            x=1331,
+            y=645,
             
             width=194,
             height=209,
@@ -1107,8 +1107,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=437,
+            x=1685,
+            y=685,
             
             width=156,
             height=156,
@@ -1128,8 +1128,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1396,
-            y=335,
+            x=1105,
+            y=691,
             
             width=194,
             height=209,
@@ -1149,8 +1149,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1466,
-            y=643,
+            x=910,
+            y=869,
             
             width=49,
             height=96,
@@ -1170,8 +1170,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1516,
-            y=643,
+            x=961,
+            y=871,
             
             width=49,
             height=96,
@@ -1191,8 +1191,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=414,
-            y=963,
+            x=1996,
+            y=323,
             
             width=51,
             height=50,
@@ -1212,8 +1212,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=466,
-            y=963,
+            x=1996,
+            y=375,
             
             width=51,
             height=50,
@@ -1233,8 +1233,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=518,
-            y=963,
+            x=564,
+            y=645,
             
             width=51,
             height=50,
@@ -1254,8 +1254,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1591,
-            y=368,
+            x=1105,
+            y=645,
             
             width=224,
             height=44,
@@ -1275,8 +1275,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1620,
-            y=321,
+            x=1711,
+            y=637,
             
             width=224,
             height=46,
@@ -1296,8 +1296,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=0,
+            x=617,
+            y=645,
             
             width=486,
             height=124,
@@ -1317,8 +1317,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=193,
+            x=1711,
+            y=392,
             
             width=254,
             height=243,
@@ -1338,8 +1338,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=0,
-            y=963,
+            x=148,
+            y=645,
             
             width=208,
             height=56,
@@ -1359,8 +1359,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=209,
-            y=963,
+            x=358,
+            y=645,
             
             width=204,
             height=56,
@@ -1380,8 +1380,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=594,
+            x=1,
+            y=645,
             
             width=145,
             height=67,
@@ -1401,8 +1401,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1141,
-            y=125,
+            x=1711,
+            y=323,
             
             width=283,
             height=67,
@@ -1422,8 +1422,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=0,
-            y=642,
+            x=1141,
+            y=1,
             
             width=568,
             height=320,
@@ -1443,8 +1443,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=1628,
-            y=0,
+            x=1711,
+            y=1,
             
             width=296,
             height=320,
@@ -1464,8 +1464,29 @@ SheetInfo.sheet =
         },
     
         {
-            x=569,
-            y=0,
+            x=1,
+            y=323,
+            
+            width=568,
+            height=320,
+
+	        widthFile=568,
+	        heightFile=320,
+
+            pivotx=284,
+            pivoty=160,
+
+            sourceX = 0,
+            sourceY = 0,
+            sourceWidth = 568,
+            sourceHeight = 320,
+
+            trimmedName = "ui_coin_shop",
+        },
+    
+        {
+            x=571,
+            y=323,
             
             width=568,
             height=320,
@@ -1485,8 +1506,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=569,
-            y=321,
+            x=1141,
+            y=323,
             
             width=568,
             height=320,
@@ -1506,8 +1527,8 @@ SheetInfo.sheet =
         },
     
         {
-            x=569,
-            y=642,
+            x=1,
+            y=727,
             
             width=568,
             height=320,
@@ -1529,13 +1550,13 @@ SheetInfo.sheet =
     },
     fileName = "images/interface0.png",
     sheetContentWidth = 2048,
-    sheetContentHeight = 1024,
+    sheetContentHeight = 2048,
     scale = 1,
-    shapePadding = 1,
+    shapePadding = 0,
     borderPadding = 0,
     commonDivisorX = 1,
     commonDivisorY = 1,
-    extrude = 0,
+    extrude = 1,
     baseFactor = 1,
     maxTextureSizeWidth = 4096,
     maxTextureSizeHeight = 4096,
@@ -1544,7 +1565,7 @@ SheetInfo.sheet =
 
 
 
-    -- smartUpdateKey = $TexturePacker:SmartUpdate:144bbc6a55bc9eb4352a5b8bec124b1c:69b5ad8ac9dae60ac09bf898af42bafe:7c7b926951ecd55be01c75913320eada$,
+    -- smartUpdateKey = $TexturePacker:SmartUpdate:8c2575582121ddbb6bf2b46b2d44beec:5353b4cb97d5879e0d8b427285df1d13:7c7b926951ecd55be01c75913320eada$,
     -- settings_autoSDSettings = {
     -- 
     --     {
@@ -1561,7 +1582,7 @@ SheetInfo.sheet =
     -- settings_textureFormat = png,
     -- settings_outputFormat = RGBA8888,
     -- settings_contentProtection_key = ,
-    -- settings_tpsName = _interface,
+    -- settings_tpsName = unsaved,
     -- settings_allowRotation = false,
     -- settings_flipPVR = false,
     -- settings_forceIdenticalLayout = false,
@@ -1576,7 +1597,7 @@ SheetInfo.sheet =
     -- settings_dataFormat = corona-imagesheet,
     -- settings_textureSubPath = ,
     -- settings_borderPadding = 0,
-    -- settings_shapePadding = 1,
+    -- settings_shapePadding = 0,
     -- settings_commonDivisorX = 1,
     -- settings_commonDivisorY = 1,
     -- settings_dpi = 72,
@@ -1585,11 +1606,11 @@ SheetInfo.sheet =
     -- multipackIndex = ,
 
     -- variantParams_scale = 1,
-    -- variantParams_shapePadding = 1,
+    -- variantParams_shapePadding = 0,
     -- variantParams_borderPadding = 0,
     -- variantParams_commonDivisorX = 1,
     -- variantParams_commonDivisorY = 1,
-    -- variantParams_extrude = 0,
+    -- variantParams_extrude = 1,
     -- variantParams_baseFactor = 1,
     -- variantParams_maxTextureSize_width = 4096,
     -- variantParams_maxTextureSize_height = 4096,
@@ -1669,9 +1690,10 @@ SheetInfo.frameIndex =
     ["title_COUNTRY"] = 67,
     ["ui_background"] = 68,
     ["ui_bg_scrollbar"] = 69,
-    ["ui_loading"] = 70,
-    ["ui_paused"] = 71,
-    ["ui_thanks"] = 72,
+    ["ui_coin_shop"] = 70,
+    ["ui_loading"] = 71,
+    ["ui_paused"] = 72,
+    ["ui_thanks"] = 73,
 }
 
 function SheetInfo:getSheet()

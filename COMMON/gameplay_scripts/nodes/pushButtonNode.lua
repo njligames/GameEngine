@@ -88,7 +88,8 @@ local enter = function(self)
 	local d = bullet.btVector2( (dimSprite:x() * self.menuScale), (dimSprite:y() * self.menuScale) )
 	self.node:getGeometry():setDimensions(self.node, d)
 
-    -- self.node:show(getOrthoCamera())
+    self.node:hide(getPerspectiveCamera())
+    --self.node:show(getOrthoCamera())
 
     self.physicsShape:setHalfExtends(bullet.btVector3( (dimSprite:x() * self.menuScale) * .25, (dimSprite:y() * self.menuScale)* .25, 1 ))
 

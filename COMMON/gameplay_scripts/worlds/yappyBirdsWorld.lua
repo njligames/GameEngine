@@ -61,12 +61,15 @@ local methods =
 local new = function(worldName)
     njli.World.getInstance():setName(worldName)
 
+    local assetPath = njli.ASSET_PATH("scripts/Params.lua")
+    local params = loadfile(assetPath)().World
+
     local scene = njli.Scene.create()
     njli.World.getInstance():addScene(scene)
     njli.World.getInstance():getScene():setName(worldName .. "Scene")
 
     local physicsWorld = njli.PhysicsWorld.create()
-    physicsWorld:setGravity(bullet.btVector3(0, -60.81, 0))
+    physicsWorld:setGravity(params.Gravity)
     njli.World.getInstance():getScene():addPhysicsWorld(physicsWorld)
 
     local shader = njli.ShaderProgram.create();

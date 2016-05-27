@@ -442,6 +442,8 @@ end
 local update = function(self, timeStep)
   if not self:isPaused() then
 
+    brightnessForNode(self:getNode())
+
     -- self:getNode():setRotation(njli.btQuaternion(bullet.btVector3(1,0,0), 0))
 
     if self:getNode():getPhysicsBody():isKinematicPhysics() then
