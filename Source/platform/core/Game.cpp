@@ -183,21 +183,21 @@ void NJLIGameEngine::unpauseSound()
 void NJLIGameEngine::keyboardShow()
 {
     char buffer[256];
-    sprintf(buffer, "%s", "KeyboardShow");
+    sprintf(buffer, "%s", "WorldKeyboardShow");
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
 }
 
 void NJLIGameEngine::keyboardCancel()
 {
     char buffer[256];
-    sprintf(buffer, "%s", "KeyboardCancel");
+    sprintf(buffer, "%s", "WorldKeyboardCancel");
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
 }
 
 void NJLIGameEngine::keyboardReturn(const char* text)
 {
     char buffer[256];
-    sprintf(buffer, "%s", "KeyboardReturn");
+    sprintf(buffer, "%s", "WorldKeyboardReturn");
 
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, text);
 }
@@ -206,6 +206,6 @@ void NJLIGameEngine::receivedMemoryWarning()
 {
     njli::World::getInstance()->getWorldResourceLoader()->unLoadAll();
     njli::World::getInstance()->getWorldFactory()->collectGarbage();
-    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute("ReceivedMemoryWarning");
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute("WorldReceivedMemoryWarning");
 }
 }

@@ -1658,6 +1658,8 @@ namespace njli
     {
 //        static f32 p[16];
 //        getProjection().getOpenGLMatrix(p);//m_ProjectionMatrixArray);
+        f32 p[16];
+        memcpy(p, m_ProjectionMatrixArray, sizeof(p));
         return m_ProjectionMatrixArray;
     }
     

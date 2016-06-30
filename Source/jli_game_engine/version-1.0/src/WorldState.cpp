@@ -389,7 +389,7 @@ namespace njli
                                 }
                                 contact->screenPosition(btVector2(from.x(), from.y()));
                                 char buffer[BUFFER_SIZE];
-                                sprintf(buffer, "%s%s", code, "Ray");
+                                sprintf(buffer, "%s%s", "NodeRay", code);
                                 njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, *contact);
                                 touched = true;
                                 
@@ -429,6 +429,7 @@ namespace njli
         sprintf(buffer, "WorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
+//        sprintf(buffer, "WorldTouch%s", action);
         sprintf(buffer, "Touch%s", action);
         checkRayCollision(m_CurrentTouches, buffer);
     }
@@ -441,6 +442,7 @@ namespace njli
         sprintf(buffer, "WorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
+//        sprintf(buffer, "WorldTouch%s", action);
         sprintf(buffer, "Touch%s", action);
         checkRayCollision(m_CurrentTouches, buffer, true);
         
@@ -454,6 +456,7 @@ namespace njli
         sprintf(buffer, "WorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
+//        sprintf(buffer, "WorldTouch%s", action);
         sprintf(buffer, "Touch%s", action);
         checkRayCollision(m_CurrentTouches, buffer);
     }
@@ -466,6 +469,7 @@ namespace njli
         sprintf(buffer, "WorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
+//        sprintf(buffer, "WorldTouch%s", action);
         sprintf(buffer, "Touch%s", action);
         checkRayCollision(m_CurrentTouches, buffer);
     }
