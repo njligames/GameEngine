@@ -322,7 +322,7 @@ namespace njli
     
     void WorldState::enter(void *object)
     {
-        char buffer[BUFFER_SIZE] = "WorldEnterState";
+        char buffer[BUFFER_SIZE] = "__NJLIWorldEnterState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
 
     }
@@ -330,7 +330,7 @@ namespace njli
     void WorldState::update(void *object, f32 timeStep)
     {
         BT_PROFILE("WorldState::update");
-        char buffer[BUFFER_SIZE] = "WorldUpdateState";
+        char buffer[BUFFER_SIZE] = "__NJLIWorldUpdateState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, timeStep);
     }
     
@@ -342,14 +342,14 @@ namespace njli
             scene->clearAllStates();
         }
         
-        char buffer[BUFFER_SIZE] = "WorldExitState";
+        char buffer[BUFFER_SIZE] = "__NJLIWorldExitState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
     }
     
     bool WorldState::onMessage(void *object, const Telegram &msg)const
     {
         bool ret;
-        char buffer[BUFFER_SIZE] = "WorldOnMessage";
+        char buffer[BUFFER_SIZE] = "__NJLIWorldOnMessage";
         
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, msg, ret);
         
@@ -389,7 +389,7 @@ namespace njli
                                 }
                                 contact->screenPosition(btVector2(from.x(), from.y()));
                                 char buffer[BUFFER_SIZE];
-                                sprintf(buffer, "%s%s", "NodeRay", code);
+                                sprintf(buffer, "%s%s", "__NJLINodeRay", code);
                                 njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, *contact);
                                 touched = true;
                                 
@@ -426,7 +426,7 @@ namespace njli
         char action[BUFFER_SIZE] = "Down";
         char buffer[BUFFER_SIZE] = "";
         
-        sprintf(buffer, "WorldTouch%s", action);
+        sprintf(buffer, "__NJLIWorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
 //        sprintf(buffer, "WorldTouch%s", action);
@@ -439,7 +439,7 @@ namespace njli
         char action[BUFFER_SIZE] = "Up";
         char buffer[BUFFER_SIZE] = "";
         
-        sprintf(buffer, "WorldTouch%s", action);
+        sprintf(buffer, "__NJLIWorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
 //        sprintf(buffer, "WorldTouch%s", action);
@@ -453,7 +453,7 @@ namespace njli
         char action[BUFFER_SIZE] = "Move";
         char buffer[BUFFER_SIZE] = "";
         
-        sprintf(buffer, "WorldTouch%s", action);
+        sprintf(buffer, "__NJLIWorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
 //        sprintf(buffer, "WorldTouch%s", action);
@@ -466,7 +466,7 @@ namespace njli
         char action[BUFFER_SIZE] = "Cancelled";
         char buffer[BUFFER_SIZE] = "";
         
-        sprintf(buffer, "WorldTouch%s", action);
+        sprintf(buffer, "__NJLIWorldTouch%s", action);
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
         
 //        sprintf(buffer, "WorldTouch%s", action);

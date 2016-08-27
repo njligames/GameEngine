@@ -73,7 +73,43 @@ bool NJLIGameEngine::create(const char* deviceName)
     
     
     njli::World::getInstance()->getWorldClock()->reset();
+    
+    std::string source = std::string("\
+function __NJLIWorldEnterState() end\n\
+function __NJLIWorldUpdateState(timeStep) end\n\
+function __NJLIWorldExitState() end\n\
+function __NJLIWorldOnMessage(message) end\n\
+function __NJLIWorldKeyboardShow() end\n\
+function __NJLIWorldKeyboardCancel() end\n\
+function __NJLIWorldKeyboardReturn(text) end\n\
+function __NJLIWorldReceivedMemoryWarning() end\n\
+function __NJLIWorldGamePause() end\n\
+function __NJLIWorldGameUnPause() end\n\
+function __NJLIWorldRenderHUD() end\n\
+function __NJLIWorldTouchDown(touches) end\n\
+function __NJLIWorldTouchUp(touches) end\n\
+function __NJLIWorldTouchMove(touches) end\n\
+function __NJLIWorldTouchCancelled(touches) end\n\
+function __NJLISceneEnterState(scene) end\n\
+function __NJLISceneUpdateState(scene, timeStep) end\n\
+function __NJLISceneExitState(scene) end\n\
+function __NJLISceneOnMessage(scene, message) end\n\
+function __NJLINodeEnterState(node) end\n\
+function __NJLINodeUpdateState(node, timeStep) end\n\
+function __NJLINodeExitState(node) end\n\
+function __NJLINodeOnMessage(node, message) end\n\
+function __NJLINodeCollide(node, otherNode, collisionPoint) end\n\
+function __NJLINodeNear(node, otherNode) end\n\
+function __NJLINodeActionUpdate(action, timeStep) end\n\
+function __NJLINodeActionComplete(action) end\n\
+function __NJLINodeRayTouchDown(rayContact) end\n\
+function __NJLINodeRayTouchUp(rayContact) end\n\
+function __NJLINodeRayTouchMove(rayContact) end\n\
+function __NJLINodeRayTouchCancelled(rayContact) end\n\
+");
+    
 
+    World::getInstance()->getWorldLuaVirtualMachine()->loadString(source.c_str());
     njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/main.lua");
     njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
 
@@ -183,21 +219,21 @@ void NJLIGameEngine::unpauseSound()
 void NJLIGameEngine::keyboardShow()
 {
     char buffer[256];
-    sprintf(buffer, "%s", "WorldKeyboardShow");
+    sprintf(buffer, "%s", "__NJLIWorldKeyboardShow");
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
 }
 
 void NJLIGameEngine::keyboardCancel()
 {
     char buffer[256];
-    sprintf(buffer, "%s", "WorldKeyboardCancel");
+    sprintf(buffer, "%s", "__NJLIWorldKeyboardCancel");
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
 }
 
 void NJLIGameEngine::keyboardReturn(const char* text)
 {
     char buffer[256];
-    sprintf(buffer, "%s", "WorldKeyboardReturn");
+    sprintf(buffer, "%s", "__NJLIWorldKeyboardReturn");
 
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, text);
 }
@@ -206,6 +242,6 @@ void NJLIGameEngine::receivedMemoryWarning()
 {
     njli::World::getInstance()->getWorldResourceLoader()->unLoadAll();
     njli::World::getInstance()->getWorldFactory()->collectGarbage();
-    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute("WorldReceivedMemoryWarning");
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute("__NJLIWorldReceivedMemoryWarning");
 }
 }

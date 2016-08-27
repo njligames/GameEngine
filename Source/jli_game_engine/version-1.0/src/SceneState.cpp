@@ -180,27 +180,27 @@ namespace njli
     
     void SceneState::enter(Scene *object)
     {
-        char buffer[BUFFER_SIZE] = "SceneEnterState";
+        char buffer[BUFFER_SIZE] = "__NJLISceneEnterState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
     }
     
     void SceneState::update(Scene *object, f32 timeStep)
     {
         BT_PROFILE("SceneState::update");
-        char buffer[BUFFER_SIZE] = "SceneUpdateState";
+        char buffer[BUFFER_SIZE] = "__NJLISceneUpdateState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, timeStep);
     }
     
     void SceneState::exit(Scene *object)
     {
-        char buffer[BUFFER_SIZE] = "SceneExitState";
+        char buffer[BUFFER_SIZE] = "__NJLISceneExitState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
     }
     
     bool SceneState::onMessage(Scene *object, const Telegram &msg)const
     {
         bool ret;
-        char buffer[BUFFER_SIZE] = "SceneOnMessage";
+        char buffer[BUFFER_SIZE] = "__NJLISceneOnMessage";
         
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, msg, ret);
         

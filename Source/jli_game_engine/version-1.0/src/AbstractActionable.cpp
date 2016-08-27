@@ -128,7 +128,7 @@ namespace njli
                     
                     if(actionable->callCompletion)
                     {
-                        char buffer[BUFFER_SIZE] = "NodeActionComplete";
+                        char buffer[BUFFER_SIZE] = "__NJLINodeActionComplete";
                         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, currentAction);
                     }
                 }
