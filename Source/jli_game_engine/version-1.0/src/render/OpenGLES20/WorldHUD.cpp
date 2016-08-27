@@ -1168,7 +1168,7 @@ namespace njli
                       njli::World::getInstance()->getAspectRatio());
         
         s8 buffer[BUFFER_SIZE];
-        sprintf(buffer, "%s", "WorldRenderHUD");
+        sprintf(buffer, "%s", "__NJLIWorldRenderHUD");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
         
         nvgEndFrame(m_NVGContext);

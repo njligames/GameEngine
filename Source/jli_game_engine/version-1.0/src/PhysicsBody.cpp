@@ -203,7 +203,7 @@ namespace njli
     {
         if (body->getPhysicsShape() && m_PhysicsShape)
         {
-            char buffer[BUFFER_SIZE] = "NodeCollide";
+            char buffer[BUFFER_SIZE] = "__NJLINodeCollide";
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, getParent(), body->getParent(), pt);
         }
     }
@@ -212,7 +212,7 @@ namespace njli
     {
         if (m_PhysicsShape)
         {
-            char buffer[BUFFER_SIZE] = "NodeNear";
+            char buffer[BUFFER_SIZE] = "__NJLINodeNear";
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, getParent(), body->getParent(), dispatchInfo);
         }
         

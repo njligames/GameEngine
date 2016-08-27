@@ -787,14 +787,14 @@ namespace njli
         if (enable && !isPausedGame())
         {
             s8 buffer[BUFFER_SIZE];
-            sprintf(buffer, "%s", "WorldGamePause");
+            sprintf(buffer, "%s", "__NJLIWorldGamePause");
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
         }
         
         if (!enable && isPausedGame())
         {
             s8 buffer[BUFFER_SIZE];
-            sprintf(buffer, "%s", "WorldGameUnPause");
+            sprintf(buffer, "%s", "__NJLIWorldGameUnPause");
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
         }
         

@@ -183,27 +183,27 @@ namespace njli
     
     void NodeState::enter(Node *object)
     {
-        char buffer[BUFFER_SIZE] = "NodeEnterState";
+        char buffer[BUFFER_SIZE] = "__NJLINodeEnterState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
     }
     
     void NodeState::update(Node *object, f32 timeStep)
     {
         BT_PROFILE("NodeState::update");
-        char buffer[BUFFER_SIZE] = "NodeUpdateState";
+        char buffer[BUFFER_SIZE] = "__NJLINodeUpdateState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, timeStep);
     }
     
     void NodeState::exit(Node *object)
     {
-        char buffer[BUFFER_SIZE] = "NodeExitState";
+        char buffer[BUFFER_SIZE] = "__NJLINodeExitState";
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
     }
     
     bool NodeState::onMessage(Node *object, const Telegram &msg)const
     {
         bool ret;
-        char buffer[BUFFER_SIZE] = "NodeOnMessage";
+        char buffer[BUFFER_SIZE] = "__NJLINodeOnMessage";
         
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, msg, ret);
         

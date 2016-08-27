@@ -91,6 +91,24 @@ void printGLInfo()
     
     glGetIntegerv(GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS, &param);
     DEBUG_LOG_V(TAG, "%s = %d\n", "The count texture units of allowed for usage in both shaders", param);
+    
+    glGetIntegerv(GL_MAX_VERTEX_UNIFORM_VECTORS, &param);
+    DEBUG_LOG_V(TAG, "%s = %d\n", "The maximumum amount of uniform vectors in the vertex shader", param);
+    
+    glGetIntegerv(GL_MAX_FRAGMENT_UNIFORM_VECTORS, &param);
+    DEBUG_LOG_V(TAG, "%s = %d\n", "The maximumum amount of uniform vectors in the fragment shader", param);
+    
+    glGetIntegerv(GL_MAX_VARYING_VECTORS, &param);
+    DEBUG_LOG_V(TAG, "%s = %d\n", "The maximumum amount of varying vectors", param);
+    
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &param);
+    DEBUG_LOG_V(TAG, "%s = %d\n", "The maximumum amount of vertex attributes", param);
+  
+    
+//
+    
+//    GL_MAX_VERTEX_UNIFORM_VECTORS
+//    GL_MAX_FRAGMENT_UNIFORM_VECTORS
     /*
      Actually there is GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS, and GL_MAX_TEXTURE_IMAGE_UNITS and GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS enums. First is for count texture units of allowed for usage in vertex shader, second one is for fragment shader, and third is combined for both shaders combined.
      */
