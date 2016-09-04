@@ -383,7 +383,8 @@
     //    DEBUG_ASSERT_PRINT(success, "%s", [[error localizedDescription] UTF8String]);
     
     //    jli::World::getInstance()->enablePauseGame();
-    njli::NJLIGameEngine::pauseGame();
+//    njli::NJLIGameEngine::pauseGame();
+    njli::NJLIGameEngine::interrupt();
 }
 
 - (void)endInterruption
@@ -400,6 +401,8 @@
     
     success = [session setActive:YES error:&error];
     //    DEBUG_ASSERT_PRINT(success, "%s", [[error localizedDescription] UTF8String]);
+    
+    njli::NJLIGameEngine::resumeInterrupt();
 }
 
 -(void)emptyDocumentFiles

@@ -556,7 +556,7 @@ namespace njli
         return (result == FMOD_OK);
     }
     
-    void WorldSound::enableSuspend(bool enable)
+    void WorldSound::enablePause(bool enable)
     {
         BOOL success = NO;
         NSError *error = nil;

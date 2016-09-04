@@ -196,24 +196,72 @@ void NJLIGameEngine::touchCancelled()
     njli::World::getInstance()->getWorldInput()->touchCancelled();
 }
 
-void NJLIGameEngine::pauseGame()
-{
-    njli::World::getInstance()->enablePauseGame();
-}
-
-void NJLIGameEngine::unpauseGame()
-{
-    njli::World::getInstance()->enablePauseGame(false);
-}
+    void NJLIGameEngine::willResignActive()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameWillResignActive");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    void NJLIGameEngine::didBecomeActive()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameDidBecomeActive");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    
+    void NJLIGameEngine::didEnterBackground()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameDidEnterBackground");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    
+    void NJLIGameEngine::willEnterForeground()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameWillEnterForeground");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    
+    void NJLIGameEngine::willTerminate()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameWillTerminate");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    
+    void NJLIGameEngine::interrupt()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameInterrupt");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    
+    void NJLIGameEngine::resumeInterrupt()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIGameResumeInterrupt");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+    }
+    
+//void NJLIGameEngine::pauseGame()
+//{
+//    njli::World::getInstance()->enablePauseGame();
+//}
+//
+//void NJLIGameEngine::unpauseGame()
+//{
+//    njli::World::getInstance()->enablePauseGame(false);
+//}
 
 void NJLIGameEngine::pauseSound()
 {
-    njli::World::getInstance()->getWorldSound()->enableSuspend();
+    njli::World::getInstance()->getWorldSound()->enablePause();
 }
 
 void NJLIGameEngine::unpauseSound()
 {
-    njli::World::getInstance()->getWorldSound()->enableSuspend(false);
+    njli::World::getInstance()->getWorldSound()->enablePause(false);
 }
 
 void NJLIGameEngine::keyboardShow()

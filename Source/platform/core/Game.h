@@ -27,9 +27,17 @@ public:
     static void touchMove();
     static void touchCancelled();
 
-    static void pauseGame();
-    static void unpauseGame();
-
+    static void willResignActive();
+    static void didBecomeActive();
+    static void didEnterBackground();
+    static void willEnterForeground();
+    static void willTerminate();
+    static void interrupt();
+    static void resumeInterrupt();
+    
+//    static void pauseGame();
+//    static void unpauseGame();
+//
     static void pauseSound();
     static void unpauseSound();
 
