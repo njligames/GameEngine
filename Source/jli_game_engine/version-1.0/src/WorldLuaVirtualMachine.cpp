@@ -2261,6 +2261,28 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
         return false;
     }
     
+    bool WorldLuaVirtualMachine::execute(const char *code, Scene *scene, const char* str)
+    {
+        if(m_lua_State)
+        {
+            lua_getglobal(m_lua_State, code);
+            
+            swig_type_info *sceneTypeInfo = SWIG_TypeQuery( m_lua_State, "_p_njli__Scene" );
+            SWIG_NewPointerObj(m_lua_State,(void *) scene, sceneTypeInfo,0);
+            
+            lua_pushstring(m_lua_State, str);
+            
+            /* do the call (1 arguments, 0 result) */
+            int error_code = lua_pcall(m_lua_State, 2, 0, 0);
+            
+            if(LUA_OK == error_code)
+                return true;
+            getError(code, error_code);
+        }
+        
+        return false;
+    }
+    
     bool WorldLuaVirtualMachine::execute(const char *code, Scene *pEntity, f32 _btScalar)
     {
         if(m_lua_State)
@@ -2405,7 +2427,7 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
 //    }
 //
     
-    bool WorldLuaVirtualMachine::execute(const char *code, DeviceTouch **m_CurrentTouches)
+    bool WorldLuaVirtualMachine::execute(const char *code, DeviceTouch **touches)
     {
 //        DEBUG_LOG_V(TAG, "WorldLuaVirtualMachine::execute(%s)\n", code);
         
@@ -2417,7 +2439,7 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
             lua_newtable(m_lua_State);
             for (i = 0; i < DeviceTouch::MAX_TOUCHES; i++){
                 swig_type_info * deviceTouchTypeInfo = SWIG_TypeQuery( m_lua_State, "_p_njli__DeviceTouch" );
-                SWIG_NewPointerObj(m_lua_State,(void *) m_CurrentTouches[i],deviceTouchTypeInfo,0);
+                SWIG_NewPointerObj(m_lua_State,(void *) touches[i],deviceTouchTypeInfo,0);
                 lua_rawseti(m_lua_State,-2,i+1);/* -1 is the number, -2 is the table*/
             }
             
@@ -2430,6 +2452,49 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
         }
         return false;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    bool WorldLuaVirtualMachine::execute(const char *code, Scene *pEntity, DeviceTouch **touches)
+    {
+        //        DEBUG_LOG_V(TAG, "WorldLuaVirtualMachine::execute(%s)\n", code);
+        
+        if(m_lua_State)
+        {
+            lua_getglobal(m_lua_State, code);
+            
+            swig_type_info *sceneTypeInfo = SWIG_TypeQuery( m_lua_State, "_p_njli__Scene" );
+            SWIG_NewPointerObj(m_lua_State,(void *) pEntity,sceneTypeInfo,0);
+            
+            s32 i;
+            lua_newtable(m_lua_State);
+            for (i = 0; i < DeviceTouch::MAX_TOUCHES; i++)
+            {
+                swig_type_info * deviceTouchTypeInfo = SWIG_TypeQuery( m_lua_State, "_p_njli__DeviceTouch" );
+                SWIG_NewPointerObj(m_lua_State,(void *) touches[i],deviceTouchTypeInfo,0);
+                lua_rawseti(m_lua_State,-2,i+1);/* -1 is the number, -2 is the table*/
+            }
+            
+            /* call the function with 2 arguments, return 0 result */
+            int error_code = lua_pcall(m_lua_State, 2, 0, 0);
+            
+            if(LUA_OK == error_code)
+                return true;
+            getError(code, error_code);
+        }
+        return false;
+    }
+    
+    
+    
+    
+    
+    
     
     bool WorldLuaVirtualMachine::execute(const char *code, Node *node1, Node *node2, const btManifoldPoint& pt)
     {

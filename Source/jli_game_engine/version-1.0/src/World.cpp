@@ -361,6 +361,9 @@ namespace njli
         {
             DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
         }
+        
+        if(getScene())
+            getScene()->touchDown(m_CurrentTouches);
     }
     
     void World::touchUp(DeviceTouch **m_CurrentTouches)
@@ -373,8 +376,11 @@ namespace njli
         }
         else
         {
-//            Log("There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
         }
+        
+        if(getScene())
+            getScene()->touchUp(m_CurrentTouches);
     }
     
     void World::touchMove(DeviceTouch **m_CurrentTouches)
@@ -387,8 +393,11 @@ namespace njli
         }
         else
         {
-//            Log("There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
         }
+        
+        if(getScene())
+            getScene()->touchMove(m_CurrentTouches);
     }
     
     void World::touchCancelled(DeviceTouch **m_CurrentTouches)
@@ -401,8 +410,43 @@ namespace njli
         }
         else
         {
-//            Log("There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
         }
+        
+        if(getScene())
+            getScene()->touchCancelled(m_CurrentTouches);
+    }
+    
+    
+    void World::keyboardShow()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIWorldKeyboardShow");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(getScene())
+            getScene()->keyboardShow();
+    }
+    
+    void World::keyboardCancel()
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIWorldKeyboardCancel");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(getScene())
+            getScene()->keyboardCancel();
+    }
+    
+    void World::keyboardReturn(const char* text)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIWorldKeyboardReturn");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, text);
+        
+        if(getScene())
+            getScene()->keyboardReturn(text);
     }
     
     void World::setTouchCamera(Camera *camera)
@@ -441,10 +485,10 @@ namespace njli
         
         m_WorldClock->update(timeStep);
         
-        m_stateMachine->update(timeStep);
-        
         if(getScene())
             getScene()->update(timeStep, numSubSteps);
+        
+        m_stateMachine->update(timeStep);
         
 //        for (s32 cameraIndex = 0; cameraIndex < m_cameraArray.size(); ++cameraIndex)
 //        {
@@ -459,9 +503,9 @@ namespace njli
             handleSocketMessage();
         m_WorldSound->update();
         
-        u64 before = m_WorldFactory->collectGarbageSize();
+//        u64 before = m_WorldFactory->collectGarbageSize();
         m_WorldFactory->collectGarbage();
-        u64 after = m_WorldFactory->collectGarbageSize();
+//        u64 after = m_WorldFactory->collectGarbageSize();
         
         
 //        DEBUG_LOG_V(TAG, "There were (%lld) objects before and (%lld) objects after", before, after);
@@ -479,7 +523,7 @@ namespace njli
         if(getScene())
             getScene()->render();
         
-//        getWorldHUD()->render();
+        getWorldHUD()->render();
         
 #if defined(DEBUG) || defined (_DEBUG)
         Scene *scene = getScene();
@@ -558,8 +602,10 @@ namespace njli
     {
         DEBUG_ASSERT(scene != NULL);
         
-        if(getScene())
-            removeChild(getScene());
+        Scene *currentScene = getScene();
+        
+        if(currentScene)
+            removeChild(currentScene);
         
         m_Scene = scene;
         
@@ -789,6 +835,9 @@ namespace njli
             s8 buffer[BUFFER_SIZE];
             sprintf(buffer, "%s", "__NJLIWorldGamePause");
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+            
+            if(njli::World::getInstance()->getScene())
+                njli::World::getInstance()->getScene()->pauseGame();
         }
         
         if (!enable && isPausedGame())
@@ -796,6 +845,9 @@ namespace njli
             s8 buffer[BUFFER_SIZE];
             sprintf(buffer, "%s", "__NJLIWorldGameUnPause");
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+            
+            if(njli::World::getInstance()->getScene())
+                njli::World::getInstance()->getScene()->unPauseGame();
         }
         
         m_GamePaused = enable;

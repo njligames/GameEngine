@@ -32,6 +32,10 @@
 
 #include "btQuickprof.h"
 
+#include "SceneState.h"
+
+#define TAG "Scene.cpp"
+
 namespace njli
 {
     Scene::Scene():
@@ -720,6 +724,155 @@ namespace njli
         }
         return NULL;
     }
+    
+    
+    
+    
+    
+    void Scene::touchDown(DeviceTouch **m_CurrentTouches)
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->touchDown(this, m_CurrentTouches);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::touchUp(DeviceTouch **m_CurrentTouches)
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->touchUp(this, m_CurrentTouches);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::touchMove(DeviceTouch **m_CurrentTouches)
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->touchMove(this, m_CurrentTouches);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::touchCancelled(DeviceTouch **m_CurrentTouches)
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->touchCancelled(this, m_CurrentTouches);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::keyboardShow()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->keyboardShow(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::keyboardCancel()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->keyboardCancel(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::keyboardReturn(const char* text)
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->keyboardReturn(this, text);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::renderHUD()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->renderHUD(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::pauseGame()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->pauseGame(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::unPauseGame()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->unPauseGame(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    
+    
+    
+    
     
 //    void Scene::pause()
 //    {

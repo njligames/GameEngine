@@ -13,9 +13,11 @@
 #include "AbstractState.h"
 #include "Scene.h"
 #include "lua.hpp"
+#include "DeviceTouch.h"
 
 namespace njli {
 class SceneStateBuilder;
+    class DeviceTouch;
 
 /**
      *  <#Description#>
@@ -118,6 +120,38 @@ public:
          */
     virtual bool onMessage(Scene * scene, const Telegram& telegram) const;
 
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchDown(Scene *object, DeviceTouch * *m_CurrentTouches);
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchUp(Scene *object, DeviceTouch * *m_CurrentTouches);
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchMove(Scene *object, DeviceTouch * *m_CurrentTouches);
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchCancelled(Scene *object, DeviceTouch * *m_CurrentTouches);
+    
+    void keyboardShow(Scene *object);
+    void keyboardCancel(Scene *object);
+    void keyboardReturn(Scene *object, const char* text);
+    
+    void renderHUD(Scene *object);
+    void pauseGame(Scene *object);
+    void unPauseGame(Scene *object);
     /**
          *  <#Description#>
          *

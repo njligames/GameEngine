@@ -35,6 +35,7 @@ class PhysicsWorld;
 class PhysicsRayContact;
 class Clock;
 class Geometry;
+    class DeviceTouch;
 
 /**
      *  <#Description#>
@@ -371,6 +372,40 @@ public:
          *  @return <#return value description#>
          */
     //        bool isPaused()const;
+    
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchDown(DeviceTouch** m_CurrentTouches);
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchUp(DeviceTouch** m_CurrentTouches);
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchMove(DeviceTouch** m_CurrentTouches);
+    /**
+     *  <#Description#>
+     *
+     *  @param m_CurrentTouches <#m_CurrentTouches description#>
+     */
+    void touchCancelled(DeviceTouch** m_CurrentTouches);
+    
+    void keyboardShow();
+    void keyboardCancel();
+    void keyboardReturn(const char* text);
+    
+    void renderHUD();
+    
+    void pauseGame();
+    void unPauseGame();
 protected:
     void addActiveCamera(Camera * camera);
     void removeActiveCamera(Camera * camera);

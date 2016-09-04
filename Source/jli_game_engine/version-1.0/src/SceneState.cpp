@@ -207,4 +207,87 @@ namespace njli
         return ret;
     }
     
+    void SceneState::touchDown(Scene *object, DeviceTouch **m_CurrentTouches)
+    {
+        char action[BUFFER_SIZE] = "Down";
+        char buffer[BUFFER_SIZE] = "";
+        
+        sprintf(buffer, "__NJLISceneTouch%s", action);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+    }
+    
+    void SceneState::touchUp(Scene *object, DeviceTouch **m_CurrentTouches)
+    {
+        char action[BUFFER_SIZE] = "Up";
+        char buffer[BUFFER_SIZE] = "";
+        
+        sprintf(buffer, "__NJLISceneTouch%s", action);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+    }
+    
+    void SceneState::touchMove(Scene *object, DeviceTouch **m_CurrentTouches)
+    {
+        char action[BUFFER_SIZE] = "Move";
+        char buffer[BUFFER_SIZE] = "";
+        
+        sprintf(buffer, "__NJLISceneTouch%s", action);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+    }
+    
+    void SceneState::touchCancelled(Scene *object, DeviceTouch **m_CurrentTouches)
+    {
+        char action[BUFFER_SIZE] = "Cancelled";
+        char buffer[BUFFER_SIZE] = "";
+        
+        sprintf(buffer, "__NJLISceneTouch%s", action);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+    }
+    
+    void SceneState::keyboardShow(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneKeyboardShow");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::keyboardCancel(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneKeyboardCancel");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::keyboardReturn(Scene *object, const char* text)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneKeyboardReturn");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, text);
+    }
+    
+    void SceneState::renderHUD(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneRenderHUD");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::pauseGame(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneGamePause");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    void SceneState::unPauseGame(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneGameUnPause");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
 }

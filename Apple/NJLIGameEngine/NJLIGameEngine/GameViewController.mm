@@ -79,10 +79,10 @@
     //        [GameViewController printKeyValueDictionary:key value:obj];
     //    }
     
-    //#if defined(DEBUG) || defined (_DEBUG)
-    //    [self emptyDocumentFiles];
-    //
-    //#endif
+    #if defined(DEBUG) || defined (_DEBUG)
+        [self emptyDocumentFiles];
+    
+    #endif
     
         setupFileSystem();
     
