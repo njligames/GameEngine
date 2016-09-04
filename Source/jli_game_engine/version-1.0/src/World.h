@@ -241,6 +241,15 @@ public:
          *  @param m_CurrentTouches <#m_CurrentTouches description#>
          */
     void touchCancelled(DeviceTouch** m_CurrentTouches);
+    
+    
+    
+    
+    void keyboardShow();
+    void keyboardCancel();
+    void keyboardReturn(const char* text);
+    
+    
     /**
          *  <#Description#>
          *

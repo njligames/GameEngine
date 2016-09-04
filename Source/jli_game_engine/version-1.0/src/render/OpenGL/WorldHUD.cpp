@@ -1176,11 +1176,12 @@ namespace njli
         sprintf(buffer, "%s", "WorldRenderHUD");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
         
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->renderHUD();
+        
         nvgEndFrame(m_NVGContext);
         
         glDisable(GL_BLEND);
-        
-        
     }
     
     NVGcontext *WorldHUD::getContext()

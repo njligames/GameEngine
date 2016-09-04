@@ -205,6 +205,8 @@ public:
          *  @return <#return value description#>
          */
     bool execute(const char* code, Scene* scene);
+    
+    bool execute(const char *code, Scene *scene, const char* str);
 
     /**
          *  @author James Folk, 16-02-11 18:02:19
@@ -283,6 +285,8 @@ public:
          *  @return <#return value description#>
          */
     bool execute(const char* code, DeviceTouch** m_CurrentTouches);
+    
+    bool execute(const char *code, Scene *pEntity, DeviceTouch **m_CurrentTouches);
 
     /**
          *  @author James Folk, 16-02-11 18:02:43

@@ -45,7 +45,11 @@ public:
     void touchUp();
     void touchMove();
     void touchCancelled();
-
+    
+    void keyboardShow();
+    void keyboardCancel();
+    void keyboardReturn(const char* text);
+    
     void setOrientation(const s32 orientation);
     bool isPortraitOrientation() const;
     bool isLandscapeOrientation() const;
