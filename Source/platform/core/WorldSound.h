@@ -45,7 +45,7 @@ public:
     virtual s32 getType() const;
     virtual operator std::string() const;
 
-    void enableSuspend(bool enable = true);
+    void enablePause(bool enable = true);
 
     bool createSound(const char* fileContent, size_t file_size, Sound& sound);
 protected:
