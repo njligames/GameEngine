@@ -42,8 +42,8 @@ std::string toJsonString(const btTransform &v);
 std::string toJsonString(const btQuaternion &v);
 std::string toJsonString(const btMatrix3x3 &v);
 std::string toJsonString(const std::string &v);
-//std::string toJsonString(const btCollisionObject &v);
-//std::string toJsonString(const btRigidBody &v);
+std::string toJsonString(const btCollisionObject &v);
+std::string toJsonString(const btRigidBody &v);
 
 SIMD_FORCE_INLINE std::string string_format(const std::string fmt, ...) {
     std::vector<char> str(100,'\0');

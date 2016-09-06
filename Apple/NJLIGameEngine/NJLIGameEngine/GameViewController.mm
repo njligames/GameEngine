@@ -175,7 +175,19 @@
     //    uname(&systemInfo);
     
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    njli::NJLIGameEngine::create(0, 0, view.frame.size.width * view.contentScaleFactor, view.frame.size.height * view.contentScaleFactor, orientation, [[UIDeviceUtil hardwareDescription] UTF8String]);
+    
+    
+    
+    njli::NJLIGameEngine::create([[UIDeviceUtil hardwareDescription] UTF8String]);
+    
+    njli::NJLIGameEngine::resize(0,
+                                 0,
+                                 view.frame.size.width * view.contentScaleFactor,
+                                 view.frame.size.height * view.contentScaleFactor,
+                                 orientation);
+    
+    
+//    njli::NJLIGameEngine::create(0, 0, view.frame.size.width * view.contentScaleFactor, view.frame.size.height * view.contentScaleFactor, orientation, [[UIDeviceUtil hardwareDescription] UTF8String]);
 }
 
 - (void)tearDownGL
@@ -209,6 +221,7 @@
     GLKView *view = (GLKView *)self.view;
     
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
     njli::NJLIGameEngine::resize(0, 0, view.frame.size.width * view.contentScaleFactor, view.frame.size.height * view.contentScaleFactor, orientation);
 }
 
@@ -216,7 +229,7 @@
 {
     njli::NJLIGameEngine::clearNodeTouches();
     
-    GLKView *view = (GLKView *)self.view;
+//    GLKView *view = (GLKView *)self.view;
     
     int i = 0;
     for(UITouch *touch in touches)
@@ -372,7 +385,7 @@
     NSError *error = nil;
     AVAudioSession *session = [AVAudioSession sharedInstance];
     
-    njli::NJLIGameEngine::pauseSound();
+    
     
     //    jli::World::getInstance()->getWorldSound()->enableSuspend();
     
@@ -394,7 +407,7 @@
     AVAudioSession *session = [AVAudioSession sharedInstance];
     
     //    jli::World::getInstance()->getWorldSound()->enableSuspend(false);
-    njli::NJLIGameEngine::unpauseSound();
+    
     
     success = [session setCategory:AVAudioSessionCategoryPlayback error:&error];
     //    DEBUG_ASSERT_PRINT(success, "%s", [[error localizedDescription] UTF8String]);

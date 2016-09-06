@@ -1061,33 +1061,33 @@ namespace njli
 //        DEBUG_LOG_V(TAG, "Lua version: %s\n", LUA_VERSION);
         
 #if defined(LUAI_THROW)
-        DEBUG_LOG_WRITE_V(TAG, "Lua LUAI_THROW: yes\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua LUAI_THROW: yes\n");
 #else
-        DEBUG_LOG_WRITE_V(TAG, "Lua LUAI_THROW: no\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua LUAI_THROW: no\n");
 #endif
         
 #if defined(LUA_USE_LONGJMP)
-        DEBUG_LOG_WRITE_V(TAG, "Lua LUA_USE_LONGJMP: yes\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua LUA_USE_LONGJMP: yes\n");
 #else
-        DEBUG_LOG_WRITE_V(TAG, "Lua LUA_USE_LONGJMP: no\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua LUA_USE_LONGJMP: no\n");
 #endif
         
 #if defined(__cplusplus)
-        DEBUG_LOG_WRITE_V(TAG, "Lua __cplusplus: yes\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua __cplusplus: yes\n");
 #else
-        DEBUG_LOG_WRITE_V(TAG, "Lua __cplusplus: no\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua __cplusplus: no\n");
 #endif
         
 #if defined(LUA_USE_ULONGJMP)
-        DEBUG_LOG_WRITE_V(TAG, "Lua LUA_USE_ULONGJMP: yes\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua LUA_USE_ULONGJMP: yes\n");
 #else
-        DEBUG_LOG_WRITE_V(TAG, "Lua LUA_USE_ULONGJMP: no\n");
+        DEBUG_LOG_V(TAG, "%s", "Lua LUA_USE_ULONGJMP: no\n");
 #endif
         
         
         
         
-        DEBUG_LOG_V(TAG, "Lua version: %s\n", LUA_VERSION);
+        
 //        DEBUG_LOG_V(TAG, "SWIG version: %X\n", SWIGVERSION);
 /*
  #if !defined(LUAI_THROW)
@@ -1095,6 +1095,10 @@ namespace njli
  #if defined(__cplusplus) && !defined(LUA_USE_LONGJMP)
  */
         m_lua_State = luaL_newstate();
+        
+        luaL_checkversion(m_lua_State);
+        
+        DEBUG_LOG_V(TAG, "Lua version: %s\n", LUA_VERSION);
         
         luaL_openlibs(m_lua_State);
 
