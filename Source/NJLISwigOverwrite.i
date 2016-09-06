@@ -18,7 +18,7 @@ if(LUA_WRAPPER_LOGGING){\
 lua_Debug ar;\
 lua_getstack(L, 1, &ar);\
 lua_getinfo(L, "nSl", &ar);\
-DEBUG_LOG_V("LUA_INTERFACE","(%s:%d) in %s",\
+printf("(%s:%d) in %s",\
 ar.short_src,ar.currentline,ar.name); \
 }\
 if (lua_gettop(L)<a || lua_gettop(L)>b) \

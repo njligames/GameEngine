@@ -2,7 +2,7 @@
 #ifndef __JLIGameEngineTest__WorldSound__
 #define __JLIGameEngineTest__WorldSound__
 
-#include "GLPlatform.h"
+#include "SoundPlatform.h"
 
 #ifdef USE_OPENAL
 #include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers/al.h"

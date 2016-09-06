@@ -66,7 +66,7 @@ void printGLInfo()
     DEBUG_ASSERT(extensions);
     strcpy(extensions, the_extensions);
     char *extension = strtok(extensions, " ");
-    DEBUG_LOG_V(TAG, "\t%s", extension);
+    DEBUG_LOG_V(TAG, "\t%s\n", extension);
     while (NULL != (extension = strtok(NULL, " ")))
     {
         DEBUG_LOG_V(TAG, "\t%s\n", extension);
