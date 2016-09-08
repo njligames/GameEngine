@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorCohesionBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorCohesionBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

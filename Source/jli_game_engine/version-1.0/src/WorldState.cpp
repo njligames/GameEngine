@@ -19,6 +19,7 @@
 #define TAG "WorldState.cpp"
 #define FORMATSTRING "{\"njli::WorldState\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #define MAX_CONTACTS (100)
 
@@ -202,7 +203,7 @@ namespace njli
     
     WorldState::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     WorldState **WorldState::createArray(const u32 size)

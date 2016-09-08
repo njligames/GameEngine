@@ -89,7 +89,7 @@ case $target in
     device )
     arch=arm64
     platform=iPhoneOS
-    extra_cflags="-m${thumb_opt:-no-thumb}"
+    extra_cflags="-m${thumb_opt:-no-thumb} -DLUA_USE_POSIX -DLUA_USE_DLOPEN -DDEBUG -g"
     ;;
 
     simulator )

@@ -12,6 +12,7 @@
 #include "SceneStateBuilder.h"
 #define FORMATSTRING "{\"njli::SceneState\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btQuickprof.h"
 
@@ -69,7 +70,7 @@ namespace njli
     
     SceneState::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     SceneState **SceneState::createArray(const u32 size)

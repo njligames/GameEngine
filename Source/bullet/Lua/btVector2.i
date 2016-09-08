@@ -8,7 +8,7 @@
     const char *__str__()
     {
         static char buffer[1024];
-        sprintf(buffer,"%s",toJsonString(*self).c_str());
+        sprintf(buffer,"{\"btVector2\":[{\"x\":\"%f\", \"y\":\"%f\"}]}", self->x(),self->y());
         return buffer;
     }
     
@@ -21,15 +21,9 @@
     btVector2 __neg__(){return -(*self);}
     
     const char *__concat__(const char *s) {
-        static char tmp[1024];
-        sprintf(tmp,"btVector2(%f,%f)", self->x(),self->y());
-        
-        static std::string temp;
-        std::string t1(tmp);
-        std::string t2(s);
-        
-        temp = (t1 + t2);
-        return temp.c_str();
+        static char buffer[1024];
+        sprintf(buffer,"{\"btVector2\":[{\"x\":\"%f\", \"y\":\"%f\"}]}", self->x(),self->y());
+        return strcat(buffer, s);
     }
     bool __eq__(const btVector2& b){return *self == b;}
     bool __lt__( btVector2& b){return *self < b;}

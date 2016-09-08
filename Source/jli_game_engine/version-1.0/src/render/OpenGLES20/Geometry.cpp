@@ -21,6 +21,8 @@
 #define TAG "Geometry.cpp"
 #define FORMATSTRING "{\"njli::Geometry\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
+
 #include "Image.h"
 
 static const u32 MAX_SPRITES = NUMBER_OF_MESHES;
@@ -219,7 +221,7 @@ namespace njli
     
     Geometry::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Geometry *Geometry::create(u32 type)

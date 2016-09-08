@@ -12,6 +12,7 @@
 #include "StopWatchBuilder.h"
 #define FORMATSTRING "{\"njli::StopWatch\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -83,7 +84,7 @@ namespace njli
     
     StopWatch::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     StopWatch **StopWatch::createArray(const u32 size)

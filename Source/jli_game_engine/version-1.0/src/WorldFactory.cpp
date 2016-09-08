@@ -21,6 +21,7 @@
 #define TAG "WorldFactory.cpp"
 #define FORMATSTRING "{\"njli::WorldFactory\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #pragma mark Start AbstractFactoryObjects includes
 
@@ -350,7 +351,7 @@ namespace njli
     
     WorldFactory::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     bool WorldFactory::isBuilder(u32 type)

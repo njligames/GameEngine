@@ -12,6 +12,7 @@
 #include "TimerBuilder.h"
 #define FORMATSTRING "{\"njli::Timer\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -78,7 +79,7 @@ namespace njli
     
     Timer::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Timer **Timer::createArray(const u32 size)

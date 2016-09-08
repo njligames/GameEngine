@@ -13,6 +13,7 @@
 
 #define FORMATSTRING "{\"njli::CollisionResponse\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -71,7 +72,7 @@ namespace njli
     
     CollisionResponse::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     CollisionResponse **CollisionResponse::createArray(const u32 size)

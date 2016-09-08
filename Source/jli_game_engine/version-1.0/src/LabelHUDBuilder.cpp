@@ -15,6 +15,7 @@
 #define TAG "LabelHUDBuilder.cpp"
 #define FORMATSTRING "{\"njli::LabelHUDBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -67,7 +68,7 @@ namespace njli
     
     LabelHUDBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     LabelHUDBuilder **LabelHUDBuilder::createArray(const u32 size)

@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeCapsule.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeCapsule\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btCapsuleShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeCapsule::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeCapsule **PhysicsShapeCapsule::createArray(const u32 size)

@@ -22,6 +22,7 @@
 
 #define FORMATSTRING "{\"njli::PhysicsConstraintPointToPoint\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -83,7 +84,7 @@ namespace njli
     
     PhysicsConstraintPointToPoint::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsConstraintPointToPoint **PhysicsConstraintPointToPoint::createArray(const u32 size)

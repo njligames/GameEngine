@@ -20,6 +20,7 @@
 
 #define FORMATSTRING "{\"njli::PhysicsConstraintSlider\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -81,7 +82,7 @@ namespace njli
     
     PhysicsConstraintSlider::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsConstraintSlider **PhysicsConstraintSlider::createArray(const u32 size)

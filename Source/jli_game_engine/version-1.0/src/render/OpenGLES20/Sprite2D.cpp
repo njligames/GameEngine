@@ -22,6 +22,7 @@
 
 #define FORMATSTRING "{\"njli::Sprite2D\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 
 static const btVector3 BL_VERTEX = { -0.5f, -0.5f, 0.0f };
@@ -138,7 +139,7 @@ namespace njli
     
     Sprite2D::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Sprite2D **Sprite2D::createArray(const u32 size)

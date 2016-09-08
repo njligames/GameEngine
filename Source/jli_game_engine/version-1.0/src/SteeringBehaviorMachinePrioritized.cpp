@@ -16,6 +16,7 @@
 
 #define FORMATSTRING "{\"jli::SteeringBehaviorMachinePrioritized\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "SteeringBehavior.h"
 #include "btVector3.h"

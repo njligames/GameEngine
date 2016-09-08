@@ -14,6 +14,7 @@
 #define TAG "PhysicsConstraintHingeBuilder.cpp"
 #define FORMATSTRING "{\"njli::PhysicsConstraintHingeBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -66,7 +67,7 @@ namespace njli
     
     PhysicsConstraintHingeBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsConstraintHingeBuilder **PhysicsConstraintHingeBuilder::createArray(const u32 size)

@@ -16,6 +16,7 @@
 #include "PhysicsBody.h"
 #define FORMATSTRING "{\"njli::PhysicsShapeBox2D\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -78,7 +79,7 @@ namespace njli
     
     PhysicsShapeBox2D::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeBox2D **PhysicsShapeBox2D::createArray(const u32 size)

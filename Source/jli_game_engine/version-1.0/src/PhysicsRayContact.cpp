@@ -16,6 +16,7 @@
 #include "Node.h"
 #define FORMATSTRING "{\"njli::PhysicsRayContact\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -94,7 +95,7 @@ namespace njli
     
     PhysicsRayContact::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsRayContact **PhysicsRayContact::createArray(const u32 size)

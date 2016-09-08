@@ -13,6 +13,7 @@
 #define TAG "CheckboxHUDBuilder.cpp"
 #define FORMATSTRING "{\"njli::CheckboxHUDBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -65,7 +66,7 @@ namespace njli
     
     CheckboxHUDBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     CheckboxHUDBuilder **CheckboxHUDBuilder::createArray(const u32 size)

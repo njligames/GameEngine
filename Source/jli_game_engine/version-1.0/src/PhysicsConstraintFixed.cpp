@@ -20,6 +20,7 @@
 
 #define FORMATSTRING "{\"njli::PhysicsConstraintFixed\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -81,7 +82,7 @@ namespace njli
     
     PhysicsConstraintFixed::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsConstraintFixed **PhysicsConstraintFixed::createArray(const u32 size)

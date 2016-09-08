@@ -13,6 +13,7 @@
 
 #define FORMATSTRING "{\"njli::Clock\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -82,7 +83,7 @@ namespace njli
     
     Clock::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Clock **Clock::createArray(const u32 size)

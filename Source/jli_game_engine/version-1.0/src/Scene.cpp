@@ -28,6 +28,8 @@
 #include "Geometry.h"
 #define FORMATSTRING "{\"njli::Scene\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
+
 #include "NodeStateMachine.h"
 
 #include "btQuickprof.h"
@@ -133,7 +135,7 @@ namespace njli
     
     Scene::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Scene **Scene::createArray(const u32 size)

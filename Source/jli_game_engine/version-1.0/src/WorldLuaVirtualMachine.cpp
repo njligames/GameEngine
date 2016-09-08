@@ -934,7 +934,7 @@ namespace njli
     
     WorldLuaVirtualMachine::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     const char *WorldLuaVirtualMachine::getClassName()const

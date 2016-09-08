@@ -17,6 +17,7 @@
 
 #define FORMATSTRING "{\"jli::SteeringBehaviorInterpose\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

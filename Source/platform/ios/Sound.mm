@@ -15,6 +15,7 @@
 #include "PhysicsBody.h"
 #define FORMATSTRING "{\"njli::Sound\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -94,7 +95,7 @@ namespace njli
     
     Sound::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Sound **Sound::createArray(const u32 size)

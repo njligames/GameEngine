@@ -14,6 +14,7 @@
 #define TAG "PhysicsShapeBvhTriangleMeshBuilder.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeBvhTriangleMeshBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -66,7 +67,7 @@ namespace njli
     
     PhysicsShapeBvhTriangleMeshBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeBvhTriangleMeshBuilder **PhysicsShapeBvhTriangleMeshBuilder::createArray(const u32 size)

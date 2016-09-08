@@ -31,6 +31,7 @@
 #include "PhysicsShape.h"
 #define FORMATSTRING "{\"njli::Node\":[{\"name\":\"%s\"}]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btQuickprof.h"
 #include "Thread.h"
@@ -183,7 +184,7 @@ namespace njli
     
     Node::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format(FORMATSTRING, getName()).c_str());
+        return njli::JsonJLI::parse(string_format(FORMATSTRING, getName()));
     }
     
     Node **Node::createArray(const u32 size)

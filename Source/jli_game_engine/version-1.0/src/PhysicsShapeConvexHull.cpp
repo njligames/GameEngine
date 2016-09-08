@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeConvexHull.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeConvexHull\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btConvexHullShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeConvexHull::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeConvexHull **PhysicsShapeConvexHull::createArray(const u32 size)

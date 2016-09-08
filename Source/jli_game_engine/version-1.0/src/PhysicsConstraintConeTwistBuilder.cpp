@@ -14,6 +14,7 @@
 #define TAG "PhysicsConstraintConeTwistBuilder.cpp"
 #define FORMATSTRING "{\"PhysicsConstraint\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -66,7 +67,7 @@ namespace njli
     
     PhysicsConstraintConeTwistBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsConstraintConeTwistBuilder **PhysicsConstraintConeTwistBuilder::createArray(const u32 size)

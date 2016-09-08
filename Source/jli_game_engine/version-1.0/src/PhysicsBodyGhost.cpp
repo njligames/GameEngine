@@ -13,6 +13,7 @@
 #include "PhysicsWorld.h"
 #define FORMATSTRING "{\"njli::PhysicsBodyGhost\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -68,7 +69,7 @@ namespace njli
     
     PhysicsBodyGhost::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsBodyGhost **PhysicsBodyGhost::createArray(const u32 size)

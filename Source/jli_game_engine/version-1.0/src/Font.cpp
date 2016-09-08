@@ -12,6 +12,8 @@
 #include "FontBuilder.h"
 #define FORMATSTRING "{\"njli::Font\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
+
 namespace njli
 {
     Font::Font():
@@ -69,7 +71,7 @@ namespace njli
     
     Font::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Font **Font::createArray(const u32 size)

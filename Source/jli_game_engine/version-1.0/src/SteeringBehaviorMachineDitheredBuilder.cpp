@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorMachineDitheredBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorMachineDitheredBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

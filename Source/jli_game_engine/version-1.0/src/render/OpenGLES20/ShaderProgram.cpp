@@ -18,6 +18,7 @@
 #define FORMATSTRING "{\"njli::ShaderProgram\":[]}"
 #include "btPrint.h"
 //#include "btTransform.h"
+#include "JsonJLI.h"
 
 enum njliGLSLVarType
 {
@@ -279,7 +280,7 @@ namespace njli
     
     ShaderProgram::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     ShaderProgram **ShaderProgram::createArray(const u32 size)
@@ -533,10 +534,10 @@ namespace njli
                                        1,
                                        (transpose)?GL_TRUE:GL_FALSE,
                                        m_mat4Buffer);
-                    DEBUG_GL_ERROR_PRINT("glUniformMatrix4fv", "glUniformMatrix4fv(%s, %d, %s)",
-                                         uniformName,
-                                         transpose,
-                                         toJsonString(value).c_str());
+//                    DEBUG_GL_ERROR_PRINT("glUniformMatrix4fv", "glUniformMatrix4fv(%s, %d, %s)",
+//                                         uniformName,
+//                                         transpose,
+//                                         toJsonString(value).c_str());
                 }
                 
                 return true;
@@ -560,9 +561,9 @@ namespace njli
         if (location != -1)
         {
             glGetUniformfv(currentProgram, location, m_mat4Buffer);
-            DEBUG_GL_ERROR_PRINT("glGetUniformfv", "glGetUniformfv(%s, %s)",
-                                 uniformName,
-                                 toJsonString(value).c_str());
+//            DEBUG_GL_ERROR_PRINT("glGetUniformfv", "glGetUniformfv(%s, %s)",
+//                                 uniformName,
+//                                 toJsonString(value).c_str());
             value.setFromOpenGLMatrix(m_mat4Buffer);
             
             return true;

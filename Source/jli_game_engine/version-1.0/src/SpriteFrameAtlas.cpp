@@ -18,6 +18,7 @@
 #define FORMATSTRING "{\"njli::SpriteFrameAtlas\":[]}"
 #define RECT_FORMATSTRING "{\"njli::Rect\":[%s,%s,%s,%s,%s,%s,%s]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include <string>
 
@@ -184,38 +185,28 @@ namespace njli
     
     Rect::operator std::string() const
     {
-        /*
-         btVector2 *offset;
-         btVector2 *dimension;
-         btVector2 *dimensionFile;
-         btVector2 *pivotPoint;
-         std::string trimmedname;
-         btVector2 *sourcePosition;
-         btVector2 *sourceDimension;
-         
-         s32 populationCount;
-         */
-        std::string _offset = createJsonKeyValue("offset", toJsonString(getOffset()));
-        std::string _dimension = createJsonKeyValue("dimension", toJsonString(getDimension()));
-        std::string _dimensionFile = createJsonKeyValue("dimensionFile", toJsonString(getDimensionFile()));
-        std::string _pivotPoint = createJsonKeyValue("pivotPoint", toJsonString(getPivotPoint()));
-        std::string _trimmedname = createJsonKeyValue("trimmedName", toJsonString(getTrimmedName()));
-        std::string _sourcePosition = createJsonKeyValue("sourcePosition", toJsonString(getSource()));
-        std::string _sourceDimension = createJsonKeyValue("sourceDimension", toJsonString(getSourceDimension()));
-        
-        
-        std::string ret = string_format(RECT_FORMATSTRING,
-                                        _offset.c_str(),
-                                        _dimension.c_str(),
-                                        _dimensionFile.c_str(),
-                                        _pivotPoint.c_str(),
-                                        _trimmedname.c_str(),
-                                        _sourcePosition.c_str(),
-                                        _sourceDimension.c_str());
-        
-        ret = njli::JsonJLI::parse(ret.c_str());
-        
-        return ret;
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
+//        std::string _offset = createJsonKeyValue("offset", toJsonString(getOffset()));
+//        std::string _dimension = createJsonKeyValue("dimension", toJsonString(getDimension()));
+//        std::string _dimensionFile = createJsonKeyValue("dimensionFile", toJsonString(getDimensionFile()));
+//        std::string _pivotPoint = createJsonKeyValue("pivotPoint", toJsonString(getPivotPoint()));
+//        std::string _trimmedname = createJsonKeyValue("trimmedName", toJsonString(getTrimmedName()));
+//        std::string _sourcePosition = createJsonKeyValue("sourcePosition", toJsonString(getSource()));
+//        std::string _sourceDimension = createJsonKeyValue("sourceDimension", toJsonString(getSourceDimension()));
+//        
+//        
+//        std::string ret = string_format(RECT_FORMATSTRING,
+//                                        _offset.c_str(),
+//                                        _dimension.c_str(),
+//                                        _dimensionFile.c_str(),
+//                                        _pivotPoint.c_str(),
+//                                        _trimmedname.c_str(),
+//                                        _sourcePosition.c_str(),
+//                                        _sourceDimension.c_str());
+//        
+//        ret = njli::JsonJLI::parse(ret.c_str());
+//        
+//        return ret;
     }
     
     void Rect::setSouceX(const f32 x)
@@ -303,19 +294,15 @@ namespace njli
     
     SpriteFrameAtlas::operator std::string() const
     {
-        std::string json_ = createJsonKeyValue("Source Filename", getSourceFilename());
-        std::string json_dimension = toJsonString(contentDimension());
+//        std::string json_ = createJsonKeyValue("Source Filename", getSourceFilename());
+//        std::string json_dimension = toJsonString(contentDimension());
+//        
+//        for (s32 i = 0; i < m_Frames.size(); ++i)
+//        {
+//            std::string frame = m_Frames[i];
+//        }
         
-        for (s32 i = 0; i < m_Frames.size(); ++i)
-        {
-            std::string frame = m_Frames[i];
-        }
-        
-//        return njli::JsonJLI::parse(string_format(btQuaternion_BASE,
-//                                                 v.getAngle(),
-//                                                 axis.c_str()).c_str());
-        
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     SpriteFrameAtlas **SpriteFrameAtlas::createArray(const u32 size)

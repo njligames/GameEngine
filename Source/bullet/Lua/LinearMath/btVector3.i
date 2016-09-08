@@ -10,7 +10,7 @@
     const char *__str__()
     {
         static char buffer[1024];
-        sprintf(buffer,"%s",toJsonString(*self).c_str());
+        sprintf(buffer,"{\"btVector3\":[{\"x\":\"%f\", \"y\":\"%f\", \"z\":\"%f\"}]}", self->x(), self->y(), self->z());
         return buffer;
     }
     btVector3(const btVector3 &rhs) {
@@ -58,7 +58,7 @@
     const char *__str__()
     {
         static char buffer[1024];
-        sprintf(buffer,"%s",toJsonString(*self).c_str());
+        sprintf(buffer,"{\"btVector4\":[{\"x\":\"%f\", \"y\":\"%f\", \"z\":\"%f\", \"w\":\"%f\"}]}", self->x(), self->y(), self->z(), self->w());
         return buffer;
     }
     

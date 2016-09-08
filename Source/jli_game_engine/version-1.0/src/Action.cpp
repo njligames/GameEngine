@@ -15,6 +15,7 @@
 #define TAG "Action.cpp"
 #define FORMATSTRING "{\"njli::Action\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btQuickprof.h"
 
@@ -269,7 +270,7 @@ namespace njli
     
     Action::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Action **Action::createArray(const u32 size)
