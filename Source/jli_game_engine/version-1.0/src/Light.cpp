@@ -12,6 +12,7 @@
 #include "LightBuilder.h"
 #define FORMATSTRING "{\"njli::Light\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -70,7 +71,7 @@ namespace njli
     
     Light::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Light **Light::createArray(const u32 size)

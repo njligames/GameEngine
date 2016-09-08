@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorEvadeBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorEvadeBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

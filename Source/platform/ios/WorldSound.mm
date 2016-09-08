@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #define FORMATSTRING "{\"njli::WorldSound\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "File.h"
 
@@ -501,7 +502,7 @@ namespace njli
     
     WorldSound::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     void WorldSound::update()

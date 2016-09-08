@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorFollowPathBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorFollowPathBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

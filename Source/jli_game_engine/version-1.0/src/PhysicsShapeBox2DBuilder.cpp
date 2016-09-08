@@ -13,6 +13,7 @@
 #define TAG "PhysicsShapeBox2DBuilder.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeBox2DBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -65,7 +66,7 @@ namespace njli
     
     PhysicsShapeBox2DBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeBox2DBuilder **PhysicsShapeBox2DBuilder::createArray(const u32 size)

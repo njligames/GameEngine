@@ -19,6 +19,7 @@
 
 #define FORMATSTRING "{\"jli::SteeringBehavior\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

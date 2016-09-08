@@ -13,6 +13,7 @@
 
 #define FORMATSTRING "{\"njli::NodeState\":[{\"name\":\"%s\"}]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btQuickprof.h"
 
@@ -71,7 +72,7 @@ namespace njli
     
     NodeState::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format(FORMATSTRING, getName()).c_str());
+        return njli::JsonJLI::parse(string_format(FORMATSTRING, getName()));
     }
     
     NodeState **NodeState::createArray(const u32 size)

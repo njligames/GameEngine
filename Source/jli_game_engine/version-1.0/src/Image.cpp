@@ -18,7 +18,7 @@
 #define TAG "Image.cpp"
 #define FORMATSTRING "{\"njli::Image\":[]}"
 #include "btPrint.h"
-
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -110,7 +110,7 @@ namespace njli
     
     Image::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Image **Image::createArray(const u32 size)

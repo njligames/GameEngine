@@ -16,7 +16,7 @@
 
 #define FORMATSTRING "{\"njli::ParticleEmitter\":[]}"
 #include "btPrint.h"
-
+#include "JsonJLI.h"
 
 #include "tinyxml.h"
 

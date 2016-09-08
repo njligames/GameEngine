@@ -14,6 +14,7 @@
 #define TAG "ThreadBuilder.cpp"
 #define FORMATSTRING "{\"njli::ThreadBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

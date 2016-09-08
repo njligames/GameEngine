@@ -7,8 +7,15 @@
 {
     const char *__str__()
     {
-        static char buffer[1024];
-        sprintf(buffer,"%s",toJsonString(*self).c_str());
+        static char axisBuffer[1024];
+        sprintf(axisBuffer,
+                "{\"btVector3\":[{\"x\":\"%f\", \"y\":\"%f\", \"z\":\"%f\"}]}",
+                self->getAxis().x(), self->getAxis().y(), self->getAxis().z());
+        
+        static char buffer[2048];
+        sprintf(buffer,"{\"btQuaternion\":[{\"angle\":\"%f\", \"axis\":%s}]}",
+                self->getAngle(),
+                axisBuffer);
         return buffer;
     }
     btQuaternion(const btQuaternion &rhs)
@@ -24,15 +31,19 @@
     btQuaternion __mul__(const btScalar& b){return *self * b;}
     btQuaternion __div__(const btScalar& b){return *self / b;}
     
-    const char *__concat__(const btQuaternion& b) {
-        static char tmp[1024];
-        sprintf(tmp,"btQuaternion(TODO)");
-        std::string t1(tmp);
+    const char *__concat__(const char *s)
+    {
+        static char axisBuffer[1024];
+        sprintf(axisBuffer,
+                "{\"btVector3\":[{\"x\":\"%f\", \"y\":\"%f\", \"z\":\"%f\"}]}",
+                self->getAxis().x(), self->getAxis().y(), self->getAxis().z());
         
-        sprintf(tmp,"btQuaternion(TODO)");
-        std::string t2(tmp);
+        static char bufferA[2048];
+        sprintf(bufferA,"{\"btQuaternion\":[{\"angle\":\"%f\", \"axis\":%s}]}",
+                self->getAngle(),
+                axisBuffer);
         
-        return (t1 + t2).c_str();
+        return strcat(bufferA, s);
     }
 };
 

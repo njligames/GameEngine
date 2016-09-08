@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeCone.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeCone\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btConeShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeCone::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeCone **PhysicsShapeCone::createArray(const u32 size)

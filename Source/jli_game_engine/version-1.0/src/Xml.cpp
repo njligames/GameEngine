@@ -12,6 +12,7 @@
 #include "XmlBuilder.h"
 #define FORMATSTRING "{\"njli::Xml\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -70,7 +71,7 @@ namespace njli
     
     Xml::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Xml **Xml::createArray(const u32 size)

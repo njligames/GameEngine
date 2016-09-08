@@ -11,6 +11,7 @@
 #include "World.h"
 #define FORMATSTRING "{\"njli::Sprite2DBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -63,7 +64,7 @@ namespace njli
     
     Sprite2DBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Sprite2DBuilder **Sprite2DBuilder::createArray(const u32 size)

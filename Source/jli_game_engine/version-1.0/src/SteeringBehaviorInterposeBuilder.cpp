@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorInterposeBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorInterposeBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

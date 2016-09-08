@@ -12,6 +12,7 @@
 #include "NodeStateMachineBuilder.h"
 #define FORMATSTRING "{\"njli::NodeStateMachine\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -70,7 +71,7 @@ namespace njli
     
     NodeStateMachine::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     NodeStateMachine **NodeStateMachine::createArray(const u32 size)

@@ -24,6 +24,7 @@
 #include "Image.h"
 #define FORMATSTRING "{\"njli::World\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btQuickprof.h"
 #include "unistd.h"
@@ -590,7 +591,7 @@ namespace njli
     
     World::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
 //    Scene *World::getScene()const

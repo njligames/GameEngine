@@ -8,7 +8,27 @@
     const char *__str__()
     {
         static char buffer[1024];
-        sprintf(buffer,"%s",toJsonString(*self).c_str());
+        btScalar *m = new btScalar[16];
+        self->getOpenGLMatrix(m);
+        sprintf(buffer,"{\"btTransform\":[{\"xx\":\"%f\", \"xy\":\"%f\", \"xz\":\"%f\", \"xw\":\"%f\", \"yx\":\"%f\", \"yy\":\"%f\", \"yz\":\"%f\", \"yw\":\"%f\", \"zx\":\"%f\", \"zy\":\"%f\", \"zz\":\"%f\", \"zw\":\"%f\", \"wx\":\"%f\", \"wy\":\"%f\", \"wz\":\"%f\", \"ww\":\"%f\"}]}",
+                m[0],
+                m[1],
+                m[2],
+                m[3],
+                m[4],
+                m[5],
+                m[6],
+                m[7],
+                m[8],
+                m[9],
+                m[10],
+                m[11],
+                m[12],
+                m[13],
+                m[14],
+                m[15]);
+        
+        delete [] m;
         return buffer;
     }
     
@@ -18,14 +38,30 @@
     bool __eq__(const btTransform& b){return *self == b;}
     
     const char *__concat__(const char *s) {
-        static char tmp[1024];
-        sprintf(tmp,"btTransform(TODO)");
+        static char buffer[1024];
+        btScalar *m = new btScalar[16];
+        self->getOpenGLMatrix(m);
+        sprintf(buffer,"{\"btTransform\":[{\"xx\":\"%f\", \"xy\":\"%f\", \"xz\":\"%f\", \"xw\":\"%f\", \"yx\":\"%f\", \"yy\":\"%f\", \"yz\":\"%f\", \"yw\":\"%f\", \"zx\":\"%f\", \"zy\":\"%f\", \"zz\":\"%f\", \"zw\":\"%f\", \"wx\":\"%f\", \"wy\":\"%f\", \"wz\":\"%f\", \"ww\":\"%f\"}]}",
+                m[0],
+                m[1],
+                m[2],
+                m[3],
+                m[4],
+                m[5],
+                m[6],
+                m[7],
+                m[8],
+                m[9],
+                m[10],
+                m[11],
+                m[12],
+                m[13],
+                m[14],
+                m[15]);
         
-        static std::string temp;
-        std::string t1(tmp);
-        std::string t2(s);
+        delete [] m;
+        return buffer;
         
-        temp = (t1 + t2);
-        return temp.c_str();
+        strcat(buffer, s);
     }
 };

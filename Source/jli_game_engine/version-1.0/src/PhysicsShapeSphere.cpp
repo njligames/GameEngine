@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeSphere.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeSphere\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btSphereShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeSphere::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeSphere **PhysicsShapeSphere::createArray(const u32 size)

@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeStaticPlane.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeStaticPlane\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btStaticPlaneShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeStaticPlane::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeStaticPlane **PhysicsShapeStaticPlane::createArray(const u32 size)

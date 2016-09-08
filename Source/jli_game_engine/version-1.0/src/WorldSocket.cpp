@@ -24,6 +24,7 @@
 #define TAG "WORLDSOCKET.CPP"
 #define FORMATSTRING "{\"njli::WorldSocket\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include <string>
 
@@ -62,7 +63,7 @@ namespace njli
     
     WorldSocket::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     bool WorldSocket::connectJLI(const char *ip, u16 port)

@@ -10,6 +10,7 @@
 #include "JLIFactoryTypes.h"
 #define FORMATSTRING "{\"njli::WorldClock\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btQuickprof.h"
 
@@ -37,7 +38,7 @@ namespace njli
     
     WorldClock::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     f64 WorldClock::totalMilliseconds()const

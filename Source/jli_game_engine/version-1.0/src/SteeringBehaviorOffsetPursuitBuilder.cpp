@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorOffsetPursuitBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorOffsetPursuitBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

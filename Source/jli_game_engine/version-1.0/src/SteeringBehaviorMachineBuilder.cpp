@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorMachineBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorMachineBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

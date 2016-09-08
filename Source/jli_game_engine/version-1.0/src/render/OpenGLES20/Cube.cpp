@@ -19,6 +19,7 @@
 #define TAG "Cube.cpp"
 #define FORMATSTRING "{\"njli::Cube\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 //// Vertex Data
 //cubeVertexData = new Vector3f[] {
@@ -213,7 +214,7 @@ namespace njli
     
     Cube::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Cube **Cube::createArray(const u32 size)

@@ -11,6 +11,7 @@
 #include "World.h"
 #define FORMATSTRING "{\"njli::PhysicsFieldBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -63,8 +64,7 @@ namespace njli
     
     PhysicsFieldBuilder::operator std::string() const
     {
-        //        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
-        return "";
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsFieldBuilder **PhysicsFieldBuilder::createArray(const u32 size)

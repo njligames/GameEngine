@@ -13,6 +13,7 @@
 #include "File.h"
 #define FORMATSTRING "{\"njli::WorldSQLite\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 static void * s_FileData = NULL;
 static int s_FileSize = 0;
@@ -138,7 +139,7 @@ namespace njli
     
     WorldSQLite::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     WorldSQLite &WorldSQLite::operator=(const WorldSQLite &rhs)

@@ -15,6 +15,7 @@
 #define TAG "SliderHUDBuilder.cpp"
 #define FORMATSTRING "{\"njli::SliderHUDBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -67,7 +68,7 @@ namespace njli
     
     SliderHUDBuilder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     SliderHUDBuilder **SliderHUDBuilder::createArray(const u32 size)

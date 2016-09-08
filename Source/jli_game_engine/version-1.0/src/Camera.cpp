@@ -23,7 +23,7 @@
 
 #define FORMATSTRING "{\"njli::Camera\":[]}"
 #include "btPrint.h"
-
+#include "JsonJLI.h"
 
 static inline btTransform setFrom4x4Matrix(const btScalar *m)
 {
@@ -1187,7 +1187,7 @@ namespace njli
     
     Camera::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     Camera **Camera::createArray(const u32 size)

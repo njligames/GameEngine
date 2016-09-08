@@ -2,6 +2,7 @@
 
 #include "Macros.h"
 
+
 #if defined(DEBUG) || defined(_DEBUG)
 #define LOGGING_ON 1
 #define LUA_WRAPPER_LOGGING 0
@@ -16,6 +17,9 @@
 extern "C" {
 #endif
 
+//#include "LinearMath/btScalar.h"
+//#include <string>
+    
 void _debug_log_v(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_d(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_w(const char* tag, const char* text, ...) PRINTF(2, 3);
@@ -279,8 +283,50 @@ void njliSleep(unsigned int _ms);
     }
 #endif
 
+#define btVector2_BASE "{\"btVector2\":[{\"x\":\"%f\", \"y\":\"%f\"}]}"
+#define btVector3_BASE "{\"btVector3\":[{\"x\":\"%f\", \"y\":\"%f\", \"z\":\"%f\"}]}"
+#define btVector4_BASE "{\"btVector4\":[{\"x\":\"%f\", \"y\":\"%f\", \"z\":\"%f\", \"w\":\"%f\"}]}"
+#define btManifold_BASE "{\"btManifoldPoint\":[{\"distance\":\"%f\", \"lifetime\":\"%d\", \"Position On A\":%s, \"Position On B\":%s, \"Applied Impulse\":\"%f\"}]}"
+#define btQuaternion_BASE "{\"btQuaternion\":[{\"angle\":\"%f\", \"axis\":%s}]}"
+#define btMatrix3x3_BASE "{\"btMatrix3x3\":[{\"xx\":\"%f\", \"xy\":\"%f\", \"xz\":\"%f\", \"yx\":\"%f\", \"yy\":\"%f\", \"yz\":\"%f\", \"zx\":\"%f\", \"zy\":\"%f\", \"zz\":\"%f\"}]}"
+#define btTransform_BASE "{\"btTransform\":[{\"xx\":\"%f\", \"xy\":\"%f\", \"xz\":\"%f\", \"xw\":\"%f\", \"yx\":\"%f\", \"yy\":\"%f\", \"yz\":\"%f\", \"yw\":\"%f\", \"zx\":\"%f\", \"zy\":\"%f\", \"zz\":\"%f\", \"zw\":\"%f\", \"wx\":\"%f\", \"wy\":\"%f\", \"wz\":\"%f\", \"ww\":\"%f\"}]}"
+    
+    
+    const char* string_format(const char* fmt, ...);
+//    const char* createJsonKeyValue(const char* key, const char* value);
+    
+//    class btVector2;
+//    class btVector3;
+//    class btVector4;
+//    class btManifoldPoint;
+//    class btTransform;
+//    class btQuaternion;
+//    class btMatrix3x3;
+//    class btCollisionObject;
+//    class btRigidBody;
+//    
+//    const char* btoJsonString(const bool b);
+//    const char* btScalartoJsonString(const btScalar &v);
+//    const char* btVector2toJsonString(const btVector2 &v);
+//    const char* btVector3toJsonString(const btVector3 &v);
+//    const char* btVector4toJsonString(const btVector4 &v);
+//    const char* btManifoldPointtoJsonString(const btManifoldPoint &v);
+//    const char* btTransformtoJsonString(const btTransform &v);
+//    const char* btQuaterniontoJsonString(const btQuaternion &v);
+//    const char* btMatrix3x3toJsonString(const btMatrix3x3 &v);
+//    const char* toJsonString(const char* v);
+//    const char* toJsonString(const btCollisionObject &v);
+//    const char* toJsonString(const btRigidBody &v);
+    
+    
 #ifdef __cplusplus
 }
 #endif
+
+
+
+
+
+
 
 //njli::NJLIGameEngine::PlatformID platformID();

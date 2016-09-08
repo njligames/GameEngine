@@ -37,6 +37,7 @@
 #define TAG "WORLDRESOURCELOADER.CPP"
 #define FORMATSTRING "{\"njli::WorldResourceLoader\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 //#include "PVRTTexture.h"
 
@@ -439,7 +440,7 @@ namespace njli
     }
     WorldResourceLoader::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     long WorldResourceLoader::dataPtrSize(const char* filePath)const
@@ -972,7 +973,7 @@ namespace njli
         
         return retVal;
     }
-    
+    /*
     bool WorldResourceLoader::loadZip(const char *filePath, const char *password)
     {
         static const char *RESOURCE_PATH[] =
@@ -1072,7 +1073,7 @@ namespace njli
         
         return true;
     }
-    
+    */
     bool WorldResourceLoader::load(const char *filePath, std::string *object)
     {
         DEBUG_ASSERT(object);

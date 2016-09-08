@@ -259,7 +259,7 @@ void setupFileSystem()
                                                         errorHandler:^BOOL(NSURL *url, NSError *error)
                                          {
                                              if (error) {
-                                                 NSLog(@"[Error] %@ (%@)", error, url);
+//                                                 NSLog(@"[Error] %@ (%@)", error, url);
                                                  return NO;
                                              }
                                              

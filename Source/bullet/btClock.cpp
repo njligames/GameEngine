@@ -142,6 +142,7 @@ unsigned long int btClock::getTimeMilliseconds()
     
     // Store the current elapsed time for adjustments next time.
     m_data->mPrevElapsedTime = elapsedTime;
+    int i = 0;
     
     return msecTicks;
 #else

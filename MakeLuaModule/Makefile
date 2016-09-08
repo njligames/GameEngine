@@ -1,6 +1,4 @@
 
-.PHONY:runtime all
-
 SRC = ../Source
 
 BULLET_SOURCE = ${SRC}/bullet
@@ -26,13 +24,14 @@ BULLET_SOURCE18=${BULLET_SOURCE0}/vectormath/scalar
 BULLET_SOURCE19=${BULLET_SOURCE0}/vectormath/sse
 
 BULLET_MODULE_NAME=bullet
-BULLET_XML_FILE="./${BULLET_MODULE_NAME}.xml"
-BULLET_CPP_OUTPUT="./${BULLET_MODULE_NAME}_wrap.cpp"
+BULLET_XML_FILE=${BULLET_MODULE_NAME}.xml
+BULLET_CPP_OUTPUT=${BULLET_MODULE_NAME}_wrap.cpp
+BULLET_O_OUTPUT=${BULLET_MODULE_NAME}_wrap.o
 BULLET_INTERFACE_FILE="${SRC}/bullet/Lua/_LuaEntry.i"
-BULLET_SYMBOL_FILE="./lua-symbol-${BULLET_MODULE_NAME}.txt"
+BULLET_SYMBOL_FILE=lua-symbol-${BULLET_MODULE_NAME}.txt
 BULLET_WRAP_OUTPUT=${BULLET_MODULE_NAME}_wrap.o
 BULLET_OUTPUT=${BULLET_MODULE_NAME}.o
-BULLET_LUA_MODULE=lib${BULLET_MODULE_NAME}.so
+BULLET_LUA_MODULE=${BULLET_MODULE_NAME}.so
 
 NJLI_SOURCE = ${SRC}/jli_game_engine/version-1.0/src
 NJLI_CORE_SOURCE=${SRC}/platform/core
@@ -40,23 +39,32 @@ NJLI_CORE_SOURCE=${SRC}/platform/core
 MAC_NJLI_SOURCE=${SRC}/platform/mac
 IOS_NJLI_SOURCE=${SRC}/platform/ios
 
-#JSON_INCLUDE=${SRC}/json/jsoncpp/include
+JSON_INCLUDE=${SRC}/json/jsoncpp/include
+JSON_SRC=${SRC}/json/jsoncpp/src/lib_json/
 
-MAC_FMOD_INCLUDE_DIR = "${SRC}/fmod/mac/FMOD Programmers API/api/lowlevel/inc"
-IOS_FMOD_INCLUDE_DIR = "${SRC}/fmod/ios/FMOD Programmers API/api/lowlevel/inc"
+XML_INCLUDE=${SRC}/xml/tinyxml
 
-#NANOVG_DIR = "${SRC}/nanovg/nanovg/src"
+MAC_FMOD_INCLUDE_DIR = "${SRC}/fmod/mac/FMOD Programmers API/api/lowlevel"
+IOS_FMOD_INCLUDE_DIR = "${SRC}/fmod/ios/FMOD Programmers API/api/lowlevel"
+
+NANOVG_DIR = ${SRC}/nanovg/nanovg/src
+
+ZIP_DIR = ${SRC}/zlib/zlib_SIO2
+
+PVRT_DIR = "${SRC}/PVR/SDK_3.4/Tools/OGLES2"
+
+SQLITE3_DIR = ${SRC}/sqlite/sqlite-amalgamation-3080700
 
 NJLI_MODULE_NAME=njli
-NJLI_XML_FILE="./${NJLI_MODULE_NAME}.xml"
-NJLI_CPP_OUTPUT="./${NJLI_MODULE_NAME}_wrap.cpp"
+NJLI_XML_FILE=${NJLI_MODULE_NAME}.xml
+NJLI_CPP_OUTPUT=${NJLI_MODULE_NAME}_wrap.cpp
 NJLI_INTERFACE_FILE="${SRC}/jli_game_engine/Lua/_LuaEntry.i"
-NJLI_SYMBOL_FILE="./lua-symbol-${NJLI_MODULE_NAME}.txt"
+NJLI_SYMBOL_FILE=lua-symbol-${NJLI_MODULE_NAME}.txt
 NJLI_WRAP_OUTPUT=${NJLI_MODULE_NAME}_wrap.o
 NJLI_OUTPUT=${NJLI_MODULE_NAME}.o
 NJLI_LUA_MODULE=${NJLI_MODULE_NAME}.so
 
-LUA_RUNTIME_OUTPUT="./swig_runtime.h"
+LUA_RUNTIME_OUTPUT="./njli_swig_runtime.h"
 
 BULLET_OBJECTS = \
 btClock.o \
@@ -346,6 +354,37 @@ ${BULLET_SOURCE0}/LinearMath/btSerializer.cpp \
 ${BULLET_SOURCE0}/LinearMath/btVector3.cpp \
 
 NJLI_SOURCES = \
+${NJLI_CORE_SOURCE}/ColorUtil.cpp \
+${NANOVG_DIR}/nanovg.c \
+${JSON_SRC}/json_reader.cpp \
+${JSON_SRC}/json_value.cpp \
+${JSON_SRC}/json_writer.cpp \
+${XML_INCLUDE}/tinystr.cpp \
+${XML_INCLUDE}/tinyxml.cpp \
+${XML_INCLUDE}/tinyxmlerror.cpp \
+${XML_INCLUDE}/tinyxmlparser.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/AbstractFrameBufferObject.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/AbstractRender.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/ButtonHUD.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/CheckboxHUD.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/Cube.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/DropdownHUD.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/Geometry.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/LabelHUD.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/MaterialProperty.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/ShaderProgram.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/SliderHUD.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/Sprite2D.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/TextboxHUD.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/WorldDebugDrawer.cpp \
+${NJLI_SOURCE}/render/OpenGLES20/WorldHUD.cpp \
+${IOS_NJLI_SOURCE}/DeviceTouch.mm \
+${IOS_NJLI_SOURCE}/File.mm \
+${IOS_NJLI_SOURCE}/Localization.mm \
+${IOS_NJLI_SOURCE}/Log.mm \
+${IOS_NJLI_SOURCE}/Sound.mm \
+${IOS_NJLI_SOURCE}/WorldInput.mm \
+${IOS_NJLI_SOURCE}/WorldSound.mm \
 ${NJLI_SOURCE}/AbstractActionable.cpp \
 ${NJLI_SOURCE}/AbstractBuilder.cpp \
 ${NJLI_SOURCE}/AbstractDecorator.cpp \
@@ -522,64 +561,298 @@ ${NJLI_SOURCE}/WorldStateMachineBuilder.cpp \
 ${NJLI_SOURCE}/Xml.cpp \
 ${NJLI_SOURCE}/XmlBuilder.cpp \
 
-all: IOS
 
-#LDFLAGS += -L${FMOD_DIR}/lib -lfmod
 
-MAC:${BULLET_OBJS}
+
+NJLI_OBJECTS = \
+ColorUtil.o \
+nanovg.o \
+json_reader.o \
+json_value.o \
+json_writer.o \
+tinystr.o \
+tinyxml.o \
+tinyxmlerror.o \
+tinyxmlparser.o \
+AbstractFrameBufferObject.o \
+AbstractRender.o \
+ButtonHUD.o \
+CheckboxHUD.o \
+Cube.o \
+DropdownHUD.o \
+Geometry.o \
+LabelHUD.o \
+MaterialProperty.o \
+ShaderProgram.o \
+SliderHUD.o \
+Sprite2D.o \
+TextboxHUD.o \
+WorldDebugDrawer.o \
+WorldHUD.o \
+DeviceTouch.o \
+File.o \
+Localization.o \
+Log.o \
+Sound.o \
+WorldInput.o \
+WorldSound.o \
+AbstractActionable.o \
+AbstractBuilder.o \
+AbstractDecorator.o \
+AbstractFactoryObject.o \
+AbstractTransform.o \
+Action.o \
+ActionBuilder.o \
+ButtonHUDBuilder.o \
+Camera.o \
+CameraBuilder.o \
+CheckboxHUDBuilder.o \
+Clock.o \
+ClockBuilder.o \
+CollisionResponse.o \
+CollisionResponseBuilder.o \
+CubeBuilder.o \
+DropdownHUDBuilder.o \
+Font.o \
+FontBuilder.o \
+GameClock.o \
+Image.o \
+ImageBuilder.o \
+JLIFactoryTypes.o \
+JsonJLI.o \
+JsonJLIBuilder.o \
+LabelHUDBuilder.o \
+LevelOfDetail.o \
+LevelOfDetailBuilder.o \
+Light.o \
+LightBuilder.o \
+Material.o \
+MaterialBuilder.o \
+MaterialPropertyBuilder.o \
+Node.o \
+NodeBuilder.o \
+NodeState.o \
+NodeStateBuilder.o \
+NodeStateMachine.o \
+NodeStateMachineBuilder.o \
+ParticleEmitter.o \
+ParticleEmitterBuilder.o \
+PhysicsBody.o \
+PhysicsBodyGhost.o \
+PhysicsBodyGhostBuilder.o \
+PhysicsBodyRigid.o \
+PhysicsBodyRigidBuilder.o \
+PhysicsBodySoft.o \
+PhysicsBodySoftBuilder.o \
+PhysicsCloseContact.o \
+PhysicsCloseContactBuilder.o \
+PhysicsConstraint.o \
+PhysicsConstraintBuilder.o \
+PhysicsConstraintConeTwist.o \
+PhysicsConstraintConeTwistBuilder.o \
+PhysicsConstraintFixed.o \
+PhysicsConstraintFixedBuilder.o \
+PhysicsConstraintGeneric6Dof.o \
+PhysicsConstraintGeneric6DofBuilder.o \
+PhysicsConstraintGeneric6DofSpring.o \
+PhysicsConstraintGeneric6DofSpringBuilder.o \
+PhysicsConstraintHinge.o \
+PhysicsConstraintHingeBuilder.o \
+PhysicsConstraintPointToPoint.o \
+PhysicsConstraintPointToPointBuilder.o \
+PhysicsConstraintSlider.o \
+PhysicsConstraintSliderBuilder.o \
+PhysicsContact.o \
+PhysicsContactBuilder.o \
+PhysicsField.o \
+PhysicsFieldBuilder.o \
+PhysicsRayContact.o \
+PhysicsRayContactBuilder.o \
+PhysicsShape.o \
+PhysicsShapeBox.o \
+PhysicsShapeBox2D.o \
+PhysicsShapeBox2DBuilder.o \
+PhysicsShapeBoxBuilder.o \
+PhysicsShapeBvhTriangleMesh.o \
+PhysicsShapeBvhTriangleMeshBuilder.o \
+PhysicsShapeCapsule.o \
+PhysicsShapeCapsuleBuilder.o \
+PhysicsShapeCone.o \
+PhysicsShapeConeBuilder.o \
+PhysicsShapeConvexHull.o \
+PhysicsShapeConvexHullBuilder.o \
+PhysicsShapeConvexTriangleMesh.o \
+PhysicsShapeConvexTriangleMeshBuilder.o \
+PhysicsShapeCylinder.o \
+PhysicsShapeCylinderBuilder.o \
+PhysicsShapeHeightfieldTerrain.o \
+PhysicsShapeHeightfieldTerrainBuilder.o \
+PhysicsShapeMultiSphere.o \
+PhysicsShapeMultiSphereBuilder.o \
+PhysicsShapeSphere.o \
+PhysicsShapeSphereBuilder.o \
+PhysicsShapeStaticPlane.o \
+PhysicsShapeStaticPlaneBuilder.o \
+PhysicsWorld.o \
+PhysicsWorldBuilder.o \
+Plane.o \
+PlaneBuilder.o \
+Scene.o \
+SceneBuilder.o \
+SceneState.o \
+SceneStateBuilder.o \
+SceneStateMachine.o \
+SceneStateMachineBuilder.o \
+ShaderProgramBuilder.o \
+Skinner.o \
+SkinnerBuilder.o \
+SliderHUDBuilder.o \
+SoundBuilder.o \
+Sprite2DBuilder.o \
+SpriteFrameAtlas.o \
+SpriteFrameAtlasBuilder.o \
+SteeringBehavior.o \
+SteeringBehaviorAlignment.o \
+SteeringBehaviorAlignmentBuilder.o \
+SteeringBehaviorArrive.o \
+SteeringBehaviorArriveBuilder.o \
+SteeringBehaviorBuilder.o \
+SteeringBehaviorCohesion.o \
+SteeringBehaviorCohesionBuilder.o \
+SteeringBehaviorEvade.o \
+SteeringBehaviorEvadeBuilder.o \
+SteeringBehaviorFlee.o \
+SteeringBehaviorFleeBuilder.o \
+SteeringBehaviorFollowPath.o \
+SteeringBehaviorFollowPathBuilder.o \
+SteeringBehaviorHide.o \
+SteeringBehaviorHideBuilder.o \
+SteeringBehaviorInterpose.o \
+SteeringBehaviorInterposeBuilder.o \
+SteeringBehaviorMachine.o \
+SteeringBehaviorMachineBuilder.o \
+SteeringBehaviorMachineDithered.o \
+SteeringBehaviorMachineDitheredBuilder.o \
+SteeringBehaviorMachinePrioritized.o \
+SteeringBehaviorMachinePrioritizedBuilder.o \
+SteeringBehaviorMachineWeighted.o \
+SteeringBehaviorMachineWeightedBuilder.o \
+SteeringBehaviorObstacleAvoidance.o \
+SteeringBehaviorObstacleAvoidanceBuilder.o \
+SteeringBehaviorOffsetPursuit.o \
+SteeringBehaviorOffsetPursuitBuilder.o \
+SteeringBehaviorPursuit.o \
+SteeringBehaviorPursuitBuilder.o \
+SteeringBehaviorSeek.o \
+SteeringBehaviorSeekBuilder.o \
+SteeringBehaviorSeparation.o \
+SteeringBehaviorSeparationBuilder.o \
+SteeringBehaviorWallAvoidance.o \
+SteeringBehaviorWallAvoidanceBuilder.o \
+SteeringBehaviorWander.o \
+SteeringBehaviorWanderBuilder.o \
+StopWatch.o \
+StopWatchBuilder.o \
+TextboxHUDBuilder.o \
+Thread.o \
+ThreadBuilder.o \
+Timer.o \
+TimerBuilder.o \
+World.o \
+WorldClock.o \
+WorldFactory.o \
+WorldLuaVirtualMachine.o \
+WorldResourceLoader.o \
+WorldSQLite.o \
+WorldSocket.o \
+WorldState.o \
+WorldStateBuilder.o \
+WorldStateMachine.o \
+WorldStateMachineBuilder.o \
+Xml.o \
+XmlBuilder.o \
+
+.PHONY: all clean
+
+CURRENT_IPHONE_SDK=9.3
+
+ios_bullet: ${BULLET_CPP_OUTPUT} ${BULLET_WRAP_OUTPUT} ${BULLET_OBJECTS} ${BULLET_LUA_MODULE}
+	mkdir -p ios
+	cp ${BULLET_LUA_MODULE} ios
+	mkdir -p doc
+	cp ${BULLET_XML_FILE} doc
+
+ios_njli: ${NJLI_CPP_OUTPUT} ${NJLI_WRAP_OUTPUT} ${NJLI_OBJECTS} ${BULLET_OBJECTS} ${NJLI_LUA_MODULE}
+
+
+${BULLET_CPP_OUTPUT}: ${BULLET_SOURCES}
 	/usr/local/bin/swig -w312 -w201 -c++ -lua -includeall -ignoremissing -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -features directors,autodoc=1 -DBT_INFINITY -xmlout ${BULLET_XML_FILE} -o ${BULLET_CPP_OUTPUT} ${BULLET_INTERFACE_FILE}
-	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${MAC_FMOD_INCLUDE_DIR} -I./ -I${NJLI_CORE_SOURCE} -I${MAC_NJLI_SOURCE} -I${NJLI_SOURCE} -I/usr/local/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -c ${BULLET_CPP_OUTPUT} -o ${BULLET_WRAP_OUTPUT} 
-	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${MAC_FMOD_INCLUDE_DIR} -I./ -I${NJLI_CORE_SOURCE} -I${MAC_NJLI_SOURCE} -I${NJLI_SOURCE} -I/usr/local/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -c ${BULLET_SOURCES}  
-	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${MAC_FMOD_INCLUDE_DIR} -I./ -I${NJLI_CORE_SOURCE} -I${MAC_NJLI_SOURCE} -I${NJLI_SOURCE} -I/usr/local/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -L/usr/local/lib -llua -shared ${BULLET_WRAP_OUTPUT} ${BULLET_OBJECTS} -o ${BULLET_LUA_MODULE}
-	cp ${BULLET_LUA_MODULE} /usr/local/lib/lua/5.3/mac
 
-IOS:${BULLET_OBJS}
-	/usr/local/bin/swig -w312 -w201 -c++ -lua -includeall -ignoremissing -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -features directors,autodoc=1 -DBT_INFINITY -xmlout ${BULLET_XML_FILE} -o ${BULLET_CPP_OUTPUT} ${BULLET_INTERFACE_FILE}
-	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${IOS_FMOD_INCLUDE_DIR} -I./ -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_IOS_SOURCE} -I${NJLI_SOURCE} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk -mno-thumb -c ${BULLET_CPP_OUTPUT} -o ${BULLET_WRAP_OUTPUT} 
-	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${IOS_FMOD_INCLUDE_DIR} -I./ -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_IOS_SOURCE} -I${NJLI_SOURCE} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk -mno-thumb -c ${BULLET_SOURCES}  
-	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${IOS_FMOD_INCLUDE_DIR} -I./ -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_IOS_SOURCE} -I${NJLI_SOURCE} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk -mno-thumb -L/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib -ldl -llua -shared ${BULLET_WRAP_OUTPUT} ${BULLET_OBJECTS} -o ${BULLET_LUA_MODULE}
-	cp ${BULLET_LUA_MODULE} /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib/lua/5.3
-	cp ${BULLET_LUA_MODULE} /usr/local/lib/lua/5.3
-#${NJLI_CPP_OUTPUT}: ${NJLI_SOURCES}
-#	/usr/local/bin/swig -w312 -w201 -c++ -lua -includeall -ignoremissing -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -I${NJLI_CORE_SOURCE} -I${NJLI_SOURCE} -features directors,autodoc=1 -xmlout ${NJLI_XML_FILE} -o ${NJLI_CPP_OUTPUT} ${NJLI_INTERFACE_FILE}
+${BULLET_WRAP_OUTPUT}: ${BULLET_SOURCES}
+	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${IOS_FMOD_INCLUDE_DIR}/inc -I./ -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_IOS_SOURCE} -I${NJLI_SOURCE} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -c ${BULLET_CPP_OUTPUT} -o ${BULLET_WRAP_OUTPUT} 
 
-#runtime:
-#	/usr/local/bin/swig -lua -external-runtime ${LUA_RUNTIME_OUTPUT}
+${BULLET_OBJECTS}: ${BULLET_SOURCES}
+	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${IOS_FMOD_INCLUDE_DIR}/inc -I./ -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_IOS_SOURCE} -I${NJLI_SOURCE} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -c ${BULLET_SOURCES}  
+
+${BULLET_LUA_MODULE}:  ${BULLET_WRAP_OUTPUT} ${BULLET_OBJECTS}
+	g++ -std=c++11 -frtti -fexceptions -DLUA_WRAPPER_LOGGING=0 -I${IOS_FMOD_INCLUDE_DIR}/inc -I./ -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_IOS_SOURCE} -I${NJLI_SOURCE} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/include -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -mno-thumb -L/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/lib -ldl -llua -shared ${BULLET_WRAP_OUTPUT} ${BULLET_OBJECTS} -o ${BULLET_LUA_MODULE}
 
 
+${NJLI_CPP_OUTPUT}: ${NJLI_SOURCES}
+	/usr/local/bin/swig -lua -external-runtime ${LUA_RUNTIME_OUTPUT}
+	/usr/local/bin/swig -w312 -w201 -c++ -lua -includeall -ignoremissing -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -I${NJLI_CORE_SOURCE} -I${NJLI_SOURCE} -features directors,autodoc=1 -xmlout ${NJLI_XML_FILE} -o ${NJLI_CPP_OUTPUT} ${NJLI_INTERFACE_FILE}
 
-	
-# PROJECT_NAME = njli
+${NJLI_WRAP_OUTPUT}: ${NJLI_SOURCES}
+	${CXX} -std=c++11 -frtti -fexceptions -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/include -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_SOURCE} -I${IOS_FMOD_INCLUDE_DIR}/inc -I${NJLI_SOURCE} -I${NANOVG_DIR} -I${JSON_INCLUDE} -I${XML_INCLUDE} -I./ -I${ZIP_DIR} -I${PVRT_DIR} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -c ${NJLI_CPP_OUTPUT} -o ${NJLI_WRAP_OUTPUT}
 
-# SOURCES = \
+${NJLI_OBJECTS}: ${NJLI_SOURCES}
+	${CXX} -std=c++11 -frtti -fexceptions -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/include -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_SOURCE} -I${IOS_FMOD_INCLUDE_DIR}/inc -I${NJLI_SOURCE} -I${NANOVG_DIR} -I${JSON_INCLUDE} -I${XML_INCLUDE} -I./ -I${ZIP_DIR} -I${PVRT_DIR} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -c ${NJLI_SOURCES}  
 
-# INCLUDES = \
+${NJLI_LUA_MODULE}: ${NJLI_WRAP_OUTPUT} ${NJLI_OBJECTS} ${BULLET_OBJECTS} sqlite3.o ${UNZIP_OBJECTS}
+	${CXX} -std=c++11 -frtti -fexceptions -I${BULLET_SOURCE} -I${BULLET_SOURCE0} -I${BULLET_SOURCE1} -I${BULLET_SOURCE2} -I${BULLET_SOURCE3} -I${BULLET_SOURCE4} -I${BULLET_SOURCE5} -I${BULLET_SOURCE6} -I${BULLET_SOURCE7} -I${BULLET_SOURCE8} -I${BULLET_SOURCE9} -I${BULLET_SOURCE10} -I${BULLET_SOURCE11} -I${BULLET_SOURCE12} -I${BULLET_SOURCE13} -I${BULLET_SOURCE14} -I${BULLET_SOURCE15} -I${BULLET_SOURCE16} -I${BULLET_SOURCE17} -I${BULLET_SOURCE18} -I${BULLET_SOURCE19} -I/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/include -I${NJLI_CORE_SOURCE} -I${IOS_NJLI_SOURCE} -I${IOS_FMOD_INCLUDE_DIR}/inc -I${NJLI_SOURCE} -I${NANOVG_DIR} -I${JSON_INCLUDE} -I${XML_INCLUDE} -I./ -I${ZIP_DIR} -I${PVRT_DIR} -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -mno-thumb -L/Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk/lib -ldl -llua -L${IOS_FMOD_INCLUDE_DIR}/lib -lfmod_iphoneos -ObjC -framework AVFoundation -framework AudioToolbox -framework Foundation -framework OpenGLES -shared ${NJLI_WRAP_OUTPUT} ${NJLI_OBJECTS} ${BULLET_OBJECTS} sqlite3.o ${UNZIP_OBJECTS} -o ${NJLI_LUA_MODULE}
 
-# OBJECTS = \
 
-# # TARGET = $(PROJECT_NAME).html
-# TARGET = $(PROJECT_NAME).so
+sqlite3.o: ${SQLITE3_DIR}/sqlite3.c
+	${CC} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -c ${SQLITE3_DIR}/sqlite3.c -o sqlite3.o
 
-# CXXFLAGS = $(INCLUDES:%=-I%) -std=gnu++11 -frtti -fexceptions -O0 --js-opts 0 -g4 -DDEBUG=1 -s FULL_ES2=1 -s ALLOW_MEMORY_GROWTH=1 -s ASSERTIONS=1 -s DEMANGLE_SUPPORT=1 -g
-# #CXXFLAGS = $(INCLUDES:%=-I%) -std=gnu++11 -frtti -fexceptions -Oz -s ALLOW_MEMORY_GROWTH=1 -s INLINING_LIMIT=1
-# # LDFLAGS = --memory-init-file 1 --embed-file ../COMMON/assets@/
-# #LDFLAGS = -lc++ --preload-file ../COMMON/assets@/
 
-# # Targets start here.
-# all: $(TARGET)
+UNZIP_SOURCES = \
+${ZIP_DIR}/adler32.c \
+${ZIP_DIR}/compress.c \
+${ZIP_DIR}/crc32.c \
+${ZIP_DIR}/deflate.c \
+${ZIP_DIR}/gzio.c \
+${ZIP_DIR}/infback.c \
+${ZIP_DIR}/inffast.c \
+${ZIP_DIR}/inflate.c \
+${ZIP_DIR}/inftrees.c \
+${ZIP_DIR}/ioapi.c \
+${ZIP_DIR}/trees.c \
+${ZIP_DIR}/uncompr.c \
+${ZIP_DIR}/unzip.c \
+${ZIP_DIR}/zutil.c \
 
-# $(TARGET): $(OBJECTS)
-# 	$(CC) $(CXXFLAGS) -o $@ $(LDFLAGS) $(OBJECTS)
+${ZIP_DIR}/UNZIP_OBJECTS = \
+${ZIP_DIR}/adler32.o \
+${ZIP_DIR}/compress.o \
+${ZIP_DIR}/crc32.o \
+${ZIP_DIR}/deflate.o \
+${ZIP_DIR}/gzio.o \
+${ZIP_DIR}/infback.o \
+${ZIP_DIR}/inffast.o \
+${ZIP_DIR}/inflate.o \
+${ZIP_DIR}/inftrees.o \
+${ZIP_DIR}/ioapi.o \
+${ZIP_DIR}/trees.o \
+${ZIP_DIR}/uncompr.o \
+${ZIP_DIR}/unzip.o \
+${ZIP_DIR}/zutil.o \
 
-# clean:
-# 	$(RM) $(TARGET) $(OBJECTS)
-# 	$(RM) $(PROJECT_NAME).*
+${UNZIP_OBJECTS}: ${UNZIP_SOURCES}
+	${CC} -I${ZIP_DIR} -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${CURRENT_IPHONE_SDK}.sdk -c ${UNZIP_SOURCES}
 
-# depend:
-# 	@$(CC) $(CXXFLAGS) -MM $(SOURCES)
-	
-# # list targets that do not create files (but not all makes understand .PHONY)
-# .PHONY:	all clean depend
-
-# # Dependences (call 'make depend' to generate); do not delete:
-# # Build for these is implicit, no need to specify compiler command lines.
+clean:
+	rm ${BULLET_CPP_OUTPUT}
+	rm ${BULLET_WRAP_OUTPUT}
+	rm ${BULLET_OBJECTS}
+	rm ${BULLET_LUA_MODULE}

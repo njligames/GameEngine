@@ -12,6 +12,7 @@
 #include "WorldStateMachineBuilder.h"
 #define FORMATSTRING "{\"njli::WorldStateMachine\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -70,7 +71,7 @@ namespace njli
     
     WorldStateMachine::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     WorldStateMachine **WorldStateMachine::createArray(const u32 size)

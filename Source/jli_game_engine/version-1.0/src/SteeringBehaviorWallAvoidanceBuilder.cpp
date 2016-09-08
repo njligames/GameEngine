@@ -14,6 +14,7 @@
 #define TAG "SteeringBehaviorWallAvoidanceBuilder.cpp"
 #define FORMATSTRING "{\"jli::SteeringBehaviorWallAvoidanceBuilder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

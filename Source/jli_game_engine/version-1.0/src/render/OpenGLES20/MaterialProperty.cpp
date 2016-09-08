@@ -20,6 +20,7 @@
 
 #define FORMATSTRING "{\"njli::MaterialProperty\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #define NUMBER_OF_IMAGES (6)
 
@@ -193,7 +194,7 @@ namespace njli
     
     MaterialProperty::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     MaterialProperty **MaterialProperty::createArray(const u32 size)

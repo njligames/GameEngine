@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeConvexTriangleMesh.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeConvexTriangleMesh\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btConvexTriangleMeshShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeConvexTriangleMesh::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeConvexTriangleMesh **PhysicsShapeConvexTriangleMesh::createArray(const u32 size)

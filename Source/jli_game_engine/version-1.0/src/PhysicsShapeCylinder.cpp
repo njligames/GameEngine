@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeCylinder.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeCylinder\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btCylinderShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeCylinder::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeCylinder **PhysicsShapeCylinder::createArray(const u32 size)

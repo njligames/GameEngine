@@ -16,6 +16,7 @@
 
 #define FORMATSTRING "{\"njli::Thread\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {

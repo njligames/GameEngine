@@ -8,8 +8,19 @@
     const char *__str__()
     {
         static char buffer[1024];
-        sprintf(buffer,"%s",toJsonString(*self).c_str());
+        sprintf(buffer,"{\"btMatrix3x3\":[{\"xx\":\"%f\", \"xy\":\"%f\", \"xz\":\"%f\", \"yx\":\"%f\", \"yy\":\"%f\", \"yz\":\"%f\", \"zx\":\"%f\", \"zy\":\"%f\", \"zz\":\"%f\"}]}",
+                self->getRow(0).x(),
+                self->getRow(0).y(),
+                self->getRow(0).z(),
+                self->getRow(1).x(),
+                self->getRow(1).y(),
+                self->getRow(1).z(),
+                self->getRow(2).x(),
+                self->getRow(2).y(),
+                self->getRow(2).z());
+        
         return buffer;
+
     }
     
     

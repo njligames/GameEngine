@@ -20,6 +20,7 @@
 
 #define FORMATSTRING "{\"njli::PhysicsConstraintGeneric6Dof\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 namespace njli
 {
@@ -81,7 +82,7 @@ namespace njli
     
     PhysicsConstraintGeneric6Dof::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsConstraintGeneric6Dof **PhysicsConstraintGeneric6Dof::createArray(const u32 size)

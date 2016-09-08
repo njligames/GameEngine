@@ -322,7 +322,7 @@ public:
          *
          *  @return <#return value description#>
          */
-    bool loadZip(const char* filePath, const char* password = "");
+//    bool loadZip(const char* filePath, const char* password = "");
     
     bool load(const char *filePath, std::string *content);
 

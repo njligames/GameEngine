@@ -41,6 +41,7 @@
 #define TAG "PhysicsWorld.cpp"
 #define FORMATSTRING "{\"njli::PhysicsWorld\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "PhysicsConstraint.h"
 
@@ -457,7 +458,7 @@ namespace njli
     
     PhysicsWorld::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsWorld **PhysicsWorld::createArray(const u32 size)

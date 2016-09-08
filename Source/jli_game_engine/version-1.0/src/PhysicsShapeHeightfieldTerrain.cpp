@@ -15,6 +15,7 @@
 #define TAG "PhysicsShapeHeightfieldTerrain.cpp"
 #define FORMATSTRING "{\"njli::PhysicsShapeHeightfieldTerrain\":[]}"
 #include "btPrint.h"
+#include "JsonJLI.h"
 
 #include "btHeightfieldTerrainShape.h"
 
@@ -79,7 +80,7 @@ namespace njli
     
     PhysicsShapeHeightfieldTerrain::operator std::string() const
     {
-        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING).c_str());
+        return njli::JsonJLI::parse(string_format("%s", FORMATSTRING));
     }
     
     PhysicsShapeHeightfieldTerrain **PhysicsShapeHeightfieldTerrain::createArray(const u32 size)
