@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C169EE231D7F3F8D004B823E /* bullet.so in Frameworks */ = {isa = PBXBuildFile; fileRef = C169EE211D7F2290004B823E /* bullet.so */; };
+		C169EE241D7F3F8D004B823E /* bullet.so in Frameworks */ = {isa = PBXBuildFile; fileRef = C169EE211D7F2290004B823E /* bullet.so */; };
+		C169EE261D7F5463004B823E /* bullet.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = C169EE211D7F2290004B823E /* bullet.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C169EE281D81357D004B823E /* njli.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = C169EE271D81357D004B823E /* njli.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C1F60D1E1D7E60D500C73807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D1D1D7E60D500C73807 /* AppDelegate.swift */; };
+		C1F60D241D7E60D500C73807 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D231D7E60D500C73807 /* GameViewController.swift */; };
+		C1F60D271D7E60D500C73807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F60D251D7E60D500C73807 /* Main.storyboard */; };
+		C1F60D291D7E60D500C73807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F60D281D7E60D500C73807 /* Assets.xcassets */; };
+		C1F60D2C1D7E60D500C73807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F60D2A1D7E60D500C73807 /* LaunchScreen.storyboard */; };
+		C1F60D371D7E60D500C73807 /* NJLIGameEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D361D7E60D500C73807 /* NJLIGameEngineTests.swift */; };
+		C1F60D421D7E60D500C73807 /* NJLIGameEngineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D411D7E60D500C73807 /* NJLIGameEngineUITests.swift */; };
+		C1F60D541D7E635A00C73807 /* NJLIGameEngineObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D531D7E635A00C73807 /* NJLIGameEngineObjC.mm */; };
+		C1F60D551D7E635A00C73807 /* NJLIGameEngineObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D531D7E635A00C73807 /* NJLIGameEngineObjC.mm */; };
+		C1F60D561D7E635A00C73807 /* NJLIGameEngineObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1F60D531D7E635A00C73807 /* NJLIGameEngineObjC.mm */; };
+		C1F60D581D7E68E800C73807 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F60D571D7E68E800C73807 /* liblua.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1F60D331D7E60D500C73807 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1F60D121D7E60D500C73807 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F60D191D7E60D500C73807;
+			remoteInfo = NJLIGameEngine;
+		};
+		C1F60D3E1D7E60D500C73807 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1F60D121D7E60D500C73807 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F60D191D7E60D500C73807;
+			remoteInfo = NJLIGameEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C169EE251D7F5453004B823E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				C169EE281D81357D004B823E /* njli.so in CopyFiles */,
+				C169EE261D7F5463004B823E /* bullet.so in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C169EE211D7F2290004B823E /* bullet.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = bullet.so; path = ../ios/bullet.so; sourceTree = "<group>"; };
+		C169EE271D81357D004B823E /* njli.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = njli.so; path = ../njli.so; sourceTree = "<group>"; };
+		C1F60D1A1D7E60D500C73807 /* NJLIGameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJLIGameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F60D1D1D7E60D500C73807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1F60D231D7E60D500C73807 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C1F60D261D7E60D500C73807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1F60D281D7E60D500C73807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1F60D2B1D7E60D500C73807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1F60D2D1D7E60D500C73807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F60D321D7E60D500C73807 /* NJLIGameEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJLIGameEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F60D361D7E60D500C73807 /* NJLIGameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJLIGameEngineTests.swift; sourceTree = "<group>"; };
+		C1F60D381D7E60D500C73807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F60D3D1D7E60D500C73807 /* NJLIGameEngineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJLIGameEngineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F60D411D7E60D500C73807 /* NJLIGameEngineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJLIGameEngineUITests.swift; sourceTree = "<group>"; };
+		C1F60D431D7E60D500C73807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F60D4F1D7E61A800C73807 /* NJLIGameEngine-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = "NJLIGameEngine-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1F60D501D7E635900C73807 /* NJLIGameEngineTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NJLIGameEngineTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1F60D511D7E635900C73807 /* NJLIGameEngineUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NJLIGameEngineUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1F60D521D7E635A00C73807 /* NJLIGameEngineObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJLIGameEngineObjC.h; sourceTree = "<group>"; };
+		C1F60D531D7E635A00C73807 /* NJLIGameEngineObjC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NJLIGameEngineObjC.mm; sourceTree = "<group>"; };
+		C1F60D571D7E68E800C73807 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../../../../Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib/liblua.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1F60D171D7E60D500C73807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F60D581D7E68E800C73807 /* liblua.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F60D2F1D7E60D500C73807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C169EE231D7F3F8D004B823E /* bullet.so in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F60D3A1D7E60D500C73807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C169EE241D7F3F8D004B823E /* bullet.so in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1F60D111D7E60D500C73807 = {
+			isa = PBXGroup;
+			children = (
+				C169EE271D81357D004B823E /* njli.so */,
+				C169EE211D7F2290004B823E /* bullet.so */,
+				C1F60D571D7E68E800C73807 /* liblua.a */,
+				C1F60D1C1D7E60D500C73807 /* NJLIGameEngine */,
+				C1F60D351D7E60D500C73807 /* NJLIGameEngineTests */,
+				C1F60D401D7E60D500C73807 /* NJLIGameEngineUITests */,
+				C1F60D1B1D7E60D500C73807 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1F60D1B1D7E60D500C73807 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1F60D1A1D7E60D500C73807 /* NJLIGameEngine.app */,
+				C1F60D321D7E60D500C73807 /* NJLIGameEngineTests.xctest */,
+				C1F60D3D1D7E60D500C73807 /* NJLIGameEngineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1F60D1C1D7E60D500C73807 /* NJLIGameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C1F60D1D1D7E60D500C73807 /* AppDelegate.swift */,
+				C1F60D231D7E60D500C73807 /* GameViewController.swift */,
+				C1F60D251D7E60D500C73807 /* Main.storyboard */,
+				C1F60D281D7E60D500C73807 /* Assets.xcassets */,
+				C1F60D2A1D7E60D500C73807 /* LaunchScreen.storyboard */,
+				C1F60D2D1D7E60D500C73807 /* Info.plist */,
+				C1F60D521D7E635A00C73807 /* NJLIGameEngineObjC.h */,
+				C1F60D531D7E635A00C73807 /* NJLIGameEngineObjC.mm */,
+				C1F60D501D7E635900C73807 /* NJLIGameEngineTests-Bridging-Header.h */,
+				C1F60D511D7E635900C73807 /* NJLIGameEngineUITests-Bridging-Header.h */,
+				C1F60D4F1D7E61A800C73807 /* NJLIGameEngine-Bridging-Header.h */,
+			);
+			path = NJLIGameEngine;
+			sourceTree = "<group>";
+		};
+		C1F60D351D7E60D500C73807 /* NJLIGameEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F60D361D7E60D500C73807 /* NJLIGameEngineTests.swift */,
+				C1F60D381D7E60D500C73807 /* Info.plist */,
+			);
+			path = NJLIGameEngineTests;
+			sourceTree = "<group>";
+		};
+		C1F60D401D7E60D500C73807 /* NJLIGameEngineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F60D411D7E60D500C73807 /* NJLIGameEngineUITests.swift */,
+				C1F60D431D7E60D500C73807 /* Info.plist */,
+			);
+			path = NJLIGameEngineUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1F60D191D7E60D500C73807 /* NJLIGameEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F60D461D7E60D500C73807 /* Build configuration list for PBXNativeTarget "NJLIGameEngine" */;
+			buildPhases = (
+				C1F60D161D7E60D500C73807 /* Sources */,
+				C1F60D171D7E60D500C73807 /* Frameworks */,
+				C1F60D181D7E60D500C73807 /* Resources */,
+				C169EE251D7F5453004B823E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NJLIGameEngine;
+			productName = NJLIGameEngine;
+			productReference = C1F60D1A1D7E60D500C73807 /* NJLIGameEngine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1F60D311D7E60D500C73807 /* NJLIGameEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F60D491D7E60D500C73807 /* Build configuration list for PBXNativeTarget "NJLIGameEngineTests" */;
+			buildPhases = (
+				C1F60D2E1D7E60D500C73807 /* Sources */,
+				C1F60D2F1D7E60D500C73807 /* Frameworks */,
+				C1F60D301D7E60D500C73807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1F60D341D7E60D500C73807 /* PBXTargetDependency */,
+			);
+			name = NJLIGameEngineTests;
+			productName = NJLIGameEngineTests;
+			productReference = C1F60D321D7E60D500C73807 /* NJLIGameEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1F60D3C1D7E60D500C73807 /* NJLIGameEngineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F60D4C1D7E60D500C73807 /* Build configuration list for PBXNativeTarget "NJLIGameEngineUITests" */;
+			buildPhases = (
+				C1F60D391D7E60D500C73807 /* Sources */,
+				C1F60D3A1D7E60D500C73807 /* Frameworks */,
+				C1F60D3B1D7E60D500C73807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1F60D3F1D7E60D500C73807 /* PBXTargetDependency */,
+			);
+			name = NJLIGameEngineUITests;
+			productName = NJLIGameEngineUITests;
+			productReference = C1F60D3D1D7E60D500C73807 /* NJLIGameEngineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1F60D121D7E60D500C73807 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "NJLIGames Ltd.";
+				TargetAttributes = {
+					C1F60D191D7E60D500C73807 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					C1F60D311D7E60D500C73807 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C1F60D191D7E60D500C73807;
+					};
+					C1F60D3C1D7E60D500C73807 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C1F60D191D7E60D500C73807;
+					};
+				};
+			};
+			buildConfigurationList = C1F60D151D7E60D500C73807 /* Build configuration list for PBXProject "NJLIGameEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1F60D111D7E60D500C73807;
+			productRefGroup = C1F60D1B1D7E60D500C73807 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1F60D191D7E60D500C73807 /* NJLIGameEngine */,
+				C1F60D311D7E60D500C73807 /* NJLIGameEngineTests */,
+				C1F60D3C1D7E60D500C73807 /* NJLIGameEngineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1F60D181D7E60D500C73807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F60D271D7E60D500C73807 /* Main.storyboard in Resources */,
+				C1F60D291D7E60D500C73807 /* Assets.xcassets in Resources */,
+				C1F60D2C1D7E60D500C73807 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F60D301D7E60D500C73807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F60D3B1D7E60D500C73807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1F60D161D7E60D500C73807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F60D241D7E60D500C73807 /* GameViewController.swift in Sources */,
+				C1F60D541D7E635A00C73807 /* NJLIGameEngineObjC.mm in Sources */,
+				C1F60D1E1D7E60D500C73807 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F60D2E1D7E60D500C73807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F60D551D7E635A00C73807 /* NJLIGameEngineObjC.mm in Sources */,
+				C1F60D371D7E60D500C73807 /* NJLIGameEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F60D391D7E60D500C73807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F60D561D7E635A00C73807 /* NJLIGameEngineObjC.mm in Sources */,
+				C1F60D421D7E60D500C73807 /* NJLIGameEngineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1F60D341D7E60D500C73807 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1F60D191D7E60D500C73807 /* NJLIGameEngine */;
+			targetProxy = C1F60D331D7E60D500C73807 /* PBXContainerItemProxy */;
+		};
+		C1F60D3F1D7E60D500C73807 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1F60D191D7E60D500C73807 /* NJLIGameEngine */;
+			targetProxy = C1F60D3E1D7E60D500C73807 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1F60D251D7E60D500C73807 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1F60D261D7E60D500C73807 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1F60D2A1D7E60D500C73807 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1F60D2B1D7E60D500C73807 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1F60D441D7E60D500C73807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LIBRARY_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jamesfolk/Downloads/NJLIGameEngine/NJLIGameEngine/NJLIGameEngine-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1F60D451D7E60D500C73807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LIBRARY_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jamesfolk/Downloads/NJLIGameEngine/NJLIGameEngine/NJLIGameEngine-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1F60D471D7E60D500C73807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include;
+				INFOPLIST_FILE = NJLIGameEngine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jamesfolk/Downloads/NJLIGameEngine/NJLIGameEngine/NJLIGameEngine-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		C1F60D481D7E60D500C73807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/include;
+				INFOPLIST_FILE = NJLIGameEngine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = /Users/jamesfolk/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/lib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jamesfolk/Downloads/NJLIGameEngine/NJLIGameEngine/NJLIGameEngine-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		C1F60D4A1D7E60D500C73807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				HEADER_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				INFOPLIST_FILE = NJLIGameEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NJLIGameEngine/NJLIGameEngineTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NJLIGameEngine.app/NJLIGameEngine";
+			};
+			name = Debug;
+		};
+		C1F60D4B1D7E60D500C73807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				INFOPLIST_FILE = NJLIGameEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NJLIGameEngine/NJLIGameEngineTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NJLIGameEngine.app/NJLIGameEngine";
+			};
+			name = Release;
+		};
+		C1F60D4D1D7E60D500C73807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				HEADER_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				INFOPLIST_FILE = NJLIGameEngineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NJLIGameEngine/NJLIGameEngineUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_TARGET_NAME = NJLIGameEngine;
+			};
+			name = Debug;
+		};
+		C1F60D4E1D7E60D500C73807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				INFOPLIST_FILE = NJLIGameEngineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/jamesfolk/Downloads/lua-5.3.3/src/";
+				PRODUCT_BUNDLE_IDENTIFIER = com.njligames.NJLIGameEngineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NJLIGameEngine/NJLIGameEngineUITests-Bridging-Header.h";
+				TEST_TARGET_NAME = NJLIGameEngine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1F60D151D7E60D500C73807 /* Build configuration list for PBXProject "NJLIGameEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F60D441D7E60D500C73807 /* Debug */,
+				C1F60D451D7E60D500C73807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F60D461D7E60D500C73807 /* Build configuration list for PBXNativeTarget "NJLIGameEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F60D471D7E60D500C73807 /* Debug */,
+				C1F60D481D7E60D500C73807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F60D491D7E60D500C73807 /* Build configuration list for PBXNativeTarget "NJLIGameEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F60D4A1D7E60D500C73807 /* Debug */,
+				C1F60D4B1D7E60D500C73807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F60D4C1D7E60D500C73807 /* Build configuration list for PBXNativeTarget "NJLIGameEngineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F60D4D1D7E60D500C73807 /* Debug */,
+				C1F60D4E1D7E60D500C73807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1F60D121D7E60D500C73807 /* Project object */;
+}

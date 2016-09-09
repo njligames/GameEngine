@@ -1,0 +1,2 @@
+all:
+	@echo "Samsung SMART TV NJLI library, njli.so, bullet.so for debug and release" > output.txt
