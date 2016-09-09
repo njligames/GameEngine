@@ -1,0 +1,29 @@
+make Makefile
+
+cp -R GameEngine NJLIGameEngine
+
+rm -rf NJLIGameEngine/dev/libs/.objs
+rm -rf NJLIGameEngine/dev/libs/Android/.objs
+rm -rf NJLIGameEngine/dev/libs/Android\ TV/.objs
+rm -rf NJLIGameEngine/dev/libs/iOS/.objs
+rm -rf NJLIGameEngine/dev/libs/Linux/.objs
+rm -rf NJLIGameEngine/dev/libs/MacOS/.objs
+rm -rf NJLIGameEngine/dev/libs/Samsung\ SMART\ TV/.objs
+rm -rf NJLIGameEngine/dev/libs/Tizen/.objs
+rm -rf NJLIGameEngine/dev/libs/tvOS/.objs
+rm -rf NJLIGameEngine/dev/libs/WebGL/.objs
+rm -rf NJLIGameEngine/dev/libs/Windows/.objs
+rm -rf NJLIGameEngine/dev/libs/Windows\ Phone/.objs
+
+DATE=$(date "+%Y.%m.%d-%H.%M.%S")
+DIRECTORY=Distribution/dist.${DATE}
+
+mkdir -p ${DIRECTORY}
+
+zip -r -X ${DIRECTORY}/NJLIGameEngine.zip NJLIGameEngine
+tar -zcvf ${DIRECTORY}/NJLIGameEngine.tar.gz NJLIGameEngine
+tar -jcvf ${DIRECTORY}/NJLIGameEngine.tar.bz2 NJLIGameEngine
+hdutil create -format UDZO -srcfolder NJLIGameEngine ${DIRECTORY}/NJLIGameEngine.dmg
+
+rm -rf NJLIGameEngine
+
