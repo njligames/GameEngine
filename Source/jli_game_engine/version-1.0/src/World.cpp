@@ -365,6 +365,10 @@ namespace njli
         
         if(getScene())
             getScene()->touchDown(m_CurrentTouches);
+        
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLITouchDown");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
     }
     
     void World::touchUp(DeviceTouch **m_CurrentTouches)
@@ -382,6 +386,10 @@ namespace njli
         
         if(getScene())
             getScene()->touchUp(m_CurrentTouches);
+        
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLITouchUp");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
     }
     
     void World::touchMove(DeviceTouch **m_CurrentTouches)
@@ -399,6 +407,10 @@ namespace njli
         
         if(getScene())
             getScene()->touchMove(m_CurrentTouches);
+        
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLITouchMove");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
     }
     
     void World::touchCancelled(DeviceTouch **m_CurrentTouches)
@@ -416,6 +428,10 @@ namespace njli
         
         if(getScene())
             getScene()->touchCancelled(m_CurrentTouches);
+        
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLITouchCancelled");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, m_CurrentTouches);
     }
     
     
@@ -491,6 +507,10 @@ namespace njli
         
         m_stateMachine->update(timeStep);
         
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIUpdate");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, timeStep);
+        
 //        for (s32 cameraIndex = 0; cameraIndex < m_cameraArray.size(); ++cameraIndex)
 //        {
 //            m_cameraArray[cameraIndex]->updateProjection();
@@ -525,6 +545,10 @@ namespace njli
             getScene()->render();
         
         getWorldHUD()->render();
+        
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIRender");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
         
 #if defined(DEBUG) || defined (_DEBUG)
         Scene *scene = getScene();
@@ -565,6 +589,10 @@ namespace njli
         m_ViewPortDimensions->setX(width);
         m_ViewPortDimensions->setY(height);
         getWorldInput()->setOrientation(orientation);
+        
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLIResize");
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, width, height, orientation);
         
 //        DEBUG_LOG_V(TAG, "Screen Dimensions: `%dx%d`", width, height);
     }

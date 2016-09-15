@@ -23,7 +23,7 @@ mkdir -p ${DIRECTORY}
 zip -r -X ${DIRECTORY}/NJLIGameEngine.zip NJLIGameEngine
 tar -zcvf ${DIRECTORY}/NJLIGameEngine.tar.gz NJLIGameEngine
 tar -jcvf ${DIRECTORY}/NJLIGameEngine.tar.bz2 NJLIGameEngine
-hdutil create -format UDZO -srcfolder NJLIGameEngine ${DIRECTORY}/NJLIGameEngine.dmg
+hdiutil create -format UDZO -srcfolder NJLIGameEngine ${DIRECTORY}/NJLIGameEngine.dmg
 
 rm -rf NJLIGameEngine
 

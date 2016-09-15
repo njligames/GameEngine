@@ -2591,6 +2591,26 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
         return false;
     }
     
+    bool WorldLuaVirtualMachine::execute(const char* code, s32 width, s32 height, s32 orientation)
+    {
+        if(m_lua_State)
+        {
+            lua_getglobal(m_lua_State, code);
+            
+            lua_pushnumber(m_lua_State, width);
+            lua_pushnumber(m_lua_State, height);
+            lua_pushnumber(m_lua_State, orientation);
+            
+            /* do the call (2 arguments, 0 result) */
+            int error_code = lua_pcall(m_lua_State, 3, 0, 0);
+            
+            if(LUA_OK == error_code)
+                return true;
+            getError(code, error_code);
+        }
+        return false;
+    }
+    
     bool WorldLuaVirtualMachine::execute(const char *code, Action *action)
     {
         if(m_lua_State)
