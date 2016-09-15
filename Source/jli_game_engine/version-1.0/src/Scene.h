@@ -406,6 +406,16 @@ public:
     
     void pauseGame();
     void unPauseGame();
+    
+    void willResignActive();
+    void didBecomeActive();
+    void didEnterBackground();
+    void willEnterForeground();
+    void willTerminate();
+    void interrupt();
+    void resumeInterrupt();
+    
+    void receivedMemoryWarning();
 protected:
     void addActiveCamera(Camera * camera);
     void removeActiveCamera(Camera * camera);

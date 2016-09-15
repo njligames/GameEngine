@@ -871,6 +871,117 @@ namespace njli
         }
     }
     
+    void Scene::willResignActive()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->willResignActive(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::didBecomeActive()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->didBecomeActive(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::didEnterBackground()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->didEnterBackground(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::willEnterForeground()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->willEnterForeground(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::willTerminate()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->willTerminate(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::interrupt()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->interrupt(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::resumeInterrupt()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->resumeInterrupt(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
+    
+    void Scene::receivedMemoryWarning()
+    {
+        SceneState *currentState = dynamic_cast<SceneState*>(m_SceneStateMachine->getState());
+        
+        if(currentState)
+        {
+            currentState->receivedMemoryWarning(this);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+        }
+    }
     
     
     

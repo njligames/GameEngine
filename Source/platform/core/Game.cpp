@@ -130,13 +130,14 @@ function __NJLIGameResumeInterrupt() end\n\
 ");
     
 
-    
-//    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/main.lua");
-    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/TestMain.lua");
-    njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
-    
     World::getInstance()->getWorldLuaVirtualMachine()->loadString(source.c_str());
     njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
+    
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/main.lua");
+//    njli::World::getInstance()->getWorldLuaVirtualMachine()->loadFile("scripts/TestMain.lua");
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->compile();
+    
+    
 
     return true;
 }
@@ -173,8 +174,9 @@ void NJLIGameEngine::setTouch(const void* touch, const int index,
     const unsigned long num_touches)
 {
     //    DEBUG_LOG_V("Game.cpp", "set_touch(%s)\n", "?");
-    njli::World::getInstance()->getWorldInput()->setTouch(touch, index,
-        num_touches);
+    njli::World::getInstance()->getWorldInput()->setTouch(touch,
+                                                          index,
+                                                          num_touches);
 }
 //void NJLIGameEngine::setTouch(const int x, const int y, const int index,
 //    const unsigned long num_touches, float scaleFactor)
@@ -224,35 +226,52 @@ void NJLIGameEngine::touchCancelled()
     void NJLIGameEngine::willResignActive()
     {
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameWillResignActive");
+        sprintf(buffer, "%s", "__NJLIWorldWillResignActive");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->willResignActive();
+        
+        
     }
     void NJLIGameEngine::didBecomeActive()
     {
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameDidBecomeActive");
+        sprintf(buffer, "%s", "__NJLIWorldDidBecomeActive");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->didBecomeActive();
     }
     
     void NJLIGameEngine::didEnterBackground()
     {
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameDidEnterBackground");
+        sprintf(buffer, "%s", "__NJLIWorldDidEnterBackground");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->didEnterBackground();
     }
     
     void NJLIGameEngine::willEnterForeground()
     {
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameWillEnterForeground");
+        sprintf(buffer, "%s", "__NJLIWorldWillEnterForeground");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->willEnterForeground();
     }
     
     void NJLIGameEngine::willTerminate()
     {
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameWillTerminate");
+        sprintf(buffer, "%s", "__NJLIWorldWillTerminate");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->willTerminate();
     }
     
     void NJLIGameEngine::interrupt()
@@ -260,8 +279,11 @@ void NJLIGameEngine::touchCancelled()
         njli::World::getInstance()->getWorldSound()->enablePause();
         
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameInterrupt");
+        sprintf(buffer, "%s", "__NJLIWorldInterrupt");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->interrupt();
     }
     
     void NJLIGameEngine::resumeInterrupt()
@@ -269,8 +291,11 @@ void NJLIGameEngine::touchCancelled()
         njli::World::getInstance()->getWorldSound()->enablePause(false);
         
         char buffer[256];
-        sprintf(buffer, "%s", "__NJLIGameResumeInterrupt");
+        sprintf(buffer, "%s", "__NJLIWorldResumeInterrupt");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+        
+        if(njli::World::getInstance()->getScene())
+            njli::World::getInstance()->getScene()->resumeInterrupt();
     }
     
 //void NJLIGameEngine::pauseGame()
@@ -320,8 +345,11 @@ void NJLIGameEngine::keyboardReturn(const char* text)
     
 void NJLIGameEngine::receivedMemoryWarning()
 {
-    njli::World::getInstance()->getWorldResourceLoader()->unLoadAll();
-    njli::World::getInstance()->getWorldFactory()->collectGarbage();
+//    njli::World::getInstance()->getWorldResourceLoader()->unLoadAll();
+//    njli::World::getInstance()->getWorldFactory()->collectGarbage();
     njli::World::getInstance()->getWorldLuaVirtualMachine()->execute("__NJLIWorldReceivedMemoryWarning");
+    
+    if(njli::World::getInstance()->getScene())
+        njli::World::getInstance()->getScene()->receivedMemoryWarning();
 }
 }

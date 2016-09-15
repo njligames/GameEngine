@@ -339,6 +339,8 @@ public:
          *  @return <#return value description#>
          */
     bool execute(const char* code, const btAlignedObjectArray<njli::PhysicsRayContact*>& rayContacts);
+    
+    bool execute(const char* code, s32 width, s32 height, s32 orientation);
 
     /**
          *  @author James Folk, 16-02-11 18:02:58

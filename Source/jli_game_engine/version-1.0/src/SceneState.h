@@ -152,6 +152,16 @@ public:
     void renderHUD(Scene *object);
     void pauseGame(Scene *object);
     void unPauseGame(Scene *object);
+    
+    void willResignActive(Scene *object);
+    void didBecomeActive(Scene *object);
+    void didEnterBackground(Scene *object);
+    void willEnterForeground(Scene *object);
+    void willTerminate(Scene *object);
+    void interrupt(Scene *object);
+    void resumeInterrupt(Scene *object);
+    
+    void receivedMemoryWarning(Scene *object);
     /**
          *  <#Description#>
          *

@@ -291,4 +291,79 @@ namespace njli
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    void SceneState::willResignActive(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneWillResignActive");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::didBecomeActive(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneDidBecomeActive");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::didEnterBackground(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneDidEnterBackground");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::willEnterForeground(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneWillEnterForeground");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::willTerminate(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneWillTerminate");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::interrupt(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneInterrupt");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::resumeInterrupt(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneResumeInterrupt");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    void SceneState::receivedMemoryWarning(Scene *object)
+    {
+        char buffer[256];
+        sprintf(buffer, "%s", "__NJLISceneReceivedMemoryWarning");
+        
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+    }
+    
+    
 }
