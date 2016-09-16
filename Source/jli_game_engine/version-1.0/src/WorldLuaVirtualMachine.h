@@ -400,7 +400,7 @@ public:
          - returns: <#return value description#>
          */
     void init();
-    int initLua(int argc, char **argv);
+//    int initLua(int argc, char **argv);
 //    lua_State *init(int argc, char **argv);
 
     /**
@@ -417,7 +417,7 @@ public:
      ** Do the REPL: repeatedly read (load) a line, evaluate (call) it, and
      ** print any results.
      */
-    void doREPL ();
+//    void doREPL ();
 
 protected:
     void getError(const char* code, int error);
