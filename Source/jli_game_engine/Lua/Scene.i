@@ -26,6 +26,7 @@
     {
         std::string s(*self);
         static char tmp[1024];
+        /*WILL FARRELL*/
         sprintf(tmp, "%s", s.c_str());
         return tmp;
     }
