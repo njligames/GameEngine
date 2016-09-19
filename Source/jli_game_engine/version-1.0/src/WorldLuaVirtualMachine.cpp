@@ -1056,7 +1056,7 @@ namespace njli
         if (m_lua_State)
             unInit();
         
-        luaL_checkversion(m_lua_State);
+        
         
 //        DEBUG_LOG_V(TAG, "Lua version: %s\n", LUA_VERSION);
         
@@ -1084,40 +1084,17 @@ namespace njli
         DEBUG_LOG_V(TAG, "%s", "Lua LUA_USE_ULONGJMP: no\n");
 #endif
         
-        
-        
-        
-        
-//        DEBUG_LOG_V(TAG, "SWIG version: %X\n", SWIGVERSION);
-/*
- #if !defined(LUAI_THROW)
- 
- #if defined(__cplusplus) && !defined(LUA_USE_LONGJMP)
- */
         m_lua_State = luaL_newstate();
-        
         luaL_checkversion(m_lua_State);
         
         DEBUG_LOG_V(TAG, "Lua version: %s\n", LUA_VERSION);
         
         luaL_openlibs(m_lua_State);
-
-//        luaopen_njli(m_lua_State);
-        
-//        luaopen_JLIM(m_lua_State);
-        
-//        luaopen_bit(m_lua_State);
-
-//        DEBUG_LOG_V(TAG, "%s\n", SWIG_name );
         
         const char *paths[] =
         {
             "scripts",
             "scripts/?",
-//            "scripts/nodes",
-//            "scripts/scenes",
-//            "scripts/worlds",
-//            "scripts/steering"
         };
         
         for (s32 i = 0; i < 2; ++i)
@@ -1128,38 +1105,20 @@ namespace njli
             appendLuaPath(m_lua_State, bundlePath.c_str());
         }
         
-//#if defined(DEBUG) || defined (_DEBUG)
         for (s32 i = 0; i < 2; ++i)
         {
-            std::string bundlePath = DOCUMENT_BASEPATH();//BUNDLE_PATH();
+            std::string bundlePath = DOCUMENT_BASEPATH();
             bundlePath.append("/");
             bundlePath.append(paths[i]);
             bundlePath.append("/?.lua");
             appendLuaPath(m_lua_State, bundlePath.c_str());
         }
-//#endif
-//        swig_type_info *m_SceneTypeInfo;
-//        swig_type_info *m_TelegramTypeInfo;
-//        swig_type_info *m_NodeTypeInfo;
-//        swig_type_info *m_DeviceTouchTypeInfo;
-//        swig_type_info *m_PhysicsRayContactTypeInfo;
-//        swig_type_info *m_ActionTypeInfo;
-//        m_SceneTypeInfo = SWIG_TypeQuery( m_lua_State, "njli::Scene" );
-//        swig_type_info *m_TelegramTypeInfo = SWIG_TypeQuery( m_lua_State, "njli::Telegram" );
-//        swig_type_info *m_NodeTypeInfo = SWIG_TypeQuery( m_lua_State, "_p_njli__Node" );
-//        swig_type_info * m_DeviceTouchTypeInfo = SWIG_TypeQuery( m_lua_State, "njli::DeviceTouch" );
-//        swig_type_info * m_PhysicsRayContactTypeInfo = SWIG_TypeQuery( m_lua_State, "njli::PhysicsRayContact" );
-//        swig_type_info * m_ActionTypeInfo = SWIG_TypeQuery( m_lua_State, "njli::Action" );
-
+        
         
 #if defined(DEBUG) || defined (_DEBUG)
 //        printWrappedClasses();
 #endif
     }
-    
-    
-    
-    
     
     void WorldLuaVirtualMachine::unInit()
     {
@@ -1201,52 +1160,52 @@ namespace njli
     
     
     
-    static bool isInteractive = false;
-#if !defined(LUA_PROMPT)
-#define LUA_PROMPT		"> "
-#define LUA_PROMPT2		">> "
-#endif
-    
-#if !defined(LUA_PROGNAME)
-#define LUA_PROGNAME		"lua"
-#endif
-    
-#if !defined(LUA_MAXINPUT)
-#define LUA_MAXINPUT		512
-#endif
-    
-#if !defined(LUA_INIT_VAR)
-#define LUA_INIT_VAR		"LUA_INIT"
-#endif
-    
-#define LUA_INITVARVERSION  \
-LUA_INIT_VAR "_" LUA_VERSION_MAJOR "_" LUA_VERSION_MINOR
+//    static bool isInteractive = false;
+//#if !defined(LUA_PROMPT)
+//#define LUA_PROMPT		"> "
+//#define LUA_PROMPT2		">> "
+//#endif
+//    
+//#if !defined(LUA_PROGNAME)
+//#define LUA_PROGNAME		"lua"
+//#endif
+//    
+//#if !defined(LUA_MAXINPUT)
+//#define LUA_MAXINPUT		512
+//#endif
+//    
+//#if !defined(LUA_INIT_VAR)
+//#define LUA_INIT_VAR		"LUA_INIT"
+//#endif
+//    
+//#define LUA_INITVARVERSION  \
+//LUA_INIT_VAR "_" LUA_VERSION_MAJOR "_" LUA_VERSION_MINOR
     
     
     /*
      ** lua_stdin_is_tty detects whether the standard input is a 'tty' (that
      ** is, whether we're running lua interactively).
      */
-#if !defined(lua_stdin_is_tty)	/* { */
-    
-#if defined(LUA_USE_POSIX)	/* { */
-    
-#include <unistd.h>
-#define lua_stdin_is_tty()	isatty(0)
-    
-#elif defined(LUA_USE_WINDOWS)	/* }{ */
-    
-#include <io.h>
-#define lua_stdin_is_tty()	_isatty(_fileno(stdin))
-    
-#else				/* }{ */
-    
-    /* ISO C definition */
-#define lua_stdin_is_tty()	1  /* assume stdin is a tty */
-    
-#endif				/* } */
-    
-#endif				/* } */
+//#if !defined(lua_stdin_is_tty)	/* { */
+//    
+//#if defined(LUA_USE_POSIX)	/* { */
+//    
+//#include <unistd.h>
+//#define lua_stdin_is_tty()	isatty(0)
+//    
+//#elif defined(LUA_USE_WINDOWS)	/* }{ */
+//    
+//#include <io.h>
+//#define lua_stdin_is_tty()	_isatty(_fileno(stdin))
+//    
+//#else				/* }{ */
+//    
+//    /* ISO C definition */
+//#define lua_stdin_is_tty()	1  /* assume stdin is a tty */
+//    
+//#endif				/* } */
+//    
+//#endif				/* } */
     
     
     /*
@@ -1254,45 +1213,45 @@ LUA_INIT_VAR "_" LUA_VERSION_MAJOR "_" LUA_VERSION_MINOR
      ** the standard input.
      ** lua_saveline defines how to "save" a read line in a "history".
      ** lua_freeline defines how to free a line read by lua_readline.
-     */
-#if !defined(lua_readline)	/* { */
-    
-#if defined(LUA_USE_READLINE)	/* { */
-    
-#include <readline/readline.h>
-#include <readline/history.h>
-#define lua_readline(L,b,p)	((void)L, ((b)=readline(p)) != NULL)
-#define lua_saveline(L,line)	((void)L, add_history(line))
-#define lua_freeline(L,b)	((void)L, free(b))
-    
-#else				/* }{ */
-    
-#define lua_readline(L,b,p) \
-((void)L, fputs(p, stdout), fflush(stdout),  /* show prompt */ \
-fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
-#define lua_saveline(L,line)	{ (void)L; (void)line; }
-#define lua_freeline(L,b)	{ (void)L; (void)b; }
-    
-#endif				/* } */
-    
-#endif				/* } */
-    
-    
+//     */
+//#if !defined(lua_readline)	/* { */
+//    
+//#if defined(LUA_USE_READLINE)	/* { */
+//    
+//#include <readline/readline.h>
+//#include <readline/history.h>
+//#define lua_readline(L,b,p)	((void)L, ((b)=readline(p)) != NULL)
+//#define lua_saveline(L,line)	((void)L, add_history(line))
+//#define lua_freeline(L,b)	((void)L, free(b))
+//    
+//#else				/* }{ */
+//    
+//#define lua_readline(L,b,p) \
+//((void)L, fputs(p, stdout), fflush(stdout),  /* show prompt */ \
+//fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
+//#define lua_saveline(L,line)	{ (void)L; (void)line; }
+//#define lua_freeline(L,b)	{ (void)L; (void)b; }
+//    
+//#endif				/* } */
+//    
+//#endif				/* } */
     
     
-    static lua_State *globalL = NULL;
     
-    static const char *progname = LUA_PROGNAME;
+    
+//    static lua_State *globalL = NULL;
+//    
+//    static const char *progname = LUA_PROGNAME;
     
     
     /*
      ** Hook set by signal function to stop the interpreter.
      */
-    static void lstop (lua_State *L, lua_Debug *ar) {
-        (void)ar;  /* unused arg. */
-        lua_sethook(L, NULL, 0, 0);  /* reset hook */
-        luaL_error(L, "interrupted!");
-    }
+//    static void lstop (lua_State *L, lua_Debug *ar) {
+//        (void)ar;  /* unused arg. */
+//        lua_sethook(L, NULL, 0, 0);  /* reset hook */
+//        luaL_error(L, "interrupted!");
+//    }
     
     
     /*
@@ -1301,10 +1260,10 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
      ** this function only sets a hook that, when called, will stop the
      ** interpreter.
      */
-    static void laction (int i) {
-        signal(i, SIG_DFL); /* if another SIGINT happens, terminate process */
-        lua_sethook(globalL, lstop, LUA_MASKCALL | LUA_MASKRET | LUA_MASKCOUNT, 1);
-    }
+//    static void laction (int i) {
+//        signal(i, SIG_DFL); /* if another SIGINT happens, terminate process */
+//        lua_sethook(globalL, lstop, LUA_MASKCALL | LUA_MASKRET | LUA_MASKCOUNT, 1);
+//    }
     
     
 //    static void print_usage (const char *badoption) {
@@ -1333,10 +1292,10 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
      ** Prints an error message, adding the program name in front of it
      ** (if present)
      */
-    static void l_message (const char *pname, const char *msg) {
-        if (pname) printf("%s: ", pname);//lua_writestringerror("%s: ", pname);
-        printf("%s: ", msg);//lua_writestringerror("%s\n", msg);
-    }
+//    static void l_message (const char *pname, const char *msg) {
+//        if (pname) printf("%s: ", pname);//lua_writestringerror("%s: ", pname);
+//        printf("%s: ", msg);//lua_writestringerror("%s\n", msg);
+//    }
     
     
     /*
@@ -1344,50 +1303,50 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
      ** message on the top of the stack. It assumes that the error object
      ** is a string, as it was either generated by Lua or by 'msghandler'.
      */
-    static int report (lua_State *L, int status) {
-        if (status != LUA_OK) {
-            const char *msg = lua_tostring(L, -1);
-            l_message(progname, msg);
-            lua_pop(L, 1);  /* remove message */
-        }
-        return status;
-    }
+//    static int report (lua_State *L, int status) {
+//        if (status != LUA_OK) {
+//            const char *msg = lua_tostring(L, -1);
+//            l_message(progname, msg);
+//            lua_pop(L, 1);  /* remove message */
+//        }
+//        return status;
+//    }
     
     
     /*
      ** Message handler used to run all chunks
      */
-    static int msghandler (lua_State *L) {
-        const char *msg = lua_tostring(L, 1);
-        if (msg == NULL) {  /* is error object not a string? */
-            if (luaL_callmeta(L, 1, "__tostring") &&  /* does it have a metamethod */
-                lua_type(L, -1) == LUA_TSTRING)  /* that produces a string? */
-                return 1;  /* that is the message */
-            else
-                msg = lua_pushfstring(L, "(error object is a %s value)",
-                                      luaL_typename(L, 1));
-        }
-        luaL_traceback(L, L, msg, 1);  /* append a standard traceback */
-        return 1;  /* return the traceback */
-    }
+//    static int msghandler (lua_State *L) {
+//        const char *msg = lua_tostring(L, 1);
+//        if (msg == NULL) {  /* is error object not a string? */
+//            if (luaL_callmeta(L, 1, "__tostring") &&  /* does it have a metamethod */
+//                lua_type(L, -1) == LUA_TSTRING)  /* that produces a string? */
+//                return 1;  /* that is the message */
+//            else
+//                msg = lua_pushfstring(L, "(error object is a %s value)",
+//                                      luaL_typename(L, 1));
+//        }
+//        luaL_traceback(L, L, msg, 1);  /* append a standard traceback */
+//        return 1;  /* return the traceback */
+//    }
     
     
     /*
      ** Interface to 'lua_pcall', which sets appropriate message function
      ** and C-signal handler. Used to run all chunks.
      */
-    static int docall (lua_State *L, int narg, int nres) {
-        int status;
-        int base = lua_gettop(L) - narg;  /* function index */
-        lua_pushcfunction(L, msghandler);  /* push message handler */
-        lua_insert(L, base);  /* put it under function and args */
-        globalL = L;  /* to be available to 'laction' */
-        signal(SIGINT, laction);  /* set C-signal handler */
-        status = lua_pcall(L, narg, nres, base);
-        signal(SIGINT, SIG_DFL); /* reset C-signal handler */
-        lua_remove(L, base);  /* remove message handler from the stack */
-        return status;
-    }
+//    static int docall (lua_State *L, int narg, int nres) {
+//        int status;
+//        int base = lua_gettop(L) - narg;  /* function index */
+//        lua_pushcfunction(L, msghandler);  /* push message handler */
+//        lua_insert(L, base);  /* put it under function and args */
+//        globalL = L;  /* to be available to 'laction' */
+//        signal(SIGINT, laction);  /* set C-signal handler */
+//        status = lua_pcall(L, narg, nres, base);
+//        signal(SIGINT, SIG_DFL); /* reset C-signal handler */
+//        lua_remove(L, base);  /* remove message handler from the stack */
+//        return status;
+//    }
     
     
 //    static void print_version (void) {
@@ -1417,10 +1376,10 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
 //    }
     
     
-    static int dochunk (lua_State *L, int status) {
-        if (status == LUA_OK) status = docall(L, 0, 0);
-        return report(L, status);
-    }
+//    static int dochunk (lua_State *L, int status) {
+//        if (status == LUA_OK) status = docall(L, 0, 0);
+//        return report(L, status);
+//    }
     
     
 //    static int dofile (lua_State *L, const char *name) {
@@ -1451,17 +1410,17 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
     /*
      ** Returns the string to be used as a prompt by the interpreter.
      */
-    static const char *get_prompt (lua_State *L, int firstline) {
-        const char *p;
-        lua_getglobal(L, firstline ? "_PROMPT" : "_PROMPT2");
-        p = lua_tostring(L, -1);
-        if (p == NULL) p = (firstline ? LUA_PROMPT : LUA_PROMPT2);
-        return p;
-    }
+//    static const char *get_prompt (lua_State *L, int firstline) {
+//        const char *p;
+//        lua_getglobal(L, firstline ? "_PROMPT" : "_PROMPT2");
+//        p = lua_tostring(L, -1);
+//        if (p == NULL) p = (firstline ? LUA_PROMPT : LUA_PROMPT2);
+//        return p;
+//    }
     
     /* mark in error messages for incomplete statements */
-#define EOFMARK		"<eof>"
-#define marklen		(sizeof(EOFMARK)/sizeof(char) - 1)
+//#define EOFMARK		"<eof>"
+//#define marklen		(sizeof(EOFMARK)/sizeof(char) - 1)
     
     
     /*
@@ -1469,41 +1428,41 @@ fgets(b, LUA_MAXINPUT, stdin) != NULL)  /* get line */
      ** message at the top of the stack ends with the above mark for
      ** incomplete statements.
      */
-    static int incomplete (lua_State *L, int status) {
-        if (status == LUA_ERRSYNTAX) {
-            size_t lmsg;
-            const char *msg = lua_tolstring(L, -1, &lmsg);
-            if (lmsg >= marklen && strcmp(msg + lmsg - marklen, EOFMARK) == 0) {
-                lua_pop(L, 1);
-                return 1;
-            }
-        }
-        return 0;  /* else... */
-    }
+//    static int incomplete (lua_State *L, int status) {
+//        if (status == LUA_ERRSYNTAX) {
+//            size_t lmsg;
+//            const char *msg = lua_tolstring(L, -1, &lmsg);
+//            if (lmsg >= marklen && strcmp(msg + lmsg - marklen, EOFMARK) == 0) {
+//                lua_pop(L, 1);
+//                return 1;
+//            }
+//        }
+//        return 0;  /* else... */
+//    }
     
     
     /*
      ** Prompt the user, read a line, and push it into the Lua stack.
      */
-    static int pushline (lua_State *L, int firstline) {
-        char buffer[LUA_MAXINPUT];
-        char *b = buffer;
-        size_t l;
-        const char *prmt = get_prompt(L, firstline);
-        int readstatus = lua_readline(L, b, prmt);
-        if (readstatus == 0)
-            return 0;  /* no input (prompt will be popped by caller) */
-        lua_pop(L, 1);  /* remove prompt */
-        l = strlen(b);
-        if (l > 0 && b[l-1] == '\n')  /* line ends with newline? */
-            b[--l] = '\0';  /* remove it */
-        if (firstline && b[0] == '=')  /* for compatibility with 5.2, ... */
-            lua_pushfstring(L, "return %s", b + 1);  /* change '=' to 'return' */
-        else
-            lua_pushlstring(L, b, l);
-        lua_freeline(L, b);
-        return 1;
-    }
+//    static int pushline (lua_State *L, int firstline) {
+//        char buffer[LUA_MAXINPUT];
+//        char *b = buffer;
+//        size_t l;
+//        const char *prmt = get_prompt(L, firstline);
+//        int readstatus = lua_readline(L, b, prmt);
+//        if (readstatus == 0)
+//            return 0;  /* no input (prompt will be popped by caller) */
+//        lua_pop(L, 1);  /* remove prompt */
+//        l = strlen(b);
+//        if (l > 0 && b[l-1] == '\n')  /* line ends with newline? */
+//            b[--l] = '\0';  /* remove it */
+//        if (firstline && b[0] == '=')  /* for compatibility with 5.2, ... */
+//            lua_pushfstring(L, "return %s", b + 1);  /* change '=' to 'return' */
+//        else
+//            lua_pushlstring(L, b, l);
+//        lua_freeline(L, b);
+//        return 1;
+//    }
     
     
     /*
