@@ -400,23 +400,7 @@
     njli::NJLIGameEngine::interrupt();
 }
 
-- (void)endInterruption
-{
-    BOOL success = NO;
-    NSError *error = nil;
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    
-    //    jli::World::getInstance()->getWorldSound()->enableSuspend(false);
-    
-    
-    success = [session setCategory:AVAudioSessionCategoryPlayback error:&error];
-    //    DEBUG_ASSERT_PRINT(success, "%s", [[error localizedDescription] UTF8String]);
-    
-    success = [session setActive:YES error:&error];
-    //    DEBUG_ASSERT_PRINT(success, "%s", [[error localizedDescription] UTF8String]);
-    
-    njli::NJLIGameEngine::resumeInterrupt();
-}
+a
 
 -(void)emptyDocumentFiles
 {
