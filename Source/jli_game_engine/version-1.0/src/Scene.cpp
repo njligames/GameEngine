@@ -284,7 +284,6 @@ namespace njli
             }
         }
         
-//        for (s32 i = 0; i < (*m_ActiveNodes).size() * numSubSteps; ++i)
             for (s32 i = 0; i < (*m_ActiveNodes).size(); ++i)
         {
             s32 idx = i % (*m_ActiveNodes).size();
@@ -374,7 +373,7 @@ namespace njli
 //        m_BackgroundMaterial->render();
     }
     
-    void Scene::addRootNode(Node *node)
+    void Scene::setRootNode(Node *node)
     {
         DEBUG_ASSERT(node != NULL);
         
@@ -385,7 +384,7 @@ namespace njli
         
         addChild(m_RootNode);
         
-        addActiveNode(node);
+        addActiveNode(m_RootNode);
     }
     
     void Scene::removeRootNode()
@@ -741,7 +740,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -755,7 +754,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -769,7 +768,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -783,7 +782,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -797,7 +796,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -811,7 +810,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -825,7 +824,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -839,7 +838,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -853,7 +852,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -867,7 +866,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -881,7 +880,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -895,7 +894,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -909,7 +908,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -923,7 +922,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -937,7 +936,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -951,7 +950,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -965,7 +964,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -979,7 +978,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no SceneState\n");
         }
     }
     
@@ -1026,13 +1025,24 @@ namespace njli
         DEBUG_ASSERT(NULL != node);
         
         if((*m_ActiveNodes).size() == (*m_ActiveNodes).findLinearSearch(node))
+        {
             (*m_ActiveNodes).push_back(node);
+            node->setCurrentScene(this);
+            addChild(node);
+        }
+        for (unsigned int i = 0; i < node->numberOfChildrenNodes(); i++)
+            this->addActiveNode(node->getChildNode(i));
     }
     void Scene::removeActiveNode(Node *node)
     {
         DEBUG_ASSERT(NULL != node);
         
         (*m_ActiveNodes).remove(node);
+        node->setCurrentScene(NULL);
+        removeChild(node);
+        
+        for (unsigned int i = 0; i < node->numberOfChildrenNodes(); i++)
+            this->removeActiveNode(node->getChildNode(i));
     }
     void Scene::addActiveParticleEmitter(ParticleEmitter *particleEmitter)
     {

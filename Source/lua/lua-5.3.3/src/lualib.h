@@ -32,8 +32,8 @@ LUAMOD_API int (luaopen_string) (lua_State *L);
 #define LUA_UTF8LIBNAME	"utf8"
 LUAMOD_API int (luaopen_utf8) (lua_State *L);
 
-#define LUA_BITLIBNAME	"bit32"
-LUAMOD_API int (luaopen_bit32) (lua_State *L);
+//#define LUA_BITLIBNAME	"bit32"
+//LUAMOD_API int (luaopen_bit32) (lua_State *L);
 
 #define LUA_MATHLIBNAME	"math"
 LUAMOD_API int (luaopen_math) (lua_State *L);
@@ -43,6 +43,17 @@ LUAMOD_API int (luaopen_debug) (lua_State *L);
 
 #define LUA_LOADLIBNAME	"package"
 LUAMOD_API int (luaopen_package) (lua_State *L);
+
+/* open NJLI libraries */
+
+#define LUA_NJLILIBNAME	"njli"
+LUAMOD_API int (luaopen_njli) (lua_State *L);
+
+#define LUA_BULLETLIBNAME "bullet"
+LUAMOD_API int (luaopen_bullet) (lua_State *L);
+
+#define LUA_BITLIBNAME	"bit"
+LUAMOD_API int (luaopen_bit) (lua_State *L);
 
 /* open all previous libraries */
 LUALIB_API void (luaL_openlibs) (lua_State *L);

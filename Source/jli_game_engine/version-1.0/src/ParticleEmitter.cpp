@@ -661,7 +661,7 @@ namespace njli
             
             particlesRootNode->addChildNode(node);
             
-            node->addGeometry(geometry);
+            node->setGeometry(geometry);
             
             node->setRenderCategory(getParent());
             

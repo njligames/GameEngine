@@ -33,16 +33,17 @@
 
 SRC=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/../../Source
 
-LUA_DIR="lua-5.2.4"
+#LUA_DIR="lua-5.2.4"
 #LUA_DIR="lua"
-#LUA_DIR="lua-5.3.3"
+LUA_DIR="lua-5.3.3"
 
 USR_INCLUDE="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include"
 CLANG_SOURCE="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.2/include"
 CPP_SOURCE="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"
 #CPP_SOURCE="/usr/local/include/c++/5.3.0"
 
-LUA_SOURCE="${SRC}/lua/${LUA_DIR}/src"
+#LUA_SOURCE_OUT="${SRC}/lua/${LUA_DIR}/src"
+LUA_SOURCE_OUT="${SRC}/lua"
 
 BULLET_SOURCE="${SRC}/bullet"
 BULLET_SOURCE0="${SRC}/bullet/bullet-2.82-r2704/src"
@@ -71,7 +72,7 @@ JSON_SOURCE="${SRC}/json/jsoncpp/include"
 NANOVG_SOURCE="${SRC}/nanovg/nanovg/src"
 
 BULLET_XML_FILE="${SRC}/jli_game_engine/version-1.0/doc/swig/bullet.xml"
-BULLET_CPP_OUTPUT="${LUA_SOURCE}/lbullet.cpp"
+BULLET_CPP_OUTPUT="${LUA_SOURCE_OUT}/lbullet.cpp"
 BULLET_INTERFACE_FILE="${SRC}/bullet/Lua/_LuaEntry.i"
 BULLET_SYMBOL_FILE="${SRC}/jli_game_engine/version-1.0/doc/swig/lua-symbol-bullet.txt"
 
@@ -79,10 +80,10 @@ NJLI_CORE_SOURCE="${SRC}/platform/core"
 NJLI_SOURCE="${SRC}/jli_game_engine/version-1.0/src"
 NJLI_INTERFACE_FILE="${SRC}/jli_game_engine/Lua/_LuaEntry.i"
 NJLI_XML_FILE="${SRC}/jli_game_engine/version-1.0/doc/swig/njli.xml"
-NJLI_CPP_OUTPUT="${LUA_SOURCE}/lnjli.cpp"
+NJLI_CPP_OUTPUT="${LUA_SOURCE_OUT}/lnjli.cpp"
 NJLI_SYMBOL_FILE="${SRC}/jli_game_engine/version-1.0/doc/swig/lua-symbol-njli.txt"
 
-LUA_RUNTIME_OUTPUT="${LUA_SOURCE}/njli_swig_runtime.h"
+LUA_RUNTIME_OUTPUT="${LUA_SOURCE_OUT}/njli_swig_runtime.h"
 
 
 #-I${CPP_SOURCE} -cpperraswarn -I${STD_SOURCE} -I${CLANG_SOURCE} -I${JSON_SOURCE} -I${NANOVG_SOURCE}

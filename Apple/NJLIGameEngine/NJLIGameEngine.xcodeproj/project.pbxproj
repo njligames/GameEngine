@@ -663,7 +663,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		C1ACD8EF1CACE58700AB4CF7 /* make */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -671,9 +671,9 @@
 			name = make;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PROJECT=YappyBirdsRewrite\ncd ${SRCROOT}/../../../${PROJECT}/COMMON && make";
+			shellScript = "PROJECT=YappyBirds\npushd ${SRCROOT}/../../../${PROJECT}/COMMON/gameplay_scripts/\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\nmake release\nelse\nmake clean\nmake\nfi\n\npopd";
 		};
 /* End PBXShellScriptBuildPhase section */
 

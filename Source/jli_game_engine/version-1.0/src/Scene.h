@@ -175,7 +175,7 @@ public:
          *
          *  @param node <#node description#>
          */
-    void addRootNode(Node * node);
+    void setRootNode(Node * node);
     /**
          *  <#Description#>
          */
@@ -438,6 +438,7 @@ protected:
 
 private:
     Node* m_RootNode;
+    
     SceneStateMachine* m_SceneStateMachine;
     //        std::vector<ParticleEmitter*> m_ParticleEmitterList;
     Material* m_BackgroundMaterial;

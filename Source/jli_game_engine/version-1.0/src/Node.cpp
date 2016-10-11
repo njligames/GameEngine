@@ -68,7 +68,8 @@ namespace njli
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
     m_Pivot(new btTransform(btTransform::getIdentity())),
-    m_SteeringBehaviorMachine(NULL)//,
+    m_SteeringBehaviorMachine(NULL),
+    m_CurrentScene(NULL)//,
 //    m_ActionThread(Thread::create())
     {
         addChild(m_NodeStateMachine);
@@ -96,7 +97,8 @@ namespace njli
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
     m_Pivot(new btTransform(btTransform::getIdentity())),
-    m_SteeringBehaviorMachine(NULL)//,
+    m_SteeringBehaviorMachine(NULL),
+    m_CurrentScene(NULL)//,
 //    m_ActionThread(Thread::create())
     {
         addChild(m_NodeStateMachine);
@@ -123,7 +125,8 @@ namespace njli
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
     m_Scale(new btVector3(1,1,1)),
     m_Pivot(new btTransform(btTransform::getIdentity())),
-    m_SteeringBehaviorMachine(NULL)//,
+    m_SteeringBehaviorMachine(NULL),
+    m_CurrentScene(NULL)//,
 //    m_ActionThread(Thread::create())
     {
         addChild(m_NodeStateMachine);
@@ -456,11 +459,11 @@ namespace njli
         *m_Pivot = pivot;
     }
     
-    void Node::addSteeringBehaviorMachine(SteeringBehaviorMachine *steeringBehaviorMachine)
+    void Node::setSteeringBehaviorMachine(SteeringBehaviorMachine *steeringBehaviorMachine)
     {
         DEBUG_ASSERT(steeringBehaviorMachine != NULL);
         
-        removeLight();
+        removeSteeringBehaviorMachine();
         
         m_SteeringBehaviorMachine = steeringBehaviorMachine;
         
@@ -475,7 +478,6 @@ namespace njli
         }
         
         m_SteeringBehaviorMachine = NULL;
-
     }
     
     SteeringBehaviorMachine *Node::getSteeringBehaviorMachine()
@@ -504,7 +506,7 @@ namespace njli
     {
         DEBUG_ASSERT(NULL != emitter);
         
-        Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         std::vector<ParticleEmitter*>::const_iterator iter = std::find(m_ParticleEmitterList.begin(), m_ParticleEmitterList.end(), emitter);
@@ -528,7 +530,8 @@ namespace njli
     bool Node::removeParticleEmitter(ParticleEmitter *emitter)
     {
         DEBUG_ASSERT(NULL != emitter);
-        Scene *scene = njli::World::getInstance()->getScene();
+        
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         std::vector<ParticleEmitter*>::iterator iter = std::find(m_ParticleEmitterList.begin(), m_ParticleEmitterList.end(), emitter);
@@ -608,9 +611,6 @@ namespace njli
     {
         DEBUG_ASSERT(body != NULL);
         
-        Scene *scene = njli::World::getInstance()->getScene();
-        DEBUG_ASSERT(NULL != scene);
-        
         removePhysicsBody();
         
         m_PhysicsBody = body;
@@ -672,7 +672,7 @@ namespace njli
         return NULL;
     }
     
-    void Node::addLight(Light *light)
+    void Node::setLight(Light *light)
     {
         DEBUG_ASSERT(light != NULL);
         
@@ -709,10 +709,11 @@ namespace njli
         return NULL;
     }
     
-    void Node::addCamera(Camera *camera)
+    void Node::setCamera(Camera *camera)
     {
         DEBUG_ASSERT(camera != NULL);
-        Scene *scene = njli::World::getInstance()->getScene();
+        
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         removeCamera();
@@ -727,7 +728,7 @@ namespace njli
     {
         if(getCamera())
         {
-            Scene *scene = njli::World::getInstance()->getScene();
+            const Scene *scene = this->getCurrentScene();
             DEBUG_ASSERT(NULL != scene);
             
             Camera *camera = getCamera();
@@ -754,10 +755,11 @@ namespace njli
         return NULL;
     }
     
-    void Node::addGeometry(Geometry *geometry)
+    void Node::setGeometry(Geometry *geometry)
     {
         DEBUG_ASSERT(geometry != NULL);
-        Scene *scene = njli::World::getInstance()->getScene();
+        
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         removeGeometry();
@@ -778,7 +780,7 @@ namespace njli
         Geometry *geometry = getGeometry();
         if(geometry)
         {
-            Scene *scene = njli::World::getInstance()->getScene();
+            const Scene *scene = this->getCurrentScene();
             DEBUG_ASSERT(NULL != scene);
             
             geometry->removeReference(this);
@@ -817,7 +819,7 @@ namespace njli
         return NULL;
     }
     
-    void Node::addPhysicsField(PhysicsField *field)
+    void Node::setPhysicsField(PhysicsField *field)
     {
         DEBUG_ASSERT(field != NULL);
         
@@ -1148,14 +1150,16 @@ namespace njli
                             njliBitCategories collisionGroup,
                             njliBitCategories collisionMask)const
     {
-        const Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
-        return scene->getPhysicsWorld()->rayTestClosest(from,
-                                                        to,
-                                                        rayContact,
-                                                        collisionGroup,
-                                                        collisionMask);
+        if(scene)
+            return scene->getPhysicsWorld()->rayTestClosest(from,
+                                                            to,
+                                                            rayContact,
+                                                            collisionGroup,
+                                                            collisionMask);
+        return false;
     }
     
     bool Node::rayTestAll(const btVector3 &from, const btVector3 &to,
@@ -1164,10 +1168,12 @@ namespace njli
                           njliBitCategories collisionGroup,
                           njliBitCategories collisionMask)const
     {
-        const Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
-        return scene->getPhysicsWorld()->rayTestAll(from, to, rayContacts, numContacts, collisionGroup, collisionMask);
+        if(scene)
+            return scene->getPhysicsWorld()->rayTestAll(from, to, rayContacts, numContacts, collisionGroup, collisionMask);
+        return false;
     }
     
     bool Node::rayTestClosest(const btVector2 &screenPosition,
@@ -1175,10 +1181,10 @@ namespace njli
                                njliBitCategories collisionGroup,
                                njliBitCategories collisionMask)const
     {
-        const Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
-        if(scene->getPhysicsWorld() && getCamera())
+        if(scene && scene->getPhysicsWorld() && getCamera())
         {
             btVector3 from = getCamera()->unProject(screenPosition);
             btVector3 near = from * getCamera()->getZNear();
@@ -1196,10 +1202,10 @@ namespace njli
                           njliBitCategories collisionGroup,
                           njliBitCategories collisionMask)const
     {
-        const Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
-        if(scene->getPhysicsWorld() && getCamera())
+        if(scene && scene->getPhysicsWorld() && getCamera())
         {
             btVector3 from = getCamera()->unProject(screenPosition);
             btVector3 near = from * getCamera()->getZNear();
@@ -1416,7 +1422,7 @@ namespace njli
     
     void Node::addChildNode(Node *object)
     {
-        Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         DEBUG_ASSERT_WRITE(this != object, "cannot decorate self with self");
@@ -1424,6 +1430,10 @@ namespace njli
         
         object->setParentNode(this);
         m_Children.push_back(object);
+        
+        Scene *scene = this->getCurrentScene();
+        if(NULL != scene)
+            scene->addActiveNode(object);
         
         scene->addActiveNode(object);
     }
@@ -1436,7 +1446,7 @@ namespace njli
     
     void Node::removeChildNode(Node *object)
     {
-        Scene *scene = njli::World::getInstance()->getScene();
+        const Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         DEBUG_ASSERT_WRITE(object, "object is null");
@@ -1447,6 +1457,10 @@ namespace njli
         {
             (*iter)->removeParentNode();
             m_Children.erase(iter);
+            
+            Scene *scene = this->getCurrentScene();
+            if(NULL != scene)
+                scene->removeActiveNode(object);
             
             scene->removeActiveNode(object);
         }
@@ -1536,9 +1550,25 @@ namespace njli
         m_GeometryIndex = -1;
     }
     
+    Scene *Node::getCurrentScene()
+    {
+        return m_CurrentScene;
+    }
+    
+    const Scene *Node::getCurrentScene()const
+    {
+        return m_CurrentScene;
+    }
+    
+    void Node::setCurrentScene(Scene *scene)
+    {
+        DEBUG_ASSERT(scene != NULL);
+        
+        m_CurrentScene = scene;
+    }
+    
     void Node::updateActions()
     {
-        
         AbstractActionable::update(World::getInstance()->getWorldClock()->timeStep());
     }
     

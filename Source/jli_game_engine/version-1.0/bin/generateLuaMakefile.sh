@@ -1,8 +1,8 @@
-#PROJECT=GameEngine
-_PROJECT=YappyBirds
+#PROJECT=/Users/jamesfolk/Dropbox/GameEngine
 
-_PROJECT_PATH=/Users/jamesfolk/NJLI/${_PROJECT}
+PROJECT=/Users/jamesfolk/Dropbox/YappyBirds
+GAMEENGINE=/Users/jamesfolk/Dropbox/GameEngine
 
-GAMEPLAYSCRIPTS_ABSOLUTEPATH=${_PROJECT_PATH}/COMMON/gameplay_scripts
+GAMEPLAYSCRIPTS_ABSOLUTEPATH=${PROJECT}/COMMON/gameplay_scripts
 
 ./_generateLuaMakefile.sh ${GAMEPLAYSCRIPTS_ABSOLUTEPATH} > ${GAMEPLAYSCRIPTS_ABSOLUTEPATH}/Makefile

@@ -521,9 +521,33 @@ public:
          */
     void setPivot(const btTransform& pivot);
 
-    void addSteeringBehaviorMachine(SteeringBehaviorMachine *sb);
+    /**
+     <#Description#>
+
+     @param sb <#sb description#>
+     */
+    void setSteeringBehaviorMachine(SteeringBehaviorMachine *sb);
+    
+    
+    /**
+     <#Description#>
+     */
     void removeSteeringBehaviorMachine();
+    
+    
+    /**
+     <#Description#>
+
+     @return <#return value description#>
+     */
     SteeringBehaviorMachine *getSteeringBehaviorMachine();
+    
+    
+    /**
+     <#Description#>
+
+     @return <#return value description#>
+     */
     const SteeringBehaviorMachine *getSteeringBehaviorMachine()const;
     
     /**
@@ -686,7 +710,7 @@ public:
          *  @section ex1 Lua example
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
-    void addLight(Light * body);
+    void setLight(Light * body);
 
     /**
          *  @author James Folk, 16-02-10 21:02:03
@@ -732,7 +756,7 @@ public:
          *  @section ex1 Lua example
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
-    void addCamera(Camera * body);
+    void setCamera(Camera * body);
 
     /**
          *  @author James Folk, 16-02-10 21:02:21
@@ -778,7 +802,7 @@ public:
          *  @section ex1 Lua example
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
-    void addGeometry(Geometry * body);
+    void setGeometry(Geometry * body);
 
     /**
          *  @author James Folk, 16-02-10 21:02:36
@@ -824,7 +848,7 @@ public:
          *  @section ex1 Lua example
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
-    void addPhysicsField(PhysicsField * body);
+    void setPhysicsField(PhysicsField * body);
 
     /**
          *  @author James Folk, 16-02-10 21:02:52
@@ -1549,6 +1573,10 @@ protected:
     void setGeometryIndex(s64 index);
     size_t getGeometryIndex() const;
     void clearGeometryIndex();
+    
+    Scene *getCurrentScene();
+    const Scene *getCurrentScene()const;
+    void setCurrentScene(Scene *scene);
 
 private:
     std::vector<PhysicsConstraint*> m_PhysicsConstraintList;
@@ -1583,6 +1611,8 @@ private:
     btTransform* m_Pivot;
     
     SteeringBehaviorMachine *m_SteeringBehaviorMachine;
+    
+    Scene *m_CurrentScene;
 };
 }
 

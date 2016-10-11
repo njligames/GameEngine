@@ -21,6 +21,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSDictionary<NSString*, id> *dict = [[NSBundle mainBundle] infoDictionary];
+    for (NSString *key in [dict allKeys]) {
+        NSLog(@"%@ - %@", key, [dict valueForKey:key]);
+    }
+    NSString* appID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+    
+    
     return YES;
 }
 

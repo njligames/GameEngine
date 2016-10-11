@@ -24,6 +24,12 @@
 /* Begin PBXBuildFile section */
 		C110ED231CCA78CF0096838F /* ColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C110ED201CCA72560096838F /* ColorUtil.h */; };
 		C118BA111CCDB82400383DFB /* ColorUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C118BA101CCDB82400383DFB /* ColorUtil.cpp */; };
+		C14188561DA4A36100E1AD04 /* lprefix.h in Headers */ = {isa = PBXBuildFile; fileRef = C14188541DA4A36100E1AD04 /* lprefix.h */; };
+		C14188571DA4A36100E1AD04 /* lutf8lib.c in Sources */ = {isa = PBXBuildFile; fileRef = C14188551DA4A36100E1AD04 /* lutf8lib.c */; };
+		C141885C1DA7E8C800E1AD04 /* lbit.c in Sources */ = {isa = PBXBuildFile; fileRef = C14188581DA7E8C800E1AD04 /* lbit.c */; };
+		C141885D1DA7E8C800E1AD04 /* lbullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C14188591DA7E8C800E1AD04 /* lbullet.cpp */; };
+		C141885E1DA7E8C800E1AD04 /* lnjli.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C141885A1DA7E8C800E1AD04 /* lnjli.cpp */; };
+		C141885F1DA7E8C800E1AD04 /* njli_swig_runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = C141885B1DA7E8C800E1AD04 /* njli_swig_runtime.h */; };
 		C18B7A9A1C9B88C1003628FE /* NJLIGameEngine_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C18B7A991C9B88C1003628FE /* NJLIGameEngine_iOS.h */; };
 		C18B7AA31C9B8920003628FE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B7AA21C9B8920003628FE /* GLKit.framework */; };
 		C18B7AA51C9B8924003628FE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B7AA41C9B8924003628FE /* OpenGLES.framework */; };
@@ -440,10 +446,6 @@
 		C18B81D31C9B9023003628FE /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D891C9B8C18003628FE /* json_reader.cpp */; };
 		C18B81D41C9B9023003628FE /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D8B1C9B8C18003628FE /* json_value.cpp */; };
 		C18B81D51C9B9023003628FE /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D8D1C9B8C18003628FE /* json_writer.cpp */; };
-		C18B81D61C9B902A003628FE /* lbit.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D9C1C9B8C58003628FE /* lbit.c */; };
-		C18B81D71C9B902A003628FE /* lbullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D9E1C9B8C58003628FE /* lbullet.cpp */; };
-		C18B81D81C9B902A003628FE /* lnjli.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7DB71C9B8C58003628FE /* lnjli.cpp */; };
-		C18B81D91C9B902A003628FE /* njli_swig_runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B7DDB1C9B8C58003628FE /* njli_swig_runtime.h */; };
 		C18B81DA1C9B9031003628FE /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D971C9B8C58003628FE /* lapi.c */; };
 		C18B81DB1C9B9031003628FE /* lapi.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B7D981C9B8C58003628FE /* lapi.h */; };
 		C18B81DC1C9B9031003628FE /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D991C9B8C58003628FE /* lauxlib.c */; };
@@ -886,8 +888,6 @@
 		C199ADF31CE0FE20007440D4 /* SteeringBehaviorMachinePrioritizedBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C199ADED1CE0FE20007440D4 /* SteeringBehaviorMachinePrioritizedBuilder.h */; };
 		C199ADF41CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C199ADEE1CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.cpp */; };
 		C199ADF51CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C199ADEF1CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.h */; };
-		C1CF3EB41D8B99DE00F3B67A /* luaparser.c in Sources */ = {isa = PBXBuildFile; fileRef = C1CF3EB21D8B99DE00F3B67A /* luaparser.c */; };
-		C1CF3EB51D8B99DE00F3B67A /* luaparser.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CF3EB31D8B99DE00F3B67A /* luaparser.h */; };
 		C1D5004E1CDBCF99003EF06D /* SteeringBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D5004C1CDBCF99003EF06D /* SteeringBehavior.cpp */; };
 		C1D500521CDBD00D003EF06D /* SteeringBehaviorBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D500501CDBD00D003EF06D /* SteeringBehaviorBuilder.cpp */; };
 		C1D500531CDBD00D003EF06D /* SteeringBehaviorBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D500511CDBD00D003EF06D /* SteeringBehaviorBuilder.h */; };
@@ -983,6 +983,12 @@
 /* Begin PBXFileReference section */
 		C110ED201CCA72560096838F /* ColorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
 		C118BA101CCDB82400383DFB /* ColorUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColorUtil.cpp; sourceTree = "<group>"; };
+		C14188541DA4A36100E1AD04 /* lprefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lprefix.h; sourceTree = "<group>"; };
+		C14188551DA4A36100E1AD04 /* lutf8lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lutf8lib.c; sourceTree = "<group>"; };
+		C14188581DA7E8C800E1AD04 /* lbit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lbit.c; sourceTree = "<group>"; };
+		C14188591DA7E8C800E1AD04 /* lbullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lbullet.cpp; path = ../../lbullet.cpp; sourceTree = "<group>"; };
+		C141885A1DA7E8C800E1AD04 /* lnjli.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lnjli.cpp; path = ../../lnjli.cpp; sourceTree = "<group>"; };
+		C141885B1DA7E8C800E1AD04 /* njli_swig_runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = njli_swig_runtime.h; path = ../../njli_swig_runtime.h; sourceTree = "<group>"; };
 		C18B7A961C9B88C1003628FE /* libNJLIGameEngine_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNJLIGameEngine_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18B7A991C9B88C1003628FE /* NJLIGameEngine_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLIGameEngine_iOS.h; sourceTree = "<group>"; };
 		C18B7AA21C9B8920003628FE /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -1400,9 +1406,7 @@
 		C18B7D991C9B8C58003628FE /* lauxlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
 		C18B7D9A1C9B8C58003628FE /* lauxlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
 		C18B7D9B1C9B8C58003628FE /* lbaselib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lbaselib.c; sourceTree = "<group>"; };
-		C18B7D9C1C9B8C58003628FE /* lbit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lbit.c; sourceTree = "<group>"; };
 		C18B7D9D1C9B8C58003628FE /* lbitlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lbitlib.c; sourceTree = "<group>"; };
-		C18B7D9E1C9B8C58003628FE /* lbullet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lbullet.cpp; sourceTree = "<group>"; };
 		C18B7D9F1C9B8C58003628FE /* lcode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcode.c; sourceTree = "<group>"; };
 		C18B7DA01C9B8C58003628FE /* lcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcode.h; sourceTree = "<group>"; };
 		C18B7DA11C9B8C58003628FE /* lcorolib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcorolib.c; sourceTree = "<group>"; };
@@ -1426,7 +1430,6 @@
 		C18B7DB41C9B8C58003628FE /* lmathlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lmathlib.c; sourceTree = "<group>"; };
 		C18B7DB51C9B8C58003628FE /* lmem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
 		C18B7DB61C9B8C58003628FE /* lmem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lmem.h; sourceTree = "<group>"; };
-		C18B7DB71C9B8C58003628FE /* lnjli.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lnjli.cpp; sourceTree = "<group>"; };
 		C18B7DB81C9B8C58003628FE /* loadlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loadlib.c; sourceTree = "<group>"; };
 		C18B7DB91C9B8C58003628FE /* lobject.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lobject.c; sourceTree = "<group>"; };
 		C18B7DBA1C9B8C58003628FE /* lobject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lobject.h; sourceTree = "<group>"; };
@@ -1455,7 +1458,6 @@
 		C18B7DD71C9B8C58003628FE /* lvm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lvm.h; sourceTree = "<group>"; };
 		C18B7DD81C9B8C58003628FE /* lzio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
 		C18B7DD91C9B8C58003628FE /* lzio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lzio.h; sourceTree = "<group>"; };
-		C18B7DDB1C9B8C58003628FE /* njli_swig_runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = njli_swig_runtime.h; sourceTree = "<group>"; };
 		C18B7DDF1C9B8CBD003628FE /* fontstash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fontstash.h; sourceTree = "<group>"; };
 		C18B7DE01C9B8CBD003628FE /* nanovg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = nanovg.c; sourceTree = "<group>"; };
 		C18B7DE11C9B8CBD003628FE /* nanovg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nanovg.h; sourceTree = "<group>"; };
@@ -1849,8 +1851,6 @@
 		C199ADED1CE0FE20007440D4 /* SteeringBehaviorMachinePrioritizedBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringBehaviorMachinePrioritizedBuilder.h; sourceTree = "<group>"; };
 		C199ADEE1CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringBehaviorMachineWeightedBuilder.cpp; sourceTree = "<group>"; };
 		C199ADEF1CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringBehaviorMachineWeightedBuilder.h; sourceTree = "<group>"; };
-		C1CF3EB21D8B99DE00F3B67A /* luaparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = luaparser.c; path = ../../luaparser.c; sourceTree = "<group>"; };
-		C1CF3EB31D8B99DE00F3B67A /* luaparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = luaparser.h; path = ../../luaparser.h; sourceTree = "<group>"; };
 		C1D5004C1CDBCF99003EF06D /* SteeringBehavior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringBehavior.cpp; sourceTree = "<group>"; };
 		C1D5004D1CDBCF99003EF06D /* SteeringBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringBehavior.h; sourceTree = "<group>"; };
 		C1D500501CDBD00D003EF06D /* SteeringBehaviorBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringBehaviorBuilder.cpp; sourceTree = "<group>"; };
@@ -2751,7 +2751,8 @@
 		C18B7D961C9B8C58003628FE /* lua */ = {
 			isa = PBXGroup;
 			children = (
-				C1CF3EB11D8B99C500F3B67A /* syntaxer */,
+				C14188541DA4A36100E1AD04 /* lprefix.h */,
+				C14188551DA4A36100E1AD04 /* lutf8lib.c */,
 				C18B7DDC1C9B8C7E003628FE /* libs */,
 				C18B7D971C9B8C58003628FE /* lapi.c */,
 				C18B7D981C9B8C58003628FE /* lapi.h */,
@@ -2812,16 +2813,16 @@
 				C18B7DD91C9B8C58003628FE /* lzio.h */,
 			);
 			name = lua;
-			path = "../../../Source/lua/lua-5.2.4/src";
+			path = "../../../Source/lua/lua-5.3.3/src";
 			sourceTree = "<group>";
 		};
 		C18B7DDC1C9B8C7E003628FE /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				C18B7D9C1C9B8C58003628FE /* lbit.c */,
-				C18B7D9E1C9B8C58003628FE /* lbullet.cpp */,
-				C18B7DB71C9B8C58003628FE /* lnjli.cpp */,
-				C18B7DDB1C9B8C58003628FE /* njli_swig_runtime.h */,
+				C14188581DA7E8C800E1AD04 /* lbit.c */,
+				C14188591DA7E8C800E1AD04 /* lbullet.cpp */,
+				C141885A1DA7E8C800E1AD04 /* lnjli.cpp */,
+				C141885B1DA7E8C800E1AD04 /* njli_swig_runtime.h */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -3284,15 +3285,6 @@
 			path = ../../../Source/zlib/zlib_SIO2;
 			sourceTree = "<group>";
 		};
-		C1CF3EB11D8B99C500F3B67A /* syntaxer */ = {
-			isa = PBXGroup;
-			children = (
-				C1CF3EB21D8B99DE00F3B67A /* luaparser.c */,
-				C1CF3EB31D8B99DE00F3B67A /* luaparser.h */,
-			);
-			name = syntaxer;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -3358,6 +3350,7 @@
 				C18B821A1C9B903C003628FE /* stb_image.h in Headers */,
 				C18B81971C9B8FB6003628FE /* btQuaternion.h in Headers */,
 				C18B84531C9B90BF003628FE /* inffixed.h in Headers */,
+				C14188561DA4A36100E1AD04 /* lprefix.h in Headers */,
 				C18B834E1C9B908A003628FE /* AbstractActionable.h in Headers */,
 				C18B81A91C9B8FC8003628FE /* MiniCLTaskScheduler.h in Headers */,
 				C18B817C1C9B8FA6003628FE /* btSoftRigidDynamicsWorld.h in Headers */,
@@ -3401,7 +3394,6 @@
 				C18B818C1C9B8FB6003628FE /* btHashMap.h in Headers */,
 				C18B813F1C9B8F7F003628FE /* btSolverConstraint.h in Headers */,
 				C18B80691C9B8F53003628FE /* btCollisionObjectWrapper.h in Headers */,
-				C1CF3EB51D8B99DE00F3B67A /* luaparser.h in Headers */,
 				C18B841E1C9B908A003628FE /* PhysicsWorld.h in Headers */,
 				C18B808B1C9B8F53003628FE /* btSphereTriangleCollisionAlgorithm.h in Headers */,
 				C18B836C1C9B908A003628FE /* Clock.h in Headers */,
@@ -3598,7 +3590,6 @@
 				C18B80681C9B8F53003628FE /* btCollisionObject.h in Headers */,
 				C18B812E1C9B8F7F003628FE /* btGeneric6DofConstraint.h in Headers */,
 				C18B80871C9B8F53003628FE /* btSphereBoxCollisionAlgorithm.h in Headers */,
-				C18B81D91C9B902A003628FE /* njli_swig_runtime.h in Headers */,
 				C18B83B21C9B908A003628FE /* PhysicsBodyGhostBuilder.h in Headers */,
 				C18B80E01C9B8F69003628FE /* btContactProcessing.h in Headers */,
 				C18B80CD1C9B8F5D003628FE /* btTriangleBuffer.h in Headers */,
@@ -3743,6 +3734,7 @@
 				C18B84331C9B90A2003628FE /* Game.h in Headers */,
 				C18B81F91C9B9031003628FE /* lobject.h in Headers */,
 				C18B84391C9B90A2003628FE /* Util.h in Headers */,
+				C141885F1DA7E8C800E1AD04 /* njli_swig_runtime.h in Headers */,
 				C18B84101C9B908A003628FE /* PhysicsShapeHeightfieldTerrainBuilder.h in Headers */,
 				C18B83781C9B908A003628FE /* DropdownHUDBuilder.h in Headers */,
 				C18B813B1C9B8F7F003628FE /* btSliderConstraint.h in Headers */,
@@ -3923,6 +3915,7 @@
 				C18B845A1C9B90BF003628FE /* trees.c in Sources */,
 				C199ADE41CE0F392007440D4 /* SteeringBehaviorMachineDithered.cpp in Sources */,
 				C18B82691C9B9070003628FE /* Cube.cpp in Sources */,
+				C141885E1DA7E8C800E1AD04 /* lnjli.cpp in Sources */,
 				C18B834F1C9B908A003628FE /* AbstractBuilder.cpp in Sources */,
 				C18B80E61C9B8F69003628FE /* btGImpactCollisionAlgorithm.cpp in Sources */,
 				C18B80E41C9B8F69003628FE /* btGImpactBvh.cpp in Sources */,
@@ -4023,7 +4016,6 @@
 				C18B84421C9B90B6003628FE /* tinystr.cpp in Sources */,
 				C18B80941C9B8F5D003628FE /* btBvhTriangleMeshShape.cpp in Sources */,
 				C18B807A1C9B8F53003628FE /* btEmptyCollisionAlgorithm.cpp in Sources */,
-				C1CF3EB41D8B99DE00F3B67A /* luaparser.c in Sources */,
 				C18B83921C9B908A003628FE /* Light.cpp in Sources */,
 				C18B826E1C9B9070003628FE /* ShaderProgram.cpp in Sources */,
 				C18B84281C9B9098003628FE /* Localization.mm in Sources */,
@@ -4062,7 +4054,6 @@
 				C18B80901C9B8F5D003628FE /* btBox2dShape.cpp in Sources */,
 				C18B81F01C9B9031003628FE /* liolib.c in Sources */,
 				C18B815B1C9B8F8D003628FE /* btMultiBodyPoint2Point.cpp in Sources */,
-				C18B81D71C9B902A003628FE /* lbullet.cpp in Sources */,
 				C18B80EB1C9B8F69003628FE /* btGImpactShape.cpp in Sources */,
 				C18B83661C9B908A003628FE /* CameraBuilder.cpp in Sources */,
 				C18B81381C9B8F7F003628FE /* btSequentialImpulseConstraintSolver.cpp in Sources */,
@@ -4073,7 +4064,6 @@
 				C18B81DC1C9B9031003628FE /* lauxlib.c in Sources */,
 				C18B83E91C9B908A003628FE /* PhysicsRayContactBuilder.cpp in Sources */,
 				C18B84611C9B90BF003628FE /* zutil.c in Sources */,
-				C18B81D61C9B902A003628FE /* lbit.c in Sources */,
 				C18B810F1C9B8F71003628FE /* btGjkPairDetector.cpp in Sources */,
 				C18B82A71C9B907A003628FE /* WorldFactory.cpp in Sources */,
 				C18B82B61C9B907A003628FE /* WorldStateMachine.cpp in Sources */,
@@ -4225,6 +4215,7 @@
 				C18B845D1C9B90BF003628FE /* unzip.c in Sources */,
 				C18B84111C9B908A003628FE /* PhysicsShapeMultiSphere.cpp in Sources */,
 				C18B84541C9B90BF003628FE /* inflate.c in Sources */,
+				C141885D1DA7E8C800E1AD04 /* lbullet.cpp in Sources */,
 				C18B83871C9B908A003628FE /* JsonJLI.cpp in Sources */,
 				C18B80451C9B8F4B003628FE /* btAxisSweep3.cpp in Sources */,
 				C18B81191C9B8F71003628FE /* btRaycastCallback.cpp in Sources */,
@@ -4254,6 +4245,7 @@
 				C18B83941C9B908A003628FE /* LightBuilder.cpp in Sources */,
 				C18B80991C9B8F5D003628FE /* btCollisionShape.cpp in Sources */,
 				C18B81421C9B8F7F003628FE /* btUniversalConstraint.cpp in Sources */,
+				C14188571DA4A36100E1AD04 /* lutf8lib.c in Sources */,
 				C18B83901C9B908A003628FE /* LevelOfDetailBuilder.cpp in Sources */,
 				C18B83AF1C9B908A003628FE /* PhysicsBodyGhost.cpp in Sources */,
 				C18B81791C9B8FA6003628FE /* btSoftRigidCollisionAlgorithm.cpp in Sources */,
@@ -4270,6 +4262,7 @@
 				C18B82BA1C9B907A003628FE /* Xml.cpp in Sources */,
 				C18B81FD1C9B9031003628FE /* lparser.c in Sources */,
 				C18B82001C9B9031003628FE /* lstate.c in Sources */,
+				C141885C1DA7E8C800E1AD04 /* lbit.c in Sources */,
 				C18B80C81C9B8F5D003628FE /* btStridingMeshInterface.cpp in Sources */,
 				C1D500AC1CDC48D8003EF06D /* SteeringBehaviorHide.cpp in Sources */,
 				C18B80571C9B8F4B003628FE /* btQuantizedBvh.cpp in Sources */,
@@ -4292,7 +4285,6 @@
 				C18B829E1C9B907A003628FE /* Timer.cpp in Sources */,
 				C18B83DB1C9B908A003628FE /* PhysicsConstraintSlider.cpp in Sources */,
 				C18B82731C9B9070003628FE /* WorldHUD.cpp in Sources */,
-				C18B81D81C9B902A003628FE /* lnjli.cpp in Sources */,
 				C18B81E31C9B9031003628FE /* lctype.c in Sources */,
 				C18B84151C9B908A003628FE /* PhysicsShapeSphere.cpp in Sources */,
 				C18B826F1C9B9070003628FE /* SliderHUD.cpp in Sources */,

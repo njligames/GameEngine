@@ -1,10 +1,11 @@
-#PROJECT=GameEngine
-PROJECT=YappyBirds
+#PROJECT=/Users/jamesfolk/Dropbox/GameEngine
+PROJECT=/Users/jamesfolk/Dropbox/YappyBirds
+GAMEENGINE=/Users/jamesfolk/Dropbox/GameEngine
 
-SOURCE=/Users/jamesfolk/NJLI/${PROJECT}/COMMON
+SOURCE=${PROJECT}/COMMON
 WORKING_DIRECTORY=.
 
-pushd /Users/jamesfolk/NJLI/GameEngine/Source/jli_game_engine/version-1.0/bin
+pushd ${GAMEENGINE}/Source/jli_game_engine/version-1.0/bin
 ./_generateMakefile.sh ${WORKING_DIRECTORY} > ${SOURCE}/Makefile
 popd
 

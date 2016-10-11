@@ -360,7 +360,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState\n");
         }
         
         if(getScene())
@@ -381,7 +381,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState\n");
         }
         
         if(getScene())
@@ -402,7 +402,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState\n");
         }
         
         if(getScene())
@@ -423,7 +423,7 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState");
+            DEBUG_LOG_WRITE_D(TAG, "There is no WorldState\n");
         }
         
         if(getScene())

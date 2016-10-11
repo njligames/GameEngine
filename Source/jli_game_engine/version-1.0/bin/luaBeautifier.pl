@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use constant INDENT => '  ';
+use constant INDENT => '    ';
 my($currIndent, $nextIndent, $prevLength) = (0, 0, 0);
 
 while (<>) {
