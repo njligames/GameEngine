@@ -11,6 +11,7 @@
 %include <lua/typemaps.i>
 %include <lua/carrays.i>
 %include <lua/std_string.i>
+%include <lua/lua.swg>
 
 %include "../../NJLIArray.i"
 %include "../../NJLICast.i"

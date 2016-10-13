@@ -506,7 +506,7 @@ namespace njli
     {
         DEBUG_ASSERT(NULL != emitter);
         
-        const Scene *scene = this->getCurrentScene();
+        Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         std::vector<ParticleEmitter*>::const_iterator iter = std::find(m_ParticleEmitterList.begin(), m_ParticleEmitterList.end(), emitter);
@@ -531,7 +531,7 @@ namespace njli
     {
         DEBUG_ASSERT(NULL != emitter);
         
-        const Scene *scene = this->getCurrentScene();
+        Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         std::vector<ParticleEmitter*>::iterator iter = std::find(m_ParticleEmitterList.begin(), m_ParticleEmitterList.end(), emitter);
@@ -713,7 +713,7 @@ namespace njli
     {
         DEBUG_ASSERT(camera != NULL);
         
-        const Scene *scene = this->getCurrentScene();
+        Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         removeCamera();
@@ -728,7 +728,7 @@ namespace njli
     {
         if(getCamera())
         {
-            const Scene *scene = this->getCurrentScene();
+            Scene *scene = this->getCurrentScene();
             DEBUG_ASSERT(NULL != scene);
             
             Camera *camera = getCamera();
@@ -759,7 +759,7 @@ namespace njli
     {
         DEBUG_ASSERT(geometry != NULL);
         
-        const Scene *scene = this->getCurrentScene();
+        Scene *scene = this->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         removeGeometry();
@@ -780,7 +780,7 @@ namespace njli
         Geometry *geometry = getGeometry();
         if(geometry)
         {
-            const Scene *scene = this->getCurrentScene();
+            Scene *scene = this->getCurrentScene();
             DEBUG_ASSERT(NULL != scene);
             
             geometry->removeReference(this);
@@ -1422,9 +1422,6 @@ namespace njli
     
     void Node::addChildNode(Node *object)
     {
-        const Scene *scene = this->getCurrentScene();
-        DEBUG_ASSERT(NULL != scene);
-        
         DEBUG_ASSERT_WRITE(this != object, "cannot decorate self with self");
         DEBUG_ASSERT_WRITE(!hasChildNode(object), "already has the decorator");
         
@@ -1434,8 +1431,6 @@ namespace njli
         Scene *scene = this->getCurrentScene();
         if(NULL != scene)
             scene->addActiveNode(object);
-        
-        scene->addActiveNode(object);
     }
     
     void Node::removeChildNode(const u32 index)

@@ -14,12 +14,31 @@
 //Extend
 %extend njli::Node
 {
-    const char *__concat__(const char *s) {
-        static std::string temp;
-        std::string t1(*self);
-        std::string t2(s);
+    /*
+     __unm - Unary minus. When writing "-myTable", if the metatable has a __unm key pointing to a function, that function is invoked (passing the table), and the return value used as the value of "-myTable".
+     __add - Addition. When writing "myTable + object" or "object + myTable", if myTable's metatable has an __add key pointing to a function, that function is invoked (passing the left and right operators in order) and the return value used.
+     ''If both operands are tables, the left table is checked before the right table for the presence of an __add metaevent.
+     __sub - Subtraction. Similar to addition, using the '-' operator.
+     __mul - Multiplication. Similar to addition, using the '*' operator.
+     __div - Division. Similar to addition, using the '/' operator.
+     __mod - Modulo. Similar to addition, using the '%' operator.
+     __pow - Involution. Similar to addition, using the '^' operator.
+     __concat - Concatenation. Similar to addition, using the '..' operator.
+     */
+    
+    void __unm__()
+    {
+        return;
+    }
+    
+    const char *__concat__(const Node *p)
+    {
+        char buffer[2048];
         
-        temp = (t1 + t2);
+        std::string t1(*self);
+        std::string t2(*p);
+        
+        std::string temp = (t1 + t2);
         return temp.c_str();
     }
     
