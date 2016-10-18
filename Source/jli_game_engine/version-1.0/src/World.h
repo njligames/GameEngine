@@ -333,7 +333,7 @@ public:
          *
          *  @param scene <#scene description#>
          */
-    void addScene(Scene* scene);
+    void setScene(Scene* scene);
     /**
          *  <#Description#>
          */

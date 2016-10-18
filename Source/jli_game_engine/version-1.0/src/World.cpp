@@ -627,18 +627,25 @@ namespace njli
 //        return m_Scene;
 //    }
     
-    void World::addScene(Scene *scene)
+    void World::setScene(Scene *scene)
     {
         DEBUG_ASSERT(scene != NULL);
         
         Scene *currentScene = getScene();
-        
-        if(currentScene)
-            removeChild(currentScene);
-        
-        m_Scene = scene;
-        
-        addChild(m_Scene);
+        if(scene != currentScene)
+        {
+            if(currentScene)
+            {
+                removeChild(currentScene);
+                
+                SceneStateMachine *sm = currentScene->getStateMachine();
+                sm->clear();
+            }
+            
+            m_Scene = scene;
+            
+            addChild(m_Scene);
+        }
     }
     
     void World::removeScene()
