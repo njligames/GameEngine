@@ -56,11 +56,19 @@ o:	$(ALL_O)
 a:	$(ALL_A)
 
 $(LUA_A): $(BASE_O)
+<<<<<<< HEAD
 	$(AR) $@ $(BASE_O)
 	$(RANLIB) $@
 
 $(LUA_T): $(LUA_O) $(LUA_A)
 	$(CC) -o $@ $(LDFLAGS) $(LUA_O) $(LUA_A) $(LIBS)
+=======
+	$(AR) $@ $(BASE_O) 
+	$(RANLIB) $@
+
+$(LUA_T): $(LUA_O) $(LUA_A)
+	$(CC) -o $@ $(LDFLAGS) $(LUA_O) $(LUA_A) $(LIBS) 
+>>>>>>> 1de146dbb70aad09dc1427a5dbf1c1f2931199ca
 
 $(LUAC_T): $(LUAC_O) $(LUA_A)
 	$(CC) -o $@ $(LDFLAGS) $(LUAC_O) $(LUA_A) $(LIBS)
@@ -104,13 +112,22 @@ c89:
 freebsd:
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -lreadline"
 
+<<<<<<< HEAD
 generic: $(ALL)
+=======
+generic: 
+	$(MAKE) $(ALL) MYCFLAGS=
+>>>>>>> 1de146dbb70aad09dc1427a5dbf1c1f2931199ca
 
 linux:
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -ldl -lreadline"
 
 macosx:
+<<<<<<< HEAD
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_MACOSX" SYSLIBS="-lreadline" CC=cc
+=======
+	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_MACOSX -DLUA_USE_POSIX -DLUA_USE_DLOPEN" SYSLIBS="-lreadline" CC=cc
+>>>>>>> 1de146dbb70aad09dc1427a5dbf1c1f2931199ca
 
 mingw:
 	$(MAKE) "LUA_A=lua53.dll" "LUA_T=lua.exe" \

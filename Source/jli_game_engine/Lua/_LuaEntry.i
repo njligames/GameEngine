@@ -38,7 +38,10 @@
 %import <lua/stl.i>
 %import <lua/typemaps.i>
 %import <lua/wchar.i>
+<<<<<<< HEAD
 %import <lua/lua.swg>
+=======
+>>>>>>> 1de146dbb70aad09dc1427a5dbf1c1f2931199ca
 
 
 %include "../../NJLIArray.i"
