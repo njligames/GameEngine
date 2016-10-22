@@ -253,7 +253,7 @@ namespace njli
 //        return NULL;
 //    }
     
-    void PhysicsBody::addPhysicsShape(PhysicsShape *shape)
+    void PhysicsBody::setPhysicsShape(PhysicsShape *shape)
     {
         DEBUG_ASSERT(shape != NULL);
         
@@ -371,7 +371,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     
@@ -395,7 +395,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     
@@ -410,7 +410,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     
@@ -435,7 +435,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     void PhysicsBody::setKinematicPhysics()
@@ -453,7 +453,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     void PhysicsBody::setDynamicPhysics()
@@ -471,7 +471,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     void PhysicsBody::enableContactResponse(bool enable)
@@ -536,7 +536,7 @@ namespace njli
     
     
     
-    s32 PhysicsBody::addPhysicsConstraint(PhysicsConstraint *constraint)
+    s32 PhysicsBody::setPhysicsConstraint(PhysicsConstraint *constraint)
     {
         DEBUG_ASSERT(NULL != constraint);
         

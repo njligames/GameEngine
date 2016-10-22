@@ -607,7 +607,7 @@ namespace njli
         return NULL;
     }
     
-    void Node::addPhysicsBody(PhysicsBody *body)
+    void Node::setPhysicsBody(PhysicsBody *body)
     {
         DEBUG_ASSERT(body != NULL);
         
@@ -617,7 +617,7 @@ namespace njli
         
         addChild(m_PhysicsBody);
         
-        getPhysicsBody()->addPhysicsBody(getTransform());
+        getPhysicsBody()->setPhysicsBody(getTransform());
         
         m_ApplyPhysicsShape = true;
     }
@@ -1527,7 +1527,7 @@ namespace njli
         PhysicsBody *physicsBody = getPhysicsBody();
         
         if(physicsBody)
-            physicsBody->addPhysicsBody(transform);
+            physicsBody->setPhysicsBody(transform);
     }
     
     void Node::setGeometryIndex(s64 index)

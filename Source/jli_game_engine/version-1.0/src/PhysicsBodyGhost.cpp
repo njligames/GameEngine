@@ -248,7 +248,7 @@ namespace njli
         //TODO: Implement....
     }
     
-    bool PhysicsBodyGhost::addPhysicsBody(const btTransform &transform)
+    bool PhysicsBodyGhost::setPhysicsBody(const btTransform &transform)
     {
         //TODO: Implement....
         return false;

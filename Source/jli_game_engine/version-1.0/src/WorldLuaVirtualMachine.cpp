@@ -1813,65 +1813,69 @@ namespace njli
     
     
     
-    static std::string GetVariableValue(lua_State *L, const int& index)
+//    static std::string GetVariableValue(lua_State *L, const int& index)
+//    {
+//        char buffer[256];
+//        std::string value;
+//        
+//        if (lua_isnumber(L,index))
+//        {
+//            sprintf(buffer, "%f", lua_tonumber(L,index));
+//            return buffer;
+//        }
+//        else
+//        {
+//            if (lua_isstring(L,index))
+//            {
+//                return (lua_tostring(L,index));
+//            }
+//            else
+//            {
+//                if (lua_istable(L,index))
+//                {
+//                    return "{}";
+//                    //This can cause an infinite loop if you have tables that reference each other
+//                    /*value="{";
+//                     int size = GetStackSize();
+//                     for (lua_pushnil(L); lua_next(L, -2); lua_pop(L, 1))
+//                     {
+//                     std::string var = GetVariableValue(-2);
+//                     Print(var);
+//                     value += ""+var;
+//                     value += "="+GetVariableValue(-1);
+//                     value += ", ";
+//                     }
+//                     SetStackSize(size);
+//                     value += "}";
+//                     return value;*/
+//                }
+//                else
+//                {
+//                    if lua_isnil(L,index)
+//                    {
+//                        return ("nil");
+//                    }
+//                }
+//            }
+//        }
+//        return "";
+//    }
+//    
+//    static int getCallStackSize(lua_State *L)
+//    {
+//        int level = 0;
+//        lua_Debug ar;
+//        
+//        while (true)
+//        {
+//            if (lua_getstack(L, level, &ar) == 0)
+//                return level;
+//            level += 1;
+//        }
+//    }
+    lua_State *WorldLuaVirtualMachine::getState()const
     {
-        char buffer[256];
-        std::string value;
-        
-        if (lua_isnumber(L,index))
-        {
-            sprintf(buffer, "%f", lua_tonumber(L,index));
-            return buffer;
-        }
-        else
-        {
-            if (lua_isstring(L,index))
-            {
-                return (lua_tostring(L,index));
-            }
-            else
-            {
-                if (lua_istable(L,index))
-                {
-                    return "{}";
-                    //This can cause an infinite loop if you have tables that reference each other
-                    /*value="{";
-                     int size = GetStackSize();
-                     for (lua_pushnil(L); lua_next(L, -2); lua_pop(L, 1))
-                     {
-                     std::string var = GetVariableValue(-2);
-                     Print(var);
-                     value += ""+var;
-                     value += "="+GetVariableValue(-1);
-                     value += ", ";
-                     }
-                     SetStackSize(size);
-                     value += "}";
-                     return value;*/
-                }
-                else
-                {
-                    if lua_isnil(L,index)
-                    {
-                        return ("nil");
-                    }
-                }
-            }
-        }
-        return "";
-    }
-    
-    static int getCallStackSize(lua_State *L)
-    {
-        int level = 0;
-        lua_Debug ar;
-        
-        while (true)
-        {
-            if (lua_getstack(L, level, &ar) == 0)
-                return level;
-            level += 1;
-        }
+        return m_lua_State;
     }
     void WorldLuaVirtualMachine::getError(const char *code, int error)
     {

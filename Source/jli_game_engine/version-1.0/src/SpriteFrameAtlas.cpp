@@ -406,46 +406,68 @@ namespace njli
                 else if(strcmp(key.c_str(), "scale") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "shapepadding") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "borderpadding") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "commondivisorx") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "commondivisory") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "extrude") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "basefactor") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "maxtexturesizewidth") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "maxtexturesizeheight") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "fixedtexturesizewidth") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 else if(strcmp(key.c_str(), "fixedtexturesizeheight") == 0)
                 {
                     //TODO: implement...
+                    double number = lua_tonumber(L, index);
+//                    DEBUG_LOG_W(TAG, "TODO - %s => %f\n", key.c_str(), number);
                 }
                 
                 else
@@ -472,9 +494,6 @@ namespace njli
                         double number = lua_tonumber(L, index);
                         rect.setHeight(number);
                     }
-                    
-                    
-                    
                     else if(strcmp(key.c_str(), "widthfile") == 0)
                     {
                         double number = lua_tonumber(L, index);
@@ -485,9 +504,6 @@ namespace njli
                         double number = lua_tonumber(L, index);
                         rect.setHeightFile(number);
                     }
-                    
-                    
-                    
                     else if(strcmp(key.c_str(), "pivotx") == 0)
                     {
                         double number = lua_tonumber(L, index);
@@ -503,9 +519,6 @@ namespace njli
                         const char *value = lua_tostring(L, index);
                         rect.setTrimmedName(value);
                     }
-                    
-                    
-                    
                     else if(strcmp(key.c_str(), "sourcex") == 0)
                     {
                         double number = lua_tonumber(L, index);
@@ -530,9 +543,6 @@ namespace njli
                         rect.setSourceHeight(number);
 //                        rect.setTrimmedName(value);
                     }
-                    
-                    
-                    
                     else
                     {
                         DEBUG_LOG_PRINT_E(TAG, "invalid key: %s\n", key.c_str());

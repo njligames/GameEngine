@@ -151,7 +151,7 @@ public:
          *
          *  @param shape <#shape description#>
          */
-    virtual void addPhysicsShape(PhysicsShape * shape);
+    virtual void setPhysicsShape(PhysicsShape * shape);
     /**
          *  <#Description#>
          */
@@ -340,7 +340,7 @@ protected:
     virtual btCollisionObject* getCollisionObject() = 0;
     virtual void setCollisionObject(const btCollisionObject& obj, PhysicsShape* shape) = 0;
 
-    virtual bool addPhysicsBody(const btTransform& transform = btTransform::getIdentity()) = 0;
+    virtual bool setPhysicsBody(const btTransform& transform = btTransform::getIdentity()) = 0;
     virtual bool removePhysicsBody() = 0;
     //        virtual void enablePropertyChange(bool enable = true);
     //        virtual bool isPropertyChanged()const;
@@ -352,7 +352,7 @@ protected:
          *
          *  @return <#return value description#>
          */
-    s32 addPhysicsConstraint(PhysicsConstraint * constraint);
+    s32 setPhysicsConstraint(PhysicsConstraint * constraint);
 
     /**
          *  <#Description#>

@@ -38,10 +38,7 @@
 %import <lua/stl.i>
 %import <lua/typemaps.i>
 %import <lua/wchar.i>
-<<<<<<< HEAD
 %import <lua/lua.swg>
-=======
->>>>>>> 1de146dbb70aad09dc1427a5dbf1c1f2931199ca
 
 
 %include "../../NJLIArray.i"
@@ -747,7 +744,7 @@
 
 //MARK: %native wrapper doesn't work in an external file.
 //%native(my_func) int native_function(lua_State*L);  // registers native_function() with SWIG
-%native(buildType) int build_type(lua_State*L);  // registers native_function() with SWIG
+%native(build) int build(lua_State*L);  // registers native_function() with SWIG
 //...
 %{
 //    int native_function(lua_State*L) // my native code
@@ -755,7 +752,7 @@
 //        //...
 //    }
     
-    int build_type(lua_State *L)
+    int build(lua_State *L)
     {
         int SWIG_arg = 0;
         

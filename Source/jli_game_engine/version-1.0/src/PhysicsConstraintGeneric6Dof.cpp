@@ -231,9 +231,9 @@ namespace njli
         }
         
         if(rigidBodyA)
-            getNodeA()->getPhysicsBody()->addPhysicsConstraint(this);
+            getNodeA()->getPhysicsBody()->setPhysicsConstraint(this);
         if(rigidBodyB)
-            getNodeB()->getPhysicsBody()->addPhysicsConstraint(this);
+            getNodeB()->getPhysicsBody()->setPhysicsConstraint(this);
         
         Scene *scene = njli::World::getInstance()->getScene();
         scene->getPhysicsWorld()->addConstraint(this);

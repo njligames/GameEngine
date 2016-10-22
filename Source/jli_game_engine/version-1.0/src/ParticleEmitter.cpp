@@ -666,7 +666,7 @@ namespace njli
             node->setRenderCategory(getParent());
             
             if (body)
-                node->addPhysicsBody(body);
+                node->setPhysicsBody(body);
         }
         
         if(m_ParticleArray)

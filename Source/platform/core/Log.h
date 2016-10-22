@@ -227,6 +227,17 @@ _debug_log_w(fmt, __VA_ARGS__); \
 extern "C" {
 #endif
 
+#define DEBUG_PRINT(text) DEBUG_LOG_D("DEFAULT", "%s", text)
+    
+#define DEBUG_PRINTF(fmt, ...) DEBUG_LOG_D("DEFAULT", fmt, __VA_ARGS__)
+    
+    
+#define DEBUG_VERBOSE(tag, text) DEBUG_LOG_V(tag, "%s", text)
+#define DEBUG_DEBUG(tag, text) DEBUG_LOG_D(tag, "%s", text)
+#define DEBUG_WARN(tag, text) DEBUG_LOG_W(tag, "%s", text)
+#define DEBUG_ERROR(tag, text) DEBUG_LOG_E(tag, "%s", text)
+    
+    
 #define DEBUG_LOG_WRITE_V(tag, text) DEBUG_LOG_PRINT_V(tag, "%s", text)
 #define DEBUG_LOG_WRITE_D(tag, text) DEBUG_LOG_PRINT_D(tag, "%s", text)
 #define DEBUG_LOG_WRITE_W(tag, text) DEBUG_LOG_PRINT_W(tag, "%s", text)

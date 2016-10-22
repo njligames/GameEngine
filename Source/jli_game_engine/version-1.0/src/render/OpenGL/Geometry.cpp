@@ -417,7 +417,7 @@ namespace njli
         return NULL;
     }
     
-    void Geometry::addShaderProgram(ShaderProgram *shader)
+    void Geometry::setShaderProgram(ShaderProgram *shader)
     {
         DEBUG_ASSERT(shader != NULL);
         

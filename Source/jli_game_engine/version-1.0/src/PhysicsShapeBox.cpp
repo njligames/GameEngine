@@ -194,7 +194,7 @@ namespace njli
         *m_btBoxShape = btBoxShape(extends);
         
 //        enablePropertyChange();
-//        PhysicsShape::getParent()->addPhysicsBody();
+//        PhysicsShape::getParent()->setPhysicsBody();
     }
 
     btVector3 PhysicsShapeBox::getHalfExtentsWithMargin() const
@@ -227,7 +227,7 @@ namespace njli
         getShape()->setMargin(collisionMargin);
         
 //        enablePropertyChange();
-//        PhysicsShape::getParent()->addPhysicsBody();
+//        PhysicsShape::getParent()->setPhysicsBody();
     }
 
 //    void PhysicsShapeBox::setLocalScaling(const btVector3& scaling)
@@ -235,7 +235,7 @@ namespace njli
 //        getShape()->setLocalScaling(scaling);
 //        
 ////        enablePropertyChange();
-////        PhysicsShape::getParent()->addPhysicsBody();
+////        PhysicsShape::getParent()->setPhysicsBody();
 //    }
 
 //    void PhysicsShapeBox::getAabb(const btTransform& t,btVector3& aabbMin,btVector3& aabbMax) const
@@ -314,7 +314,7 @@ namespace njli
         setHalfExtends(_btBoxShape->getHalfExtentsWithoutMargin() / _btBoxShape->getLocalScaling());
         
 //        enablePropertyChange();
-//        PhysicsShape::getParent()->addPhysicsBody();
+//        PhysicsShape::getParent()->setPhysicsBody();
     }
     
     const btBoxShape* PhysicsShapeBox::getShape() const

@@ -664,7 +664,7 @@ public:
          *  @section ex1 Lua example
          *  @snippet Node.lua Node_calculateSerializeBufferSize_
          */
-    void addPhysicsBody(PhysicsBody * body);
+    void setPhysicsBody(PhysicsBody * body);
 
     /**
          *  @author James Folk, 16-02-10 21:02:38

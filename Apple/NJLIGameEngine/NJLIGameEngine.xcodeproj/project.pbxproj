@@ -673,7 +673,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PROJECT=YappyBirds\npushd ${SRCROOT}/../../../${PROJECT}/COMMON/gameplay_scripts/yappybirds_game\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\nmake release\nelse\nmake clean\nmake\nfi\n\npopd";
+			shellScript = "PROJECT=YappyBirds\ncd ${SRCROOT}/../../../${PROJECT}/COMMON && make\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

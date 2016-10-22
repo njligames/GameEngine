@@ -698,8 +698,8 @@ namespace njli
         {
             m_enableDebugDraw = true;
             m_DebugDrawCamera = camera;
-            getDebugDrawer()->addShaderProgram(shader);
-            getDebugDrawer()->addMaterial(material);
+            getDebugDrawer()->setShaderProgram(shader);
+            getDebugDrawer()->setMaterial(material);
         }
         else
         {

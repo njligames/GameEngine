@@ -386,7 +386,7 @@ namespace njli
         return NULL;
     }
     
-    void Geometry::addMaterial(Material *material, Image *img)
+    void Geometry::setMaterial(Material *material, Image *img)
     {
         DEBUG_ASSERT(material != NULL);
         
@@ -442,7 +442,7 @@ namespace njli
         return NULL;
     }
     
-    void Geometry::addShaderProgram(ShaderProgram *shader)
+    void Geometry::setShaderProgram(ShaderProgram *shader)
     {
         DEBUG_ASSERT(shader != NULL);
         

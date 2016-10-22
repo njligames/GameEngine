@@ -176,7 +176,7 @@ public:
          *
          *  @param material <#material description#>
          */
-    void addMaterial(Material * material, Image* image = NULL);
+    void setMaterial(Material * material, Image* image = NULL);
     /**
          *  <#Description#>
          */
@@ -199,7 +199,7 @@ public:
          *
          *  @param shader <#shader description#>
          */
-    void addShaderProgram(ShaderProgram * shader);
+    void setShaderProgram(ShaderProgram * shader);
     /**
          *  <#Description#>
          */

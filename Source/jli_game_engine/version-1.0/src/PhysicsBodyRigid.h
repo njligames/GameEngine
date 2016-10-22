@@ -313,7 +313,7 @@ namespace njli
         virtual void applyFinalForce();
         virtual void applyFinalAngularForce();
         
-        virtual bool addPhysicsBody(const btTransform &transform = btTransform::getIdentity());
+        virtual bool setPhysicsBody(const btTransform &transform = btTransform::getIdentity());
         virtual bool removePhysicsBody();
     private:
         f32 m_Mass;

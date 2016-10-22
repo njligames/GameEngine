@@ -194,7 +194,7 @@ namespace njli
         *m_btBox2dShape = btBox2dShape(_extends);
         
 //        enablePropertyChange();
-//        PhysicsShape::getParent()->addPhysicsBody();
+//        PhysicsShape::getParent()->setPhysicsBody();
     }
     
     void PhysicsShapeBox2D::setMargin(btScalar collisionMargin)
@@ -281,7 +281,7 @@ namespace njli
         setHalfExtends(_btBoxShape->getHalfExtentsWithoutMargin() / _btBoxShape->getLocalScaling());
         
 //        enablePropertyChange();
-//        PhysicsShape::getParent()->addPhysicsBody();
+//        PhysicsShape::getParent()->setPhysicsBody();
     }
     
     const btBox2dShape* PhysicsShapeBox2D::getShape() const

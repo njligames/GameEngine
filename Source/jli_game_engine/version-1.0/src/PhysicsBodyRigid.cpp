@@ -304,7 +304,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            addPhysicsBody(t);
+            setPhysicsBody(t);
         }
     }
     
@@ -469,7 +469,7 @@ namespace njli
         m_AngularForceAndPositionArrayIndex = 0;
     }
     
-    bool PhysicsBodyRigid::addPhysicsBody(const btTransform &transform)
+    bool PhysicsBodyRigid::setPhysicsBody(const btTransform &transform)
     {
         if (m_btRigidBody && m_btRigidBody->getNumConstraintRefs() != 0)
         {
@@ -477,21 +477,27 @@ namespace njli
             return false;
         }
         
-        removePhysicsBody();
-        
-        PhysicsWorld *physicsWorld = njli::World::getInstance()->getScene()->getPhysicsWorld();
-        
-        if(physicsWorld)
+        Scene *scene = njli::World::getInstance()->getScene();
+        if(!scene)
         {
+            DEBUG_LOG_WRITE_W(TAG, "The scene is NULL\n");
+            return false;
+        }
+        
+        PhysicsWorld *physicsWorld = scene->getPhysicsWorld();
+        if(NULL != physicsWorld)
+        {
+            removePhysicsBody();
+            
             Node *parent = PhysicsBody::getParent();
             
             if(!parent)
-                DEBUG_LOG_WRITE_W(TAG, "The PhysicsBodyRigid is not attached to a Node.");
+                DEBUG_LOG_WRITE_W(TAG, "The PhysicsBodyRigid is not attached to a Node.\n");
             
             PhysicsShape *physicsShape = getPhysicsShape();
             
             if(!physicsShape)
-                DEBUG_LOG_WRITE_W(TAG, "The PhysicsBodyRigid does not have a shape.");
+                DEBUG_LOG_WRITE_W(TAG, "The PhysicsBodyRigid does not have a shape.\n");
             
             if(physicsShape && parent)
             {
@@ -545,14 +551,21 @@ namespace njli
         }
         else
         {
-            DEBUG_LOG_WRITE_W(TAG, "The physics world is NULL");
+            DEBUG_LOG_WRITE_W(TAG, "The physics world is NULL\n");
         }
         return false;
     }
     
     bool PhysicsBodyRigid::removePhysicsBody()
     {
-        PhysicsWorld *physicsWorld = njli::World::getInstance()->getScene()->getPhysicsWorld();
+        Scene *scene = njli::World::getInstance()->getScene();
+        if(!scene)
+        {
+            DEBUG_LOG_WRITE_W(TAG, "The scene is NULL\n");
+            return false;
+        }
+        
+        PhysicsWorld *physicsWorld = scene->getPhysicsWorld();
         if(physicsWorld)
             return physicsWorld->removeRigidBody(this);
         return false;
