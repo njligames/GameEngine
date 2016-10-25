@@ -435,6 +435,17 @@ private:
 //    swig_type_info* m_DeviceTouchTypeInfo;
 //    swig_type_info* m_PhysicsRayContactTypeInfo;
 //    swig_type_info* m_ActionTypeInfo;
+    
+private:
+    static lua_State *globalL;
+    static void lstop (lua_State *L, lua_Debug *ar);
+    static void laction (int i);
+    static int msghandler (lua_State *L);
+    static int docall (lua_State *L, int narg, int nres);
+    
+    static void l_message (const char *pname, const char *msg);
+//    static int report (lua_State *L, int status);
+    
 };
 }
 
