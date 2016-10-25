@@ -221,7 +221,23 @@
 
 
 
- lua_State *njli::WorldLuaVirtualMachine::globalL = NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lua_State *njli::WorldLuaVirtualMachine::globalL = NULL;
+std::string njli::WorldLuaVirtualMachine::m_previousMessage = "";
 
 /*
  ** Hook set by signal function to stop the interpreter.
@@ -285,7 +301,14 @@ int njli::WorldLuaVirtualMachine::docall (lua_State *L, int narg, int nres) {
  */
 void njli::WorldLuaVirtualMachine::l_message (const char *pname, const char *msg) {
     if (pname) lua_writestringerror("%s: ", pname);
-    lua_writestringerror("%s\n", msg);
+    if(strcmp(msg, m_previousMessage.c_str()) != 0)
+    {
+        lua_writestringerror("%s\n", "<ERROR>" );
+        lua_writestringerror("%s\n", msg);
+        lua_writestringerror("%s\n", "</ERROR>" );
+    }
+    m_previousMessage = msg;
+    
 }
 
 
