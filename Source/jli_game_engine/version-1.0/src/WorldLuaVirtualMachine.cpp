@@ -208,7 +208,7 @@
 #include "njli_swig_runtime.h"
 //#include "njli_swig_types.h"
 ////#include "swig_type_info.h"
-//extern swig_type_info *swig_types[597];
+extern swig_type_info *swig_types[597];
 
 
 
@@ -872,133 +872,133 @@ LUALIB_API int luaopen_JLIM(lua_State *L)
 //}
 
 
-//static std::string printMethods(const char* name)
-//{
-//    std::string output = "-- Automatically generated tests for JLI game engine.\n\n";
-//    char trigger_value[512];
-//    char completion_value[512];
-//    
-//    std::string trigger0 = "\t\t{\"trigger\": \"";
-//    std::string trigger1 = "\", \"contents\": \"";
-//    std::string trigger2 = "\" },\n";
-//    
-////    std::string sublime_completions = "\n{\n\t\"scope\": \"source.lua - source - meta.tag, punctuation.definition.tag.begin\",\n";
-////    
-////    sublime_completions += "\n\n\t\"completions\":\n\t[\n";
-//    
-//    std::string sublime_completions = "";
-//    
-//    //this touches the SWIG internals, please be careful:
-//    for (int i = 0; swig_types[i]; i++)
-//    {
-//        if (swig_types[i]->clientdata)
-//        {
-//            swig_lua_class* ptr=(swig_lua_class*)(swig_types[i]->clientdata);
-//
-//            if (strcmp(name,ptr->name)==0)
-//            {
-////                sprintf("test%sFunctions", ptr->name);
-//                
-//                for (int j = 0; ptr->cls_static->ns_constants[j].name; ++j)
-//                {
-//                    
-//                    sprintf(trigger_value, "%s",ptr->cls_static->ns_constants[j].name);
-//                    sprintf(completion_value, "JLI.%s",ptr->cls_static->ns_constants[j].name);
-//                    
-//                    sublime_completions += trigger0;
-//                    sublime_completions += trigger_value;
-//                    sublime_completions += trigger1;
-//                    sublime_completions += completion_value;
-//                    sublime_completions += trigger2;
-//                    
-//                }
-//                
-//                for(int j = 0; ptr->cls_static->ns_methods[j].name; ++j)
-//                {
-//                    sprintf(trigger_value, "static %s.%s",ptr->name,ptr->cls_static->ns_methods[j].name);
-//                    sprintf(completion_value, "JLI.%s.%s",ptr->name,ptr->cls_static->ns_methods[j].name);
-//                    
-//                    sublime_completions += trigger0;
-//                    sublime_completions += trigger_value;
-//                    sublime_completions += trigger1;
-//                    sublime_completions += completion_value;
-//                    sublime_completions += trigger2;
-//                }
-//                
-//                for(int j = 0; ptr->metatable[j].name; ++j)
-//                {
-//                    if(strcmp("Node", ptr->name) == 0)
-//                    {
-//                        printf("%s:%s\n",ptr->name,ptr->metatable[j].name);
-//                    }
-//                }
-//                for(int j = 0; ptr->methods[j].name; ++j)
-//                {
-//                    if(strcmp("Node", ptr->name) == 0)
-//                    {
-//                        printf("%s:%s\n",ptr->name,ptr->methods[j].name);
-//                        
-//                        printf("%s:%s\n",ptr->name,ptr->methods[j].name);
-//                    }
-//                }
-//
-//                for(int j = 0; ptr->methods[j].name; ++j)
-//                {
-//                    if(strcmp("Node", ptr->name) == 0)
-//                    {
-//                        swig_lua_method method = ptr->methods[j];
-//                        sprintf(trigger_value, "%s.%s",ptr->name,ptr->methods[j].name);
-//                        sprintf(completion_value, "%s",ptr->methods[j].name);
-//                    }
-//                    
-//                    sprintf(trigger_value, "%s.%s",ptr->name,ptr->methods[j].name);
-//                    sprintf(completion_value, "%s",ptr->methods[j].name);
-//                    
-//                    sublime_completions += trigger0;
-//                    sublime_completions += trigger_value;
-//                    sublime_completions += trigger1;
-//                    sublime_completions += completion_value;
-//                    sublime_completions += trigger2;
-//                }
-//                
-////                for(int j=0;ptr->methods[j].name;j++)
-////                {
-////                    sprintf(buffer, "%s::%s()\n",ptr->name,ptr->methods[j].name);
-//////                    functions += buffer;
-////						DEBUG_LOG_PRINT_V(TAG, "%s::%s()\n",ptr->name,ptr->methods[j].name);
-////                }
-//            }
-//        }
-//    }
-////    sublime_completions += "\t]\n}";
-////    DEBUG_LOG_PRINT_V(TAG, "%s",sublime_completions.c_str());
-//    return sublime_completions;
-////    Log("%s", functions.c_str());
-//}
-//
-//static void printWrappedClasses()
-//{
-//    std::string sublime_completions = "\n{\n\t\"scope\":\"source.lua\",\n";
-//    //std::string sublime_completions = "\n{\n\t\"scope\": \"source.lua - source - meta.tag, punctuation.definition.tag.begin\",\n";
+static std::string printMethods(const char* name)
+{
+    std::string output = "-- Automatically generated tests for JLI game engine.\n\n";
+    char trigger_value[512];
+    char completion_value[512];
+    
+    std::string trigger0 = "\t\t{\"trigger\": \"";
+    std::string trigger1 = "\", \"contents\": \"";
+    std::string trigger2 = "\" },\n";
+    
+//    std::string sublime_completions = "\n{\n\t\"scope\": \"source.lua - source - meta.tag, punctuation.definition.tag.begin\",\n";
 //    
 //    sublime_completions += "\n\n\t\"completions\":\n\t[\n";
-//    
-//    //this touches the SWIG internals, please be careful:
-//    for (int i = 0; swig_types[i]; i++)
-//    {
-//        if (swig_types[i]->clientdata)
-//        {
-//            swig_lua_class* ptr=(swig_lua_class*)(swig_types[i]->clientdata);
-//            sublime_completions += printMethods(ptr->name);
-//        }
-//    }
-//    
-////    sublime_completions += buildSublimeCompletions();
-//    
+    
+    std::string sublime_completions = "";
+    
+    //this touches the SWIG internals, please be careful:
+    for (int i = 0; swig_types[i]; i++)
+    {
+        if (swig_types[i]->clientdata)
+        {
+            swig_lua_class* ptr=(swig_lua_class*)(swig_types[i]->clientdata);
+
+            if (strcmp(name,ptr->name)==0)
+            {
+//                sprintf("test%sFunctions", ptr->name);
+                
+                for (int j = 0; ptr->cls_static->ns_constants[j].name; ++j)
+                {
+                    
+                    sprintf(trigger_value, "%s",ptr->cls_static->ns_constants[j].name);
+                    sprintf(completion_value, "JLI.%s",ptr->cls_static->ns_constants[j].name);
+                    
+                    sublime_completions += trigger0;
+                    sublime_completions += trigger_value;
+                    sublime_completions += trigger1;
+                    sublime_completions += completion_value;
+                    sublime_completions += trigger2;
+                    
+                }
+                
+                for(int j = 0; ptr->cls_static->ns_methods[j].name; ++j)
+                {
+                    sprintf(trigger_value, "static %s.%s",ptr->name,ptr->cls_static->ns_methods[j].name);
+                    sprintf(completion_value, "JLI.%s.%s",ptr->name,ptr->cls_static->ns_methods[j].name);
+                    
+                    sublime_completions += trigger0;
+                    sublime_completions += trigger_value;
+                    sublime_completions += trigger1;
+                    sublime_completions += completion_value;
+                    sublime_completions += trigger2;
+                }
+                
+                for(int j = 0; ptr->metatable[j].name; ++j)
+                {
+                    if(strcmp("Node", ptr->name) == 0)
+                    {
+                        printf("%s:%s\n",ptr->name,ptr->metatable[j].name);
+                    }
+                }
+                for(int j = 0; ptr->methods[j].name; ++j)
+                {
+                    if(strcmp("Node", ptr->name) == 0)
+                    {
+                        printf("%s:%s\n",ptr->name,ptr->methods[j].name);
+                        
+                        printf("%s:%s\n",ptr->name,ptr->methods[j].name);
+                    }
+                }
+
+                for(int j = 0; ptr->methods[j].name; ++j)
+                {
+                    if(strcmp("Node", ptr->name) == 0)
+                    {
+                        swig_lua_method method = ptr->methods[j];
+                        sprintf(trigger_value, "%s.%s",ptr->name,ptr->methods[j].name);
+                        sprintf(completion_value, "%s",ptr->methods[j].name);
+                    }
+                    
+                    sprintf(trigger_value, "%s.%s",ptr->name,ptr->methods[j].name);
+                    sprintf(completion_value, "%s",ptr->methods[j].name);
+                    
+                    sublime_completions += trigger0;
+                    sublime_completions += trigger_value;
+                    sublime_completions += trigger1;
+                    sublime_completions += completion_value;
+                    sublime_completions += trigger2;
+                }
+                
+//                for(int j=0;ptr->methods[j].name;j++)
+//                {
+//                    sprintf(buffer, "%s::%s()\n",ptr->name,ptr->methods[j].name);
+////                    functions += buffer;
+//						DEBUG_LOG_PRINT_V(TAG, "%s::%s()\n",ptr->name,ptr->methods[j].name);
+//                }
+            }
+        }
+    }
 //    sublime_completions += "\t]\n}";
-//    
 //    DEBUG_LOG_PRINT_V(TAG, "%s",sublime_completions.c_str());
-//}
+    return sublime_completions;
+//    Log("%s", functions.c_str());
+}
+
+static void printWrappedClasses()
+{
+    std::string sublime_completions = "\n{\n\t\"scope\":\"source.lua\",\n";
+    //std::string sublime_completions = "\n{\n\t\"scope\": \"source.lua - source - meta.tag, punctuation.definition.tag.begin\",\n";
+    
+    sublime_completions += "\n\n\t\"completions\":\n\t[\n";
+    
+    //this touches the SWIG internals, please be careful:
+    for (int i = 0; swig_types[i]; i++)
+    {
+        if (swig_types[i]->clientdata)
+        {
+            swig_lua_class* ptr=(swig_lua_class*)(swig_types[i]->clientdata);
+            sublime_completions += printMethods(ptr->name);
+        }
+    }
+    
+//    sublime_completions += buildSublimeCompletions();
+    
+    sublime_completions += "\t]\n}";
+    
+    DEBUG_LOG_PRINT_V(TAG, "%s",sublime_completions.c_str());
+}
 
 namespace njli
 {
@@ -1210,6 +1210,17 @@ namespace njli
             
             m_lua_State = NULL;
         }
+    }
+    
+    bool WorldLuaVirtualMachine::error(const char *desc)
+    {
+        int status = luaL_error(m_lua_State, "%s", desc);
+        
+        if(LUA_OK == status)
+            return true;
+        getError("", status);
+        
+        return false;
     }
     
     void WorldLuaVirtualMachine::getError(const char *code, int error)

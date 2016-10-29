@@ -289,7 +289,7 @@ public:
          *
          *  @param world <#world description#>
          */
-    void addPhysicsWorld(PhysicsWorld * world);
+    void setPhysicsWorld(PhysicsWorld * world);
     /**
          *  <#Description#>
          */

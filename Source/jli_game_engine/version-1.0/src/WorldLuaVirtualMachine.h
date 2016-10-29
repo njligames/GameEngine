@@ -410,8 +410,7 @@ public:
          */
     void unInit();
     
-    
-    
+    bool error(const char *description);
     
     /*
      ** Do the REPL: repeatedly read (load) a line, evaluate (call) it, and

@@ -24,14 +24,29 @@ void _debug_log_v(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_d(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_w(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_e(const char* tag, const char* text, ...) PRINTF(2, 3);
+void _script_error(const char* tag, const char* text, ...) PRINTF(2, 3);
 
 void LUA_WRITE(const char* c);
 
 void _debug_log_stderr(const char* tag, const char* fmt, ...);
+    
+
+//    void script_error(const char *description);
 
 #ifdef __cplusplus
 }
 #endif
+
+
+#if defined(DEBUG) || defined(_DEBUG)
+#define SCRIPT_ERROR(tag, fmt, ...) \
+_script_error(tag, "%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__);
+#else
+#define SCRIPT_ERROR(fmt, ...) \
+{           \
+}
+#endif
+
 
 #if defined(DEBUG) || defined(_DEBUG)
 #define CRASH() \

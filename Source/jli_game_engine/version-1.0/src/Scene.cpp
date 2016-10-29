@@ -571,7 +571,7 @@ namespace njli
         return NULL;
     }
     
-    void Scene::addPhysicsWorld(PhysicsWorld *world)
+    void Scene::setPhysicsWorld(PhysicsWorld *world)
     {
         DEBUG_ASSERT(world != NULL);
         

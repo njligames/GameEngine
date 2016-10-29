@@ -67,6 +67,18 @@ void _debug_log_e(const char *tag, const char *fmt, ...)
     LOG_VPRINTF("ERROR");
 }
 
+void _script_error(const char* tag, const char* fmt, ...)
+{
+    char buffer[2048];
+    va_list args;
+    
+    va_start(args, fmt);
+    vsprintf(buffer, fmt, args);
+    va_end(args);
+    
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->error(buffer);
+    
+}
 void LUA_WRITE(const char * c)
 {
 #if defined(DEBUG) || defined (_DEBUG)

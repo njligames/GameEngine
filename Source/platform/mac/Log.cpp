@@ -56,6 +56,11 @@ void _debug_log_stderr(const char* tag, const char* fmt, ...)
     va_end(args);
 }
 
+void script_error(const char *description)
+{
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->error("Scene is NULL");
+}
+
 void njliSleep( unsigned int _ms )
 {
     // int microsecs;
