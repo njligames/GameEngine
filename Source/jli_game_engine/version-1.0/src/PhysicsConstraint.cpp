@@ -288,6 +288,16 @@ namespace njli
         return getConstraint()->getJointFeedback()->m_appliedTorqueBodyB;
     }
     
+    PhysicsBody *PhysicsConstraint::getParent()
+    {
+        return dynamic_cast<PhysicsBody*>(AbstractDecorator::getParent());
+    }
+    
+    const PhysicsBody *PhysicsConstraint::getParent()const
+    {
+        return dynamic_cast<const PhysicsBody*>(AbstractDecorator::getParent());
+    }
+    
     void PhysicsConstraint::removeConstraint()
     {
         Node *_nodeA = getNodeA();
@@ -310,7 +320,7 @@ namespace njli
             }
         }
         
-        Scene *scene = njli::World::getInstance()->getScene();
+        Scene *scene = getParent()->getParent()->getCurrentScene();
         scene->getPhysicsWorld()->removeConstraint(this);
     }
     

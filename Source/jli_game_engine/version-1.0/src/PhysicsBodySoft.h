@@ -166,7 +166,7 @@ namespace njli
         virtual btCollisionObject* getCollisionObject();
         virtual void setCollisionObject(const btCollisionObject &obj, PhysicsShape *shape);
         
-        virtual bool setPhysicsBody(const btTransform &transform = btTransform::getIdentity());
+        virtual bool setTransform(const btTransform &transform = btTransform::getIdentity());
         virtual bool removePhysicsBody();
         
         virtual const btSoftBody* getBody() const;

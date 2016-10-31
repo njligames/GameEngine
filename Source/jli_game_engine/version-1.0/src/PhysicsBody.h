@@ -340,7 +340,7 @@ protected:
     virtual btCollisionObject* getCollisionObject() = 0;
     virtual void setCollisionObject(const btCollisionObject& obj, PhysicsShape* shape) = 0;
 
-    virtual bool setPhysicsBody(const btTransform& transform = btTransform::getIdentity()) = 0;
+    virtual bool setTransform(const btTransform& transform = btTransform::getIdentity()) = 0;
     virtual bool removePhysicsBody() = 0;
     //        virtual void enablePropertyChange(bool enable = true);
     //        virtual bool isPropertyChanged()const;

@@ -709,11 +709,15 @@ namespace njli
     
     void Geometry::hide(Camera* camera)
     {
+        DEBUG_ASSERT(camera);
+        
         m_RenderCategory = (njliBitCategories)Off(m_RenderCategory, camera->getRenderCategory());
     }
     
     void Geometry::show(Camera * camera)
     {
+        DEBUG_ASSERT(camera);
+        
         m_RenderCategory = (njliBitCategories)On(m_RenderCategory, camera->getRenderCategory());
     }
     
@@ -830,20 +834,23 @@ namespace njli
         
         glBindVertexArrayOES(m_vertexArrayID);
         
-        if(NULL != material && NULL != shader)
-            material->bind(shader);
+        
         
         if(NULL != shader)
         {
-            shader->use();
-            
-            shader->setUniformValue("modelView", camera->getModelView());
-            //        shader->setUniformValue("projection", camera->getProjection());
-            
-            //        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
-            glUniformMatrix4fv(m_projectionMatrixUniform, 1, 0, camera->getProjectionMatrixArray());
-            //        glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
-            shader->setUniformValue("u_opacityModifyRGB", _opacityModifyRGB);
+            if(shader->use())
+            {
+                if(NULL != material)
+                    material->bind(shader);
+                
+                shader->setUniformValue("modelView", camera->getModelView());
+                //        shader->setUniformValue("projection", camera->getProjection());
+                
+                //        glUniformMatrix4fv(m_modelViewMatrixUniform, 1, 0, camera->getModelViewMatrixArray());
+                glUniformMatrix4fv(m_projectionMatrixUniform, 1, 0, camera->getProjectionMatrixArray());
+                //        glUniform1i(u_opacityModifyRGB, _opacityModifyRGB);
+                shader->setUniformValue("u_opacityModifyRGB", _opacityModifyRGB);
+            }
         }
         
         
@@ -1207,10 +1214,9 @@ namespace njli
         {
             if(!shader->link())
             {
-                DEBUG_LOG_PRINT_E(TAG, "%s", "Linking failed");
-                DEBUG_LOG_PRINT_E(TAG, "Program log: %s", shader->programLog());
-                DEBUG_LOG_PRINT_E(TAG, "Vertex log: %s", shader->vertexShaderLog());
-                DEBUG_LOG_PRINT_E(TAG, "Fragment log: %s", shader->fragmentShaderLog());
+                DEBUG_LOG_PRINT_E(TAG, "%s\n", shader->programLog());
+//                DEBUG_LOG_PRINT_E(TAG, "Vertex log: %s\n", shader->vertexShaderLog());
+//                DEBUG_LOG_PRINT_E(TAG, "Fragment log: %s\n", shader->fragmentShaderLog());
             }
         }
         shader->use();

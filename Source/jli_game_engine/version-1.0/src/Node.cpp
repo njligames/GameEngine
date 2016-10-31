@@ -62,7 +62,7 @@ namespace njli
     m_pParent(NULL),
     m_GeometryIndex(-1),
     m_isTouchedByRay(false),
-    m_ApplyPhysicsShape(false),
+//    m_ApplyPhysicsShape(false),
     m_Transform(new btTransform(btTransform::getIdentity())),
     m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
@@ -91,7 +91,7 @@ namespace njli
     m_pParent(NULL),
     m_GeometryIndex(-1),
     m_isTouchedByRay(false),
-    m_ApplyPhysicsShape(false),
+//    m_ApplyPhysicsShape(false),
     m_Transform(new btTransform(btTransform::getIdentity())),
     m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
@@ -119,7 +119,7 @@ namespace njli
     m_pParent(NULL),
     m_GeometryIndex(-1),
     m_isTouchedByRay(false),
-    m_ApplyPhysicsShape(false),
+//    m_ApplyPhysicsShape(false),
     m_Transform(new btTransform(btTransform::getIdentity())),
     m_ColorTransform(new btTransform(btTransform::getIdentity())),
     m_Orientation(new btQuaternion(btQuaternion::getIdentity())),
@@ -365,13 +365,15 @@ namespace njli
     void Node::setTransform(const btTransform &transform)
     {
         *m_Transform = transform;
+
+        applyPhysicsBodyTransform(transform);
         
-        PhysicsBody *physicsBody = getPhysicsBody();
-        
-        if(physicsBody)// && physicsBody->getCollisionObject() && !physicsBody->isDynamicPhysics())
-        {
-            physicsBody->setWorldTransform(getTransform());
-        }
+//        PhysicsBody *physicsBody = getPhysicsBody();
+//        
+//        if(physicsBody)// && physicsBody->getCollisionObject() && !physicsBody->isDynamicPhysics())
+//        {
+//            physicsBody->setWorldTransform(getTransform());
+//        }
     }
     
     btVector3 Node::getOrigin()const
@@ -617,9 +619,9 @@ namespace njli
         
         addChild(m_PhysicsBody);
         
-        getPhysicsBody()->setPhysicsBody(getTransform());
+        getPhysicsBody()->setTransform(getTransform());
         
-        m_ApplyPhysicsShape = true;
+//        m_ApplyPhysicsShape = true;
     }
     
     void Node::removePhysicsBody()
@@ -713,15 +715,32 @@ namespace njli
     {
         DEBUG_ASSERT(camera != NULL);
         
-        Scene *scene = this->getCurrentScene();
-        DEBUG_ASSERT(NULL != scene);
-        
         removeCamera();
-        
         m_Camera = camera;
-        
         addChild(m_Camera);
-        scene->addActiveCamera(m_Camera);
+        
+//        Scene *scene = this->getCurrentScene();
+//        
+//        if(scene)
+//        {
+//            
+//            scene->addActiveCamera(m_Camera);
+//        }
+//        else
+//        {
+//            DEBUG_LOG_WRITE_W(TAG, "Unable to set the Camera, the scene is NULL\n");
+//        }
+
+        
+//        Scene *scene = this->getCurrentScene();
+//        DEBUG_ASSERT(NULL != scene);
+//        
+//        removeCamera();
+//        
+//        m_Camera = camera;
+//        
+//        addChild(m_Camera);
+////        scene->addActiveCamera(m_Camera);
     }
     
     void Node::removeCamera()
@@ -759,9 +778,6 @@ namespace njli
     {
         DEBUG_ASSERT(geometry != NULL);
         
-        Scene *scene = this->getCurrentScene();
-        DEBUG_ASSERT(NULL != scene);
-        
         removeGeometry();
         
         m_Geometry = geometry;
@@ -770,9 +786,18 @@ namespace njli
         
         m_Geometry->addReference(this);
         
-        m_ApplyPhysicsShape = true;
+//        m_ApplyPhysicsShape = true;
         
-        scene->addActiveGeometry(m_Geometry);
+        Scene *scene = this->getCurrentScene();
+//        DEBUG_ASSERT(NULL != scene);
+        if(scene)
+        {
+            scene->addActiveGeometry(m_Geometry);
+        }
+        else
+        {
+            DEBUG_LOG_WRITE_W(TAG, "Unable to set the Geometry, the scene is NULL\n");
+        }
     }
     
     void Node::removeGeometry()
@@ -1527,14 +1552,14 @@ namespace njli
         PhysicsBody *physicsBody = getPhysicsBody();
         
         if(physicsBody)
-            physicsBody->setPhysicsBody(transform);
+            physicsBody->setTransform(transform);
     }
     
     void Node::setGeometryIndex(s64 index)
     {
         DEBUG_ASSERT(index >= 0 && index < NUMBER_OF_MESHES);
         m_GeometryIndex = index;
-        m_ApplyPhysicsShape = true;
+//        m_ApplyPhysicsShape = true;
     }
     size_t Node::getGeometryIndex()const
     {
@@ -1560,6 +1585,16 @@ namespace njli
         DEBUG_ASSERT(scene != NULL);
         
         m_CurrentScene = scene;
+        
+        if(NULL != m_Geometry)
+        {
+            m_CurrentScene->addActiveGeometry(m_Geometry);
+        }
+        
+        if(NULL != m_Camera)
+        {
+            m_CurrentScene->addActiveCamera(m_Camera);
+        }
     }
     
     void Node::updateActions()

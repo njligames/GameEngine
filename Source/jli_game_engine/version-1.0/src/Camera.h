@@ -349,6 +349,11 @@ public:
          */
     const Node* getParent() const;
 
+    
+    /**
+     <#Description#>
+     */
+    void updateViewSize();
 protected:
     void cull(btDbvtBroadphase * pbp);
 

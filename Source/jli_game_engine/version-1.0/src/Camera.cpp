@@ -1649,6 +1649,22 @@ namespace njli
 ////        }
 //    }
     
+    void Camera::updateViewSize()
+    {
+        if(m_Orthographic)
+        {
+            *m_projectionMatrix = makeOrtho(0, njli::World::getInstance()->getViewportDimensions().x(),
+                                            0, njli::World::getInstance()->getViewportDimensions().y(),
+                                            getZNear(), getZFar());
+            
+            getProjection().getOpenGLMatrix(m_ProjectionMatrixArray);
+        }
+        else
+        {
+            *m_projectionMatrix = makeFrustum(m_ProjectionMatrixArray, getFov(), njli::World::getInstance()->getAspectRatio(), getZNear(), getZFar());
+        }
+    }
+    
     const btTransform &Camera::getProjection()const
     {
         return *m_projectionMatrix;

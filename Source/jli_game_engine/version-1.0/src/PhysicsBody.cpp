@@ -371,7 +371,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     
@@ -395,7 +395,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     
@@ -410,7 +410,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     
@@ -435,7 +435,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     void PhysicsBody::setKinematicPhysics()
@@ -453,7 +453,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     void PhysicsBody::setDynamicPhysics()
@@ -471,7 +471,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     void PhysicsBody::enableContactResponse(bool enable)
@@ -540,7 +540,7 @@ namespace njli
     {
         DEBUG_ASSERT(NULL != constraint);
         
-        Scene *scene = njli::World::getInstance()->getScene();
+        Scene *scene = getParent()->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         if (getParent() && getParent()->getParentNode())
@@ -571,7 +571,8 @@ namespace njli
     bool PhysicsBody::removePhysicsConstraint(PhysicsConstraint *constraint)
     {
         DEBUG_ASSERT(NULL != constraint);
-        Scene *scene = njli::World::getInstance()->getScene();
+        
+        Scene *scene = getParent()->getCurrentScene();
         DEBUG_ASSERT(NULL != scene);
         
         std::vector<PhysicsConstraint*>::iterator iter = std::find(m_PhysicsConstraintList.begin(), m_PhysicsConstraintList.end(), constraint);

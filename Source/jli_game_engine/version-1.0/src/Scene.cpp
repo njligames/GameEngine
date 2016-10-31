@@ -982,6 +982,15 @@ namespace njli
         }
     }
     
+    void Scene::updateViewSize()
+    {
+        for (s32 i = 0; i < (*m_ActiveCameras).size(); ++i)
+        {
+            Camera *camera = (*m_ActiveCameras).at(i);
+            camera->updateViewSize();
+        }
+    }
+    
     
     
     

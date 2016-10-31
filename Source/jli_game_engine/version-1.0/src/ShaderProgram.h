@@ -230,7 +230,7 @@ public:
     /**
          *  <#Description#>
          */
-    void use();
+    bool use();
 
     /**
          *  <#Description#>

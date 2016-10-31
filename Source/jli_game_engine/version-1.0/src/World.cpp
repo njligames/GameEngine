@@ -590,6 +590,9 @@ namespace njli
         m_ViewPortDimensions->setY(height);
         getWorldInput()->setOrientation(orientation);
         
+        if(getScene())
+            getScene()->updateViewSize();
+        
         char buffer[256];
         sprintf(buffer, "%s", "__NJLIResize");
         njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, width, height, orientation);
@@ -643,6 +646,7 @@ namespace njli
             }
             
             m_Scene = scene;
+            m_Scene->updateViewSize();
             
             addChild(m_Scene);
         }
@@ -872,8 +876,8 @@ namespace njli
             sprintf(buffer, "%s", "__NJLIWorldGamePause");
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
             
-            if(njli::World::getInstance()->getScene())
-                njli::World::getInstance()->getScene()->pauseGame();
+            if(getScene())
+                getScene()->pauseGame();
         }
         
         if (!enable && isPausedGame())
@@ -882,8 +886,8 @@ namespace njli
             sprintf(buffer, "%s", "__NJLIWorldGameUnPause");
             njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
             
-            if(njli::World::getInstance()->getScene())
-                njli::World::getInstance()->getScene()->unPauseGame();
+            if(getScene())
+                getScene()->unPauseGame();
         }
         
         m_GamePaused = enable;

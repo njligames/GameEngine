@@ -66,6 +66,8 @@ Node : public AbstractFactoryObject,
     friend class PhysicsConstraintGeneric6DofSpring;
     friend class PhysicsConstraintSlider;
     friend class PhysicsBodyRigid;
+    
+    friend class PhysicsConstraint;
 
 protected:
     Node();
@@ -1598,7 +1600,7 @@ private:
     size_t m_GeometryIndex;
     bool m_isTouchedByRay;
 
-    bool m_ApplyPhysicsShape;
+//    bool m_ApplyPhysicsShape;
 
     //        Thread *m_ActionThread;
 

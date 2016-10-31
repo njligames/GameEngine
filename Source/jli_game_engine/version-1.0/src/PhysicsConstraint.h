@@ -21,6 +21,7 @@
 namespace njli {
 class PhysicsConstraintBuilder;
 class Node;
+    class PhysicsBody;
 
 /**
      *  <#Description#>
@@ -226,6 +227,21 @@ public:
          *  @return <#return value description#>
          */
     btVector3 getJointAppliedTorqueB() const;
+    
+    
+    /**
+     <#Description#>
+
+     @return <#return value description#>
+     */
+    PhysicsBody *getParent();
+    
+    /**
+     <#Description#>
+
+     @return <#return value description#>
+     */
+    const PhysicsBody *getParent()const;
 
 protected:
     virtual btTypedConstraint* getConstraint() = 0;

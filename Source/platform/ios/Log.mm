@@ -79,6 +79,12 @@ void _script_error(const char* tag, const char* fmt, ...)
     njli::World::getInstance()->getWorldLuaVirtualMachine()->error(buffer);
     
 }
+
+void _script_crash()
+{
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->error("");
+}
+
 void LUA_WRITE(const char * c)
 {
 #if defined(DEBUG) || defined (_DEBUG)
@@ -90,11 +96,20 @@ void LUA_WRITE(const char * c)
 
 void _debug_log_stderr(const char* tag, const char* fmt, ...)
 {
+//    va_list args;
+//    
+//    va_start(args, fmt);
+//    vfprintf(stderr, fmt, args);
+//    va_end(args);
+    
+    char buffer[2048];
     va_list args;
     
     va_start(args, fmt);
-    vfprintf(stderr, fmt, args);
+    vsprintf(buffer, fmt, args);
     va_end(args);
+    
+    njli::World::getInstance()->getWorldLuaVirtualMachine()->error(buffer);
 }
 
 void njliSleep( unsigned int _ms )

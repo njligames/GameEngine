@@ -578,26 +578,31 @@ namespace njli
         glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
         DEBUG_GL_ERROR_WRITE("glGetIntegerv");
         
-        DEBUG_ASSERT(m_Program == currentProgram);
+//        DEBUG_ASSERT(m_Program == currentProgram);
         
         s32 location = -1;
         
-        UniformValueMap::iterator iter = m_uniformValueMap.find(std::string(uniformName));
-        if(iter != m_uniformValueMap.end())
+        if(m_Program == currentProgram)
         {
-            location = iter->second;
-        }
-        else
-        {
-            DEBUG_ASSERT(glIsProgram(m_Program));
+            UniformValueMap::iterator iter = m_uniformValueMap.find(std::string(uniformName));
+            if(iter != m_uniformValueMap.end())
+            {
+                location = iter->second;
+            }
+            else
+            {
+                DEBUG_ASSERT(glIsProgram(m_Program));
+                
+                location = glGetUniformLocation(currentProgram, uniformName);
+                DEBUG_GL_ERROR_PRINT("glGetUniformLocation\n", "%d, %s",m_Program,uniformName);
+                
+                m_uniformValueMap.insert(UniformValuePair(std::string(uniformName), location));
+            }
             
-            location = glGetUniformLocation(currentProgram, uniformName);
-            DEBUG_GL_ERROR_PRINT("glGetUniformLocation\n", "%d, %s",m_Program,uniformName);
-            
-            m_uniformValueMap.insert(UniformValuePair(std::string(uniformName), location));
+            DEBUG_ASSERT_PRINT(-1 != location, "The named uniform variable (%s) is not an active uniform in the specified program object or if name starts with the reserved prefix \"gl_\"", uniformName);
         }
         
-        DEBUG_ASSERT_PRINT(-1 != location, "The named uniform variable (%s) is not an active uniform in the specified program object or if name starts with the reserved prefix \"gl_\"", uniformName);
+        
         
         return location;
     }
@@ -682,9 +687,14 @@ namespace njli
         return (m_Program != -1);
     }
     
-    void ShaderProgram::use()
+    bool ShaderProgram::use()
     {
-        glUseProgram(m_Program);
+        if(glIsProgram(m_Program))
+        {
+            glUseProgram(m_Program);
+            return true;
+        }
+        return false;
     }
     
 //    void ShaderProgram::unUse()
@@ -739,10 +749,12 @@ namespace njli
         if (logLength < 1)
             return NULL;
         
-        char *logBytes = new char[logLength];
+        static char logBytes[2048];
+//        char *logBytes = new char[logLength];
         logFunc(object, logLength, &charsWritten, logBytes);DEBUG_GL_ERROR_WRITE("GLLogFunction\n");
-        std::string s(logBytes);
-        delete [] logBytes;logBytes=NULL;
-        return s.c_str();
+        return logBytes;
+//        std::string s(logBytes);
+////        delete [] logBytes;logBytes=NULL;
+//        return s.c_str();
     }
 }

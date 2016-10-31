@@ -416,6 +416,8 @@ public:
     void resumeInterrupt();
     
     void receivedMemoryWarning();
+    
+    void updateViewSize();
 protected:
     void addActiveCamera(Camera * camera);
     void removeActiveCamera(Camera * camera);

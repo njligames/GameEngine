@@ -165,9 +165,10 @@
 
 
 - (void)setupGL
-{//[UIDevice currentDevice].model
+{
     NSLog(@"%@", [UIDevice currentDevice].model);
-    [EAGLContext setCurrentContext:self.context];
+    
+    NSAssert([EAGLContext setCurrentContext:self.context], @"");
     
     GLKView *view = (GLKView *)self.view;
     

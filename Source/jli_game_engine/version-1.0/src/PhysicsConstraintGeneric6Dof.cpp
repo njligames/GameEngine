@@ -235,7 +235,8 @@ namespace njli
         if(rigidBodyB)
             getNodeB()->getPhysicsBody()->setPhysicsConstraint(this);
         
-        Scene *scene = njli::World::getInstance()->getScene();
+//        Scene *scene = njli::World::getInstance()->getScene();
+        Scene *scene = getParent()->getParent()->getCurrentScene();
         scene->getPhysicsWorld()->addConstraint(this);
 
     }

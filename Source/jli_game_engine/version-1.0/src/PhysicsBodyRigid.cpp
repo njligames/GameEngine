@@ -259,8 +259,15 @@ namespace njli
     
     btTransform PhysicsBodyRigid::getWorldTransform()const
     {
-        btTransform t;
-        getBody()->getMotionState()->getWorldTransform(t);
+        btTransform t(btTransform::getIdentity());
+        if(getBody() && getBody()->getMotionState())
+        {
+            getBody()->getMotionState()->getWorldTransform(t);
+        }
+//        DEBUG_ASSERT(getBody());
+//        DEBUG_ASSERT(getBody()->getMotionState());
+//        
+//        getBody()->getMotionState()->getWorldTransform(t);
 //        m_btDefaultMotionState->getWorldTransform(t);
         return t;
     }
@@ -304,7 +311,7 @@ namespace njli
         if(PhysicsBody::getParent() && getPhysicsShape())
         {
             btTransform t = getWorldTransform();
-            setPhysicsBody(t);
+            setTransform(t);
         }
     }
     
@@ -469,7 +476,16 @@ namespace njli
         m_AngularForceAndPositionArrayIndex = 0;
     }
     
-    bool PhysicsBodyRigid::setPhysicsBody(const btTransform &transform)
+    /*
+     call...
+     
+     when the scene of the Parent (Node) is changed
+     When the PhysicsWorld is changed on the Scene
+     When the PhysicsShape is changed on the rigid body
+     When the mass is changed on the rigid body
+     
+     */
+    bool PhysicsBodyRigid::setTransform(const btTransform &transform)
     {
         if (m_btRigidBody && m_btRigidBody->getNumConstraintRefs() != 0)
         {
@@ -477,10 +493,10 @@ namespace njli
             return false;
         }
         
-        Scene *scene = njli::World::getInstance()->getScene();
+        Scene *scene = getParent()->getCurrentScene();
         if(!scene)
         {
-            DEBUG_LOG_WRITE_W(TAG, "The scene is NULL\n");
+            DEBUG_LOG_WRITE_W(TAG, "Unable to set the Transform, the scene is NULL\n");
             return false;
         }
         
@@ -558,7 +574,7 @@ namespace njli
     
     bool PhysicsBodyRigid::removePhysicsBody()
     {
-        Scene *scene = njli::World::getInstance()->getScene();
+        Scene *scene = getParent()->getCurrentScene();
         if(!scene)
         {
             DEBUG_LOG_WRITE_W(TAG, "The scene is NULL\n");

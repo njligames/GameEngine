@@ -25,6 +25,7 @@ void _debug_log_d(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_w(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _debug_log_e(const char* tag, const char* text, ...) PRINTF(2, 3);
 void _script_error(const char* tag, const char* text, ...) PRINTF(2, 3);
+    void _script_crash();
 
 void LUA_WRITE(const char* c);
 
@@ -50,7 +51,7 @@ _script_error(tag, "%s:%d:%s(): " fmt, __FILE__, __LINE__, __func__, __VA_ARGS__
 
 #if defined(DEBUG) || defined(_DEBUG)
 #define CRASH() \
-    __builtin_trap()
+    /*__builtin_trap()*/_script_crash()
 #else
 #define CRASH() \
     {           \
