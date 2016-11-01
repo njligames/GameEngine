@@ -85,7 +85,7 @@ namespace njli
     m_enableDebugDraw(false),
     m_DebugDrawCamera(NULL),
     m_DebugDrawMaterial(NULL),
-    m_TouchCamera(NULL),
+//    m_TouchCamera(NULL),
     m_SocketEnabled(false),
     m_SocketAddress("192.168.1.10"),
     m_SocketPort(2223),
@@ -466,18 +466,18 @@ namespace njli
             getScene()->keyboardReturn(text);
     }
     
-    void World::setTouchCamera(Camera *camera)
-    {
-        m_TouchCamera = camera;
-    }
-    Camera *World::getTouchCamera()
-    {
-        return m_TouchCamera;
-    }
-    const Camera *World::getTouchCamera()const
-    {
-        return m_TouchCamera;
-    }
+//    void World::setTouchCamera(Camera *camera)
+//    {
+//        m_TouchCamera = camera;
+//    }
+//    Camera *World::getTouchCamera()
+//    {
+//        return m_TouchCamera;
+//    }
+//    const Camera *World::getTouchCamera()const
+//    {
+//        return m_TouchCamera;
+//    }
     
     void World::getViewPort(s32 *viewPort)const
     {

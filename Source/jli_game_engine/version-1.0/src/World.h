@@ -255,19 +255,19 @@ public:
          *
          *  @param camera <#camera description#>
          */
-    void setTouchCamera(Camera* camera);
+//    void setTouchCamera(Camera* camera);
     /**
          *  <#Description#>
          *
          *  @return <#return value description#>
          */
-    Camera* getTouchCamera();
+//    Camera* getTouchCamera();
     /**
          *  <#Description#>
          *
          *  @return <#return value description#>
          */
-    const Camera* getTouchCamera() const;
+//    const Camera* getTouchCamera() const;
     /**
          *  <#Description#>
          *
@@ -493,7 +493,7 @@ private:
     Camera* m_DebugDrawCamera;
     Material* m_DebugDrawMaterial;
 
-    Camera* m_TouchCamera;
+//    Camera* m_TouchCamera;
 
     bool m_SocketEnabled;
     std::string m_SocketAddress;

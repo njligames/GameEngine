@@ -418,12 +418,34 @@ public:
     void receivedMemoryWarning();
     
     void updateViewSize();
+    
+    void addCameraNode(Node *cameraNode, bool touchCamera = false);
+    
+    /**
+     *  <#Description#>
+     *
+     *  @param camera <#camera description#>
+     */
+    void setTouchCamera(Camera* camera);
+    /**
+     *  <#Description#>
+     *
+     *  @return <#return value description#>
+     */
+    Camera* getTouchCamera();
+    /**
+     *  <#Description#>
+     *
+     *  @return <#return value description#>
+     */
+    const Camera* getTouchCamera() const;
 protected:
     void addActiveCamera(Camera * camera);
     void removeActiveCamera(Camera * camera);
 
     void addActiveNode(Node * node);
     void removeActiveNode(Node * node);
+    void getActiveNodes(btAlignedObjectArray<Node*> &activeNodes)const;
 
     void addActiveParticleEmitter(ParticleEmitter * particleEmitter);
     void removeActiveParticleEmitter(ParticleEmitter * particleEmitter);
@@ -456,6 +478,8 @@ private:
     btAlignedObjectArray<ParticleEmitter*>* m_ActiveParticleEmitters;
     btAlignedObjectArray<Clock*>* m_ActiveClocks;
     btAlignedObjectArray<Geometry*>* m_ActiveGeometry;
+    
+    Camera* m_TouchCamera;
 };
 }
 

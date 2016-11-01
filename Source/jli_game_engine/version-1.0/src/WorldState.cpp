@@ -360,63 +360,86 @@ namespace njli
     void WorldState::checkRayCollision(DeviceTouch **m_CurrentTouches, const char *code, bool disableNodeTouched)
     {
         Scene *scene = njli::World::getInstance()->getScene();
-        Camera *camera = njli::World::getInstance()->getTouchCamera();
         
-        if(scene && camera)
+        if(scene)
         {
-            PhysicsWorld *physicsWorld = scene->getPhysicsWorld();
-            if(physicsWorld)
+            Camera *camera = scene->getTouchCamera();
+            if(NULL != camera)
             {
-                bool touched = false;
-                for (s32 i = 0; i < DeviceTouch::MAX_TOUCHES; ++i)
+                PhysicsWorld *physicsWorld = scene->getPhysicsWorld();
+                if(physicsWorld)
                 {
-                    if(m_CurrentTouches[i])
+                    btAlignedObjectArray<Node*> untouchedNodes;
+                    untouchedNodes.clear();
+                    
+                    scene->getActiveNodes(untouchedNodes);
+                    
+                    bool touched = false;
+                    for (s32 i = 0; i < DeviceTouch::MAX_TOUCHES; ++i)
                     {
-                        btVector2 touchPosition = m_CurrentTouches[i]->getPosition();
-                        btVector3 from, to;
-                        camera->getTouchRay(touchPosition, from, to);
-                        
-                        s32 numContacts = 0;
-                        if (physicsWorld->rayTestAll(from, to, m_RayContacts, numContacts))
+                        if(m_CurrentTouches[i])
                         {
-//                            DEBUG_LOG_V("TAG", "%d ",numContacts);
-                            for (s32 i = 0; i < numContacts; ++i)
+                            btVector2 touchPosition = m_CurrentTouches[i]->getPosition();
+                            btVector3 from, to;
+                            camera->getTouchRay(touchPosition, from, to);
+                            
+                            s32 numContacts = 0;
+                            if (physicsWorld->rayTestAll(from, to, m_RayContacts, numContacts))
                             {
-                                PhysicsRayContact *contact = m_RayContacts.at(i);
-                                
-                                if (disableNodeTouched)
+                                for (s32 i = 0; i < numContacts; ++i)
                                 {
-                                    contact->getHitNode()->enableTouched(false);
+                                    PhysicsRayContact *contact = m_RayContacts.at(i);
+                                    
+                                    if (disableNodeTouched)
+                                    {
+                                        contact->getHitNode()->enableTouched(false);
+                                        
+                                    }
+                                    untouchedNodes.remove(contact->getHitNode());
+                                    contact->screenPosition(btVector2(from.x(), from.y()));
+                                    char buffer[BUFFER_SIZE];
+                                    sprintf(buffer, "%s%s", "__NJLINodeRay", code);
+                                    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, *contact);
+                                    touched = true;
+                                    
                                 }
-                                contact->screenPosition(btVector2(from.x(), from.y()));
-                                char buffer[BUFFER_SIZE];
-                                sprintf(buffer, "%s%s", "__NJLINodeRay", code);
-                                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, *contact);
-                                touched = true;
-                                
                             }
+                            //                        if(physicsWorld->rayTestClosest(from, to, *m_RayContact))
+                            //                        {
+                            //                            if (disableNodeTouched)
+                            //                            {
+                            //                                m_RayContact->getHitNode()->enableTouched(false);
+                            //                            }
+                            //                            m_RayContact->screenPosition(btVector2(from.x(), from.y()));
+                            //                            char buffer[BUFFER_SIZE];
+                            //                            sprintf(buffer, "%s%s", code, "Ray");
+                            //                            njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, *m_RayContact);
+                            //                            touched = true;
+                            //                        }
                         }
-//                        if(physicsWorld->rayTestClosest(from, to, *m_RayContact))
-//                        {
-//                            if (disableNodeTouched)
-//                            {
-//                                m_RayContact->getHitNode()->enableTouched(false);
-//                            }
-//                            m_RayContact->screenPosition(btVector2(from.x(), from.y()));
-//                            char buffer[BUFFER_SIZE];
-//                            sprintf(buffer, "%s%s", code, "Ray");
-//                            njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, *m_RayContact);
-//                            touched = true;
-//                        }
                     }
+                    
+                    for(unsigned int i = 0; i < untouchedNodes.size(); i++)
+                    {
+                        Node *n = untouchedNodes[i];
+                        
+                        char buffer[BUFFER_SIZE];
+                        sprintf(buffer, "%s", "__NJLINodeRayTouchMissed");
+                        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, n);
+                    }
+                    //                if (!touched)
+                    //                {
+                    //                    char buffer[BUFFER_SIZE];
+                    //                    sprintf(buffer, "%s%s", code, "RayMissed");
+                    //                    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
+                    //                }
                 }
-//                if (!touched)
-//                {
-//                    char buffer[BUFFER_SIZE];
-//                    sprintf(buffer, "%s%s", code, "RayMissed");
-//                    njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer);
-//                }
             }
+            else
+            {
+                DEBUG_WARN(TAG, "setTouchCamera() must be called on the scene\n");
+            }
+            
         }
     }
     

@@ -52,7 +52,8 @@ namespace njli
     m_ActiveNodes(new btAlignedObjectArray<Node*>()),
     m_ActiveParticleEmitters(new btAlignedObjectArray<ParticleEmitter*>()),
     m_ActiveClocks(new btAlignedObjectArray<Clock*>()),
-    m_ActiveGeometry(new btAlignedObjectArray<Geometry*>())
+    m_ActiveGeometry(new btAlignedObjectArray<Geometry*>()),
+    m_TouchCamera(NULL)
     {
         addChild(m_SceneStateMachine);
         addChild(m_BackgroundMaterial);
@@ -70,7 +71,8 @@ namespace njli
     m_ActiveNodes(new btAlignedObjectArray<Node*>()),
     m_ActiveParticleEmitters(new btAlignedObjectArray<ParticleEmitter*>()),
     m_ActiveClocks(new btAlignedObjectArray<Clock*>()),
-    m_ActiveGeometry(new btAlignedObjectArray<Geometry*>())
+    m_ActiveGeometry(new btAlignedObjectArray<Geometry*>()),
+    m_TouchCamera(NULL)
     {
         addChild(m_SceneStateMachine);
         addChild(m_BackgroundMaterial);
@@ -88,7 +90,8 @@ namespace njli
     m_ActiveNodes(new btAlignedObjectArray<Node*>()),
     m_ActiveParticleEmitters(new btAlignedObjectArray<ParticleEmitter*>()),
     m_ActiveClocks(new btAlignedObjectArray<Clock*>()),
-    m_ActiveGeometry(new btAlignedObjectArray<Geometry*>())
+    m_ActiveGeometry(new btAlignedObjectArray<Geometry*>()),
+    m_TouchCamera(NULL)
     {
         addChild(m_SceneStateMachine);
         addChild(m_BackgroundMaterial);
@@ -991,6 +994,50 @@ namespace njli
         }
     }
     
+    void Scene::addCameraNode(Node *cameraNode, bool touchCamera)
+    {
+        getRootNode()->addChildNode(cameraNode);
+        if(touchCamera)
+        {
+            Camera *camera = cameraNode->getCamera();
+            if(camera)
+            {
+                if(camera->isOrthographic())
+                {
+                    setTouchCamera(camera);
+                }
+                else
+                {
+                    DEBUG_WARN(TAG, "The camera must be orthographic\n");
+                }
+            }
+            else
+            {
+                DEBUG_WARN(TAG, "There must be a camera set to the node\n");
+            }
+        }
+    }
+    
+    /**
+     *  <#Description#>
+     *
+     *  @param camera <#camera description#>
+     */
+    void Scene::setTouchCamera(Camera* camera)
+    {
+        m_TouchCamera = camera;
+    }
+    
+    Camera* Scene::getTouchCamera()
+    {
+        return m_TouchCamera;
+    }
+    
+    const Camera* Scene::getTouchCamera() const
+    {
+        return m_TouchCamera;
+    }
+    
     
     
     
@@ -1052,6 +1099,14 @@ namespace njli
         
         for (unsigned int i = 0; i < node->numberOfChildrenNodes(); i++)
             this->removeActiveNode(node->getChildNode(i));
+    }
+    void Scene::getActiveNodes(btAlignedObjectArray<Node*> &activeNodes)const
+    {
+        for (unsigned int i = 0; i < m_ActiveNodes->size(); i++)
+        {
+            Node *n = (*m_ActiveNodes)[i];
+            activeNodes.push_back(n);
+        }
     }
     void Scene::addActiveParticleEmitter(ParticleEmitter *particleEmitter)
     {
