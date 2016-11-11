@@ -206,10 +206,15 @@ namespace njli
         if (object && m_Children.size() > 0)
         {
             std::vector<AbstractDecorator*>::iterator iter = std::find(m_Children.begin(), m_Children.end(), object);
-            DEBUG_ASSERT(iter != m_Children.end());
             
-            (*iter)->removeParent();
-            m_Children.erase(iter);
+            if(iter != m_Children.end())
+            {
+                (*iter)->removeParent();
+                m_Children.erase(iter);
+            }
+            ///DEBUG_ASSERT(iter != m_Children.end());
+            
+            
         }
     }
 

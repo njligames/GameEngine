@@ -48,6 +48,7 @@ Scene : public AbstractFactoryObject
     friend class Node;
     friend class WorldInput;
     friend class WorldState;
+    friend class SceneState;
 
 protected:
     Scene();

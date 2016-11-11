@@ -187,8 +187,7 @@
                                  view.frame.size.height * view.contentScaleFactor,
                                  orientation);
     
-    
-//    njli::NJLIGameEngine::create(0, 0, view.frame.size.width * view.contentScaleFactor, view.frame.size.height * view.contentScaleFactor, orientation, [[UIDeviceUtil hardwareDescription] UTF8String]);
+    njli::NJLIGameEngine::start();
 }
 
 - (void)tearDownGL

@@ -30,6 +30,7 @@ typedef void (*GLLogFunction)(u32 program,
 namespace njli {
 class ShaderProgramBuilder;
 class Camera;
+    class Geometry;
 //    class btTransform;
 
 /**
@@ -245,6 +246,8 @@ public:
     bool compileShader(s32 * shader, const u32 type, const char* source);
     const char* logForOpenGLObject(u32 object, GLInfoFunction infoFunc, GLLogFunction logFunc) const;
 
+    Geometry* getParent();
+    const Geometry* getParent() const;
 private:
     s32 m_Program;
     s32 m_vertShader;

@@ -208,98 +208,198 @@ namespace njli
         return ret;
     }
     
-    void SceneState::touchDown(Scene *object, DeviceTouch **m_CurrentTouches)
+    void SceneState::touchDown(Scene *scene, DeviceTouch **m_CurrentTouches)
     {
         char action[BUFFER_SIZE] = "Down";
         char buffer[BUFFER_SIZE] = "";
         
         sprintf(buffer, "__NJLISceneTouch%s", action);
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene, m_CurrentTouches);
+        
+        if(scene)
+        {
+            sprintf(buffer, "__NJLINodeTouch%s", action);
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i], m_CurrentTouches);
+            }
+        }
     }
     
-    void SceneState::touchUp(Scene *object, DeviceTouch **m_CurrentTouches)
+    void SceneState::touchUp(Scene *scene, DeviceTouch **m_CurrentTouches)
     {
         char action[BUFFER_SIZE] = "Up";
         char buffer[BUFFER_SIZE] = "";
         
         sprintf(buffer, "__NJLISceneTouch%s", action);
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene, m_CurrentTouches);
+        
+        if(scene)
+        {
+            sprintf(buffer, "__NJLINodeTouch%s", action);
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i], m_CurrentTouches);
+            }
+        }
     }
     
-    void SceneState::touchMove(Scene *object, DeviceTouch **m_CurrentTouches)
+    void SceneState::touchMove(Scene *scene, DeviceTouch **m_CurrentTouches)
     {
         char action[BUFFER_SIZE] = "Move";
         char buffer[BUFFER_SIZE] = "";
         
         sprintf(buffer, "__NJLISceneTouch%s", action);
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene, m_CurrentTouches);
+        
+        if(scene)
+        {
+            sprintf(buffer, "__NJLINodeTouch%s", action);
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i], m_CurrentTouches);
+            }
+        }
     }
     
-    void SceneState::touchCancelled(Scene *object, DeviceTouch **m_CurrentTouches)
+    void SceneState::touchCancelled(Scene *scene, DeviceTouch **m_CurrentTouches)
     {
         char action[BUFFER_SIZE] = "Cancelled";
         char buffer[BUFFER_SIZE] = "";
         
         sprintf(buffer, "__NJLISceneTouch%s", action);
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, m_CurrentTouches);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene, m_CurrentTouches);
+        
+        if(scene)
+        {
+            sprintf(buffer, "__NJLINodeTouch%s", action);
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i], m_CurrentTouches);
+            }
+        }
     }
     
-    void SceneState::keyboardShow(Scene *object)
+    void SceneState::keyboardShow(Scene *scene)
     {
         char buffer[256];
         sprintf(buffer, "%s", "__NJLISceneKeyboardShow");
         
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene);
+        
+        if(scene)
+        {
+            sprintf(buffer, "%s", "__NJLINodeKeyboardShow");
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i]);
+            }
+        }
     }
     
-    void SceneState::keyboardCancel(Scene *object)
+    void SceneState::keyboardCancel(Scene *scene)
     {
         char buffer[256];
         sprintf(buffer, "%s", "__NJLISceneKeyboardCancel");
         
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene);
+        
+        if(scene)
+        {
+            sprintf(buffer, "%s", "__NJLINodeKeyboardCancel");
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i]);
+            }
+        }
     }
     
-    void SceneState::keyboardReturn(Scene *object, const char* text)
+    void SceneState::keyboardReturn(Scene *scene, const char* text)
     {
         char buffer[256];
         sprintf(buffer, "%s", "__NJLISceneKeyboardReturn");
         
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object, text);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene, text);
+        
+        if(scene)
+        {
+            sprintf(buffer, "%s", "__NJLINodeKeyboardReturn");
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i], text);
+            }
+        }
     }
     
-    void SceneState::renderHUD(Scene *object)
+    void SceneState::renderHUD(Scene *scene)
     {
         char buffer[256];
         sprintf(buffer, "%s", "__NJLISceneRenderHUD");
         
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene);
+        
+        if(scene)
+        {
+            sprintf(buffer, "%s", "__NJLINodeRenderHUD");
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i]);
+            }
+        }
     }
     
-    void SceneState::pauseGame(Scene *object)
+    void SceneState::pauseGame(Scene *scene)
     {
         char buffer[256];
         sprintf(buffer, "%s", "__NJLISceneGamePause");
         
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene);
+        
+        if(scene)
+        {
+            sprintf(buffer, "%s", "__NJLINodeGamePause");
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i]);
+            }
+        }
     }
-    void SceneState::unPauseGame(Scene *object)
+    void SceneState::unPauseGame(Scene *scene)
     {
         char buffer[256];
         sprintf(buffer, "%s", "__NJLISceneGameUnPause");
         
-        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, object);
+        njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, scene);
+        
+        if(scene)
+        {
+            sprintf(buffer, "%s", "__NJLINodeGameUnPause");
+            btAlignedObjectArray<Node*> activeNodes;
+            scene->getActiveNodes(activeNodes);
+            for(unsigned int i = 0; i < activeNodes.size(); i++)
+            {
+                njli::World::getInstance()->getWorldLuaVirtualMachine()->execute(buffer, activeNodes[i]);
+            }
+        }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     void SceneState::willResignActive(Scene *object)
     {

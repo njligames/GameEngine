@@ -206,6 +206,15 @@ public:
          */
     bool execute(const char* code, Scene* scene);
     
+    /**
+     <#Description#>
+
+     @param code  <#code description#>
+     @param scene <#scene description#>
+     @param str   <#str description#>
+
+     @return <#return value description#>
+     */
     bool execute(const char *code, Scene *scene, const char* str);
 
     /**
@@ -366,7 +375,31 @@ public:
          *  @return <#return value description#>
          */
     bool execute(const char* code, Action* action, f32 num);
+    
+    
+    /**
+     <#Description#>
 
+     @param code    <#code description#>
+     @param pEntity <#pEntity description#>
+     @param touches <#touches description#>
+
+     @return <#return value description#>
+     */
+    bool execute(const char *code, Node *pEntity, DeviceTouch **touches);
+
+    
+    /**
+     <#Description#>
+
+     @param code <#code description#>
+     @param node <#node description#>
+     @param str  <#str description#>
+
+     @return <#return value description#>
+     */
+    bool execute(const char *code, Node *node, const char* str);
+    
     /**
          *  @author James Folk, 16-02-11 18:02:04
          *

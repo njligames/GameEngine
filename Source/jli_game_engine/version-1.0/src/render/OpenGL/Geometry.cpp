@@ -980,7 +980,7 @@ namespace njli
         m_UnLoadGPU = false;
     }
     
-    void Geometry::setupShader_Internal()
+    void Geometry::setupShader()
     {
 //        DEBUG_ASSERT(m_setupShader);
         

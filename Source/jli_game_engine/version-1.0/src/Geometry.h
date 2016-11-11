@@ -551,6 +551,7 @@ public:
 
     void sort(const btVector3& cameraOrigin);
 
+void setupShader();
 private:
     void quickSort(signed long left, signed long right, const btVector3& cameraOrigin);
 
@@ -617,7 +618,7 @@ private:
     void unLoadGPU_Internal();
 
     //bool m_setupShader;
-    void setupShader_Internal();
+
 
     bool m_bufferModified;
     bool m_vertexAttribChanged;

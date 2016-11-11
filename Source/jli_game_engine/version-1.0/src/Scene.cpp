@@ -1094,7 +1094,7 @@ namespace njli
         DEBUG_ASSERT(NULL != node);
         
         (*m_ActiveNodes).remove(node);
-        node->setCurrentScene(NULL);
+        node->removeCurrentScene();
         removeChild(node);
         
         for (unsigned int i = 0; i < node->numberOfChildrenNodes(); i++)

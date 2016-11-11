@@ -158,7 +158,7 @@ static GLuint compile_shader(const GLenum type, const GLchar* source, const GLin
 static GLuint link_program(const GLuint vertex_shader, const GLuint fragment_shader) {
     GLuint program_object_id = glCreateProgram();DEBUG_GL_ERROR_WRITE("glCreateProgram");
 //    log_program_info_log(program_object_id);
-    GLint link_status;
+    
     
     DEBUG_ASSERT(program_object_id != 0);
 //    DEBUG_LOG_V("link_program", "id=%d", program_object_id);
@@ -171,15 +171,7 @@ static GLuint link_program(const GLuint vertex_shader, const GLuint fragment_sha
 //    log_program_info_log(program_object_id);
     glLinkProgram(program_object_id);DEBUG_GL_ERROR_WRITE("glLinkProgram");
 //    log_program_info_log(program_object_id);
-    glGetProgramiv(program_object_id, GL_LINK_STATUS, &link_status);DEBUG_GL_ERROR_WRITE("glGetProgramiv");
-//    log_program_info_log(program_object_id);
     
-    if (LOGGING_ON) {
-        DEBUG_LOG_D(TAG, "Results of linking program = %s\n", (link_status==GL_TRUE)?"true":"false");
-        log_program_info_log(program_object_id);
-    }
-    
-    DEBUG_ASSERT(link_status != 0);
     
     return program_object_id;
 }
@@ -613,6 +605,14 @@ namespace njli
         
         if(!compile(m_VertexShaderSource.c_str(), JLI_SHADER_TYPE_VERTEX))
         {
+            if(-1 != m_vertShader)
+                glDeleteShader(m_vertShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_vertShader = -1;
+            
+            if(-1 != m_fragShader)
+                glDeleteShader(m_fragShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_fragShader = -1;
+            
             DEBUG_LOG_PRINT_E(TAG, "Vertex log: `%s`\n", vertexShaderLog());
             return false;
         }
@@ -620,6 +620,15 @@ namespace njli
         if(!compile(m_FragmentShaderSource.c_str(), JLI_SHADER_TYPE_FRAGMENT))
         {
             DEBUG_LOG_PRINT_E(TAG, "Vertex log: `%s`\n", fragmentShaderLog());
+            
+            if(-1 != m_vertShader)
+                glDeleteShader(m_vertShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_vertShader = -1;
+            
+            if(-1 != m_fragShader)
+                glDeleteShader(m_fragShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_fragShader = -1;
+            
             return false;
         }
         
@@ -627,6 +636,32 @@ namespace njli
         DEBUG_ASSERT(glIsShader(m_fragShader));
         m_Program = link_program(m_vertShader, m_fragShader);
         DEBUG_ASSERT(glIsProgram(m_Program));
+        
+        GLint link_status;
+        glGetProgramiv(m_Program, GL_LINK_STATUS, &link_status);DEBUG_GL_ERROR_WRITE("glGetProgramiv");
+        //    log_program_info_log(program_object_id);
+        
+        if (LOGGING_ON) {
+            DEBUG_LOG_D(TAG, "Results of linking program = %s\n", (link_status==GL_TRUE)?"true":"false");
+            log_program_info_log(m_Program);
+        }
+        
+        if(GL_FALSE == link_status)
+        {
+            if(-1 != m_vertShader)
+                glDeleteShader(m_vertShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_vertShader = -1;
+            
+            if(-1 != m_fragShader)
+                glDeleteShader(m_fragShader);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_fragShader = -1;
+            
+            if(-1 != m_Program)
+                glDeleteProgram(m_Program);DEBUG_GL_ERROR_WRITE("glDeleteProgram\n");
+            m_Program = -1;
+            
+            return false;
+        }
         
         GLint status = validate_program(m_Program);
         
@@ -680,6 +715,12 @@ namespace njli
     {
         m_VertexShaderSource = vertexShaderSource;
         m_FragmentShaderSource = fragmentShaderSource;
+        
+        Geometry *geometry = getParent();
+        if(NULL != geometry)
+        {
+            geometry->setupShader();
+        }
     }
     
     bool ShaderProgram::isLinked()const
@@ -756,5 +797,15 @@ namespace njli
 //        std::string s(logBytes);
 ////        delete [] logBytes;logBytes=NULL;
 //        return s.c_str();
+    }
+    
+    Geometry* ShaderProgram::getParent()
+    {
+        return dynamic_cast<Geometry*>(AbstractDecorator::getParent());
+    }
+    
+    const Geometry* ShaderProgram::getParent() const
+    {
+        return dynamic_cast<const Geometry*>(AbstractDecorator::getParent());
     }
 }

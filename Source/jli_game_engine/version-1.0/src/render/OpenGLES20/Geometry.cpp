@@ -452,9 +452,7 @@ namespace njli
         
         addChild(m_ShaderProgram);
         
-        
-//        setupShader();
-        setupShader_Internal();
+        setupShader();
     }
     
     void Geometry::removeShaderProgram()
@@ -1201,7 +1199,7 @@ namespace njli
         m_UnLoadGPU = false;
     }
     
-    void Geometry::setupShader_Internal()
+    void Geometry::setupShader()
     {
 //        DEBUG_ASSERT(m_setupShader);
         
@@ -1212,42 +1210,44 @@ namespace njli
         
         if (!shader->isLinked())
         {
-            if(!shader->link())
+            if(shader->link())
             {
                 DEBUG_LOG_PRINT_E(TAG, "%s\n", shader->programLog());
 //                DEBUG_LOG_PRINT_E(TAG, "Vertex log: %s\n", shader->vertexShaderLog());
 //                DEBUG_LOG_PRINT_E(TAG, "Fragment log: %s\n", shader->fragmentShaderLog());
             }
         }
-        shader->use();
-        // ... and add the attributes the shader needs for the vertex position, color and texture st information
-        shader->bindAttribute("inPosition");
-        shader->bindAttribute("inTexCoord");
-        shader->bindAttribute("inColor");
-        shader->bindAttribute("inOpacity");
-        shader->bindAttribute("inHidden");
-        
-        shader->bindAttribute("inTransform");
-        shader->bindAttribute("inColorTransform");
-        
-        // Setup the index pointers into the shader for our attributes
-        m_InPositionAttrib = shader->getAttributeLocation("inPosition");
-        m_InTexCoordAttrib = shader->getAttributeLocation("inTexCoord");
-        m_InColorAttrib = shader->getAttributeLocation("inColor");
-        m_InOpacityAttrib = shader->getAttributeLocation("inOpacity");
-        m_InHiddenAttrib = shader->getAttributeLocation("inHidden");
-        
-        
-        m_InTransformAttrib = shader->getAttributeLocation("inTransform");
-        m_InColorTransform = shader->getAttributeLocation("inColorTransform");
-        
-//        m_modelViewMatrixUniform = shader->getUniformLocation("modelView");
-        m_projectionMatrixUniform = shader->getUniformLocation("projection");
-//        u_opacityModifyRGB = shader->getUniformLocation("u_opacityModifyRGB");
-        //        u_pointSize = shader->getUniformLocation("u_pointSize");
-        
-//        m_setupShader = false;
-        m_vertexAttribChanged = true;
+        if (shader->isLinked())
+        {
+            shader->use();
+            // ... and add the attributes the shader needs for the vertex position, color and texture st information
+            shader->bindAttribute("inPosition");
+            shader->bindAttribute("inTexCoord");
+            shader->bindAttribute("inColor");
+            shader->bindAttribute("inOpacity");
+            shader->bindAttribute("inHidden");
+            
+            shader->bindAttribute("inTransform");
+            shader->bindAttribute("inColorTransform");
+            
+            // Setup the index pointers into the shader for our attributes
+            m_InPositionAttrib = shader->getAttributeLocation("inPosition");
+            m_InTexCoordAttrib = shader->getAttributeLocation("inTexCoord");
+            m_InColorAttrib = shader->getAttributeLocation("inColor");
+            m_InOpacityAttrib = shader->getAttributeLocation("inOpacity");
+            m_InHiddenAttrib = shader->getAttributeLocation("inHidden");
+            
+            
+            m_InTransformAttrib = shader->getAttributeLocation("inTransform");
+            m_InColorTransform = shader->getAttributeLocation("inColorTransform");
+            
+            //        m_modelViewMatrixUniform = shader->getUniformLocation("modelView");
+            m_projectionMatrixUniform = shader->getUniformLocation("projection");
+            //        u_opacityModifyRGB = shader->getUniformLocation("u_opacityModifyRGB");
+            //        u_pointSize = shader->getUniformLocation("u_pointSize");
+            
+            //        m_setupShader = false;
+            m_vertexAttribChanged = true;
+        }
     }
-    
 }

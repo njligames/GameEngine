@@ -504,6 +504,13 @@ private:
     bool m_AnimationPaused;
     bool m_GamePaused;
 };
+    
+    inline btVector2 SCREEN()
+    {
+        if(njli::World::getInstance())
+            return njli::World::getInstance()->getViewportDimensions();
+        return btVector2(0,0);
+    }
 }
 
 #endif /* defined(__JLIGameEngineTest__World__) */

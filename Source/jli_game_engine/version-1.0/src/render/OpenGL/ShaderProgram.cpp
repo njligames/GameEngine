@@ -530,6 +530,8 @@ namespace njli
     {
         m_VertexShaderSource = vertexShaderSource;
         m_FragmentShaderSource = fragmentShaderSource;
+        
+        
     }
     
     bool ShaderProgram::isLinked()const

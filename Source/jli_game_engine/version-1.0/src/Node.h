@@ -1563,6 +1563,7 @@ public:
          */
     void replaceChildNode(Node * oldChild, Node * newChild);
 
+    void setCurrentScene(Node *node);
 protected:
     void updateActions();
     virtual bool canDelete() const;
@@ -1579,6 +1580,8 @@ protected:
     Scene *getCurrentScene();
     const Scene *getCurrentScene()const;
     void setCurrentScene(Scene *scene);
+    
+    void removeCurrentScene();
 
 private:
     std::vector<PhysicsConstraint*> m_PhysicsConstraintList;

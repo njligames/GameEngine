@@ -231,7 +231,7 @@ namespace njli
                 for (std::vector<Node*>::iterator iter = object->m_Children.begin();
                      iter != object->m_Children.end(); ++iter)
                 {
-                    Node::destroy(*iter, destroyChildrenNodes);
+                    Node::destroy(*iter, true);
                 }
             }
             
@@ -1572,6 +1572,8 @@ namespace njli
     
     Scene *Node::getCurrentScene()
     {
+        if(m_CurrentScene == NULL)
+            m_CurrentScene = njli::World::getInstance()->getScene();
         return m_CurrentScene;
     }
     
@@ -1582,19 +1584,28 @@ namespace njli
     
     void Node::setCurrentScene(Scene *scene)
     {
-        DEBUG_ASSERT(scene != NULL);
-        
         m_CurrentScene = scene;
         
         if(NULL != m_Geometry)
         {
-            m_CurrentScene->addActiveGeometry(m_Geometry);
+            if(m_CurrentScene)
+                m_CurrentScene->addActiveGeometry(m_Geometry);
         }
         
         if(NULL != m_Camera)
         {
-            m_CurrentScene->addActiveCamera(m_Camera);
+            if(m_CurrentScene)
+                m_CurrentScene->addActiveCamera(m_Camera);
         }
+    }
+    
+    void Node::setCurrentScene(Node *node)
+    {
+        setCurrentScene(node->getCurrentScene());
+    }
+    void Node::removeCurrentScene()
+    {
+        m_CurrentScene = NULL;
     }
     
     void Node::updateActions()
