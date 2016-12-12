@@ -13,7 +13,7 @@
 
 //https://translate.google.com/#no/zh-TW/content
 
-std::string LOCALIZED_TEXT(const char* key);
+std::string LOCALIZED_TEXT(const char* key, const char *default_value, const char *comment="no comment");
 std::string LOCALIZED_LANGUAGE();
 
 #endif
