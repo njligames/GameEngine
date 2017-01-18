@@ -24,18 +24,22 @@ namespace njli
     // Robert Penner's easing functions in GLSL
     // https://github.com/stackgl/glsl-easings
     float Action::linear(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t;
     }
     
     float Action::exponentialIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t == 0.0 ? t : pow(2.0, 10.0 * (t - 1.0));
     }
     
     float Action::exponentialOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t == 1.0 ? t : 1.0 - pow(2.0, -10.0 * t);
     }
     
     float Action::exponentialInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t == 0.0 || t == 1.0
         ? t
         : t < 0.5
@@ -44,102 +48,124 @@ namespace njli
     }
     
     float Action::sineIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return sin((t - 1.0) * SIMD_HALF_PI) + 1.0;
     }
     
     float Action::sineOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return sin(t * SIMD_HALF_PI);
     }
     
     float Action::sineInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return -0.5 * (cos(PI * t) - 1.0);
     }
     
     float Action::qinticIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return pow(t, 5.0);
     }
     
     float Action::qinticOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return 1.0 - (pow(t - 1.0, 5.0));
     }
     
     float Action::qinticInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t < 0.5
         ? +16.0 * pow(t, 5.0)
         : -0.5 * pow(2.0 * t - 2.0, 5.0) + 1.0;
     }
     
     float Action::quarticIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return pow(t, 4.0);
     }
     
     float Action::quarticOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return pow(t - 1.0, 3.0) * (1.0 - t) + 1.0;
     }
     
     float Action::quarticInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t < 0.5
         ? +8.0 * pow(t, 4.0)
         : -8.0 * pow(t - 1.0, 4.0) + 1.0;
     }
     
     float Action::quadraticInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         float p = 2.0 * t * t;
         return t < 0.5 ? p : -p + (4.0 * t) - 1.0;
     }
     
     float Action::quadraticIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t * t;
     }
     
     float Action::quadraticOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return -t * (t - 2.0);
     }
     
     float Action::cubicIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t * t * t;
     }
     
     float Action::cubicOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         float f = t - 1.0;
         return f * f * f + 1.0;
     }
     
     float Action::cubicInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t < 0.5
         ? 4.0 * t * t * t
         : 0.5 * pow(2.0 * t - 2.0, 3.0) + 1.0;
     }
     
     float Action::elasticIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return sin(13.0 * t * SIMD_HALF_PI) * pow(2.0, 10.0 * (t - 1.0));
     }
     
     float Action::elasticOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return sin(-13.0 * (t + 1.0) * SIMD_HALF_PI) * pow(2.0, -10.0 * t) + 1.0;
     }
     
     float Action::elasticInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t < 0.5
         ? 0.5 * sin(+13.0 * SIMD_HALF_PI * 2.0 * t) * pow(2.0, 10.0 * (2.0 * t - 1.0))
         : 0.5 * sin(-13.0 * SIMD_HALF_PI * ((2.0 * t - 1.0) + 1.0)) * pow(2.0, -10.0 * (2.0 * t - 1.0)) + 1.0;
     }
     
     float Action::circularIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return 1.0 - sqrt(1.0 - t * t);
     }
     
     float Action::circularOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return sqrt((2.0 - t) * t);
     }
     
     float Action::circularInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t < 0.5
         ? 0.5 * (1.0 - sqrt(1.0 - 4.0 * t * t))
         : 0.5 * (sqrt((3.0 - 2.0 * t) * (2.0 * t - 1.0)) + 1.0);
     }
     
     float Action::bounceOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         const float a = 4.0 / 11.0;
         const float b = 8.0 / 11.0;
         const float c = 9.0 / 10.0;
@@ -160,25 +186,30 @@ namespace njli
     }
     
     float Action::bounceIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return 1.0 - bounceOut(1.0 - t);
     }
     
     float Action::bounceInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         return t < 0.5
         ? 0.5 * (1.0 - bounceOut(1.0 - t * 2.0))
         : 0.5 * bounceOut(t * 2.0 - 1.0) + 0.5;
     }
     
     float Action::backIn(float t) {
+        assert(t >= 0 && t <= 1.0);
         return pow(t, 3.0) - t * sin(t * PI);
     }
     
     float Action::backOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         float f = 1.0 - t;
         return 1.0 - (pow(f, 3.0) - f * sin(f * PI));
     }
     
     float Action::backInOut(float t) {
+        assert(t >= 0 && t <= 1.0);
         float f = t < 0.5
         ? 2.0 * t
         : 1.0 - (2.0 * t - 1.0);
