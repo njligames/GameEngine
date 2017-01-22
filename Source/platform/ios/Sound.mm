@@ -276,7 +276,7 @@ namespace njli
         }
         else
         {
-            DEBUG_WARN(TAG, "The sound is not loaded\n");
+            DEBUG_WARN(TAG, "The sound is not null\n");
         }
     }
     
