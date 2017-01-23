@@ -26,6 +26,9 @@
 
 #include "lua.h"
 #include "lauxlib.h"
+extern "C" {
+#include "lualoadexts.h"
+}
 
 #include "File.h"
 #include "AbstractActionable.h"
@@ -1171,6 +1174,8 @@ namespace njli
         DEBUG_LOG_V(TAG, "Lua version: %s\n", LUA_VERSION);
         
         luaL_openlibs(m_lua_State);
+        
+        luax_loadexts(m_lua_State);
         
         const char *paths[] =
         {

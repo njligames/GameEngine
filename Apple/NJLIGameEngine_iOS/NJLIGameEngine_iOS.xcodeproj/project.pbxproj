@@ -446,10 +446,6 @@
 		C18B81D31C9B9023003628FE /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D891C9B8C18003628FE /* json_reader.cpp */; };
 		C18B81D41C9B9023003628FE /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D8B1C9B8C18003628FE /* json_value.cpp */; };
 		C18B81D51C9B9023003628FE /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D8D1C9B8C18003628FE /* json_writer.cpp */; };
-		C18B81D61C9B902A003628FE /* lbit.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D9C1C9B8C58003628FE /* lbit.c */; };
-		C18B81D71C9B902A003628FE /* lbullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D9E1C9B8C58003628FE /* lbullet.cpp */; };
-		C18B81D81C9B902A003628FE /* lnjli.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18B7DB71C9B8C58003628FE /* lnjli.cpp */; };
-		C18B81D91C9B902A003628FE /* njli_swig_runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B7DDB1C9B8C58003628FE /* njli_swig_runtime.h */; };
 		C18B81DA1C9B9031003628FE /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D971C9B8C58003628FE /* lapi.c */; };
 		C18B81DB1C9B9031003628FE /* lapi.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B7D981C9B8C58003628FE /* lapi.h */; };
 		C18B81DC1C9B9031003628FE /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B7D991C9B8C58003628FE /* lauxlib.c */; };
@@ -880,6 +876,47 @@
 		C18B84601C9B90BF003628FE /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B802F1C9B8E21003628FE /* zlib.h */; };
 		C18B84611C9B90BF003628FE /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = C18B80301C9B8E21003628FE /* zutil.c */; };
 		C18B84621C9B90BF003628FE /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = C18B80311C9B8E21003628FE /* zutil.h */; };
+		C193BBE91E35998300876F97 /* lualoadexts.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BBC11E35998300876F97 /* lualoadexts.c */; };
+		C193BBEA1E35998300876F97 /* lualoadexts.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BBC21E35998300876F97 /* lualoadexts.h */; };
+		C193BC0A1E35998300876F97 /* luasocketscripts.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BBE31E35998300876F97 /* luasocketscripts.c */; };
+		C193BC0B1E35998300876F97 /* luasocketscripts.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BBE41E35998300876F97 /* luasocketscripts.h */; };
+		C193BC341E359CAC00876F97 /* auxiliar.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC0C1E359CAC00876F97 /* auxiliar.c */; };
+		C193BC351E359CAC00876F97 /* auxiliar.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC0D1E359CAC00876F97 /* auxiliar.h */; };
+		C193BC361E359CAC00876F97 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC0E1E359CAC00876F97 /* buffer.c */; };
+		C193BC371E359CAC00876F97 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC0F1E359CAC00876F97 /* buffer.h */; };
+		C193BC381E359CAC00876F97 /* compat.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC101E359CAC00876F97 /* compat.c */; };
+		C193BC391E359CAC00876F97 /* compat.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC111E359CAC00876F97 /* compat.h */; };
+		C193BC3A1E359CAC00876F97 /* except.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC121E359CAC00876F97 /* except.c */; };
+		C193BC3B1E359CAC00876F97 /* except.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC131E359CAC00876F97 /* except.h */; };
+		C193BC3C1E359CAC00876F97 /* inet.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC141E359CAC00876F97 /* inet.c */; };
+		C193BC3D1E359CAC00876F97 /* inet.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC151E359CAC00876F97 /* inet.h */; };
+		C193BC3E1E359CAC00876F97 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC161E359CAC00876F97 /* io.c */; };
+		C193BC3F1E359CAC00876F97 /* io.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC171E359CAC00876F97 /* io.h */; };
+		C193BC401E359CAC00876F97 /* luasocket.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC181E359CAC00876F97 /* luasocket.c */; };
+		C193BC411E359CAC00876F97 /* luasocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC191E359CAC00876F97 /* luasocket.h */; };
+		C193BC431E359CAC00876F97 /* mime.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC1B1E359CAC00876F97 /* mime.c */; };
+		C193BC441E359CAC00876F97 /* mime.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC1C1E359CAC00876F97 /* mime.h */; };
+		C193BC451E359CAC00876F97 /* options.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC1D1E359CAC00876F97 /* options.c */; };
+		C193BC461E359CAC00876F97 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC1E1E359CAC00876F97 /* options.h */; };
+		C193BC471E359CAC00876F97 /* pierror.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC1F1E359CAC00876F97 /* pierror.h */; };
+		C193BC481E359CAC00876F97 /* select.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC201E359CAC00876F97 /* select.c */; };
+		C193BC491E359CAC00876F97 /* select.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC211E359CAC00876F97 /* select.h */; };
+		C193BC4A1E359CAC00876F97 /* serial.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC221E359CAC00876F97 /* serial.c */; };
+		C193BC4B1E359CAC00876F97 /* socket.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC231E359CAC00876F97 /* socket.h */; };
+		C193BC4C1E359CAC00876F97 /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC241E359CAC00876F97 /* tcp.c */; };
+		C193BC4D1E359CAC00876F97 /* tcp.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC251E359CAC00876F97 /* tcp.h */; };
+		C193BC4E1E359CAC00876F97 /* timeout.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC261E359CAC00876F97 /* timeout.c */; };
+		C193BC4F1E359CAC00876F97 /* timeout.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC271E359CAC00876F97 /* timeout.h */; };
+		C193BC501E359CAC00876F97 /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC281E359CAC00876F97 /* udp.c */; };
+		C193BC511E359CAC00876F97 /* udp.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC291E359CAC00876F97 /* udp.h */; };
+		C193BC521E359CAC00876F97 /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC2A1E359CAC00876F97 /* unix.c */; };
+		C193BC531E359CAC00876F97 /* unix.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC2B1E359CAC00876F97 /* unix.h */; };
+		C193BC541E359CAC00876F97 /* unixdgram.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC2C1E359CAC00876F97 /* unixdgram.c */; };
+		C193BC551E359CAC00876F97 /* unixdgram.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC2D1E359CAC00876F97 /* unixdgram.h */; };
+		C193BC561E359CAC00876F97 /* unixstream.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC2E1E359CAC00876F97 /* unixstream.c */; };
+		C193BC571E359CAC00876F97 /* unixstream.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC2F1E359CAC00876F97 /* unixstream.h */; };
+		C193BC581E359CAC00876F97 /* usocket.c in Sources */ = {isa = PBXBuildFile; fileRef = C193BC301E359CAC00876F97 /* usocket.c */; };
+		C193BC591E359CAC00876F97 /* usocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C193BC311E359CAC00876F97 /* usocket.h */; };
 		C199ADE41CE0F392007440D4 /* SteeringBehaviorMachineDithered.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C199ADDE1CE0F392007440D4 /* SteeringBehaviorMachineDithered.cpp */; };
 		C199ADE51CE0F392007440D4 /* SteeringBehaviorMachineDithered.h in Headers */ = {isa = PBXBuildFile; fileRef = C199ADDF1CE0F392007440D4 /* SteeringBehaviorMachineDithered.h */; };
 		C199ADE61CE0F392007440D4 /* SteeringBehaviorMachinePrioritized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C199ADE01CE0F392007440D4 /* SteeringBehaviorMachinePrioritized.cpp */; };
@@ -892,8 +929,6 @@
 		C199ADF31CE0FE20007440D4 /* SteeringBehaviorMachinePrioritizedBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C199ADED1CE0FE20007440D4 /* SteeringBehaviorMachinePrioritizedBuilder.h */; };
 		C199ADF41CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C199ADEE1CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.cpp */; };
 		C199ADF51CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C199ADEF1CE0FE20007440D4 /* SteeringBehaviorMachineWeightedBuilder.h */; };
-		C1CF3EB41D8B99DE00F3B67A /* luaparser.c in Sources */ = {isa = PBXBuildFile; fileRef = C1CF3EB21D8B99DE00F3B67A /* luaparser.c */; };
-		C1CF3EB51D8B99DE00F3B67A /* luaparser.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CF3EB31D8B99DE00F3B67A /* luaparser.h */; };
 		C1D5004E1CDBCF99003EF06D /* SteeringBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D5004C1CDBCF99003EF06D /* SteeringBehavior.cpp */; };
 		C1D500521CDBD00D003EF06D /* SteeringBehaviorBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D500501CDBD00D003EF06D /* SteeringBehaviorBuilder.cpp */; };
 		C1D500531CDBD00D003EF06D /* SteeringBehaviorBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D500511CDBD00D003EF06D /* SteeringBehaviorBuilder.h */; };
@@ -1845,6 +1880,47 @@
 		C18B84A91C9B9A54003628FE /* libfmod_iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmod_iphonesimulator.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmod_iphonesimulator.a"; sourceTree = "<group>"; };
 		C18B84AA1C9B9A54003628FE /* libfmodL_iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphoneos.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmodL_iphoneos.a"; sourceTree = "<group>"; };
 		C18B84AB1C9B9A54003628FE /* libfmodL_iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphonesimulator.a; path = "../../Source/fmod/ios/FMOD Programmers API/api/lowlevel/lib/libfmodL_iphonesimulator.a"; sourceTree = "<group>"; };
+		C193BBC11E35998300876F97 /* lualoadexts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lualoadexts.c; sourceTree = "<group>"; };
+		C193BBC21E35998300876F97 /* lualoadexts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualoadexts.h; sourceTree = "<group>"; };
+		C193BBE31E35998300876F97 /* luasocketscripts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = luasocketscripts.c; sourceTree = "<group>"; };
+		C193BBE41E35998300876F97 /* luasocketscripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luasocketscripts.h; sourceTree = "<group>"; };
+		C193BC0C1E359CAC00876F97 /* auxiliar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = auxiliar.c; sourceTree = "<group>"; };
+		C193BC0D1E359CAC00876F97 /* auxiliar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auxiliar.h; sourceTree = "<group>"; };
+		C193BC0E1E359CAC00876F97 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = buffer.c; sourceTree = "<group>"; };
+		C193BC0F1E359CAC00876F97 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		C193BC101E359CAC00876F97 /* compat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compat.c; sourceTree = "<group>"; };
+		C193BC111E359CAC00876F97 /* compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compat.h; sourceTree = "<group>"; };
+		C193BC121E359CAC00876F97 /* except.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = except.c; sourceTree = "<group>"; };
+		C193BC131E359CAC00876F97 /* except.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = except.h; sourceTree = "<group>"; };
+		C193BC141E359CAC00876F97 /* inet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inet.c; sourceTree = "<group>"; };
+		C193BC151E359CAC00876F97 /* inet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inet.h; sourceTree = "<group>"; };
+		C193BC161E359CAC00876F97 /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		C193BC171E359CAC00876F97 /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		C193BC181E359CAC00876F97 /* luasocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = luasocket.c; sourceTree = "<group>"; };
+		C193BC191E359CAC00876F97 /* luasocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luasocket.h; sourceTree = "<group>"; };
+		C193BC1B1E359CAC00876F97 /* mime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mime.c; sourceTree = "<group>"; };
+		C193BC1C1E359CAC00876F97 /* mime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mime.h; sourceTree = "<group>"; };
+		C193BC1D1E359CAC00876F97 /* options.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = options.c; sourceTree = "<group>"; };
+		C193BC1E1E359CAC00876F97 /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
+		C193BC1F1E359CAC00876F97 /* pierror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pierror.h; sourceTree = "<group>"; };
+		C193BC201E359CAC00876F97 /* select.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = select.c; sourceTree = "<group>"; };
+		C193BC211E359CAC00876F97 /* select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = select.h; sourceTree = "<group>"; };
+		C193BC221E359CAC00876F97 /* serial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = serial.c; sourceTree = "<group>"; };
+		C193BC231E359CAC00876F97 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
+		C193BC241E359CAC00876F97 /* tcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tcp.c; sourceTree = "<group>"; };
+		C193BC251E359CAC00876F97 /* tcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp.h; sourceTree = "<group>"; };
+		C193BC261E359CAC00876F97 /* timeout.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timeout.c; sourceTree = "<group>"; };
+		C193BC271E359CAC00876F97 /* timeout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeout.h; sourceTree = "<group>"; };
+		C193BC281E359CAC00876F97 /* udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = udp.c; sourceTree = "<group>"; };
+		C193BC291E359CAC00876F97 /* udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udp.h; sourceTree = "<group>"; };
+		C193BC2A1E359CAC00876F97 /* unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unix.c; sourceTree = "<group>"; };
+		C193BC2B1E359CAC00876F97 /* unix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unix.h; sourceTree = "<group>"; };
+		C193BC2C1E359CAC00876F97 /* unixdgram.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unixdgram.c; sourceTree = "<group>"; };
+		C193BC2D1E359CAC00876F97 /* unixdgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unixdgram.h; sourceTree = "<group>"; };
+		C193BC2E1E359CAC00876F97 /* unixstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unixstream.c; sourceTree = "<group>"; };
+		C193BC2F1E359CAC00876F97 /* unixstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unixstream.h; sourceTree = "<group>"; };
+		C193BC301E359CAC00876F97 /* usocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = usocket.c; sourceTree = "<group>"; };
+		C193BC311E359CAC00876F97 /* usocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usocket.h; sourceTree = "<group>"; };
 		C199ADDE1CE0F392007440D4 /* SteeringBehaviorMachineDithered.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringBehaviorMachineDithered.cpp; sourceTree = "<group>"; };
 		C199ADDF1CE0F392007440D4 /* SteeringBehaviorMachineDithered.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringBehaviorMachineDithered.h; sourceTree = "<group>"; };
 		C199ADE01CE0F392007440D4 /* SteeringBehaviorMachinePrioritized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeringBehaviorMachinePrioritized.cpp; sourceTree = "<group>"; };
@@ -2757,6 +2833,7 @@
 		C18B7D961C9B8C58003628FE /* lua */ = {
 			isa = PBXGroup;
 			children = (
+				C193BBBB1E35998300876F97 /* exts */,
 				C14188541DA4A36100E1AD04 /* lprefix.h */,
 				C14188551DA4A36100E1AD04 /* lutf8lib.c */,
 				C18B7DDC1C9B8C7E003628FE /* libs */,
@@ -3291,13 +3368,61 @@
 			path = ../../../Source/zlib/zlib_SIO2;
 			sourceTree = "<group>";
 		};
-		C1CF3EB11D8B99C500F3B67A /* syntaxer */ = {
+		C193BBBB1E35998300876F97 /* exts */ = {
 			isa = PBXGroup;
 			children = (
-				C1CF3EB21D8B99DE00F3B67A /* luaparser.c */,
-				C1CF3EB31D8B99DE00F3B67A /* luaparser.h */,
+				C193BBC11E35998300876F97 /* lualoadexts.c */,
+				C193BBC21E35998300876F97 /* lualoadexts.h */,
+				C193BBC31E35998300876F97 /* luasocket */,
+				C193BBE31E35998300876F97 /* luasocketscripts.c */,
+				C193BBE41E35998300876F97 /* luasocketscripts.h */,
 			);
-			name = syntaxer;
+			name = exts;
+			path = ../../exts;
+			sourceTree = "<group>";
+		};
+		C193BBC31E35998300876F97 /* luasocket */ = {
+			isa = PBXGroup;
+			children = (
+				C193BC0C1E359CAC00876F97 /* auxiliar.c */,
+				C193BC0D1E359CAC00876F97 /* auxiliar.h */,
+				C193BC0E1E359CAC00876F97 /* buffer.c */,
+				C193BC0F1E359CAC00876F97 /* buffer.h */,
+				C193BC101E359CAC00876F97 /* compat.c */,
+				C193BC111E359CAC00876F97 /* compat.h */,
+				C193BC121E359CAC00876F97 /* except.c */,
+				C193BC131E359CAC00876F97 /* except.h */,
+				C193BC141E359CAC00876F97 /* inet.c */,
+				C193BC151E359CAC00876F97 /* inet.h */,
+				C193BC161E359CAC00876F97 /* io.c */,
+				C193BC171E359CAC00876F97 /* io.h */,
+				C193BC181E359CAC00876F97 /* luasocket.c */,
+				C193BC191E359CAC00876F97 /* luasocket.h */,
+				C193BC1B1E359CAC00876F97 /* mime.c */,
+				C193BC1C1E359CAC00876F97 /* mime.h */,
+				C193BC1D1E359CAC00876F97 /* options.c */,
+				C193BC1E1E359CAC00876F97 /* options.h */,
+				C193BC1F1E359CAC00876F97 /* pierror.h */,
+				C193BC201E359CAC00876F97 /* select.c */,
+				C193BC211E359CAC00876F97 /* select.h */,
+				C193BC221E359CAC00876F97 /* serial.c */,
+				C193BC231E359CAC00876F97 /* socket.h */,
+				C193BC241E359CAC00876F97 /* tcp.c */,
+				C193BC251E359CAC00876F97 /* tcp.h */,
+				C193BC261E359CAC00876F97 /* timeout.c */,
+				C193BC271E359CAC00876F97 /* timeout.h */,
+				C193BC281E359CAC00876F97 /* udp.c */,
+				C193BC291E359CAC00876F97 /* udp.h */,
+				C193BC2A1E359CAC00876F97 /* unix.c */,
+				C193BC2B1E359CAC00876F97 /* unix.h */,
+				C193BC2C1E359CAC00876F97 /* unixdgram.c */,
+				C193BC2D1E359CAC00876F97 /* unixdgram.h */,
+				C193BC2E1E359CAC00876F97 /* unixstream.c */,
+				C193BC2F1E359CAC00876F97 /* unixstream.h */,
+				C193BC301E359CAC00876F97 /* usocket.c */,
+				C193BC311E359CAC00876F97 /* usocket.h */,
+			);
+			path = luasocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3331,6 +3456,7 @@
 				C18B81711C9B8FA6003628FE /* btSoftBodyData.h in Headers */,
 				C18B82B91C9B907A003628FE /* WorldStateMachineBuilder.h in Headers */,
 				C18B84181C9B908A003628FE /* PhysicsShapeSphereBuilder.h in Headers */,
+				C193BBEA1E35998300876F97 /* lualoadexts.h in Headers */,
 				C18B80D81C9B8F5D003628FE /* btTriangleMeshShape.h in Headers */,
 				C18B82A91C9B907A003628FE /* WorldHUD.h in Headers */,
 				C18B81701C9B8FA6003628FE /* btSoftBodyConcaveCollisionAlgorithm.h in Headers */,
@@ -3350,6 +3476,7 @@
 				C18B83DA1C9B908A003628FE /* PhysicsConstraintPointToPointBuilder.h in Headers */,
 				C18B80771C9B8F53003628FE /* btConvexPlaneCollisionAlgorithm.h in Headers */,
 				C18B82A61C9B907A003628FE /* WorldDebugDrawer.h in Headers */,
+				C193BC391E359CAC00876F97 /* compat.h in Headers */,
 				C1D500BF1CDC48D8003EF06D /* SteeringBehaviorPursuitBuilder.h in Headers */,
 				C18B806F1C9B8F53003628FE /* btCompoundCompoundCollisionAlgorithm.h in Headers */,
 				C18B843B1C9B90A2003628FE /* WorldInput.h in Headers */,
@@ -3360,6 +3487,7 @@
 				C18B81A41C9B8FC8003628FE /* cl_gl.h in Headers */,
 				C18B83991C9B908A003628FE /* MaterialBuilder.h in Headers */,
 				C18B82971C9B9079003628FE /* TextboxHUD.h in Headers */,
+				C193BC4D1E359CAC00876F97 /* tcp.h in Headers */,
 				C18B82A11C9B907A003628FE /* TimerBuilder.h in Headers */,
 				C1D500A31CDC48D8003EF06D /* SteeringBehaviorEvade.h in Headers */,
 				C18B821A1C9B903C003628FE /* stb_image.h in Headers */,
@@ -3429,6 +3557,7 @@
 				C18B837E1C9B908A003628FE /* GameClock.h in Headers */,
 				C18B817A1C9B8FA6003628FE /* btSoftRigidCollisionAlgorithm.h in Headers */,
 				C18B810E1C9B8F71003628FE /* btGjkEpaPenetrationDepthSolver.h in Headers */,
+				C193BC411E359CAC00876F97 /* luasocket.h in Headers */,
 				C18B81B31C9B8FD3003628FE /* floatInVec.h in Headers */,
 				C18B840C1C9B908A003628FE /* PhysicsShapeCylinderBuilder.h in Headers */,
 				C18B81C51C9B9017003628FE /* fmod_dsp_effects.h in Headers */,
@@ -3473,7 +3602,9 @@
 				C18B80401C9B8F3C003628FE /* btPrint.h in Headers */,
 				C1D500D71CDD34CB003EF06D /* SteeringBehaviorMachineBuilder.h in Headers */,
 				C18B82941C9B9079003628FE /* StopWatch.h in Headers */,
+				C193BC4F1E359CAC00876F97 /* timeout.h in Headers */,
 				C18B84241C9B908A003628FE /* PlaneBuilder.h in Headers */,
+				C193BC471E359CAC00876F97 /* pierror.h in Headers */,
 				C18B845F1C9B90BF003628FE /* zconf.h in Headers */,
 				C18B844B1C9B90BF003628FE /* crc32.h in Headers */,
 				C18B81B01C9B8FD0003628FE /* vec_aos.h in Headers */,
@@ -3482,11 +3613,14 @@
 				C18B836E1C9B908A003628FE /* ClockBuilder.h in Headers */,
 				C18B82171C9B903C003628FE /* nanovg.h in Headers */,
 				C18B80581C9B8F4B003628FE /* btQuantizedBvh.h in Headers */,
+				C193BC511E359CAC00876F97 /* udp.h in Headers */,
 				C18B814E1C9B8F8D003628FE /* btMultiBody.h in Headers */,
 				C18B82771C9B9079003628FE /* SceneBuilder.h in Headers */,
 				C18B80491C9B8F4B003628FE /* btBroadphaseProxy.h in Headers */,
 				C18B83731C9B908A003628FE /* Cube.h in Headers */,
 				C18B80EF1C9B8F69003628FE /* btTriangleShapeEx.h in Headers */,
+				C193BC3F1E359CAC00876F97 /* io.h in Headers */,
+				C193BC0B1E35998300876F97 /* luasocketscripts.h in Headers */,
 				C18B807F1C9B8F53003628FE /* btHashedSimplePairCache.h in Headers */,
 				C18B81851C9B8FB6003628FE /* btConvexHull.h in Headers */,
 				C18B83CC1C9B908A003628FE /* PhysicsConstraintGeneric6Dof.h in Headers */,
@@ -3602,6 +3736,7 @@
 				C18B81BB1C9B8FD8003628FE /* quat_aos.h in Headers */,
 				C18B80DE1C9B8F69003628FE /* btCompoundFromGimpact.h in Headers */,
 				C18B836A1C9B908A003628FE /* CheckboxHUDBuilder.h in Headers */,
+				C193BC4B1E359CAC00876F97 /* socket.h in Headers */,
 				C18B80681C9B8F53003628FE /* btCollisionObject.h in Headers */,
 				C18B812E1C9B8F7F003628FE /* btGeneric6DofConstraint.h in Headers */,
 				C18B80871C9B8F53003628FE /* btSphereBoxCollisionAlgorithm.h in Headers */,
@@ -3609,6 +3744,7 @@
 				C18B80E01C9B8F69003628FE /* btContactProcessing.h in Headers */,
 				C18B80CD1C9B8F5D003628FE /* btTriangleBuffer.h in Headers */,
 				C18B81241C9B8F7F003628FE /* btConeTwistConstraint.h in Headers */,
+				C193BC3B1E359CAC00876F97 /* except.h in Headers */,
 				C18B83CA1C9B908A003628FE /* PhysicsConstraintFixedBuilder.h in Headers */,
 				C18B80B51C9B8F5D003628FE /* btMaterial.h in Headers */,
 				C1D500A11CDC48D8003EF06D /* SteeringBehaviorCohesionBuilder.h in Headers */,
@@ -3632,6 +3768,7 @@
 				C18B838B1C9B908A003628FE /* LabelHUD.h in Headers */,
 				C1D500C31CDC48D8003EF06D /* SteeringBehaviorSeparationBuilder.h in Headers */,
 				C18B80931C9B8F5D003628FE /* btBoxShape.h in Headers */,
+				C193BC531E359CAC00876F97 /* unix.h in Headers */,
 				C18B83501C9B908A003628FE /* AbstractBuilder.h in Headers */,
 				C18B839A1C9B908A003628FE /* MaterialProperty.h in Headers */,
 				C18B80851C9B8F53003628FE /* btSimulationIslandManager.h in Headers */,
@@ -3651,6 +3788,7 @@
 				C18B817F1C9B8FA6003628FE /* btSparseSDF.h in Headers */,
 				C18B83611C9B908A003628FE /* ButtonHUD.h in Headers */,
 				C18B820C1C9B9031003628FE /* luaconf.h in Headers */,
+				C193BC3D1E359CAC00876F97 /* inet.h in Headers */,
 				C18B81D11C9B901F003628FE /* version.h in Headers */,
 				C18B820A1C9B9031003628FE /* lua.h in Headers */,
 				C18B83531C9B908A003628FE /* AbstractDecorator.h in Headers */,
@@ -3694,8 +3832,11 @@
 				C18B81301C9B8F7F003628FE /* btGeneric6DofSpringConstraint.h in Headers */,
 				C18B81BC1C9B8FD8003628FE /* vec_aos.h in Headers */,
 				C18B819B1C9B8FB6003628FE /* btScalar.h in Headers */,
+				C193BC351E359CAC00876F97 /* auxiliar.h in Headers */,
 				C18B80891C9B8F53003628FE /* btSphereSphereCollisionAlgorithm.h in Headers */,
+				C193BC571E359CAC00876F97 /* unixstream.h in Headers */,
 				C18B80E71C9B8F69003628FE /* btGImpactCollisionAlgorithm.h in Headers */,
+				C193BC371E359CAC00876F97 /* buffer.h in Headers */,
 				C18B81C01C9B9017003628FE /* fmod.h in Headers */,
 				C18B81881C9B8FB6003628FE /* btDefaultMotionState.h in Headers */,
 				C18B81C71C9B9017003628FE /* fmod_ios.h in Headers */,
@@ -3726,6 +3867,7 @@
 				C1D500D31CDD34B6003EF06D /* SteeringBehaviorMachine.h in Headers */,
 				C18B81061C9B8F71003628FE /* btConvexCast.h in Headers */,
 				C18B81E71C9B9031003628FE /* ldebug.h in Headers */,
+				C193BC441E359CAC00876F97 /* mime.h in Headers */,
 				C18B80391C9B8EF0003628FE /* UIDeviceUtil.h in Headers */,
 				C18B816A1C9B8F9E003628FE /* btWheelInfo.h in Headers */,
 				C18B83D41C9B908A003628FE /* PhysicsConstraintHinge.h in Headers */,
@@ -3783,6 +3925,8 @@
 				C18B81021C9B8F69003628FE /* gim_tri_collision.h in Headers */,
 				C18B81CF1C9B901F003628FE /* reader.h in Headers */,
 				C18B837A1C9B908A003628FE /* Font.h in Headers */,
+				C193BC491E359CAC00876F97 /* select.h in Headers */,
+				C193BC461E359CAC00876F97 /* options.h in Headers */,
 				C18B83911C9B908A003628FE /* LevelOfDetailBuilder.h in Headers */,
 				C18B80F01C9B8F69003628FE /* gim_array.h in Headers */,
 				C18B81591C9B8F8D003628FE /* btMultiBodyLink.h in Headers */,
@@ -3799,6 +3943,7 @@
 				C18B80B01C9B8F5D003628FE /* btCylinderShape.h in Headers */,
 				C18B81271C9B8F7F003628FE /* btContactConstraint.h in Headers */,
 				C18B80E21C9B8F69003628FE /* btGenericPoolAllocator.h in Headers */,
+				C193BC591E359CAC00876F97 /* usocket.h in Headers */,
 				C18B82A81C9B907A003628FE /* WorldFactory.h in Headers */,
 				C18B82191C9B903C003628FE /* nanovg_gl_utils.h in Headers */,
 				C18B83631C9B908A003628FE /* ButtonHUDBuilder.h in Headers */,
@@ -3806,6 +3951,7 @@
 				C18B81431C9B8F7F003628FE /* btUniversalConstraint.h in Headers */,
 				C18B83671C9B908A003628FE /* CameraBuilder.h in Headers */,
 				C18B81411C9B8F7F003628FE /* btTypedConstraint.h in Headers */,
+				C193BC551E359CAC00876F97 /* unixdgram.h in Headers */,
 				C18B83D81C9B908A003628FE /* PhysicsConstraintPointToPoint.h in Headers */,
 				C18B82871C9B9079003628FE /* SliderHUD.h in Headers */,
 				C18B84201C9B908A003628FE /* PhysicsWorldBuilder.h in Headers */,
@@ -3968,8 +4114,10 @@
 				C18B80761C9B8F53003628FE /* btConvexPlaneCollisionAlgorithm.cpp in Sources */,
 				C18B82651C9B9070003628FE /* AbstractFrameBufferObject.cpp in Sources */,
 				C18B811C1C9B8F71003628FE /* btSubSimplexConvexCast.cpp in Sources */,
+				C193BC561E359CAC00876F97 /* unixstream.c in Sources */,
 				C18B840F1C9B908A003628FE /* PhysicsShapeHeightfieldTerrainBuilder.cpp in Sources */,
 				C18B841B1C9B908A003628FE /* PhysicsShapeStaticPlaneBuilder.cpp in Sources */,
+				C193BBE91E35998300876F97 /* lualoadexts.c in Sources */,
 				C18B838E1C9B908A003628FE /* LevelOfDetail.cpp in Sources */,
 				C18B84481C9B90BF003628FE /* adler32.c in Sources */,
 				C18B81231C9B8F7F003628FE /* btConeTwistConstraint.cpp in Sources */,
@@ -3998,6 +4146,7 @@
 				C18B80A91C9B8F5D003628FE /* btConvexPolyhedron.cpp in Sources */,
 				C199ADF21CE0FE20007440D4 /* SteeringBehaviorMachinePrioritizedBuilder.cpp in Sources */,
 				C18B81D41C9B9023003628FE /* json_value.cpp in Sources */,
+				C193BC481E359CAC00876F97 /* select.c in Sources */,
 				C18B80DA1C9B8F5D003628FE /* btUniformScalingShape.cpp in Sources */,
 				C18B80CC1C9B8F5D003628FE /* btTriangleBuffer.cpp in Sources */,
 				C18B84191C9B908A003628FE /* PhysicsShapeStaticPlane.cpp in Sources */,
@@ -4018,11 +4167,14 @@
 				C1D500B81CDC48D8003EF06D /* SteeringBehaviorOffsetPursuit.cpp in Sources */,
 				C18B84211C9B908A003628FE /* Plane.cpp in Sources */,
 				C18B83981C9B908A003628FE /* MaterialBuilder.cpp in Sources */,
+				C193BC581E359CAC00876F97 /* usocket.c in Sources */,
+				C193BC451E359CAC00876F97 /* options.c in Sources */,
 				C18B80591C9B8F4B003628FE /* btSimpleBroadphase.cpp in Sources */,
 				C18B806C1C9B8F53003628FE /* btCompoundCollisionAlgorithm.cpp in Sources */,
 				C18B80F41C9B8F69003628FE /* gim_box_set.cpp in Sources */,
 				C18B81D51C9B9023003628FE /* json_writer.cpp in Sources */,
 				C18B83691C9B908A003628FE /* CheckboxHUDBuilder.cpp in Sources */,
+				C193BC3E1E359CAC00876F97 /* io.c in Sources */,
 				C18B80C61C9B8F5D003628FE /* btStaticPlaneShape.cpp in Sources */,
 				C18B82051C9B9031003628FE /* ltable.c in Sources */,
 				C1D500A61CDC48D8003EF06D /* SteeringBehaviorFleeBuilder.cpp in Sources */,
@@ -4056,6 +4208,7 @@
 				C18B83C31C9B908A003628FE /* PhysicsConstraintConeTwist.cpp in Sources */,
 				C18B84031C9B908A003628FE /* PhysicsShapeConvexHullBuilder.cpp in Sources */,
 				C18B81F41C9B9031003628FE /* lmathlib.c in Sources */,
+				C193BC4E1E359CAC00876F97 /* timeout.c in Sources */,
 				C18B82AA1C9B907A003628FE /* WorldLuaVirtualMachine.cpp in Sources */,
 				C18B842A1C9B9098003628FE /* Sound.mm in Sources */,
 				C18B82701C9B9070003628FE /* Sprite2D.cpp in Sources */,
@@ -4068,6 +4221,7 @@
 				C1D500BE1CDC48D8003EF06D /* SteeringBehaviorPursuitBuilder.cpp in Sources */,
 				C18B80901C9B8F5D003628FE /* btBox2dShape.cpp in Sources */,
 				C18B81F01C9B9031003628FE /* liolib.c in Sources */,
+				C193BC3A1E359CAC00876F97 /* except.c in Sources */,
 				C18B815B1C9B8F8D003628FE /* btMultiBodyPoint2Point.cpp in Sources */,
 				C18B80EB1C9B8F69003628FE /* btGImpactShape.cpp in Sources */,
 				C18B83661C9B908A003628FE /* CameraBuilder.cpp in Sources */,
@@ -4083,6 +4237,7 @@
 				C18B82A71C9B907A003628FE /* WorldFactory.cpp in Sources */,
 				C18B82B61C9B907A003628FE /* WorldStateMachine.cpp in Sources */,
 				C1D500CE1CDC4A66003EF06D /* SteeringBehaviorEvadeBuilder.cpp in Sources */,
+				C193BC0A1E35998300876F97 /* luasocketscripts.c in Sources */,
 				C18B80B11C9B8F5D003628FE /* btEmptyShape.cpp in Sources */,
 				C1D5009A1CDC48D8003EF06D /* SteeringBehaviorArriveBuilder.cpp in Sources */,
 				C18B82021C9B9031003628FE /* lstring.c in Sources */,
@@ -4128,6 +4283,7 @@
 				C18B817B1C9B8FA6003628FE /* btSoftRigidDynamicsWorld.cpp in Sources */,
 				C18B81DF1C9B9031003628FE /* lbitlib.c in Sources */,
 				C1D500C01CDC48D8003EF06D /* SteeringBehaviorSeparation.cpp in Sources */,
+				C193BC361E359CAC00876F97 /* buffer.c in Sources */,
 				C18B808C1C9B8F53003628FE /* btUnionFind.cpp in Sources */,
 				C18B81451C9B8F86003628FE /* btDiscreteDynamicsWorld.cpp in Sources */,
 				C18B84261C9B9098003628FE /* File.mm in Sources */,
@@ -4137,6 +4293,7 @@
 				C18B81551C9B8F8D003628FE /* btMultiBodyJointLimitConstraint.cpp in Sources */,
 				C18B83EF1C9B908A003628FE /* PhysicsShapeBox2D.cpp in Sources */,
 				C18B813A1C9B8F7F003628FE /* btSliderConstraint.cpp in Sources */,
+				C193BC521E359CAC00876F97 /* unix.c in Sources */,
 				C1D500AE1CDC48D8003EF06D /* SteeringBehaviorHideBuilder.cpp in Sources */,
 				C18B83CD1C9B908A003628FE /* PhysicsConstraintGeneric6DofBuilder.cpp in Sources */,
 				C18B84131C9B908A003628FE /* PhysicsShapeMultiSphereBuilder.cpp in Sources */,
@@ -4145,6 +4302,7 @@
 				C18B828F1C9B9079003628FE /* SpriteFrameAtlas.cpp in Sources */,
 				C18B82721C9B9070003628FE /* WorldDebugDrawer.cpp in Sources */,
 				C18B81331C9B8F7F003628FE /* btHingeConstraint.cpp in Sources */,
+				C193BC541E359CAC00876F97 /* unixdgram.c in Sources */,
 				C18B82981C9B9079003628FE /* TextboxHUDBuilder.cpp in Sources */,
 				C18B80C01C9B8F5D003628FE /* btScaledBvhTriangleMeshShape.cpp in Sources */,
 				C18B84561C9B90BF003628FE /* inftrees.c in Sources */,
@@ -4161,7 +4319,9 @@
 				C18B836F1C9B908A003628FE /* CollisionResponse.cpp in Sources */,
 				C18B84511C9B90BF003628FE /* inffast.c in Sources */,
 				C18B812B1C9B8F7F003628FE /* btGearConstraint.cpp in Sources */,
+				C193BC4C1E359CAC00876F97 /* tcp.c in Sources */,
 				C18B82661C9B9070003628FE /* AbstractRender.cpp in Sources */,
+				C193BC381E359CAC00876F97 /* compat.c in Sources */,
 				C18B837B1C9B908A003628FE /* FontBuilder.cpp in Sources */,
 				C18B816B1C9B8FA6003628FE /* btDefaultSoftBodySolver.cpp in Sources */,
 				C18B84091C9B908A003628FE /* PhysicsShapeCylinder.cpp in Sources */,
@@ -4185,6 +4345,7 @@
 				C18B84321C9B90A2003628FE /* Game.cpp in Sources */,
 				C1D500A01CDC48D8003EF06D /* SteeringBehaviorCohesionBuilder.cpp in Sources */,
 				C18B81AA1C9B8FCB003628FE /* MiniCLTask.cpp in Sources */,
+				C193BC341E359CAC00876F97 /* auxiliar.c in Sources */,
 				C1D500BA1CDC48D8003EF06D /* SteeringBehaviorOffsetPursuitBuilder.cpp in Sources */,
 				C18B835F1C9B908A003628FE /* ActionBuilder.cpp in Sources */,
 				C18B808A1C9B8F53003628FE /* btSphereTriangleCollisionAlgorithm.cpp in Sources */,
@@ -4209,6 +4370,7 @@
 				C18B80EE1C9B8F69003628FE /* btTriangleShapeEx.cpp in Sources */,
 				C18B81A11C9B8FB6003628FE /* btVector3.cpp in Sources */,
 				C18B84071C9B908A003628FE /* PhysicsShapeConvexTriangleMeshBuilder.cpp in Sources */,
+				C193BC401E359CAC00876F97 /* luasocket.c in Sources */,
 				C18B84461C9B90B6003628FE /* tinyxmlerror.cpp in Sources */,
 				C18B826B1C9B9070003628FE /* Geometry.cpp in Sources */,
 				C18B81A71C9B8FC8003628FE /* MiniCL.cpp in Sources */,
@@ -4232,6 +4394,7 @@
 				C18B84541C9B90BF003628FE /* inflate.c in Sources */,
 				C141885D1DA7E8C800E1AD04 /* lbullet.cpp in Sources */,
 				C18B83871C9B908A003628FE /* JsonJLI.cpp in Sources */,
+				C193BC501E359CAC00876F97 /* udp.c in Sources */,
 				C18B80451C9B8F4B003628FE /* btAxisSweep3.cpp in Sources */,
 				C18B81191C9B8F71003628FE /* btRaycastCallback.cpp in Sources */,
 				C18B842D1C9B9098003628FE /* WorldPythonVirtualMachine.cpp in Sources */,
@@ -4279,6 +4442,7 @@
 				C18B82001C9B9031003628FE /* lstate.c in Sources */,
 				C141885C1DA7E8C800E1AD04 /* lbit.c in Sources */,
 				C18B80C81C9B8F5D003628FE /* btStridingMeshInterface.cpp in Sources */,
+				C193BC431E359CAC00876F97 /* mime.c in Sources */,
 				C1D500AC1CDC48D8003EF06D /* SteeringBehaviorHide.cpp in Sources */,
 				C18B80571C9B8F4B003628FE /* btQuantizedBvh.cpp in Sources */,
 				C18B819C1C9B8FB6003628FE /* btSerializer.cpp in Sources */,
@@ -4296,8 +4460,10 @@
 				C1D5005A1CDC454B003EF06D /* SteeringBehaviorSeekBuilder.cpp in Sources */,
 				C18B828A1C9B9079003628FE /* SoundBuilder.cpp in Sources */,
 				C18B844A1C9B90BF003628FE /* crc32.c in Sources */,
+				C193BC4A1E359CAC00876F97 /* serial.c in Sources */,
 				C18B82041C9B9031003628FE /* lstrlib.c in Sources */,
 				C18B829E1C9B907A003628FE /* Timer.cpp in Sources */,
+				C193BC3C1E359CAC00876F97 /* inet.c in Sources */,
 				C18B83DB1C9B908A003628FE /* PhysicsConstraintSlider.cpp in Sources */,
 				C18B82731C9B9070003628FE /* WorldHUD.cpp in Sources */,
 				C18B81E31C9B9031003628FE /* lctype.c in Sources */,
